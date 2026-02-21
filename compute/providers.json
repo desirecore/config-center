@@ -1,0 +1,2051 @@
+[
+  {
+    "id": "provider-openai-001",
+    "provider": "openai",
+    "label": "OpenAI",
+    "baseUrl": "https://api.openai.com/v1",
+    "apiFormat": "openai-completions",
+    "apiKeyRef": "openai",
+    "apiKeyVerified": false,
+    "enabled": false,
+    "status": "unconfigured",
+    "services": [
+      "chat",
+      "fast",
+      "embedding",
+      "tts",
+      "asr",
+      "vision",
+      "responses",
+      "image_gen",
+      "omni",
+      "realtime_voice"
+    ],
+    "defaultTemperature": 1,
+    "defaultTopP": 1,
+    "models": [
+      {
+        "modelName": "gpt-5.2",
+        "displayName": "GPT-5.2",
+        "serviceType": "chat",
+        "description": "OpenAI 最新旗舰模型，400K 上下文，编码和智能体任务优化",
+        "contextWindow": 400000,
+        "maxOutputTokens": 128000,
+        "capabilities": [
+          "chat",
+          "reasoning",
+          "code",
+          "vision",
+          "long_context",
+          "tool_use"
+        ],
+        "inputPrice": 1.75,
+        "outputPrice": 14,
+        "extra": {}
+      },
+      {
+        "modelName": "gpt-5.2-pro",
+        "displayName": "GPT-5.2 Pro",
+        "serviceType": "chat",
+        "description": "OpenAI GPT-5.2 Pro 专业版，最高性能",
+        "contextWindow": 400000,
+        "maxOutputTokens": 128000,
+        "capabilities": [
+          "chat",
+          "reasoning",
+          "code",
+          "vision",
+          "long_context",
+          "tool_use"
+        ],
+        "inputPrice": 21,
+        "outputPrice": 168,
+        "extra": {}
+      },
+      {
+        "modelName": "gpt-5.1",
+        "displayName": "GPT-5.1",
+        "serviceType": "chat",
+        "description": "OpenAI GPT-5.1，400K 上下文，高性能旗舰",
+        "contextWindow": 400000,
+        "maxOutputTokens": 128000,
+        "capabilities": [
+          "chat",
+          "reasoning",
+          "code",
+          "vision",
+          "long_context",
+          "tool_use"
+        ],
+        "inputPrice": 1.25,
+        "outputPrice": 10,
+        "extra": {}
+      },
+      {
+        "modelName": "gpt-5",
+        "displayName": "GPT-5",
+        "serviceType": "chat",
+        "description": "OpenAI GPT-5 新一代旗舰模型，统一所有模型能力",
+        "contextWindow": 400000,
+        "maxOutputTokens": 128000,
+        "capabilities": [
+          "chat",
+          "reasoning",
+          "code",
+          "vision",
+          "long_context",
+          "tool_use"
+        ],
+        "inputPrice": 1.25,
+        "outputPrice": 10,
+        "extra": {}
+      },
+      {
+        "modelName": "gpt-5-pro",
+        "displayName": "GPT-5 Pro",
+        "serviceType": "chat",
+        "description": "OpenAI GPT-5 Pro 专业版高性能模型",
+        "contextWindow": 400000,
+        "maxOutputTokens": 128000,
+        "capabilities": [
+          "chat",
+          "reasoning",
+          "code",
+          "vision",
+          "long_context",
+          "tool_use"
+        ],
+        "inputPrice": 15,
+        "outputPrice": 120,
+        "extra": {}
+      },
+      {
+        "modelName": "gpt-5-mini",
+        "displayName": "GPT-5-mini",
+        "serviceType": "chat",
+        "description": "高性价比模型，适合日常对话",
+        "contextWindow": 128000,
+        "maxOutputTokens": 32768,
+        "capabilities": [
+          "chat",
+          "fast",
+          "tool_use",
+          "code",
+          "vision"
+        ],
+        "inputPrice": 0.25,
+        "outputPrice": 2,
+        "extra": {}
+      },
+      {
+        "modelName": "gpt-5-nano",
+        "displayName": "GPT-5-nano",
+        "serviceType": "fast",
+        "description": "极速响应模型，适合简单任务",
+        "contextWindow": 128000,
+        "maxOutputTokens": 16384,
+        "capabilities": [
+          "chat",
+          "code",
+          "fast"
+        ],
+        "inputPrice": 0.02,
+        "outputPrice": 0.08,
+        "extra": {}
+      },
+      {
+        "modelName": "gpt-4.1",
+        "displayName": "GPT-4.1",
+        "serviceType": "chat",
+        "description": "OpenAI GPT-4.1，支持 1M 上下文，编码和指令遵循能力大幅提升",
+        "contextWindow": 1000000,
+        "maxOutputTokens": 32768,
+        "capabilities": [
+          "chat",
+          "reasoning",
+          "code",
+          "vision",
+          "ultra_long_context",
+          "tool_use"
+        ],
+        "inputPrice": 14.4,
+        "outputPrice": 57.6,
+        "extra": {}
+      },
+      {
+        "modelName": "gpt-4.1-mini",
+        "displayName": "GPT-4.1 mini",
+        "serviceType": "chat",
+        "description": "OpenAI GPT-4.1 mini，1M 上下文，高性价比",
+        "contextWindow": 1000000,
+        "maxOutputTokens": 32768,
+        "capabilities": [
+          "chat",
+          "code",
+          "vision",
+          "ultra_long_context",
+          "tool_use"
+        ],
+        "inputPrice": 2.88,
+        "outputPrice": 11.52,
+        "extra": {}
+      },
+      {
+        "modelName": "gpt-4.1-nano",
+        "displayName": "GPT-4.1 nano",
+        "serviceType": "fast",
+        "description": "OpenAI GPT-4.1 nano，1M 上下文，极致性价比",
+        "contextWindow": 1000000,
+        "maxOutputTokens": 32768,
+        "capabilities": [
+          "chat",
+          "code",
+          "ultra_long_context",
+          "fast"
+        ],
+        "inputPrice": 0.72,
+        "outputPrice": 2.88,
+        "extra": {}
+      },
+      {
+        "modelName": "gpt-4o",
+        "displayName": "GPT-4o",
+        "serviceType": "vision",
+        "description": "多模态模型，支持图像理解",
+        "contextWindow": 128000,
+        "maxOutputTokens": 16384,
+        "capabilities": [
+          "chat",
+          "vision",
+          "image_understanding",
+          "tool_use"
+        ],
+        "inputPrice": 18,
+        "outputPrice": 72,
+        "extra": {}
+      },
+      {
+        "modelName": "gpt-4o-mini",
+        "displayName": "GPT-4o mini",
+        "serviceType": "vision",
+        "description": "OpenAI GPT-4o mini，高性价比多模态模型",
+        "contextWindow": 128000,
+        "maxOutputTokens": 16384,
+        "capabilities": [
+          "chat",
+          "code",
+          "vision",
+          "tool_use"
+        ],
+        "inputPrice": 1.08,
+        "outputPrice": 4.32,
+        "extra": {}
+      },
+      {
+        "modelName": "text-embedding-3-small",
+        "displayName": "text-embedding-3-small",
+        "serviceType": "embedding",
+        "description": "轻量文本向量化模型，1536 维",
+        "capabilities": [
+          "text_embedding",
+          "semantic_search"
+        ],
+        "inputPrice": 0.14,
+        "extra": {}
+      },
+      {
+        "modelName": "text-embedding-3-large",
+        "displayName": "text-embedding-3-large",
+        "serviceType": "embedding",
+        "description": "高精度文本向量化模型，3072 维",
+        "capabilities": [
+          "text_embedding",
+          "semantic_search"
+        ],
+        "inputPrice": 0.94,
+        "extra": {}
+      },
+      {
+        "modelName": "tts-1",
+        "displayName": "TTS-1",
+        "serviceType": "tts",
+        "description": "标准语音合成",
+        "capabilities": [
+          "tts"
+        ],
+        "extra": {
+          "voices": [
+            "alloy",
+            "echo",
+            "fable",
+            "onyx",
+            "nova",
+            "shimmer"
+          ],
+          "supportedAudioFormats": [
+            "mp3",
+            "opus",
+            "aac",
+            "flac"
+          ]
+        }
+      },
+      {
+        "modelName": "tts-1-hd",
+        "displayName": "TTS-1-HD",
+        "serviceType": "tts",
+        "description": "高清语音合成",
+        "capabilities": [
+          "tts"
+        ],
+        "extra": {
+          "voices": [
+            "alloy",
+            "echo",
+            "fable",
+            "onyx",
+            "nova",
+            "shimmer"
+          ],
+          "supportedAudioFormats": [
+            "mp3",
+            "opus",
+            "aac",
+            "flac"
+          ]
+        }
+      },
+      {
+        "modelName": "whisper-1",
+        "displayName": "Whisper",
+        "serviceType": "asr",
+        "description": "通用语音识别",
+        "capabilities": [
+          "asr",
+          "multilingual"
+        ],
+        "extra": {
+          "maxAudioLength": 600,
+          "supportedInputFormats": [
+            "mp3",
+            "mp4",
+            "mpeg",
+            "mpga",
+            "m4a",
+            "wav",
+            "webm"
+          ],
+          "streamingSupported": false
+        }
+      },
+      {
+        "modelName": "o3",
+        "displayName": "o3",
+        "serviceType": "responses",
+        "description": "OpenAI o3 推理模型，200K 上下文，支持工具调用",
+        "contextWindow": 200000,
+        "maxOutputTokens": 100000,
+        "capabilities": [
+          "reasoning",
+          "deep_thinking",
+          "code",
+          "math",
+          "science",
+          "tool_use"
+        ],
+        "inputPrice": 14.4,
+        "outputPrice": 57.6,
+        "extra": {}
+      },
+      {
+        "modelName": "o3-pro",
+        "displayName": "o3-pro",
+        "serviceType": "responses",
+        "description": "OpenAI o3-pro 高级推理模型，200K 上下文",
+        "contextWindow": 200000,
+        "maxOutputTokens": 100000,
+        "capabilities": [
+          "reasoning",
+          "deep_thinking",
+          "code",
+          "math",
+          "science"
+        ],
+        "inputPrice": 144,
+        "outputPrice": 576,
+        "extra": {}
+      },
+      {
+        "modelName": "o3-mini",
+        "displayName": "o3-mini",
+        "serviceType": "responses",
+        "description": "OpenAI o3-mini 推理模型，128K 上下文",
+        "contextWindow": 128000,
+        "maxOutputTokens": 100000,
+        "capabilities": [
+          "reasoning",
+          "math",
+          "code",
+          "fast"
+        ],
+        "inputPrice": 7.92,
+        "outputPrice": 31.68,
+        "extra": {}
+      },
+      {
+        "modelName": "o4-mini",
+        "displayName": "o4-mini",
+        "serviceType": "responses",
+        "description": "OpenAI o4-mini 推理模型，200K 上下文，支持工具调用",
+        "contextWindow": 200000,
+        "maxOutputTokens": 100000,
+        "capabilities": [
+          "reasoning",
+          "math",
+          "code",
+          "tool_use",
+          "vision"
+        ],
+        "inputPrice": 7.92,
+        "outputPrice": 31.68,
+        "extra": {}
+      },
+      {
+        "modelName": "dall-e-3",
+        "displayName": "DALL-E 3",
+        "serviceType": "image_gen",
+        "description": "高质量文生图模型",
+        "capabilities": [
+          "image_generation",
+          "text_rendering"
+        ],
+        "extra": {
+          "supportedImageSizes": [
+            "1024x1024",
+            "1792x1024",
+            "1024x1792"
+          ],
+          "supportedStyles": [
+            "natural",
+            "vivid"
+          ]
+        }
+      },
+      {
+        "modelName": "gpt-4o-realtime",
+        "displayName": "GPT-4o Realtime",
+        "serviceType": "omni",
+        "description": "全能实时模型，支持语音 + 文本 + 视觉",
+        "contextWindow": 128000,
+        "capabilities": [
+          "chat",
+          "vision",
+          "tts",
+          "asr",
+          "realtime"
+        ],
+        "extra": {
+          "supportedModes": [
+            "speech-to-speech",
+            "text-to-speech"
+          ],
+          "latencyMs": 300
+        }
+      },
+      {
+        "modelName": "gpt-4o-realtime-preview",
+        "displayName": "GPT-4o Realtime Preview",
+        "serviceType": "realtime_voice",
+        "description": "实时语音交互模型",
+        "capabilities": [
+          "realtime",
+          "speech_to_speech",
+          "low_latency"
+        ],
+        "extra": {
+          "supportedModes": [
+            "speech-to-speech",
+            "text-to-speech"
+          ],
+          "latencyMs": 250
+        }
+      }
+    ]
+  },
+  {
+    "id": "provider-anthropic-001",
+    "provider": "anthropic",
+    "label": "Anthropic",
+    "baseUrl": "https://api.anthropic.com/v1",
+    "apiFormat": "anthropic-messages",
+    "apiKeyRef": "anthropic",
+    "apiKeyVerified": false,
+    "enabled": false,
+    "status": "unconfigured",
+    "services": [
+      "chat",
+      "computer_use"
+    ],
+    "defaultTemperature": 1,
+    "defaultTopP": 1,
+    "models": [
+      {
+        "modelName": "claude-opus-4.6",
+        "displayName": "Claude Opus 4.6",
+        "serviceType": "chat",
+        "description": "Anthropic 最新旗舰 Opus 模型，最强能力",
+        "contextWindow": 200000,
+        "maxOutputTokens": 32000,
+        "capabilities": [
+          "chat",
+          "reasoning",
+          "code",
+          "vision",
+          "tool_use"
+        ],
+        "inputPrice": 5,
+        "outputPrice": 25,
+        "extra": {}
+      },
+      {
+        "modelName": "claude-opus-4.5",
+        "displayName": "Claude Opus 4.5",
+        "serviceType": "chat",
+        "description": "Anthropic Opus 4.5，顶级推理能力",
+        "contextWindow": 200000,
+        "maxOutputTokens": 32000,
+        "capabilities": [
+          "chat",
+          "reasoning",
+          "code",
+          "vision",
+          "tool_use"
+        ],
+        "inputPrice": 5,
+        "outputPrice": 25,
+        "extra": {}
+      },
+      {
+        "modelName": "claude-sonnet-4.5",
+        "displayName": "Claude Sonnet 4.5",
+        "serviceType": "chat",
+        "description": "Anthropic Sonnet 4.5，高性能性价比",
+        "contextWindow": 200000,
+        "maxOutputTokens": 64000,
+        "capabilities": [
+          "chat",
+          "reasoning",
+          "code",
+          "vision",
+          "tool_use"
+        ],
+        "inputPrice": 3,
+        "outputPrice": 15,
+        "extra": {}
+      },
+      {
+        "modelName": "claude-sonnet-4",
+        "displayName": "Claude Sonnet 4",
+        "serviceType": "chat",
+        "description": "Anthropic Sonnet 4 旗舰模型",
+        "contextWindow": 200000,
+        "maxOutputTokens": 64000,
+        "capabilities": [
+          "chat",
+          "reasoning",
+          "code",
+          "vision",
+          "tool_use"
+        ],
+        "inputPrice": 3,
+        "outputPrice": 15,
+        "extra": {}
+      },
+      {
+        "modelName": "claude-sonnet-4.5-computer",
+        "displayName": "Claude Sonnet 4.5 Computer Use",
+        "serviceType": "computer_use",
+        "description": "Anthropic 最佳 Computer Use 模型",
+        "contextWindow": 200000,
+        "maxOutputTokens": 64000,
+        "capabilities": [
+          "chat",
+          "vision",
+          "computer_use",
+          "tool_use",
+          "reasoning"
+        ],
+        "inputPrice": 3,
+        "outputPrice": 15,
+        "extra": {}
+      }
+    ]
+  },
+  {
+    "id": "provider-deepseek-001",
+    "provider": "deepseek",
+    "label": "DeepSeek",
+    "baseUrl": "https://api.deepseek.com/v1",
+    "apiFormat": "openai-completions",
+    "apiKeyRef": "deepseek",
+    "apiKeyVerified": false,
+    "enabled": false,
+    "status": "unconfigured",
+    "services": [
+      "chat",
+      "reasoning"
+    ],
+    "defaultTemperature": 1,
+    "defaultTopP": 1,
+    "models": [
+      {
+        "modelName": "deepseek-chat",
+        "displayName": "DeepSeek V3.2",
+        "serviceType": "chat",
+        "description": "高性价比通用对话模型，64K 上下文",
+        "contextWindow": 64000,
+        "maxOutputTokens": 8000,
+        "capabilities": [
+          "chat",
+          "code",
+          "reasoning",
+          "multilingual"
+        ],
+        "inputPrice": 0.028,
+        "outputPrice": 0.42,
+        "extra": {}
+      },
+      {
+        "modelName": "deepseek-reasoner",
+        "displayName": "DeepSeek R1",
+        "serviceType": "reasoning",
+        "description": "DeepSeek R1 推理模型，64K 上下文，深度推理能力，比 GPT-4 便宜 90%",
+        "contextWindow": 64000,
+        "maxOutputTokens": 32768,
+        "capabilities": [
+          "chat",
+          "reasoning",
+          "deep_thinking",
+          "code",
+          "math"
+        ],
+        "inputPrice": 0.55,
+        "outputPrice": 2.19,
+        "extra": {}
+      },
+      {
+        "modelName": "deepseek-r1-distill-qwen-32b",
+        "displayName": "DeepSeek R1 蒸馏版 32B",
+        "serviceType": "reasoning",
+        "description": "DeepSeek R1蒸馏版(基于Qwen-32B)，64K 上下文，性价比高的推理模型",
+        "contextWindow": 64000,
+        "maxOutputTokens": 8192,
+        "capabilities": [
+          "reasoning",
+          "math",
+          "code",
+          "fast"
+        ],
+        "inputPrice": 0.14,
+        "outputPrice": 0.28,
+        "extra": {}
+      },
+      {
+        "modelName": "deepseek-r1-distill-qwen-7b",
+        "displayName": "DeepSeek R1 蒸馏版 7B",
+        "serviceType": "reasoning",
+        "description": "DeepSeek R1蒸馏版(基于Qwen-7B)，64K 上下文，极致性价比",
+        "contextWindow": 64000,
+        "maxOutputTokens": 8192,
+        "capabilities": [
+          "reasoning",
+          "code",
+          "fast"
+        ],
+        "inputPrice": 0.05,
+        "outputPrice": 0.1,
+        "extra": {}
+      }
+    ]
+  },
+  {
+    "id": "provider-dashscope-001",
+    "provider": "dashscope",
+    "label": "阿里云 DashScope",
+    "baseUrl": "https://dashscope.aliyuncs.com/compatible-mode/v1",
+    "apiFormat": "openai-completions",
+    "apiKeyRef": "dashscope",
+    "apiKeyVerified": false,
+    "enabled": false,
+    "status": "unconfigured",
+    "services": [
+      "chat",
+      "embedding",
+      "rerank",
+      "tts",
+      "asr",
+      "vision",
+      "image_gen",
+      "video_gen",
+      "voice_clone",
+      "omni",
+      "translation"
+    ],
+    "defaultTemperature": 0.7,
+    "defaultTopP": 0.8,
+    "models": [
+      {
+        "modelName": "qwen3.5-max",
+        "displayName": "阿里云 Qwen3.5-Max",
+        "serviceType": "chat",
+        "description": "通义千问3.5旗舰模型，397B参数，2026除夕发布，极低价格",
+        "contextWindow": 252000,
+        "maxOutputTokens": 16384,
+        "capabilities": [
+          "chat",
+          "reasoning",
+          "code",
+          "multilingual",
+          "long_context",
+          "tool_use",
+          "agent"
+        ],
+        "inputPrice": 0.8,
+        "outputPrice": 2,
+        "extra": {}
+      },
+      {
+        "modelName": "qwen-max",
+        "displayName": "阿里云 qwen-max",
+        "serviceType": "chat",
+        "description": "通义千问Max，千亿参数旗舰模型，最强性能",
+        "contextWindow": 131072,
+        "maxOutputTokens": 8192,
+        "capabilities": [
+          "chat",
+          "reasoning",
+          "code",
+          "multilingual",
+          "long_context"
+        ],
+        "inputPrice": 2.4,
+        "outputPrice": 9.6,
+        "extra": {}
+      },
+      {
+        "modelName": "qwen-plus",
+        "displayName": "阿里云 qwen-plus",
+        "serviceType": "chat",
+        "description": "通义千问Plus，支持思考模式，128K 上下文",
+        "contextWindow": 131072,
+        "maxOutputTokens": 8192,
+        "capabilities": [
+          "chat",
+          "reasoning",
+          "code",
+          "thinking_mode"
+        ],
+        "inputPrice": 0.8,
+        "outputPrice": 2,
+        "extra": {}
+      },
+      {
+        "modelName": "qwen-turbo",
+        "displayName": "阿里云 qwen-turbo",
+        "serviceType": "chat",
+        "description": "通义千问Turbo，支持100万上下文，高性价比",
+        "contextWindow": 1000000,
+        "maxOutputTokens": 8192,
+        "capabilities": [
+          "chat",
+          "long_context",
+          "fast"
+        ],
+        "inputPrice": 0.3,
+        "outputPrice": 0.6,
+        "extra": {}
+      },
+      {
+        "modelName": "qwen-long",
+        "displayName": "阿里云 qwen-long",
+        "serviceType": "chat",
+        "description": "通义千问Long，支持1000万上下文，适合超长文档处理，降价97%",
+        "contextWindow": 10000000,
+        "maxOutputTokens": 8192,
+        "capabilities": [
+          "chat",
+          "ultra_long_context",
+          "document_processing"
+        ],
+        "inputPrice": 0.5,
+        "outputPrice": 2,
+        "extra": {}
+      },
+      {
+        "modelName": "qwen3-max",
+        "displayName": "阿里云 Qwen3-Max",
+        "serviceType": "chat",
+        "description": "通义千问3代旗舰模型，252K 上下文",
+        "contextWindow": 252000,
+        "maxOutputTokens": 16384,
+        "capabilities": [
+          "chat",
+          "reasoning",
+          "code",
+          "multilingual",
+          "long_context",
+          "tool_use",
+          "agent"
+        ],
+        "inputPrice": 3.2,
+        "outputPrice": 12.8,
+        "extra": {}
+      },
+      {
+        "modelName": "qwen3-vl-plus",
+        "displayName": "阿里云 Qwen3-VL-Plus",
+        "serviceType": "vision",
+        "description": "通义千问3代视觉模型Plus版，支持图像理解",
+        "contextWindow": 131072,
+        "maxOutputTokens": 8192,
+        "capabilities": [
+          "chat",
+          "vision",
+          "image_understanding",
+          "ocr",
+          "chart_analysis"
+        ],
+        "inputPrice": 1.5,
+        "outputPrice": 6,
+        "extra": {}
+      },
+      {
+        "modelName": "qwen3-vl-flash",
+        "displayName": "阿里云 Qwen3-VL-Flash",
+        "serviceType": "vision",
+        "description": "通义千问3代视觉模型Flash版，高性价比",
+        "contextWindow": 131072,
+        "maxOutputTokens": 8192,
+        "capabilities": [
+          "chat",
+          "vision",
+          "image_understanding",
+          "fast"
+        ],
+        "inputPrice": 0.8,
+        "outputPrice": 3,
+        "extra": {}
+      },
+      {
+        "modelName": "text-embedding-v3",
+        "displayName": "text-embedding-v3",
+        "serviceType": "embedding",
+        "description": "阿里云文本向量化",
+        "capabilities": [
+          "text_embedding",
+          "semantic_search",
+          "chinese_optimized"
+        ],
+        "inputPrice": 0.7,
+        "extra": {}
+      },
+      {
+        "modelName": "text-embedding-v4",
+        "displayName": "阿里云 text-embedding-v4",
+        "serviceType": "embedding",
+        "description": "阿里云百炼文本向量模型v4，支持多维度与多语种",
+        "capabilities": [
+          "text_embedding",
+          "semantic_search",
+          "rag"
+        ],
+        "inputPrice": 0.5,
+        "extra": {}
+      },
+      {
+        "modelName": "qwen3-rerank",
+        "displayName": "Qwen3-Rerank",
+        "serviceType": "rerank",
+        "description": "检索重排序，支持 100+ 语种",
+        "capabilities": [
+          "rerank",
+          "semantic_reranking",
+          "multilingual"
+        ],
+        "inputPrice": 1,
+        "extra": {}
+      },
+      {
+        "modelName": "cosyvoice-v2",
+        "displayName": "CosyVoice V2",
+        "serviceType": "tts",
+        "description": "通义语音合成，支持中英文",
+        "capabilities": [
+          "tts",
+          "multilingual",
+          "chinese_optimized"
+        ],
+        "extra": {
+          "voices": [
+            "longxiaochun",
+            "longxiaoxia",
+            "longlaotie",
+            "longshu"
+          ],
+          "supportedAudioFormats": [
+            "mp3",
+            "wav",
+            "pcm"
+          ]
+        }
+      },
+      {
+        "modelName": "paraformer-v2",
+        "displayName": "Paraformer V2",
+        "serviceType": "asr",
+        "description": "通义语音识别",
+        "capabilities": [
+          "asr",
+          "chinese_optimized"
+        ],
+        "extra": {
+          "maxAudioLength": 3600,
+          "supportedInputFormats": [
+            "wav",
+            "mp3",
+            "pcm",
+            "ogg"
+          ],
+          "streamingSupported": true
+        }
+      },
+      {
+        "modelName": "wanx-v2",
+        "displayName": "通义万相 V2",
+        "serviceType": "image_gen",
+        "description": "通义万相文生图",
+        "capabilities": [
+          "image_generation",
+          "chinese_optimized"
+        ],
+        "extra": {
+          "supportedImageSizes": [
+            "1024x1024",
+            "720x1280",
+            "1280x720"
+          ],
+          "supportedStyles": [
+            "auto",
+            "photography",
+            "anime",
+            "3d_cartoon"
+          ]
+        }
+      },
+      {
+        "modelName": "wanx-video",
+        "displayName": "通义万相视频",
+        "serviceType": "video_gen",
+        "description": "通义万相文生视频",
+        "capabilities": [
+          "video_generation",
+          "chinese_optimized"
+        ],
+        "extra": {
+          "maxVideoDuration": 10,
+          "supportedResolutions": [
+            "720p",
+            "1080p"
+          ]
+        }
+      },
+      {
+        "modelName": "cosyvoice-clone",
+        "displayName": "CosyVoice 声音复刻",
+        "serviceType": "voice_clone",
+        "description": "通义声音复刻，少量样本即可克隆",
+        "capabilities": [
+          "voice_clone",
+          "chinese_optimized",
+          "few_shot"
+        ],
+        "extra": {
+          "maxCloneSamples": 5,
+          "minCloneDuration": 3
+        }
+      },
+      {
+        "modelName": "qwen-omni-turbo",
+        "displayName": "Qwen-Omni-Turbo",
+        "serviceType": "omni",
+        "description": "通义全能模型，支持音视频文本多模态",
+        "contextWindow": 32768,
+        "capabilities": [
+          "chat",
+          "vision",
+          "tts",
+          "asr",
+          "multimodal"
+        ],
+        "extra": {}
+      },
+      {
+        "modelName": "qwen3-max-trans",
+        "displayName": "Qwen3-Max（翻译）",
+        "serviceType": "translation",
+        "description": "通义千问翻译，中英日韩等多语种互译",
+        "contextWindow": 131072,
+        "capabilities": [
+          "translation",
+          "multilingual",
+          "chinese_optimized"
+        ],
+        "extra": {}
+      }
+    ]
+  },
+  {
+    "id": "provider-volcengine-001",
+    "provider": "volcengine",
+    "label": "火山引擎",
+    "baseUrl": "https://ark.cn-beijing.volces.com/api/v3",
+    "apiFormat": "openai-completions",
+    "apiKeyRef": "volcengine",
+    "apiKeyVerified": false,
+    "enabled": false,
+    "status": "unconfigured",
+    "services": [
+      "chat",
+      "reasoning",
+      "vision",
+      "embedding",
+      "voice_clone",
+      "realtime_voice",
+      "simultaneous_interpret",
+      "translation"
+    ],
+    "defaultTemperature": 0.7,
+    "defaultTopP": 0.9,
+    "models": [
+      {
+        "modelName": "doubao-2.0-pro",
+        "displayName": "豆包 2.0 Pro",
+        "serviceType": "chat",
+        "description": "火山引擎豆包2.0旗舰模型，256K上下文，相比Gemini 3 Pro和GPT 5.2有较大成本优势",
+        "contextWindow": 256000,
+        "maxOutputTokens": 16384,
+        "capabilities": [
+          "chat",
+          "reasoning",
+          "code",
+          "multilingual",
+          "long_context",
+          "tool_use"
+        ],
+        "inputPrice": 3.2,
+        "outputPrice": 16,
+        "extra": {}
+      },
+      {
+        "modelName": "doubao-seed-1.8",
+        "displayName": "豆包 Seed-1.8",
+        "serviceType": "chat",
+        "description": "火山引擎豆包1.8旗舰模型，256K上下文，支持深度思考和多模态",
+        "contextWindow": 256000,
+        "maxOutputTokens": 16384,
+        "capabilities": [
+          "chat",
+          "reasoning",
+          "code",
+          "multilingual",
+          "long_context",
+          "tool_use"
+        ],
+        "inputPrice": 0.8,
+        "outputPrice": 2,
+        "extra": {}
+      },
+      {
+        "modelName": "doubao-seed-1.6",
+        "displayName": "豆包 Seed-1.6",
+        "serviceType": "chat",
+        "description": "火山引擎豆包1.6旗舰模型，256K上下文",
+        "contextWindow": 256000,
+        "maxOutputTokens": 16384,
+        "capabilities": [
+          "chat",
+          "reasoning",
+          "code",
+          "multilingual",
+          "long_context",
+          "tool_use"
+        ],
+        "inputPrice": 0.8,
+        "outputPrice": 8,
+        "extra": {}
+      },
+      {
+        "modelName": "doubao-seed-1.6-thinking",
+        "displayName": "豆包 Seed-1.6 思考版",
+        "serviceType": "chat",
+        "description": "火山引擎豆包1.6深度思考模型，256K上下文",
+        "contextWindow": 256000,
+        "maxOutputTokens": 32768,
+        "capabilities": [
+          "reasoning",
+          "math",
+          "code",
+          "deep_thinking",
+          "long_context"
+        ],
+        "inputPrice": 0.8,
+        "outputPrice": 8,
+        "extra": {}
+      },
+      {
+        "modelName": "doubao-seed-1.6-flash",
+        "displayName": "豆包 Seed-1.6 Flash",
+        "serviceType": "chat",
+        "description": "火山引擎豆包1.6快速版，成本较前代下降63%",
+        "contextWindow": 256000,
+        "maxOutputTokens": 8192,
+        "capabilities": [
+          "chat",
+          "code",
+          "fast",
+          "long_context"
+        ],
+        "inputPrice": 0.15,
+        "outputPrice": 1.5,
+        "extra": {}
+      },
+      {
+        "modelName": "doubao-seed-1.6-lite",
+        "displayName": "豆包 Seed-1.6 Lite",
+        "serviceType": "chat",
+        "description": "火山引擎豆包1.6轻量版，极致性价比",
+        "contextWindow": 128000,
+        "maxOutputTokens": 4096,
+        "capabilities": [
+          "chat",
+          "code",
+          "fast"
+        ],
+        "inputPrice": 0.3,
+        "outputPrice": 0.6,
+        "extra": {}
+      },
+      {
+        "modelName": "doubao-seed-1.6-vision",
+        "displayName": "豆包 Seed-1.6 视觉版",
+        "serviceType": "vision",
+        "description": "火山引擎豆包1.6视觉模型，256K上下文，支持视频理解",
+        "contextWindow": 256000,
+        "maxOutputTokens": 16384,
+        "capabilities": [
+          "chat",
+          "vision",
+          "video_understanding",
+          "gui_agent",
+          "long_context"
+        ],
+        "inputPrice": 0.8,
+        "outputPrice": 8,
+        "extra": {}
+      },
+      {
+        "modelName": "doubao-seed-code",
+        "displayName": "豆包 Seed-Code",
+        "serviceType": "chat",
+        "description": "火山引擎豆包编程专用模型，256K上下文",
+        "contextWindow": 256000,
+        "maxOutputTokens": 32768,
+        "capabilities": [
+          "code",
+          "reasoning",
+          "long_context",
+          "deep_thinking"
+        ],
+        "inputPrice": 1.2,
+        "outputPrice": 8,
+        "extra": {
+          "defaultTemperature": 0.3
+        }
+      },
+      {
+        "modelName": "deepseek-v3.2",
+        "displayName": "DeepSeek V3.2 (火山引擎)",
+        "serviceType": "chat",
+        "description": "火山引擎托管的DeepSeek V3.2，128K上下文",
+        "contextWindow": 128000,
+        "maxOutputTokens": 8000,
+        "capabilities": [
+          "chat",
+          "reasoning",
+          "code",
+          "multilingual"
+        ],
+        "inputPrice": 2,
+        "outputPrice": 3,
+        "extra": {
+          "defaultTemperature": 1,
+          "defaultTopP": 1
+        }
+      },
+      {
+        "modelName": "deepseek-r1",
+        "displayName": "DeepSeek R1 (火山引擎)",
+        "serviceType": "reasoning",
+        "description": "火山引擎托管的DeepSeek R1推理模型，64K上下文",
+        "contextWindow": 64000,
+        "maxOutputTokens": 32768,
+        "capabilities": [
+          "reasoning",
+          "math",
+          "code",
+          "science",
+          "deep_thinking"
+        ],
+        "inputPrice": 4,
+        "outputPrice": 16,
+        "extra": {
+          "defaultTemperature": 1,
+          "defaultTopP": 1
+        }
+      },
+      {
+        "modelName": "kimi-k2-volcengine",
+        "displayName": "Kimi K2 (火山引擎)",
+        "serviceType": "chat",
+        "description": "火山引擎托管的Kimi K2，万亿参数MoE模型，128K上下文",
+        "contextWindow": 128000,
+        "maxOutputTokens": 8192,
+        "capabilities": [
+          "chat",
+          "reasoning",
+          "code",
+          "tool_use",
+          "agent",
+          "long_context"
+        ],
+        "inputPrice": 4,
+        "outputPrice": 16,
+        "extra": {}
+      },
+      {
+        "modelName": "glm-4-7",
+        "displayName": "GLM-4.7 (火山引擎)",
+        "serviceType": "chat",
+        "description": "火山引擎托管的智谱GLM-4.7，200K上下文",
+        "contextWindow": 200000,
+        "maxOutputTokens": 200000,
+        "capabilities": [
+          "chat",
+          "reasoning",
+          "code",
+          "multilingual",
+          "deep_thinking",
+          "long_context"
+        ],
+        "inputPrice": 4,
+        "outputPrice": 16,
+        "extra": {}
+      },
+      {
+        "modelName": "doubao-embedding",
+        "displayName": "豆包 Embedding",
+        "serviceType": "embedding",
+        "description": "火山引擎豆包标准向量模型，2560维度",
+        "contextWindow": 4096,
+        "capabilities": [
+          "text_embedding",
+          "semantic_search",
+          "rag",
+          "chinese_optimized"
+        ],
+        "inputPrice": 0.5,
+        "extra": {}
+      },
+      {
+        "modelName": "volc-mega-tts-clone",
+        "displayName": "火山声音复刻",
+        "serviceType": "voice_clone",
+        "description": "火山引擎声音复刻，支持极少样本",
+        "capabilities": [
+          "voice_clone",
+          "chinese_optimized",
+          "few_shot"
+        ],
+        "extra": {
+          "maxCloneSamples": 3,
+          "minCloneDuration": 5
+        }
+      },
+      {
+        "modelName": "volc-realtime-voice",
+        "displayName": "火山实时语音",
+        "serviceType": "realtime_voice",
+        "description": "火山引擎实时语音交互",
+        "capabilities": [
+          "realtime",
+          "speech_to_speech",
+          "low_latency",
+          "chinese_optimized"
+        ],
+        "extra": {
+          "supportedModes": [
+            "speech-to-speech"
+          ],
+          "latencyMs": 200
+        }
+      },
+      {
+        "modelName": "volc-simultaneous",
+        "displayName": "火山同声传译",
+        "serviceType": "simultaneous_interpret",
+        "description": "火山引擎同声传译，支持中英双向",
+        "capabilities": [
+          "simultaneous_interpretation",
+          "chinese_optimized",
+          "low_latency"
+        ],
+        "extra": {
+          "streamingSupported": true
+        }
+      },
+      {
+        "modelName": "volc-translation",
+        "displayName": "火山翻译",
+        "serviceType": "translation",
+        "description": "火山引擎机器翻译，支持多语种互译",
+        "capabilities": [
+          "translation",
+          "multilingual",
+          "chinese_optimized"
+        ],
+        "extra": {}
+      }
+    ]
+  },
+  {
+    "id": "provider-moonshot-001",
+    "provider": "moonshot",
+    "label": "月之暗面",
+    "baseUrl": "https://api.moonshot.cn/v1",
+    "apiFormat": "openai-completions",
+    "apiKeyRef": "moonshot",
+    "apiKeyVerified": false,
+    "enabled": false,
+    "status": "unconfigured",
+    "services": [
+      "chat",
+      "reasoning"
+    ],
+    "defaultTemperature": 0.7,
+    "defaultTopP": 0.9,
+    "models": [
+      {
+        "modelName": "kimi-k2.5",
+        "displayName": "Kimi K2.5",
+        "serviceType": "chat",
+        "description": "月之暗面Kimi K2.5，2026年1月发布的开源新一代模型",
+        "contextWindow": 256000,
+        "maxOutputTokens": 16384,
+        "capabilities": [
+          "chat",
+          "reasoning",
+          "code",
+          "tool_use",
+          "agent",
+          "long_context"
+        ],
+        "inputPrice": 2,
+        "outputPrice": 8,
+        "extra": {}
+      },
+      {
+        "modelName": "kimi-k2",
+        "displayName": "Kimi K2",
+        "serviceType": "chat",
+        "description": "月之暗面Kimi K2，万亿参数MoE模型(320B激活)，128K上下文，专为智能体设计",
+        "contextWindow": 128000,
+        "maxOutputTokens": 8192,
+        "capabilities": [
+          "chat",
+          "reasoning",
+          "code",
+          "tool_use",
+          "agent",
+          "long_context"
+        ],
+        "inputPrice": 4,
+        "outputPrice": 16,
+        "extra": {}
+      },
+      {
+        "modelName": "kimi-k2-thinking",
+        "displayName": "Kimi K2 思考版",
+        "serviceType": "reasoning",
+        "description": "月之暗面Kimi K2思考版，256K上下文，深度推理能力",
+        "contextWindow": 256000,
+        "maxOutputTokens": 16384,
+        "capabilities": [
+          "reasoning",
+          "math",
+          "code",
+          "deep_thinking",
+          "long_context"
+        ],
+        "inputPrice": 7.5,
+        "outputPrice": 30,
+        "extra": {}
+      },
+      {
+        "modelName": "moonshot-v1-8k",
+        "displayName": "Moonshot V1 8K",
+        "serviceType": "chat",
+        "description": "月之暗面标准模型，8K上下文",
+        "contextWindow": 8192,
+        "maxOutputTokens": 4096,
+        "capabilities": [
+          "chat",
+          "code"
+        ],
+        "inputPrice": 2,
+        "outputPrice": 2,
+        "extra": {}
+      },
+      {
+        "modelName": "moonshot-v1-32k",
+        "displayName": "Moonshot V1 32K",
+        "serviceType": "chat",
+        "description": "月之暗面标准模型，32K上下文",
+        "contextWindow": 32768,
+        "maxOutputTokens": 4096,
+        "capabilities": [
+          "chat",
+          "code",
+          "long_context"
+        ],
+        "inputPrice": 5,
+        "outputPrice": 5,
+        "extra": {}
+      },
+      {
+        "modelName": "moonshot-v1-128k",
+        "displayName": "Moonshot V1 128K",
+        "serviceType": "chat",
+        "description": "月之暗面标准模型，128K上下文",
+        "contextWindow": 131072,
+        "maxOutputTokens": 4096,
+        "capabilities": [
+          "chat",
+          "code",
+          "long_context"
+        ],
+        "inputPrice": 10,
+        "outputPrice": 10,
+        "extra": {}
+      }
+    ]
+  },
+  {
+    "id": "provider-zhipu-001",
+    "provider": "zhipu",
+    "label": "智谱 AI",
+    "baseUrl": "https://open.bigmodel.cn/api/paas/v4",
+    "apiFormat": "openai-completions",
+    "apiKeyRef": "zhipu",
+    "apiKeyVerified": false,
+    "enabled": false,
+    "status": "unconfigured",
+    "services": [
+      "chat",
+      "vision",
+      "reasoning",
+      "embedding"
+    ],
+    "defaultTemperature": 0.95,
+    "defaultTopP": 0.7,
+    "models": [
+      {
+        "modelName": "glm-5",
+        "displayName": "GLM-5",
+        "serviceType": "chat",
+        "description": "智谱GLM-5，745B参数MoE架构，2026年2月发布，编程能力登顶",
+        "contextWindow": 192000,
+        "maxOutputTokens": 128000,
+        "capabilities": [
+          "chat",
+          "reasoning",
+          "code",
+          "multilingual",
+          "deep_thinking",
+          "long_context",
+          "math"
+        ],
+        "inputPrice": 4,
+        "outputPrice": 8,
+        "extra": {}
+      },
+      {
+        "modelName": "glm-5-plus",
+        "displayName": "GLM-5-Plus",
+        "serviceType": "chat",
+        "description": "智谱GLM-5增强版，幻觉率仅2.6%，面向严肃医疗场景",
+        "contextWindow": 192000,
+        "maxOutputTokens": 128000,
+        "capabilities": [
+          "chat",
+          "reasoning",
+          "code",
+          "multilingual",
+          "deep_thinking",
+          "long_context",
+          "medical"
+        ],
+        "inputPrice": 8,
+        "outputPrice": 16,
+        "extra": {}
+      },
+      {
+        "modelName": "glm-4.7",
+        "displayName": "GLM-4.7",
+        "serviceType": "chat",
+        "description": "智谱GLM-4.7，面向超长上下文理解与生成，200K上下文",
+        "contextWindow": 200000,
+        "maxOutputTokens": 128000,
+        "capabilities": [
+          "chat",
+          "reasoning",
+          "code",
+          "multilingual",
+          "deep_thinking",
+          "long_context"
+        ],
+        "inputPrice": 4,
+        "outputPrice": 16,
+        "extra": {}
+      },
+      {
+        "modelName": "glm-4.7-thinking",
+        "displayName": "GLM-4.7 Thinking",
+        "serviceType": "reasoning",
+        "description": "智谱GLM-4.7深度思考版，200K上下文",
+        "contextWindow": 200000,
+        "maxOutputTokens": 64000,
+        "capabilities": [
+          "reasoning",
+          "math",
+          "code",
+          "deep_thinking",
+          "long_context"
+        ],
+        "inputPrice": 8,
+        "outputPrice": 32,
+        "extra": {}
+      },
+      {
+        "modelName": "glm-4.7v",
+        "displayName": "GLM-4.7V",
+        "serviceType": "vision",
+        "description": "智谱GLM-4.7多模态版，支持图像视频理解，200K上下文",
+        "contextWindow": 200000,
+        "maxOutputTokens": 8192,
+        "capabilities": [
+          "chat",
+          "vision",
+          "video_understanding",
+          "image_understanding",
+          "long_context"
+        ],
+        "inputPrice": 8,
+        "outputPrice": 32,
+        "extra": {}
+      },
+      {
+        "modelName": "glm-4.6",
+        "displayName": "GLM-4.6",
+        "serviceType": "chat",
+        "description": "智谱GLM-4.6，最新一代模型，增强推理能力，128K上下文",
+        "contextWindow": 128000,
+        "maxOutputTokens": 8192,
+        "capabilities": [
+          "chat",
+          "reasoning",
+          "code",
+          "multilingual",
+          "deep_thinking"
+        ],
+        "inputPrice": 4,
+        "outputPrice": 16,
+        "extra": {}
+      },
+      {
+        "modelName": "glm-4.6v",
+        "displayName": "GLM-4.6V",
+        "serviceType": "vision",
+        "description": "智谱GLM-4.6多模态版，支持图像理解，128K上下文",
+        "contextWindow": 128000,
+        "maxOutputTokens": 8192,
+        "capabilities": [
+          "chat",
+          "vision",
+          "image_understanding",
+          "ocr"
+        ],
+        "inputPrice": 8,
+        "outputPrice": 32,
+        "extra": {}
+      },
+      {
+        "modelName": "embedding-3",
+        "displayName": "智谱 embedding-3",
+        "serviceType": "embedding",
+        "description": "智谱嵌入模型v3，支持自定义维度，单条最大3072 tokens",
+        "contextWindow": 3072,
+        "capabilities": [
+          "text_embedding",
+          "semantic_search",
+          "rag"
+        ],
+        "inputPrice": 0.5,
+        "extra": {}
+      }
+    ]
+  },
+  {
+    "id": "provider-baichuan-001",
+    "provider": "baichuan",
+    "label": "百川智能",
+    "baseUrl": "https://api.baichuan-ai.com/v1",
+    "apiFormat": "openai-completions",
+    "apiKeyRef": "baichuan",
+    "apiKeyVerified": false,
+    "enabled": false,
+    "status": "unconfigured",
+    "services": [
+      "chat"
+    ],
+    "defaultTemperature": 0.7,
+    "defaultTopP": 0.9,
+    "models": [
+      {
+        "modelName": "Baichuan-M3-Plus",
+        "displayName": "百川 M3-Plus",
+        "serviceType": "chat",
+        "description": "百川智能M3-Plus医疗增强模型，235B参数，幻觉率仅2.6%，API价格较前代下降70%",
+        "contextWindow": 192000,
+        "maxOutputTokens": 8192,
+        "capabilities": [
+          "chat",
+          "reasoning",
+          "code",
+          "multilingual",
+          "long_context",
+          "medical"
+        ],
+        "inputPrice": 1.5,
+        "outputPrice": 4.5,
+        "extra": {}
+      },
+      {
+        "modelName": "Baichuan-M3",
+        "displayName": "百川 M3",
+        "serviceType": "chat",
+        "description": "百川智能M3新一代开源医疗增强模型，235B参数",
+        "contextWindow": 192000,
+        "maxOutputTokens": 8192,
+        "capabilities": [
+          "chat",
+          "reasoning",
+          "code",
+          "multilingual",
+          "medical"
+        ],
+        "inputPrice": 2,
+        "outputPrice": 6,
+        "extra": {}
+      },
+      {
+        "modelName": "Baichuan-M2-Plus",
+        "displayName": "百川 M2-Plus",
+        "serviceType": "chat",
+        "description": "百川智能M2-Plus旗舰模型，最强推理和创作能力",
+        "contextWindow": 128000,
+        "maxOutputTokens": 8192,
+        "capabilities": [
+          "chat",
+          "reasoning",
+          "code",
+          "multilingual",
+          "long_context"
+        ],
+        "inputPrice": 5,
+        "outputPrice": 15,
+        "extra": {}
+      },
+      {
+        "modelName": "Baichuan-M2",
+        "displayName": "百川 M2",
+        "serviceType": "chat",
+        "description": "百川智能M2模型，高性能通用模型",
+        "contextWindow": 128000,
+        "maxOutputTokens": 8192,
+        "capabilities": [
+          "chat",
+          "reasoning",
+          "code",
+          "multilingual"
+        ],
+        "inputPrice": 3,
+        "outputPrice": 9,
+        "extra": {}
+      }
+    ]
+  },
+  {
+    "id": "provider-lingyiwanwu-001",
+    "provider": "lingyiwanwu",
+    "label": "零一万物",
+    "baseUrl": "https://api.lingyiwanwu.com/v1",
+    "apiFormat": "openai-completions",
+    "apiKeyRef": "lingyiwanwu",
+    "apiKeyVerified": false,
+    "enabled": false,
+    "status": "unconfigured",
+    "services": [
+      "chat",
+      "vision"
+    ],
+    "defaultTemperature": 0.7,
+    "defaultTopP": 0.9,
+    "models": [
+      {
+        "modelName": "yi-lightning",
+        "displayName": "Yi Lightning",
+        "serviceType": "chat",
+        "description": "零一万物高性能模型，16K上下文，智能路由，极高性价比",
+        "contextWindow": 16000,
+        "maxOutputTokens": 4096,
+        "capabilities": [
+          "chat",
+          "reasoning",
+          "code",
+          "fast",
+          "smart_routing"
+        ],
+        "inputPrice": 0.99,
+        "outputPrice": 0.99,
+        "extra": {}
+      },
+      {
+        "modelName": "yi-vision-v2",
+        "displayName": "Yi Vision V2",
+        "serviceType": "vision",
+        "description": "零一万物复杂视觉任务模型，16K上下文，支持多图分析",
+        "contextWindow": 16000,
+        "maxOutputTokens": 4096,
+        "capabilities": [
+          "chat",
+          "vision",
+          "image_understanding",
+          "ocr",
+          "chart_analysis",
+          "smart_routing"
+        ],
+        "inputPrice": 6,
+        "outputPrice": 6,
+        "extra": {}
+      }
+    ]
+  },
+  {
+    "id": "provider-local-whisper",
+    "provider": "local-whisper",
+    "label": "本地 Whisper",
+    "baseUrl": "http://localhost:8080",
+    "apiFormat": "openai-completions",
+    "apiKeyRef": "",
+    "apiKeyVerified": false,
+    "enabled": false,
+    "status": "unconfigured",
+    "services": [
+      "asr"
+    ],
+    "models": [
+      {
+        "modelName": "whisper-large-v3",
+        "displayName": "Whisper Large V3",
+        "serviceType": "asr",
+        "description": "本地部署的 Whisper 大模型",
+        "capabilities": [
+          "asr",
+          "multilingual"
+        ],
+        "extra": {
+          "maxAudioLength": 7200,
+          "supportedInputFormats": [
+            "wav",
+            "mp3",
+            "flac",
+            "ogg",
+            "webm"
+          ],
+          "streamingSupported": true
+        }
+      }
+    ]
+  },
+  {
+    "id": "provider-local-ollama",
+    "provider": "ollama",
+    "label": "本地 Ollama",
+    "baseUrl": "http://localhost:11434/v1",
+    "apiFormat": "openai-completions",
+    "apiKeyRef": "",
+    "apiKeyVerified": false,
+    "enabled": false,
+    "status": "unconfigured",
+    "services": [
+      "chat"
+    ],
+    "models": [
+      {
+        "modelName": "llama3.1:70b",
+        "displayName": "Llama 3.1 70B",
+        "serviceType": "chat",
+        "description": "本地运行的 Llama 3.1 70B",
+        "contextWindow": 131072,
+        "capabilities": [
+          "chat",
+          "code",
+          "reasoning"
+        ],
+        "extra": {}
+      }
+    ]
+  },
+  {
+    "id": "provider-google-001",
+    "provider": "google",
+    "label": "Google AI",
+    "baseUrl": "https://generativelanguage.googleapis.com/v1beta",
+    "apiFormat": "google-generative-ai",
+    "apiKeyRef": "google",
+    "apiKeyVerified": false,
+    "enabled": false,
+    "status": "unconfigured",
+    "services": [
+      "chat",
+      "vision",
+      "embedding"
+    ],
+    "defaultTemperature": 1,
+    "defaultTopP": 0.95,
+    "models": [
+      {
+        "modelName": "gemini-2.5-pro",
+        "displayName": "Gemini 2.5 Pro",
+        "serviceType": "chat",
+        "description": "Google 最新旗舰模型，100万上下文，多模态",
+        "contextWindow": 1000000,
+        "maxOutputTokens": 65536,
+        "capabilities": [
+          "chat",
+          "reasoning",
+          "code",
+          "vision",
+          "ultra_long_context",
+          "tool_use"
+        ],
+        "inputPrice": 1.25,
+        "outputPrice": 10,
+        "extra": {}
+      },
+      {
+        "modelName": "gemini-2.5-flash",
+        "displayName": "Gemini 2.5 Flash",
+        "serviceType": "chat",
+        "description": "Google 高性价比模型，100万上下文，速度快",
+        "contextWindow": 1000000,
+        "maxOutputTokens": 65536,
+        "capabilities": [
+          "chat",
+          "reasoning",
+          "code",
+          "vision",
+          "ultra_long_context",
+          "tool_use",
+          "fast"
+        ],
+        "inputPrice": 0.075,
+        "outputPrice": 0.4,
+        "extra": {}
+      },
+      {
+        "modelName": "gemini-2.5-pro-vision",
+        "displayName": "Gemini 2.5 Pro Vision",
+        "serviceType": "vision",
+        "description": "Google 多模态旗舰，支持图像视频理解",
+        "contextWindow": 1000000,
+        "maxOutputTokens": 65536,
+        "capabilities": [
+          "chat",
+          "vision",
+          "video_understanding",
+          "image_understanding",
+          "ultra_long_context"
+        ],
+        "inputPrice": 1.25,
+        "outputPrice": 10,
+        "extra": {}
+      },
+      {
+        "modelName": "text-embedding-005",
+        "displayName": "Text Embedding 005",
+        "serviceType": "embedding",
+        "description": "Google 文本嵌入模型，768维度",
+        "capabilities": [
+          "text_embedding",
+          "semantic_search"
+        ],
+        "inputPrice": 0.07,
+        "extra": {}
+      }
+    ]
+  },
+  {
+    "id": "provider-kling-001",
+    "provider": "kling",
+    "label": "可灵 AI",
+    "baseUrl": "https://api.klingai.com/v1",
+    "apiFormat": "openai-completions",
+    "apiKeyRef": "kling",
+    "apiKeyVerified": false,
+    "enabled": false,
+    "status": "unconfigured",
+    "services": [
+      "video_gen"
+    ],
+    "models": [
+      {
+        "modelName": "kling-v2-5-turbo",
+        "displayName": "可灵 V2.5 Turbo",
+        "serviceType": "video_gen",
+        "description": "可灵最新视频生成模型，高性价比",
+        "capabilities": [
+          "video_generation",
+          "chinese_optimized",
+          "high_quality",
+          "fast"
+        ],
+        "extra": {
+          "maxVideoDuration": 10,
+          "supportedResolutions": [
+            "720p",
+            "1080p"
+          ],
+          "pricePerGeneration": 1.5
+        }
+      },
+      {
+        "modelName": "kling-v2-5-turbo-pro",
+        "displayName": "可灵 V2.5 Turbo Pro",
+        "serviceType": "video_gen",
+        "description": "可灵高品质视频生成",
+        "capabilities": [
+          "video_generation",
+          "chinese_optimized",
+          "ultra_quality"
+        ],
+        "extra": {
+          "maxVideoDuration": 10,
+          "supportedResolutions": [
+            "1080p",
+            "4k"
+          ],
+          "pricePerGeneration": 2.5
+        }
+      },
+      {
+        "modelName": "kling-v2",
+        "displayName": "可灵 V2",
+        "serviceType": "video_gen",
+        "description": "可灵文生视频旗舰模型",
+        "capabilities": [
+          "video_generation",
+          "chinese_optimized",
+          "high_quality"
+        ],
+        "extra": {
+          "maxVideoDuration": 10,
+          "supportedResolutions": [
+            "720p",
+            "1080p"
+          ]
+        }
+      },
+      {
+        "modelName": "kling-v2-master",
+        "displayName": "可灵 V2 Master",
+        "serviceType": "video_gen",
+        "description": "可灵最高品质视频生成",
+        "capabilities": [
+          "video_generation",
+          "chinese_optimized",
+          "ultra_quality"
+        ],
+        "extra": {
+          "maxVideoDuration": 10,
+          "supportedResolutions": [
+            "1080p",
+            "4k"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "provider-stability-001",
+    "provider": "stability",
+    "label": "Stability AI",
+    "baseUrl": "https://api.stability.ai/v2beta",
+    "apiFormat": "openai-completions",
+    "apiKeyRef": "stability",
+    "apiKeyVerified": false,
+    "enabled": false,
+    "status": "unconfigured",
+    "services": [
+      "image_gen"
+    ],
+    "models": [
+      {
+        "modelName": "stable-diffusion-3.5-large",
+        "displayName": "Stable Diffusion 3.5 Large",
+        "serviceType": "image_gen",
+        "description": "Stability AI 旗舰文生图模型",
+        "capabilities": [
+          "image_generation",
+          "high_quality",
+          "controllable"
+        ],
+        "extra": {
+          "supportedImageSizes": [
+            "1024x1024",
+            "1152x896",
+            "896x1152",
+            "1216x832",
+            "832x1216"
+          ],
+          "supportedStyles": [
+            "photographic",
+            "digital-art",
+            "anime",
+            "comic-book"
+          ]
+        }
+      }
+    ]
+  }
+]

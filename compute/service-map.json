@@ -1,0 +1,74 @@
+{
+  "chat": {
+    "modelName": "gpt-5-mini",
+    "providerId": "provider-openai-001"
+  },
+  "reasoning": {
+    "modelName": "deepseek-reasoner",
+    "providerId": "provider-deepseek-001"
+  },
+  "fast": {
+    "modelName": "gpt-5-nano",
+    "providerId": "provider-openai-001"
+  },
+  "embedding": {
+    "modelName": "text-embedding-3-small",
+    "providerId": "provider-openai-001"
+  },
+  "rerank": {
+    "modelName": "qwen3-rerank",
+    "providerId": "provider-dashscope-001"
+  },
+  "vision": {
+    "modelName": "gpt-4o",
+    "providerId": "provider-openai-001"
+  },
+  "tts": {
+    "modelName": "tts-1",
+    "providerId": "provider-openai-001"
+  },
+  "asr": {
+    "modelName": "whisper-large-v3",
+    "providerId": "provider-local-whisper"
+  },
+  "ocr": {
+    "modelName": "qwen3-vl-plus",
+    "providerId": "provider-dashscope-001"
+  },
+  "responses": {
+    "modelName": "o3",
+    "providerId": "provider-openai-001"
+  },
+  "image_gen": {
+    "modelName": "dall-e-3",
+    "providerId": "provider-openai-001"
+  },
+  "video_gen": {
+    "modelName": "kling-v2",
+    "providerId": "provider-kling-001"
+  },
+  "omni": {
+    "modelName": "gpt-4o-realtime",
+    "providerId": "provider-openai-001"
+  },
+  "voice_clone": {
+    "modelName": "cosyvoice-clone",
+    "providerId": "provider-dashscope-001"
+  },
+  "realtime_voice": {
+    "modelName": "gpt-4o-realtime-preview",
+    "providerId": "provider-openai-001"
+  },
+  "simultaneous_interpret": {
+    "modelName": "volc-simultaneous",
+    "providerId": "provider-volcengine-001"
+  },
+  "translation": {
+    "modelName": "qwen3-max-trans",
+    "providerId": "provider-dashscope-001"
+  },
+  "computer_use": {
+    "modelName": "claude-sonnet-4.5-computer",
+    "providerId": "provider-anthropic-001"
+  }
+}
