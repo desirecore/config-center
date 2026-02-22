@@ -1,0 +1,89 @@
+{
+  "id": "provider-google-001",
+  "provider": "google",
+  "label": "Google AI",
+  "baseUrl": "https://generativelanguage.googleapis.com/v1beta",
+  "apiFormat": "google-generative-ai",
+  "apiKeyRef": "google",
+  "apiKeyVerified": false,
+  "enabled": false,
+  "status": "unconfigured",
+  "services": [
+    "chat",
+    "vision",
+    "embedding"
+  ],
+  "defaultTemperature": 1,
+  "defaultTopP": 0.95,
+  "models": [
+    {
+      "modelName": "gemini-2.5-pro",
+      "displayName": "Gemini 2.5 Pro",
+      "serviceType": "chat",
+      "description": "Google 最新旗舰模型，100万上下文，多模态",
+      "contextWindow": 1000000,
+      "maxOutputTokens": 65536,
+      "capabilities": [
+        "chat",
+        "reasoning",
+        "code",
+        "vision",
+        "ultra_long_context",
+        "tool_use"
+      ],
+      "inputPrice": 1.25,
+      "outputPrice": 10,
+      "extra": {}
+    },
+    {
+      "modelName": "gemini-2.5-flash",
+      "displayName": "Gemini 2.5 Flash",
+      "serviceType": "chat",
+      "description": "Google 高性价比模型，100万上下文，速度快",
+      "contextWindow": 1000000,
+      "maxOutputTokens": 65536,
+      "capabilities": [
+        "chat",
+        "reasoning",
+        "code",
+        "vision",
+        "ultra_long_context",
+        "tool_use",
+        "fast"
+      ],
+      "inputPrice": 0.075,
+      "outputPrice": 0.4,
+      "extra": {}
+    },
+    {
+      "modelName": "gemini-2.5-pro-vision",
+      "displayName": "Gemini 2.5 Pro Vision",
+      "serviceType": "vision",
+      "description": "Google 多模态旗舰，支持图像视频理解",
+      "contextWindow": 1000000,
+      "maxOutputTokens": 65536,
+      "capabilities": [
+        "chat",
+        "vision",
+        "video_understanding",
+        "image_understanding",
+        "ultra_long_context"
+      ],
+      "inputPrice": 1.25,
+      "outputPrice": 10,
+      "extra": {}
+    },
+    {
+      "modelName": "text-embedding-005",
+      "displayName": "Text Embedding 005",
+      "serviceType": "embedding",
+      "description": "Google 文本嵌入模型，768维度",
+      "capabilities": [
+        "text_embedding",
+        "semantic_search"
+      ],
+      "inputPrice": 0.07,
+      "extra": {}
+    }
+  ]
+}

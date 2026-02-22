@@ -1,0 +1,37 @@
+{
+  "id": "provider-local-whisper",
+  "provider": "local-whisper",
+  "label": "本地 Whisper",
+  "baseUrl": "http://localhost:8080",
+  "apiFormat": "openai-completions",
+  "apiKeyRef": "",
+  "apiKeyVerified": false,
+  "enabled": false,
+  "status": "unconfigured",
+  "services": [
+    "asr"
+  ],
+  "models": [
+    {
+      "modelName": "whisper-large-v3",
+      "displayName": "Whisper Large V3",
+      "serviceType": "asr",
+      "description": "本地部署的 Whisper 大模型",
+      "capabilities": [
+        "asr",
+        "multilingual"
+      ],
+      "extra": {
+        "maxAudioLength": 7200,
+        "supportedInputFormats": [
+          "wav",
+          "mp3",
+          "flac",
+          "ogg",
+          "webm"
+        ],
+        "streamingSupported": true
+      }
+    }
+  ]
+}

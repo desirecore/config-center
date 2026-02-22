@@ -1,0 +1,42 @@
+{
+  "id": "provider-stability-001",
+  "provider": "stability",
+  "label": "Stability AI",
+  "baseUrl": "https://api.stability.ai/v2beta",
+  "apiFormat": "openai-completions",
+  "apiKeyRef": "stability",
+  "apiKeyVerified": false,
+  "enabled": false,
+  "status": "unconfigured",
+  "services": [
+    "image_gen"
+  ],
+  "models": [
+    {
+      "modelName": "stable-diffusion-3.5-large",
+      "displayName": "Stable Diffusion 3.5 Large",
+      "serviceType": "image_gen",
+      "description": "Stability AI 旗舰文生图模型",
+      "capabilities": [
+        "image_generation",
+        "high_quality",
+        "controllable"
+      ],
+      "extra": {
+        "supportedImageSizes": [
+          "1024x1024",
+          "1152x896",
+          "896x1152",
+          "1216x832",
+          "832x1216"
+        ],
+        "supportedStyles": [
+          "photographic",
+          "digital-art",
+          "anime",
+          "comic-book"
+        ]
+      }
+    }
+  ]
+}

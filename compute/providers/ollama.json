@@ -1,0 +1,29 @@
+{
+  "id": "provider-local-ollama",
+  "provider": "ollama",
+  "label": "本地 Ollama",
+  "baseUrl": "http://localhost:11434/v1",
+  "apiFormat": "openai-completions",
+  "apiKeyRef": "",
+  "apiKeyVerified": false,
+  "enabled": false,
+  "status": "unconfigured",
+  "services": [
+    "chat"
+  ],
+  "models": [
+    {
+      "modelName": "llama3.1:70b",
+      "displayName": "Llama 3.1 70B",
+      "serviceType": "chat",
+      "description": "本地运行的 Llama 3.1 70B",
+      "contextWindow": 131072,
+      "capabilities": [
+        "chat",
+        "code",
+        "reasoning"
+      ],
+      "extra": {}
+    }
+  ]
+}

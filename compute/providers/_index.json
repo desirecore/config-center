@@ -1,0 +1,19 @@
+{
+  "description": "Provider 加载顺序索引",
+  "order": [
+    "openai",
+    "anthropic",
+    "deepseek",
+    "dashscope",
+    "volcengine",
+    "moonshot",
+    "zhipu",
+    "baichuan",
+    "lingyiwanwu",
+    "local-whisper",
+    "ollama",
+    "google",
+    "kling",
+    "stability"
+  ]
+}

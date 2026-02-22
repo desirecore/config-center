@@ -1,0 +1,56 @@
+{
+  "id": "provider-lingyiwanwu-001",
+  "provider": "lingyiwanwu",
+  "label": "零一万物",
+  "baseUrl": "https://api.lingyiwanwu.com/v1",
+  "apiFormat": "openai-completions",
+  "apiKeyRef": "lingyiwanwu",
+  "apiKeyVerified": false,
+  "enabled": false,
+  "status": "unconfigured",
+  "services": [
+    "chat",
+    "vision"
+  ],
+  "defaultTemperature": 0.7,
+  "defaultTopP": 0.9,
+  "models": [
+    {
+      "modelName": "yi-lightning",
+      "displayName": "Yi Lightning",
+      "serviceType": "chat",
+      "description": "零一万物高性能模型，16K上下文，智能路由，极高性价比",
+      "contextWindow": 16000,
+      "maxOutputTokens": 4096,
+      "capabilities": [
+        "chat",
+        "reasoning",
+        "code",
+        "fast",
+        "smart_routing"
+      ],
+      "inputPrice": 0.99,
+      "outputPrice": 0.99,
+      "extra": {}
+    },
+    {
+      "modelName": "yi-vision-v2",
+      "displayName": "Yi Vision V2",
+      "serviceType": "vision",
+      "description": "零一万物复杂视觉任务模型，16K上下文，支持多图分析",
+      "contextWindow": 16000,
+      "maxOutputTokens": 4096,
+      "capabilities": [
+        "chat",
+        "vision",
+        "image_understanding",
+        "ocr",
+        "chart_analysis",
+        "smart_routing"
+      ],
+      "inputPrice": 6,
+      "outputPrice": 6,
+      "extra": {}
+    }
+  ]
+}

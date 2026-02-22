@@ -1,0 +1,87 @@
+{
+  "id": "provider-deepseek-001",
+  "provider": "deepseek",
+  "label": "DeepSeek",
+  "baseUrl": "https://api.deepseek.com/v1",
+  "apiFormat": "openai-completions",
+  "apiKeyRef": "deepseek",
+  "apiKeyVerified": false,
+  "enabled": false,
+  "status": "unconfigured",
+  "services": [
+    "chat",
+    "reasoning"
+  ],
+  "defaultTemperature": 1,
+  "defaultTopP": 1,
+  "models": [
+    {
+      "modelName": "deepseek-chat",
+      "displayName": "DeepSeek V3.2",
+      "serviceType": "chat",
+      "description": "高性价比通用对话模型，64K 上下文",
+      "contextWindow": 64000,
+      "maxOutputTokens": 8000,
+      "capabilities": [
+        "chat",
+        "code",
+        "reasoning",
+        "multilingual"
+      ],
+      "inputPrice": 0.028,
+      "outputPrice": 0.42,
+      "extra": {}
+    },
+    {
+      "modelName": "deepseek-reasoner",
+      "displayName": "DeepSeek R1",
+      "serviceType": "reasoning",
+      "description": "DeepSeek R1 推理模型，64K 上下文，深度推理能力，比 GPT-4 便宜 90%",
+      "contextWindow": 64000,
+      "maxOutputTokens": 32768,
+      "capabilities": [
+        "chat",
+        "reasoning",
+        "deep_thinking",
+        "code",
+        "math"
+      ],
+      "inputPrice": 0.55,
+      "outputPrice": 2.19,
+      "extra": {}
+    },
+    {
+      "modelName": "deepseek-r1-distill-qwen-32b",
+      "displayName": "DeepSeek R1 蒸馏版 32B",
+      "serviceType": "reasoning",
+      "description": "DeepSeek R1蒸馏版(基于Qwen-32B)，64K 上下文，性价比高的推理模型",
+      "contextWindow": 64000,
+      "maxOutputTokens": 8192,
+      "capabilities": [
+        "reasoning",
+        "math",
+        "code",
+        "fast"
+      ],
+      "inputPrice": 0.14,
+      "outputPrice": 0.28,
+      "extra": {}
+    },
+    {
+      "modelName": "deepseek-r1-distill-qwen-7b",
+      "displayName": "DeepSeek R1 蒸馏版 7B",
+      "serviceType": "reasoning",
+      "description": "DeepSeek R1蒸馏版(基于Qwen-7B)，64K 上下文，极致性价比",
+      "contextWindow": 64000,
+      "maxOutputTokens": 8192,
+      "capabilities": [
+        "reasoning",
+        "code",
+        "fast"
+      ],
+      "inputPrice": 0.05,
+      "outputPrice": 0.1,
+      "extra": {}
+    }
+  ]
+}
