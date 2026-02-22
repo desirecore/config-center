@@ -1346,6 +1346,7 @@
     "models": [
       {
         "modelName": "kimi-k2.5",
+        "apiModelId": "kimi-2.5",
         "displayName": "Kimi K2.5",
         "serviceType": "chat",
         "description": "月之暗面Kimi K2.5，2026年1月发布的开源新一代模型",
