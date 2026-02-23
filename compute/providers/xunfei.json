@@ -1,0 +1,51 @@
+{
+  "id": "provider-xunfei-001",
+  "provider": "xunfei",
+  "label": "科大讯飞",
+  "baseUrl": "https://spark-api-open.xf-yun.com/v1",
+  "apiFormat": "openai-completions",
+  "apiKeyRef": "xunfei",
+  "apiKeyVerified": false,
+  "enabled": false,
+  "status": "unconfigured",
+  "services": ["chat", "reasoning"],
+  "defaultTemperature": 1,
+  "defaultTopP": 1,
+  "models": [
+    {
+      "modelName": "x1",
+      "displayName": "讯飞星火 X1",
+      "serviceType": ["reasoning"],
+      "description": "讯飞最新推理模型，擅长数学和代码推理",
+      "contextWindow": 32768,
+      "maxOutputTokens": 16384,
+      "capabilities": [
+        "chat",
+        "reasoning",
+        "deep_thinking",
+        "math",
+        "code"
+      ],
+      "inputPrice": 2.92,
+      "outputPrice": 11.67,
+      "extra": {}
+    },
+    {
+      "modelName": "4.0Ultra",
+      "displayName": "讯飞星火 4.0 Ultra",
+      "serviceType": ["chat"],
+      "description": "讯飞星火最强通用模型，支持推理、代码和工具调用",
+      "contextWindow": 32768,
+      "maxOutputTokens": 32768,
+      "capabilities": [
+        "chat",
+        "reasoning",
+        "code",
+        "tool_use"
+      ],
+      "inputPrice": 2.92,
+      "outputPrice": 11.67,
+      "extra": {}
+    }
+  ]
+}

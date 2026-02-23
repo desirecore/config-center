@@ -1,0 +1,65 @@
+{
+  "id": "provider-cohere-001",
+  "provider": "cohere",
+  "label": "Cohere",
+  "baseUrl": "https://api.cohere.com/compatibility/v1",
+  "apiFormat": "openai-completions",
+  "apiKeyRef": "cohere",
+  "apiKeyVerified": false,
+  "enabled": false,
+  "status": "unconfigured",
+  "services": ["chat", "embedding", "rerank"],
+  "defaultTemperature": 1,
+  "defaultTopP": 1,
+  "models": [
+    {
+      "modelName": "command-a-03-2025",
+      "displayName": "Command A",
+      "serviceType": ["chat"],
+      "description": "Cohere 旗舰对话模型，262K 上下文，擅长 RAG 和工具调用",
+      "contextWindow": 262144,
+      "maxOutputTokens": 8192,
+      "capabilities": [
+        "chat",
+        "reasoning",
+        "code",
+        "tool_use",
+        "rag",
+        "long_context"
+      ],
+      "inputPrice": 2.50,
+      "outputPrice": 10.00,
+      "extra": {}
+    },
+    {
+      "modelName": "embed-v4.0",
+      "displayName": "Embed V4",
+      "serviceType": ["embedding"],
+      "description": "Cohere 最新 Embedding 模型，131K 上下文，多语言支持",
+      "contextWindow": 131072,
+      "maxOutputTokens": 0,
+      "capabilities": [
+        "text_embedding",
+        "multilingual"
+      ],
+      "inputPrice": 0.12,
+      "outputPrice": 0,
+      "extra": {}
+    },
+    {
+      "modelName": "rerank-v3.5",
+      "displayName": "Rerank V3.5",
+      "serviceType": ["rerank"],
+      "description": "Cohere 语义重排序模型，用于检索结果精排",
+      "contextWindow": 0,
+      "maxOutputTokens": 0,
+      "capabilities": [
+        "rerank",
+        "semantic_reranking"
+      ],
+      "inputPrice": 2.00,
+      "outputPrice": 0,
+      "extra": {}
+    }
+  ]
+}

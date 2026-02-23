@@ -1,0 +1,50 @@
+{
+  "id": "provider-xai-001",
+  "provider": "xai",
+  "label": "xAI Grok",
+  "baseUrl": "https://api.x.ai/v1",
+  "apiFormat": "openai-completions",
+  "apiKeyRef": "xai",
+  "apiKeyVerified": false,
+  "enabled": false,
+  "status": "unconfigured",
+  "services": ["chat", "reasoning"],
+  "defaultTemperature": 1,
+  "defaultTopP": 1,
+  "models": [
+    {
+      "modelName": "grok-4-0709",
+      "displayName": "Grok 4",
+      "serviceType": ["chat", "reasoning"],
+      "description": "xAI 最新旗舰推理模型，262K 上下文，支持工具调用",
+      "contextWindow": 262144,
+      "maxOutputTokens": 8192,
+      "capabilities": [
+        "chat",
+        "reasoning",
+        "code",
+        "tool_use"
+      ],
+      "inputPrice": 3.00,
+      "outputPrice": 15.00,
+      "extra": {}
+    },
+    {
+      "modelName": "grok-4-1-fast",
+      "displayName": "Grok 4.1 Fast",
+      "serviceType": ["chat"],
+      "description": "xAI 超长上下文高速模型，2M token 窗口",
+      "contextWindow": 2000000,
+      "maxOutputTokens": 16384,
+      "capabilities": [
+        "chat",
+        "reasoning",
+        "fast",
+        "long_context"
+      ],
+      "inputPrice": 0.20,
+      "outputPrice": 0.50,
+      "extra": {}
+    }
+  ]
+}

@@ -1,0 +1,50 @@
+{
+  "id": "provider-baidu-001",
+  "provider": "baidu",
+  "label": "百度千帆",
+  "baseUrl": "https://qianfan.baidubce.com/v2",
+  "apiFormat": "openai-completions",
+  "apiKeyRef": "baidu",
+  "apiKeyVerified": false,
+  "enabled": false,
+  "status": "unconfigured",
+  "services": ["chat", "reasoning"],
+  "defaultTemperature": 1,
+  "defaultTopP": 1,
+  "models": [
+    {
+      "modelName": "ernie-5.0-thinking-latest",
+      "displayName": "ERNIE 5.0",
+      "serviceType": ["chat", "reasoning"],
+      "description": "百度最新旗舰模型，支持深度推理、多模态和工具调用",
+      "contextWindow": 131072,
+      "maxOutputTokens": 16384,
+      "capabilities": [
+        "chat",
+        "reasoning",
+        "vision",
+        "multimodal",
+        "tool_use"
+      ],
+      "inputPrice": 0.83,
+      "outputPrice": 3.33,
+      "extra": {}
+    },
+    {
+      "modelName": "ernie-4.5-turbo-128k-latest",
+      "displayName": "ERNIE 4.5 Turbo 128K",
+      "serviceType": ["chat"],
+      "description": "百度高性价比长上下文模型，128K 窗口，适合日常对话和文档处理",
+      "contextWindow": 131072,
+      "maxOutputTokens": 8192,
+      "capabilities": [
+        "chat",
+        "long_context",
+        "fast"
+      ],
+      "inputPrice": 0.11,
+      "outputPrice": 0.44,
+      "extra": {}
+    }
+  ]
+}

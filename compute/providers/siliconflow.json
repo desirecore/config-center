@@ -1,0 +1,65 @@
+{
+  "id": "provider-siliconflow-001",
+  "provider": "siliconflow",
+  "label": "硅基流动",
+  "baseUrl": "https://api.siliconflow.cn/v1",
+  "apiFormat": "openai-completions",
+  "apiKeyRef": "siliconflow",
+  "apiKeyVerified": false,
+  "enabled": false,
+  "status": "unconfigured",
+  "services": ["chat", "embedding"],
+  "defaultTemperature": 1,
+  "defaultTopP": 1,
+  "models": [
+    {
+      "modelName": "Qwen/Qwen3-Coder-480B-A35B-Instruct",
+      "displayName": "Qwen3 Coder 480B (硅基)",
+      "serviceType": ["chat"],
+      "description": "开源最强代码模型，480B MoE 架构，擅长代码生成和 Agent 场景",
+      "contextWindow": 262144,
+      "maxOutputTokens": 32768,
+      "capabilities": [
+        "code",
+        "reasoning",
+        "agent",
+        "tool_use"
+      ],
+      "inputPrice": 0.22,
+      "outputPrice": 1.00,
+      "extra": {}
+    },
+    {
+      "modelName": "Qwen/Qwen3-235B-A22B-Instruct",
+      "displayName": "Qwen3 235B (硅基)",
+      "serviceType": ["chat"],
+      "description": "Qwen3 旗舰通用模型，235B MoE 架构，多语言能力突出",
+      "contextWindow": 262144,
+      "maxOutputTokens": 38912,
+      "capabilities": [
+        "chat",
+        "reasoning",
+        "code",
+        "multilingual"
+      ],
+      "inputPrice": 0.35,
+      "outputPrice": 1.39,
+      "extra": {}
+    },
+    {
+      "modelName": "BAAI/bge-m3",
+      "displayName": "BGE-M3 (硅基)",
+      "serviceType": ["embedding"],
+      "description": "多语言 Embedding 模型，支持 8K 上下文",
+      "contextWindow": 8192,
+      "maxOutputTokens": 0,
+      "capabilities": [
+        "text_embedding",
+        "multilingual"
+      ],
+      "inputPrice": 0.005,
+      "outputPrice": 0,
+      "extra": {}
+    }
+  ]
+}

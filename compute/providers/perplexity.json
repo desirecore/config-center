@@ -1,0 +1,67 @@
+{
+  "id": "provider-perplexity-001",
+  "provider": "perplexity",
+  "label": "Perplexity",
+  "baseUrl": "https://api.perplexity.ai",
+  "apiFormat": "openai-completions",
+  "apiKeyRef": "perplexity",
+  "apiKeyVerified": false,
+  "enabled": false,
+  "status": "unconfigured",
+  "services": ["chat"],
+  "defaultTemperature": 1,
+  "defaultTopP": 1,
+  "models": [
+    {
+      "modelName": "sonar-pro",
+      "displayName": "Sonar Pro",
+      "serviceType": ["chat"],
+      "description": "Perplexity 旗舰搜索增强模型，内置实时联网搜索和引用",
+      "contextWindow": 200000,
+      "maxOutputTokens": 8192,
+      "capabilities": [
+        "chat",
+        "web_search",
+        "reasoning",
+        "citation"
+      ],
+      "inputPrice": 3.00,
+      "outputPrice": 15.00,
+      "extra": {}
+    },
+    {
+      "modelName": "sonar-reasoning-pro",
+      "displayName": "Sonar Reasoning Pro",
+      "serviceType": ["chat"],
+      "description": "Perplexity 深度推理模型，内置联网搜索和深度思考",
+      "contextWindow": 128000,
+      "maxOutputTokens": 8192,
+      "capabilities": [
+        "chat",
+        "web_search",
+        "reasoning",
+        "deep_thinking"
+      ],
+      "inputPrice": 2.00,
+      "outputPrice": 8.00,
+      "extra": {}
+    },
+    {
+      "modelName": "sonar",
+      "displayName": "Sonar",
+      "serviceType": ["chat"],
+      "description": "Perplexity 轻量搜索模型，低成本联网搜索",
+      "contextWindow": 128000,
+      "maxOutputTokens": 4096,
+      "capabilities": [
+        "chat",
+        "web_search",
+        "citation",
+        "fast"
+      ],
+      "inputPrice": 1.00,
+      "outputPrice": 1.00,
+      "extra": {}
+    }
+  ]
+}

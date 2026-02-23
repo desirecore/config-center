@@ -10,10 +10,20 @@
     "zhipu",
     "baichuan",
     "lingyiwanwu",
+    "minimax",
+    "baidu",
+    "tencent",
+    "xunfei",
+    "siliconflow",
     "local-whisper",
     "ollama",
     "google",
+    "mistral",
+    "xai",
+    "cohere",
     "kling",
-    "stability"
+    "stability",
+    "openrouter",
+    "perplexity"
   ]
 }

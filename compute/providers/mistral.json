@@ -1,0 +1,67 @@
+{
+  "id": "provider-mistral-001",
+  "provider": "mistral",
+  "label": "Mistral AI",
+  "baseUrl": "https://api.mistral.ai/v1",
+  "apiFormat": "openai-completions",
+  "apiKeyRef": "mistral",
+  "apiKeyVerified": false,
+  "enabled": false,
+  "status": "unconfigured",
+  "services": ["chat", "fast"],
+  "defaultTemperature": 1,
+  "defaultTopP": 1,
+  "models": [
+    {
+      "modelName": "mistral-large-latest",
+      "displayName": "Mistral Large 3",
+      "serviceType": ["chat"],
+      "description": "Mistral 旗舰模型，256K 上下文，支持视觉和工具调用",
+      "contextWindow": 256000,
+      "maxOutputTokens": 262144,
+      "capabilities": [
+        "chat",
+        "reasoning",
+        "code",
+        "vision",
+        "tool_use",
+        "long_context"
+      ],
+      "inputPrice": 0.50,
+      "outputPrice": 1.50,
+      "extra": {}
+    },
+    {
+      "modelName": "mistral-small-latest",
+      "displayName": "Mistral Small 3.2",
+      "serviceType": ["fast"],
+      "description": "Mistral 高效小模型，低延迟，适合快速推理场景",
+      "contextWindow": 130000,
+      "maxOutputTokens": 8192,
+      "capabilities": [
+        "chat",
+        "code",
+        "fast",
+        "tool_use"
+      ],
+      "inputPrice": 0.10,
+      "outputPrice": 0.30,
+      "extra": {}
+    },
+    {
+      "modelName": "codestral-latest",
+      "displayName": "Codestral",
+      "serviceType": ["chat"],
+      "description": "Mistral 专业代码模型，支持 Fill-in-the-Middle 补全",
+      "contextWindow": 256000,
+      "maxOutputTokens": 32768,
+      "capabilities": [
+        "code",
+        "fill_in_the_middle"
+      ],
+      "inputPrice": 0.30,
+      "outputPrice": 0.90,
+      "extra": {}
+    }
+  ]
+}
