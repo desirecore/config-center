@@ -1,7 +1,7 @@
 {
   "id": "provider-zhipu-001",
   "provider": "zhipu",
-  "label": "智谱 AI",
+  "label": "智谱 GLM",
   "baseUrl": "https://open.bigmodel.cn/api/paas/v4",
   "apiFormat": "openai-completions",
   "apiKeyRef": "zhipu",
@@ -20,7 +20,7 @@
     {
       "modelName": "glm-5",
       "displayName": "GLM-5",
-      "serviceType": "chat",
+      "serviceType": ["chat"],
       "description": "智谱GLM-5，745B参数MoE架构，2026年2月发布，编程能力登顶",
       "contextWindow": 192000,
       "maxOutputTokens": 128000,
@@ -40,7 +40,7 @@
     {
       "modelName": "glm-5-plus",
       "displayName": "GLM-5-Plus",
-      "serviceType": "chat",
+      "serviceType": ["chat"],
       "description": "智谱GLM-5增强版，幻觉率仅2.6%，面向严肃医疗场景",
       "contextWindow": 192000,
       "maxOutputTokens": 128000,
@@ -60,7 +60,7 @@
     {
       "modelName": "glm-4.7",
       "displayName": "GLM-4.7",
-      "serviceType": "chat",
+      "serviceType": ["chat"],
       "description": "智谱GLM-4.7，面向超长上下文理解与生成，200K上下文",
       "contextWindow": 200000,
       "maxOutputTokens": 128000,
@@ -79,7 +79,7 @@
     {
       "modelName": "glm-4.7-thinking",
       "displayName": "GLM-4.7 Thinking",
-      "serviceType": "reasoning",
+      "serviceType": ["reasoning"],
       "description": "智谱GLM-4.7深度思考版，200K上下文",
       "contextWindow": 200000,
       "maxOutputTokens": 64000,
@@ -97,7 +97,7 @@
     {
       "modelName": "glm-4.7v",
       "displayName": "GLM-4.7V",
-      "serviceType": "vision",
+      "serviceType": ["vision"],
       "description": "智谱GLM-4.7多模态版，支持图像视频理解，200K上下文",
       "contextWindow": 200000,
       "maxOutputTokens": 8192,
@@ -115,7 +115,7 @@
     {
       "modelName": "glm-4.6",
       "displayName": "GLM-4.6",
-      "serviceType": "chat",
+      "serviceType": ["chat"],
       "description": "智谱GLM-4.6，最新一代模型，增强推理能力，128K上下文",
       "contextWindow": 128000,
       "maxOutputTokens": 8192,
@@ -133,7 +133,7 @@
     {
       "modelName": "glm-4.6v",
       "displayName": "GLM-4.6V",
-      "serviceType": "vision",
+      "serviceType": ["vision"],
       "description": "智谱GLM-4.6多模态版，支持图像理解，128K上下文",
       "contextWindow": 128000,
       "maxOutputTokens": 8192,
@@ -150,7 +150,7 @@
     {
       "modelName": "embedding-3",
       "displayName": "智谱 embedding-3",
-      "serviceType": "embedding",
+      "serviceType": ["embedding"],
       "description": "智谱嵌入模型v3，支持自定义维度，单条最大3072 tokens",
       "contextWindow": 3072,
       "capabilities": [

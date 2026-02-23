@@ -1,7 +1,7 @@
 {
   "id": "provider-perplexity-001",
   "provider": "perplexity",
-  "label": "Perplexity AI",
+  "label": "Perplexity Sonar",
   "baseUrl": "https://api.perplexity.ai",
   "apiFormat": "openai-completions",
   "apiKeyRef": "perplexity",

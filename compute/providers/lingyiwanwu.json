@@ -1,7 +1,7 @@
 {
   "id": "provider-lingyiwanwu-001",
   "provider": "lingyiwanwu",
-  "label": "零一万物",
+  "label": "零一万物 Yi",
   "baseUrl": "https://api.lingyiwanwu.com/v1",
   "apiFormat": "openai-completions",
   "apiKeyRef": "lingyiwanwu",
@@ -18,7 +18,7 @@
     {
       "modelName": "yi-lightning",
       "displayName": "Yi Lightning",
-      "serviceType": "chat",
+      "serviceType": ["chat"],
       "description": "零一万物高性能模型，16K上下文，智能路由，极高性价比",
       "contextWindow": 16000,
       "maxOutputTokens": 4096,
@@ -36,7 +36,7 @@
     {
       "modelName": "yi-vision-v2",
       "displayName": "Yi Vision V2",
-      "serviceType": "vision",
+      "serviceType": ["vision"],
       "description": "零一万物复杂视觉任务模型，16K上下文，支持多图分析",
       "contextWindow": 16000,
       "maxOutputTokens": 4096,

@@ -1,7 +1,7 @@
 {
   "id": "provider-baidu-001",
   "provider": "baidu",
-  "label": "百度千帆",
+  "label": "百度 文心",
   "baseUrl": "https://qianfan.baidubce.com/v2",
   "apiFormat": "openai-completions",
   "apiKeyRef": "baidu",

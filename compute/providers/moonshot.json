@@ -1,7 +1,7 @@
 {
   "id": "provider-moonshot-001",
   "provider": "moonshot",
-  "label": "月之暗面",
+  "label": "月之暗面 Kimi",
   "baseUrl": "https://api.moonshot.cn/v1",
   "apiFormat": "openai-completions",
   "apiKeyRef": "moonshot",
@@ -19,7 +19,7 @@
       "modelName": "kimi-k2.5",
       "apiModelId": "kimi-2.5",
       "displayName": "Kimi K2.5",
-      "serviceType": "chat",
+      "serviceType": ["chat"],
       "description": "月之暗面Kimi K2.5，2026年1月发布的开源新一代模型",
       "contextWindow": 256000,
       "maxOutputTokens": 16384,
@@ -38,7 +38,7 @@
     {
       "modelName": "kimi-k2",
       "displayName": "Kimi K2",
-      "serviceType": "chat",
+      "serviceType": ["chat"],
       "description": "月之暗面Kimi K2，万亿参数MoE模型(320B激活)，128K上下文，专为智能体设计",
       "contextWindow": 128000,
       "maxOutputTokens": 8192,
@@ -57,7 +57,7 @@
     {
       "modelName": "kimi-k2-thinking",
       "displayName": "Kimi K2 思考版",
-      "serviceType": "reasoning",
+      "serviceType": ["reasoning"],
       "description": "月之暗面Kimi K2思考版，256K上下文，深度推理能力",
       "contextWindow": 256000,
       "maxOutputTokens": 16384,
@@ -75,7 +75,7 @@
     {
       "modelName": "moonshot-v1-8k",
       "displayName": "Moonshot V1 8K",
-      "serviceType": "chat",
+      "serviceType": ["chat"],
       "description": "月之暗面标准模型，8K上下文",
       "contextWindow": 8192,
       "maxOutputTokens": 4096,
@@ -90,7 +90,7 @@
     {
       "modelName": "moonshot-v1-32k",
       "displayName": "Moonshot V1 32K",
-      "serviceType": "chat",
+      "serviceType": ["chat"],
       "description": "月之暗面标准模型，32K上下文",
       "contextWindow": 32768,
       "maxOutputTokens": 4096,
@@ -106,7 +106,7 @@
     {
       "modelName": "moonshot-v1-128k",
       "displayName": "Moonshot V1 128K",
-      "serviceType": "chat",
+      "serviceType": ["chat"],
       "description": "月之暗面标准模型，128K上下文",
       "contextWindow": 131072,
       "maxOutputTokens": 4096,

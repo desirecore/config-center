@@ -1,7 +1,7 @@
 {
   "id": "provider-volcengine-001",
   "provider": "volcengine",
-  "label": "火山引擎",
+  "label": "火山 豆包",
   "baseUrl": "https://ark.cn-beijing.volces.com/api/v3",
   "apiFormat": "openai-completions",
   "apiKeyRef": "volcengine",
@@ -24,7 +24,7 @@
     {
       "modelName": "doubao-2.0-pro",
       "displayName": "豆包 2.0 Pro",
-      "serviceType": "chat",
+      "serviceType": ["chat"],
       "description": "火山引擎豆包2.0旗舰模型，256K上下文，相比Gemini 3 Pro和GPT 5.2有较大成本优势",
       "contextWindow": 256000,
       "maxOutputTokens": 16384,
@@ -43,7 +43,7 @@
     {
       "modelName": "doubao-seed-1.8",
       "displayName": "豆包 Seed-1.8",
-      "serviceType": "chat",
+      "serviceType": ["chat"],
       "description": "火山引擎豆包1.8旗舰模型，256K上下文，支持深度思考和多模态",
       "contextWindow": 256000,
       "maxOutputTokens": 16384,
@@ -62,7 +62,7 @@
     {
       "modelName": "doubao-seed-1.6",
       "displayName": "豆包 Seed-1.6",
-      "serviceType": "chat",
+      "serviceType": ["chat"],
       "description": "火山引擎豆包1.6旗舰模型，256K上下文",
       "contextWindow": 256000,
       "maxOutputTokens": 16384,
@@ -81,7 +81,7 @@
     {
       "modelName": "doubao-seed-1.6-thinking",
       "displayName": "豆包 Seed-1.6 思考版",
-      "serviceType": "chat",
+      "serviceType": ["chat"],
       "description": "火山引擎豆包1.6深度思考模型，256K上下文",
       "contextWindow": 256000,
       "maxOutputTokens": 32768,
@@ -99,7 +99,7 @@
     {
       "modelName": "doubao-seed-1.6-flash",
       "displayName": "豆包 Seed-1.6 Flash",
-      "serviceType": "chat",
+      "serviceType": ["chat"],
       "description": "火山引擎豆包1.6快速版，成本较前代下降63%",
       "contextWindow": 256000,
       "maxOutputTokens": 8192,
@@ -116,7 +116,7 @@
     {
       "modelName": "doubao-seed-1.6-lite",
       "displayName": "豆包 Seed-1.6 Lite",
-      "serviceType": "chat",
+      "serviceType": ["chat"],
       "description": "火山引擎豆包1.6轻量版，极致性价比",
       "contextWindow": 128000,
       "maxOutputTokens": 4096,
@@ -132,7 +132,7 @@
     {
       "modelName": "doubao-seed-1.6-vision",
       "displayName": "豆包 Seed-1.6 视觉版",
-      "serviceType": "vision",
+      "serviceType": ["vision"],
       "description": "火山引擎豆包1.6视觉模型，256K上下文，支持视频理解",
       "contextWindow": 256000,
       "maxOutputTokens": 16384,
@@ -150,7 +150,7 @@
     {
       "modelName": "doubao-seed-code",
       "displayName": "豆包 Seed-Code",
-      "serviceType": "chat",
+      "serviceType": ["chat"],
       "description": "火山引擎豆包编程专用模型，256K上下文",
       "contextWindow": 256000,
       "maxOutputTokens": 32768,
@@ -169,7 +169,7 @@
     {
       "modelName": "deepseek-v3.2",
       "displayName": "DeepSeek V3.2 (火山引擎)",
-      "serviceType": "chat",
+      "serviceType": ["chat"],
       "description": "火山引擎托管的DeepSeek V3.2，128K上下文",
       "contextWindow": 128000,
       "maxOutputTokens": 8000,
@@ -189,7 +189,7 @@
     {
       "modelName": "deepseek-r1",
       "displayName": "DeepSeek R1 (火山引擎)",
-      "serviceType": "reasoning",
+      "serviceType": ["reasoning"],
       "description": "火山引擎托管的DeepSeek R1推理模型，64K上下文",
       "contextWindow": 64000,
       "maxOutputTokens": 32768,
@@ -210,7 +210,7 @@
     {
       "modelName": "kimi-k2-volcengine",
       "displayName": "Kimi K2 (火山引擎)",
-      "serviceType": "chat",
+      "serviceType": ["chat"],
       "description": "火山引擎托管的Kimi K2，万亿参数MoE模型，128K上下文",
       "contextWindow": 128000,
       "maxOutputTokens": 8192,
@@ -229,7 +229,7 @@
     {
       "modelName": "glm-4-7",
       "displayName": "GLM-4.7 (火山引擎)",
-      "serviceType": "chat",
+      "serviceType": ["chat"],
       "description": "火山引擎托管的智谱GLM-4.7，200K上下文",
       "contextWindow": 200000,
       "maxOutputTokens": 200000,
@@ -248,7 +248,7 @@
     {
       "modelName": "doubao-embedding",
       "displayName": "豆包 Embedding",
-      "serviceType": "embedding",
+      "serviceType": ["embedding"],
       "description": "火山引擎豆包标准向量模型，2560维度",
       "contextWindow": 4096,
       "capabilities": [
@@ -263,7 +263,7 @@
     {
       "modelName": "volc-mega-tts-clone",
       "displayName": "火山声音复刻",
-      "serviceType": "voice_clone",
+      "serviceType": ["voice_clone"],
       "description": "火山引擎声音复刻，支持极少样本",
       "capabilities": [
         "voice_clone",
@@ -278,7 +278,7 @@
     {
       "modelName": "volc-realtime-voice",
       "displayName": "火山实时语音",
-      "serviceType": "realtime_voice",
+      "serviceType": ["realtime_voice"],
       "description": "火山引擎实时语音交互",
       "capabilities": [
         "realtime",
@@ -296,7 +296,7 @@
     {
       "modelName": "volc-simultaneous",
       "displayName": "火山同声传译",
-      "serviceType": "simultaneous_interpret",
+      "serviceType": ["simultaneous_interpret"],
       "description": "火山引擎同声传译，支持中英双向",
       "capabilities": [
         "simultaneous_interpretation",
@@ -310,7 +310,7 @@
     {
       "modelName": "volc-translation",
       "displayName": "火山翻译",
-      "serviceType": "translation",
+      "serviceType": ["translation"],
       "description": "火山引擎机器翻译，支持多语种互译",
       "capabilities": [
         "translation",

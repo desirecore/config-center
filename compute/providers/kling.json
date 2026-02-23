@@ -1,7 +1,7 @@
 {
   "id": "provider-kling-001",
   "provider": "kling",
-  "label": "可灵 AI",
+  "label": "快手 可灵",
   "baseUrl": "https://api.klingai.com/v1",
   "apiFormat": "openai-completions",
   "apiKeyRef": "kling",
@@ -15,7 +15,7 @@
     {
       "modelName": "kling-v2-5-turbo",
       "displayName": "可灵 V2.5 Turbo",
-      "serviceType": "video_gen",
+      "serviceType": ["video_gen"],
       "description": "可灵最新视频生成模型，高性价比",
       "capabilities": [
         "video_generation",
@@ -35,7 +35,7 @@
     {
       "modelName": "kling-v2-5-turbo-pro",
       "displayName": "可灵 V2.5 Turbo Pro",
-      "serviceType": "video_gen",
+      "serviceType": ["video_gen"],
       "description": "可灵高品质视频生成",
       "capabilities": [
         "video_generation",
@@ -54,7 +54,7 @@
     {
       "modelName": "kling-v2",
       "displayName": "可灵 V2",
-      "serviceType": "video_gen",
+      "serviceType": ["video_gen"],
       "description": "可灵文生视频旗舰模型",
       "capabilities": [
         "video_generation",
@@ -72,7 +72,7 @@
     {
       "modelName": "kling-v2-master",
       "displayName": "可灵 V2 Master",
-      "serviceType": "video_gen",
+      "serviceType": ["video_gen"],
       "description": "可灵最高品质视频生成",
       "capabilities": [
         "video_generation",

@@ -1,7 +1,7 @@
 {
   "id": "provider-dashscope-001",
   "provider": "dashscope",
-  "label": "阿里云 DashScope",
+  "label": "阿里 通义千问",
   "baseUrl": "https://dashscope.aliyuncs.com/compatible-mode/v1",
   "apiFormat": "openai-completions",
   "apiKeyRef": "dashscope",
@@ -27,7 +27,7 @@
     {
       "modelName": "qwen3.5-max",
       "displayName": "阿里云 Qwen3.5-Max",
-      "serviceType": "chat",
+      "serviceType": ["chat"],
       "description": "通义千问3.5旗舰模型，397B参数，2026除夕发布，极低价格",
       "contextWindow": 252000,
       "maxOutputTokens": 16384,
@@ -47,7 +47,7 @@
     {
       "modelName": "qwen-max",
       "displayName": "阿里云 qwen-max",
-      "serviceType": "chat",
+      "serviceType": ["chat"],
       "description": "通义千问Max，千亿参数旗舰模型，最强性能",
       "contextWindow": 131072,
       "maxOutputTokens": 8192,
@@ -65,7 +65,7 @@
     {
       "modelName": "qwen-plus",
       "displayName": "阿里云 qwen-plus",
-      "serviceType": "chat",
+      "serviceType": ["chat"],
       "description": "通义千问Plus，支持思考模式，128K 上下文",
       "contextWindow": 131072,
       "maxOutputTokens": 8192,
@@ -82,7 +82,7 @@
     {
       "modelName": "qwen-turbo",
       "displayName": "阿里云 qwen-turbo",
-      "serviceType": "chat",
+      "serviceType": ["chat"],
       "description": "通义千问Turbo，支持100万上下文，高性价比",
       "contextWindow": 1000000,
       "maxOutputTokens": 8192,
@@ -98,7 +98,7 @@
     {
       "modelName": "qwen-long",
       "displayName": "阿里云 qwen-long",
-      "serviceType": "chat",
+      "serviceType": ["chat"],
       "description": "通义千问Long，支持1000万上下文，适合超长文档处理，降价97%",
       "contextWindow": 10000000,
       "maxOutputTokens": 8192,
@@ -114,7 +114,7 @@
     {
       "modelName": "qwen3-max",
       "displayName": "阿里云 Qwen3-Max",
-      "serviceType": "chat",
+      "serviceType": ["chat"],
       "description": "通义千问3代旗舰模型，252K 上下文",
       "contextWindow": 252000,
       "maxOutputTokens": 16384,
@@ -134,7 +134,7 @@
     {
       "modelName": "qwen3-vl-plus",
       "displayName": "阿里云 Qwen3-VL-Plus",
-      "serviceType": "vision",
+      "serviceType": ["vision"],
       "description": "通义千问3代视觉模型Plus版，支持图像理解",
       "contextWindow": 131072,
       "maxOutputTokens": 8192,
@@ -152,7 +152,7 @@
     {
       "modelName": "qwen3-vl-flash",
       "displayName": "阿里云 Qwen3-VL-Flash",
-      "serviceType": "vision",
+      "serviceType": ["vision"],
       "description": "通义千问3代视觉模型Flash版，高性价比",
       "contextWindow": 131072,
       "maxOutputTokens": 8192,
@@ -169,7 +169,7 @@
     {
       "modelName": "text-embedding-v3",
       "displayName": "text-embedding-v3",
-      "serviceType": "embedding",
+      "serviceType": ["embedding"],
       "description": "阿里云文本向量化",
       "capabilities": [
         "text_embedding",
@@ -182,7 +182,7 @@
     {
       "modelName": "text-embedding-v4",
       "displayName": "阿里云 text-embedding-v4",
-      "serviceType": "embedding",
+      "serviceType": ["embedding"],
       "description": "阿里云百炼文本向量模型v4，支持多维度与多语种",
       "capabilities": [
         "text_embedding",
@@ -195,7 +195,7 @@
     {
       "modelName": "qwen3-rerank",
       "displayName": "Qwen3-Rerank",
-      "serviceType": "rerank",
+      "serviceType": ["rerank"],
       "description": "检索重排序，支持 100+ 语种",
       "capabilities": [
         "rerank",
@@ -208,7 +208,7 @@
     {
       "modelName": "cosyvoice-v2",
       "displayName": "CosyVoice V2",
-      "serviceType": "tts",
+      "serviceType": ["tts"],
       "description": "通义语音合成，支持中英文",
       "capabilities": [
         "tts",
@@ -232,7 +232,7 @@
     {
       "modelName": "paraformer-v2",
       "displayName": "Paraformer V2",
-      "serviceType": "asr",
+      "serviceType": ["asr"],
       "description": "通义语音识别",
       "capabilities": [
         "asr",
@@ -252,7 +252,7 @@
     {
       "modelName": "wanx-v2",
       "displayName": "通义万相 V2",
-      "serviceType": "image_gen",
+      "serviceType": ["image_gen"],
       "description": "通义万相文生图",
       "capabilities": [
         "image_generation",
@@ -275,7 +275,7 @@
     {
       "modelName": "wanx-video",
       "displayName": "通义万相视频",
-      "serviceType": "video_gen",
+      "serviceType": ["video_gen"],
       "description": "通义万相文生视频",
       "capabilities": [
         "video_generation",
@@ -292,7 +292,7 @@
     {
       "modelName": "cosyvoice-clone",
       "displayName": "CosyVoice 声音复刻",
-      "serviceType": "voice_clone",
+      "serviceType": ["voice_clone"],
       "description": "通义声音复刻，少量样本即可克隆",
       "capabilities": [
         "voice_clone",
@@ -307,7 +307,7 @@
     {
       "modelName": "qwen-omni-turbo",
       "displayName": "Qwen-Omni-Turbo",
-      "serviceType": "omni",
+      "serviceType": ["omni"],
       "description": "通义全能模型，支持音视频文本多模态",
       "contextWindow": 32768,
       "capabilities": [
@@ -322,7 +322,7 @@
     {
       "modelName": "qwen3-max-trans",
       "displayName": "Qwen3-Max（翻译）",
-      "serviceType": "translation",
+      "serviceType": ["translation"],
       "description": "通义千问翻译，中英日韩等多语种互译",
       "contextWindow": 131072,
       "capabilities": [

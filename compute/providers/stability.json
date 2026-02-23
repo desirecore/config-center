@@ -1,7 +1,7 @@
 {
   "id": "provider-stability-001",
   "provider": "stability",
-  "label": "Stability AI",
+  "label": "Stability SDXL",
   "baseUrl": "https://api.stability.ai/v2beta",
   "apiFormat": "openai-completions",
   "apiKeyRef": "stability",
@@ -15,7 +15,7 @@
     {
       "modelName": "stable-diffusion-3.5-large",
       "displayName": "Stable Diffusion 3.5 Large",
-      "serviceType": "image_gen",
+      "serviceType": ["image_gen"],
       "description": "Stability AI 旗舰文生图模型",
       "capabilities": [
         "image_generation",

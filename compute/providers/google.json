@@ -1,7 +1,7 @@
 {
   "id": "provider-google-001",
   "provider": "google",
-  "label": "Google AI",
+  "label": "Google Gemini",
   "baseUrl": "https://generativelanguage.googleapis.com/v1beta",
   "apiFormat": "google-generative-ai",
   "apiKeyRef": "google",
@@ -19,7 +19,7 @@
     {
       "modelName": "gemini-2.5-pro",
       "displayName": "Gemini 2.5 Pro",
-      "serviceType": "chat",
+      "serviceType": ["chat"],
       "description": "Google 最新旗舰模型，100万上下文，多模态",
       "contextWindow": 1000000,
       "maxOutputTokens": 65536,
@@ -38,7 +38,7 @@
     {
       "modelName": "gemini-2.5-flash",
       "displayName": "Gemini 2.5 Flash",
-      "serviceType": "chat",
+      "serviceType": ["chat"],
       "description": "Google 高性价比模型，100万上下文，速度快",
       "contextWindow": 1000000,
       "maxOutputTokens": 65536,
@@ -58,7 +58,7 @@
     {
       "modelName": "gemini-2.5-pro-vision",
       "displayName": "Gemini 2.5 Pro Vision",
-      "serviceType": "vision",
+      "serviceType": ["vision"],
       "description": "Google 多模态旗舰，支持图像视频理解",
       "contextWindow": 1000000,
       "maxOutputTokens": 65536,
@@ -76,7 +76,7 @@
     {
       "modelName": "text-embedding-005",
       "displayName": "Text Embedding 005",
-      "serviceType": "embedding",
+      "serviceType": ["embedding"],
       "description": "Google 文本嵌入模型，768维度",
       "capabilities": [
         "text_embedding",
