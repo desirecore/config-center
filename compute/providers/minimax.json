@@ -1,0 +1,103 @@
+{
+  "id": "provider-minimax-001",
+  "provider": "minimax",
+  "label": "MiniMax",
+  "baseUrl": "https://api.minimax.io/v1",
+  "apiFormat": "openai-completions",
+  "apiKeyRef": "minimax",
+  "apiKeyVerified": false,
+  "enabled": false,
+  "status": "unconfigured",
+  "services": ["chat", "fast", "reasoning"],
+  "defaultTemperature": 1,
+  "defaultTopP": 1,
+  "models": [
+    {
+      "modelName": "MiniMax-M2.5",
+      "displayName": "MiniMax M2.5",
+      "serviceType": ["chat", "reasoning"],
+      "description": "MiniMax 最新旗舰模型，百万级上下文，支持深度推理和工具调用",
+      "contextWindow": 1000000,
+      "maxOutputTokens": 131072,
+      "capabilities": [
+        "chat",
+        "reasoning",
+        "code",
+        "tool_use",
+        "long_context"
+      ],
+      "inputPrice": 0.20,
+      "outputPrice": 1.00,
+      "extra": {}
+    },
+    {
+      "modelName": "MiniMax-M2.5-highspeed",
+      "displayName": "MiniMax M2.5 高速版",
+      "serviceType": ["fast"],
+      "description": "MiniMax M2.5 高速推理版本，适合低延迟场景",
+      "contextWindow": 200000,
+      "maxOutputTokens": 131072,
+      "capabilities": [
+        "chat",
+        "reasoning",
+        "code",
+        "tool_use",
+        "fast"
+      ],
+      "inputPrice": 0.30,
+      "outputPrice": 2.40,
+      "extra": {}
+    },
+    {
+      "modelName": "MiniMax-M2.1",
+      "displayName": "MiniMax M2.1",
+      "serviceType": ["chat"],
+      "description": "MiniMax 上一代主力模型，200K 上下文，性价比优秀",
+      "contextWindow": 204800,
+      "maxOutputTokens": 131072,
+      "capabilities": [
+        "chat",
+        "code",
+        "tool_use",
+        "reasoning"
+      ],
+      "inputPrice": 0.27,
+      "outputPrice": 0.95,
+      "extra": {}
+    },
+    {
+      "modelName": "MiniMax-M2.1-highspeed",
+      "displayName": "MiniMax M2.1 高速版",
+      "serviceType": ["fast"],
+      "description": "MiniMax M2.1 高速推理版本，适合低延迟场景",
+      "contextWindow": 204800,
+      "maxOutputTokens": 131072,
+      "capabilities": [
+        "chat",
+        "code",
+        "tool_use",
+        "fast"
+      ],
+      "inputPrice": 0.30,
+      "outputPrice": 2.40,
+      "extra": {}
+    },
+    {
+      "modelName": "MiniMax-Text-01",
+      "displayName": "MiniMax Text 01",
+      "serviceType": ["chat"],
+      "description": "MiniMax 百万级长上下文文本模型，擅长长文档处理",
+      "contextWindow": 1000000,
+      "maxOutputTokens": 131072,
+      "capabilities": [
+        "chat",
+        "reasoning",
+        "code",
+        "long_context"
+      ],
+      "inputPrice": 0.20,
+      "outputPrice": 1.10,
+      "extra": {}
+    }
+  ]
+}
