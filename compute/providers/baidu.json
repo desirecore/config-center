@@ -14,7 +14,7 @@
   "models": [
     {
       "modelName": "ernie-5.0-thinking-latest",
-      "displayName": "ERNIE 5.0",
+      "displayName": "文心 ERNIE 5.0",
       "serviceType": ["chat", "reasoning"],
       "description": "百度最新旗舰模型，支持深度推理、多模态和工具调用",
       "contextWindow": 131072,
@@ -32,7 +32,7 @@
     },
     {
       "modelName": "ernie-4.5-turbo-128k-latest",
-      "displayName": "ERNIE 4.5 Turbo 128K",
+      "displayName": "文心 ERNIE 4.5 Turbo",
       "serviceType": ["chat"],
       "description": "百度高性价比长上下文模型，128K 窗口，适合日常对话和文档处理",
       "contextWindow": 131072,
