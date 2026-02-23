@@ -21,8 +21,6 @@
     "omni",
     "realtime_voice"
   ],
-  "defaultTemperature": 1,
-  "defaultTopP": 1,
   "models": [
     {
       "modelName": "gpt-5.2",
@@ -41,6 +39,8 @@
       ],
       "inputPrice": 1.75,
       "outputPrice": 14,
+      "defaultTemperature": 1,
+      "defaultTopP": 1,
       "extra": {}
     },
     {
@@ -60,6 +60,8 @@
       ],
       "inputPrice": 21,
       "outputPrice": 168,
+      "defaultTemperature": 1,
+      "defaultTopP": 1,
       "extra": {}
     },
     {
@@ -79,6 +81,8 @@
       ],
       "inputPrice": 1.25,
       "outputPrice": 10,
+      "defaultTemperature": 1,
+      "defaultTopP": 1,
       "extra": {}
     },
     {
@@ -98,6 +102,8 @@
       ],
       "inputPrice": 1.25,
       "outputPrice": 10,
+      "defaultTemperature": 1,
+      "defaultTopP": 1,
       "extra": {}
     },
     {
@@ -117,6 +123,8 @@
       ],
       "inputPrice": 15,
       "outputPrice": 120,
+      "defaultTemperature": 1,
+      "defaultTopP": 1,
       "extra": {}
     },
     {
@@ -135,6 +143,8 @@
       ],
       "inputPrice": 0.25,
       "outputPrice": 2,
+      "defaultTemperature": 1,
+      "defaultTopP": 1,
       "extra": {}
     },
     {
@@ -151,6 +161,8 @@
       ],
       "inputPrice": 0.02,
       "outputPrice": 0.08,
+      "defaultTemperature": 1,
+      "defaultTopP": 1,
       "extra": {}
     },
     {
@@ -170,6 +182,8 @@
       ],
       "inputPrice": 2.00,
       "outputPrice": 8.00,
+      "defaultTemperature": 1,
+      "defaultTopP": 1,
       "extra": {}
     },
     {
@@ -188,6 +202,8 @@
       ],
       "inputPrice": 0.40,
       "outputPrice": 1.60,
+      "defaultTemperature": 1,
+      "defaultTopP": 1,
       "extra": {}
     },
     {
@@ -205,6 +221,8 @@
       ],
       "inputPrice": 0.10,
       "outputPrice": 0.40,
+      "defaultTemperature": 1,
+      "defaultTopP": 1,
       "extra": {}
     },
     {
@@ -222,6 +240,8 @@
       ],
       "inputPrice": 2.50,
       "outputPrice": 10.00,
+      "defaultTemperature": 1,
+      "defaultTopP": 1,
       "extra": {}
     },
     {
@@ -239,6 +259,8 @@
       ],
       "inputPrice": 0.15,
       "outputPrice": 0.60,
+      "defaultTemperature": 1,
+      "defaultTopP": 1,
       "extra": {}
     },
     {
@@ -355,6 +377,8 @@
       ],
       "inputPrice": 2.00,
       "outputPrice": 8.00,
+      "defaultTemperature": 1,
+      "defaultTopP": 1,
       "extra": {}
     },
     {
@@ -373,6 +397,8 @@
       ],
       "inputPrice": 20.00,
       "outputPrice": 80.00,
+      "defaultTemperature": 1,
+      "defaultTopP": 1,
       "extra": {}
     },
     {
@@ -390,6 +416,8 @@
       ],
       "inputPrice": 1.10,
       "outputPrice": 4.40,
+      "defaultTemperature": 1,
+      "defaultTopP": 1,
       "extra": {}
     },
     {
@@ -408,6 +436,8 @@
       ],
       "inputPrice": 1.10,
       "outputPrice": 4.40,
+      "defaultTemperature": 1,
+      "defaultTopP": 1,
       "extra": {}
     },
     {

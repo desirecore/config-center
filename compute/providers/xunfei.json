@@ -10,8 +10,6 @@
   "status": "unconfigured",
   "priceCurrency": "CNY",
   "services": ["chat", "reasoning"],
-  "defaultTemperature": 1,
-  "defaultTopP": 1,
   "models": [
     {
       "modelName": "x1",
@@ -29,6 +27,8 @@
       ],
       "inputPrice": 11,
       "outputPrice": 11,
+      "defaultTemperature": 1,
+      "defaultTopP": 1,
       "extra": {
         "pricingNote": "讯飞按token包计费，不区分输入输出"
       }
@@ -48,6 +48,8 @@
       ],
       "inputPrice": 60,
       "outputPrice": 60,
+      "defaultTemperature": 1,
+      "defaultTopP": 1,
       "extra": {
         "pricingNote": "讯飞按token包计费，不区分输入输出"
       }

@@ -10,8 +10,6 @@
   "status": "unconfigured",
   "priceCurrency": "CNY",
   "services": ["chat", "embedding"],
-  "defaultTemperature": 1,
-  "defaultTopP": 1,
   "models": [
     {
       "modelName": "Qwen/Qwen3-Coder-480B-A35B-Instruct",
@@ -28,6 +26,8 @@
       ],
       "inputPrice": 8,
       "outputPrice": 16,
+      "defaultTemperature": 1,
+      "defaultTopP": 1,
       "extra": {}
     },
     {
@@ -45,6 +45,8 @@
       ],
       "inputPrice": 2.5,
       "outputPrice": 10,
+      "defaultTemperature": 1,
+      "defaultTopP": 1,
       "extra": {}
     },
     {

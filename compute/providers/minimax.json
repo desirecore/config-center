@@ -10,8 +10,6 @@
   "status": "unconfigured",
   "priceCurrency": "CNY",
   "services": ["chat", "fast", "reasoning"],
-  "defaultTemperature": 1,
-  "defaultTopP": 1,
   "models": [
     {
       "modelName": "MiniMax-M2.5",
@@ -29,6 +27,8 @@
       ],
       "inputPrice": 2.1,
       "outputPrice": 8.4,
+      "defaultTemperature": 1,
+      "defaultTopP": 1,
       "extra": {}
     },
     {
@@ -47,6 +47,8 @@
       ],
       "inputPrice": 2.1,
       "outputPrice": 16.8,
+      "defaultTemperature": 1,
+      "defaultTopP": 1,
       "extra": {}
     },
     {
@@ -64,6 +66,8 @@
       ],
       "inputPrice": 2.1,
       "outputPrice": 8.4,
+      "defaultTemperature": 1,
+      "defaultTopP": 1,
       "extra": {}
     },
     {
@@ -81,6 +85,8 @@
       ],
       "inputPrice": 2.1,
       "outputPrice": 16.8,
+      "defaultTemperature": 1,
+      "defaultTopP": 1,
       "extra": {}
     },
     {
@@ -98,6 +104,8 @@
       ],
       "inputPrice": 1.4,
       "outputPrice": 7.7,
+      "defaultTemperature": 1,
+      "defaultTopP": 1,
       "extra": {}
     }
   ]

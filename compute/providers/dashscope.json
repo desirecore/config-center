@@ -22,8 +22,6 @@
     "omni",
     "translation"
   ],
-  "defaultTemperature": 0.7,
-  "defaultTopP": 0.8,
   "models": [
     {
       "modelName": "qwen3.5-plus",
@@ -44,6 +42,8 @@
       ],
       "inputPrice": 0.8,
       "outputPrice": 4.8,
+      "defaultTemperature": 0.7,
+      "defaultTopP": 0.8,
       "extra": {}
     },
     {
@@ -62,6 +62,8 @@
       ],
       "inputPrice": 2.4,
       "outputPrice": 9.6,
+      "defaultTemperature": 0.7,
+      "defaultTopP": 0.8,
       "extra": {}
     },
     {
@@ -79,6 +81,8 @@
       ],
       "inputPrice": 0.8,
       "outputPrice": 2,
+      "defaultTemperature": 0.6,
+      "defaultTopP": 0.8,
       "extra": {}
     },
     {
@@ -95,6 +99,8 @@
       ],
       "inputPrice": 0.3,
       "outputPrice": 0.6,
+      "defaultTemperature": 0.7,
+      "defaultTopP": 0.8,
       "extra": {}
     },
     {
@@ -111,6 +117,8 @@
       ],
       "inputPrice": 0.5,
       "outputPrice": 2,
+      "defaultTemperature": 0.7,
+      "defaultTopP": 0.8,
       "extra": {}
     },
     {
@@ -131,6 +139,8 @@
       ],
       "inputPrice": 2.5,
       "outputPrice": 10,
+      "defaultTemperature": 0.7,
+      "defaultTopP": 0.8,
       "extra": {}
     },
     {

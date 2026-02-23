@@ -10,8 +10,6 @@
   "status": "unconfigured",
   "priceCurrency": "USD",
   "services": ["chat", "fast"],
-  "defaultTemperature": 1,
-  "defaultTopP": 1,
   "models": [
     {
       "modelName": "mistral-large-latest",
@@ -30,6 +28,8 @@
       ],
       "inputPrice": 0.50,
       "outputPrice": 1.50,
+      "defaultTemperature": 1,
+      "defaultTopP": 1,
       "extra": {}
     },
     {
@@ -47,6 +47,8 @@
       ],
       "inputPrice": 0.10,
       "outputPrice": 0.30,
+      "defaultTemperature": 1,
+      "defaultTopP": 1,
       "extra": {}
     },
     {
@@ -62,6 +64,8 @@
       ],
       "inputPrice": 0.30,
       "outputPrice": 0.90,
+      "defaultTemperature": 1,
+      "defaultTopP": 1,
       "extra": {}
     }
   ]

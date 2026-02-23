@@ -10,8 +10,6 @@
   "status": "unconfigured",
   "priceCurrency": "USD",
   "services": ["chat", "reasoning"],
-  "defaultTemperature": 1,
-  "defaultTopP": 1,
   "models": [
     {
       "modelName": "grok-4-0709",
@@ -28,6 +26,8 @@
       ],
       "inputPrice": 3.00,
       "outputPrice": 15.00,
+      "defaultTemperature": 1,
+      "defaultTopP": 1,
       "extra": {}
     },
     {
@@ -45,6 +45,8 @@
       ],
       "inputPrice": 0.20,
       "outputPrice": 0.50,
+      "defaultTemperature": 1,
+      "defaultTopP": 1,
       "extra": {}
     }
   ]

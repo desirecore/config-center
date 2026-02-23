@@ -13,8 +13,6 @@
     "chat",
     "reasoning"
   ],
-  "defaultTemperature": 1,
-  "defaultTopP": 1,
   "models": [
     {
       "modelName": "deepseek-chat",
@@ -31,6 +29,8 @@
       ],
       "inputPrice": 2,
       "outputPrice": 8,
+      "defaultTemperature": 1,
+      "defaultTopP": 1,
       "extra": {}
     },
     {
@@ -49,6 +49,8 @@
       ],
       "inputPrice": 4,
       "outputPrice": 16,
+      "defaultTemperature": 1,
+      "defaultTopP": 1,
       "extra": {}
     }
   ]

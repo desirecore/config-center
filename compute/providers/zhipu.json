@@ -15,8 +15,6 @@
     "reasoning",
     "embedding"
   ],
-  "defaultTemperature": 0.95,
-  "defaultTopP": 0.7,
   "models": [
     {
       "modelName": "glm-5",
@@ -38,6 +36,8 @@
       ],
       "inputPrice": 4,
       "outputPrice": 18,
+      "defaultTemperature": 0.95,
+      "defaultTopP": 0.7,
       "extra": {}
     },
     {
@@ -58,6 +58,8 @@
       ],
       "inputPrice": 4,
       "outputPrice": 16,
+      "defaultTemperature": 0.95,
+      "defaultTopP": 0.7,
       "extra": {}
     },
     {
@@ -76,6 +78,8 @@
       ],
       "inputPrice": 8,
       "outputPrice": 32,
+      "defaultTemperature": 0.95,
+      "defaultTopP": 0.7,
       "extra": {}
     },
     {

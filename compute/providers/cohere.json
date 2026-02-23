@@ -10,8 +10,6 @@
   "status": "unconfigured",
   "priceCurrency": "USD",
   "services": ["chat", "embedding", "rerank"],
-  "defaultTemperature": 1,
-  "defaultTopP": 1,
   "models": [
     {
       "modelName": "command-a-03-2025",
@@ -30,6 +28,8 @@
       ],
       "inputPrice": 2.50,
       "outputPrice": 10.00,
+      "defaultTemperature": 1,
+      "defaultTopP": 1,
       "extra": {}
     },
     {

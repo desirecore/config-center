@@ -10,8 +10,6 @@
   "status": "unconfigured",
   "priceCurrency": "USD",
   "services": ["chat"],
-  "defaultTemperature": 1,
-  "defaultTopP": 1,
   "models": [
     {
       "modelName": "openrouter/auto",
@@ -26,6 +24,8 @@
       ],
       "inputPrice": 0.00,
       "outputPrice": 0.00,
+      "defaultTemperature": 1,
+      "defaultTopP": 1,
       "extra": {}
     },
     {
@@ -43,6 +43,8 @@
       ],
       "inputPrice": 0.00,
       "outputPrice": 0.00,
+      "defaultTemperature": 1,
+      "defaultTopP": 1,
       "extra": {}
     },
     {
@@ -59,6 +61,8 @@
       ],
       "inputPrice": 0.00,
       "outputPrice": 0.00,
+      "defaultTemperature": 1,
+      "defaultTopP": 1,
       "extra": {}
     }
   ]

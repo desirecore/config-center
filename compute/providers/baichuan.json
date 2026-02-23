@@ -12,8 +12,6 @@
   "services": [
     "chat"
   ],
-  "defaultTemperature": 0.7,
-  "defaultTopP": 0.9,
   "models": [
     {
       "modelName": "Baichuan-M3-Plus",
@@ -32,6 +30,8 @@
       ],
       "inputPrice": 5,
       "outputPrice": 9,
+      "defaultTemperature": 0.7,
+      "defaultTopP": 0.9,
       "extra": {}
     },
     {
@@ -50,6 +50,8 @@
       ],
       "inputPrice": 10,
       "outputPrice": 30,
+      "defaultTemperature": 0.7,
+      "defaultTopP": 0.9,
       "extra": {}
     },
     {
@@ -68,6 +70,8 @@
       ],
       "inputPrice": 10,
       "outputPrice": 30,
+      "defaultTemperature": 0.7,
+      "defaultTopP": 0.9,
       "extra": {}
     },
     {
@@ -85,6 +89,8 @@
       ],
       "inputPrice": 2,
       "outputPrice": 20,
+      "defaultTemperature": 0.7,
+      "defaultTopP": 0.9,
       "extra": {}
     }
   ]

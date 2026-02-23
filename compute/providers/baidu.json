@@ -10,8 +10,6 @@
   "status": "unconfigured",
   "priceCurrency": "CNY",
   "services": ["chat", "reasoning"],
-  "defaultTemperature": 1,
-  "defaultTopP": 1,
   "models": [
     {
       "modelName": "ernie-5.0-thinking-latest",
@@ -29,6 +27,8 @@
       ],
       "inputPrice": 8,
       "outputPrice": 32,
+      "defaultTemperature": 1,
+      "defaultTopP": 1,
       "extra": {}
     },
     {
@@ -45,6 +45,8 @@
       ],
       "inputPrice": 0.8,
       "outputPrice": 3.2,
+      "defaultTemperature": 1,
+      "defaultTopP": 1,
       "extra": {}
     }
   ]

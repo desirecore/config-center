@@ -13,8 +13,6 @@
     "chat",
     "computer_use"
   ],
-  "defaultTemperature": 1,
-  "defaultTopP": 1,
   "models": [
     {
       "modelName": "claude-opus-4-6",
@@ -32,6 +30,7 @@
       ],
       "inputPrice": 5,
       "outputPrice": 25,
+      "defaultTemperature": 1,
       "extra": {}
     },
     {
@@ -50,6 +49,7 @@
       ],
       "inputPrice": 5,
       "outputPrice": 25,
+      "defaultTemperature": 1,
       "extra": {}
     },
     {
@@ -68,6 +68,7 @@
       ],
       "inputPrice": 3,
       "outputPrice": 15,
+      "defaultTemperature": 1,
       "extra": {}
     },
     {
@@ -86,6 +87,7 @@
       ],
       "inputPrice": 3,
       "outputPrice": 15,
+      "defaultTemperature": 1,
       "extra": {}
     },
     {
@@ -104,6 +106,7 @@
       ],
       "inputPrice": 3,
       "outputPrice": 15,
+      "defaultTemperature": 1,
       "extra": {}
     }
   ]

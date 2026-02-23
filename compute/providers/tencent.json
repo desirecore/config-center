@@ -10,8 +10,6 @@
   "status": "unconfigured",
   "priceCurrency": "CNY",
   "services": ["chat", "reasoning"],
-  "defaultTemperature": 1,
-  "defaultTopP": 1,
   "models": [
     {
       "modelName": "hunyuan-2.0-thinking-20251109",
@@ -28,6 +26,8 @@
       ],
       "inputPrice": 3.975,
       "outputPrice": 15.9,
+      "defaultTemperature": 1,
+      "defaultTopP": 1,
       "extra": {}
     },
     {
@@ -45,6 +45,8 @@
       ],
       "inputPrice": 0.8,
       "outputPrice": 2,
+      "defaultTemperature": 1,
+      "defaultTopP": 1,
       "extra": {}
     }
   ]

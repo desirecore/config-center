@@ -13,8 +13,6 @@
     "chat",
     "vision"
   ],
-  "defaultTemperature": 0.7,
-  "defaultTopP": 0.9,
   "models": [
     {
       "modelName": "yi-lightning",
@@ -32,6 +30,8 @@
       ],
       "inputPrice": 0.99,
       "outputPrice": 0.99,
+      "defaultTemperature": 0.7,
+      "defaultTopP": 0.9,
       "extra": {}
     },
     {
@@ -51,6 +51,8 @@
       ],
       "inputPrice": 6,
       "outputPrice": 6,
+      "defaultTemperature": 0.7,
+      "defaultTopP": 0.9,
       "extra": {}
     }
   ]

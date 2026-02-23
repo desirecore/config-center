@@ -13,8 +13,6 @@
     "chat",
     "reasoning"
   ],
-  "defaultTemperature": 0.7,
-  "defaultTopP": 0.9,
   "models": [
     {
       "modelName": "kimi-k2.5",
@@ -34,6 +32,8 @@
       ],
       "inputPrice": 4,
       "outputPrice": 21,
+      "defaultTemperature": 0.7,
+      "defaultTopP": 0.9,
       "extra": {}
     },
     {
@@ -53,6 +53,8 @@
       ],
       "inputPrice": 4,
       "outputPrice": 16,
+      "defaultTemperature": 0.7,
+      "defaultTopP": 0.9,
       "extra": {}
     },
     {
@@ -71,6 +73,8 @@
       ],
       "inputPrice": 4,
       "outputPrice": 16,
+      "defaultTemperature": 0.7,
+      "defaultTopP": 0.9,
       "extra": {}
     },
     {
@@ -86,6 +90,8 @@
       ],
       "inputPrice": 2,
       "outputPrice": 2,
+      "defaultTemperature": 0.7,
+      "defaultTopP": 0.9,
       "extra": {}
     },
     {
@@ -102,6 +108,8 @@
       ],
       "inputPrice": 5,
       "outputPrice": 5,
+      "defaultTemperature": 0.7,
+      "defaultTopP": 0.9,
       "extra": {}
     },
     {
@@ -118,6 +126,8 @@
       ],
       "inputPrice": 10,
       "outputPrice": 10,
+      "defaultTemperature": 0.7,
+      "defaultTopP": 0.9,
       "extra": {}
     }
   ]
