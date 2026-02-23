@@ -68,7 +68,7 @@
     "providerId": "provider-dashscope-001"
   },
   "computer_use": {
-    "modelName": "claude-sonnet-4.5-computer",
+    "modelName": "claude-sonnet-4-5-computer",
     "providerId": "provider-anthropic-001"
   }
 }

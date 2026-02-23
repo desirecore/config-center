@@ -3,11 +3,12 @@
   "provider": "kling",
   "label": "快手 可灵",
   "baseUrl": "https://api.klingai.com/v1",
-  "apiFormat": "openai-completions",
+  "apiFormat": "kling-task-api",
   "apiKeyRef": "kling",
   "apiKeyVerified": false,
   "enabled": false,
   "status": "unconfigured",
+  "priceCurrency": "CNY",
   "services": [
     "video_gen"
   ],

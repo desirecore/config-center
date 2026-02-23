@@ -8,6 +8,7 @@
   "apiKeyVerified": false,
   "enabled": false,
   "status": "unconfigured",
+  "priceCurrency": "CNY",
   "services": ["chat", "reasoning"],
   "defaultTemperature": 1,
   "defaultTopP": 1,
@@ -16,17 +17,17 @@
       "modelName": "hunyuan-2.0-thinking-20251109",
       "displayName": "混元 2.0 Think",
       "serviceType": ["reasoning"],
-      "description": "腾讯混元最新推理模型，262K 上下文，支持深度思考",
-      "contextWindow": 262144,
-      "maxOutputTokens": 16384,
+      "description": "腾讯混元最新推理模型，128K输入/64K输出，MoE架构406B总参数",
+      "contextWindow": 131072,
+      "maxOutputTokens": 65536,
       "capabilities": [
         "chat",
         "reasoning",
         "deep_thinking",
         "long_context"
       ],
-      "inputPrice": 0.55,
-      "outputPrice": 2.21,
+      "inputPrice": 3.975,
+      "outputPrice": 15.9,
       "extra": {}
     },
     {
@@ -42,8 +43,8 @@
         "fast",
         "tool_use"
       ],
-      "inputPrice": 0.11,
-      "outputPrice": 0.28,
+      "inputPrice": 0.8,
+      "outputPrice": 2,
       "extra": {}
     }
   ]

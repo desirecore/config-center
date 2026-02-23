@@ -8,6 +8,7 @@
   "apiKeyVerified": false,
   "enabled": false,
   "status": "unconfigured",
+  "priceCurrency": "USD",
   "services": ["chat"],
   "defaultTemperature": 1,
   "defaultTopP": 1,

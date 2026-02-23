@@ -8,6 +8,7 @@
   "apiKeyVerified": false,
   "enabled": false,
   "status": "unconfigured",
+  "priceCurrency": "CNY",
   "services": ["chat", "embedding"],
   "defaultTemperature": 1,
   "defaultTopP": 1,
@@ -25,8 +26,8 @@
         "agent",
         "tool_use"
       ],
-      "inputPrice": 0.22,
-      "outputPrice": 1.00,
+      "inputPrice": 8,
+      "outputPrice": 16,
       "extra": {}
     },
     {
@@ -42,22 +43,22 @@
         "code",
         "multilingual"
       ],
-      "inputPrice": 0.35,
-      "outputPrice": 1.39,
+      "inputPrice": 2.5,
+      "outputPrice": 10,
       "extra": {}
     },
     {
       "modelName": "BAAI/bge-m3",
       "displayName": "BGE-M3 (硅基)",
       "serviceType": ["embedding"],
-      "description": "多语言 Embedding 模型，支持 8K 上下文",
+      "description": "多语言 Embedding 模型，支持 8K 上下文，免费版",
       "contextWindow": 8192,
       "maxOutputTokens": 0,
       "capabilities": [
         "text_embedding",
         "multilingual"
       ],
-      "inputPrice": 0.005,
+      "inputPrice": 0,
       "outputPrice": 0,
       "extra": {}
     }

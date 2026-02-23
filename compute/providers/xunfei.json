@@ -8,6 +8,7 @@
   "apiKeyVerified": false,
   "enabled": false,
   "status": "unconfigured",
+  "priceCurrency": "CNY",
   "services": ["chat", "reasoning"],
   "defaultTemperature": 1,
   "defaultTopP": 1,
@@ -16,7 +17,7 @@
       "modelName": "x1",
       "displayName": "讯飞星火 X1",
       "serviceType": ["reasoning"],
-      "description": "讯飞最新推理模型，擅长数学和代码推理",
+      "description": "讯飞最新推理模型，基于全国产算力训练，擅长数学和代码推理",
       "contextWindow": 32768,
       "maxOutputTokens": 16384,
       "capabilities": [
@@ -26,9 +27,11 @@
         "math",
         "code"
       ],
-      "inputPrice": 2.92,
-      "outputPrice": 11.67,
-      "extra": {}
+      "inputPrice": 11,
+      "outputPrice": 11,
+      "extra": {
+        "pricingNote": "讯飞按token包计费，不区分输入输出"
+      }
     },
     {
       "modelName": "4.0Ultra",
@@ -43,9 +46,11 @@
         "code",
         "tool_use"
       ],
-      "inputPrice": 2.92,
-      "outputPrice": 11.67,
-      "extra": {}
+      "inputPrice": 60,
+      "outputPrice": 60,
+      "extra": {
+        "pricingNote": "讯飞按token包计费，不区分输入输出"
+      }
     }
   ]
 }

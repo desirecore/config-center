@@ -8,6 +8,7 @@
   "apiKeyVerified": false,
   "enabled": false,
   "status": "unconfigured",
+  "priceCurrency": "USD",
   "services": [
     "asr"
   ],
@@ -15,7 +16,7 @@
     {
       "modelName": "whisper-large-v3",
       "displayName": "Whisper Large V3",
-      "serviceType": "asr",
+      "serviceType": ["asr"],
       "description": "本地部署的 Whisper 大模型",
       "capabilities": [
         "asr",

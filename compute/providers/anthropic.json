@@ -8,6 +8,7 @@
   "apiKeyVerified": false,
   "enabled": false,
   "status": "unconfigured",
+  "priceCurrency": "USD",
   "services": [
     "chat",
     "computer_use"
@@ -16,12 +17,12 @@
   "defaultTopP": 1,
   "models": [
     {
-      "modelName": "claude-opus-4.6",
+      "modelName": "claude-opus-4-6",
       "displayName": "Claude Opus 4.6",
       "serviceType": ["chat"],
       "description": "Anthropic 最新旗舰 Opus 模型，最强能力",
       "contextWindow": 200000,
-      "maxOutputTokens": 32000,
+      "maxOutputTokens": 32768,
       "capabilities": [
         "chat",
         "reasoning",
@@ -34,12 +35,12 @@
       "extra": {}
     },
     {
-      "modelName": "claude-opus-4.5",
+      "modelName": "claude-opus-4-5",
       "displayName": "Claude Opus 4.5",
       "serviceType": ["chat"],
       "description": "Anthropic Opus 4.5，顶级推理能力",
       "contextWindow": 200000,
-      "maxOutputTokens": 32000,
+      "maxOutputTokens": 32768,
       "capabilities": [
         "chat",
         "reasoning",
@@ -52,7 +53,7 @@
       "extra": {}
     },
     {
-      "modelName": "claude-sonnet-4.5",
+      "modelName": "claude-sonnet-4-5",
       "displayName": "Claude Sonnet 4.5",
       "serviceType": ["chat"],
       "description": "Anthropic Sonnet 4.5，高性能性价比",
@@ -88,7 +89,7 @@
       "extra": {}
     },
     {
-      "modelName": "claude-sonnet-4.5-computer",
+      "modelName": "claude-sonnet-4-5-computer",
       "displayName": "Claude Sonnet 4.5 Computer Use",
       "serviceType": ["computer_use"],
       "description": "Anthropic 最佳 Computer Use 模型",

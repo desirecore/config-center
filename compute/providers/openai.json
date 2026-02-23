@@ -8,6 +8,7 @@
   "apiKeyVerified": false,
   "enabled": false,
   "status": "unconfigured",
+  "priceCurrency": "USD",
   "services": [
     "chat",
     "fast",
@@ -167,8 +168,8 @@
         "ultra_long_context",
         "tool_use"
       ],
-      "inputPrice": 14.4,
-      "outputPrice": 57.6,
+      "inputPrice": 2.00,
+      "outputPrice": 8.00,
       "extra": {}
     },
     {
@@ -185,8 +186,8 @@
         "ultra_long_context",
         "tool_use"
       ],
-      "inputPrice": 2.88,
-      "outputPrice": 11.52,
+      "inputPrice": 0.40,
+      "outputPrice": 1.60,
       "extra": {}
     },
     {
@@ -202,8 +203,8 @@
         "ultra_long_context",
         "fast"
       ],
-      "inputPrice": 0.72,
-      "outputPrice": 2.88,
+      "inputPrice": 0.10,
+      "outputPrice": 0.40,
       "extra": {}
     },
     {
@@ -219,8 +220,8 @@
         "image_understanding",
         "tool_use"
       ],
-      "inputPrice": 18,
-      "outputPrice": 72,
+      "inputPrice": 2.50,
+      "outputPrice": 10.00,
       "extra": {}
     },
     {
@@ -236,8 +237,8 @@
         "vision",
         "tool_use"
       ],
-      "inputPrice": 1.08,
-      "outputPrice": 4.32,
+      "inputPrice": 0.15,
+      "outputPrice": 0.60,
       "extra": {}
     },
     {
@@ -249,7 +250,7 @@
         "text_embedding",
         "semantic_search"
       ],
-      "inputPrice": 0.14,
+      "inputPrice": 0.02,
       "extra": {}
     },
     {
@@ -261,7 +262,7 @@
         "text_embedding",
         "semantic_search"
       ],
-      "inputPrice": 0.94,
+      "inputPrice": 0.13,
       "extra": {}
     },
     {
@@ -352,8 +353,8 @@
         "science",
         "tool_use"
       ],
-      "inputPrice": 14.4,
-      "outputPrice": 57.6,
+      "inputPrice": 2.00,
+      "outputPrice": 8.00,
       "extra": {}
     },
     {
@@ -370,8 +371,8 @@
         "math",
         "science"
       ],
-      "inputPrice": 144,
-      "outputPrice": 576,
+      "inputPrice": 20.00,
+      "outputPrice": 80.00,
       "extra": {}
     },
     {
@@ -387,8 +388,8 @@
         "code",
         "fast"
       ],
-      "inputPrice": 7.92,
-      "outputPrice": 31.68,
+      "inputPrice": 1.10,
+      "outputPrice": 4.40,
       "extra": {}
     },
     {
@@ -405,8 +406,8 @@
         "tool_use",
         "vision"
       ],
-      "inputPrice": 7.92,
-      "outputPrice": 31.68,
+      "inputPrice": 1.10,
+      "outputPrice": 4.40,
       "extra": {}
     },
     {

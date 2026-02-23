@@ -8,6 +8,7 @@
   "apiKeyVerified": false,
   "enabled": false,
   "status": "unconfigured",
+  "priceCurrency": "CNY",
   "services": ["chat", "fast", "reasoning"],
   "defaultTemperature": 1,
   "defaultTopP": 1,
@@ -16,7 +17,7 @@
       "modelName": "MiniMax-M2.5",
       "displayName": "MiniMax M2.5",
       "serviceType": ["chat", "reasoning"],
-      "description": "MiniMax 最新旗舰模型，百万级上下文，支持深度推理和工具调用",
+      "description": "MiniMax 最新旗舰模型，230B参数(10B激活)MoE架构，百万级上下文，支持深度推理和工具调用",
       "contextWindow": 1000000,
       "maxOutputTokens": 131072,
       "capabilities": [
@@ -26,15 +27,15 @@
         "tool_use",
         "long_context"
       ],
-      "inputPrice": 0.20,
-      "outputPrice": 1.00,
+      "inputPrice": 2.1,
+      "outputPrice": 8.4,
       "extra": {}
     },
     {
       "modelName": "MiniMax-M2.5-highspeed",
       "displayName": "MiniMax M2.5 高速版",
       "serviceType": ["fast"],
-      "description": "MiniMax M2.5 高速推理版本，适合低延迟场景",
+      "description": "MiniMax M2.5 高速推理版本(100TPS)，适合低延迟场景",
       "contextWindow": 200000,
       "maxOutputTokens": 131072,
       "capabilities": [
@@ -44,8 +45,8 @@
         "tool_use",
         "fast"
       ],
-      "inputPrice": 0.30,
-      "outputPrice": 2.40,
+      "inputPrice": 2.1,
+      "outputPrice": 16.8,
       "extra": {}
     },
     {
@@ -61,8 +62,8 @@
         "tool_use",
         "reasoning"
       ],
-      "inputPrice": 0.27,
-      "outputPrice": 0.95,
+      "inputPrice": 2.1,
+      "outputPrice": 8.4,
       "extra": {}
     },
     {
@@ -78,8 +79,8 @@
         "tool_use",
         "fast"
       ],
-      "inputPrice": 0.30,
-      "outputPrice": 2.40,
+      "inputPrice": 2.1,
+      "outputPrice": 16.8,
       "extra": {}
     },
     {
@@ -95,8 +96,8 @@
         "code",
         "long_context"
       ],
-      "inputPrice": 0.20,
-      "outputPrice": 1.10,
+      "inputPrice": 1.4,
+      "outputPrice": 7.7,
       "extra": {}
     }
   ]

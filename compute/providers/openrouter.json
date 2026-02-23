@@ -8,6 +8,7 @@
   "apiKeyVerified": false,
   "enabled": false,
   "status": "unconfigured",
+  "priceCurrency": "USD",
   "services": ["chat"],
   "defaultTemperature": 1,
   "defaultTopP": 1,
@@ -45,7 +46,7 @@
       "extra": {}
     },
     {
-      "modelName": "qwen/qwen3-coder-480b:free",
+      "modelName": "qwen/qwen3-coder:free",
       "displayName": "Qwen3 Coder 480B (免费)",
       "serviceType": ["chat"],
       "description": "通过 OpenRouter 免费使用的 Qwen3 Coder 480B",

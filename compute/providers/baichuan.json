@@ -8,6 +8,7 @@
   "apiKeyVerified": false,
   "enabled": false,
   "status": "unconfigured",
+  "priceCurrency": "CNY",
   "services": [
     "chat"
   ],
@@ -29,8 +30,8 @@
         "long_context",
         "medical"
       ],
-      "inputPrice": 1.5,
-      "outputPrice": 4.5,
+      "inputPrice": 5,
+      "outputPrice": 9,
       "extra": {}
     },
     {
@@ -47,8 +48,8 @@
         "multilingual",
         "medical"
       ],
-      "inputPrice": 2,
-      "outputPrice": 6,
+      "inputPrice": 10,
+      "outputPrice": 30,
       "extra": {}
     },
     {
@@ -65,8 +66,8 @@
         "multilingual",
         "long_context"
       ],
-      "inputPrice": 5,
-      "outputPrice": 15,
+      "inputPrice": 10,
+      "outputPrice": 30,
       "extra": {}
     },
     {
@@ -82,8 +83,8 @@
         "code",
         "multilingual"
       ],
-      "inputPrice": 3,
-      "outputPrice": 9,
+      "inputPrice": 2,
+      "outputPrice": 20,
       "extra": {}
     }
   ]

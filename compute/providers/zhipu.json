@@ -8,6 +8,7 @@
   "apiKeyVerified": false,
   "enabled": false,
   "status": "unconfigured",
+  "priceCurrency": "CNY",
   "services": [
     "chat",
     "vision",
@@ -21,47 +22,7 @@
       "modelName": "glm-5",
       "displayName": "GLM-5",
       "serviceType": ["chat"],
-      "description": "智谱GLM-5，745B参数MoE架构，2026年2月发布，编程能力登顶",
-      "contextWindow": 192000,
-      "maxOutputTokens": 128000,
-      "capabilities": [
-        "chat",
-        "reasoning",
-        "code",
-        "multilingual",
-        "deep_thinking",
-        "long_context",
-        "math"
-      ],
-      "inputPrice": 4,
-      "outputPrice": 8,
-      "extra": {}
-    },
-    {
-      "modelName": "glm-5-plus",
-      "displayName": "GLM-5-Plus",
-      "serviceType": ["chat"],
-      "description": "智谱GLM-5增强版，幻觉率仅2.6%，面向严肃医疗场景",
-      "contextWindow": 192000,
-      "maxOutputTokens": 128000,
-      "capabilities": [
-        "chat",
-        "reasoning",
-        "code",
-        "multilingual",
-        "deep_thinking",
-        "long_context",
-        "medical"
-      ],
-      "inputPrice": 8,
-      "outputPrice": 16,
-      "extra": {}
-    },
-    {
-      "modelName": "glm-4.7",
-      "displayName": "GLM-4.7",
-      "serviceType": ["chat"],
-      "description": "智谱GLM-4.7，面向超长上下文理解与生成，200K上下文",
+      "description": "智谱GLM-5，744B参数旗舰基座模型，2026年2月发布，面向Agentic Engineering，编程能力接近Claude Opus",
       "contextWindow": 200000,
       "maxOutputTokens": 128000,
       "capabilities": [
@@ -70,7 +31,30 @@
         "code",
         "multilingual",
         "deep_thinking",
-        "long_context"
+        "long_context",
+        "math",
+        "tool_use",
+        "agent"
+      ],
+      "inputPrice": 4,
+      "outputPrice": 18,
+      "extra": {}
+    },
+    {
+      "modelName": "glm-4.7",
+      "displayName": "GLM-4.7",
+      "serviceType": ["chat"],
+      "description": "智谱GLM-4.7，355B参数MoE架构旗舰模型，200K上下文，编程能力对齐Claude Sonnet",
+      "contextWindow": 200000,
+      "maxOutputTokens": 128000,
+      "capabilities": [
+        "chat",
+        "reasoning",
+        "code",
+        "multilingual",
+        "deep_thinking",
+        "long_context",
+        "tool_use"
       ],
       "inputPrice": 4,
       "outputPrice": 16,
@@ -80,9 +64,9 @@
       "modelName": "glm-4.7-thinking",
       "displayName": "GLM-4.7 Thinking",
       "serviceType": ["reasoning"],
-      "description": "智谱GLM-4.7深度思考版，200K上下文",
+      "description": "智谱GLM-4.7深度思考模式，200K上下文，交错式/保留式/轮级思考",
       "contextWindow": 200000,
-      "maxOutputTokens": 64000,
+      "maxOutputTokens": 128000,
       "capabilities": [
         "reasoning",
         "math",
@@ -95,18 +79,19 @@
       "extra": {}
     },
     {
-      "modelName": "glm-4.7v",
-      "displayName": "GLM-4.7V",
+      "modelName": "glm-4.6v",
+      "displayName": "GLM-4.6V",
       "serviceType": ["vision"],
-      "description": "智谱GLM-4.7多模态版，支持图像视频理解，200K上下文",
-      "contextWindow": 200000,
+      "description": "智谱GLM-4.6V多模态版，106B/12B MoE，支持图像视频理解与工具调用，128K上下文",
+      "contextWindow": 128000,
       "maxOutputTokens": 8192,
       "capabilities": [
         "chat",
         "vision",
         "video_understanding",
         "image_understanding",
-        "long_context"
+        "long_context",
+        "tool_use"
       ],
       "inputPrice": 8,
       "outputPrice": 32,
@@ -116,7 +101,7 @@
       "modelName": "glm-4.6",
       "displayName": "GLM-4.6",
       "serviceType": ["chat"],
-      "description": "智谱GLM-4.6，最新一代模型，增强推理能力，128K上下文",
+      "description": "智谱GLM-4.6，增强推理能力，128K上下文",
       "contextWindow": 128000,
       "maxOutputTokens": 8192,
       "capabilities": [
@@ -126,25 +111,8 @@
         "multilingual",
         "deep_thinking"
       ],
-      "inputPrice": 4,
-      "outputPrice": 16,
-      "extra": {}
-    },
-    {
-      "modelName": "glm-4.6v",
-      "displayName": "GLM-4.6V",
-      "serviceType": ["vision"],
-      "description": "智谱GLM-4.6多模态版，支持图像理解，128K上下文",
-      "contextWindow": 128000,
-      "maxOutputTokens": 8192,
-      "capabilities": [
-        "chat",
-        "vision",
-        "image_understanding",
-        "ocr"
-      ],
-      "inputPrice": 8,
-      "outputPrice": 32,
+      "inputPrice": 5,
+      "outputPrice": 5,
       "extra": {}
     },
     {

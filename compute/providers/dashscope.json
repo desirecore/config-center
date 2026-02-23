@@ -8,6 +8,7 @@
   "apiKeyVerified": false,
   "enabled": false,
   "status": "unconfigured",
+  "priceCurrency": "CNY",
   "services": [
     "chat",
     "embedding",
@@ -25,11 +26,11 @@
   "defaultTopP": 0.8,
   "models": [
     {
-      "modelName": "qwen3.5-max",
-      "displayName": "阿里云 Qwen3.5-Max",
+      "modelName": "qwen3.5-plus",
+      "displayName": "阿里云 Qwen3.5-Plus",
       "serviceType": ["chat"],
-      "description": "通义千问3.5旗舰模型，397B参数，2026除夕发布，极低价格",
-      "contextWindow": 252000,
+      "description": "通义千问3.5旗舰模型，支持文本/图像/视频输入，效果媲美Qwen3 Max，性价比更优",
+      "contextWindow": 262144,
       "maxOutputTokens": 16384,
       "capabilities": [
         "chat",
@@ -38,10 +39,11 @@
         "multilingual",
         "long_context",
         "tool_use",
-        "agent"
+        "agent",
+        "vision"
       ],
       "inputPrice": 0.8,
-      "outputPrice": 2,
+      "outputPrice": 4.8,
       "extra": {}
     },
     {
@@ -115,9 +117,9 @@
       "modelName": "qwen3-max",
       "displayName": "阿里云 Qwen3-Max",
       "serviceType": ["chat"],
-      "description": "通义千问3代旗舰模型，252K 上下文",
-      "contextWindow": 252000,
-      "maxOutputTokens": 16384,
+      "description": "通义千问3代旗舰模型，262K 上下文，支持思考模式",
+      "contextWindow": 262144,
+      "maxOutputTokens": 65536,
       "capabilities": [
         "chat",
         "reasoning",
@@ -127,8 +129,8 @@
         "tool_use",
         "agent"
       ],
-      "inputPrice": 3.2,
-      "outputPrice": 12.8,
+      "inputPrice": 2.5,
+      "outputPrice": 10,
       "extra": {}
     },
     {

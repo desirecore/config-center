@@ -8,6 +8,7 @@
   "apiKeyVerified": false,
   "enabled": false,
   "status": "unconfigured",
+  "priceCurrency": "CNY",
   "services": ["chat", "reasoning"],
   "defaultTemperature": 1,
   "defaultTopP": 1,
@@ -16,9 +17,9 @@
       "modelName": "ernie-5.0-thinking-latest",
       "displayName": "文心 ERNIE 5.0",
       "serviceType": ["chat", "reasoning"],
-      "description": "百度最新旗舰模型，支持深度推理、多模态和工具调用",
+      "description": "百度最新旗舰模型，支持深度推理、多模态和工具调用，119K输入/64K输出",
       "contextWindow": 131072,
-      "maxOutputTokens": 16384,
+      "maxOutputTokens": 65536,
       "capabilities": [
         "chat",
         "reasoning",
@@ -26,8 +27,8 @@
         "multimodal",
         "tool_use"
       ],
-      "inputPrice": 0.83,
-      "outputPrice": 3.33,
+      "inputPrice": 8,
+      "outputPrice": 32,
       "extra": {}
     },
     {
@@ -42,8 +43,8 @@
         "long_context",
         "fast"
       ],
-      "inputPrice": 0.11,
-      "outputPrice": 0.44,
+      "inputPrice": 0.8,
+      "outputPrice": 3.2,
       "extra": {}
     }
   ]

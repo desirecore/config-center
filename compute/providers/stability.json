@@ -3,11 +3,12 @@
   "provider": "stability",
   "label": "Stability SDXL",
   "baseUrl": "https://api.stability.ai/v2beta",
-  "apiFormat": "openai-completions",
+  "apiFormat": "stability-rest-api",
   "apiKeyRef": "stability",
   "apiKeyVerified": false,
   "enabled": false,
   "status": "unconfigured",
+  "priceCurrency": "USD",
   "services": [
     "image_gen"
   ],

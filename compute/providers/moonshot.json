@@ -8,6 +8,7 @@
   "apiKeyVerified": false,
   "enabled": false,
   "status": "unconfigured",
+  "priceCurrency": "CNY",
   "services": [
     "chat",
     "reasoning"
@@ -17,10 +18,9 @@
   "models": [
     {
       "modelName": "kimi-k2.5",
-      "apiModelId": "kimi-2.5",
       "displayName": "Kimi K2.5",
       "serviceType": ["chat"],
-      "description": "月之暗面Kimi K2.5，2026年1月发布的开源新一代模型",
+      "description": "月之暗面Kimi K2.5，2026年1月发布的原生多模态模型，支持视觉编码和智能体集群",
       "contextWindow": 256000,
       "maxOutputTokens": 16384,
       "capabilities": [
@@ -29,18 +29,19 @@
         "code",
         "tool_use",
         "agent",
-        "long_context"
+        "long_context",
+        "vision"
       ],
-      "inputPrice": 2,
-      "outputPrice": 8,
+      "inputPrice": 4,
+      "outputPrice": 21,
       "extra": {}
     },
     {
       "modelName": "kimi-k2",
       "displayName": "Kimi K2",
       "serviceType": ["chat"],
-      "description": "月之暗面Kimi K2，万亿参数MoE模型(320B激活)，128K上下文，专为智能体设计",
-      "contextWindow": 128000,
+      "description": "月之暗面Kimi K2，万亿参数MoE模型(320B激活)，256K上下文，专为智能体设计",
+      "contextWindow": 256000,
       "maxOutputTokens": 8192,
       "capabilities": [
         "chat",
@@ -68,8 +69,8 @@
         "deep_thinking",
         "long_context"
       ],
-      "inputPrice": 7.5,
-      "outputPrice": 30,
+      "inputPrice": 4,
+      "outputPrice": 16,
       "extra": {}
     },
     {

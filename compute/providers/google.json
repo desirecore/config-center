@@ -8,6 +8,7 @@
   "apiKeyVerified": false,
   "enabled": false,
   "status": "unconfigured",
+  "priceCurrency": "USD",
   "services": [
     "chat",
     "vision",
@@ -51,26 +52,8 @@
         "tool_use",
         "fast"
       ],
-      "inputPrice": 0.075,
-      "outputPrice": 0.4,
-      "extra": {}
-    },
-    {
-      "modelName": "gemini-2.5-pro-vision",
-      "displayName": "Gemini 2.5 Pro Vision",
-      "serviceType": ["vision"],
-      "description": "Google 多模态旗舰，支持图像视频理解",
-      "contextWindow": 1000000,
-      "maxOutputTokens": 65536,
-      "capabilities": [
-        "chat",
-        "vision",
-        "video_understanding",
-        "image_understanding",
-        "ultra_long_context"
-      ],
-      "inputPrice": 1.25,
-      "outputPrice": 10,
+      "inputPrice": 0.30,
+      "outputPrice": 2.50,
       "extra": {}
     },
     {
@@ -82,7 +65,7 @@
         "text_embedding",
         "semantic_search"
       ],
-      "inputPrice": 0.07,
+      "inputPrice": 0.10,
       "extra": {}
     }
   ]
