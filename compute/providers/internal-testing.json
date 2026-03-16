@@ -1,0 +1,119 @@
+{
+  "id": "provider-internal-testing-001",
+  "provider": "internal-testing",
+  "label": "内测专用",
+  "baseUrl": "https://api.yizhioa.cn/v1",
+  "apiFormat": "anthropic-messages",
+  "apiKeyRef": "internal-testing",
+  "apiKeyVerified": false,
+  "enabled": false,
+  "status": "unconfigured",
+  "priceCurrency": "CNY",
+  "services": [
+    "chat"
+  ],
+  "models": [
+    {
+      "modelName": "glm-5",
+      "displayName": "GLM-5",
+      "serviceType": ["chat"],
+      "description": "智谱 GLM-5 大语言模型",
+      "contextWindow": 128000,
+      "maxOutputTokens": 8192,
+      "capabilities": [
+        "chat",
+        "reasoning",
+        "code"
+      ],
+      "inputPrice": 0,
+      "outputPrice": 0,
+      "defaultTemperature": 1,
+      "extra": {}
+    },
+    {
+      "modelName": "kimi-k2.5",
+      "displayName": "Kimi-2.5",
+      "serviceType": ["chat"],
+      "description": "月之暗面 Kimi-2.5 大语言模型",
+      "contextWindow": 128000,
+      "maxOutputTokens": 8192,
+      "capabilities": [
+        "chat",
+        "reasoning",
+        "code"
+      ],
+      "inputPrice": 0,
+      "outputPrice": 0,
+      "defaultTemperature": 1,
+      "extra": {}
+    },
+    {
+      "modelName": "MiniMax-M2.5",
+      "displayName": "MiniMax-M2.5",
+      "serviceType": ["chat"],
+      "description": "MiniMax M2.5 大语言模型",
+      "contextWindow": 128000,
+      "maxOutputTokens": 8192,
+      "capabilities": [
+        "chat",
+        "reasoning",
+        "code"
+      ],
+      "inputPrice": 0,
+      "outputPrice": 0,
+      "defaultTemperature": 1,
+      "extra": {}
+    },
+    {
+      "modelName": "qwen3-max-2026-01-23",
+      "displayName": "Qwen3 Max",
+      "serviceType": ["chat"],
+      "description": "阿里通义千问 Qwen3 Max (2026-01-23)",
+      "contextWindow": 128000,
+      "maxOutputTokens": 8192,
+      "capabilities": [
+        "chat",
+        "reasoning",
+        "code"
+      ],
+      "inputPrice": 0,
+      "outputPrice": 0,
+      "defaultTemperature": 1,
+      "extra": {}
+    },
+    {
+      "modelName": "qwen3.5-plus",
+      "displayName": "Qwen3.5 Plus",
+      "serviceType": ["chat"],
+      "description": "阿里通义千问 Qwen3.5 Plus",
+      "contextWindow": 128000,
+      "maxOutputTokens": 8192,
+      "capabilities": [
+        "chat",
+        "reasoning",
+        "code"
+      ],
+      "inputPrice": 0,
+      "outputPrice": 0,
+      "defaultTemperature": 1,
+      "extra": {}
+    },
+    {
+      "modelName": "doubao-seed-2-0-code-preview-260215",
+      "displayName": "豆包 Seed 2.0 Code Preview",
+      "serviceType": ["chat"],
+      "description": "字节跳动豆包 Seed 2.0 Code Preview (260215)",
+      "contextWindow": 128000,
+      "maxOutputTokens": 8192,
+      "capabilities": [
+        "chat",
+        "reasoning",
+        "code"
+      ],
+      "inputPrice": 0,
+      "outputPrice": 0,
+      "defaultTemperature": 1,
+      "extra": {}
+    }
+  ]
+}
