@@ -1,0 +1,43 @@
+{
+  "id": "provider-zhipu-coding-001",
+  "provider": "zhipu",
+  "brandGroup": "zhipu",
+  "label": "智谱 Coding Plan",
+  "baseUrl": "https://open.bigmodel.cn/api/coding/paas/v4",
+  "apiFormat": "openai-completions",
+  "apiKeyRef": "",
+  "apiKeyVerified": false,
+  "enabled": false,
+  "status": "unconfigured",
+  "accessMode": "coding-plan",
+  "services": ["chat", "reasoning"],
+  "codingPlan": {
+    "quotas": {},
+    "usageTracking": {
+      "method": "none",
+      "consoleUrl": "https://open.bigmodel.cn/console/overview"
+    }
+  },
+  "models": [
+    {
+      "modelName": "glm-5",
+      "displayName": "GLM-5 (Coding)",
+      "serviceType": ["chat"],
+      "description": "智谱 GLM-5 Coding Plan 版本，745B MoE，编程能力登顶",
+      "contextWindow": 192000,
+      "maxOutputTokens": 128000,
+      "capabilities": ["chat", "reasoning", "code", "deep_thinking", "long_context"],
+      "source": "preset"
+    },
+    {
+      "modelName": "glm-4.7",
+      "displayName": "GLM-4.7 (Coding)",
+      "serviceType": ["chat"],
+      "description": "智谱 GLM-4.7 Coding Plan 版本，200K 上下文",
+      "contextWindow": 200000,
+      "maxOutputTokens": 128000,
+      "capabilities": ["chat", "reasoning", "code", "deep_thinking", "long_context"],
+      "source": "preset"
+    }
+  ]
+}

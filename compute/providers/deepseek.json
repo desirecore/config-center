@@ -2,7 +2,7 @@
   "id": "provider-deepseek-001",
   "provider": "deepseek",
   "label": "DeepSeek",
-  "baseUrl": "https://api.deepseek.com/v1",
+  "baseUrl": "https://api.deepseek.com",
   "apiFormat": "openai-completions",
   "apiKeyRef": "deepseek",
   "apiKeyVerified": false,

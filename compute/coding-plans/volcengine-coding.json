@@ -1,0 +1,37 @@
+{
+  "id": "provider-volcengine-coding-001",
+  "provider": "volcengine",
+  "brandGroup": "volcengine",
+  "label": "火山引擎 Coding Plan",
+  "baseUrl": "https://ark.cn-beijing.volces.com/api/coding/v3",
+  "apiFormat": "openai-completions",
+  "apiKeyRef": "",
+  "apiKeyVerified": false,
+  "enabled": false,
+  "status": "unconfigured",
+  "accessMode": "coding-plan",
+  "services": ["chat", "reasoning"],
+  "codingPlan": {
+    "quotas": {},
+    "usageTracking": {
+      "method": "response-header",
+      "headerKeys": {
+        "remaining": "x-ratelimit-remaining",
+        "limit": "x-ratelimit-limit",
+        "reset": "x-ratelimit-reset"
+      },
+      "consoleUrl": "https://console.volcengine.com/ark"
+    },
+    "modelIdOverride": "ark-code-latest"
+  },
+  "models": [
+    {
+      "modelName": "ark-code-latest",
+      "displayName": "Ark Code Latest (Auto)",
+      "serviceType": ["chat"],
+      "description": "自动路由最优编程模型（Doubao-Seed-Code / GLM-4.7 / DeepSeek-V3.2 / Kimi-K2 等）",
+      "capabilities": ["code", "reasoning", "chat"],
+      "source": "preset"
+    }
+  ]
+}

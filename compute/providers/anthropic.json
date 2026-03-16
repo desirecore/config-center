@@ -2,7 +2,7 @@
   "id": "provider-anthropic-001",
   "provider": "anthropic",
   "label": "Anthropic Claude",
-  "baseUrl": "https://api.anthropic.com/v1",
+  "baseUrl": "https://api.anthropic.com",
   "apiFormat": "anthropic-messages",
   "apiKeyRef": "anthropic",
   "apiKeyVerified": false,

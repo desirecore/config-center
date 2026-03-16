@@ -1,0 +1,31 @@
+{
+  "id": "provider-kwai-coding-001",
+  "provider": "kwai",
+  "brandGroup": "kwai",
+  "label": "快手 KwaiKAT Coding Plan",
+  "baseUrl": "https://wanqing.streamlakeapi.com/api/gateway/coding/v1",
+  "apiFormat": "openai-completions",
+  "apiKeyRef": "",
+  "apiKeyVerified": false,
+  "enabled": false,
+  "status": "unconfigured",
+  "accessMode": "coding-plan",
+  "services": ["chat"],
+  "codingPlan": {
+    "quotas": {},
+    "usageTracking": {
+      "method": "none",
+      "consoleUrl": "https://console.streamlake.ai/wanqing/"
+    }
+  },
+  "models": [
+    {
+      "modelName": "kwai-coder",
+      "displayName": "KwaiKAT Coder (Coding)",
+      "serviceType": ["chat"],
+      "description": "快手 KwaiKAT Coding Plan，编程辅助模型",
+      "capabilities": ["chat", "code"],
+      "source": "preset"
+    }
+  ]
+}

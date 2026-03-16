@@ -1,0 +1,43 @@
+{
+  "id": "provider-dashscope-coding-001",
+  "provider": "dashscope",
+  "brandGroup": "dashscope",
+  "label": "百炼 Coding Plan",
+  "baseUrl": "https://coding.dashscope.aliyuncs.com/v1",
+  "apiFormat": "openai-completions",
+  "apiKeyRef": "",
+  "apiKeyVerified": false,
+  "enabled": false,
+  "status": "unconfigured",
+  "accessMode": "coding-plan",
+  "services": ["chat", "reasoning"],
+  "codingPlan": {
+    "quotas": {},
+    "usageTracking": {
+      "method": "none",
+      "consoleUrl": "https://bailian.console.aliyun.com/"
+    }
+  },
+  "models": [
+    {
+      "modelName": "qwen3-coder-plus",
+      "displayName": "Qwen3 Coder Plus (Coding)",
+      "serviceType": ["chat"],
+      "description": "阿里云百炼 Coding Plan，Qwen3 编程增强版",
+      "contextWindow": 131072,
+      "maxOutputTokens": 16384,
+      "capabilities": ["chat", "reasoning", "code", "tool_use"],
+      "source": "preset"
+    },
+    {
+      "modelName": "qwen3-max",
+      "displayName": "Qwen3 Max (Coding)",
+      "serviceType": ["chat"],
+      "description": "阿里云百炼 Coding Plan，Qwen3 Max 旗舰模型",
+      "contextWindow": 131072,
+      "maxOutputTokens": 16384,
+      "capabilities": ["chat", "reasoning", "code", "multilingual"],
+      "source": "preset"
+    }
+  ]
+}

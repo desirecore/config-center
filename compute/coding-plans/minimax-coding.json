@@ -1,0 +1,34 @@
+{
+  "id": "provider-minimax-coding-001",
+  "provider": "minimax",
+  "brandGroup": "minimax",
+  "label": "MiniMax Coding Plan",
+  "baseUrl": "https://api.minimaxi.com/v1",
+  "apiFormat": "openai-completions",
+  "apiKeyRef": "",
+  "apiKeyVerified": false,
+  "enabled": false,
+  "status": "unconfigured",
+  "accessMode": "coding-plan",
+  "services": ["chat", "reasoning"],
+  "codingPlan": {
+    "quotas": {},
+    "usageTracking": {
+      "method": "rest-api",
+      "endpoint": "https://api.minimaxi.com/v1/coding/usage",
+      "consoleUrl": "https://platform.minimaxi.com/"
+    }
+  },
+  "models": [
+    {
+      "modelName": "MiniMax-M1",
+      "displayName": "MiniMax-M1 (Coding)",
+      "serviceType": ["chat"],
+      "description": "MiniMax Coding Plan，M1 旗舰模型",
+      "contextWindow": 1000000,
+      "maxOutputTokens": 131072,
+      "capabilities": ["chat", "reasoning", "code", "long_context"],
+      "source": "preset"
+    }
+  ]
+}

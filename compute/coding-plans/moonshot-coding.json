@@ -1,0 +1,33 @@
+{
+  "id": "provider-moonshot-coding-001",
+  "provider": "moonshot",
+  "brandGroup": "moonshot",
+  "label": "Kimi Code",
+  "baseUrl": "https://api.kimi.com/coding/v1",
+  "apiFormat": "openai-completions",
+  "apiKeyRef": "",
+  "apiKeyVerified": false,
+  "enabled": false,
+  "status": "unconfigured",
+  "accessMode": "coding-plan",
+  "services": ["chat", "reasoning"],
+  "codingPlan": {
+    "quotas": {},
+    "usageTracking": {
+      "method": "none",
+      "consoleUrl": "https://platform.moonshot.cn/"
+    }
+  },
+  "models": [
+    {
+      "modelName": "kimi-k2",
+      "displayName": "Kimi K2 (Coding)",
+      "serviceType": ["chat"],
+      "description": "Kimi Code 套餐，万亿参数 MoE 模型，128K 上下文",
+      "contextWindow": 128000,
+      "maxOutputTokens": 8192,
+      "capabilities": ["chat", "reasoning", "code", "tool_use", "agent"],
+      "source": "preset"
+    }
+  ]
+}

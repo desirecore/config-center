@@ -1,0 +1,13 @@
+{
+  "description": "Coding Plan 预设加载顺序索引",
+  "order": [
+    "zhipu-coding",
+    "dashscope-coding",
+    "volcengine-coding",
+    "minimax-coding",
+    "moonshot-coding",
+    "infini-coding",
+    "moorethread-coding",
+    "kwai-coding"
+  ]
+}
