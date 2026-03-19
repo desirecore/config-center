@@ -12,6 +12,41 @@
   "services": ["chat", "fast", "reasoning"],
   "models": [
     {
+      "modelName": "MiniMax-M2.7",
+      "displayName": "MiniMax M2.7",
+      "serviceType": ["chat", "reasoning"],
+      "description": "MiniMax 新一代旗舰模型，擅长复杂 Agent、软件工程与专业办公任务",
+      "contextWindow": 204800,
+      "maxOutputTokens": 131072,
+      "capabilities": [
+        "chat",
+        "reasoning",
+        "code",
+        "tool_use"
+      ],
+      "defaultTemperature": 1,
+      "defaultTopP": 1,
+      "extra": {}
+    },
+    {
+      "modelName": "MiniMax-M2.7-highspeed",
+      "displayName": "MiniMax M2.7 高速版",
+      "serviceType": ["fast"],
+      "description": "MiniMax M2.7 极速版，效果一致，输出更快，适合低延迟场景",
+      "contextWindow": 204800,
+      "maxOutputTokens": 131072,
+      "capabilities": [
+        "chat",
+        "reasoning",
+        "code",
+        "tool_use",
+        "fast"
+      ],
+      "defaultTemperature": 1,
+      "defaultTopP": 1,
+      "extra": {}
+    },
+    {
       "modelName": "MiniMax-M2.5",
       "displayName": "MiniMax M2.5",
       "serviceType": ["chat", "reasoning"],
