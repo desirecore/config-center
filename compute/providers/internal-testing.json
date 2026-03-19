@@ -14,6 +14,23 @@
   ],
   "models": [
     {
+      "modelName": "glm-5-turbo",
+      "displayName": "GLM-5-Turbo",
+      "serviceType": ["chat"],
+      "description": "智谱 GLM-5-Turbo 大语言模型，更快的推理速度",
+      "contextWindow": 128000,
+      "maxOutputTokens": 8192,
+      "capabilities": [
+        "chat",
+        "reasoning",
+        "code"
+      ],
+      "inputPrice": 0,
+      "outputPrice": 0,
+      "defaultTemperature": 1,
+      "extra": {}
+    },
+    {
       "modelName": "glm-5",
       "displayName": "GLM-5",
       "serviceType": ["chat"],
