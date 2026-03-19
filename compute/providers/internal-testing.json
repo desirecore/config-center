@@ -48,6 +48,23 @@
       "extra": {}
     },
     {
+      "modelName": "MiniMax-M2.7",
+      "displayName": "MiniMax-M2.7",
+      "serviceType": ["chat"],
+      "description": "MiniMax M2.7 大语言模型，增强编码与推理能力，200K 上下文",
+      "contextWindow": 200000,
+      "maxOutputTokens": 8192,
+      "capabilities": [
+        "chat",
+        "reasoning",
+        "code"
+      ],
+      "inputPrice": 0,
+      "outputPrice": 0,
+      "defaultTemperature": 1,
+      "extra": {}
+    },
+    {
       "modelName": "MiniMax-M2.5",
       "displayName": "MiniMax-M2.5",
       "serviceType": ["chat"],
