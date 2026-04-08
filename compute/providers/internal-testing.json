@@ -153,6 +153,63 @@
       "extra": {}
     },
     {
+      "modelName": "qwen3.6-plus",
+      "displayName": "Qwen3.6 Plus",
+      "serviceType": ["chat"],
+      "description": "阿里通义千问 Qwen3.6 Plus，原生 1M 上下文，Hybrid MoE 架构，内置 CoT 推理",
+      "contextWindow": 1000000,
+      "maxOutputTokens": 65536,
+      "capabilities": [
+        "chat",
+        "reasoning",
+        "code",
+        "vision",
+        "tool_use",
+        "agent",
+        "deep_thinking"
+      ],
+      "inputPrice": 0,
+      "outputPrice": 0,
+      "defaultTemperature": 0.7,
+      "extra": {}
+    },
+    {
+      "modelName": "qwen3.5-35b-a3b",
+      "displayName": "Qwen3.5 35B-A3B",
+      "serviceType": ["chat"],
+      "description": "阿里通义千问 Qwen3.5 35B-A3B MoE 模型（35B 总参/3B 激活），262K 上下文",
+      "contextWindow": 262144,
+      "maxOutputTokens": 65536,
+      "capabilities": [
+        "chat",
+        "reasoning",
+        "code",
+        "vision"
+      ],
+      "inputPrice": 0,
+      "outputPrice": 0,
+      "defaultTemperature": 0.7,
+      "extra": {}
+    },
+    {
+      "modelName": "qwen3.5-27b",
+      "displayName": "Qwen3.5 27B",
+      "serviceType": ["chat"],
+      "description": "阿里通义千问 Qwen3.5 27B Dense 模型，262K 上下文",
+      "contextWindow": 262144,
+      "maxOutputTokens": 65536,
+      "capabilities": [
+        "chat",
+        "reasoning",
+        "code",
+        "vision"
+      ],
+      "inputPrice": 0,
+      "outputPrice": 0,
+      "defaultTemperature": 0.7,
+      "extra": {}
+    },
+    {
       "modelName": "doubao-seed-2-0-code-preview-260215",
       "displayName": "豆包 Seed 2.0 Code Preview",
       "serviceType": ["chat"],
