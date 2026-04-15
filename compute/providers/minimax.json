@@ -114,6 +114,7 @@
       "maxOutputTokens": 131072,
       "capabilities": [
         "chat",
+        "reasoning",
         "code",
         "tool_use",
         "fast"

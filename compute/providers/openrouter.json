@@ -39,6 +39,8 @@
         "chat",
         "reasoning",
         "vision",
+        "tool_use",
+        "fast",
         "long_context"
       ],
       "inputPrice": 0.00,
@@ -57,7 +59,8 @@
       "capabilities": [
         "code",
         "reasoning",
-        "agent"
+        "agent",
+        "tool_use"
       ],
       "inputPrice": 0.00,
       "outputPrice": 0.00,

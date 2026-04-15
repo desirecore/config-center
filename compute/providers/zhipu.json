@@ -113,7 +113,8 @@
         "reasoning",
         "code",
         "multilingual",
-        "deep_thinking"
+        "deep_thinking",
+        "vision"
       ],
       "inputPrice": 5,
       "outputPrice": 5,

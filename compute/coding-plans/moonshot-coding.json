@@ -26,7 +26,7 @@
       "description": "Kimi Code 套餐，万亿参数 MoE 模型，128K 上下文",
       "contextWindow": 128000,
       "maxOutputTokens": 8192,
-      "capabilities": ["chat", "reasoning", "code", "tool_use", "agent"],
+      "capabilities": ["chat", "reasoning", "code", "tool_use", "agent", "long_context", "vision"],
       "source": "preset"
     }
   ]

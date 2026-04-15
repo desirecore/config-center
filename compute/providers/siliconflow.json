@@ -41,7 +41,10 @@
         "chat",
         "reasoning",
         "code",
-        "multilingual"
+        "multilingual",
+        "tool_use",
+        "agent",
+        "vision"
       ],
       "inputPrice": 2.5,
       "outputPrice": 10,

@@ -42,6 +42,8 @@
       "capabilities": [
         "chat",
         "code",
+        "vision",
+        "reasoning",
         "fast",
         "tool_use"
       ],

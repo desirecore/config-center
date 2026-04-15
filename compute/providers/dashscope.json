@@ -94,6 +94,7 @@
       "maxOutputTokens": 8192,
       "capabilities": [
         "chat",
+        "code",
         "long_context",
         "fast"
       ],
@@ -135,7 +136,8 @@
         "multilingual",
         "long_context",
         "tool_use",
-        "agent"
+        "agent",
+        "vision"
       ],
       "inputPrice": 2.5,
       "outputPrice": 10,
@@ -327,7 +329,8 @@
         "vision",
         "tts",
         "asr",
-        "multimodal"
+        "multimodal",
+        "tool_use"
       ],
       "extra": {}
     },

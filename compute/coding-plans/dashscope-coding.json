@@ -36,7 +36,7 @@
       "description": "阿里云百炼 Coding Plan，Qwen3 Max 旗舰模型",
       "contextWindow": 131072,
       "maxOutputTokens": 16384,
-      "capabilities": ["chat", "reasoning", "code", "multilingual"],
+      "capabilities": ["chat", "reasoning", "code", "multilingual", "tool_use", "long_context", "vision"],
       "source": "preset"
     }
   ]

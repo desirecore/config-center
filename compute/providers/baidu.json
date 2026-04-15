@@ -40,6 +40,8 @@
       "maxOutputTokens": 8192,
       "capabilities": [
         "chat",
+        "code",
+        "vision",
         "long_context",
         "fast"
       ],

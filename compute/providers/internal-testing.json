@@ -77,7 +77,11 @@
       "capabilities": [
         "chat",
         "reasoning",
-        "code"
+        "code",
+        "tool_use",
+        "agent",
+        "vision",
+        "long_context"
       ],
       "inputPrice": 0,
       "outputPrice": 0,
@@ -94,7 +98,8 @@
       "capabilities": [
         "chat",
         "reasoning",
-        "code"
+        "code",
+        "tool_use"
       ],
       "inputPrice": 0,
       "outputPrice": 0,
@@ -111,7 +116,9 @@
       "capabilities": [
         "chat",
         "reasoning",
-        "code"
+        "code",
+        "tool_use",
+        "long_context"
       ],
       "inputPrice": 0,
       "outputPrice": 0,
@@ -128,7 +135,11 @@
       "capabilities": [
         "chat",
         "reasoning",
-        "code"
+        "code",
+        "tool_use",
+        "agent",
+        "vision",
+        "long_context"
       ],
       "inputPrice": 0,
       "outputPrice": 0,
@@ -145,7 +156,11 @@
       "capabilities": [
         "chat",
         "reasoning",
-        "code"
+        "code",
+        "tool_use",
+        "agent",
+        "vision",
+        "long_context"
       ],
       "inputPrice": 0,
       "outputPrice": 0,
@@ -184,7 +199,8 @@
         "chat",
         "reasoning",
         "code",
-        "vision"
+        "vision",
+        "tool_use"
       ],
       "inputPrice": 0,
       "outputPrice": 0,
@@ -202,7 +218,8 @@
         "chat",
         "reasoning",
         "code",
-        "vision"
+        "vision",
+        "tool_use"
       ],
       "inputPrice": 0,
       "outputPrice": 0,

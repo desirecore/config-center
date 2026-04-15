@@ -25,6 +25,7 @@
         "reasoning",
         "code",
         "multilingual",
+        "vision",
         "long_context",
         "medical"
       ],
@@ -46,6 +47,7 @@
         "reasoning",
         "code",
         "multilingual",
+        "vision",
         "medical"
       ],
       "inputPrice": 10,

@@ -49,7 +49,8 @@
         "code",
         "tool_use",
         "agent",
-        "long_context"
+        "long_context",
+        "vision"
       ],
       "inputPrice": 4,
       "outputPrice": 16,
