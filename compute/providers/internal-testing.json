@@ -227,6 +227,27 @@
       "extra": {}
     },
     {
+      "modelName": "kimi-k2.6-code-preview",
+      "displayName": "Kimi K2.6 Code Preview",
+      "serviceType": ["chat"],
+      "description": "月之暗面 Kimi K2.6 Code Preview，万亿参数 MoE 架构（32B 激活），256K 上下文，代码与智能体能力增强",
+      "contextWindow": 256000,
+      "maxOutputTokens": 16384,
+      "capabilities": [
+        "chat",
+        "reasoning",
+        "code",
+        "tool_use",
+        "agent",
+        "vision",
+        "long_context"
+      ],
+      "inputPrice": 0,
+      "outputPrice": 0,
+      "defaultTemperature": 0.7,
+      "extra": {}
+    },
+    {
       "modelName": "doubao-seed-2-0-code-preview-260215",
       "displayName": "豆包 Seed 2.0 Code Preview",
       "serviceType": ["chat"],
