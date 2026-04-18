@@ -68,6 +68,23 @@
       "extra": {}
     },
     {
+      "modelName": "glm-4.7",
+      "displayName": "GLM-4.7",
+      "serviceType": ["chat"],
+      "description": "智谱 GLM-4.7 大语言模型",
+      "contextWindow": 200000,
+      "maxOutputTokens": 128000,
+      "capabilities": [
+        "chat",
+        "reasoning",
+        "code"
+      ],
+      "inputPrice": 0,
+      "outputPrice": 0,
+      "defaultTemperature": 1,
+      "extra": {}
+    },
+    {
       "modelName": "kimi-k2.5",
       "displayName": "Kimi-2.5",
       "serviceType": ["chat"],
