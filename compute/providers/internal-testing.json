@@ -14,9 +14,30 @@
   ],
   "models": [
     {
+      "modelName": "MiniMax-M2.7-highspeed",
+      "displayName": "MiniMax-M2.7 高速版",
+      "serviceType": [
+        "chat"
+      ],
+      "description": "MiniMax M2.7 高速版，低延迟吞吐优化，200K 上下文",
+      "contextWindow": 200000,
+      "maxOutputTokens": 8192,
+      "capabilities": [
+        "chat",
+        "reasoning",
+        "code"
+      ],
+      "inputPrice": 0,
+      "outputPrice": 0,
+      "defaultTemperature": 1,
+      "extra": {}
+    },
+    {
       "modelName": "glm-5.1",
       "displayName": "GLM-5.1",
-      "serviceType": ["chat"],
+      "serviceType": [
+        "chat"
+      ],
       "description": "智谱 GLM-5.1 新一代旗舰模型，编程与推理能力断档领先，204K 上下文",
       "contextWindow": 204800,
       "maxOutputTokens": 131072,
@@ -34,10 +55,12 @@
       "extra": {}
     },
     {
-      "modelName": "glm-5-turbo",
-      "displayName": "GLM-5-Turbo",
-      "serviceType": ["chat"],
-      "description": "智谱 GLM-5-Turbo 大语言模型，更快的推理速度",
+      "modelName": "glm-5",
+      "displayName": "GLM-5",
+      "serviceType": [
+        "chat"
+      ],
+      "description": "智谱 GLM-5 大语言模型",
       "contextWindow": 128000,
       "maxOutputTokens": 8192,
       "capabilities": [
@@ -51,10 +74,12 @@
       "extra": {}
     },
     {
-      "modelName": "glm-5",
-      "displayName": "GLM-5",
-      "serviceType": ["chat"],
-      "description": "智谱 GLM-5 大语言模型",
+      "modelName": "glm-5-turbo",
+      "displayName": "GLM-5-Turbo",
+      "serviceType": [
+        "chat"
+      ],
+      "description": "智谱 GLM-5-Turbo 大语言模型，更快的推理速度",
       "contextWindow": 128000,
       "maxOutputTokens": 8192,
       "capabilities": [
@@ -70,7 +95,9 @@
     {
       "modelName": "glm-4.7",
       "displayName": "GLM-4.7",
-      "serviceType": ["chat"],
+      "serviceType": [
+        "chat"
+      ],
       "description": "智谱 GLM-4.7 大语言模型",
       "contextWindow": 200000,
       "maxOutputTokens": 128000,
@@ -85,30 +112,11 @@
       "extra": {}
     },
     {
-      "modelName": "kimi-k2.5",
-      "displayName": "Kimi-2.5",
-      "serviceType": ["chat"],
-      "description": "月之暗面 Kimi-2.5 大语言模型",
-      "contextWindow": 128000,
-      "maxOutputTokens": 8192,
-      "capabilities": [
-        "chat",
-        "reasoning",
-        "code",
-        "tool_use",
-        "agent",
-        "vision",
-        "long_context"
-      ],
-      "inputPrice": 0,
-      "outputPrice": 0,
-      "defaultTemperature": 1,
-      "extra": {}
-    },
-    {
       "modelName": "MiniMax-M2.7",
       "displayName": "MiniMax-M2.7",
-      "serviceType": ["chat"],
+      "serviceType": [
+        "chat"
+      ],
       "description": "MiniMax M2.7 大语言模型，增强编码与推理能力，200K 上下文",
       "contextWindow": 200000,
       "maxOutputTokens": 8192,
@@ -126,7 +134,9 @@
     {
       "modelName": "MiniMax-M2.5",
       "displayName": "MiniMax-M2.5",
-      "serviceType": ["chat"],
+      "serviceType": [
+        "chat"
+      ],
       "description": "MiniMax M2.5 大语言模型",
       "contextWindow": 128000,
       "maxOutputTokens": 8192,
@@ -143,12 +153,14 @@
       "extra": {}
     },
     {
-      "modelName": "qwen3-max-2026-01-23",
-      "displayName": "Qwen3 Max",
-      "serviceType": ["chat"],
-      "description": "阿里通义千问 Qwen3 Max (2026-01-23)",
-      "contextWindow": 128000,
-      "maxOutputTokens": 8192,
+      "modelName": "kimi-k2.6-code-preview",
+      "displayName": "Kimi K2.6 Code Preview",
+      "serviceType": [
+        "chat"
+      ],
+      "description": "月之暗面 Kimi K2.6 Code Preview，万亿参数 MoE 架构（32B 激活），256K 上下文，代码与智能体能力增强",
+      "contextWindow": 256000,
+      "maxOutputTokens": 16384,
       "capabilities": [
         "chat",
         "reasoning",
@@ -160,14 +172,16 @@
       ],
       "inputPrice": 0,
       "outputPrice": 0,
-      "defaultTemperature": 1,
+      "defaultTemperature": 0.7,
       "extra": {}
     },
     {
-      "modelName": "qwen3.5-plus",
-      "displayName": "Qwen3.5 Plus",
-      "serviceType": ["chat"],
-      "description": "阿里通义千问 Qwen3.5 Plus",
+      "modelName": "kimi-k2.5",
+      "displayName": "Kimi-2.5",
+      "serviceType": [
+        "chat"
+      ],
+      "description": "月之暗面 Kimi-2.5 大语言模型",
       "contextWindow": 128000,
       "maxOutputTokens": 8192,
       "capabilities": [
@@ -187,7 +201,9 @@
     {
       "modelName": "qwen3.6-plus",
       "displayName": "Qwen3.6 Plus",
-      "serviceType": ["chat"],
+      "serviceType": [
+        "chat"
+      ],
       "description": "阿里通义千问 Qwen3.6 Plus，原生 1M 上下文，Hybrid MoE 架构，内置 CoT 推理",
       "contextWindow": 1000000,
       "maxOutputTokens": 65536,
@@ -206,9 +222,34 @@
       "extra": {}
     },
     {
+      "modelName": "qwen3.5-plus",
+      "displayName": "Qwen3.5 Plus",
+      "serviceType": [
+        "chat"
+      ],
+      "description": "阿里通义千问 Qwen3.5 Plus",
+      "contextWindow": 128000,
+      "maxOutputTokens": 8192,
+      "capabilities": [
+        "chat",
+        "reasoning",
+        "code",
+        "tool_use",
+        "agent",
+        "vision",
+        "long_context"
+      ],
+      "inputPrice": 0,
+      "outputPrice": 0,
+      "defaultTemperature": 1,
+      "extra": {}
+    },
+    {
       "modelName": "qwen3.5-35b-a3b",
       "displayName": "Qwen3.5 35B-A3B",
-      "serviceType": ["chat"],
+      "serviceType": [
+        "chat"
+      ],
       "description": "阿里通义千问 Qwen3.5 35B-A3B MoE 模型（35B 总参/3B 激活），262K 上下文",
       "contextWindow": 262144,
       "maxOutputTokens": 65536,
@@ -227,7 +268,9 @@
     {
       "modelName": "qwen3.5-27b",
       "displayName": "Qwen3.5 27B",
-      "serviceType": ["chat"],
+      "serviceType": [
+        "chat"
+      ],
       "description": "阿里通义千问 Qwen3.5 27B Dense 模型，262K 上下文",
       "contextWindow": 262144,
       "maxOutputTokens": 65536,
@@ -244,12 +287,14 @@
       "extra": {}
     },
     {
-      "modelName": "kimi-k2.6-code-preview",
-      "displayName": "Kimi K2.6 Code Preview",
-      "serviceType": ["chat"],
-      "description": "月之暗面 Kimi K2.6 Code Preview，万亿参数 MoE 架构（32B 激活），256K 上下文，代码与智能体能力增强",
-      "contextWindow": 256000,
-      "maxOutputTokens": 16384,
+      "modelName": "qwen3-max-2026-01-23",
+      "displayName": "Qwen3 Max",
+      "serviceType": [
+        "chat"
+      ],
+      "description": "阿里通义千问 Qwen3 Max (2026-01-23)",
+      "contextWindow": 128000,
+      "maxOutputTokens": 8192,
       "capabilities": [
         "chat",
         "reasoning",
@@ -261,13 +306,15 @@
       ],
       "inputPrice": 0,
       "outputPrice": 0,
-      "defaultTemperature": 0.7,
+      "defaultTemperature": 1,
       "extra": {}
     },
     {
       "modelName": "doubao-seed-2-0-code-preview-260215",
       "displayName": "豆包 Seed 2.0 Code Preview",
-      "serviceType": ["chat"],
+      "serviceType": [
+        "chat"
+      ],
       "description": "字节跳动豆包 Seed 2.0 Code Preview (260215)",
       "contextWindow": 128000,
       "maxOutputTokens": 8192,
