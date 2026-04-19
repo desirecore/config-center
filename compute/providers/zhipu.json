@@ -2,8 +2,8 @@
   "id": "provider-zhipu-001",
   "provider": "zhipu",
   "label": "智谱 GLM",
-  "baseUrl": "https://open.bigmodel.cn/api/paas/v4",
-  "apiFormat": "openai-completions",
+  "baseUrl": "https://open.bigmodel.cn/api/anthropic",
+  "apiFormat": "anthropic-messages",
   "apiKeyRef": "zhipu",
   "apiKeyVerified": false,
   "enabled": false,
@@ -12,8 +12,7 @@
   "services": [
     "chat",
     "vision",
-    "reasoning",
-    "embedding"
+    "reasoning"
   ],
   "models": [
     {
@@ -118,20 +117,6 @@
       ],
       "inputPrice": 5,
       "outputPrice": 5,
-      "extra": {}
-    },
-    {
-      "modelName": "embedding-3",
-      "displayName": "智谱 embedding-3",
-      "serviceType": ["embedding"],
-      "description": "智谱嵌入模型v3，支持自定义维度，单条最大3072 tokens",
-      "contextWindow": 3072,
-      "capabilities": [
-        "text_embedding",
-        "semantic_search",
-        "rag"
-      ],
-      "inputPrice": 0.5,
       "extra": {}
     }
   ]

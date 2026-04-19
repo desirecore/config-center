@@ -1,0 +1,32 @@
+{
+  "id": "provider-zhipu-embedding-001",
+  "provider": "zhipu-embedding",
+  "brandGroup": "zhipu",
+  "label": "智谱 Embedding",
+  "baseUrl": "https://open.bigmodel.cn/api/paas/v4",
+  "apiFormat": "openai-completions",
+  "apiKeyRef": "zhipu",
+  "apiKeyVerified": false,
+  "enabled": false,
+  "status": "unconfigured",
+  "priceCurrency": "CNY",
+  "services": [
+    "embedding"
+  ],
+  "models": [
+    {
+      "modelName": "embedding-3",
+      "displayName": "智谱 embedding-3",
+      "serviceType": ["embedding"],
+      "description": "智谱嵌入模型v3，支持自定义维度，单条最大3072 tokens。走 OpenAI 兼容 /embeddings 端点（Anthropic 协议不提供 embeddings）",
+      "contextWindow": 3072,
+      "capabilities": [
+        "text_embedding",
+        "semantic_search",
+        "rag"
+      ],
+      "inputPrice": 0.5,
+      "extra": {}
+    }
+  ]
+}
