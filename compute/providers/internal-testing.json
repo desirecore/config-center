@@ -12,6 +12,10 @@
   "services": [
     "chat"
   ],
+  "tombstones": [
+    "MiniMax-M2.7",
+    "MiniMax-M2.5"
+  ],
   "models": [
     {
       "modelName": "MiniMax-M2.7-highspeed",
