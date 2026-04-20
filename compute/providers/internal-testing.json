@@ -13,8 +13,7 @@
     "chat"
   ],
   "tombstones": [
-    "MiniMax-M2.7",
-    "MiniMax-M2.5"
+    "MiniMax-M2.7"
   ],
   "models": [
     {
@@ -154,6 +153,27 @@
         "tool_use",
         "agent",
         "vision",
+        "long_context"
+      ],
+      "inputPrice": 0,
+      "outputPrice": 0,
+      "defaultTemperature": 1,
+      "extra": {}
+    },
+    {
+      "modelName": "MiniMax-M2.5",
+      "displayName": "MiniMax-M2.5",
+      "serviceType": [
+        "chat"
+      ],
+      "description": "MiniMax M2.5 大语言模型",
+      "contextWindow": 128000,
+      "maxOutputTokens": 8192,
+      "capabilities": [
+        "chat",
+        "reasoning",
+        "code",
+        "tool_use",
         "long_context"
       ],
       "inputPrice": 0,
