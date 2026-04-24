@@ -40,7 +40,8 @@
       "source": "preset",
       "inputPrice": 1,
       "outputPrice": 5,
-      "defaultTemperature": 0.7
+      "defaultTemperature": 0.7,
+      "defaultTopP": 0.8
     },
     {
       "modelName": "qwen3-max",
@@ -63,7 +64,8 @@
       "source": "preset",
       "inputPrice": 1.2,
       "outputPrice": 6,
-      "defaultTemperature": 0.7
+      "defaultTemperature": 0.7,
+      "defaultTopP": 0.8
     }
   ]
 }

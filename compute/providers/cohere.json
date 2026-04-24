@@ -29,9 +29,33 @@
       ],
       "inputPrice": 2.50,
       "outputPrice": 10.00,
-      "defaultTemperature": 1,
-      "defaultTopP": 1,
-      "extra": {}
+      "defaultTemperature": 0.3,
+      "defaultTopP": 0.75,
+      "extra": {
+        "pricingNotes": "Prices are per 1M tokens."
+      }
+    },
+    {
+      "modelName": "command-r7b-12-2024",
+      "displayName": "Command R7B",
+      "serviceType": ["fast"],
+      "description": "Cohere 小型高速对话模型，适合高吞吐、低延迟场景",
+      "contextWindow": 128000,
+      "maxOutputTokens": 4000,
+      "capabilities": [
+        "chat",
+        "reasoning",
+        "tool_use",
+        "rag",
+        "fast"
+      ],
+      "inputPrice": 0.0375,
+      "outputPrice": 0.15,
+      "defaultTemperature": 0.3,
+      "defaultTopP": 0.75,
+      "extra": {
+        "pricingNotes": "Prices are per 1M tokens."
+      }
     },
     {
       "modelName": "embed-v4.0",
@@ -46,8 +70,13 @@
       ],
       "inputPrice": 0.12,
       "outputPrice": 0,
-      "defaultTemperature": 1,
-      "extra": {}
+      "defaultTemperature": null,
+      "defaultTopP": null,
+      "extra": {
+        "dimensions": [256, 512, 1024, 1536],
+        "defaultDimension": 1536,
+        "pricingNotes": "Embedding models are priced by embedded tokens; price is per 1M tokens."
+      }
     },
     {
       "modelName": "rerank-v3.5",
@@ -62,8 +91,11 @@
       ],
       "inputPrice": 2.00,
       "outputPrice": 0,
-      "defaultTemperature": 1,
-      "extra": {}
+      "defaultTemperature": null,
+      "defaultTopP": null,
+      "extra": {
+        "pricingNotes": "Cohere Rerank is priced by search units, not input/output tokens; one search unit is one query with up to 100 documents. The token price fields are retained for schema compatibility."
+      }
     }
   ]
 }

@@ -109,7 +109,8 @@
       "source": "preset",
       "inputPrice": 0.58,
       "outputPrice": 2.6,
-      "defaultTemperature": 0.95
+      "defaultTemperature": 1,
+      "defaultTopP": 0.95
     },
     {
       "modelName": "glm-4.7",
@@ -132,7 +133,8 @@
       "source": "preset",
       "inputPrice": 0.2911,
       "outputPrice": 1.1645,
-      "defaultTemperature": 0.95
+      "defaultTemperature": 1,
+      "defaultTopP": 0.95
     }
   ]
 }

@@ -33,6 +33,7 @@
       "inputPrice": 0,
       "outputPrice": 0,
       "defaultTemperature": 1,
+      "defaultTopP": 0.95,
       "extra": {}
     },
     {
@@ -54,7 +55,8 @@
       ],
       "inputPrice": 0,
       "outputPrice": 0,
-      "defaultTemperature": 0.95,
+      "defaultTemperature": 1,
+      "defaultTopP": 0.95,
       "extra": {}
     },
     {
@@ -74,6 +76,7 @@
       "inputPrice": 0,
       "outputPrice": 0,
       "defaultTemperature": 1,
+      "defaultTopP": 0.95,
       "extra": {}
     },
     {
@@ -93,6 +96,7 @@
       "inputPrice": 0,
       "outputPrice": 0,
       "defaultTemperature": 1,
+      "defaultTopP": 0.95,
       "extra": {}
     },
     {
@@ -112,6 +116,7 @@
       "inputPrice": 0,
       "outputPrice": 0,
       "defaultTemperature": 1,
+      "defaultTopP": 0.95,
       "extra": {}
     },
     {
@@ -134,7 +139,8 @@
       ],
       "inputPrice": 0,
       "outputPrice": 0,
-      "defaultTemperature": 0.7,
+      "defaultTemperature": 1,
+      "defaultTopP": 0.95,
       "extra": {}
     },
     {
@@ -158,6 +164,7 @@
       "inputPrice": 0,
       "outputPrice": 0,
       "defaultTemperature": 1,
+      "defaultTopP": 0.95,
       "extra": {}
     },
     {
@@ -179,6 +186,7 @@
       "inputPrice": 0,
       "outputPrice": 0,
       "defaultTemperature": 1,
+      "defaultTopP": 0.95,
       "extra": {}
     },
     {
@@ -202,6 +210,7 @@
       "inputPrice": 0,
       "outputPrice": 0,
       "defaultTemperature": 0.7,
+      "defaultTopP": 0.8,
       "extra": {}
     },
     {
@@ -224,7 +233,8 @@
       ],
       "inputPrice": 0,
       "outputPrice": 0,
-      "defaultTemperature": 1,
+      "defaultTemperature": 0.7,
+      "defaultTopP": 0.8,
       "extra": {}
     },
     {
@@ -246,6 +256,7 @@
       "inputPrice": 0,
       "outputPrice": 0,
       "defaultTemperature": 0.7,
+      "defaultTopP": 0.8,
       "extra": {}
     },
     {
@@ -267,6 +278,7 @@
       "inputPrice": 0,
       "outputPrice": 0,
       "defaultTemperature": 0.7,
+      "defaultTopP": 0.8,
       "extra": {}
     },
     {
@@ -289,7 +301,8 @@
       ],
       "inputPrice": 0,
       "outputPrice": 0,
-      "defaultTemperature": 1,
+      "defaultTemperature": 0.7,
+      "defaultTopP": 0.8,
       "extra": {}
     },
     {
@@ -309,6 +322,7 @@
       "inputPrice": 0,
       "outputPrice": 0,
       "defaultTemperature": 1,
+      "defaultTopP": 0.7,
       "extra": {}
     }
   ]

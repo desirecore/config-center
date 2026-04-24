@@ -28,6 +28,7 @@
       "contextWindow": 128000,
       "maxOutputTokens": 8192,
       "defaultTemperature": 1,
+      "defaultTopP": 1,
       "source": "preset"
     }
   ]

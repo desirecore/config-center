@@ -25,12 +25,10 @@
         "math",
         "code"
       ],
-      "inputPrice": 11,
-      "outputPrice": 11,
-      "defaultTemperature": 1,
-      "defaultTopP": 1,
+      "defaultTemperature": 1.2,
+      "defaultTopP": 0.95,
       "extra": {
-        "pricingNote": "讯飞按token包计费，不区分输入输出"
+        "pricingNote": "官方公开文档说明模型价格以控制台及实际购买页为准，未公开固定 token 单价"
       }
     },
     {
@@ -46,12 +44,10 @@
         "code",
         "tool_use"
       ],
-      "inputPrice": 60,
-      "outputPrice": 60,
       "defaultTemperature": 1,
       "defaultTopP": 1,
       "extra": {
-        "pricingNote": "讯飞按token包计费，不区分输入输出"
+        "pricingNote": "官方公开文档说明模型价格以控制台及实际购买页为准，未公开固定 token 单价"
       }
     }
   ]

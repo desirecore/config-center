@@ -21,7 +21,7 @@
         "reasoning"
       ],
       "description": "腾讯混元最新推理模型，128K输入/64K输出，MoE架构406B总参数",
-      "contextWindow": 128000,
+      "contextWindow": 196608,
       "maxOutputTokens": 65536,
       "capabilities": [
         "chat",
@@ -31,9 +31,56 @@
       ],
       "inputPrice": 3.975,
       "outputPrice": 15.9,
-      "defaultTemperature": 1,
-      "defaultTopP": 1,
-      "extra": {}
+      "defaultTemperature": null,
+      "defaultTopP": null,
+      "extra": {
+        "pricingTiers": [
+          {
+            "maxInputTokens": 32768,
+            "inputPrice": 3.975,
+            "outputPrice": 15.9
+          },
+          {
+            "maxInputTokens": 131072,
+            "inputPrice": 5.3,
+            "outputPrice": 21.2
+          }
+        ]
+      }
+    },
+    {
+      "modelName": "hunyuan-2.0-instruct-20251111",
+      "displayName": "混元 2.0 Instruct",
+      "serviceType": [
+        "chat"
+      ],
+      "description": "腾讯混元 2.0 指令模型，最大输入128K/最大输出16K，支持联网搜索和 Function Calling",
+      "contextWindow": 147456,
+      "maxOutputTokens": 16384,
+      "capabilities": [
+        "chat",
+        "code",
+        "long_context",
+        "tool_use"
+      ],
+      "inputPrice": 3.18,
+      "outputPrice": 7.95,
+      "defaultTemperature": null,
+      "defaultTopP": null,
+      "extra": {
+        "pricingTiers": [
+          {
+            "maxInputTokens": 32768,
+            "inputPrice": 3.18,
+            "outputPrice": 7.95
+          },
+          {
+            "maxInputTokens": 131072,
+            "inputPrice": 4.505,
+            "outputPrice": 11.13
+          }
+        ]
+      }
     },
     {
       "modelName": "hunyuan-turbos-latest",
@@ -54,8 +101,8 @@
       ],
       "inputPrice": 0.8,
       "outputPrice": 2,
-      "defaultTemperature": 1,
-      "defaultTopP": 1,
+      "defaultTemperature": null,
+      "defaultTopP": null,
       "extra": {}
     }
   ]

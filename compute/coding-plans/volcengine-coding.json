@@ -33,7 +33,8 @@
       "capabilities": ["code", "reasoning", "chat"],
       "contextWindow": 256000,
       "maxOutputTokens": 32000,
-      "defaultTemperature": 1,
+      "defaultTemperature": null,
+      "defaultTopP": null,
       "source": "preset"
     }
   ]

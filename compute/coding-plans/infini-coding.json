@@ -27,7 +27,8 @@
       "contextWindow": 128000,
       "maxOutputTokens": 8192,
       "capabilities": ["chat", "reasoning", "code", "multilingual"],
-      "defaultTemperature": 1,
+      "defaultTemperature": null,
+      "defaultTopP": null,
       "source": "preset"
     }
   ]

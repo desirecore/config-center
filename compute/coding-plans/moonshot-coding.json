@@ -46,8 +46,8 @@
         "video_understanding"
       ],
       "source": "preset",
-      "defaultTemperature": 1,
-      "defaultTopP": 0.95,
+      "defaultTemperature": null,
+      "defaultTopP": null,
       "extra": {
         "billing": "kimi_membership_quota",
         "baseUrlNote": "Kimi Code API Key must use https://api.kimi.com/coding/v1",
@@ -79,7 +79,8 @@
       "source": "preset",
       "inputPrice": 0.58,
       "outputPrice": 3.02,
-      "defaultTemperature": 1
+      "defaultTemperature": 1,
+      "defaultTopP": 0.95
     }
   ]
 }

@@ -129,8 +129,8 @@
       ],
       "inputPrice": 4,
       "outputPrice": 16,
-      "defaultTemperature": 0.7,
-      "defaultTopP": 0.9,
+      "defaultTemperature": 0.6,
+      "defaultTopP": 1,
       "extra": {
         "cacheHitPrice": 1
       }
@@ -153,8 +153,8 @@
       ],
       "inputPrice": 4,
       "outputPrice": 16,
-      "defaultTemperature": 0.7,
-      "defaultTopP": 0.9,
+      "defaultTemperature": 1,
+      "defaultTopP": 1,
       "extra": {
         "cacheHitPrice": 1
       }
@@ -174,8 +174,8 @@
       ],
       "inputPrice": 2,
       "outputPrice": 2,
-      "defaultTemperature": 0.7,
-      "defaultTopP": 0.9,
+      "defaultTemperature": 0,
+      "defaultTopP": 1,
       "extra": {}
     },
     {
@@ -194,8 +194,8 @@
       ],
       "inputPrice": 5,
       "outputPrice": 5,
-      "defaultTemperature": 0.7,
-      "defaultTopP": 0.9,
+      "defaultTemperature": 0,
+      "defaultTopP": 1,
       "extra": {}
     },
     {
@@ -214,8 +214,8 @@
       ],
       "inputPrice": 10,
       "outputPrice": 10,
-      "defaultTemperature": 0.7,
-      "defaultTopP": 0.9,
+      "defaultTemperature": 0,
+      "defaultTopP": 1,
       "extra": {}
     }
   ]
