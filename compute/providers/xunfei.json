@@ -12,12 +12,12 @@
   "services": ["chat", "reasoning"],
   "models": [
     {
-      "modelName": "x1",
+      "modelName": "spark-x",
       "displayName": "讯飞星火 X1",
       "serviceType": ["reasoning"],
-      "description": "讯飞最新推理模型，基于全国产算力训练，擅长数学和代码推理",
-      "contextWindow": 32768,
-      "maxOutputTokens": 16384,
+      "description": "讯飞深度推理模型（X2），输入64K/输出128K，支持思考模式与函数调用",
+      "contextWindow": 65536,
+      "maxOutputTokens": 128000,
       "capabilities": [
         "chat",
         "reasoning",

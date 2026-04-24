@@ -10,7 +10,10 @@
   "enabled": false,
   "status": "unconfigured",
   "accessMode": "coding-plan",
-  "services": ["chat", "reasoning"],
+  "services": [
+    "chat",
+    "reasoning"
+  ],
   "codingPlan": {
     "quotas": {},
     "usageTracking": {
@@ -22,22 +25,45 @@
     {
       "modelName": "qwen3-coder-plus",
       "displayName": "Qwen3 Coder Plus (Coding)",
-      "serviceType": ["chat"],
-      "description": "阿里云百炼 Coding Plan，Qwen3 编程增强版",
-      "contextWindow": 131072,
-      "maxOutputTokens": 16384,
-      "capabilities": ["chat", "reasoning", "code", "tool_use"],
-      "source": "preset"
+      "serviceType": [
+        "chat"
+      ],
+      "description": "阿里云百炼 Coding Plan，Qwen3 编程增强版，100万上下文",
+      "contextWindow": 1000000,
+      "maxOutputTokens": 65536,
+      "capabilities": [
+        "chat",
+        "reasoning",
+        "code",
+        "tool_use"
+      ],
+      "source": "preset",
+      "inputPrice": 1,
+      "outputPrice": 5,
+      "defaultTemperature": 0.7
     },
     {
-      "modelName": "qwen3-max",
+      "modelName": "qwen3-max-2026-01-23",
       "displayName": "Qwen3 Max (Coding)",
-      "serviceType": ["chat"],
-      "description": "阿里云百炼 Coding Plan，Qwen3 Max 旗舰模型",
-      "contextWindow": 131072,
-      "maxOutputTokens": 16384,
-      "capabilities": ["chat", "reasoning", "code", "multilingual", "tool_use", "long_context", "vision"],
-      "source": "preset"
+      "serviceType": [
+        "chat"
+      ],
+      "description": "阿里云百炼 Coding Plan，Qwen3 Max 旗舰模型，262K 上下文",
+      "contextWindow": 262144,
+      "maxOutputTokens": 65536,
+      "capabilities": [
+        "chat",
+        "reasoning",
+        "code",
+        "multilingual",
+        "tool_use",
+        "long_context",
+        "vision"
+      ],
+      "source": "preset",
+      "inputPrice": 1.2,
+      "outputPrice": 6,
+      "defaultTemperature": 0.7
     }
   ]
 }

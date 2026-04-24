@@ -25,7 +25,9 @@
     {
       "modelName": "gpt-5.2",
       "displayName": "GPT-5.2",
-      "serviceType": ["chat"],
+      "serviceType": [
+        "chat"
+      ],
       "description": "OpenAI 最新旗舰模型，400K 上下文，编码和智能体任务优化",
       "contextWindow": 400000,
       "maxOutputTokens": 128000,
@@ -46,7 +48,9 @@
     {
       "modelName": "gpt-5.2-pro",
       "displayName": "GPT-5.2 Pro",
-      "serviceType": ["chat"],
+      "serviceType": [
+        "chat"
+      ],
       "description": "OpenAI GPT-5.2 Pro 专业版，最高性能",
       "contextWindow": 400000,
       "maxOutputTokens": 128000,
@@ -67,7 +71,9 @@
     {
       "modelName": "gpt-5.1",
       "displayName": "GPT-5.1",
-      "serviceType": ["chat"],
+      "serviceType": [
+        "chat"
+      ],
       "description": "OpenAI GPT-5.1，400K 上下文，高性能旗舰",
       "contextWindow": 400000,
       "maxOutputTokens": 128000,
@@ -88,7 +94,9 @@
     {
       "modelName": "gpt-5",
       "displayName": "GPT-5",
-      "serviceType": ["chat"],
+      "serviceType": [
+        "chat"
+      ],
       "description": "OpenAI GPT-5 新一代旗舰模型，统一所有模型能力",
       "contextWindow": 400000,
       "maxOutputTokens": 128000,
@@ -109,10 +117,12 @@
     {
       "modelName": "gpt-5-pro",
       "displayName": "GPT-5 Pro",
-      "serviceType": ["chat"],
-      "description": "OpenAI GPT-5 Pro 专业版高性能模型",
+      "serviceType": [
+        "chat"
+      ],
+      "description": "OpenAI GPT-5 Pro 专业版高性能推理模型",
       "contextWindow": 400000,
-      "maxOutputTokens": 128000,
+      "maxOutputTokens": 272000,
       "capabilities": [
         "chat",
         "reasoning",
@@ -130,10 +140,12 @@
     {
       "modelName": "gpt-5-mini",
       "displayName": "GPT-5-mini",
-      "serviceType": ["chat"],
-      "description": "高性价比模型，适合日常对话",
-      "contextWindow": 128000,
-      "maxOutputTokens": 32768,
+      "serviceType": [
+        "chat"
+      ],
+      "description": "高性价比模型，适合日常对话，400K 上下文",
+      "contextWindow": 400000,
+      "maxOutputTokens": 128000,
       "capabilities": [
         "chat",
         "fast",
@@ -150,17 +162,19 @@
     {
       "modelName": "gpt-5-nano",
       "displayName": "GPT-5-nano",
-      "serviceType": ["fast"],
-      "description": "极速响应模型，适合简单任务",
-      "contextWindow": 128000,
-      "maxOutputTokens": 16384,
+      "serviceType": [
+        "fast"
+      ],
+      "description": "极速响应模型，适合简单任务，400K 上下文",
+      "contextWindow": 400000,
+      "maxOutputTokens": 128000,
       "capabilities": [
         "chat",
         "code",
         "fast"
       ],
-      "inputPrice": 0.02,
-      "outputPrice": 0.08,
+      "inputPrice": 0.05,
+      "outputPrice": 0.4,
       "defaultTemperature": 1,
       "defaultTopP": 1,
       "extra": {}
@@ -168,9 +182,11 @@
     {
       "modelName": "gpt-4.1",
       "displayName": "GPT-4.1",
-      "serviceType": ["chat"],
+      "serviceType": [
+        "chat"
+      ],
       "description": "OpenAI GPT-4.1，支持 1M 上下文，编码和指令遵循能力大幅提升",
-      "contextWindow": 1000000,
+      "contextWindow": 1047576,
       "maxOutputTokens": 32768,
       "capabilities": [
         "chat",
@@ -180,8 +196,8 @@
         "ultra_long_context",
         "tool_use"
       ],
-      "inputPrice": 2.00,
-      "outputPrice": 8.00,
+      "inputPrice": 2,
+      "outputPrice": 8,
       "defaultTemperature": 1,
       "defaultTopP": 1,
       "extra": {}
@@ -189,9 +205,11 @@
     {
       "modelName": "gpt-4.1-mini",
       "displayName": "GPT-4.1 mini",
-      "serviceType": ["chat"],
+      "serviceType": [
+        "chat"
+      ],
       "description": "OpenAI GPT-4.1 mini，1M 上下文，高性价比",
-      "contextWindow": 1000000,
+      "contextWindow": 1047576,
       "maxOutputTokens": 32768,
       "capabilities": [
         "chat",
@@ -200,8 +218,8 @@
         "ultra_long_context",
         "tool_use"
       ],
-      "inputPrice": 0.40,
-      "outputPrice": 1.60,
+      "inputPrice": 0.4,
+      "outputPrice": 1.6,
       "defaultTemperature": 1,
       "defaultTopP": 1,
       "extra": {}
@@ -209,9 +227,11 @@
     {
       "modelName": "gpt-4.1-nano",
       "displayName": "GPT-4.1 nano",
-      "serviceType": ["fast"],
+      "serviceType": [
+        "fast"
+      ],
       "description": "OpenAI GPT-4.1 nano，1M 上下文，极致性价比",
-      "contextWindow": 1000000,
+      "contextWindow": 1047576,
       "maxOutputTokens": 32768,
       "capabilities": [
         "chat",
@@ -219,8 +239,8 @@
         "ultra_long_context",
         "fast"
       ],
-      "inputPrice": 0.10,
-      "outputPrice": 0.40,
+      "inputPrice": 0.1,
+      "outputPrice": 0.4,
       "defaultTemperature": 1,
       "defaultTopP": 1,
       "extra": {}
@@ -228,7 +248,9 @@
     {
       "modelName": "gpt-4o",
       "displayName": "GPT-4o",
-      "serviceType": ["vision"],
+      "serviceType": [
+        "vision"
+      ],
       "description": "多模态模型，支持图像理解",
       "contextWindow": 128000,
       "maxOutputTokens": 16384,
@@ -238,8 +260,8 @@
         "image_understanding",
         "tool_use"
       ],
-      "inputPrice": 2.50,
-      "outputPrice": 10.00,
+      "inputPrice": 2.5,
+      "outputPrice": 10,
       "defaultTemperature": 1,
       "defaultTopP": 1,
       "extra": {}
@@ -247,7 +269,9 @@
     {
       "modelName": "gpt-4o-mini",
       "displayName": "GPT-4o mini",
-      "serviceType": ["vision"],
+      "serviceType": [
+        "vision"
+      ],
       "description": "OpenAI GPT-4o mini，高性价比多模态模型",
       "contextWindow": 128000,
       "maxOutputTokens": 16384,
@@ -258,7 +282,7 @@
         "tool_use"
       ],
       "inputPrice": 0.15,
-      "outputPrice": 0.60,
+      "outputPrice": 0.6,
       "defaultTemperature": 1,
       "defaultTopP": 1,
       "extra": {}
@@ -266,35 +290,51 @@
     {
       "modelName": "text-embedding-3-small",
       "displayName": "text-embedding-3-small",
-      "serviceType": ["embedding"],
+      "serviceType": [
+        "embedding"
+      ],
       "description": "轻量文本向量化模型，1536 维",
+      "contextWindow": 8192,
+      "maxOutputTokens": 0,
       "capabilities": [
         "text_embedding",
         "semantic_search"
       ],
       "inputPrice": 0.02,
+      "defaultTemperature": 1,
       "extra": {}
     },
     {
       "modelName": "text-embedding-3-large",
       "displayName": "text-embedding-3-large",
-      "serviceType": ["embedding"],
+      "serviceType": [
+        "embedding"
+      ],
       "description": "高精度文本向量化模型，3072 维",
+      "contextWindow": 8192,
+      "maxOutputTokens": 0,
       "capabilities": [
         "text_embedding",
         "semantic_search"
       ],
       "inputPrice": 0.13,
+      "defaultTemperature": 1,
       "extra": {}
     },
     {
       "modelName": "tts-1",
       "displayName": "TTS-1",
-      "serviceType": ["tts"],
+      "serviceType": [
+        "tts"
+      ],
       "description": "标准语音合成",
+      "contextWindow": 0,
+      "maxOutputTokens": 0,
       "capabilities": [
         "tts"
       ],
+      "inputPrice": 15,
+      "defaultTemperature": 1,
       "extra": {
         "voices": [
           "alloy",
@@ -315,11 +355,17 @@
     {
       "modelName": "tts-1-hd",
       "displayName": "TTS-1-HD",
-      "serviceType": ["tts"],
+      "serviceType": [
+        "tts"
+      ],
       "description": "高清语音合成",
+      "contextWindow": 0,
+      "maxOutputTokens": 0,
       "capabilities": [
         "tts"
       ],
+      "inputPrice": 30,
+      "defaultTemperature": 1,
       "extra": {
         "voices": [
           "alloy",
@@ -340,12 +386,18 @@
     {
       "modelName": "whisper-1",
       "displayName": "Whisper",
-      "serviceType": ["asr"],
+      "serviceType": [
+        "asr"
+      ],
       "description": "通用语音识别",
+      "contextWindow": 0,
+      "maxOutputTokens": 0,
       "capabilities": [
         "asr",
         "multilingual"
       ],
+      "inputPrice": 0.006,
+      "defaultTemperature": 1,
       "extra": {
         "maxAudioLength": 600,
         "supportedInputFormats": [
@@ -363,7 +415,9 @@
     {
       "modelName": "o3",
       "displayName": "o3",
-      "serviceType": ["responses"],
+      "serviceType": [
+        "responses"
+      ],
       "description": "OpenAI o3 推理模型，200K 上下文，支持工具调用",
       "contextWindow": 200000,
       "maxOutputTokens": 100000,
@@ -375,8 +429,8 @@
         "science",
         "tool_use"
       ],
-      "inputPrice": 2.00,
-      "outputPrice": 8.00,
+      "inputPrice": 2,
+      "outputPrice": 8,
       "defaultTemperature": 1,
       "defaultTopP": 1,
       "extra": {}
@@ -384,7 +438,9 @@
     {
       "modelName": "o3-pro",
       "displayName": "o3-pro",
-      "serviceType": ["responses"],
+      "serviceType": [
+        "responses"
+      ],
       "description": "OpenAI o3-pro 高级推理模型，200K 上下文",
       "contextWindow": 200000,
       "maxOutputTokens": 100000,
@@ -395,8 +451,8 @@
         "math",
         "science"
       ],
-      "inputPrice": 20.00,
-      "outputPrice": 80.00,
+      "inputPrice": 20,
+      "outputPrice": 80,
       "defaultTemperature": 1,
       "defaultTopP": 1,
       "extra": {}
@@ -404,9 +460,11 @@
     {
       "modelName": "o3-mini",
       "displayName": "o3-mini",
-      "serviceType": ["responses"],
-      "description": "OpenAI o3-mini 推理模型，128K 上下文",
-      "contextWindow": 128000,
+      "serviceType": [
+        "responses"
+      ],
+      "description": "OpenAI o3-mini 推理模型，200K 上下文",
+      "contextWindow": 200000,
       "maxOutputTokens": 100000,
       "capabilities": [
         "reasoning",
@@ -414,8 +472,8 @@
         "code",
         "fast"
       ],
-      "inputPrice": 1.10,
-      "outputPrice": 4.40,
+      "inputPrice": 1.1,
+      "outputPrice": 4.4,
       "defaultTemperature": 1,
       "defaultTopP": 1,
       "extra": {}
@@ -423,7 +481,9 @@
     {
       "modelName": "o4-mini",
       "displayName": "o4-mini",
-      "serviceType": ["responses"],
+      "serviceType": [
+        "responses"
+      ],
       "description": "OpenAI o4-mini 推理模型，200K 上下文，支持工具调用",
       "contextWindow": 200000,
       "maxOutputTokens": 100000,
@@ -434,8 +494,8 @@
         "tool_use",
         "vision"
       ],
-      "inputPrice": 1.10,
-      "outputPrice": 4.40,
+      "inputPrice": 1.1,
+      "outputPrice": 4.4,
       "defaultTemperature": 1,
       "defaultTopP": 1,
       "extra": {}
@@ -443,12 +503,17 @@
     {
       "modelName": "dall-e-3",
       "displayName": "DALL-E 3",
-      "serviceType": ["image_gen"],
+      "serviceType": [
+        "image_gen"
+      ],
       "description": "高质量文生图模型",
+      "contextWindow": 0,
+      "maxOutputTokens": 0,
       "capabilities": [
         "image_generation",
         "text_rendering"
       ],
+      "defaultTemperature": 1,
       "extra": {
         "supportedImageSizes": [
           "1024x1024",
@@ -464,9 +529,12 @@
     {
       "modelName": "gpt-4o-realtime",
       "displayName": "GPT-4o Realtime",
-      "serviceType": ["omni"],
+      "serviceType": [
+        "omni"
+      ],
       "description": "全能实时模型，支持语音 + 文本 + 视觉",
-      "contextWindow": 128000,
+      "contextWindow": 32000,
+      "maxOutputTokens": 4096,
       "capabilities": [
         "chat",
         "vision",
@@ -474,6 +542,9 @@
         "asr",
         "realtime"
       ],
+      "inputPrice": 4,
+      "outputPrice": 16,
+      "defaultTemperature": 1,
       "extra": {
         "supportedModes": [
           "speech-to-speech",
@@ -485,13 +556,20 @@
     {
       "modelName": "gpt-4o-realtime-preview",
       "displayName": "GPT-4o Realtime Preview",
-      "serviceType": ["realtime_voice"],
+      "serviceType": [
+        "realtime_voice"
+      ],
       "description": "实时语音交互模型",
+      "contextWindow": 32000,
+      "maxOutputTokens": 4096,
       "capabilities": [
         "realtime",
         "speech_to_speech",
         "low_latency"
       ],
+      "inputPrice": 5,
+      "outputPrice": 20,
+      "defaultTemperature": 1,
       "extra": {
         "supportedModes": [
           "speech-to-speech",

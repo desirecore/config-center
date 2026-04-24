@@ -15,9 +15,9 @@
       "modelName": "command-a-03-2025",
       "displayName": "Command A",
       "serviceType": ["chat"],
-      "description": "Cohere 旗舰对话模型，262K 上下文，擅长 RAG 和工具调用",
-      "contextWindow": 262144,
-      "maxOutputTokens": 8192,
+      "description": "Cohere 旗舰对话模型，256K 上下文，擅长 RAG 和工具调用",
+      "contextWindow": 256000,
+      "maxOutputTokens": 8000,
       "capabilities": [
         "chat",
         "reasoning",
@@ -37,8 +37,8 @@
       "modelName": "embed-v4.0",
       "displayName": "Embed V4",
       "serviceType": ["embedding"],
-      "description": "Cohere 最新 Embedding 模型，131K 上下文，多语言支持",
-      "contextWindow": 131072,
+      "description": "Cohere 最新 Embedding 模型，128K 上下文，多语言支持",
+      "contextWindow": 128000,
       "maxOutputTokens": 0,
       "capabilities": [
         "text_embedding",
@@ -46,14 +46,15 @@
       ],
       "inputPrice": 0.12,
       "outputPrice": 0,
+      "defaultTemperature": 1,
       "extra": {}
     },
     {
       "modelName": "rerank-v3.5",
       "displayName": "Rerank V3.5",
       "serviceType": ["rerank"],
-      "description": "Cohere 语义重排序模型，用于检索结果精排",
-      "contextWindow": 0,
+      "description": "Cohere 语义重排序模型，用于检索结果精排，默认单文档截断 4096 token",
+      "contextWindow": 4096,
       "maxOutputTokens": 0,
       "capabilities": [
         "rerank",
@@ -61,6 +62,7 @@
       ],
       "inputPrice": 2.00,
       "outputPrice": 0,
+      "defaultTemperature": 1,
       "extra": {}
     }
   ]

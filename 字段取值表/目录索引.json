@@ -1,0 +1,240 @@
+[
+  {
+    "file": "compute/coding-plans/dashscope-coding.json",
+    "folder": "字段取值表/dashscope-coding",
+    "detailed": "字段取值表/dashscope-coding/详细字段取值表.md",
+    "unresolved": "字段取值表/dashscope-coding/未确认字段报告.md",
+    "modelCount": 2
+  },
+  {
+    "file": "compute/coding-plans/infini-coding.json",
+    "folder": "字段取值表/infini-coding",
+    "detailed": "字段取值表/infini-coding/详细字段取值表.md",
+    "unresolved": "字段取值表/infini-coding/未确认字段报告.md",
+    "modelCount": 1
+  },
+  {
+    "file": "compute/coding-plans/kwai-coding.json",
+    "folder": "字段取值表/kwai-coding",
+    "detailed": "字段取值表/kwai-coding/详细字段取值表.md",
+    "unresolved": "字段取值表/kwai-coding/未确认字段报告.md",
+    "modelCount": 1
+  },
+  {
+    "file": "compute/coding-plans/minimax-coding.json",
+    "folder": "字段取值表/minimax-coding",
+    "detailed": "字段取值表/minimax-coding/详细字段取值表.md",
+    "unresolved": "字段取值表/minimax-coding/未确认字段报告.md",
+    "modelCount": 1
+  },
+  {
+    "file": "compute/coding-plans/moonshot-coding.json",
+    "folder": "字段取值表/moonshot-coding",
+    "detailed": "字段取值表/moonshot-coding/详细字段取值表.md",
+    "unresolved": "字段取值表/moonshot-coding/未确认字段报告.md",
+    "modelCount": 1
+  },
+  {
+    "file": "compute/coding-plans/moorethread-coding.json",
+    "folder": "字段取值表/moorethread-coding",
+    "detailed": "字段取值表/moorethread-coding/详细字段取值表.md",
+    "unresolved": "字段取值表/moorethread-coding/未确认字段报告.md",
+    "modelCount": 1
+  },
+  {
+    "file": "compute/coding-plans/volcengine-coding.json",
+    "folder": "字段取值表/volcengine-coding",
+    "detailed": "字段取值表/volcengine-coding/详细字段取值表.md",
+    "unresolved": "字段取值表/volcengine-coding/未确认字段报告.md",
+    "modelCount": 1
+  },
+  {
+    "file": "compute/coding-plans/zhipu-coding.json",
+    "folder": "字段取值表/zhipu-coding",
+    "detailed": "字段取值表/zhipu-coding/详细字段取值表.md",
+    "unresolved": "字段取值表/zhipu-coding/未确认字段报告.md",
+    "modelCount": 2
+  },
+  {
+    "file": "compute/providers/anthropic.json",
+    "folder": "字段取值表/anthropic",
+    "detailed": "字段取值表/anthropic/详细字段取值表.md",
+    "unresolved": "字段取值表/anthropic/未确认字段报告.md",
+    "modelCount": 5
+  },
+  {
+    "file": "compute/providers/baichuan.json",
+    "folder": "字段取值表/baichuan",
+    "detailed": "字段取值表/baichuan/详细字段取值表.md",
+    "unresolved": "字段取值表/baichuan/未确认字段报告.md",
+    "modelCount": 4
+  },
+  {
+    "file": "compute/providers/baidu.json",
+    "folder": "字段取值表/baidu",
+    "detailed": "字段取值表/baidu/详细字段取值表.md",
+    "unresolved": "字段取值表/baidu/未确认字段报告.md",
+    "modelCount": 2
+  },
+  {
+    "file": "compute/providers/cohere.json",
+    "folder": "字段取值表/cohere",
+    "detailed": "字段取值表/cohere/详细字段取值表.md",
+    "unresolved": "字段取值表/cohere/未确认字段报告.md",
+    "modelCount": 3
+  },
+  {
+    "file": "compute/providers/dashscope.json",
+    "folder": "字段取值表/dashscope",
+    "detailed": "字段取值表/dashscope/详细字段取值表.md",
+    "unresolved": "字段取值表/dashscope/未确认字段报告.md",
+    "modelCount": 18
+  },
+  {
+    "file": "compute/providers/deepseek.json",
+    "folder": "字段取值表/deepseek",
+    "detailed": "字段取值表/deepseek/详细字段取值表.md",
+    "unresolved": "字段取值表/deepseek/未确认字段报告.md",
+    "modelCount": 2
+  },
+  {
+    "file": "compute/providers/google.json",
+    "folder": "字段取值表/google",
+    "detailed": "字段取值表/google/详细字段取值表.md",
+    "unresolved": "字段取值表/google/未确认字段报告.md",
+    "modelCount": 3
+  },
+  {
+    "file": "compute/providers/internal-testing.json",
+    "folder": "字段取值表/internal-testing",
+    "detailed": "字段取值表/internal-testing/详细字段取值表.md",
+    "unresolved": "字段取值表/internal-testing/未确认字段报告.md",
+    "modelCount": 14
+  },
+  {
+    "file": "compute/providers/kling.json",
+    "folder": "字段取值表/kling",
+    "detailed": "字段取值表/kling/详细字段取值表.md",
+    "unresolved": "字段取值表/kling/未确认字段报告.md",
+    "modelCount": 4
+  },
+  {
+    "file": "compute/providers/lingyiwanwu.json",
+    "folder": "字段取值表/lingyiwanwu",
+    "detailed": "字段取值表/lingyiwanwu/详细字段取值表.md",
+    "unresolved": "字段取值表/lingyiwanwu/未确认字段报告.md",
+    "modelCount": 2
+  },
+  {
+    "file": "compute/providers/local-whisper.json",
+    "folder": "字段取值表/local-whisper",
+    "detailed": "字段取值表/local-whisper/详细字段取值表.md",
+    "unresolved": "字段取值表/local-whisper/未确认字段报告.md",
+    "modelCount": 1
+  },
+  {
+    "file": "compute/providers/minimax.json",
+    "folder": "字段取值表/minimax",
+    "detailed": "字段取值表/minimax/详细字段取值表.md",
+    "unresolved": "字段取值表/minimax/未确认字段报告.md",
+    "modelCount": 7
+  },
+  {
+    "file": "compute/providers/mistral.json",
+    "folder": "字段取值表/mistral",
+    "detailed": "字段取值表/mistral/详细字段取值表.md",
+    "unresolved": "字段取值表/mistral/未确认字段报告.md",
+    "modelCount": 3
+  },
+  {
+    "file": "compute/providers/moonshot.json",
+    "folder": "字段取值表/moonshot",
+    "detailed": "字段取值表/moonshot/详细字段取值表.md",
+    "unresolved": "字段取值表/moonshot/未确认字段报告.md",
+    "modelCount": 6
+  },
+  {
+    "file": "compute/providers/ollama.json",
+    "folder": "字段取值表/ollama",
+    "detailed": "字段取值表/ollama/详细字段取值表.md",
+    "unresolved": "字段取值表/ollama/未确认字段报告.md",
+    "modelCount": 1
+  },
+  {
+    "file": "compute/providers/openai.json",
+    "folder": "字段取值表/openai",
+    "detailed": "字段取值表/openai/详细字段取值表.md",
+    "unresolved": "字段取值表/openai/未确认字段报告.md",
+    "modelCount": 24
+  },
+  {
+    "file": "compute/providers/openrouter.json",
+    "folder": "字段取值表/openrouter",
+    "detailed": "字段取值表/openrouter/详细字段取值表.md",
+    "unresolved": "字段取值表/openrouter/未确认字段报告.md",
+    "modelCount": 3
+  },
+  {
+    "file": "compute/providers/perplexity.json",
+    "folder": "字段取值表/perplexity",
+    "detailed": "字段取值表/perplexity/详细字段取值表.md",
+    "unresolved": "字段取值表/perplexity/未确认字段报告.md",
+    "modelCount": 3
+  },
+  {
+    "file": "compute/providers/siliconflow.json",
+    "folder": "字段取值表/siliconflow",
+    "detailed": "字段取值表/siliconflow/详细字段取值表.md",
+    "unresolved": "字段取值表/siliconflow/未确认字段报告.md",
+    "modelCount": 3
+  },
+  {
+    "file": "compute/providers/stability.json",
+    "folder": "字段取值表/stability",
+    "detailed": "字段取值表/stability/详细字段取值表.md",
+    "unresolved": "字段取值表/stability/未确认字段报告.md",
+    "modelCount": 1
+  },
+  {
+    "file": "compute/providers/tencent.json",
+    "folder": "字段取值表/tencent",
+    "detailed": "字段取值表/tencent/详细字段取值表.md",
+    "unresolved": "字段取值表/tencent/未确认字段报告.md",
+    "modelCount": 2
+  },
+  {
+    "file": "compute/providers/volcengine.json",
+    "folder": "字段取值表/volcengine",
+    "detailed": "字段取值表/volcengine/详细字段取值表.md",
+    "unresolved": "字段取值表/volcengine/未确认字段报告.md",
+    "modelCount": 17
+  },
+  {
+    "file": "compute/providers/xai.json",
+    "folder": "字段取值表/xai",
+    "detailed": "字段取值表/xai/详细字段取值表.md",
+    "unresolved": "字段取值表/xai/未确认字段报告.md",
+    "modelCount": 2
+  },
+  {
+    "file": "compute/providers/xunfei.json",
+    "folder": "字段取值表/xunfei",
+    "detailed": "字段取值表/xunfei/详细字段取值表.md",
+    "unresolved": "字段取值表/xunfei/未确认字段报告.md",
+    "modelCount": 2
+  },
+  {
+    "file": "compute/providers/zhipu-embedding.json",
+    "folder": "字段取值表/zhipu-embedding",
+    "detailed": "字段取值表/zhipu-embedding/详细字段取值表.md",
+    "unresolved": "字段取值表/zhipu-embedding/未确认字段报告.md",
+    "modelCount": 1
+  },
+  {
+    "file": "compute/providers/zhipu.json",
+    "folder": "字段取值表/zhipu",
+    "detailed": "字段取值表/zhipu/详细字段取值表.md",
+    "unresolved": "字段取值表/zhipu/未确认字段报告.md",
+    "modelCount": 5
+  }
+]

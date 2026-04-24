@@ -9,14 +9,20 @@
   "enabled": false,
   "status": "unconfigured",
   "priceCurrency": "CNY",
-  "services": ["chat", "reasoning"],
+  "services": [
+    "chat",
+    "reasoning"
+  ],
   "models": [
     {
       "modelName": "ernie-5.0-thinking-latest",
       "displayName": "文心 ERNIE 5.0",
-      "serviceType": ["chat", "reasoning"],
+      "serviceType": [
+        "chat",
+        "reasoning"
+      ],
       "description": "百度最新旗舰模型，支持深度推理、多模态和工具调用，119K输入/64K输出",
-      "contextWindow": 131072,
+      "contextWindow": 128000,
       "maxOutputTokens": 65536,
       "capabilities": [
         "chat",
@@ -34,10 +40,12 @@
     {
       "modelName": "ernie-4.5-turbo-128k-latest",
       "displayName": "文心 ERNIE 4.5 Turbo",
-      "serviceType": ["chat"],
-      "description": "百度高性价比长上下文模型，128K 窗口，适合日常对话和文档处理",
+      "serviceType": [
+        "chat"
+      ],
+      "description": "百度高性价比长上下文模型，128K 窗口，最大输出 12,288 token",
       "contextWindow": 131072,
-      "maxOutputTokens": 8192,
+      "maxOutputTokens": 12288,
       "capabilities": [
         "chat",
         "code",

@@ -25,6 +25,9 @@
       "serviceType": ["chat"],
       "description": "快手 KwaiKAT Coding Plan，编程辅助模型",
       "capabilities": ["chat", "code"],
+      "contextWindow": 128000,
+      "maxOutputTokens": 8192,
+      "defaultTemperature": 1,
       "source": "preset"
     }
   ]
