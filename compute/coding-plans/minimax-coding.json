@@ -99,7 +99,7 @@
       "serviceType": [
         "chat"
       ],
-      "description": "MiniMax Coding Plan，M2.5 模型，204.8K 上下文",
+      "description": "MiniMax Token Plan，M2.5 模型，204.8K 上下文",
       "contextWindow": 204800,
       "maxOutputTokens": 32768,
       "capabilities": [
