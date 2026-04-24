@@ -8,7 +8,7 @@
   "apiKeyVerified": false,
   "enabled": false,
   "status": "unconfigured",
-  "priceCurrency": "USD",
+  "priceCurrency": "CNY",
   "services": [
     "chat",
     "vision",
@@ -38,12 +38,12 @@
         "tool_use",
         "agent"
       ],
-      "inputPrice": 1.4,
-      "outputPrice": 4.4,
+      "inputPrice": 6,
+      "outputPrice": 24,
       "defaultTemperature": 1,
       "defaultTopP": 0.95,
       "extra": {
-        "cacheHitPrice": 0.26,
+        "cacheHitPrice": 1.2,
         "thinking": {
           "default": "enabled"
         }
@@ -67,12 +67,12 @@
         "tool_use",
         "agent"
       ],
-      "inputPrice": 1.2,
-      "outputPrice": 4,
+      "inputPrice": 5,
+      "outputPrice": 22,
       "defaultTemperature": 1,
       "defaultTopP": 0.95,
       "extra": {
-        "cacheHitPrice": 0.24,
+        "cacheHitPrice": 1,
         "thinking": {
           "default": "enabled"
         }
@@ -98,12 +98,12 @@
         "tool_use",
         "agent"
       ],
-      "inputPrice": 1,
-      "outputPrice": 3.2,
+      "inputPrice": 4,
+      "outputPrice": 18,
       "defaultTemperature": 1,
       "defaultTopP": 0.95,
       "extra": {
-        "cacheHitPrice": 0.2
+        "cacheHitPrice": 0.8
       }
     },
     {
@@ -124,12 +124,12 @@
         "long_context",
         "tool_use"
       ],
-      "inputPrice": 0.6,
-      "outputPrice": 2.2,
+      "inputPrice": 2,
+      "outputPrice": 8,
       "defaultTemperature": 1,
       "defaultTopP": 0.95,
       "extra": {
-        "cacheHitPrice": 0.11
+        "cacheHitPrice": 0.5
       }
     },
     {
@@ -148,12 +148,12 @@
         "deep_thinking",
         "long_context"
       ],
-      "inputPrice": 0.6,
-      "outputPrice": 2.2,
+      "inputPrice": 2,
+      "outputPrice": 8,
       "defaultTemperature": 1,
       "defaultTopP": 0.95,
       "extra": {
-        "cacheHitPrice": 0.11,
+        "cacheHitPrice": 0.5,
         "aliasOf": "glm-4.7"
       }
     },
@@ -179,12 +179,12 @@
         "tool_use",
         "agent"
       ],
-      "inputPrice": 1.2,
-      "outputPrice": 4,
+      "inputPrice": 5,
+      "outputPrice": 22,
       "defaultTemperature": 1,
       "defaultTopP": 0.95,
       "extra": {
-        "cacheHitPrice": 0.24,
+        "cacheHitPrice": 1,
         "thinking": {
           "default": "enabled"
         }
@@ -207,12 +207,12 @@
         "long_context",
         "tool_use"
       ],
-      "inputPrice": 0.3,
-      "outputPrice": 0.9,
+      "inputPrice": 1,
+      "outputPrice": 4,
       "defaultTemperature": 1,
       "defaultTopP": 0.95,
       "extra": {
-        "cacheHitPrice": 0.05
+        "cacheHitPrice": 0.2
       }
     },
     {
@@ -231,12 +231,12 @@
         "multilingual",
         "deep_thinking"
       ],
-      "inputPrice": 0.6,
-      "outputPrice": 2.2,
+      "inputPrice": 2,
+      "outputPrice": 8,
       "defaultTemperature": 1,
       "defaultTopP": 0.95,
       "extra": {
-        "cacheHitPrice": 0.11
+        "cacheHitPrice": 0.5
       }
     }
   ]

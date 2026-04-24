@@ -8,7 +8,7 @@
   "apiKeyVerified": false,
   "enabled": false,
   "status": "unconfigured",
-  "priceCurrency": "USD",
+  "priceCurrency": "CNY",
   "services": [
     "chat",
     "fast",
@@ -31,13 +31,13 @@
         "code",
         "tool_use"
       ],
-      "inputPrice": 0.3,
-      "outputPrice": 1.2,
+      "inputPrice": 2.1,
+      "outputPrice": 8.4,
       "defaultTemperature": 1,
-      "defaultTopP": 1,
+      "defaultTopP": 0.95,
       "extra": {
-        "cacheReadPrice": 0.06,
-        "cacheWritePrice": 0.375,
+        "cacheReadPrice": 0.42,
+        "cacheWritePrice": 2.625,
         "outputSpeedTps": 60
       }
     },
@@ -57,13 +57,13 @@
         "tool_use",
         "fast"
       ],
-      "inputPrice": 0.6,
-      "outputPrice": 2.4,
+      "inputPrice": 4.2,
+      "outputPrice": 16.8,
       "defaultTemperature": 1,
-      "defaultTopP": 1,
+      "defaultTopP": 0.95,
       "extra": {
-        "cacheReadPrice": 0.06,
-        "cacheWritePrice": 0.375,
+        "cacheReadPrice": 0.42,
+        "cacheWritePrice": 2.625,
         "outputSpeedTps": 100
       }
     },
@@ -84,13 +84,13 @@
         "tool_use",
         "long_context"
       ],
-      "inputPrice": 0.3,
-      "outputPrice": 1.2,
+      "inputPrice": 2.1,
+      "outputPrice": 8.4,
       "defaultTemperature": 1,
-      "defaultTopP": 1,
+      "defaultTopP": 0.95,
       "extra": {
-        "cacheReadPrice": 0.03,
-        "cacheWritePrice": 0.375,
+        "cacheReadPrice": 0.21,
+        "cacheWritePrice": 2.625,
         "outputSpeedTps": 60
       }
     },
@@ -110,13 +110,13 @@
         "tool_use",
         "fast"
       ],
-      "inputPrice": 0.6,
-      "outputPrice": 2.4,
+      "inputPrice": 4.2,
+      "outputPrice": 16.8,
       "defaultTemperature": 1,
-      "defaultTopP": 1,
+      "defaultTopP": 0.95,
       "extra": {
-        "cacheReadPrice": 0.03,
-        "cacheWritePrice": 0.375,
+        "cacheReadPrice": 0.21,
+        "cacheWritePrice": 2.625,
         "outputSpeedTps": 100
       }
     },
@@ -135,13 +135,13 @@
         "tool_use",
         "reasoning"
       ],
-      "inputPrice": 0.3,
-      "outputPrice": 1.2,
+      "inputPrice": 2.1,
+      "outputPrice": 8.4,
       "defaultTemperature": 1,
-      "defaultTopP": 1,
+      "defaultTopP": 0.95,
       "extra": {
-        "cacheReadPrice": 0.03,
-        "cacheWritePrice": 0.375,
+        "cacheReadPrice": 0.21,
+        "cacheWritePrice": 2.625,
         "outputSpeedTps": 60
       }
     },
@@ -161,13 +161,13 @@
         "tool_use",
         "fast"
       ],
-      "inputPrice": 0.6,
-      "outputPrice": 2.4,
+      "inputPrice": 4.2,
+      "outputPrice": 16.8,
       "defaultTemperature": 1,
-      "defaultTopP": 1,
+      "defaultTopP": 0.95,
       "extra": {
-        "cacheReadPrice": 0.03,
-        "cacheWritePrice": 0.375,
+        "cacheReadPrice": 0.21,
+        "cacheWritePrice": 2.625,
         "outputSpeedTps": 100
       }
     },
@@ -186,10 +186,10 @@
         "code",
         "long_context"
       ],
-      "inputPrice": 0.2,
-      "outputPrice": 1.1,
-      "defaultTemperature": 1,
-      "defaultTopP": 1,
+      "inputPrice": 1.4,
+      "outputPrice": 7.7,
+      "defaultTemperature": 0.1,
+      "defaultTopP": 0.95,
       "extra": {}
     }
   ]
