@@ -18,15 +18,12 @@
       "displayName": "可灵 V2.5 Turbo",
       "serviceType": ["video_gen"],
       "description": "可灵最新视频生成模型，高性价比",
-      "contextWindow": 0,
-      "maxOutputTokens": 0,
       "capabilities": [
         "video_generation",
         "chinese_optimized",
         "high_quality",
         "fast"
       ],
-      "defaultTemperature": 1,
       "extra": {
         "maxVideoDuration": 10,
         "supportedResolutions": [
@@ -41,14 +38,11 @@
       "displayName": "可灵 V2.5 Turbo Pro",
       "serviceType": ["video_gen"],
       "description": "可灵高品质视频生成",
-      "contextWindow": 0,
-      "maxOutputTokens": 0,
       "capabilities": [
         "video_generation",
         "chinese_optimized",
         "ultra_quality"
       ],
-      "defaultTemperature": 1,
       "extra": {
         "maxVideoDuration": 10,
         "supportedResolutions": [
@@ -63,14 +57,11 @@
       "displayName": "可灵 V2",
       "serviceType": ["video_gen"],
       "description": "可灵文生视频旗舰模型",
-      "contextWindow": 0,
-      "maxOutputTokens": 0,
       "capabilities": [
         "video_generation",
         "chinese_optimized",
         "high_quality"
       ],
-      "defaultTemperature": 1,
       "extra": {
         "maxVideoDuration": 10,
         "supportedResolutions": [
@@ -84,14 +75,11 @@
       "displayName": "可灵 V2 Master",
       "serviceType": ["video_gen"],
       "description": "可灵最高品质视频生成",
-      "contextWindow": 0,
-      "maxOutputTokens": 0,
       "capabilities": [
         "video_generation",
         "chinese_optimized",
         "ultra_quality"
       ],
-      "defaultTemperature": 1,
       "extra": {
         "maxVideoDuration": 10,
         "supportedResolutions": [

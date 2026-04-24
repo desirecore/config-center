@@ -295,13 +295,13 @@
       ],
       "description": "轻量文本向量化模型，1536 维",
       "contextWindow": 8192,
-      "maxOutputTokens": 0,
       "capabilities": [
         "text_embedding",
         "semantic_search"
       ],
       "inputPrice": 0.02,
-      "defaultTemperature": 1,
+      "defaultTemperature": null,
+      "defaultTopP": null,
       "extra": {}
     },
     {
@@ -312,13 +312,13 @@
       ],
       "description": "高精度文本向量化模型，3072 维",
       "contextWindow": 8192,
-      "maxOutputTokens": 0,
       "capabilities": [
         "text_embedding",
         "semantic_search"
       ],
       "inputPrice": 0.13,
-      "defaultTemperature": 1,
+      "defaultTemperature": null,
+      "defaultTopP": null,
       "extra": {}
     },
     {
@@ -328,13 +328,12 @@
         "tts"
       ],
       "description": "标准语音合成",
-      "contextWindow": 0,
-      "maxOutputTokens": 0,
       "capabilities": [
         "tts"
       ],
       "inputPrice": 15,
-      "defaultTemperature": 1,
+      "defaultTemperature": null,
+      "defaultTopP": null,
       "extra": {
         "voices": [
           "alloy",
@@ -359,13 +358,12 @@
         "tts"
       ],
       "description": "高清语音合成",
-      "contextWindow": 0,
-      "maxOutputTokens": 0,
       "capabilities": [
         "tts"
       ],
       "inputPrice": 30,
-      "defaultTemperature": 1,
+      "defaultTemperature": null,
+      "defaultTopP": null,
       "extra": {
         "voices": [
           "alloy",
@@ -390,14 +388,13 @@
         "asr"
       ],
       "description": "通用语音识别",
-      "contextWindow": 0,
-      "maxOutputTokens": 0,
       "capabilities": [
         "asr",
         "multilingual"
       ],
       "inputPrice": 0.006,
-      "defaultTemperature": 1,
+      "defaultTemperature": null,
+      "defaultTopP": null,
       "extra": {
         "maxAudioLength": 600,
         "supportedInputFormats": [
@@ -507,13 +504,12 @@
         "image_gen"
       ],
       "description": "高质量文生图模型",
-      "contextWindow": 0,
-      "maxOutputTokens": 0,
       "capabilities": [
         "image_generation",
         "text_rendering"
       ],
-      "defaultTemperature": 1,
+      "defaultTemperature": null,
+      "defaultTopP": null,
       "extra": {
         "supportedImageSizes": [
           "1024x1024",
@@ -544,7 +540,8 @@
       ],
       "inputPrice": 4,
       "outputPrice": 16,
-      "defaultTemperature": 1,
+      "defaultTemperature": 0.7,
+      "defaultTopP": null,
       "extra": {
         "supportedModes": [
           "speech-to-speech",
@@ -569,7 +566,8 @@
       ],
       "inputPrice": 5,
       "outputPrice": 20,
-      "defaultTemperature": 1,
+      "defaultTemperature": 0.7,
+      "defaultTopP": null,
       "extra": {
         "supportedModes": [
           "speech-to-speech",

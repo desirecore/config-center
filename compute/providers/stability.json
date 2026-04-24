@@ -18,14 +18,11 @@
       "displayName": "Stable Diffusion 3.5 Large",
       "serviceType": ["image_gen"],
       "description": "Stability AI 旗舰文生图模型",
-      "contextWindow": 0,
-      "maxOutputTokens": 0,
       "capabilities": [
         "image_generation",
         "high_quality",
         "controllable"
       ],
-      "defaultTemperature": 1,
       "extra": {
         "supportedImageSizes": [
           "1024x1024",

@@ -18,9 +18,6 @@
       "displayName": "Whisper Large V3",
       "serviceType": ["asr"],
       "description": "本地部署的 Whisper 大模型",
-      "contextWindow": 0,
-      "maxOutputTokens": 0,
-      "defaultTemperature": 1,
       "capabilities": [
         "asr",
         "multilingual"
