@@ -10,24 +10,77 @@
   "enabled": false,
   "status": "unconfigured",
   "accessMode": "coding-plan",
-  "services": ["chat", "reasoning"],
+  "services": [
+    "chat",
+    "reasoning"
+  ],
   "codingPlan": {
-    "quotas": {},
+    "quotas": {
+      "window": "5h",
+      "approxApiCallsPerWindow": "300-1200",
+      "maxConcurrency": 30
+    },
     "usageTracking": {
       "method": "none",
-      "consoleUrl": "https://platform.moonshot.cn/"
+      "consoleUrl": "https://www.kimi.com/code/console"
     }
   },
   "models": [
     {
-      "modelName": "kimi-k2",
-      "displayName": "Kimi K2 (Coding)",
-      "serviceType": ["chat"],
-      "description": "Kimi Code 套餐，万亿参数 MoE 模型，128K 上下文",
-      "contextWindow": 128000,
-      "maxOutputTokens": 8192,
-      "capabilities": ["chat", "reasoning", "code", "tool_use", "agent", "long_context", "vision"],
-      "source": "preset"
+      "modelName": "kimi-for-coding",
+      "displayName": "Kimi for Coding",
+      "serviceType": [
+        "chat"
+      ],
+      "description": "Kimi Code 会员权益模型，官方第三方 Coding Agent 推荐模型 ID，Kimi Code 平台按会员额度计费",
+      "contextWindow": 262144,
+      "maxOutputTokens": 32768,
+      "capabilities": [
+        "chat",
+        "reasoning",
+        "code",
+        "tool_use",
+        "agent",
+        "long_context",
+        "vision",
+        "video_understanding"
+      ],
+      "source": "preset",
+      "defaultTemperature": null,
+      "defaultTopP": null,
+      "extra": {
+        "billing": "kimi_membership_quota",
+        "baseUrlNote": "Kimi Code API Key must use https://api.kimi.com/coding/v1",
+        "recommendedFor": [
+          "Kimi Code CLI",
+          "Claude Code",
+          "Roo Code"
+        ]
+      }
+    },
+    {
+      "modelName": "kimi-k2.5",
+      "displayName": "Kimi K2.5 (Coding)",
+      "serviceType": [
+        "chat"
+      ],
+      "description": "Kimi Code 套餐，Kimi K2.5 模型，256K 上下文",
+      "contextWindow": 256000,
+      "maxOutputTokens": 32768,
+      "capabilities": [
+        "chat",
+        "reasoning",
+        "code",
+        "tool_use",
+        "agent",
+        "long_context",
+        "vision"
+      ],
+      "source": "preset",
+      "inputPrice": 0.58,
+      "outputPrice": 3.02,
+      "defaultTemperature": 1,
+      "defaultTopP": 0.95
     }
   ]
 }

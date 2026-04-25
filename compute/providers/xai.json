@@ -12,12 +12,12 @@
   "services": ["chat", "reasoning"],
   "models": [
     {
-      "modelName": "grok-4-0709",
-      "displayName": "Grok 4",
+      "modelName": "grok-4.20-0309-reasoning",
+      "displayName": "Grok 4.20 Reasoning",
       "serviceType": ["chat", "reasoning"],
-      "description": "xAI 最新旗舰推理模型，262K 上下文，支持工具调用",
-      "contextWindow": 262144,
-      "maxOutputTokens": 8192,
+      "description": "xAI 旗舰推理模型，支持函数调用与结构化输出",
+      "contextWindow": 2000000,
+      "maxOutputTokens": 16384,
       "capabilities": [
         "chat",
         "reasoning",
@@ -25,17 +25,17 @@
         "vision",
         "tool_use"
       ],
-      "inputPrice": 3.00,
-      "outputPrice": 15.00,
-      "defaultTemperature": 1,
-      "defaultTopP": 1,
+      "inputPrice": 2.00,
+      "outputPrice": 6.00,
+      "defaultTemperature": null,
+      "defaultTopP": null,
       "extra": {}
     },
     {
-      "modelName": "grok-4-1-fast",
-      "displayName": "Grok 4.1 Fast",
-      "serviceType": ["chat"],
-      "description": "xAI 超长上下文高速模型，2M token 窗口",
+      "modelName": "grok-4-1-fast-reasoning",
+      "displayName": "Grok 4.1 Fast Reasoning",
+      "serviceType": ["chat", "reasoning"],
+      "description": "xAI 高速推理模型，2M 上下文窗口",
       "contextWindow": 2000000,
       "maxOutputTokens": 16384,
       "capabilities": [
@@ -49,8 +49,8 @@
       ],
       "inputPrice": 0.20,
       "outputPrice": 0.50,
-      "defaultTemperature": 1,
-      "defaultTopP": 1,
+      "defaultTemperature": null,
+      "defaultTopP": null,
       "extra": {}
     }
   ]

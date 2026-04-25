@@ -30,8 +30,8 @@
       ],
       "inputPrice": 0.99,
       "outputPrice": 0.99,
-      "defaultTemperature": 0.7,
-      "defaultTopP": 0.9,
+      "defaultTemperature": null,
+      "defaultTopP": null,
       "extra": {}
     },
     {
@@ -51,8 +51,8 @@
       ],
       "inputPrice": 6,
       "outputPrice": 6,
-      "defaultTemperature": 0.7,
-      "defaultTopP": 0.9,
+      "defaultTemperature": null,
+      "defaultTopP": null,
       "extra": {}
     }
   ]

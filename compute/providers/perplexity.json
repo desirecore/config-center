@@ -26,9 +26,16 @@
       ],
       "inputPrice": 3.00,
       "outputPrice": 15.00,
-      "defaultTemperature": 1,
-      "defaultTopP": 1,
-      "extra": {}
+      "defaultTemperature": null,
+      "defaultTopP": null,
+      "extra": {
+        "requestPricingPer1k": {
+          "low": 6,
+          "medium": 10,
+          "high": 14
+        },
+        "pricingNotes": "Total Sonar API cost includes token costs plus a request fee based on search context size."
+      }
     },
     {
       "modelName": "sonar-reasoning-pro",
@@ -45,9 +52,16 @@
       ],
       "inputPrice": 2.00,
       "outputPrice": 8.00,
-      "defaultTemperature": 1,
-      "defaultTopP": 1,
-      "extra": {}
+      "defaultTemperature": null,
+      "defaultTopP": null,
+      "extra": {
+        "requestPricingPer1k": {
+          "low": 6,
+          "medium": 10,
+          "high": 14
+        },
+        "pricingNotes": "Total Sonar API cost includes token costs plus a request fee based on search context size."
+      }
     },
     {
       "modelName": "sonar",
@@ -64,9 +78,16 @@
       ],
       "inputPrice": 1.00,
       "outputPrice": 1.00,
-      "defaultTemperature": 1,
-      "defaultTopP": 1,
-      "extra": {}
+      "defaultTemperature": null,
+      "defaultTopP": null,
+      "extra": {
+        "requestPricingPer1k": {
+          "low": 5,
+          "medium": 8,
+          "high": 12
+        },
+        "pricingNotes": "Total Sonar API cost includes token costs plus a request fee based on search context size."
+      }
     }
   ]
 }

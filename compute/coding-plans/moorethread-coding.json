@@ -25,6 +25,10 @@
       "serviceType": ["chat"],
       "description": "摩尔线程 Coding Plan，国产 GPU 推理",
       "capabilities": ["chat", "code"],
+      "contextWindow": 128000,
+      "maxOutputTokens": 8192,
+      "defaultTemperature": null,
+      "defaultTopP": null,
       "source": "preset"
     }
   ]
