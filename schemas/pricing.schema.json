@@ -1,0 +1,21 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://desirecore.net/schemas/config-center/pricing.schema.json",
+  "title": "Pricing",
+  "description": "compute/pricing.json：定价相关元数据。",
+  "type": "object",
+  "required": ["markupRatio", "usdToCny"],
+  "properties": {
+    "markupRatio": {
+      "type": "number",
+      "description": "定价加成倍率（如 1.5 表示在原价基础上加 50%）",
+      "exclusiveMinimum": 0
+    },
+    "usdToCny": {
+      "type": "number",
+      "description": "USD → CNY 汇率",
+      "exclusiveMinimum": 0
+    }
+  },
+  "additionalProperties": false
+}
