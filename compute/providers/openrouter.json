@@ -16,7 +16,7 @@
       "displayName": "OpenRouter Auto",
       "serviceType": ["chat"],
       "description": "OpenRouter 自动路由，智能选择最优模型",
-      "contextWindow": 200000,
+      "contextWindow": 2000000,
       "maxOutputTokens": 16384,
       "capabilities": [
         "chat",
@@ -29,19 +29,16 @@
       "extra": {}
     },
     {
-      "modelName": "google/gemini-2.5-flash-exp:free",
-      "displayName": "Gemini 2.5 Flash (免费)",
+      "modelName": "openai/gpt-oss-120b:free",
+      "displayName": "GPT-OSS 120B (免费)",
       "serviceType": ["chat"],
-      "description": "通过 OpenRouter 免费使用的 Gemini 2.5 Flash，1M 上下文",
-      "contextWindow": 1048576,
-      "maxOutputTokens": 65535,
+      "description": "通过 OpenRouter 免费使用的 OpenAI GPT-OSS 120B",
+      "contextWindow": 131072,
+      "maxOutputTokens": 131072,
       "capabilities": [
         "chat",
         "reasoning",
-        "vision",
-        "tool_use",
-        "fast",
-        "long_context"
+        "code"
       ],
       "inputPrice": 0.00,
       "outputPrice": 0.00,
@@ -54,8 +51,8 @@
       "displayName": "Qwen3 Coder 480B (免费)",
       "serviceType": ["chat"],
       "description": "通过 OpenRouter 免费使用的 Qwen3 Coder 480B",
-      "contextWindow": 262144,
-      "maxOutputTokens": 32768,
+      "contextWindow": 262000,
+      "maxOutputTokens": 262000,
       "capabilities": [
         "code",
         "reasoning",

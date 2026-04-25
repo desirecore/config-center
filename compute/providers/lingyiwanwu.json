@@ -17,7 +17,9 @@
     {
       "modelName": "yi-lightning",
       "displayName": "Yi Lightning",
-      "serviceType": ["chat"],
+      "serviceType": [
+        "chat"
+      ],
       "description": "零一万物高性能模型，16K上下文，智能路由，极高性价比",
       "contextWindow": 16000,
       "maxOutputTokens": 4096,
@@ -30,14 +32,16 @@
       ],
       "inputPrice": 0.99,
       "outputPrice": 0.99,
-      "defaultTemperature": 0.7,
+      "defaultTemperature": 0.3,
       "defaultTopP": 0.9,
       "extra": {}
     },
     {
       "modelName": "yi-vision-v2",
       "displayName": "Yi Vision V2",
-      "serviceType": ["vision"],
+      "serviceType": [
+        "vision"
+      ],
       "description": "零一万物复杂视觉任务模型，16K上下文，支持多图分析",
       "contextWindow": 16000,
       "maxOutputTokens": 4096,
@@ -51,7 +55,7 @@
       ],
       "inputPrice": 6,
       "outputPrice": 6,
-      "defaultTemperature": 0.7,
+      "defaultTemperature": 0.3,
       "defaultTopP": 0.9,
       "extra": {}
     }

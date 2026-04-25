@@ -16,10 +16,12 @@
     {
       "modelName": "Baichuan-M3-Plus",
       "displayName": "百川 M3-Plus",
-      "serviceType": ["chat"],
+      "serviceType": [
+        "chat"
+      ],
       "description": "百川智能M3-Plus医疗增强模型，235B参数，幻觉率仅2.6%，API价格较前代下降70%",
-      "contextWindow": 192000,
-      "maxOutputTokens": 8192,
+      "contextWindow": 32000,
+      "maxOutputTokens": 32000,
       "capabilities": [
         "chat",
         "reasoning",
@@ -31,17 +33,19 @@
       ],
       "inputPrice": 5,
       "outputPrice": 9,
-      "defaultTemperature": 0.7,
-      "defaultTopP": 0.9,
+      "defaultTemperature": 0.3,
+      "defaultTopP": 0.85,
       "extra": {}
     },
     {
       "modelName": "Baichuan-M3",
       "displayName": "百川 M3",
-      "serviceType": ["chat"],
+      "serviceType": [
+        "chat"
+      ],
       "description": "百川智能M3新一代开源医疗增强模型，235B参数",
-      "contextWindow": 192000,
-      "maxOutputTokens": 8192,
+      "contextWindow": 32000,
+      "maxOutputTokens": 32000,
       "capabilities": [
         "chat",
         "reasoning",
@@ -52,17 +56,19 @@
       ],
       "inputPrice": 10,
       "outputPrice": 30,
-      "defaultTemperature": 0.7,
-      "defaultTopP": 0.9,
+      "defaultTemperature": 0.3,
+      "defaultTopP": 0.85,
       "extra": {}
     },
     {
       "modelName": "Baichuan-M2-Plus",
       "displayName": "百川 M2-Plus",
-      "serviceType": ["chat"],
+      "serviceType": [
+        "chat"
+      ],
       "description": "百川智能M2-Plus旗舰模型，最强推理和创作能力",
-      "contextWindow": 128000,
-      "maxOutputTokens": 8192,
+      "contextWindow": 32000,
+      "maxOutputTokens": 32000,
       "capabilities": [
         "chat",
         "reasoning",
@@ -72,17 +78,19 @@
       ],
       "inputPrice": 10,
       "outputPrice": 30,
-      "defaultTemperature": 0.7,
-      "defaultTopP": 0.9,
+      "defaultTemperature": 0.3,
+      "defaultTopP": 0.85,
       "extra": {}
     },
     {
       "modelName": "Baichuan-M2",
       "displayName": "百川 M2",
-      "serviceType": ["chat"],
+      "serviceType": [
+        "chat"
+      ],
       "description": "百川智能M2模型，高性能通用模型",
-      "contextWindow": 128000,
-      "maxOutputTokens": 8192,
+      "contextWindow": 32000,
+      "maxOutputTokens": 32000,
       "capabilities": [
         "chat",
         "reasoning",
@@ -91,8 +99,8 @@
       ],
       "inputPrice": 2,
       "outputPrice": 20,
-      "defaultTemperature": 0.7,
-      "defaultTopP": 0.9,
+      "defaultTemperature": 0.3,
+      "defaultTopP": 0.85,
       "extra": {}
     }
   ]

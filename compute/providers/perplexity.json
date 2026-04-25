@@ -9,12 +9,16 @@
   "enabled": false,
   "status": "unconfigured",
   "priceCurrency": "USD",
-  "services": ["chat"],
+  "services": [
+    "chat"
+  ],
   "models": [
     {
       "modelName": "sonar-pro",
       "displayName": "Sonar Pro",
-      "serviceType": ["chat"],
+      "serviceType": [
+        "chat"
+      ],
       "description": "Perplexity 旗舰搜索增强模型，内置实时联网搜索和引用",
       "contextWindow": 200000,
       "maxOutputTokens": 8192,
@@ -24,16 +28,23 @@
         "reasoning",
         "citation"
       ],
-      "inputPrice": 3.00,
-      "outputPrice": 15.00,
-      "defaultTemperature": 1,
-      "defaultTopP": 1,
-      "extra": {}
+      "inputPrice": 3.0,
+      "outputPrice": 15.0,
+      "extra": {
+        "requestPricingPer1k": {
+          "low": 6,
+          "medium": 10,
+          "high": 14
+        },
+        "pricingNotes": "Total Sonar API cost includes token costs plus a request fee based on search context size."
+      }
     },
     {
       "modelName": "sonar-reasoning-pro",
       "displayName": "Sonar Reasoning Pro",
-      "serviceType": ["chat"],
+      "serviceType": [
+        "chat"
+      ],
       "description": "Perplexity 深度推理模型，内置联网搜索和深度思考",
       "contextWindow": 128000,
       "maxOutputTokens": 8192,
@@ -43,16 +54,23 @@
         "reasoning",
         "deep_thinking"
       ],
-      "inputPrice": 2.00,
-      "outputPrice": 8.00,
-      "defaultTemperature": 1,
-      "defaultTopP": 1,
-      "extra": {}
+      "inputPrice": 2.0,
+      "outputPrice": 8.0,
+      "extra": {
+        "requestPricingPer1k": {
+          "low": 6,
+          "medium": 10,
+          "high": 14
+        },
+        "pricingNotes": "Total Sonar API cost includes token costs plus a request fee based on search context size."
+      }
     },
     {
       "modelName": "sonar",
       "displayName": "Sonar",
-      "serviceType": ["chat"],
+      "serviceType": [
+        "chat"
+      ],
       "description": "Perplexity 轻量搜索模型，低成本联网搜索",
       "contextWindow": 128000,
       "maxOutputTokens": 4096,
@@ -62,11 +80,16 @@
         "citation",
         "fast"
       ],
-      "inputPrice": 1.00,
-      "outputPrice": 1.00,
-      "defaultTemperature": 1,
-      "defaultTopP": 1,
-      "extra": {}
+      "inputPrice": 1.0,
+      "outputPrice": 1.0,
+      "extra": {
+        "requestPricingPer1k": {
+          "low": 5,
+          "medium": 8,
+          "high": 12
+        },
+        "pricingNotes": "Total Sonar API cost includes token costs plus a request fee based on search context size."
+      }
     }
   ]
 }

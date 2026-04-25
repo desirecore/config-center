@@ -17,16 +17,23 @@
     {
       "modelName": "embedding-3",
       "displayName": "智谱 embedding-3",
-      "serviceType": ["embedding"],
-      "description": "智谱嵌入模型v3，支持自定义维度，单条最大3072 tokens。走 OpenAI 兼容 /embeddings 端点（Anthropic 协议不提供 embeddings）",
-      "contextWindow": 3072,
+      "serviceType": [
+        "embedding"
+      ],
+      "description": "智谱嵌入模型v3，支持自定义维度；模型上下文窗口 8K，单条输入最多 3072 tokens。走 OpenAI 兼容 /embeddings 端点（Anthropic 协议不提供 embeddings）",
+      "contextWindow": 8192,
       "capabilities": [
         "text_embedding",
         "semantic_search",
-        "rag"
+        "rag",
+        "custom_dimensions"
       ],
       "inputPrice": 0.5,
-      "extra": {}
+      "extra": {
+        "maxInputTokensPerItem": 3072,
+        "maxBatchItems": 64,
+        "vectorDimensions": "256-2048"
+      }
     }
   ]
 }
