@@ -9,7 +9,7 @@
   },
   "scripts": {
     "validate": "node scripts/validate.mjs",
-    "test": "node --test __tests__/*.test.mjs"
+    "test": "node --test __tests__/validate.test.mjs"
   },
   "dependencies": {
     "ajv": "^8.17.1",
