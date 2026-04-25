@@ -1,0 +1,902 @@
+{
+  "source": "/tmp/zenmux-models.json",
+  "generatedAt": "2026-04-22T07:21:49.527Z",
+  "summary": {
+    "totalModels": 148,
+    "matchedModels": 44,
+    "updatedModels": 0,
+    "updatedFiles": 0,
+    "skippedModels": 148
+  },
+  "updated": [],
+  "skipped": [
+    {
+      "file": "compute/coding-plans/dashscope-coding.json",
+      "provider": "dashscope",
+      "modelName": "qwen3-coder-plus",
+      "reason": "matched-no-diff"
+    },
+    {
+      "file": "compute/coding-plans/dashscope-coding.json",
+      "provider": "dashscope",
+      "modelName": "qwen3-max-2026-01-23",
+      "reason": "ambiguous:qwen/qwen3-max,qwen/qwen3-max-preview"
+    },
+    {
+      "file": "compute/coding-plans/infini-coding.json",
+      "provider": "infini",
+      "modelName": "deepseek-v3",
+      "reason": "no-match"
+    },
+    {
+      "file": "compute/coding-plans/kwai-coding.json",
+      "provider": "kwai",
+      "modelName": "kwai-coder",
+      "reason": "no-match"
+    },
+    {
+      "file": "compute/coding-plans/minimax-coding.json",
+      "provider": "minimax",
+      "modelName": "MiniMax-M2.5",
+      "reason": "matched-no-diff"
+    },
+    {
+      "file": "compute/coding-plans/moonshot-coding.json",
+      "provider": "moonshot",
+      "modelName": "kimi-k2.5",
+      "reason": "matched-no-diff"
+    },
+    {
+      "file": "compute/coding-plans/moorethread-coding.json",
+      "provider": "moorethread",
+      "modelName": "mt-coder",
+      "reason": "no-match"
+    },
+    {
+      "file": "compute/coding-plans/volcengine-coding.json",
+      "provider": "volcengine",
+      "modelName": "ark-code-latest",
+      "reason": "no-match"
+    },
+    {
+      "file": "compute/coding-plans/zhipu-coding.json",
+      "provider": "zhipu",
+      "modelName": "glm-5",
+      "reason": "matched-no-diff"
+    },
+    {
+      "file": "compute/coding-plans/zhipu-coding.json",
+      "provider": "zhipu",
+      "modelName": "glm-4.7",
+      "reason": "matched-no-diff"
+    },
+    {
+      "file": "compute/providers/anthropic.json",
+      "provider": "anthropic",
+      "modelName": "claude-opus-4-6",
+      "reason": "matched-no-diff"
+    },
+    {
+      "file": "compute/providers/anthropic.json",
+      "provider": "anthropic",
+      "modelName": "claude-opus-4-5",
+      "reason": "matched-no-diff"
+    },
+    {
+      "file": "compute/providers/anthropic.json",
+      "provider": "anthropic",
+      "modelName": "claude-sonnet-4-5",
+      "reason": "matched-no-diff"
+    },
+    {
+      "file": "compute/providers/anthropic.json",
+      "provider": "anthropic",
+      "modelName": "claude-sonnet-4",
+      "reason": "matched-no-diff"
+    },
+    {
+      "file": "compute/providers/anthropic.json",
+      "provider": "anthropic",
+      "modelName": "claude-sonnet-4-5-computer",
+      "reason": "no-match"
+    },
+    {
+      "file": "compute/providers/baichuan.json",
+      "provider": "baichuan",
+      "modelName": "Baichuan-M3-Plus",
+      "reason": "no-match"
+    },
+    {
+      "file": "compute/providers/baichuan.json",
+      "provider": "baichuan",
+      "modelName": "Baichuan-M3",
+      "reason": "no-match"
+    },
+    {
+      "file": "compute/providers/baichuan.json",
+      "provider": "baichuan",
+      "modelName": "Baichuan-M2-Plus",
+      "reason": "no-match"
+    },
+    {
+      "file": "compute/providers/baichuan.json",
+      "provider": "baichuan",
+      "modelName": "Baichuan-M2",
+      "reason": "no-match"
+    },
+    {
+      "file": "compute/providers/baidu.json",
+      "provider": "baidu",
+      "modelName": "ernie-5.0-thinking-latest",
+      "reason": "matched-no-diff"
+    },
+    {
+      "file": "compute/providers/baidu.json",
+      "provider": "baidu",
+      "modelName": "ernie-4.5-turbo-128k-latest",
+      "reason": "no-match"
+    },
+    {
+      "file": "compute/providers/cohere.json",
+      "provider": "cohere",
+      "modelName": "command-a-03-2025",
+      "reason": "no-match"
+    },
+    {
+      "file": "compute/providers/cohere.json",
+      "provider": "cohere",
+      "modelName": "embed-v4.0",
+      "reason": "no-match"
+    },
+    {
+      "file": "compute/providers/cohere.json",
+      "provider": "cohere",
+      "modelName": "rerank-v3.5",
+      "reason": "no-match"
+    },
+    {
+      "file": "compute/providers/dashscope.json",
+      "provider": "dashscope",
+      "modelName": "qwen3.5-plus",
+      "reason": "matched-no-diff"
+    },
+    {
+      "file": "compute/providers/dashscope.json",
+      "provider": "dashscope",
+      "modelName": "qwen-max",
+      "reason": "no-match"
+    },
+    {
+      "file": "compute/providers/dashscope.json",
+      "provider": "dashscope",
+      "modelName": "qwen-plus",
+      "reason": "no-match"
+    },
+    {
+      "file": "compute/providers/dashscope.json",
+      "provider": "dashscope",
+      "modelName": "qwen-turbo",
+      "reason": "no-match"
+    },
+    {
+      "file": "compute/providers/dashscope.json",
+      "provider": "dashscope",
+      "modelName": "qwen-long",
+      "reason": "no-match"
+    },
+    {
+      "file": "compute/providers/dashscope.json",
+      "provider": "dashscope",
+      "modelName": "qwen3-max",
+      "reason": "matched-no-diff"
+    },
+    {
+      "file": "compute/providers/dashscope.json",
+      "provider": "dashscope",
+      "modelName": "qwen3-vl-plus",
+      "reason": "matched-no-diff"
+    },
+    {
+      "file": "compute/providers/dashscope.json",
+      "provider": "dashscope",
+      "modelName": "qwen3-vl-flash",
+      "reason": "no-match"
+    },
+    {
+      "file": "compute/providers/dashscope.json",
+      "provider": "dashscope",
+      "modelName": "text-embedding-v3",
+      "reason": "no-match"
+    },
+    {
+      "file": "compute/providers/dashscope.json",
+      "provider": "dashscope",
+      "modelName": "text-embedding-v4",
+      "reason": "no-match"
+    },
+    {
+      "file": "compute/providers/dashscope.json",
+      "provider": "dashscope",
+      "modelName": "qwen3-rerank",
+      "reason": "no-match"
+    },
+    {
+      "file": "compute/providers/dashscope.json",
+      "provider": "dashscope",
+      "modelName": "cosyvoice-v2",
+      "reason": "no-match"
+    },
+    {
+      "file": "compute/providers/dashscope.json",
+      "provider": "dashscope",
+      "modelName": "paraformer-v2",
+      "reason": "no-match"
+    },
+    {
+      "file": "compute/providers/dashscope.json",
+      "provider": "dashscope",
+      "modelName": "wanx-v2",
+      "reason": "no-match"
+    },
+    {
+      "file": "compute/providers/dashscope.json",
+      "provider": "dashscope",
+      "modelName": "wanx-video",
+      "reason": "no-match"
+    },
+    {
+      "file": "compute/providers/dashscope.json",
+      "provider": "dashscope",
+      "modelName": "cosyvoice-clone",
+      "reason": "no-match"
+    },
+    {
+      "file": "compute/providers/dashscope.json",
+      "provider": "dashscope",
+      "modelName": "qwen-omni-turbo",
+      "reason": "no-match"
+    },
+    {
+      "file": "compute/providers/dashscope.json",
+      "provider": "dashscope",
+      "modelName": "qwen3-max-trans",
+      "reason": "no-match"
+    },
+    {
+      "file": "compute/providers/deepseek.json",
+      "provider": "deepseek",
+      "modelName": "deepseek-chat",
+      "reason": "matched-no-diff"
+    },
+    {
+      "file": "compute/providers/deepseek.json",
+      "provider": "deepseek",
+      "modelName": "deepseek-reasoner",
+      "reason": "matched-no-diff"
+    },
+    {
+      "file": "compute/providers/google.json",
+      "provider": "google",
+      "modelName": "gemini-2.5-pro",
+      "reason": "matched-no-diff"
+    },
+    {
+      "file": "compute/providers/google.json",
+      "provider": "google",
+      "modelName": "gemini-2.5-flash",
+      "reason": "matched-no-diff"
+    },
+    {
+      "file": "compute/providers/google.json",
+      "provider": "google",
+      "modelName": "text-embedding-005",
+      "reason": "no-match"
+    },
+    {
+      "file": "compute/providers/internal-testing.json",
+      "provider": "internal-testing",
+      "modelName": "MiniMax-M2.7-highspeed",
+      "reason": "no-match"
+    },
+    {
+      "file": "compute/providers/internal-testing.json",
+      "provider": "internal-testing",
+      "modelName": "glm-5.1",
+      "reason": "no-match"
+    },
+    {
+      "file": "compute/providers/internal-testing.json",
+      "provider": "internal-testing",
+      "modelName": "glm-5",
+      "reason": "no-match"
+    },
+    {
+      "file": "compute/providers/internal-testing.json",
+      "provider": "internal-testing",
+      "modelName": "glm-5-turbo",
+      "reason": "no-match"
+    },
+    {
+      "file": "compute/providers/internal-testing.json",
+      "provider": "internal-testing",
+      "modelName": "glm-4.7",
+      "reason": "no-match"
+    },
+    {
+      "file": "compute/providers/internal-testing.json",
+      "provider": "internal-testing",
+      "modelName": "kimi-k2.6-code-preview",
+      "reason": "no-match"
+    },
+    {
+      "file": "compute/providers/internal-testing.json",
+      "provider": "internal-testing",
+      "modelName": "kimi-k2.5",
+      "reason": "no-match"
+    },
+    {
+      "file": "compute/providers/internal-testing.json",
+      "provider": "internal-testing",
+      "modelName": "MiniMax-M2.5",
+      "reason": "no-match"
+    },
+    {
+      "file": "compute/providers/internal-testing.json",
+      "provider": "internal-testing",
+      "modelName": "qwen3.6-plus",
+      "reason": "no-match"
+    },
+    {
+      "file": "compute/providers/internal-testing.json",
+      "provider": "internal-testing",
+      "modelName": "qwen3.5-plus",
+      "reason": "no-match"
+    },
+    {
+      "file": "compute/providers/internal-testing.json",
+      "provider": "internal-testing",
+      "modelName": "qwen3.5-35b-a3b",
+      "reason": "no-match"
+    },
+    {
+      "file": "compute/providers/internal-testing.json",
+      "provider": "internal-testing",
+      "modelName": "qwen3.5-27b",
+      "reason": "no-match"
+    },
+    {
+      "file": "compute/providers/internal-testing.json",
+      "provider": "internal-testing",
+      "modelName": "qwen3-max-2026-01-23",
+      "reason": "no-match"
+    },
+    {
+      "file": "compute/providers/internal-testing.json",
+      "provider": "internal-testing",
+      "modelName": "doubao-seed-2-0-code-preview-260215",
+      "reason": "no-match"
+    },
+    {
+      "file": "compute/providers/kling.json",
+      "provider": "kling",
+      "modelName": "kling-v2-5-turbo",
+      "reason": "no-match"
+    },
+    {
+      "file": "compute/providers/kling.json",
+      "provider": "kling",
+      "modelName": "kling-v2-5-turbo-pro",
+      "reason": "no-match"
+    },
+    {
+      "file": "compute/providers/kling.json",
+      "provider": "kling",
+      "modelName": "kling-v2",
+      "reason": "no-match"
+    },
+    {
+      "file": "compute/providers/kling.json",
+      "provider": "kling",
+      "modelName": "kling-v2-master",
+      "reason": "no-match"
+    },
+    {
+      "file": "compute/providers/lingyiwanwu.json",
+      "provider": "lingyiwanwu",
+      "modelName": "yi-lightning",
+      "reason": "no-match"
+    },
+    {
+      "file": "compute/providers/lingyiwanwu.json",
+      "provider": "lingyiwanwu",
+      "modelName": "yi-vision-v2",
+      "reason": "no-match"
+    },
+    {
+      "file": "compute/providers/local-whisper.json",
+      "provider": "local-whisper",
+      "modelName": "whisper-large-v3",
+      "reason": "no-match"
+    },
+    {
+      "file": "compute/providers/minimax.json",
+      "provider": "minimax",
+      "modelName": "MiniMax-M2.7",
+      "reason": "matched-no-diff"
+    },
+    {
+      "file": "compute/providers/minimax.json",
+      "provider": "minimax",
+      "modelName": "MiniMax-M2.7-highspeed",
+      "reason": "matched-no-diff"
+    },
+    {
+      "file": "compute/providers/minimax.json",
+      "provider": "minimax",
+      "modelName": "MiniMax-M2.5",
+      "reason": "matched-no-diff"
+    },
+    {
+      "file": "compute/providers/minimax.json",
+      "provider": "minimax",
+      "modelName": "MiniMax-M2.5-highspeed",
+      "reason": "no-match"
+    },
+    {
+      "file": "compute/providers/minimax.json",
+      "provider": "minimax",
+      "modelName": "MiniMax-M2.1",
+      "reason": "matched-no-diff"
+    },
+    {
+      "file": "compute/providers/minimax.json",
+      "provider": "minimax",
+      "modelName": "MiniMax-M2.1-highspeed",
+      "reason": "no-match"
+    },
+    {
+      "file": "compute/providers/minimax.json",
+      "provider": "minimax",
+      "modelName": "MiniMax-Text-01",
+      "reason": "no-match"
+    },
+    {
+      "file": "compute/providers/mistral.json",
+      "provider": "mistral",
+      "modelName": "mistral-large-latest",
+      "reason": "no-match"
+    },
+    {
+      "file": "compute/providers/mistral.json",
+      "provider": "mistral",
+      "modelName": "mistral-small-latest",
+      "reason": "no-match"
+    },
+    {
+      "file": "compute/providers/mistral.json",
+      "provider": "mistral",
+      "modelName": "codestral-latest",
+      "reason": "no-match"
+    },
+    {
+      "file": "compute/providers/moonshot.json",
+      "provider": "moonshot",
+      "modelName": "kimi-k2.5",
+      "reason": "matched-no-diff"
+    },
+    {
+      "file": "compute/providers/moonshot.json",
+      "provider": "moonshot",
+      "modelName": "kimi-k2",
+      "reason": "no-match"
+    },
+    {
+      "file": "compute/providers/moonshot.json",
+      "provider": "moonshot",
+      "modelName": "kimi-k2-thinking",
+      "reason": "matched-no-diff"
+    },
+    {
+      "file": "compute/providers/moonshot.json",
+      "provider": "moonshot",
+      "modelName": "moonshot-v1-8k",
+      "reason": "no-match"
+    },
+    {
+      "file": "compute/providers/moonshot.json",
+      "provider": "moonshot",
+      "modelName": "moonshot-v1-32k",
+      "reason": "no-match"
+    },
+    {
+      "file": "compute/providers/moonshot.json",
+      "provider": "moonshot",
+      "modelName": "moonshot-v1-128k",
+      "reason": "no-match"
+    },
+    {
+      "file": "compute/providers/ollama.json",
+      "provider": "ollama",
+      "modelName": "llama3.1:70b",
+      "reason": "no-match"
+    },
+    {
+      "file": "compute/providers/openai.json",
+      "provider": "openai",
+      "modelName": "gpt-5.2",
+      "reason": "matched-no-diff"
+    },
+    {
+      "file": "compute/providers/openai.json",
+      "provider": "openai",
+      "modelName": "gpt-5.2-pro",
+      "reason": "matched-no-diff"
+    },
+    {
+      "file": "compute/providers/openai.json",
+      "provider": "openai",
+      "modelName": "gpt-5.1",
+      "reason": "matched-no-diff"
+    },
+    {
+      "file": "compute/providers/openai.json",
+      "provider": "openai",
+      "modelName": "gpt-5",
+      "reason": "matched-no-diff"
+    },
+    {
+      "file": "compute/providers/openai.json",
+      "provider": "openai",
+      "modelName": "gpt-5-pro",
+      "reason": "matched-no-diff"
+    },
+    {
+      "file": "compute/providers/openai.json",
+      "provider": "openai",
+      "modelName": "gpt-5-mini",
+      "reason": "matched-no-diff"
+    },
+    {
+      "file": "compute/providers/openai.json",
+      "provider": "openai",
+      "modelName": "gpt-5-nano",
+      "reason": "matched-no-diff"
+    },
+    {
+      "file": "compute/providers/openai.json",
+      "provider": "openai",
+      "modelName": "gpt-4.1",
+      "reason": "matched-no-diff"
+    },
+    {
+      "file": "compute/providers/openai.json",
+      "provider": "openai",
+      "modelName": "gpt-4.1-mini",
+      "reason": "matched-no-diff"
+    },
+    {
+      "file": "compute/providers/openai.json",
+      "provider": "openai",
+      "modelName": "gpt-4.1-nano",
+      "reason": "matched-no-diff"
+    },
+    {
+      "file": "compute/providers/openai.json",
+      "provider": "openai",
+      "modelName": "gpt-4o",
+      "reason": "matched-no-diff"
+    },
+    {
+      "file": "compute/providers/openai.json",
+      "provider": "openai",
+      "modelName": "gpt-4o-mini",
+      "reason": "matched-no-diff"
+    },
+    {
+      "file": "compute/providers/openai.json",
+      "provider": "openai",
+      "modelName": "text-embedding-3-small",
+      "reason": "no-match"
+    },
+    {
+      "file": "compute/providers/openai.json",
+      "provider": "openai",
+      "modelName": "text-embedding-3-large",
+      "reason": "no-match"
+    },
+    {
+      "file": "compute/providers/openai.json",
+      "provider": "openai",
+      "modelName": "tts-1",
+      "reason": "no-match"
+    },
+    {
+      "file": "compute/providers/openai.json",
+      "provider": "openai",
+      "modelName": "tts-1-hd",
+      "reason": "no-match"
+    },
+    {
+      "file": "compute/providers/openai.json",
+      "provider": "openai",
+      "modelName": "whisper-1",
+      "reason": "no-match"
+    },
+    {
+      "file": "compute/providers/openai.json",
+      "provider": "openai",
+      "modelName": "o3",
+      "reason": "no-match"
+    },
+    {
+      "file": "compute/providers/openai.json",
+      "provider": "openai",
+      "modelName": "o3-pro",
+      "reason": "no-match"
+    },
+    {
+      "file": "compute/providers/openai.json",
+      "provider": "openai",
+      "modelName": "o3-mini",
+      "reason": "no-match"
+    },
+    {
+      "file": "compute/providers/openai.json",
+      "provider": "openai",
+      "modelName": "o4-mini",
+      "reason": "matched-no-diff"
+    },
+    {
+      "file": "compute/providers/openai.json",
+      "provider": "openai",
+      "modelName": "dall-e-3",
+      "reason": "no-match"
+    },
+    {
+      "file": "compute/providers/openai.json",
+      "provider": "openai",
+      "modelName": "gpt-4o-realtime",
+      "reason": "no-match"
+    },
+    {
+      "file": "compute/providers/openai.json",
+      "provider": "openai",
+      "modelName": "gpt-4o-realtime-preview",
+      "reason": "no-match"
+    },
+    {
+      "file": "compute/providers/openrouter.json",
+      "provider": "openrouter",
+      "modelName": "openrouter/auto",
+      "reason": "no-match"
+    },
+    {
+      "file": "compute/providers/openrouter.json",
+      "provider": "openrouter",
+      "modelName": "openai/gpt-oss-120b:free",
+      "reason": "no-match"
+    },
+    {
+      "file": "compute/providers/openrouter.json",
+      "provider": "openrouter",
+      "modelName": "qwen/qwen3-coder:free",
+      "reason": "no-match"
+    },
+    {
+      "file": "compute/providers/perplexity.json",
+      "provider": "perplexity",
+      "modelName": "sonar-pro",
+      "reason": "no-match"
+    },
+    {
+      "file": "compute/providers/perplexity.json",
+      "provider": "perplexity",
+      "modelName": "sonar-reasoning-pro",
+      "reason": "no-match"
+    },
+    {
+      "file": "compute/providers/perplexity.json",
+      "provider": "perplexity",
+      "modelName": "sonar",
+      "reason": "no-match"
+    },
+    {
+      "file": "compute/providers/siliconflow.json",
+      "provider": "siliconflow",
+      "modelName": "Qwen/Qwen3-Coder-480B-A35B-Instruct",
+      "reason": "no-match"
+    },
+    {
+      "file": "compute/providers/siliconflow.json",
+      "provider": "siliconflow",
+      "modelName": "Qwen/Qwen3-235B-A22B-Instruct",
+      "reason": "no-match"
+    },
+    {
+      "file": "compute/providers/siliconflow.json",
+      "provider": "siliconflow",
+      "modelName": "BAAI/bge-m3",
+      "reason": "no-match"
+    },
+    {
+      "file": "compute/providers/stability.json",
+      "provider": "stability",
+      "modelName": "stable-diffusion-3.5-large",
+      "reason": "no-match"
+    },
+    {
+      "file": "compute/providers/tencent.json",
+      "provider": "tencent",
+      "modelName": "hunyuan-2.0-thinking-20251109",
+      "reason": "matched-no-diff"
+    },
+    {
+      "file": "compute/providers/tencent.json",
+      "provider": "tencent",
+      "modelName": "hunyuan-turbos-latest",
+      "reason": "no-match"
+    },
+    {
+      "file": "compute/providers/volcengine.json",
+      "provider": "volcengine",
+      "modelName": "doubao-2.0-pro",
+      "reason": "no-match"
+    },
+    {
+      "file": "compute/providers/volcengine.json",
+      "provider": "volcengine",
+      "modelName": "doubao-seed-1.8",
+      "reason": "matched-no-diff"
+    },
+    {
+      "file": "compute/providers/volcengine.json",
+      "provider": "volcengine",
+      "modelName": "doubao-seed-1.6",
+      "reason": "no-match"
+    },
+    {
+      "file": "compute/providers/volcengine.json",
+      "provider": "volcengine",
+      "modelName": "doubao-seed-1.6-thinking",
+      "reason": "no-match"
+    },
+    {
+      "file": "compute/providers/volcengine.json",
+      "provider": "volcengine",
+      "modelName": "doubao-seed-1.6-flash",
+      "reason": "no-match"
+    },
+    {
+      "file": "compute/providers/volcengine.json",
+      "provider": "volcengine",
+      "modelName": "doubao-seed-1.6-lite",
+      "reason": "no-match"
+    },
+    {
+      "file": "compute/providers/volcengine.json",
+      "provider": "volcengine",
+      "modelName": "doubao-seed-1.6-vision",
+      "reason": "matched-no-diff"
+    },
+    {
+      "file": "compute/providers/volcengine.json",
+      "provider": "volcengine",
+      "modelName": "doubao-seed-code",
+      "reason": "matched-no-diff"
+    },
+    {
+      "file": "compute/providers/volcengine.json",
+      "provider": "volcengine",
+      "modelName": "deepseek-v3.2",
+      "reason": "no-match"
+    },
+    {
+      "file": "compute/providers/volcengine.json",
+      "provider": "volcengine",
+      "modelName": "deepseek-r1",
+      "reason": "no-match"
+    },
+    {
+      "file": "compute/providers/volcengine.json",
+      "provider": "volcengine",
+      "modelName": "kimi-k2-volcengine",
+      "reason": "no-match"
+    },
+    {
+      "file": "compute/providers/volcengine.json",
+      "provider": "volcengine",
+      "modelName": "glm-4-7",
+      "reason": "no-match"
+    },
+    {
+      "file": "compute/providers/volcengine.json",
+      "provider": "volcengine",
+      "modelName": "doubao-embedding",
+      "reason": "no-match"
+    },
+    {
+      "file": "compute/providers/volcengine.json",
+      "provider": "volcengine",
+      "modelName": "volc-mega-tts-clone",
+      "reason": "no-match"
+    },
+    {
+      "file": "compute/providers/volcengine.json",
+      "provider": "volcengine",
+      "modelName": "volc-realtime-voice",
+      "reason": "no-match"
+    },
+    {
+      "file": "compute/providers/volcengine.json",
+      "provider": "volcengine",
+      "modelName": "volc-simultaneous",
+      "reason": "no-match"
+    },
+    {
+      "file": "compute/providers/volcengine.json",
+      "provider": "volcengine",
+      "modelName": "volc-translation",
+      "reason": "no-match"
+    },
+    {
+      "file": "compute/providers/xai.json",
+      "provider": "xai",
+      "modelName": "grok-4.20-0309-reasoning",
+      "reason": "no-match"
+    },
+    {
+      "file": "compute/providers/xai.json",
+      "provider": "xai",
+      "modelName": "grok-4-1-fast-reasoning",
+      "reason": "no-match"
+    },
+    {
+      "file": "compute/providers/xunfei.json",
+      "provider": "xunfei",
+      "modelName": "spark-x",
+      "reason": "no-match"
+    },
+    {
+      "file": "compute/providers/xunfei.json",
+      "provider": "xunfei",
+      "modelName": "4.0Ultra",
+      "reason": "no-match"
+    },
+    {
+      "file": "compute/providers/zhipu-embedding.json",
+      "provider": "zhipu-embedding",
+      "modelName": "embedding-3",
+      "reason": "no-match"
+    },
+    {
+      "file": "compute/providers/zhipu.json",
+      "provider": "zhipu",
+      "modelName": "glm-5",
+      "reason": "matched-no-diff"
+    },
+    {
+      "file": "compute/providers/zhipu.json",
+      "provider": "zhipu",
+      "modelName": "glm-4.7",
+      "reason": "matched-no-diff"
+    },
+    {
+      "file": "compute/providers/zhipu.json",
+      "provider": "zhipu",
+      "modelName": "glm-4.7-thinking",
+      "reason": "no-match"
+    },
+    {
+      "file": "compute/providers/zhipu.json",
+      "provider": "zhipu",
+      "modelName": "glm-4.6v",
+      "reason": "matched-no-diff"
+    },
+    {
+      "file": "compute/providers/zhipu.json",
+      "provider": "zhipu",
+      "modelName": "glm-4.6",
+      "reason": "matched-no-diff"
+    }
+  ]
+}

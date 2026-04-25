@@ -1,0 +1,171 @@
+# ZenMux Sync Report
+
+- source: `/tmp/zenmux-models.json`
+- generatedAt: `2026-04-22T07:21:49.527Z`
+- totalModels: **148**
+- matchedModels: **44**
+- updatedModels: **0**
+- updatedFiles: **0**
+
+## Field Coverage
+
+- synced: `contextWindow`
+- synced with guardrails: `inputPrice`, `outputPrice` (only when provider currency is USD and model match is exact)
+- capability sync: disabled (reason: local taxonomy may differ from ZenMux)
+- not synced from ZenMux list API: `maxOutputTokens`, `defaultTemperature`, `defaultTopP`, vendor-specific `extra.*`
+
+## Updated Models
+
+- (none)
+
+## Skipped Models
+
+- compute/coding-plans/dashscope-coding.json :: qwen3-coder-plus -> matched-no-diff
+- compute/coding-plans/dashscope-coding.json :: qwen3-max-2026-01-23 -> ambiguous:qwen/qwen3-max,qwen/qwen3-max-preview
+- compute/coding-plans/infini-coding.json :: deepseek-v3 -> no-match
+- compute/coding-plans/kwai-coding.json :: kwai-coder -> no-match
+- compute/coding-plans/minimax-coding.json :: MiniMax-M2.5 -> matched-no-diff
+- compute/coding-plans/moonshot-coding.json :: kimi-k2.5 -> matched-no-diff
+- compute/coding-plans/moorethread-coding.json :: mt-coder -> no-match
+- compute/coding-plans/volcengine-coding.json :: ark-code-latest -> no-match
+- compute/coding-plans/zhipu-coding.json :: glm-5 -> matched-no-diff
+- compute/coding-plans/zhipu-coding.json :: glm-4.7 -> matched-no-diff
+- compute/providers/anthropic.json :: claude-opus-4-6 -> matched-no-diff
+- compute/providers/anthropic.json :: claude-opus-4-5 -> matched-no-diff
+- compute/providers/anthropic.json :: claude-sonnet-4-5 -> matched-no-diff
+- compute/providers/anthropic.json :: claude-sonnet-4 -> matched-no-diff
+- compute/providers/anthropic.json :: claude-sonnet-4-5-computer -> no-match
+- compute/providers/baichuan.json :: Baichuan-M3-Plus -> no-match
+- compute/providers/baichuan.json :: Baichuan-M3 -> no-match
+- compute/providers/baichuan.json :: Baichuan-M2-Plus -> no-match
+- compute/providers/baichuan.json :: Baichuan-M2 -> no-match
+- compute/providers/baidu.json :: ernie-5.0-thinking-latest -> matched-no-diff
+- compute/providers/baidu.json :: ernie-4.5-turbo-128k-latest -> no-match
+- compute/providers/cohere.json :: command-a-03-2025 -> no-match
+- compute/providers/cohere.json :: embed-v4.0 -> no-match
+- compute/providers/cohere.json :: rerank-v3.5 -> no-match
+- compute/providers/dashscope.json :: qwen3.5-plus -> matched-no-diff
+- compute/providers/dashscope.json :: qwen-max -> no-match
+- compute/providers/dashscope.json :: qwen-plus -> no-match
+- compute/providers/dashscope.json :: qwen-turbo -> no-match
+- compute/providers/dashscope.json :: qwen-long -> no-match
+- compute/providers/dashscope.json :: qwen3-max -> matched-no-diff
+- compute/providers/dashscope.json :: qwen3-vl-plus -> matched-no-diff
+- compute/providers/dashscope.json :: qwen3-vl-flash -> no-match
+- compute/providers/dashscope.json :: text-embedding-v3 -> no-match
+- compute/providers/dashscope.json :: text-embedding-v4 -> no-match
+- compute/providers/dashscope.json :: qwen3-rerank -> no-match
+- compute/providers/dashscope.json :: cosyvoice-v2 -> no-match
+- compute/providers/dashscope.json :: paraformer-v2 -> no-match
+- compute/providers/dashscope.json :: wanx-v2 -> no-match
+- compute/providers/dashscope.json :: wanx-video -> no-match
+- compute/providers/dashscope.json :: cosyvoice-clone -> no-match
+- compute/providers/dashscope.json :: qwen-omni-turbo -> no-match
+- compute/providers/dashscope.json :: qwen3-max-trans -> no-match
+- compute/providers/deepseek.json :: deepseek-chat -> matched-no-diff
+- compute/providers/deepseek.json :: deepseek-reasoner -> matched-no-diff
+- compute/providers/google.json :: gemini-2.5-pro -> matched-no-diff
+- compute/providers/google.json :: gemini-2.5-flash -> matched-no-diff
+- compute/providers/google.json :: text-embedding-005 -> no-match
+- compute/providers/internal-testing.json :: MiniMax-M2.7-highspeed -> no-match
+- compute/providers/internal-testing.json :: glm-5.1 -> no-match
+- compute/providers/internal-testing.json :: glm-5 -> no-match
+- compute/providers/internal-testing.json :: glm-5-turbo -> no-match
+- compute/providers/internal-testing.json :: glm-4.7 -> no-match
+- compute/providers/internal-testing.json :: kimi-k2.6-code-preview -> no-match
+- compute/providers/internal-testing.json :: kimi-k2.5 -> no-match
+- compute/providers/internal-testing.json :: MiniMax-M2.5 -> no-match
+- compute/providers/internal-testing.json :: qwen3.6-plus -> no-match
+- compute/providers/internal-testing.json :: qwen3.5-plus -> no-match
+- compute/providers/internal-testing.json :: qwen3.5-35b-a3b -> no-match
+- compute/providers/internal-testing.json :: qwen3.5-27b -> no-match
+- compute/providers/internal-testing.json :: qwen3-max-2026-01-23 -> no-match
+- compute/providers/internal-testing.json :: doubao-seed-2-0-code-preview-260215 -> no-match
+- compute/providers/kling.json :: kling-v2-5-turbo -> no-match
+- compute/providers/kling.json :: kling-v2-5-turbo-pro -> no-match
+- compute/providers/kling.json :: kling-v2 -> no-match
+- compute/providers/kling.json :: kling-v2-master -> no-match
+- compute/providers/lingyiwanwu.json :: yi-lightning -> no-match
+- compute/providers/lingyiwanwu.json :: yi-vision-v2 -> no-match
+- compute/providers/local-whisper.json :: whisper-large-v3 -> no-match
+- compute/providers/minimax.json :: MiniMax-M2.7 -> matched-no-diff
+- compute/providers/minimax.json :: MiniMax-M2.7-highspeed -> matched-no-diff
+- compute/providers/minimax.json :: MiniMax-M2.5 -> matched-no-diff
+- compute/providers/minimax.json :: MiniMax-M2.5-highspeed -> no-match
+- compute/providers/minimax.json :: MiniMax-M2.1 -> matched-no-diff
+- compute/providers/minimax.json :: MiniMax-M2.1-highspeed -> no-match
+- compute/providers/minimax.json :: MiniMax-Text-01 -> no-match
+- compute/providers/mistral.json :: mistral-large-latest -> no-match
+- compute/providers/mistral.json :: mistral-small-latest -> no-match
+- compute/providers/mistral.json :: codestral-latest -> no-match
+- compute/providers/moonshot.json :: kimi-k2.5 -> matched-no-diff
+- compute/providers/moonshot.json :: kimi-k2 -> no-match
+- compute/providers/moonshot.json :: kimi-k2-thinking -> matched-no-diff
+- compute/providers/moonshot.json :: moonshot-v1-8k -> no-match
+- compute/providers/moonshot.json :: moonshot-v1-32k -> no-match
+- compute/providers/moonshot.json :: moonshot-v1-128k -> no-match
+- compute/providers/ollama.json :: llama3.1:70b -> no-match
+- compute/providers/openai.json :: gpt-5.2 -> matched-no-diff
+- compute/providers/openai.json :: gpt-5.2-pro -> matched-no-diff
+- compute/providers/openai.json :: gpt-5.1 -> matched-no-diff
+- compute/providers/openai.json :: gpt-5 -> matched-no-diff
+- compute/providers/openai.json :: gpt-5-pro -> matched-no-diff
+- compute/providers/openai.json :: gpt-5-mini -> matched-no-diff
+- compute/providers/openai.json :: gpt-5-nano -> matched-no-diff
+- compute/providers/openai.json :: gpt-4.1 -> matched-no-diff
+- compute/providers/openai.json :: gpt-4.1-mini -> matched-no-diff
+- compute/providers/openai.json :: gpt-4.1-nano -> matched-no-diff
+- compute/providers/openai.json :: gpt-4o -> matched-no-diff
+- compute/providers/openai.json :: gpt-4o-mini -> matched-no-diff
+- compute/providers/openai.json :: text-embedding-3-small -> no-match
+- compute/providers/openai.json :: text-embedding-3-large -> no-match
+- compute/providers/openai.json :: tts-1 -> no-match
+- compute/providers/openai.json :: tts-1-hd -> no-match
+- compute/providers/openai.json :: whisper-1 -> no-match
+- compute/providers/openai.json :: o3 -> no-match
+- compute/providers/openai.json :: o3-pro -> no-match
+- compute/providers/openai.json :: o3-mini -> no-match
+- compute/providers/openai.json :: o4-mini -> matched-no-diff
+- compute/providers/openai.json :: dall-e-3 -> no-match
+- compute/providers/openai.json :: gpt-4o-realtime -> no-match
+- compute/providers/openai.json :: gpt-4o-realtime-preview -> no-match
+- compute/providers/openrouter.json :: openrouter/auto -> no-match
+- compute/providers/openrouter.json :: openai/gpt-oss-120b:free -> no-match
+- compute/providers/openrouter.json :: qwen/qwen3-coder:free -> no-match
+- compute/providers/perplexity.json :: sonar-pro -> no-match
+- compute/providers/perplexity.json :: sonar-reasoning-pro -> no-match
+- compute/providers/perplexity.json :: sonar -> no-match
+- compute/providers/siliconflow.json :: Qwen/Qwen3-Coder-480B-A35B-Instruct -> no-match
+- compute/providers/siliconflow.json :: Qwen/Qwen3-235B-A22B-Instruct -> no-match
+- compute/providers/siliconflow.json :: BAAI/bge-m3 -> no-match
+- compute/providers/stability.json :: stable-diffusion-3.5-large -> no-match
+- compute/providers/tencent.json :: hunyuan-2.0-thinking-20251109 -> matched-no-diff
+- compute/providers/tencent.json :: hunyuan-turbos-latest -> no-match
+- compute/providers/volcengine.json :: doubao-2.0-pro -> no-match
+- compute/providers/volcengine.json :: doubao-seed-1.8 -> matched-no-diff
+- compute/providers/volcengine.json :: doubao-seed-1.6 -> no-match
+- compute/providers/volcengine.json :: doubao-seed-1.6-thinking -> no-match
+- compute/providers/volcengine.json :: doubao-seed-1.6-flash -> no-match
+- compute/providers/volcengine.json :: doubao-seed-1.6-lite -> no-match
+- compute/providers/volcengine.json :: doubao-seed-1.6-vision -> matched-no-diff
+- compute/providers/volcengine.json :: doubao-seed-code -> matched-no-diff
+- compute/providers/volcengine.json :: deepseek-v3.2 -> no-match
+- compute/providers/volcengine.json :: deepseek-r1 -> no-match
+- compute/providers/volcengine.json :: kimi-k2-volcengine -> no-match
+- compute/providers/volcengine.json :: glm-4-7 -> no-match
+- compute/providers/volcengine.json :: doubao-embedding -> no-match
+- compute/providers/volcengine.json :: volc-mega-tts-clone -> no-match
+- compute/providers/volcengine.json :: volc-realtime-voice -> no-match
+- compute/providers/volcengine.json :: volc-simultaneous -> no-match
+- compute/providers/volcengine.json :: volc-translation -> no-match
+- compute/providers/xai.json :: grok-4.20-0309-reasoning -> no-match
+- compute/providers/xai.json :: grok-4-1-fast-reasoning -> no-match
+- compute/providers/xunfei.json :: spark-x -> no-match
+- compute/providers/xunfei.json :: 4.0Ultra -> no-match
+- compute/providers/zhipu-embedding.json :: embedding-3 -> no-match
+- compute/providers/zhipu.json :: glm-5 -> matched-no-diff
+- compute/providers/zhipu.json :: glm-4.7 -> matched-no-diff
+- compute/providers/zhipu.json :: glm-4.7-thinking -> no-match
+- compute/providers/zhipu.json :: glm-4.6v -> matched-no-diff
+- compute/providers/zhipu.json :: glm-4.6 -> matched-no-diff
+
