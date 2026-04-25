@@ -15,14 +15,12 @@
   ],
   "models": [
     {
-      "modelName": "claude-opus-4-7",
-      "displayName": "Claude Opus 4.7",
-      "serviceType": [
-        "chat"
-      ],
-      "description": "Anthropic 当前最强通用模型，适合复杂推理和智能体编码任务",
-      "contextWindow": 1000000,
-      "maxOutputTokens": 128000,
+      "modelName": "claude-opus-4-6",
+      "displayName": "Claude Opus 4.6",
+      "serviceType": ["chat"],
+      "description": "Anthropic 最新旗舰 Opus 模型，最强能力",
+      "contextWindow": 200000,
+      "maxOutputTokens": 32768,
       "capabilities": [
         "chat",
         "reasoning",
@@ -33,54 +31,32 @@
       "inputPrice": 5,
       "outputPrice": 25,
       "defaultTemperature": 1,
-      "defaultTopP": null,
-      "extra": {
-        "cachePricing": {
-          "write5m": 6.25,
-          "write1h": 10,
-          "read": 0.5
-        },
-        "pricingNotes": "Prices are per 1M tokens. Opus 4.7 includes the full 1M context window at standard pricing."
-      }
+      "extra": {}
     },
     {
-      "modelName": "claude-sonnet-4-6",
-      "displayName": "Claude Sonnet 4.6",
-      "serviceType": [
-        "chat",
-        "computer_use"
-      ],
-      "description": "Anthropic 高智能高速度模型，适合编码、工具使用和智能体任务",
-      "contextWindow": 1000000,
-      "maxOutputTokens": 64000,
+      "modelName": "claude-opus-4-5",
+      "displayName": "Claude Opus 4.5",
+      "serviceType": ["chat"],
+      "description": "Anthropic Opus 4.5，顶级推理能力",
+      "contextWindow": 200000,
+      "maxOutputTokens": 32768,
       "capabilities": [
         "chat",
         "reasoning",
         "code",
         "vision",
-        "tool_use",
-        "computer_use"
+        "tool_use"
       ],
-      "inputPrice": 3,
-      "outputPrice": 15,
+      "inputPrice": 5,
+      "outputPrice": 25,
       "defaultTemperature": 1,
-      "defaultTopP": null,
-      "extra": {
-        "cachePricing": {
-          "write5m": 3.75,
-          "write1h": 6,
-          "read": 0.3
-        },
-        "pricingNotes": "Prices are per 1M tokens. Sonnet 4.6 includes the full 1M context window at standard pricing."
-      }
+      "extra": {}
     },
     {
-      "modelName": "claude-haiku-4-5",
-      "displayName": "Claude Haiku 4.5",
-      "serviceType": [
-        "chat"
-      ],
-      "description": "Anthropic 最快模型，具备接近前沿模型的智能水平",
+      "modelName": "claude-sonnet-4-5",
+      "displayName": "Claude Sonnet 4.5",
+      "serviceType": ["chat"],
+      "description": "Anthropic Sonnet 4.5，高性能性价比",
       "contextWindow": 200000,
       "maxOutputTokens": 64000,
       "capabilities": [
@@ -90,19 +66,48 @@
         "vision",
         "tool_use"
       ],
-      "inputPrice": 1,
-      "outputPrice": 5,
+      "inputPrice": 3,
+      "outputPrice": 15,
       "defaultTemperature": 1,
-      "defaultTopP": null,
-      "extra": {
-        "modelId": "claude-haiku-4-5-20251001",
-        "cachePricing": {
-          "write5m": 1.25,
-          "write1h": 2,
-          "read": 0.1
-        },
-        "pricingNotes": "Prices are per 1M tokens."
-      }
+      "extra": {}
+    },
+    {
+      "modelName": "claude-sonnet-4",
+      "displayName": "Claude Sonnet 4",
+      "serviceType": ["chat"],
+      "description": "Anthropic Sonnet 4 旗舰模型",
+      "contextWindow": 200000,
+      "maxOutputTokens": 64000,
+      "capabilities": [
+        "chat",
+        "reasoning",
+        "code",
+        "vision",
+        "tool_use"
+      ],
+      "inputPrice": 3,
+      "outputPrice": 15,
+      "defaultTemperature": 1,
+      "extra": {}
+    },
+    {
+      "modelName": "claude-sonnet-4-5-computer",
+      "displayName": "Claude Sonnet 4.5 Computer Use",
+      "serviceType": ["computer_use"],
+      "description": "Anthropic 最佳 Computer Use 模型",
+      "contextWindow": 200000,
+      "maxOutputTokens": 64000,
+      "capabilities": [
+        "chat",
+        "vision",
+        "computer_use",
+        "tool_use",
+        "reasoning"
+      ],
+      "inputPrice": 3,
+      "outputPrice": 15,
+      "defaultTemperature": 1,
+      "extra": {}
     }
   ]
 }

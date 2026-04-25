@@ -16,97 +16,11 @@
   ],
   "models": [
     {
-      "modelName": "gemini-3.1-pro-preview",
-      "displayName": "Gemini 3.1 Pro Preview",
-      "serviceType": ["chat"],
-      "description": "Google Gemini 3.1 Pro Preview，面向复杂推理、编码和智能体工作流",
-      "contextWindow": 1048576,
-      "maxOutputTokens": 65536,
-      "capabilities": [
-        "chat",
-        "reasoning",
-        "code",
-        "vision",
-        "ultra_long_context",
-        "tool_use"
-      ],
-      "inputPrice": 2.00,
-      "outputPrice": 12.00,
-      "defaultTemperature": 1,
-      "defaultTopP": 0.95,
-      "extra": {
-        "pricingNotes": "Standard paid tier text/image/video price for prompts <= 200K tokens; prompts > 200K are $4 input and $18 output per 1M tokens.",
-        "cachePricing": {
-          "inputCacheRead": 0.20,
-          "inputCacheReadOver200k": 0.40,
-          "storagePerMillionTokensPerHour": 4.50
-        }
-      }
-    },
-    {
-      "modelName": "gemini-3-flash-preview",
-      "displayName": "Gemini 3 Flash Preview",
-      "serviceType": ["chat"],
-      "description": "Google Gemini 3 Flash Preview，高速多模态推理模型",
-      "contextWindow": 1048576,
-      "maxOutputTokens": 65536,
-      "capabilities": [
-        "chat",
-        "reasoning",
-        "code",
-        "vision",
-        "ultra_long_context",
-        "tool_use",
-        "fast"
-      ],
-      "inputPrice": 0.50,
-      "outputPrice": 3.00,
-      "defaultTemperature": 1,
-      "defaultTopP": 0.95,
-      "extra": {
-        "pricingNotes": "Standard paid tier text/image/video price; audio input is $1.00 per 1M tokens.",
-        "cachePricing": {
-          "inputCacheRead": 0.05,
-          "audioInputCacheRead": 0.10,
-          "storagePerMillionTokensPerHour": 1.00
-        }
-      }
-    },
-    {
-      "modelName": "gemini-3.1-flash-lite-preview",
-      "displayName": "Gemini 3.1 Flash-Lite Preview",
-      "serviceType": ["fast"],
-      "description": "Google Gemini 3.1 Flash-Lite Preview，低成本高吞吐多模态模型",
-      "contextWindow": 1048576,
-      "maxOutputTokens": 65536,
-      "capabilities": [
-        "chat",
-        "reasoning",
-        "code",
-        "vision",
-        "ultra_long_context",
-        "tool_use",
-        "fast"
-      ],
-      "inputPrice": 0.25,
-      "outputPrice": 1.50,
-      "defaultTemperature": 1,
-      "defaultTopP": 0.95,
-      "extra": {
-        "pricingNotes": "Standard paid tier text/image/video price; audio input is $0.50 per 1M tokens.",
-        "cachePricing": {
-          "inputCacheRead": 0.025,
-          "audioInputCacheRead": 0.05,
-          "storagePerMillionTokensPerHour": 1.00
-        }
-      }
-    },
-    {
       "modelName": "gemini-2.5-pro",
       "displayName": "Gemini 2.5 Pro",
       "serviceType": ["chat"],
-      "description": "Google 最新旗舰模型，1,048,576 token 上下文，多模态",
-      "contextWindow": 1048576,
+      "description": "Google 最新旗舰模型，100万上下文，多模态",
+      "contextWindow": 1000000,
       "maxOutputTokens": 65536,
       "capabilities": [
         "chat",
@@ -118,7 +32,7 @@
       ],
       "inputPrice": 1.25,
       "outputPrice": 10,
-      "defaultTemperature": null,
+      "defaultTemperature": 1,
       "defaultTopP": 0.95,
       "extra": {}
     },
@@ -126,8 +40,8 @@
       "modelName": "gemini-2.5-flash",
       "displayName": "Gemini 2.5 Flash",
       "serviceType": ["chat"],
-      "description": "Google 高性价比模型，1,048,576 token 上下文，速度快",
-      "contextWindow": 1048576,
+      "description": "Google 高性价比模型，100万上下文，速度快",
+      "contextWindow": 1000000,
       "maxOutputTokens": 65536,
       "capabilities": [
         "chat",
@@ -140,7 +54,7 @@
       ],
       "inputPrice": 0.30,
       "outputPrice": 2.50,
-      "defaultTemperature": null,
+      "defaultTemperature": 1,
       "defaultTopP": 0.95,
       "extra": {}
     },
@@ -149,14 +63,11 @@
       "displayName": "Text Embedding 005",
       "serviceType": ["embedding"],
       "description": "Google 文本嵌入模型，768维度",
-      "contextWindow": 2048,
       "capabilities": [
         "text_embedding",
         "semantic_search"
       ],
       "inputPrice": 0.10,
-      "defaultTemperature": null,
-      "defaultTopP": null,
       "extra": {}
     }
   ]

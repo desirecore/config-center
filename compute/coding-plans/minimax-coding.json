@@ -2,7 +2,7 @@
   "id": "provider-minimax-coding-001",
   "provider": "minimax",
   "brandGroup": "minimax",
-  "label": "MiniMax Token Plan",
+  "label": "MiniMax Coding Plan",
   "baseUrl": "https://api.minimaxi.com/v1",
   "apiFormat": "openai-completions",
   "apiKeyRef": "",
@@ -10,109 +10,25 @@
   "enabled": false,
   "status": "unconfigured",
   "accessMode": "coding-plan",
-  "services": [
-    "chat",
-    "reasoning",
-    "fast"
-  ],
+  "services": ["chat", "reasoning"],
   "codingPlan": {
-    "quotas": {
-      "textWindow": "5h",
-      "standard": {
-        "starterRequestsPer5h": 1500,
-        "plusRequestsPer5h": 4500,
-        "maxRequestsPer5h": 15000
-      },
-      "highspeed": {
-        "plusHighspeedRequestsPer5h": 4500,
-        "maxHighspeedRequestsPer5h": 15000,
-        "ultraHighspeedRequestsPer5h": 30000
-      }
-    },
+    "quotas": {},
     "usageTracking": {
       "method": "rest-api",
-      "endpoint": "https://www.minimax.io/v1/token_plan/remains",
-      "consoleUrl": "https://www.minimax.io/user-center/token-plan"
+      "endpoint": "https://api.minimaxi.com/v1/coding/usage",
+      "consoleUrl": "https://platform.minimaxi.com/"
     }
   },
   "models": [
     {
-      "modelName": "MiniMax-M2.7",
-      "displayName": "MiniMax-M2.7 (Token Plan)",
-      "serviceType": [
-        "chat"
-      ],
-      "description": "MiniMax Token Plan 默认文本模型，M2.7，204,800 上下文，约 60 TPS 输出",
-      "contextWindow": 204800,
+      "modelName": "MiniMax-M1",
+      "displayName": "MiniMax-M1 (Coding)",
+      "serviceType": ["chat"],
+      "description": "MiniMax Coding Plan，M1 旗舰模型",
+      "contextWindow": 1000000,
       "maxOutputTokens": 131072,
-      "capabilities": [
-        "chat",
-        "reasoning",
-        "code",
-        "tool_use",
-        "long_context"
-      ],
-      "source": "preset",
-      "inputPrice": 0.3,
-      "outputPrice": 1.2,
-      "defaultTemperature": 1,
-      "defaultTopP": 0.95,
-      "extra": {
-        "billing": "token_plan_request_quota",
-        "cacheReadPrice": 0.06,
-        "cacheWritePrice": 0.375,
-        "outputSpeedTps": 60
-      }
-    },
-    {
-      "modelName": "MiniMax-M2.7-highspeed",
-      "displayName": "MiniMax-M2.7 高速版 (Token Plan)",
-      "serviceType": [
-        "fast"
-      ],
-      "description": "MiniMax Token Plan 高速订阅支持模型，M2.7-highspeed，效果与 M2.7 一致但输出更快",
-      "contextWindow": 204800,
-      "maxOutputTokens": 131072,
-      "capabilities": [
-        "chat",
-        "reasoning",
-        "code",
-        "tool_use",
-        "long_context",
-        "fast"
-      ],
-      "source": "preset",
-      "inputPrice": 0.6,
-      "outputPrice": 2.4,
-      "defaultTemperature": 1,
-      "defaultTopP": 0.95,
-      "extra": {
-        "billing": "token_plan_highspeed_request_quota",
-        "cacheReadPrice": 0.06,
-        "cacheWritePrice": 0.375,
-        "outputSpeedTps": 100
-      }
-    },
-    {
-      "modelName": "MiniMax-M2.5",
-      "displayName": "MiniMax-M2.5 (Coding)",
-      "serviceType": [
-        "chat"
-      ],
-      "description": "MiniMax Token Plan，M2.5 模型，204.8K 上下文",
-      "contextWindow": 204800,
-      "maxOutputTokens": 32768,
-      "capabilities": [
-        "chat",
-        "reasoning",
-        "code",
-        "long_context"
-      ],
-      "source": "preset",
-      "inputPrice": 0.3,
-      "outputPrice": 1.2,
-      "defaultTemperature": 1,
-      "defaultTopP": 0.95
+      "capabilities": ["chat", "reasoning", "code", "long_context"],
+      "source": "preset"
     }
   ]
 }

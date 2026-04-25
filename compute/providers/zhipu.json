@@ -19,71 +19,9 @@
   ],
   "models": [
     {
-      "modelName": "glm-5.1",
-      "displayName": "GLM-5.1",
-      "serviceType": [
-        "chat"
-      ],
-      "description": "智谱 GLM-5.1 最新旗舰模型，面向长程 Agentic Coding 与 Autonomous Agent 场景，200K 上下文，128K 最大输出",
-      "contextWindow": 200000,
-      "maxOutputTokens": 128000,
-      "capabilities": [
-        "chat",
-        "reasoning",
-        "code",
-        "multilingual",
-        "deep_thinking",
-        "long_context",
-        "math",
-        "tool_use",
-        "agent"
-      ],
-      "inputPrice": 6,
-      "outputPrice": 24,
-      "defaultTemperature": 1,
-      "defaultTopP": 0.95,
-      "extra": {
-        "cacheHitPrice": 1.2,
-        "thinking": {
-          "default": "enabled"
-        }
-      }
-    },
-    {
-      "modelName": "glm-5-turbo",
-      "displayName": "GLM-5-Turbo",
-      "serviceType": [
-        "chat"
-      ],
-      "description": "智谱 GLM-5-Turbo，面向 OpenClaw 等长链路任务优化，200K 上下文，128K 最大输出",
-      "contextWindow": 200000,
-      "maxOutputTokens": 128000,
-      "capabilities": [
-        "chat",
-        "reasoning",
-        "code",
-        "deep_thinking",
-        "long_context",
-        "tool_use",
-        "agent"
-      ],
-      "inputPrice": 5,
-      "outputPrice": 22,
-      "defaultTemperature": 1,
-      "defaultTopP": 0.95,
-      "extra": {
-        "cacheHitPrice": 1,
-        "thinking": {
-          "default": "enabled"
-        }
-      }
-    },
-    {
       "modelName": "glm-5",
       "displayName": "GLM-5",
-      "serviceType": [
-        "chat"
-      ],
+      "serviceType": ["chat"],
       "description": "智谱GLM-5，744B参数旗舰基座模型，2026年2月发布，面向Agentic Engineering，编程能力接近Claude Opus",
       "contextWindow": 200000,
       "maxOutputTokens": 128000,
@@ -100,18 +38,14 @@
       ],
       "inputPrice": 4,
       "outputPrice": 18,
-      "defaultTemperature": 1,
-      "defaultTopP": 0.95,
-      "extra": {
-        "cacheHitPrice": 0.8
-      }
+      "defaultTemperature": 0.95,
+      "defaultTopP": 0.7,
+      "extra": {}
     },
     {
       "modelName": "glm-4.7",
       "displayName": "GLM-4.7",
-      "serviceType": [
-        "chat"
-      ],
+      "serviceType": ["chat"],
       "description": "智谱GLM-4.7，355B参数MoE架构旗舰模型，200K上下文，编程能力对齐Claude Sonnet",
       "contextWindow": 200000,
       "maxOutputTokens": 128000,
@@ -124,20 +58,16 @@
         "long_context",
         "tool_use"
       ],
-      "inputPrice": 2,
-      "outputPrice": 8,
-      "defaultTemperature": 1,
-      "defaultTopP": 0.95,
-      "extra": {
-        "cacheHitPrice": 0.5
-      }
+      "inputPrice": 4,
+      "outputPrice": 16,
+      "defaultTemperature": 0.95,
+      "defaultTopP": 0.7,
+      "extra": {}
     },
     {
       "modelName": "glm-4.7-thinking",
       "displayName": "GLM-4.7 Thinking",
-      "serviceType": [
-        "reasoning"
-      ],
+      "serviceType": ["reasoning"],
       "description": "智谱GLM-4.7深度思考模式，200K上下文，交错式/保留式/轮级思考",
       "contextWindow": 200000,
       "maxOutputTokens": 128000,
@@ -148,57 +78,19 @@
         "deep_thinking",
         "long_context"
       ],
-      "inputPrice": 2,
-      "outputPrice": 8,
-      "defaultTemperature": 1,
-      "defaultTopP": 0.95,
-      "extra": {
-        "cacheHitPrice": 0.5,
-        "aliasOf": "glm-4.7"
-      }
-    },
-    {
-      "modelName": "glm-5v-turbo",
-      "displayName": "GLM-5V-Turbo",
-      "serviceType": [
-        "vision"
-      ],
-      "description": "智谱首个多模态 Coding 基座模型，支持视频、图像、文本和文件输入，200K 上下文，128K 最大输出",
-      "contextWindow": 200000,
-      "maxOutputTokens": 128000,
-      "capabilities": [
-        "chat",
-        "vision",
-        "video_understanding",
-        "image_understanding",
-        "file_understanding",
-        "reasoning",
-        "code",
-        "deep_thinking",
-        "long_context",
-        "tool_use",
-        "agent"
-      ],
-      "inputPrice": 5,
-      "outputPrice": 22,
-      "defaultTemperature": 1,
-      "defaultTopP": 0.95,
-      "extra": {
-        "cacheHitPrice": 1,
-        "thinking": {
-          "default": "enabled"
-        }
-      }
+      "inputPrice": 8,
+      "outputPrice": 32,
+      "defaultTemperature": 0.95,
+      "defaultTopP": 0.7,
+      "extra": {}
     },
     {
       "modelName": "glm-4.6v",
       "displayName": "GLM-4.6V",
-      "serviceType": [
-        "vision"
-      ],
+      "serviceType": ["vision"],
       "description": "智谱GLM-4.6V多模态版，106B/12B MoE，支持图像视频理解与工具调用，128K上下文",
       "contextWindow": 128000,
-      "maxOutputTokens": 32768,
+      "maxOutputTokens": 8192,
       "capabilities": [
         "chat",
         "vision",
@@ -207,37 +99,28 @@
         "long_context",
         "tool_use"
       ],
-      "inputPrice": 1,
-      "outputPrice": 4,
-      "defaultTemperature": 1,
-      "defaultTopP": 0.95,
-      "extra": {
-        "cacheHitPrice": 0.2
-      }
+      "inputPrice": 8,
+      "outputPrice": 32,
+      "extra": {}
     },
     {
       "modelName": "glm-4.6",
       "displayName": "GLM-4.6",
-      "serviceType": [
-        "chat"
-      ],
-      "description": "智谱GLM-4.6，增强推理能力，200K上下文",
-      "contextWindow": 200000,
-      "maxOutputTokens": 128000,
+      "serviceType": ["chat"],
+      "description": "智谱GLM-4.6，增强推理能力，128K上下文",
+      "contextWindow": 128000,
+      "maxOutputTokens": 8192,
       "capabilities": [
         "chat",
         "reasoning",
         "code",
         "multilingual",
-        "deep_thinking"
+        "deep_thinking",
+        "vision"
       ],
-      "inputPrice": 2,
-      "outputPrice": 8,
-      "defaultTemperature": 1,
-      "defaultTopP": 0.95,
-      "extra": {
-        "cacheHitPrice": 0.5
-      }
+      "inputPrice": 5,
+      "outputPrice": 5,
+      "extra": {}
     }
   ]
 }

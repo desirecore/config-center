@@ -31,10 +31,6 @@
       "serviceType": ["chat"],
       "description": "自动路由最优编程模型（Doubao-Seed-Code / GLM-4.7 / DeepSeek-V3.2 / Kimi-K2 等）",
       "capabilities": ["code", "reasoning", "chat"],
-      "contextWindow": 256000,
-      "maxOutputTokens": 32000,
-      "defaultTemperature": null,
-      "defaultTopP": null,
       "source": "preset"
     }
   ]

@@ -9,19 +9,12 @@
   "enabled": false,
   "status": "unconfigured",
   "priceCurrency": "CNY",
-  "services": [
-    "chat",
-    "fast",
-    "reasoning"
-  ],
+  "services": ["chat", "fast", "reasoning"],
   "models": [
     {
       "modelName": "MiniMax-M2.7",
       "displayName": "MiniMax M2.7",
-      "serviceType": [
-        "chat",
-        "reasoning"
-      ],
+      "serviceType": ["chat", "reasoning"],
       "description": "MiniMax 新一代旗舰模型，擅长复杂 Agent、软件工程与专业办公任务",
       "contextWindow": 204800,
       "maxOutputTokens": 131072,
@@ -31,22 +24,14 @@
         "code",
         "tool_use"
       ],
-      "inputPrice": 2.1,
-      "outputPrice": 8.4,
       "defaultTemperature": 1,
-      "defaultTopP": 0.95,
-      "extra": {
-        "cacheReadPrice": 0.42,
-        "cacheWritePrice": 2.625,
-        "outputSpeedTps": 60
-      }
+      "defaultTopP": 1,
+      "extra": {}
     },
     {
       "modelName": "MiniMax-M2.7-highspeed",
       "displayName": "MiniMax M2.7 高速版",
-      "serviceType": [
-        "fast"
-      ],
+      "serviceType": ["fast"],
       "description": "MiniMax M2.7 极速版，效果一致，输出更快，适合低延迟场景",
       "contextWindow": 204800,
       "maxOutputTokens": 131072,
@@ -57,25 +42,16 @@
         "tool_use",
         "fast"
       ],
-      "inputPrice": 4.2,
-      "outputPrice": 16.8,
       "defaultTemperature": 1,
-      "defaultTopP": 0.95,
-      "extra": {
-        "cacheReadPrice": 0.42,
-        "cacheWritePrice": 2.625,
-        "outputSpeedTps": 100
-      }
+      "defaultTopP": 1,
+      "extra": {}
     },
     {
       "modelName": "MiniMax-M2.5",
       "displayName": "MiniMax M2.5",
-      "serviceType": [
-        "chat",
-        "reasoning"
-      ],
-      "description": "MiniMax M2.5，204.8K 上下文，支持深度推理和工具调用",
-      "contextWindow": 204800,
+      "serviceType": ["chat", "reasoning"],
+      "description": "MiniMax 最新旗舰模型，230B参数(10B激活)MoE架构，百万级上下文，支持深度推理和工具调用",
+      "contextWindow": 1000000,
       "maxOutputTokens": 131072,
       "capabilities": [
         "chat",
@@ -87,21 +63,15 @@
       "inputPrice": 2.1,
       "outputPrice": 8.4,
       "defaultTemperature": 1,
-      "defaultTopP": 0.95,
-      "extra": {
-        "cacheReadPrice": 0.21,
-        "cacheWritePrice": 2.625,
-        "outputSpeedTps": 60
-      }
+      "defaultTopP": 1,
+      "extra": {}
     },
     {
       "modelName": "MiniMax-M2.5-highspeed",
       "displayName": "MiniMax M2.5 高速版",
-      "serviceType": [
-        "fast"
-      ],
+      "serviceType": ["fast"],
       "description": "MiniMax M2.5 高速推理版本(100TPS)，适合低延迟场景",
-      "contextWindow": 204800,
+      "contextWindow": 200000,
       "maxOutputTokens": 131072,
       "capabilities": [
         "chat",
@@ -110,22 +80,16 @@
         "tool_use",
         "fast"
       ],
-      "inputPrice": 4.2,
+      "inputPrice": 2.1,
       "outputPrice": 16.8,
       "defaultTemperature": 1,
-      "defaultTopP": 0.95,
-      "extra": {
-        "cacheReadPrice": 0.21,
-        "cacheWritePrice": 2.625,
-        "outputSpeedTps": 100
-      }
+      "defaultTopP": 1,
+      "extra": {}
     },
     {
       "modelName": "MiniMax-M2.1",
       "displayName": "MiniMax M2.1",
-      "serviceType": [
-        "chat"
-      ],
+      "serviceType": ["chat"],
       "description": "MiniMax 上一代主力模型，200K 上下文，性价比优秀",
       "contextWindow": 204800,
       "maxOutputTokens": 131072,
@@ -138,19 +102,13 @@
       "inputPrice": 2.1,
       "outputPrice": 8.4,
       "defaultTemperature": 1,
-      "defaultTopP": 0.95,
-      "extra": {
-        "cacheReadPrice": 0.21,
-        "cacheWritePrice": 2.625,
-        "outputSpeedTps": 60
-      }
+      "defaultTopP": 1,
+      "extra": {}
     },
     {
       "modelName": "MiniMax-M2.1-highspeed",
       "displayName": "MiniMax M2.1 高速版",
-      "serviceType": [
-        "fast"
-      ],
+      "serviceType": ["fast"],
       "description": "MiniMax M2.1 高速推理版本，适合低延迟场景",
       "contextWindow": 204800,
       "maxOutputTokens": 131072,
@@ -161,22 +119,16 @@
         "tool_use",
         "fast"
       ],
-      "inputPrice": 4.2,
+      "inputPrice": 2.1,
       "outputPrice": 16.8,
       "defaultTemperature": 1,
-      "defaultTopP": 0.95,
-      "extra": {
-        "cacheReadPrice": 0.21,
-        "cacheWritePrice": 2.625,
-        "outputSpeedTps": 100
-      }
+      "defaultTopP": 1,
+      "extra": {}
     },
     {
       "modelName": "MiniMax-Text-01",
       "displayName": "MiniMax Text 01",
-      "serviceType": [
-        "chat"
-      ],
+      "serviceType": ["chat"],
       "description": "MiniMax 百万级长上下文文本模型，擅长长文档处理",
       "contextWindow": 1000000,
       "maxOutputTokens": 131072,
@@ -188,8 +140,8 @@
       ],
       "inputPrice": 1.4,
       "outputPrice": 7.7,
-      "defaultTemperature": 0.1,
-      "defaultTopP": 0.95,
+      "defaultTemperature": 1,
+      "defaultTopP": 1,
       "extra": {}
     }
   ]

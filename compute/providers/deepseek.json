@@ -17,12 +17,10 @@
     {
       "modelName": "deepseek-chat",
       "displayName": "DeepSeek V3.2",
-      "serviceType": [
-        "chat"
-      ],
-      "description": "高性价比通用对话模型，128K 上下文",
-      "contextWindow": 128000,
-      "maxOutputTokens": 8192,
+      "serviceType": ["chat"],
+      "description": "高性价比通用对话模型，64K 上下文",
+      "contextWindow": 64000,
+      "maxOutputTokens": 8000,
       "capabilities": [
         "chat",
         "code",
@@ -30,22 +28,18 @@
         "multilingual"
       ],
       "inputPrice": 2,
-      "outputPrice": 3,
+      "outputPrice": 8,
       "defaultTemperature": 1,
       "defaultTopP": 1,
-      "extra": {
-        "cacheHitPrice": 0.2
-      }
+      "extra": {}
     },
     {
       "modelName": "deepseek-reasoner",
       "displayName": "DeepSeek R1",
-      "serviceType": [
-        "reasoning"
-      ],
-      "description": "DeepSeek V3.2 思考模式，128K 上下文，思维链默认 32K，最大输出 64K",
-      "contextWindow": 128000,
-      "maxOutputTokens": 65536,
+      "serviceType": ["reasoning"],
+      "description": "DeepSeek R1 推理模型，64K 上下文，深度推理能力，思维链最长 32K",
+      "contextWindow": 64000,
+      "maxOutputTokens": 8192,
       "capabilities": [
         "chat",
         "reasoning",
@@ -55,11 +49,9 @@
       ],
       "inputPrice": 4,
       "outputPrice": 16,
-      "defaultTemperature": null,
-      "defaultTopP": null,
-      "extra": {
-        "cacheHitPrice": 0.2
-      }
+      "defaultTemperature": 1,
+      "defaultTopP": 1,
+      "extra": {}
     }
   ]
 }
