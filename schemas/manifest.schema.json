@@ -1,0 +1,30 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://desirecore.net/schemas/config-center/manifest.schema.json",
+  "title": "ConfigCenterManifest",
+  "description": "manifest.json 数据契约。客户端通过 presetDataVersion 判断是否合并更新。",
+  "type": "object",
+  "required": ["version", "presetDataVersion", "updatedAt"],
+  "properties": {
+    "version": {
+      "type": "string",
+      "description": "配置中心格式版本（semver），如 1.0.0",
+      "pattern": "^\\d+\\.\\d+\\.\\d+$"
+    },
+    "presetDataVersion": {
+      "type": "integer",
+      "description": "预置数据版本号（递增整数）。客户端运行时通过此字段决定是否合并新数据。每次内容变更必须递增。",
+      "minimum": 1
+    },
+    "updatedAt": {
+      "type": "string",
+      "description": "最后更新日期，YYYY-MM-DD 格式",
+      "pattern": "^\\d{4}-\\d{2}-\\d{2}$"
+    },
+    "description": {
+      "type": "string",
+      "description": "仓库说明"
+    }
+  },
+  "additionalProperties": false
+}

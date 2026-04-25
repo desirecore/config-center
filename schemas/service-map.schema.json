@@ -1,0 +1,24 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://desirecore.net/schemas/config-center/service-map.schema.json",
+  "title": "ServiceMap",
+  "description": "compute/service-map.json：默认服务到 (provider, model) 的映射。key 为服务类型（chat/reasoning/...），value 指向具体 Provider 和模型。",
+  "type": "object",
+  "additionalProperties": {
+    "type": "object",
+    "required": ["modelName", "providerId"],
+    "properties": {
+      "modelName": {
+        "type": "string",
+        "description": "目标模型 modelName，须与对应 Provider 的 models[].modelName 一致",
+        "minLength": 1
+      },
+      "providerId": {
+        "type": "string",
+        "description": "目标 Provider 的 id 字段",
+        "minLength": 1
+      }
+    },
+    "additionalProperties": false
+  }
+}
