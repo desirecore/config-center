@@ -1,3 +1,5 @@
 node_modules/
 .DS_Store
 *.log
+outputs/field-audit/
+字段取值表/
