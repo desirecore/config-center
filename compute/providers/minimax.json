@@ -29,7 +29,8 @@
         "chat",
         "reasoning",
         "code",
-        "tool_use"
+        "tool_use",
+        "vision"
       ],
       "inputPrice": 2.1,
       "outputPrice": 8.4,
@@ -55,7 +56,8 @@
         "reasoning",
         "code",
         "tool_use",
-        "fast"
+        "fast",
+        "vision"
       ],
       "inputPrice": 4.2,
       "outputPrice": 16.8,

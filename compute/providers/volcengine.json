@@ -35,7 +35,8 @@
         "code",
         "multilingual",
         "long_context",
-        "tool_use"
+        "tool_use",
+        "vision"
       ],
       "inputPrice": 3.2,
       "outputPrice": 16,
@@ -58,7 +59,8 @@
         "code",
         "multilingual",
         "long_context",
-        "tool_use"
+        "tool_use",
+        "vision"
       ],
       "inputPrice": 0.8,
       "outputPrice": 2,
@@ -81,7 +83,8 @@
         "code",
         "multilingual",
         "long_context",
-        "tool_use"
+        "tool_use",
+        "vision"
       ],
       "inputPrice": 0.8,
       "outputPrice": 8,
@@ -124,7 +127,8 @@
         "chat",
         "code",
         "fast",
-        "long_context"
+        "long_context",
+        "vision"
       ],
       "inputPrice": 0.15,
       "outputPrice": 1.5,
