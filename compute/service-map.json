@@ -70,5 +70,9 @@
   "computer_use": {
     "modelName": "claude-sonnet-4-5-computer",
     "providerId": "provider-anthropic-001"
+  },
+  "music_gen": {
+    "modelName": "music-2.6",
+    "providerId": "provider-minimax-001"
   }
 }

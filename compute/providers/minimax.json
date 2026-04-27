@@ -12,7 +12,11 @@
   "services": [
     "chat",
     "fast",
-    "reasoning"
+    "reasoning",
+    "image_gen",
+    "tts",
+    "video_gen",
+    "music_gen"
   ],
   "models": [
     {
@@ -193,6 +197,167 @@
       "defaultTemperature": 0.1,
       "defaultTopP": 0.95,
       "extra": {}
+    },
+    {
+      "modelName": "image-01",
+      "displayName": "MiniMax Image 01",
+      "serviceType": ["image_gen"],
+      "description": "MiniMax 文生图/图生图模型，支持主题参考（角色一致性），最长 1500 字符 prompt",
+      "capabilities": [
+        "image_generation",
+        "subject_reference",
+        "chinese_optimized"
+      ],
+      "extra": {
+        "supportedAspectRatios": ["1:1", "16:9", "9:16", "4:3", "3:4", "3:2", "2:3", "21:9"],
+        "maxPromptLength": 1500,
+        "maxBatchSize": 9,
+        "responseFormats": ["url", "base64"],
+        "urlExpiry": "24h"
+      }
+    },
+    {
+      "modelName": "image-01-live",
+      "displayName": "MiniMax Image 01 Live",
+      "serviceType": ["image_gen"],
+      "description": "MiniMax 文生图模型（Live 版），支持画风控制（漫画/元气/中世纪/水彩）",
+      "capabilities": [
+        "image_generation",
+        "style_control",
+        "subject_reference",
+        "chinese_optimized"
+      ],
+      "extra": {
+        "supportedAspectRatios": ["1:1", "16:9", "9:16", "4:3", "3:4", "3:2", "2:3"],
+        "supportedStyles": ["漫画", "元气", "中世纪", "水彩"],
+        "maxPromptLength": 1500,
+        "maxBatchSize": 9,
+        "responseFormats": ["url", "base64"],
+        "urlExpiry": "24h"
+      }
+    },
+    {
+      "modelName": "speech-2.8-hd",
+      "displayName": "MiniMax Speech 2.8 HD",
+      "serviceType": ["tts"],
+      "description": "MiniMax 最新高清语音合成模型，支持 40+ 语言、100+ 预置音色，毫秒级延迟",
+      "capabilities": [
+        "tts",
+        "multilingual",
+        "emotion_control",
+        "voice_clone",
+        "chinese_optimized"
+      ],
+      "extra": {
+        "maxTextLength": 10000,
+        "supportedFormats": ["mp3", "wav", "pcm", "flac", "aac", "ogg"]
+      }
+    },
+    {
+      "modelName": "speech-2.8-turbo",
+      "displayName": "MiniMax Speech 2.8 Turbo",
+      "serviceType": ["tts"],
+      "description": "MiniMax 快速语音合成模型，速度优先，适合实时场景",
+      "capabilities": [
+        "tts",
+        "multilingual",
+        "emotion_control",
+        "fast",
+        "chinese_optimized"
+      ],
+      "extra": {
+        "maxTextLength": 10000,
+        "supportedFormats": ["mp3", "wav", "pcm", "flac", "aac", "ogg"]
+      }
+    },
+    {
+      "modelName": "MiniMax-Hailuo-2.3",
+      "displayName": "海螺视频 2.3",
+      "serviceType": ["video_gen"],
+      "description": "MiniMax 最新视频生成模型，支持文生视频和图生视频，支持 15 种运镜指令控制",
+      "capabilities": [
+        "video_generation",
+        "text_to_video",
+        "image_to_video",
+        "camera_control",
+        "chinese_optimized",
+        "high_quality"
+      ],
+      "extra": {
+        "maxVideoDuration": 10,
+        "supportedResolutions": ["768p", "1080p"],
+        "maxPromptLength": 2000,
+        "asyncMode": true
+      }
+    },
+    {
+      "modelName": "MiniMax-Hailuo-2.3-Fast",
+      "displayName": "海螺视频 2.3 快速版",
+      "serviceType": ["video_gen"],
+      "description": "海螺视频快速版本（仅图生视频），生成速度更快",
+      "capabilities": [
+        "video_generation",
+        "image_to_video",
+        "camera_control",
+        "fast",
+        "chinese_optimized"
+      ],
+      "extra": {
+        "maxVideoDuration": 10,
+        "supportedResolutions": ["768p", "1080p"],
+        "asyncMode": true
+      }
+    },
+    {
+      "modelName": "T2V-01-Director",
+      "displayName": "海螺视频 Director",
+      "serviceType": ["video_gen"],
+      "description": "导演级文生视频模型，精准运镜控制",
+      "capabilities": [
+        "video_generation",
+        "text_to_video",
+        "camera_control",
+        "chinese_optimized"
+      ],
+      "extra": {
+        "maxVideoDuration": 6,
+        "supportedResolutions": ["720p"],
+        "asyncMode": true
+      }
+    },
+    {
+      "modelName": "music-2.6",
+      "displayName": "MiniMax Music 2.6",
+      "serviceType": ["music_gen"],
+      "description": "MiniMax AI 音乐生成模型，支持音乐灵感描述和歌词输入，可生成带人声或纯音乐",
+      "capabilities": [
+        "music_generation",
+        "lyrics_input",
+        "instrumental",
+        "chinese_optimized"
+      ],
+      "extra": {
+        "maxPromptLength": 2000,
+        "maxLyricsLength": 3500,
+        "outputFormats": ["hex", "url"],
+        "supportedLyricsStructures": ["[Intro]", "[Verse]", "[Pre Chorus]", "[Chorus]", "[Interlude]", "[Bridge]", "[Outro]", "[Hook]", "[Solo]", "[Inst]"]
+      }
+    },
+    {
+      "modelName": "music-cover",
+      "displayName": "MiniMax Music Cover",
+      "serviceType": ["music_gen"],
+      "description": "MiniMax AI 翻唱模型，基于参考音频生成翻唱版本，支持修改歌词",
+      "capabilities": [
+        "music_generation",
+        "cover",
+        "chinese_optimized"
+      ],
+      "extra": {
+        "maxAudioDuration": 360,
+        "maxAudioSize": "50MB",
+        "supportedFormats": ["mp3", "wav", "flac"]
+      }
     }
   ]
 }
