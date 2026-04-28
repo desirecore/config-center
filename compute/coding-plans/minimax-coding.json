@@ -13,87 +13,7 @@
   "accessMode": "coding-plan",
   "services": ["chat", "fast", "reasoning", "image_gen", "tts", "video_gen", "music_gen"],
   "codingPlan": {
-    "quotas": {
-      "text": {
-        "description": "M2.7 文本请求额度，按 5 小时滚动窗口重置",
-        "unit": "requests/5h",
-        "tiers": {
-          "starter": 600,
-          "plus": 1500,
-          "max": 4500,
-          "plus-highspeed": 1500,
-          "max-highspeed": 4500,
-          "ultra-highspeed": 30000
-        }
-      },
-      "speech": {
-        "description": "Speech 2.8 语音合成每日字符额度",
-        "unit": "chars/day",
-        "tiers": {
-          "starter": 0,
-          "plus": 4000,
-          "max": 11000,
-          "plus-highspeed": 9000,
-          "max-highspeed": 19000,
-          "ultra-highspeed": 50000
-        }
-      },
-      "image": {
-        "description": "image-01 图像生成每日额度",
-        "unit": "images/day",
-        "tiers": {
-          "starter": 0,
-          "plus": 50,
-          "max": 120,
-          "plus-highspeed": 100,
-          "max-highspeed": 200,
-          "ultra-highspeed": 800
-        }
-      },
-      "video": {
-        "description": "Hailuo 视频生成每日额度（每种模型独立计算）",
-        "unit": "videos/day",
-        "tiers": {
-          "starter": 0,
-          "plus": 0,
-          "max": 2,
-          "plus-highspeed": 0,
-          "max-highspeed": 3,
-          "ultra-highspeed": 5
-        }
-      },
-      "music": {
-        "description": "Music-2.6 音乐生成每日额度（所有套餐免费，≤5 分钟/首）",
-        "unit": "songs/day",
-        "tiers": {
-          "starter": 100,
-          "plus": 100,
-          "max": 100,
-          "plus-highspeed": 100,
-          "max-highspeed": 100,
-          "ultra-highspeed": 100
-        }
-      }
-    },
-    "pricing": {
-      "currency": "CNY",
-      "monthly": {
-        "starter": 29,
-        "plus": 49,
-        "max": 119,
-        "plus-highspeed": 98,
-        "max-highspeed": 199,
-        "ultra-highspeed": 899
-      },
-      "yearly": {
-        "starter": 290,
-        "plus": 490,
-        "max": 1190,
-        "plus-highspeed": 980,
-        "max-highspeed": 1990,
-        "ultra-highspeed": 8990
-      }
-    },
+    "quotas": {},
     "usageTracking": {
       "method": "rest-api",
       "endpoint": "https://api.minimaxi.com/v1/coding/usage",
@@ -105,7 +25,7 @@
       "modelName": "MiniMax-M2.7",
       "displayName": "MiniMax M2.7 (Token Plan)",
       "serviceType": ["chat", "reasoning"],
-      "description": "MiniMax 新一代旗舰模型，Token Plan 核心文本模型，5 小时滚动窗口计费",
+      "description": "MiniMax 新一代旗舰模型，Token Plan 核心文本模型，5 小时滚动窗口计费。Starter 600次/5h，Plus 1500次/5h，Max 4500次/5h",
       "contextWindow": 204800,
       "maxOutputTokens": 131072,
       "capabilities": ["chat", "reasoning", "code", "tool_use", "vision"],
@@ -115,7 +35,7 @@
       "modelName": "MiniMax-M2.7-highspeed",
       "displayName": "MiniMax M2.7 高速版 (Token Plan)",
       "serviceType": ["fast"],
-      "description": "MiniMax M2.7 极速版，极速套餐专用，效果一致输出更快",
+      "description": "MiniMax M2.7 极速版，极速套餐专用。Plus-极速 1500次/5h，Max-极速 4500次/5h，Ultra-极速 30000次/5h",
       "contextWindow": 204800,
       "maxOutputTokens": 131072,
       "capabilities": ["chat", "reasoning", "code", "tool_use", "vision", "fast"],
@@ -125,7 +45,7 @@
       "modelName": "speech-2.8-hd",
       "displayName": "Speech 2.8 HD (Token Plan)",
       "serviceType": ["tts"],
-      "description": "MiniMax 最新高清语音合成，Token Plan Plus 及以上可用",
+      "description": "MiniMax 最新高清语音合成，Token Plan Plus 及以上可用。Plus 4000字符/天，Max 11000字符/天",
       "capabilities": ["tts", "multilingual", "emotion_control", "voice_clone"],
       "source": "preset"
     },
@@ -141,7 +61,7 @@
       "modelName": "image-01",
       "displayName": "Image 01 (Token Plan)",
       "serviceType": ["image_gen"],
-      "description": "MiniMax 文生图/图生图，Token Plan Plus 及以上可用",
+      "description": "MiniMax 文生图/图生图，Token Plan Plus 及以上可用。Plus 50张/天，Max 120张/天",
       "capabilities": ["image_generation", "subject_reference"],
       "source": "preset"
     },
@@ -157,7 +77,7 @@
       "modelName": "MiniMax-Hailuo-2.3",
       "displayName": "海螺视频 2.3 (Token Plan)",
       "serviceType": ["video_gen"],
-      "description": "海螺视频 2.3，文/图生视频，Token Plan Max 及以上可用",
+      "description": "海螺视频 2.3，文/图生视频，Token Plan Max 及以上可用。Max 2个/天",
       "capabilities": ["video_generation", "text_to_video", "image_to_video", "camera_control"],
       "source": "preset"
     },
@@ -165,7 +85,7 @@
       "modelName": "MiniMax-Hailuo-2.3-Fast",
       "displayName": "海螺视频 2.3 快速版 (Token Plan)",
       "serviceType": ["video_gen"],
-      "description": "海螺视频快速版，Token Plan Max 及以上可用",
+      "description": "海螺视频快速版，Token Plan Max 及以上可用。Max 2个/天",
       "capabilities": ["video_generation", "image_to_video", "fast"],
       "source": "preset"
     },
@@ -173,7 +93,7 @@
       "modelName": "music-2.6",
       "displayName": "Music 2.6 (Token Plan)",
       "serviceType": ["music_gen"],
-      "description": "MiniMax AI 音乐生成，所有 Token Plan 套餐免费使用（100 首/天）",
+      "description": "MiniMax AI 音乐生成，所有 Token Plan 套餐免费使用（100 首/天，≤5分钟/首）",
       "capabilities": ["music_generation", "lyrics_input", "instrumental"],
       "source": "preset"
     }
