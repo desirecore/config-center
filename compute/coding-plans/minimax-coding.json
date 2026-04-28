@@ -2,7 +2,7 @@
   "id": "provider-minimax-coding-001",
   "provider": "minimax",
   "brandGroup": "minimax",
-  "label": "MiniMax Token Plan",
+  "label": "MiniMax Token (Coding) Plan",
   "baseUrl": "https://api.minimaxi.com/v1",
   "apiFormat": "openai-completions",
   "mediaBaseUrl": "https://api.minimaxi.com/v1",

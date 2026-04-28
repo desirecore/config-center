@@ -2,7 +2,7 @@
   "id": "provider-infini-coding-001",
   "provider": "infini",
   "brandGroup": "infini",
-  "label": "无问芯穹 Coding Plan",
+  "label": "无问芯穹 Token (Coding) Plan",
   "baseUrl": "https://cloud.infini-ai.com/maas/coding/v1",
   "apiFormat": "openai-completions",
   "apiKeyRef": "",
@@ -10,7 +10,10 @@
   "enabled": false,
   "status": "unconfigured",
   "accessMode": "coding-plan",
-  "services": ["chat", "reasoning"],
+  "services": [
+    "chat",
+    "reasoning"
+  ],
   "codingPlan": {
     "quotas": {},
     "usageTracking": {
@@ -22,11 +25,18 @@
     {
       "modelName": "deepseek-v3",
       "displayName": "DeepSeek V3 (芯穹 Coding)",
-      "serviceType": ["chat"],
+      "serviceType": [
+        "chat"
+      ],
       "description": "无问芯穹 Coding Plan，DeepSeek V3 编程优化",
       "contextWindow": 128000,
       "maxOutputTokens": 8192,
-      "capabilities": ["chat", "reasoning", "code", "multilingual"],
+      "capabilities": [
+        "chat",
+        "reasoning",
+        "code",
+        "multilingual"
+      ],
       "source": "preset"
     }
   ]

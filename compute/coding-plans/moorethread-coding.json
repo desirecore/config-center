@@ -2,7 +2,7 @@
   "id": "provider-moorethread-coding-001",
   "provider": "moorethread",
   "brandGroup": "moorethread",
-  "label": "摩尔线程 Coding Plan",
+  "label": "摩尔线程 Token (Coding) Plan",
   "baseUrl": "https://api.mthreads.com/v1",
   "apiFormat": "openai-completions",
   "apiKeyRef": "",
@@ -10,7 +10,9 @@
   "enabled": false,
   "status": "unconfigured",
   "accessMode": "coding-plan",
-  "services": ["chat"],
+  "services": [
+    "chat"
+  ],
   "codingPlan": {
     "quotas": {},
     "usageTracking": {
@@ -22,9 +24,14 @@
     {
       "modelName": "mt-coder",
       "displayName": "MT Coder (Coding)",
-      "serviceType": ["chat"],
+      "serviceType": [
+        "chat"
+      ],
       "description": "摩尔线程 Coding Plan，国产 GPU 推理",
-      "capabilities": ["chat", "code"],
+      "capabilities": [
+        "chat",
+        "code"
+      ],
       "source": "preset"
     }
   ]
