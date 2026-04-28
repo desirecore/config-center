@@ -14,6 +14,7 @@
     "chat",
     "fast",
     "reasoning",
+    "vision",
     "image_gen",
     "tts",
     "video_gen",
@@ -179,6 +180,47 @@
       }
     },
     {
+      "modelName": "MiniMax-M2",
+      "displayName": "MiniMax M2",
+      "serviceType": [
+        "chat"
+      ],
+      "description": "MiniMax M2，优化编码和 Agent 工作流",
+      "contextWindow": 204800,
+      "maxOutputTokens": 131072,
+      "capabilities": [
+        "chat",
+        "code",
+        "tool_use"
+      ],
+      "inputPrice": 2.1,
+      "outputPrice": 8.4,
+      "defaultTemperature": 1,
+      "defaultTopP": 0.95,
+      "extra": {
+        "legacy": true
+      }
+    },
+    {
+      "modelName": "M2-her",
+      "displayName": "MiniMax M2 Her",
+      "serviceType": [
+        "chat"
+      ],
+      "description": "MiniMax 角色扮演对话模型，专为多轮角色对话设计",
+      "contextWindow": 204800,
+      "maxOutputTokens": 131072,
+      "capabilities": [
+        "chat",
+        "roleplay"
+      ],
+      "inputPrice": 2.1,
+      "outputPrice": 8.4,
+      "defaultTemperature": 1,
+      "defaultTopP": 0.95,
+      "extra": {}
+    },
+    {
       "modelName": "MiniMax-Text-01",
       "displayName": "MiniMax Text 01",
       "serviceType": [
@@ -272,6 +314,74 @@
       }
     },
     {
+      "modelName": "speech-2.6-hd",
+      "displayName": "MiniMax Speech 2.6 HD",
+      "serviceType": ["tts"],
+      "description": "MiniMax 高清语音合成模型（2.6 版），音质优秀，生成速度快",
+      "capabilities": [
+        "tts",
+        "multilingual",
+        "emotion_control",
+        "voice_clone",
+        "chinese_optimized"
+      ],
+      "extra": {
+        "maxTextLength": 10000,
+        "supportedFormats": ["mp3", "wav", "pcm", "flac", "aac", "ogg"]
+      }
+    },
+    {
+      "modelName": "speech-2.6-turbo",
+      "displayName": "MiniMax Speech 2.6 Turbo",
+      "serviceType": ["tts"],
+      "description": "MiniMax 快速语音合成模型（2.6 版），低延迟响应",
+      "capabilities": [
+        "tts",
+        "multilingual",
+        "emotion_control",
+        "fast",
+        "chinese_optimized"
+      ],
+      "extra": {
+        "maxTextLength": 10000,
+        "supportedFormats": ["mp3", "wav", "pcm", "flac", "aac", "ogg"]
+      }
+    },
+    {
+      "modelName": "speech-02-hd",
+      "displayName": "MiniMax Speech 02 HD",
+      "serviceType": ["tts"],
+      "description": "MiniMax 高清语音合成模型（历史版本），韵律稳定性优秀",
+      "capabilities": [
+        "tts",
+        "multilingual",
+        "voice_clone",
+        "chinese_optimized"
+      ],
+      "extra": {
+        "maxTextLength": 10000,
+        "supportedFormats": ["mp3", "wav", "pcm", "flac", "aac", "ogg"],
+        "legacy": true
+      }
+    },
+    {
+      "modelName": "speech-02-turbo",
+      "displayName": "MiniMax Speech 02 Turbo",
+      "serviceType": ["tts"],
+      "description": "MiniMax 快速语音合成模型（历史版本），增强小语种支持",
+      "capabilities": [
+        "tts",
+        "multilingual",
+        "fast",
+        "chinese_optimized"
+      ],
+      "extra": {
+        "maxTextLength": 10000,
+        "supportedFormats": ["mp3", "wav", "pcm", "flac", "aac", "ogg"],
+        "legacy": true
+      }
+    },
+    {
       "modelName": "MiniMax-Hailuo-2.3",
       "displayName": "海螺视频 2.3",
       "serviceType": ["video_gen"],
@@ -313,7 +423,7 @@
       "modelName": "T2V-01-Director",
       "displayName": "海螺视频 Director",
       "serviceType": ["video_gen"],
-      "description": "导演级文生视频模型，精准运镜控制",
+      "description": "导演级文生视频模型，精准运镜控制（历史版本）",
       "capabilities": [
         "video_generation",
         "text_to_video",
@@ -323,6 +433,39 @@
       "extra": {
         "maxVideoDuration": 6,
         "supportedResolutions": ["720p"],
+        "asyncMode": true,
+        "legacy": true
+      }
+    },
+    {
+      "modelName": "MiniMax-Hailuo-02",
+      "displayName": "海螺视频 02",
+      "serviceType": ["video_gen"],
+      "description": "海螺视频 02，原生 1080P 生成，指令跟随能力强（历史版本）",
+      "capabilities": [
+        "video_generation",
+        "text_to_video",
+        "image_to_video",
+        "chinese_optimized"
+      ],
+      "extra": {
+        "maxVideoDuration": 10,
+        "supportedResolutions": ["512p", "768p", "1080p"],
+        "asyncMode": true,
+        "legacy": true
+      }
+    },
+    {
+      "modelName": "S2V-01",
+      "displayName": "海螺视频 主体参考",
+      "serviceType": ["video_gen"],
+      "description": "主体参考视频生成模型，基于参考图保持角色一致性",
+      "capabilities": [
+        "video_generation",
+        "subject_reference",
+        "chinese_optimized"
+      ],
+      "extra": {
         "asyncMode": true
       }
     },
@@ -342,6 +485,36 @@
         "maxLyricsLength": 3500,
         "outputFormats": ["hex", "url"],
         "supportedLyricsStructures": ["[Intro]", "[Verse]", "[Pre Chorus]", "[Chorus]", "[Interlude]", "[Bridge]", "[Outro]", "[Hook]", "[Solo]", "[Inst]"]
+      }
+    },
+    {
+      "modelName": "music-2.5+",
+      "displayName": "MiniMax Music 2.5+",
+      "serviceType": ["music_gen"],
+      "description": "MiniMax AI 音乐生成模型（2.5+ 版），音质提升",
+      "capabilities": [
+        "music_generation",
+        "lyrics_input",
+        "instrumental",
+        "chinese_optimized"
+      ],
+      "extra": {
+        "outputFormats": ["hex", "url"]
+      }
+    },
+    {
+      "modelName": "music-2.5",
+      "displayName": "MiniMax Music 2.5",
+      "serviceType": ["music_gen"],
+      "description": "MiniMax AI 音乐生成模型（2.5 版）",
+      "capabilities": [
+        "music_generation",
+        "lyrics_input",
+        "instrumental",
+        "chinese_optimized"
+      ],
+      "extra": {
+        "outputFormats": ["hex", "url"]
       }
     },
     {
