@@ -41,6 +41,10 @@
       "type": "string",
       "description": "API 协议格式：openai-completions、anthropic-messages、openai-responses、google-generative-ai 等"
     },
+    "mediaBaseUrl": {
+      "type": "string",
+      "description": "媒体 API 基础 URL。当 provider 使用 Anthropic 格式（baseUrl 指向 /anthropic 端点）但其媒体 API（图片/语音/视频/音乐）仍走 OpenAI /v1 端点时使用"
+    },
     "apiKeyRef": {
       "type": "string",
       "description": "密钥引用名，对应 secrets.json 中的 key；空字符串表示未配置密钥"
