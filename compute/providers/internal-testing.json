@@ -23,7 +23,8 @@
         "chat"
       ],
       "description": "MiniMax M2.7 高速版，低延迟吞吐优化，200K 上下文",
-      "contextWindow": 204800,
+      "contextWindow": 102400,
+      "_contextWindowNote": "临时减半，原值 204800",
       "maxOutputTokens": 8192,
       "capabilities": [
         "chat",
@@ -43,7 +44,8 @@
         "chat"
       ],
       "description": "智谱 GLM-5.1 新一代旗舰模型，编程与推理能力断档领先，200K 上下文",
-      "contextWindow": 200000,
+      "contextWindow": 100000,
+      "_contextWindowNote": "临时减半，原值 200000",
       "maxOutputTokens": 128000,
       "capabilities": [
         "chat",
@@ -66,7 +68,8 @@
         "chat"
       ],
       "description": "智谱 GLM-5 大语言模型，200K 上下文",
-      "contextWindow": 200000,
+      "contextWindow": 100000,
+      "_contextWindowNote": "临时减半，原值 200000",
       "maxOutputTokens": 128000,
       "capabilities": [
         "chat",
@@ -86,7 +89,8 @@
         "chat"
       ],
       "description": "智谱 GLM-5-Turbo 大语言模型，更快的推理速度",
-      "contextWindow": 200000,
+      "contextWindow": 100000,
+      "_contextWindowNote": "临时减半，原值 200000",
       "maxOutputTokens": 128000,
       "capabilities": [
         "chat",
@@ -106,7 +110,8 @@
         "chat"
       ],
       "description": "智谱 GLM-4.7 大语言模型",
-      "contextWindow": 200000,
+      "contextWindow": 100000,
+      "_contextWindowNote": "临时减半，原值 200000",
       "maxOutputTokens": 128000,
       "capabilities": [
         "chat",
@@ -126,7 +131,8 @@
         "chat"
       ],
       "description": "月之暗面 Kimi K2.6 Code Preview，万亿参数 MoE 架构（32B 激活），256K 上下文，代码与智能体能力增强",
-      "contextWindow": 256000,
+      "contextWindow": 128000,
+      "_contextWindowNote": "临时减半，原值 256000",
       "maxOutputTokens": 32768,
       "capabilities": [
         "chat",
@@ -150,7 +156,8 @@
         "chat"
       ],
       "description": "月之暗面 Kimi-2.5 大语言模型",
-      "contextWindow": 256000,
+      "contextWindow": 128000,
+      "_contextWindowNote": "临时减半，原值 256000",
       "maxOutputTokens": 32768,
       "capabilities": [
         "chat",
@@ -174,7 +181,8 @@
         "chat"
       ],
       "description": "MiniMax M2.5 大语言模型",
-      "contextWindow": 204800,
+      "contextWindow": 102400,
+      "_contextWindowNote": "临时减半，原值 204800",
       "maxOutputTokens": 8192,
       "capabilities": [
         "chat",
@@ -196,7 +204,8 @@
         "chat"
       ],
       "description": "阿里通义千问 Qwen3.6 Plus，原生 1M 上下文，Hybrid MoE 架构，内置 CoT 推理",
-      "contextWindow": 1000000,
+      "contextWindow": 500000,
+      "_contextWindowNote": "临时减半，原值 1000000",
       "maxOutputTokens": 65536,
       "capabilities": [
         "chat",
@@ -220,7 +229,8 @@
         "chat"
       ],
       "description": "阿里通义千问 Qwen3.5 Plus",
-      "contextWindow": 1000000,
+      "contextWindow": 500000,
+      "_contextWindowNote": "临时减半，原值 1000000",
       "maxOutputTokens": 65536,
       "capabilities": [
         "chat",
@@ -244,7 +254,8 @@
         "chat"
       ],
       "description": "阿里通义千问 Qwen3.5 35B-A3B MoE 模型（35B 总参/3B 激活），262K 上下文",
-      "contextWindow": 262144,
+      "contextWindow": 131072,
+      "_contextWindowNote": "临时减半，原值 262144",
       "maxOutputTokens": 65536,
       "capabilities": [
         "chat",
@@ -266,7 +277,8 @@
         "chat"
       ],
       "description": "阿里通义千问 Qwen3.5 27B Dense 模型，262K 上下文",
-      "contextWindow": 262144,
+      "contextWindow": 131072,
+      "_contextWindowNote": "临时减半，原值 262144",
       "maxOutputTokens": 65536,
       "capabilities": [
         "chat",
@@ -288,7 +300,8 @@
         "chat"
       ],
       "description": "阿里通义千问 Qwen3 Max (2026-01-23)",
-      "contextWindow": 262144,
+      "contextWindow": 131072,
+      "_contextWindowNote": "临时减半，原值 262144",
       "maxOutputTokens": 32768,
       "capabilities": [
         "chat",
@@ -312,7 +325,8 @@
         "chat"
       ],
       "description": "字节跳动豆包 Seed 2.0 Code Preview (260215)",
-      "contextWindow": 256000,
+      "contextWindow": 128000,
+      "_contextWindowNote": "临时减半，原值 256000",
       "maxOutputTokens": 128000,
       "capabilities": [
         "chat",
