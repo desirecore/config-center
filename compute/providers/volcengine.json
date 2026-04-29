@@ -21,12 +21,12 @@
   ],
   "models": [
     {
-      "modelName": "doubao-2.0-pro",
+      "modelName": "doubao-seed-2.0-pro",
       "displayName": "豆包 2.0 Pro",
       "serviceType": [
         "chat"
       ],
-      "description": "火山引擎豆包2.0旗舰模型，256K上下文，相比Gemini 3 Pro和GPT 5.2有较大成本优势",
+      "description": "火山引擎豆包 Seed 2.0 旗舰模型，256K上下文，支持复杂推理、Agent 和多模态理解",
       "contextWindow": 256000,
       "maxOutputTokens": 128000,
       "capabilities": [
@@ -42,7 +42,152 @@
       "outputPrice": 16,
       "defaultTemperature": 1,
       "defaultTopP": 0.7,
-      "extra": {}
+      "extra": {
+        "pricingTiers": [
+          {
+            "maxInputTokens": 32000,
+            "inputPrice": 3.2,
+            "outputPrice": 16
+          },
+          {
+            "maxInputTokens": 128000,
+            "inputPrice": 4.8,
+            "outputPrice": 24
+          },
+          {
+            "maxInputTokens": 256000,
+            "inputPrice": 9.6,
+            "outputPrice": 48
+          }
+        ]
+      }
+    },
+    {
+      "modelName": "doubao-seed-2.0-lite",
+      "displayName": "豆包 2.0 Lite",
+      "serviceType": [
+        "chat"
+      ],
+      "description": "火山引擎豆包 Seed 2.0 均衡模型，256K上下文，适合通用生产任务",
+      "contextWindow": 256000,
+      "maxOutputTokens": 32000,
+      "capabilities": [
+        "chat",
+        "reasoning",
+        "code",
+        "multilingual",
+        "long_context",
+        "tool_use",
+        "vision"
+      ],
+      "inputPrice": 0.6,
+      "outputPrice": 3.6,
+      "defaultTemperature": 1,
+      "defaultTopP": 0.7,
+      "extra": {
+        "pricingTiers": [
+          {
+            "maxInputTokens": 32000,
+            "inputPrice": 0.6,
+            "outputPrice": 3.6
+          },
+          {
+            "maxInputTokens": 128000,
+            "inputPrice": 0.9,
+            "outputPrice": 5.4
+          },
+          {
+            "maxInputTokens": 256000,
+            "inputPrice": 1.8,
+            "outputPrice": 10.8
+          }
+        ]
+      }
+    },
+    {
+      "modelName": "doubao-seed-2.0-mini",
+      "displayName": "豆包 2.0 Mini",
+      "serviceType": [
+        "chat"
+      ],
+      "description": "火山引擎豆包 Seed 2.0 轻量模型，256K上下文，适合低延迟和高并发场景",
+      "contextWindow": 256000,
+      "maxOutputTokens": 32000,
+      "capabilities": [
+        "chat",
+        "reasoning",
+        "code",
+        "multilingual",
+        "long_context",
+        "tool_use",
+        "vision",
+        "fast"
+      ],
+      "inputPrice": 0.2,
+      "outputPrice": 2,
+      "defaultTemperature": 1,
+      "defaultTopP": 0.7,
+      "extra": {
+        "pricingTiers": [
+          {
+            "maxInputTokens": 32000,
+            "inputPrice": 0.2,
+            "outputPrice": 2
+          },
+          {
+            "maxInputTokens": 128000,
+            "inputPrice": 0.4,
+            "outputPrice": 4
+          },
+          {
+            "maxInputTokens": 256000,
+            "inputPrice": 0.8,
+            "outputPrice": 8
+          }
+        ]
+      }
+    },
+    {
+      "modelName": "doubao-seed-2.0-code",
+      "displayName": "豆包 2.0 Code",
+      "serviceType": [
+        "chat"
+      ],
+      "description": "火山引擎豆包 Seed 2.0 编程模型，面向 Agentic Coding 场景优化",
+      "contextWindow": 256000,
+      "maxOutputTokens": 128000,
+      "capabilities": [
+        "chat",
+        "reasoning",
+        "code",
+        "long_context",
+        "tool_use",
+        "vision",
+        "deep_thinking"
+      ],
+      "inputPrice": 3.2,
+      "outputPrice": 16,
+      "defaultTemperature": 1,
+      "defaultTopP": 0.7,
+      "extra": {
+        "pricingTiers": [
+          {
+            "maxInputTokens": 32000,
+            "inputPrice": 3.2,
+            "outputPrice": 16
+          },
+          {
+            "maxInputTokens": 128000,
+            "inputPrice": 4.8,
+            "outputPrice": 24
+          },
+          {
+            "maxInputTokens": 256000,
+            "inputPrice": 9.6,
+            "outputPrice": 48
+          }
+        ]
+      }
     },
     {
       "modelName": "doubao-seed-1.8",
@@ -63,10 +208,29 @@
         "vision"
       ],
       "inputPrice": 0.8,
-      "outputPrice": 2,
+      "outputPrice": 8,
       "defaultTemperature": 1,
       "defaultTopP": 0.7,
-      "extra": {}
+      "extra": {
+        "pricingTiers": [
+          {
+            "maxInputTokens": 32000,
+            "inputPrice": 0.8,
+            "outputPrice": 8,
+            "pricingNotes": "Short outputs up to 0.2K tokens are priced at 2 CNY/M output tokens."
+          },
+          {
+            "maxInputTokens": 128000,
+            "inputPrice": 1.2,
+            "outputPrice": 16
+          },
+          {
+            "maxInputTokens": 256000,
+            "inputPrice": 2.4,
+            "outputPrice": 24
+          }
+        ]
+      }
     },
     {
       "modelName": "doubao-seed-1.6",
@@ -90,7 +254,26 @@
       "outputPrice": 8,
       "defaultTemperature": 1,
       "defaultTopP": 0.7,
-      "extra": {}
+      "extra": {
+        "pricingTiers": [
+          {
+            "maxInputTokens": 32000,
+            "inputPrice": 0.8,
+            "outputPrice": 8,
+            "pricingNotes": "Short outputs up to 0.2K tokens are priced at 2 CNY/M output tokens."
+          },
+          {
+            "maxInputTokens": 128000,
+            "inputPrice": 1.2,
+            "outputPrice": 16
+          },
+          {
+            "maxInputTokens": 256000,
+            "inputPrice": 2.4,
+            "outputPrice": 24
+          }
+        ]
+      }
     },
     {
       "modelName": "doubao-seed-1.6-thinking",
@@ -151,10 +334,28 @@
         "fast"
       ],
       "inputPrice": 0.3,
-      "outputPrice": 0.6,
+      "outputPrice": 2.4,
       "defaultTemperature": 1,
       "defaultTopP": 0.7,
-      "extra": {}
+      "extra": {
+        "pricingTiers": [
+          {
+            "maxInputTokens": 32000,
+            "inputPrice": 0.3,
+            "outputPrice": 2.4
+          },
+          {
+            "maxInputTokens": 128000,
+            "inputPrice": 0.6,
+            "outputPrice": 4
+          },
+          {
+            "maxInputTokens": 256000,
+            "inputPrice": 1.2,
+            "outputPrice": 12
+          }
+        ]
+      }
     },
     {
       "modelName": "doubao-seed-1.6-vision",
@@ -241,58 +442,29 @@
       "extra": {}
     },
     {
-      "modelName": "kimi-k2-volcengine",
-      "displayName": "Kimi K2 (火山引擎)",
-      "serviceType": [
-        "chat"
-      ],
-      "description": "火山引擎托管的Kimi K2，万亿参数MoE模型，128K上下文",
-      "contextWindow": 256000,
-      "maxOutputTokens": 8192,
-      "capabilities": [
-        "chat",
-        "reasoning",
-        "code",
-        "tool_use",
-        "agent",
-        "long_context"
-      ],
-      "inputPrice": 4,
-      "outputPrice": 16,
-      "defaultTemperature": 0.6,
-      "defaultTopP": 1,
-      "extra": {}
-    },
-    {
-      "modelName": "glm-4-7",
-      "displayName": "GLM-4.7 (火山引擎)",
-      "serviceType": [
-        "chat"
-      ],
-      "description": "火山引擎托管的智谱GLM-4.7，200K上下文",
-      "contextWindow": 200000,
-      "maxOutputTokens": 128000,
-      "capabilities": [
-        "chat",
-        "reasoning",
-        "code",
-        "multilingual",
-        "deep_thinking",
-        "long_context"
-      ],
-      "inputPrice": 4,
-      "outputPrice": 16,
-      "defaultTemperature": 1,
-      "defaultTopP": 0.95,
-      "extra": {}
-    },
-    {
       "modelName": "doubao-embedding",
       "displayName": "豆包 Embedding",
       "serviceType": [
         "embedding"
       ],
-      "description": "火山引擎豆包标准向量模型，2560维度",
+      "description": "火山引擎豆包标准向量模型，默认2048维度，可选512/1024/2048维度",
+      "contextWindow": 4096,
+      "capabilities": [
+        "text_embedding",
+        "semantic_search",
+        "rag",
+        "chinese_optimized"
+      ],
+      "inputPrice": 0.5,
+      "extra": {}
+    },
+    {
+      "modelName": "doubao-embedding-large",
+      "displayName": "豆包 Embedding Large",
+      "serviceType": [
+        "embedding"
+      ],
+      "description": "火山引擎豆包大号向量模型，默认2048维度，可选512/1024/2048/4096维度",
       "contextWindow": 4096,
       "capabilities": [
         "text_embedding",
