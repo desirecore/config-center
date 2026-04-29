@@ -319,12 +319,12 @@
       "extra": {}
     },
     {
-      "modelName": "doubao-seed-2-0-code-preview-260215",
-      "displayName": "豆包 Seed 2.0 Code Preview",
+      "modelName": "doubao-seed-2.0-code",
+      "displayName": "豆包 Seed 2.0 Code",
       "serviceType": [
         "chat"
       ],
-      "description": "字节跳动豆包 Seed 2.0 Code Preview (260215)",
+      "description": "字节跳动豆包 Seed 2.0 Code",
       "contextWindow": 128000,
       "_contextWindowNote": "临时减半，原值 256000",
       "maxOutputTokens": 128000,

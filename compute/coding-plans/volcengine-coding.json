@@ -34,11 +34,133 @@
       "serviceType": [
         "chat"
       ],
-      "description": "自动路由最优编程模型（Doubao-Seed-Code / GLM-4.7 / DeepSeek-V3.2 / Kimi-K2 等）",
+      "description": "自动路由最优编程模型（Doubao Seed Code / GLM-4.7 / DeepSeek-V3.2 / Kimi-K2.5 等）",
       "capabilities": [
         "code",
         "reasoning",
         "chat"
+      ],
+      "source": "preset"
+    },
+    {
+      "modelName": "doubao-seed-2.0-code",
+      "displayName": "豆包 Seed 2.0 Code",
+      "serviceType": [
+        "chat"
+      ],
+      "description": "火山方舟 Coding Plan 中的豆包 Seed 2.0 编程模型",
+      "capabilities": [
+        "code",
+        "reasoning",
+        "chat",
+        "long_context"
+      ],
+      "source": "preset"
+    },
+    {
+      "modelName": "doubao-seed-2.0-pro",
+      "displayName": "豆包 Seed 2.0 Pro",
+      "serviceType": [
+        "chat"
+      ],
+      "description": "火山方舟 Coding Plan 中的豆包 Seed 2.0 旗舰模型",
+      "capabilities": [
+        "code",
+        "reasoning",
+        "chat",
+        "long_context",
+        "vision"
+      ],
+      "source": "preset"
+    },
+    {
+      "modelName": "doubao-seed-2.0-lite",
+      "displayName": "豆包 Seed 2.0 Lite",
+      "serviceType": [
+        "chat"
+      ],
+      "description": "火山方舟 Coding Plan 中的豆包 Seed 2.0 均衡模型",
+      "capabilities": [
+        "code",
+        "reasoning",
+        "chat",
+        "long_context",
+        "vision"
+      ],
+      "source": "preset"
+    },
+    {
+      "modelName": "doubao-seed-code",
+      "displayName": "豆包 Seed Code",
+      "serviceType": [
+        "chat"
+      ],
+      "description": "火山方舟 Coding Plan 中的豆包编程模型",
+      "capabilities": [
+        "code",
+        "reasoning",
+        "chat",
+        "long_context"
+      ],
+      "source": "preset"
+    },
+    {
+      "modelName": "glm-4.7",
+      "displayName": "GLM-4.7",
+      "serviceType": [
+        "chat"
+      ],
+      "description": "火山方舟 Coding Plan 中的智谱 GLM-4.7 模型",
+      "capabilities": [
+        "code",
+        "reasoning",
+        "chat",
+        "long_context"
+      ],
+      "source": "preset"
+    },
+    {
+      "modelName": "deepseek-v3.2",
+      "displayName": "DeepSeek V3.2",
+      "serviceType": [
+        "chat"
+      ],
+      "description": "火山方舟 Coding Plan 中的 DeepSeek V3.2 模型",
+      "capabilities": [
+        "code",
+        "reasoning",
+        "chat"
+      ],
+      "source": "preset"
+    },
+    {
+      "modelName": "kimi-k2.5",
+      "displayName": "Kimi K2.5",
+      "serviceType": [
+        "chat"
+      ],
+      "description": "火山方舟 Coding Plan 中的 Kimi K2.5 模型",
+      "capabilities": [
+        "code",
+        "reasoning",
+        "chat",
+        "agent",
+        "long_context"
+      ],
+      "source": "preset"
+    },
+    {
+      "modelName": "minimax-m2.5",
+      "displayName": "MiniMax M2.5",
+      "serviceType": [
+        "chat"
+      ],
+      "description": "火山方舟 Coding Plan 中的 MiniMax M2.5 模型",
+      "capabilities": [
+        "code",
+        "reasoning",
+        "chat",
+        "agent"
       ],
       "source": "preset"
     }
