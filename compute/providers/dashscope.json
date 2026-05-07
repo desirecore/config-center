@@ -563,6 +563,56 @@
       }
     },
     {
+      "modelName": "qwen-image-2.0-pro",
+      "displayName": "千问图像 2.0 Pro",
+      "serviceType": [
+        "image_gen"
+      ],
+      "description": "千问图像生成 2.0 Pro 旗舰版，高画质多风格",
+      "capabilities": [
+        "image_generation",
+        "chinese_optimized",
+        "high_quality"
+      ],
+      "extra": {
+        "endpoint": "/services/aigc/image-generation/generation",
+        "asyncHeader": "X-DashScope-Async",
+        "taskQueryEndpoint": "/tasks",
+        "supportedImageSizes": [
+          "512*512",
+          "1024*1024",
+          "1280*1280",
+          "1664*928",
+          "928*1664"
+        ],
+        "maxN": 4
+      }
+    },
+    {
+      "modelName": "qwen-image-2.0",
+      "displayName": "千问图像 2.0",
+      "serviceType": [
+        "image_gen"
+      ],
+      "description": "千问图像生成 2.0 标准版",
+      "capabilities": [
+        "image_generation",
+        "chinese_optimized"
+      ],
+      "extra": {
+        "endpoint": "/services/aigc/image-generation/generation",
+        "asyncHeader": "X-DashScope-Async",
+        "taskQueryEndpoint": "/tasks",
+        "supportedImageSizes": [
+          "512*512",
+          "1024*1024",
+          "1280*1280",
+          "2048*2048"
+        ],
+        "maxN": 4
+      }
+    },
+    {
       "modelName": "wan2.6-t2v",
       "displayName": "通义万相 2.6 文生视频",
       "serviceType": [
