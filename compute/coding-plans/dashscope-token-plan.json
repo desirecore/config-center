@@ -10,16 +10,16 @@
   "apiKeyVerified": false,
   "enabled": false,
   "status": "unconfigured",
-  "accessMode": "token-plan",
+  "accessMode": "coding-plan",
   "services": [
     "chat",
     "reasoning",
     "image_gen"
   ],
-  "tokenPlan": {
+  "codingPlan": {
     "quotas": {},
     "usageTracking": {
-      "method": "credits",
+      "method": "none",
       "consoleUrl": "https://bailian.console.aliyun.com/"
     }
   },
