@@ -74,8 +74,8 @@
     },
     "accessMode": {
       "type": "string",
-      "enum": ["api", "coding-plan"],
-      "description": "接入模式：api（按量付费）或 coding-plan（编程订阅套餐）"
+      "enum": ["api", "coding-plan", "token-plan"],
+      "description": "接入模式：api（按量付费）、coding-plan（编程订阅套餐）或 token-plan（Token 团队版订阅）"
     },
     "brandGroup": {
       "type": "string",
@@ -83,7 +83,7 @@
     },
     "codingPlan": {
       "type": "object",
-      "description": "Coding Plan 专属配置（仅当 accessMode = coding-plan 时有效）",
+      "description": "Coding Plan / Token Plan 专属配置（仅当 accessMode = coding-plan 或 token-plan 时有效）",
       "properties": {
         "planTier": { "type": "string" },
         "planLabel": { "type": "string" },
@@ -102,7 +102,50 @@
           "properties": {
             "method": {
               "type": "string",
-              "enum": ["rest-api", "response-header", "manual", "none"]
+              "enum": ["rest-api", "response-header", "manual", "credits", "none"]
+            },
+            "endpoint": { "type": "string" },
+            "headerKeys": {
+              "type": "object",
+              "properties": {
+                "remaining": { "type": "string" },
+                "limit": { "type": "string" },
+                "reset": { "type": "string" }
+              },
+              "additionalProperties": false
+            },
+            "consoleUrl": { "type": "string" }
+          },
+          "additionalProperties": false
+        },
+        "modelIdOverride": { "type": "string" },
+        "maxConcurrent": { "type": "number", "minimum": 1 },
+        "expiresAt": { "type": "string", "format": "date-time" }
+      },
+      "additionalProperties": false
+    },
+    "tokenPlan": {
+      "type": "object",
+      "description": "Token Plan 团队版专属配置（仅当 accessMode = token-plan 时有效）",
+      "properties": {
+        "planTier": { "type": "string" },
+        "planLabel": { "type": "string" },
+        "quotas": {
+          "type": "object",
+          "properties": {
+            "per5h": { "type": "number", "minimum": 0 },
+            "perWeek": { "type": "number", "minimum": 0 },
+            "perMonth": { "type": "number", "minimum": 0 },
+            "per7d": { "type": "number", "minimum": 0 }
+          },
+          "additionalProperties": false
+        },
+        "usageTracking": {
+          "type": "object",
+          "properties": {
+            "method": {
+              "type": "string",
+              "enum": ["rest-api", "response-header", "manual", "credits", "none"]
             },
             "endpoint": { "type": "string" },
             "headerKeys": {
