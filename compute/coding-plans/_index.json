@@ -1,8 +1,9 @@
 {
-  "description": "Coding Plan 预设加载顺序索引",
+  "description": "Coding Plan / Token Plan 预设加载顺序索引",
   "order": [
     "zhipu-coding",
     "dashscope-coding",
+    "dashscope-token-plan",
     "volcengine-coding",
     "minimax-coding",
     "moonshot-coding",

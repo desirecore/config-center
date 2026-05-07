@@ -2,7 +2,7 @@
   "id": "provider-dashscope-coding-001",
   "provider": "dashscope",
   "brandGroup": "dashscope",
-  "label": "百炼 Token (Coding) Plan",
+  "label": "百炼 Coding Plan",
   "baseUrl": "https://coding.dashscope.aliyuncs.com/v1",
   "apiFormat": "openai-completions",
   "apiKeyRef": "",
@@ -23,14 +23,53 @@
   },
   "models": [
     {
+      "modelName": "qwen3.6-plus",
+      "displayName": "Qwen3.6 Plus (Coding)",
+      "serviceType": [
+        "chat"
+      ],
+      "description": "百炼 Coding Plan，通义千问 3.6 Plus 旗舰模型，1M 上下文",
+      "contextWindow": 1000000,
+      "maxOutputTokens": 65536,
+      "capabilities": [
+        "chat",
+        "reasoning",
+        "code",
+        "vision",
+        "tool_use",
+        "agent",
+        "long_context"
+      ],
+      "source": "preset"
+    },
+    {
+      "modelName": "qwen3.5-plus",
+      "displayName": "Qwen3.5 Plus (Coding)",
+      "serviceType": [
+        "chat"
+      ],
+      "description": "百炼 Coding Plan，通义千问 3.5 Plus，1M 上下文",
+      "contextWindow": 1000000,
+      "maxOutputTokens": 65536,
+      "capabilities": [
+        "chat",
+        "reasoning",
+        "code",
+        "vision",
+        "tool_use",
+        "long_context"
+      ],
+      "source": "preset"
+    },
+    {
       "modelName": "qwen3-coder-plus",
       "displayName": "Qwen3 Coder Plus (Coding)",
       "serviceType": [
         "chat"
       ],
-      "description": "阿里云百炼 Coding Plan，Qwen3 编程增强版",
-      "contextWindow": 131072,
-      "maxOutputTokens": 16384,
+      "description": "百炼 Coding Plan，Qwen3 编程增强版，1M 上下文",
+      "contextWindow": 1000000,
+      "maxOutputTokens": 65536,
       "capabilities": [
         "chat",
         "reasoning",
@@ -40,14 +79,31 @@
       "source": "preset"
     },
     {
-      "modelName": "qwen3-max",
+      "modelName": "qwen3-coder-next",
+      "displayName": "Qwen3 Coder Next (Coding)",
+      "serviceType": [
+        "chat"
+      ],
+      "description": "百炼 Coding Plan，Qwen3 编程下一代实验模型，262K 上下文",
+      "contextWindow": 262144,
+      "maxOutputTokens": 65536,
+      "capabilities": [
+        "chat",
+        "reasoning",
+        "code",
+        "tool_use"
+      ],
+      "source": "preset"
+    },
+    {
+      "modelName": "qwen3-max-2026-01-23",
       "displayName": "Qwen3 Max (Coding)",
       "serviceType": [
         "chat"
       ],
-      "description": "阿里云百炼 Coding Plan，Qwen3 Max 旗舰模型",
-      "contextWindow": 131072,
-      "maxOutputTokens": 16384,
+      "description": "百炼 Coding Plan，Qwen3 Max 旗舰模型，262K 上下文",
+      "contextWindow": 262144,
+      "maxOutputTokens": 65536,
       "capabilities": [
         "chat",
         "reasoning",
@@ -56,6 +112,78 @@
         "tool_use",
         "long_context",
         "vision"
+      ],
+      "source": "preset"
+    },
+    {
+      "modelName": "kimi-k2.5",
+      "displayName": "Kimi K2.5 (Coding)",
+      "serviceType": [
+        "chat"
+      ],
+      "description": "百炼 Coding Plan，月之暗面 Kimi K2.5，262K 上下文",
+      "contextWindow": 262144,
+      "maxOutputTokens": 32768,
+      "capabilities": [
+        "chat",
+        "reasoning",
+        "code",
+        "tool_use",
+        "agent",
+        "vision",
+        "long_context"
+      ],
+      "source": "preset"
+    },
+    {
+      "modelName": "glm-5",
+      "displayName": "GLM-5 (Coding)",
+      "serviceType": [
+        "chat"
+      ],
+      "description": "百炼 Coding Plan，智谱 GLM-5，200K 上下文",
+      "contextWindow": 202752,
+      "maxOutputTokens": 128000,
+      "capabilities": [
+        "chat",
+        "reasoning",
+        "code",
+        "tool_use",
+        "agent"
+      ],
+      "source": "preset"
+    },
+    {
+      "modelName": "glm-4.7",
+      "displayName": "GLM-4.7 (Coding)",
+      "serviceType": [
+        "chat"
+      ],
+      "description": "百炼 Coding Plan，智谱 GLM-4.7，200K 上下文",
+      "contextWindow": 202752,
+      "maxOutputTokens": 128000,
+      "capabilities": [
+        "chat",
+        "reasoning",
+        "code"
+      ],
+      "source": "preset"
+    },
+    {
+      "modelName": "MiniMax-M2.5",
+      "displayName": "MiniMax M2.5 (Coding)",
+      "serviceType": [
+        "chat"
+      ],
+      "description": "百炼 Coding Plan，MiniMax M2.5，196K 上下文",
+      "contextWindow": 196608,
+      "maxOutputTokens": 8192,
+      "capabilities": [
+        "chat",
+        "reasoning",
+        "code",
+        "tool_use",
+        "long_context"
       ],
       "source": "preset"
     }
