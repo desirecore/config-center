@@ -1,0 +1,208 @@
+{
+  "id": "provider-dashscope-token-plan-001",
+  "provider": "dashscope",
+  "brandGroup": "dashscope",
+  "label": "百炼 Token Plan",
+  "baseUrl": "https://token-plan.cn-beijing.maas.aliyuncs.com/compatible-mode/v1",
+  "mediaBaseUrl": "https://dashscope.aliyuncs.com/api/v1",
+  "apiFormat": "openai-completions",
+  "apiKeyRef": "",
+  "apiKeyVerified": false,
+  "enabled": false,
+  "status": "unconfigured",
+  "accessMode": "token-plan",
+  "services": [
+    "chat",
+    "reasoning",
+    "image_gen"
+  ],
+  "tokenPlan": {
+    "quotas": {},
+    "usageTracking": {
+      "method": "credits",
+      "consoleUrl": "https://bailian.console.aliyun.com/"
+    }
+  },
+  "models": [
+    {
+      "modelName": "qwen3.6-plus",
+      "displayName": "Qwen3.6 Plus (Token Plan)",
+      "serviceType": [
+        "chat"
+      ],
+      "description": "百炼 Token Plan，通义千问 3.6 Plus 旗舰模型，1M 上下文",
+      "contextWindow": 1000000,
+      "maxOutputTokens": 65536,
+      "capabilities": [
+        "chat",
+        "reasoning",
+        "code",
+        "vision",
+        "tool_use",
+        "agent",
+        "long_context"
+      ],
+      "source": "preset"
+    },
+    {
+      "modelName": "glm-5",
+      "displayName": "GLM-5 (Token Plan)",
+      "serviceType": [
+        "chat"
+      ],
+      "description": "百炼 Token Plan，智谱 GLM-5，200K 上下文",
+      "contextWindow": 202752,
+      "maxOutputTokens": 128000,
+      "capabilities": [
+        "chat",
+        "reasoning",
+        "code",
+        "tool_use",
+        "agent"
+      ],
+      "source": "preset"
+    },
+    {
+      "modelName": "MiniMax-M2.5",
+      "displayName": "MiniMax M2.5 (Token Plan)",
+      "serviceType": [
+        "chat"
+      ],
+      "description": "百炼 Token Plan，MiniMax M2.5，196K 上下文",
+      "contextWindow": 196608,
+      "maxOutputTokens": 8192,
+      "capabilities": [
+        "chat",
+        "reasoning",
+        "code",
+        "tool_use",
+        "long_context"
+      ],
+      "source": "preset"
+    },
+    {
+      "modelName": "deepseek-v3.2",
+      "displayName": "DeepSeek V3.2 (Token Plan)",
+      "serviceType": [
+        "chat"
+      ],
+      "description": "百炼 Token Plan，DeepSeek V3.2",
+      "contextWindow": 131072,
+      "maxOutputTokens": 32768,
+      "capabilities": [
+        "chat",
+        "reasoning",
+        "code",
+        "tool_use"
+      ],
+      "source": "preset"
+    },
+    {
+      "modelName": "wan2.7-image-pro",
+      "displayName": "通义万相 2.7 Pro (Token Plan)",
+      "serviceType": [
+        "image_gen"
+      ],
+      "description": "百炼 Token Plan，万相旗舰文生图，支持 4K 分辨率",
+      "capabilities": [
+        "image_generation",
+        "chinese_optimized",
+        "high_quality"
+      ],
+      "extra": {
+        "endpoint": "/services/aigc/image-generation/generation",
+        "asyncHeader": "X-DashScope-Async",
+        "taskQueryEndpoint": "/tasks",
+        "supportedImageSizes": [
+          "768*768",
+          "1024*1024",
+          "1280*1280",
+          "1024*1792",
+          "1792*1024",
+          "2048*2048",
+          "4096*4096"
+        ],
+        "maxN": 4
+      },
+      "source": "preset"
+    },
+    {
+      "modelName": "wan2.7-image",
+      "displayName": "通义万相 2.7 (Token Plan)",
+      "serviceType": [
+        "image_gen"
+      ],
+      "description": "百炼 Token Plan，万相标准文生图",
+      "capabilities": [
+        "image_generation",
+        "chinese_optimized"
+      ],
+      "extra": {
+        "endpoint": "/services/aigc/image-generation/generation",
+        "asyncHeader": "X-DashScope-Async",
+        "taskQueryEndpoint": "/tasks",
+        "supportedImageSizes": [
+          "768*768",
+          "1024*1024",
+          "1280*1280",
+          "1024*1792",
+          "1792*1024"
+        ],
+        "maxN": 4
+      },
+      "source": "preset"
+    },
+    {
+      "modelName": "qwen-image-2.0-pro",
+      "displayName": "千问图像 2.0 Pro (Token Plan)",
+      "serviceType": [
+        "image_gen"
+      ],
+      "description": "百炼 Token Plan，千问图像生成 2.0 Pro 旗舰版",
+      "capabilities": [
+        "image_generation",
+        "chinese_optimized",
+        "high_quality"
+      ],
+      "extra": {
+        "endpoint": "/services/aigc/image-generation/generation",
+        "asyncHeader": "X-DashScope-Async",
+        "taskQueryEndpoint": "/tasks",
+        "supportedImageSizes": [
+          "512*512",
+          "1024*1024",
+          "1280*1280",
+          "1664*928",
+          "928*1664"
+        ],
+        "maxN": 4
+      },
+      "source": "preset"
+    },
+    {
+      "modelName": "qwen-image-2.0",
+      "displayName": "千问图像 2.0 (Token Plan)",
+      "serviceType": [
+        "image_gen"
+      ],
+      "description": "百炼 Token Plan，千问图像生成 2.0 标准版",
+      "capabilities": [
+        "image_generation",
+        "chinese_optimized"
+      ],
+      "extra": {
+        "endpoint": "/services/aigc/image-generation/generation",
+        "asyncHeader": "X-DashScope-Async",
+        "taskQueryEndpoint": "/tasks",
+        "supportedImageSizes": [
+          "512*512",
+          "1024*1024",
+          "1280*1280",
+          "2048*2048"
+        ],
+        "maxN": 4
+      },
+      "source": "preset"
+    }
+  ]
+}
