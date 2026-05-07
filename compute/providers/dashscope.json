@@ -3,6 +3,7 @@
   "provider": "dashscope",
   "label": "阿里 通义千问",
   "baseUrl": "https://dashscope.aliyuncs.com/compatible-mode/v1",
+  "mediaBaseUrl": "https://dashscope.aliyuncs.com/api/v1",
   "apiFormat": "openai-completions",
   "apiKeyRef": "dashscope",
   "apiKeyVerified": false,
@@ -424,37 +425,150 @@
       }
     },
     {
-      "modelName": "wanx-v2",
-      "displayName": "通义万相 V2",
+      "modelName": "wan2.7-image-pro",
+      "displayName": "通义万相 2.7 Pro",
       "serviceType": [
         "image_gen"
       ],
-      "description": "通义万相文生图",
+      "description": "万相最新旗舰文生图模型，支持 4K 分辨率、thinking_mode 智能思考、色彩调色板控制",
+      "capabilities": [
+        "image_generation",
+        "chinese_optimized",
+        "high_quality"
+      ],
+      "extra": {
+        "endpoint": "/services/aigc/image-generation/generation",
+        "asyncHeader": "X-DashScope-Async",
+        "taskQueryEndpoint": "/tasks",
+        "supportedImageSizes": [
+          "768*768",
+          "1024*1024",
+          "1280*1280",
+          "1024*1792",
+          "1792*1024",
+          "2048*2048",
+          "4096*4096"
+        ],
+        "sizeShortcuts": {
+          "1K": "1024*1024",
+          "2K": "2048*2048",
+          "4K": "4096*4096"
+        },
+        "maxN": 4,
+        "supportsThinkingMode": true,
+        "supportsColorPalette": true
+      }
+    },
+    {
+      "modelName": "wan2.7-image",
+      "displayName": "通义万相 2.7",
+      "serviceType": [
+        "image_gen"
+      ],
+      "description": "万相最新标准文生图模型，高画质，支持 thinking_mode",
       "capabilities": [
         "image_generation",
         "chinese_optimized"
       ],
       "extra": {
+        "endpoint": "/services/aigc/image-generation/generation",
+        "asyncHeader": "X-DashScope-Async",
+        "taskQueryEndpoint": "/tasks",
         "supportedImageSizes": [
-          "1024x1024",
-          "720x1280",
-          "1280x720"
+          "768*768",
+          "1024*1024",
+          "1280*1280",
+          "1024*1792",
+          "1792*1024"
         ],
-        "supportedStyles": [
-          "auto",
-          "photography",
-          "anime",
-          "3d_cartoon"
-        ]
+        "maxN": 4,
+        "supportsThinkingMode": true
       }
     },
     {
-      "modelName": "wanx-video",
-      "displayName": "通义万相视频",
+      "modelName": "wan2.6-t2i",
+      "displayName": "通义万相 2.6 文生图",
+      "serviceType": [
+        "image_gen"
+      ],
+      "description": "万相 2.6 文生图专用模型，稳定可靠，支持 prompt_extend 智能改写",
+      "capabilities": [
+        "image_generation",
+        "chinese_optimized"
+      ],
+      "extra": {
+        "endpoint": "/services/aigc/image-generation/generation",
+        "asyncHeader": "X-DashScope-Async",
+        "taskQueryEndpoint": "/tasks",
+        "supportedImageSizes": [
+          "1024*1024",
+          "1280*1280",
+          "720*1280",
+          "1280*720",
+          "768*1152",
+          "1152*768"
+        ],
+        "maxN": 4,
+        "supportsNegativePrompt": true,
+        "supportsPromptExtend": true
+      }
+    },
+    {
+      "modelName": "wan2.2-t2i-plus",
+      "displayName": "通义万相 2.2 Plus",
+      "serviceType": [
+        "image_gen"
+      ],
+      "description": "万相 2.2 增强版，画质与速度平衡",
+      "capabilities": [
+        "image_generation",
+        "chinese_optimized"
+      ],
+      "extra": {
+        "endpoint": "/services/aigc/image-generation/generation",
+        "asyncHeader": "X-DashScope-Async",
+        "taskQueryEndpoint": "/tasks",
+        "supportedImageSizes": [
+          "1024*1024",
+          "720*1280",
+          "1280*720"
+        ],
+        "maxN": 4,
+        "supportsNegativePrompt": true
+      }
+    },
+    {
+      "modelName": "wan2.2-t2i-flash",
+      "displayName": "通义万相 2.2 Flash",
+      "serviceType": [
+        "image_gen"
+      ],
+      "description": "万相 2.2 快速版，生成速度极快，适合批量和实时场景",
+      "capabilities": [
+        "image_generation",
+        "chinese_optimized",
+        "fast"
+      ],
+      "extra": {
+        "endpoint": "/services/aigc/image-generation/generation",
+        "asyncHeader": "X-DashScope-Async",
+        "taskQueryEndpoint": "/tasks",
+        "supportedImageSizes": [
+          "1024*1024",
+          "720*1280",
+          "1280*720"
+        ],
+        "maxN": 4,
+        "supportsNegativePrompt": true
+      }
+    },
+    {
+      "modelName": "wan2.6-t2v",
+      "displayName": "通义万相 2.6 文生视频",
       "serviceType": [
         "video_gen"
       ],
-      "description": "通义万相文生视频",
+      "description": "万相 2.6 文生视频模型，支持文生视频和图生视频",
       "capabilities": [
         "video_generation",
         "chinese_optimized"
@@ -464,7 +578,10 @@
         "supportedResolutions": [
           "720p",
           "1080p"
-        ]
+        ],
+        "endpoint": "/services/aigc/video-generation/generation",
+        "asyncHeader": "X-DashScope-Async",
+        "taskQueryEndpoint": "/tasks"
       }
     },
     {
