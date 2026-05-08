@@ -17,6 +17,26 @@
   ],
   "models": [
     {
+      "modelName": "glm-5",
+      "displayName": "GLM-5",
+      "serviceType": [
+        "chat"
+      ],
+      "description": "智谱 GLM-5 大语言模型，200K 上下文",
+      "contextWindow": 100000,
+      "maxOutputTokens": 128000,
+      "capabilities": [
+        "chat",
+        "reasoning",
+        "code"
+      ],
+      "inputPrice": 0,
+      "outputPrice": 0,
+      "defaultTemperature": 1,
+      "defaultTopP": 0.95,
+      "extra": {}
+    },
+    {
       "modelName": "MiniMax-M2.7-highspeed",
       "displayName": "MiniMax-M2.7 高速版",
       "serviceType": [
@@ -52,26 +72,6 @@
         "deep_thinking",
         "tool_use",
         "agent"
-      ],
-      "inputPrice": 0,
-      "outputPrice": 0,
-      "defaultTemperature": 1,
-      "defaultTopP": 0.95,
-      "extra": {}
-    },
-    {
-      "modelName": "glm-5",
-      "displayName": "GLM-5",
-      "serviceType": [
-        "chat"
-      ],
-      "description": "智谱 GLM-5 大语言模型，200K 上下文",
-      "contextWindow": 100000,
-      "maxOutputTokens": 128000,
-      "capabilities": [
-        "chat",
-        "reasoning",
-        "code"
       ],
       "inputPrice": 0,
       "outputPrice": 0,
