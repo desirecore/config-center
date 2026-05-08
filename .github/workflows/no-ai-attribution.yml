@@ -1,0 +1,41 @@
+name: Block AI Attribution
+
+on:
+  pull_request:
+    branches: [main]
+  push:
+    branches: [main]
+
+jobs:
+  scan:
+    name: Scan commits for AI authorship markers
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Compute commit range
+        id: range
+        env:
+          EVENT_NAME: ${{ github.event_name }}
+          PR_BASE: ${{ github.event.pull_request.base.sha }}
+          PR_HEAD: ${{ github.event.pull_request.head.sha }}
+          PUSH_BEFORE: ${{ github.event.before }}
+          PUSH_AFTER: ${{ github.event.after }}
+        run: |
+          set -euo pipefail
+          if [ "$EVENT_NAME" = "pull_request" ]; then
+            range="${PR_BASE}..${PR_HEAD}"
+          else
+            if [ -z "${PUSH_BEFORE:-}" ] || [ "$PUSH_BEFORE" = "0000000000000000000000000000000000000000" ]; then
+              range="${PUSH_AFTER}~1..${PUSH_AFTER}"
+            else
+              range="${PUSH_BEFORE}..${PUSH_AFTER}"
+            fi
+          fi
+          echo "range=$range" >> "$GITHUB_OUTPUT"
+          echo "Scanning range: $range"
+
+      - name: Run scanner
+        run: bash scripts/check-no-ai-attribution.sh '${{ steps.range.outputs.range }}'

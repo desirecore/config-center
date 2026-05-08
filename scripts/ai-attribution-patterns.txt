@@ -1,0 +1,70 @@
+# AI 贡献痕迹关键字清单（不区分大小写，作为子串/词条匹配）。
+# 任意一行命中即视为 AI 痕迹。新增工具/厂商时直接加一行；以 # 开头为注释。
+#
+# 使用位置：
+#   1) commit author/committer 的 name 或 email
+#   2) commit message 中的 Co-Authored-By: trailer
+#   3) commit message 中的 "Generated/Authored/Written/Created/Powered (with|by|using) <X>" 声明
+#
+# 行内字面字符串即可，无需写正则；脚本会自动转义。
+
+# Anthropic
+claude
+anthropic.com
+
+# OpenAI
+chatgpt
+openai.com
+gpt-3
+gpt-4
+gpt-5
+gpt-6
+codex
+
+# Google
+gemini
+bard
+google ai
+googleai
+palm 2
+
+# GitHub / Microsoft
+copilot
+github copilot
+
+# Cursor / Windsurf / Codeium
+cursor.sh
+cursor.com
+cursor ai
+windsurf
+codeium
+
+# Coding agents
+aider
+devin
+cognition labs
+replit agent
+ghostwriter
+tabnine
+cline
+roo code
+continue.dev
+amazon q
+codewhisperer
+
+# 其他模型 / 产品
+mistral
+llama
+phind
+deepseek
+qwen
+tongyi
+kimi
+doubao
+文心一言
+baichuan
+perplexity
+v0.dev
+zhipu
+glm-4
+glm-5
