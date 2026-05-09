@@ -1,0 +1,108 @@
+{
+  "id": "provider-xiaomi-001",
+  "provider": "xiaomi",
+  "label": "小米 MiMo",
+  "baseUrl": "https://api.xiaomimimo.com/v1",
+  "apiFormat": "openai-completions",
+  "apiKeyRef": "xiaomi",
+  "apiKeyVerified": false,
+  "enabled": false,
+  "status": "unconfigured",
+  "brandGroup": "xiaomi",
+  "priceCurrency": "CNY",
+  "accessMode": "api",
+  "services": [
+    "chat",
+    "reasoning",
+    "tts"
+  ],
+  "models": [
+    {
+      "modelName": "mimo-v2.5-pro",
+      "displayName": "MiMo-V2.5-Pro",
+      "serviceType": [
+        "chat",
+        "reasoning"
+      ],
+      "description": "小米旗舰推理模型，1M 上下文，1T MoE 参数，擅长复杂 Agent、编程与长文本",
+      "contextWindow": 1000000,
+      "maxOutputTokens": 65536,
+      "capabilities": [
+        "chat",
+        "reasoning",
+        "tool_use",
+        "code",
+        "vision"
+      ],
+      "extra": {}
+    },
+    {
+      "modelName": "mimo-v2.5-tts",
+      "displayName": "MiMo-V2.5-TTS",
+      "serviceType": [
+        "tts"
+      ],
+      "description": "小米最新高品质语音合成模型，内置多种精调音色，支持情感/语速/语调精细控制、方言和歌唱",
+      "capabilities": [
+        "tts",
+        "style_control",
+        "chinese_optimized"
+      ],
+      "extra": {
+        "voices": [
+          {"id": "default_zh", "label": "默认中文女声"},
+          {"id": "default_en", "label": "默认英文女声"},
+          {"id": "mimo_default", "label": "MiMo 默认"},
+          {"id": "Bingtang", "label": "冰糖"},
+          {"id": "Moli", "label": "茉莉"},
+          {"id": "Suda", "label": "苏打"},
+          {"id": "Baihua", "label": "白桦"},
+          {"id": "Mia", "label": "Mia"},
+          {"id": "Chloe", "label": "Chloe"},
+          {"id": "Milo", "label": "Milo"},
+          {"id": "Dean", "label": "Dean"}
+        ],
+        "audioFormats": ["mp3", "wav"],
+        "sampleRate": 24000,
+        "endpoint": "/chat/completions",
+        "authHeader": "api-key"
+      }
+    },
+    {
+      "modelName": "mimo-v2.5-tts-voicedesign",
+      "displayName": "MiMo-V2.5-TTS-VoiceDesign",
+      "serviceType": [
+        "tts"
+      ],
+      "description": "语音设计模型，通过一句话描述即可生成全新音色",
+      "capabilities": [
+        "tts",
+        "voice_design"
+      ],
+      "extra": {
+        "audioFormats": ["mp3", "wav"],
+        "sampleRate": 24000,
+        "endpoint": "/chat/completions",
+        "authHeader": "api-key"
+      }
+    },
+    {
+      "modelName": "mimo-v2.5-tts-voiceclone",
+      "displayName": "MiMo-V2.5-TTS-VoiceClone",
+      "serviceType": [
+        "tts"
+      ],
+      "description": "语音克隆模型，少量样本即可高保真复刻目标音色",
+      "capabilities": [
+        "tts",
+        "voice_clone"
+      ],
+      "extra": {
+        "audioFormats": ["mp3", "wav"],
+        "sampleRate": 24000,
+        "endpoint": "/chat/completions",
+        "authHeader": "api-key"
+      }
+    }
+  ]
+}
