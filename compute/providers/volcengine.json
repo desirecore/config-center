@@ -68,7 +68,7 @@
       "serviceType": [
         "chat"
       ],
-      "description": "火山引擎豆包 Seed 2.0 均衡模型，256K上下文，适合通用生产任务",
+      "description": "火山引擎豆包 Seed 2.0 全模态均衡模型，256K上下文，支持视频/图像/音频/文本统一理解",
       "contextWindow": 256000,
       "maxOutputTokens": 32000,
       "capabilities": [
@@ -78,7 +78,9 @@
         "multilingual",
         "long_context",
         "tool_use",
-        "vision"
+        "vision",
+        "audio_understanding",
+        "video_understanding"
       ],
       "inputPrice": 0.6,
       "outputPrice": 3.6,
@@ -110,7 +112,7 @@
       "serviceType": [
         "chat"
       ],
-      "description": "火山引擎豆包 Seed 2.0 轻量模型，256K上下文，适合低延迟和高并发场景",
+      "description": "火山引擎豆包 Seed 2.0 全模态轻量模型，256K上下文，低延迟高并发，支持全模态理解",
       "contextWindow": 256000,
       "maxOutputTokens": 32000,
       "capabilities": [
@@ -121,6 +123,8 @@
         "long_context",
         "tool_use",
         "vision",
+        "audio_understanding",
+        "video_understanding",
         "fast"
       ],
       "inputPrice": 0.2,

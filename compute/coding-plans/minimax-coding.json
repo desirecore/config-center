@@ -11,12 +11,20 @@
   "enabled": false,
   "status": "unconfigured",
   "accessMode": "coding-plan",
-  "services": ["chat", "fast", "reasoning", "image_gen", "tts", "video_gen", "music_gen"],
+  "services": [
+    "chat",
+    "fast",
+    "reasoning",
+    "image_gen",
+    "tts",
+    "video_gen",
+    "music_gen"
+  ],
   "codingPlan": {
     "quotas": {},
     "usageTracking": {
       "method": "rest-api",
-      "endpoint": "https://api.minimaxi.com/v1/coding/usage",
+      "endpoint": "https://api.minimaxi.com/v1/token_plan/remains",
       "consoleUrl": "https://platform.minimaxi.com/"
     }
   },
@@ -24,77 +32,139 @@
     {
       "modelName": "MiniMax-M2.7",
       "displayName": "MiniMax M2.7 (Token Plan)",
-      "serviceType": ["chat", "reasoning"],
+      "serviceType": [
+        "chat",
+        "reasoning"
+      ],
       "description": "MiniMax 新一代旗舰模型，Token Plan 核心文本模型，5 小时滚动窗口计费。Starter 600次/5h，Plus 1500次/5h，Max 4500次/5h",
       "contextWindow": 204800,
       "maxOutputTokens": 131072,
-      "capabilities": ["chat", "reasoning", "code", "tool_use", "vision"],
+      "capabilities": [
+        "chat",
+        "reasoning",
+        "code",
+        "tool_use",
+        "vision"
+      ],
       "source": "preset"
     },
     {
       "modelName": "MiniMax-M2.7-highspeed",
       "displayName": "MiniMax M2.7 高速版 (Token Plan)",
-      "serviceType": ["fast"],
+      "serviceType": [
+        "fast"
+      ],
       "description": "MiniMax M2.7 极速版，极速套餐专用。Plus-极速 1500次/5h，Max-极速 4500次/5h，Ultra-极速 30000次/5h",
       "contextWindow": 204800,
       "maxOutputTokens": 131072,
-      "capabilities": ["chat", "reasoning", "code", "tool_use", "vision", "fast"],
+      "capabilities": [
+        "chat",
+        "reasoning",
+        "code",
+        "tool_use",
+        "vision",
+        "fast"
+      ],
       "source": "preset"
     },
     {
       "modelName": "speech-2.8-hd",
       "displayName": "Speech 2.8 HD (Token Plan)",
-      "serviceType": ["tts"],
+      "serviceType": [
+        "tts"
+      ],
       "description": "MiniMax 最新高清语音合成，Token Plan Plus 及以上可用。Plus 4000字符/天，Max 11000字符/天",
-      "capabilities": ["tts", "multilingual", "emotion_control", "voice_clone"],
+      "capabilities": [
+        "tts",
+        "multilingual",
+        "emotion_control",
+        "voice_clone"
+      ],
       "source": "preset"
     },
     {
       "modelName": "speech-2.8-turbo",
       "displayName": "Speech 2.8 Turbo (Token Plan)",
-      "serviceType": ["tts"],
+      "serviceType": [
+        "tts"
+      ],
       "description": "MiniMax 快速语音合成，Token Plan Plus 及以上可用",
-      "capabilities": ["tts", "multilingual", "emotion_control", "fast"],
+      "capabilities": [
+        "tts",
+        "multilingual",
+        "emotion_control",
+        "fast"
+      ],
       "source": "preset"
     },
     {
       "modelName": "image-01",
       "displayName": "Image 01 (Token Plan)",
-      "serviceType": ["image_gen"],
+      "serviceType": [
+        "image_gen"
+      ],
       "description": "MiniMax 文生图/图生图，Token Plan Plus 及以上可用。Plus 50张/天，Max 120张/天",
-      "capabilities": ["image_generation", "subject_reference"],
+      "capabilities": [
+        "image_generation",
+        "subject_reference"
+      ],
       "source": "preset"
     },
     {
       "modelName": "image-01-live",
       "displayName": "Image 01 Live (Token Plan)",
-      "serviceType": ["image_gen"],
+      "serviceType": [
+        "image_gen"
+      ],
       "description": "MiniMax 画风控制文生图，Token Plan Plus 及以上可用",
-      "capabilities": ["image_generation", "style_control", "subject_reference"],
+      "capabilities": [
+        "image_generation",
+        "style_control",
+        "subject_reference"
+      ],
       "source": "preset"
     },
     {
       "modelName": "MiniMax-Hailuo-2.3",
       "displayName": "海螺视频 2.3 (Token Plan)",
-      "serviceType": ["video_gen"],
+      "serviceType": [
+        "video_gen"
+      ],
       "description": "海螺视频 2.3，文/图生视频，Token Plan Max 及以上可用。Max 2个/天",
-      "capabilities": ["video_generation", "text_to_video", "image_to_video", "camera_control"],
+      "capabilities": [
+        "video_generation",
+        "text_to_video",
+        "image_to_video",
+        "camera_control"
+      ],
       "source": "preset"
     },
     {
       "modelName": "MiniMax-Hailuo-2.3-Fast",
       "displayName": "海螺视频 2.3 快速版 (Token Plan)",
-      "serviceType": ["video_gen"],
+      "serviceType": [
+        "video_gen"
+      ],
       "description": "海螺视频快速版，Token Plan Max 及以上可用。Max 2个/天",
-      "capabilities": ["video_generation", "image_to_video", "fast"],
+      "capabilities": [
+        "video_generation",
+        "image_to_video",
+        "fast"
+      ],
       "source": "preset"
     },
     {
       "modelName": "music-2.6",
       "displayName": "Music 2.6 (Token Plan)",
-      "serviceType": ["music_gen"],
+      "serviceType": [
+        "music_gen"
+      ],
       "description": "MiniMax AI 音乐生成，所有 Token Plan 套餐免费使用（100 首/天，≤5分钟/首）",
-      "capabilities": ["music_generation", "lyrics_input", "instrumental"],
+      "capabilities": [
+        "music_generation",
+        "lyrics_input",
+        "instrumental"
+      ],
       "source": "preset"
     }
   ]

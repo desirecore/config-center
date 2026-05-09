@@ -104,6 +104,77 @@
       "defaultTemperature": 1,
       "defaultTopP": 1,
       "extra": {}
+    },
+    {
+      "modelName": "hunyuan-t1-latest",
+      "displayName": "混元 T1",
+      "serviceType": [
+        "reasoning"
+      ],
+      "description": "腾讯混元 T1 深度推理模型，256K 上下文，专攻数学/代码/复杂推理",
+      "contextWindow": 262144,
+      "maxOutputTokens": 32768,
+      "capabilities": [
+        "chat",
+        "reasoning",
+        "deep_thinking",
+        "code",
+        "math",
+        "long_context"
+      ],
+      "inputPrice": 5,
+      "outputPrice": 20,
+      "defaultTemperature": 1,
+      "defaultTopP": 1,
+      "extra": {}
+    },
+    {
+      "modelName": "hunyuan-t1-vision",
+      "displayName": "混元 T1 Vision",
+      "serviceType": [
+        "reasoning"
+      ],
+      "description": "腾讯混元 T1 视觉推理模型，支持图片理解 + 深度推理",
+      "contextWindow": 131072,
+      "maxOutputTokens": 32768,
+      "capabilities": [
+        "chat",
+        "reasoning",
+        "deep_thinking",
+        "code",
+        "math",
+        "vision",
+        "image_understanding"
+      ],
+      "inputPrice": 5,
+      "outputPrice": 20,
+      "defaultTemperature": 1,
+      "defaultTopP": 1,
+      "extra": {}
+    },
+    {
+      "modelName": "hunyuan-turbos-vision",
+      "displayName": "混元 Turbo S Vision",
+      "serviceType": [
+        "chat"
+      ],
+      "description": "腾讯混元 Turbo S 视觉模型，支持图片理解，高速推理",
+      "contextWindow": 32768,
+      "maxOutputTokens": 16384,
+      "capabilities": [
+        "chat",
+        "reasoning",
+        "code",
+        "vision",
+        "image_understanding",
+        "fast",
+        "tool_use"
+      ],
+      "inputPrice": 0.8,
+      "outputPrice": 2,
+      "defaultTemperature": 1,
+      "defaultTopP": 1,
+      "extra": {}
     }
   ]
 }

@@ -20,12 +20,12 @@
   },
   "models": [
     {
-      "modelName": "kimi-k2",
-      "displayName": "Kimi K2 (Coding)",
+      "modelName": "kimi-for-coding",
+      "displayName": "Kimi For Coding (Auto)",
       "serviceType": ["chat"],
-      "description": "Kimi Code 套餐，万亿参数 MoE 模型，128K 上下文",
-      "contextWindow": 128000,
-      "maxOutputTokens": 8192,
+      "description": "Kimi Code 稳定路由 ID，自动映射到最新模型（当前为 K2.6），262K 上下文",
+      "contextWindow": 262144,
+      "maxOutputTokens": 16384,
       "capabilities": ["chat", "reasoning", "code", "tool_use", "agent", "long_context", "vision"],
       "source": "preset"
     }

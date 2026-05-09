@@ -3,6 +3,7 @@
   "provider": "internal-testing",
   "label": "内测专用",
   "baseUrl": "https://api.yizhioa.cn/v1",
+  "mediaBaseUrl": "https://api.yizhioa.cn/v1",
   "apiFormat": "anthropic-messages",
   "apiKeyRef": "internal-testing",
   "apiKeyVerified": false,
@@ -10,7 +11,24 @@
   "status": "unconfigured",
   "priceCurrency": "CNY",
   "services": [
-    "chat"
+    "chat",
+    "fast",
+    "reasoning",
+    "vision",
+    "embedding",
+    "rerank",
+    "tts",
+    "asr",
+    "voice_clone",
+    "realtime_voice",
+    "simultaneous_interpret",
+    "translation",
+    "image_gen",
+    "video_gen",
+    "music_gen",
+    "omni",
+    "computer_use",
+    "responses"
   ],
   "tombstones": [
     "MiniMax-M2.7"

@@ -21,8 +21,8 @@
         "chat"
       ],
       "description": "月之暗面 Kimi K2.6，最新多模态模型，长程代码编写与 Agent 自主执行能力增强，256K 上下文，支持思考/非思考模式",
-      "contextWindow": 256000,
-      "maxOutputTokens": 32768,
+      "contextWindow": 262144,
+      "maxOutputTokens": 16384,
       "capabilities": [
         "chat",
         "reasoning",
