@@ -150,6 +150,39 @@
       "source": "preset"
     },
     {
+      "modelName": "glm-5.1",
+      "displayName": "GLM-5.1",
+      "serviceType": [
+        "chat"
+      ],
+      "description": "火山方舟 Coding Plan 中的智谱 GLM-5.1 旗舰模型（2026.4 新增）",
+      "capabilities": [
+        "code",
+        "reasoning",
+        "chat",
+        "long_context",
+        "agent"
+      ],
+      "source": "preset"
+    },
+    {
+      "modelName": "kimi-k2.6",
+      "displayName": "Kimi K2.6",
+      "serviceType": [
+        "chat"
+      ],
+      "description": "火山方舟 Coding Plan 中的 Kimi K2.6 模型（2026.4 新增）",
+      "capabilities": [
+        "code",
+        "reasoning",
+        "chat",
+        "agent",
+        "long_context",
+        "vision"
+      ],
+      "source": "preset"
+    },
+    {
       "modelName": "minimax-m2.5",
       "displayName": "MiniMax M2.5",
       "serviceType": [
@@ -161,6 +194,22 @@
         "reasoning",
         "chat",
         "agent"
+      ],
+      "source": "preset"
+    },
+    {
+      "modelName": "minimax-m2.7",
+      "displayName": "MiniMax M2.7",
+      "serviceType": [
+        "chat"
+      ],
+      "description": "火山方舟 Coding Plan 中的 MiniMax M2.7 模型（2026.4 新增），230B 总参/10B 激活",
+      "capabilities": [
+        "code",
+        "reasoning",
+        "chat",
+        "agent",
+        "long_context"
       ],
       "source": "preset"
     }
