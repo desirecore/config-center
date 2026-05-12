@@ -390,6 +390,53 @@
       "defaultTemperature": 1,
       "defaultTopP": 0.95,
       "extra": {}
+    },
+    {
+      "modelName": "deepseek-v4-pro",
+      "displayName": "DeepSeek V4 Pro",
+      "serviceType": [
+        "chat",
+        "reasoning"
+      ],
+      "description": "DeepSeek V4 Pro，1.6T 参数 / 49B 激活 MoE 旗舰，1M 上下文，思考/非思考双模式，Agentic 编程与深度推理对标顶级闭源模型",
+      "contextWindow": 1000000,
+      "maxOutputTokens": 65536,
+      "capabilities": [
+        "chat",
+        "reasoning",
+        "deep_thinking",
+        "code",
+        "math",
+        "tool_use",
+        "agent",
+        "long_context"
+      ],
+      "inputPrice": 0,
+      "outputPrice": 0,
+      "extra": {}
+    },
+    {
+      "modelName": "deepseek-v4-flash",
+      "displayName": "DeepSeek V4 Flash",
+      "serviceType": [
+        "chat",
+        "fast"
+      ],
+      "description": "DeepSeek V4 Flash，284B 参数 / 13B 激活 MoE，1M 上下文，低延迟高吞吐性价比版，支持思考/非思考双模式",
+      "contextWindow": 1000000,
+      "maxOutputTokens": 8192,
+      "capabilities": [
+        "chat",
+        "code",
+        "reasoning",
+        "tool_use",
+        "long_context"
+      ],
+      "inputPrice": 0,
+      "outputPrice": 0,
+      "defaultTemperature": 1,
+      "defaultTopP": 1,
+      "extra": {}
     }
   ]
 }
