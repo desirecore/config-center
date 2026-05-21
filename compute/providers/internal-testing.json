@@ -94,7 +94,8 @@
       "capabilities": [
         "chat",
         "reasoning",
-        "code"
+        "code",
+        "tool_use"
       ],
       "inputPrice": 0,
       "outputPrice": 0,
@@ -114,7 +115,8 @@
       "capabilities": [
         "chat",
         "reasoning",
-        "code"
+        "code",
+        "tool_use"
       ],
       "inputPrice": 0,
       "outputPrice": 0,
@@ -157,7 +159,8 @@
       "capabilities": [
         "chat",
         "reasoning",
-        "code"
+        "code",
+        "tool_use"
       ],
       "inputPrice": 0,
       "outputPrice": 0,
@@ -177,7 +180,8 @@
       "capabilities": [
         "chat",
         "reasoning",
-        "code"
+        "code",
+        "tool_use"
       ],
       "inputPrice": 0,
       "outputPrice": 0,
@@ -383,7 +387,8 @@
       "capabilities": [
         "chat",
         "reasoning",
-        "code"
+        "code",
+        "tool_use"
       ],
       "inputPrice": 0,
       "outputPrice": 0,
