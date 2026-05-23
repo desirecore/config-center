@@ -35,6 +35,30 @@
   ],
   "models": [
     {
+      "modelName": "qwen3.7-max",
+      "displayName": "Qwen3.7 Max",
+      "serviceType": [
+        "chat"
+      ],
+      "description": "阿里通义千问 Qwen3.7 Max，原生 1M 上下文，Hybrid MoE 架构，内置 CoT 推理",
+      "contextWindow": 500000,
+      "maxOutputTokens": 65536,
+      "capabilities": [
+        "chat",
+        "reasoning",
+        "code",
+        "vision",
+        "tool_use",
+        "agent",
+        "deep_thinking"
+      ],
+      "inputPrice": 0,
+      "outputPrice": 0,
+      "defaultTemperature": 0.7,
+      "defaultTopP": 0.8,
+      "extra": {}
+    },
+    {
       "modelName": "deepseek-v4-pro",
       "displayName": "DeepSeek V4 Pro",
       "serviceType": [
