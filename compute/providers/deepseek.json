@@ -15,48 +15,113 @@
   ],
   "models": [
     {
-      "modelName": "deepseek-chat",
-      "displayName": "DeepSeek V3.2",
+      "modelName": "deepseek-v4-flash",
+      "displayName": "DeepSeek V4 Flash",
       "serviceType": [
-        "chat"
+        "chat",
+        "reasoning"
       ],
-      "description": "高性价比通用对话模型，128K 上下文",
-      "contextWindow": 128000,
-      "maxOutputTokens": 8192,
+      "description": "DeepSeek V4 主力模型，1M 上下文，支持思考/非思考双模式，高并发（2500）",
+      "contextWindow": 1000000,
+      "maxOutputTokens": 384000,
       "capabilities": [
         "chat",
         "code",
         "reasoning",
-        "multilingual"
+        "deep_thinking",
+        "multilingual",
+        "tool_use"
       ],
-      "inputPrice": 2,
-      "outputPrice": 3,
+      "inputPrice": 1,
+      "outputPrice": 2,
       "defaultTemperature": 1,
       "defaultTopP": 1,
       "extra": {
-        "cacheHitPrice": 0.2
+        "cacheHitPrice": 0.02,
+        "supportsThinking": true,
+        "thinkingDefault": true
+      }
+    },
+    {
+      "modelName": "deepseek-v4-pro",
+      "displayName": "DeepSeek V4 Pro",
+      "serviceType": [
+        "chat",
+        "reasoning"
+      ],
+      "description": "DeepSeek V4 旗舰模型（1.6T MoE），1M 上下文，支持思考/非思考双模式，并发上限 500",
+      "contextWindow": 1000000,
+      "maxOutputTokens": 384000,
+      "capabilities": [
+        "chat",
+        "code",
+        "reasoning",
+        "deep_thinking",
+        "multilingual",
+        "tool_use",
+        "math"
+      ],
+      "inputPrice": 3,
+      "outputPrice": 6,
+      "defaultTemperature": 1,
+      "defaultTopP": 1,
+      "extra": {
+        "cacheHitPrice": 0.025,
+        "supportsThinking": true,
+        "thinkingDefault": true
+      }
+    },
+    {
+      "modelName": "deepseek-chat",
+      "displayName": "DeepSeek Chat (V4 Flash alias)",
+      "serviceType": [
+        "chat"
+      ],
+      "description": "deepseek-v4-flash 非思考模式的旧别名，将于 2026-07-24 弃用",
+      "contextWindow": 1000000,
+      "maxOutputTokens": 384000,
+      "capabilities": [
+        "chat",
+        "code",
+        "reasoning",
+        "multilingual",
+        "tool_use"
+      ],
+      "inputPrice": 1,
+      "outputPrice": 2,
+      "defaultTemperature": 1,
+      "defaultTopP": 1,
+      "extra": {
+        "cacheHitPrice": 0.02,
+        "deprecated": true,
+        "deprecationDate": "2026-07-24",
+        "replacedBy": "deepseek-v4-flash"
       }
     },
     {
       "modelName": "deepseek-reasoner",
-      "displayName": "DeepSeek R1",
+      "displayName": "DeepSeek Reasoner (V4 Flash alias)",
       "serviceType": [
         "reasoning"
       ],
-      "description": "DeepSeek V3.2 思考模式，128K 上下文，思维链默认 32K，最大输出 64K",
-      "contextWindow": 128000,
-      "maxOutputTokens": 65536,
+      "description": "deepseek-v4-flash 思考模式的旧别名，将于 2026-07-24 弃用",
+      "contextWindow": 1000000,
+      "maxOutputTokens": 384000,
       "capabilities": [
         "chat",
         "reasoning",
         "deep_thinking",
         "code",
-        "math"
+        "math",
+        "tool_use"
       ],
-      "inputPrice": 4,
-      "outputPrice": 16,
+      "inputPrice": 1,
+      "outputPrice": 2,
       "extra": {
-        "cacheHitPrice": 0.2
+        "cacheHitPrice": 0.02,
+        "deprecated": true,
+        "deprecationDate": "2026-07-24",
+        "replacedBy": "deepseek-v4-flash"
       }
     }
   ]
