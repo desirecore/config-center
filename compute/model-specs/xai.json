@@ -1,0 +1,31 @@
+{
+  "description": "xAI Grok 系列模型规格。参数来源：config-center compute/providers/xai.json。Grok 网关命名变体较多（含日期戳/-fast/-reasoning 后缀），主要依赖 family=grok-4 兜底匹配。",
+  "specs": [
+    {
+      "id": "grok-4-1-fast-reasoning",
+      "displayName": "Grok 4.1 Fast",
+      "family": "grok-4",
+      "spec": {
+        "contextWindow": 2000000,
+        "maxOutputTokens": 16384,
+        "capabilities": ["chat", "reasoning", "code", "vision", "tool_use", "fast", "long_context"],
+        "serviceType": ["chat", "reasoning"],
+        "defaultTemperature": 1,
+        "supportsReasoning": true
+      }
+    },
+    {
+      "id": "grok-4.20-0309-reasoning",
+      "displayName": "Grok 4.20",
+      "family": "grok-4",
+      "spec": {
+        "contextWindow": 2000000,
+        "maxOutputTokens": 16384,
+        "capabilities": ["chat", "reasoning", "code", "vision", "tool_use"],
+        "serviceType": ["chat", "reasoning"],
+        "defaultTemperature": 1,
+        "supportsReasoning": true
+      }
+    }
+  ]
+}

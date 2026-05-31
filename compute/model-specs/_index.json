@@ -1,0 +1,15 @@
+{
+  "description": "模型规格库加载顺序索引。元素为对应 JSON 文件的 basename（不含 .json）。",
+  "order": [
+    "anthropic",
+    "openai",
+    "google",
+    "deepseek",
+    "qwen",
+    "moonshot",
+    "zhipu",
+    "minimax",
+    "xai",
+    "mistral"
+  ]
+}

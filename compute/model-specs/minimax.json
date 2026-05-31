@@ -1,0 +1,43 @@
+{
+  "description": "MiniMax 系列模型规格。参数来源：config-center compute/providers/minimax.json。id 保留上游 model_name 原始写法（含大小写与点号），匹配时由匹配器归一化处理。",
+  "specs": [
+    {
+      "id": "MiniMax-M2.7",
+      "displayName": "MiniMax M2.7",
+      "family": "minimax-m2.7",
+      "spec": {
+        "contextWindow": 204800,
+        "maxOutputTokens": 131072,
+        "capabilities": ["chat", "reasoning", "code", "tool_use", "vision"],
+        "serviceType": ["chat", "reasoning"],
+        "defaultTemperature": 1,
+        "supportsReasoning": true
+      }
+    },
+    {
+      "id": "MiniMax-M2.5",
+      "displayName": "MiniMax M2.5",
+      "family": "minimax-m2.5",
+      "spec": {
+        "contextWindow": 204800,
+        "maxOutputTokens": 131072,
+        "capabilities": ["chat", "reasoning", "code", "tool_use", "long_context"],
+        "serviceType": ["chat", "reasoning"],
+        "defaultTemperature": 1,
+        "supportsReasoning": true
+      }
+    },
+    {
+      "id": "MiniMax-M2",
+      "displayName": "MiniMax M2",
+      "family": "minimax-m2",
+      "spec": {
+        "contextWindow": 204800,
+        "maxOutputTokens": 131072,
+        "capabilities": ["chat", "code", "tool_use"],
+        "serviceType": ["chat"],
+        "defaultTemperature": 1
+      }
+    }
+  ]
+}

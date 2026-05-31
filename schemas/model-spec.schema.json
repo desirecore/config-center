@@ -1,0 +1,111 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://desirecore.net/schemas/config-center/model-spec.schema.json",
+  "title": "ModelSpecFile",
+  "description": "模型规格库（compute/model-specs/*.json）数据契约。\n\n用途：维护模型的「内在参数」（上下文窗口、最大输出、能力标签、serviceType、默认采样参数等），这些参数与「从哪家 provider、什么价格调用」无关，是模型的客观物理属性。\n\n接入路径（首期仅 cloud）：登录后从 NewAPI pricing 拉到的模型，只承担「可用模型清单 + 价签」职责；客户端按 modelName 用通用匹配机制查询本规格库，补全 tags 无法表达的结构化参数（maxOutputTokens / defaultTemperature 等）。\n\n与 provider.schema.json 的区别：provider 文件是「完整 provider 接入定义」，本文件是「跨 provider 共享的模型参数字典」。本文件是老客户端不会读取的新文件，因此 schema 可以更宽松（允许 null），且不破坏已发布客户端兼容契约。\n\n严禁写入价格字段（inputPrice/outputPrice/cache 等）——价签真相源永远是 NewAPI pricing。",
+  "type": "object",
+  "required": ["specs"],
+  "properties": {
+    "description": {
+      "type": "string",
+      "description": "文件说明（如所属厂商、收录范围）"
+    },
+    "specs": {
+      "type": "array",
+      "description": "模型规格条目列表",
+      "items": { "$ref": "#/definitions/modelSpec" }
+    }
+  },
+  "additionalProperties": false,
+  "definitions": {
+    "modelSpec": {
+      "type": "object",
+      "required": ["id", "spec"],
+      "properties": {
+        "id": {
+          "type": "string",
+          "description": "模型标准标识符，通常等于上游 model_name 原样（保留大小写与点号，如 claude-sonnet-4-6、MiniMax-M2.7）。同时作为精确匹配键；匹配时大小写/分隔符不敏感（由匹配器归一化）。",
+          "minLength": 1
+        },
+        "displayName": {
+          "type": "string",
+          "description": "模型友好显示名（如 Claude Sonnet 4.6）。命中后可覆盖 NewAPI 返回的原始 model_name，优化 UI 展示。"
+        },
+        "family": {
+          "type": "string",
+          "description": "模型家族标识（如 claude-sonnet、gpt-5、gemini-2.5）。当精确/别名/pattern 匹配均失败时，按最长 family 前缀兜底匹配，返回保守参数并标记 inferred。"
+        },
+        "match": {
+          "type": "object",
+          "description": "通用匹配规则。匹配器会先做归一化（小写、去 vendor 前缀如 anthropic/、去网关装饰、统一分隔符、去日期戳与波动后缀），再分层匹配：exact > 归一化 exact > 去日期戳后 exact > pattern（取最长） > family 兜底。",
+          "properties": {
+            "exact": {
+              "type": "array",
+              "description": "精确别名列表（除 id 外的已知精确名，含网关可能使用的全名）。归一化后比对。",
+              "items": { "type": "string", "minLength": 1 }
+            },
+            "patterns": {
+              "type": "array",
+              "description": "glob 模式列表（如 claude-sonnet-4-6*）。仅在 exact + 去日期戳仍无法覆盖变体时使用；避免对存在子型号的父模型（如 gpt-4o 之于 gpt-4o-mini）使用宽泛通配，以防误吞。多命中取最长 pattern。",
+              "items": { "type": "string", "minLength": 1 }
+            }
+          },
+          "additionalProperties": false
+        },
+        "spec": {
+          "type": "object",
+          "description": "模型内在参数（不含任何价格字段）",
+          "properties": {
+            "contextWindow": {
+              "type": "number",
+              "description": "上下文窗口大小（token 数）。下游用于上下文裁剪阈值计算。",
+              "minimum": 0
+            },
+            "maxOutputTokens": {
+              "type": "number",
+              "description": "单次请求最大输出 token 数。tags 字符串无法表达，是本规格库相对 NewAPI tags 的核心补充。",
+              "minimum": 0
+            },
+            "capabilities": {
+              "type": "array",
+              "description": "模型能力标签：chat、vision、tool_use、code、reasoning 等。与 NewAPI tags 解析结果取并集。",
+              "items": { "type": "string" }
+            },
+            "serviceType": {
+              "type": ["string", "array"],
+              "items": { "type": "string" },
+              "description": "服务类型，单个字符串或数组：chat、reasoning、fast、vision、embedding、image_gen、tts、asr 等。命中时优先于 tags 解析。"
+            },
+            "defaultTemperature": {
+              "type": ["number", "null"],
+              "description": "推荐默认温度（0-2）。null 表示模型不支持温度调节（如 reasoning 模型），调用方应跳过该参数。本文件为新文件，老客户端不读，故允许 null。",
+              "minimum": 0,
+              "maximum": 2
+            },
+            "defaultTopP": {
+              "type": ["number", "null"],
+              "description": "推荐默认 Top-P（0-1）。null 表示不支持调节。",
+              "minimum": 0,
+              "maximum": 1
+            },
+            "supportsReasoning": {
+              "type": "boolean",
+              "description": "是否为推理模型。用于运行时决定是否启用 reasoning 相关处理。"
+            },
+            "description": {
+              "type": "string",
+              "description": "模型简要描述（一句话特点与适用场景）。命中后可覆盖 NewAPI 原值。"
+            },
+            "extra": {
+              "type": "object",
+              "description": "模型特定附加配置（如 apiModelId 全名、推理预算等）。不含价格。",
+              "additionalProperties": true
+            }
+          },
+          "additionalProperties": false
+        }
+      },
+      "additionalProperties": false
+    }
+  }
+}

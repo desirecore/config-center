@@ -1,0 +1,83 @@
+{
+  "description": "阿里通义千问 Qwen 系列模型规格。参数来源：config-center compute/providers/dashscope.json。",
+  "specs": [
+    {
+      "id": "qwen-max",
+      "displayName": "Qwen Max",
+      "family": "qwen-max",
+      "match": { "patterns": ["qwen-max*"] },
+      "spec": {
+        "contextWindow": 32768,
+        "maxOutputTokens": 8192,
+        "capabilities": ["chat", "reasoning", "code", "multilingual", "long_context"],
+        "serviceType": ["chat"],
+        "defaultTemperature": 0.7
+      }
+    },
+    {
+      "id": "qwen-plus",
+      "displayName": "Qwen Plus",
+      "family": "qwen-plus",
+      "match": { "patterns": ["qwen-plus*"] },
+      "spec": {
+        "contextWindow": 1000000,
+        "maxOutputTokens": 32768,
+        "capabilities": ["chat", "reasoning", "code", "thinking_mode"],
+        "serviceType": ["chat"],
+        "defaultTemperature": 0.7
+      }
+    },
+    {
+      "id": "qwen-turbo",
+      "displayName": "Qwen Turbo",
+      "family": "qwen-turbo",
+      "match": { "patterns": ["qwen-turbo*"] },
+      "spec": {
+        "contextWindow": 1000000,
+        "maxOutputTokens": 16384,
+        "capabilities": ["chat", "code", "long_context", "fast"],
+        "serviceType": ["chat"],
+        "defaultTemperature": 0.7
+      }
+    },
+    {
+      "id": "qwen3-max",
+      "displayName": "Qwen3 Max",
+      "family": "qwen3-max",
+      "spec": {
+        "contextWindow": 262144,
+        "maxOutputTokens": 65536,
+        "capabilities": ["chat", "reasoning", "code", "multilingual", "long_context", "tool_use", "agent", "vision"],
+        "serviceType": ["chat"],
+        "defaultTemperature": 0.7,
+        "supportsReasoning": true
+      }
+    },
+    {
+      "id": "qwen3.5-plus",
+      "displayName": "Qwen3.5 Plus",
+      "family": "qwen3.5",
+      "spec": {
+        "contextWindow": 1000000,
+        "maxOutputTokens": 65536,
+        "capabilities": ["chat", "reasoning", "code", "multilingual", "long_context", "tool_use", "agent", "vision"],
+        "serviceType": ["chat"],
+        "defaultTemperature": 0.6,
+        "supportsReasoning": true
+      }
+    },
+    {
+      "id": "qwen3.6-plus",
+      "displayName": "Qwen3.6 Plus",
+      "family": "qwen3.6",
+      "spec": {
+        "contextWindow": 1000000,
+        "maxOutputTokens": 65536,
+        "capabilities": ["chat", "reasoning", "code", "multilingual", "long_context", "tool_use", "agent", "vision"],
+        "serviceType": ["chat", "vision"],
+        "defaultTemperature": 0.6,
+        "supportsReasoning": true
+      }
+    }
+  ]
+}

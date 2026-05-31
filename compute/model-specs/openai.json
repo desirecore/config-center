@@ -1,0 +1,149 @@
+{
+  "description": "OpenAI GPT / o 系列模型规格。参数来源：config-center compute/providers/openai.json。注意：gpt-4o / gpt-5 等存在子型号（-mini/-nano），故只用 exact 主键匹配，不使用宽泛 pattern 以防误吞子型号。o 系列 serviceType 由 responses 调整为 reasoning（responses 为 OpenAI 直连专有，对 NewAPI 网关不适用）。",
+  "specs": [
+    {
+      "id": "gpt-5.2",
+      "displayName": "GPT-5.2",
+      "family": "gpt-5",
+      "spec": {
+        "contextWindow": 400000,
+        "maxOutputTokens": 128000,
+        "capabilities": ["chat", "reasoning", "code", "vision", "long_context", "tool_use"],
+        "serviceType": ["chat"],
+        "defaultTemperature": 1,
+        "supportsReasoning": true
+      }
+    },
+    {
+      "id": "gpt-5.1",
+      "displayName": "GPT-5.1",
+      "family": "gpt-5",
+      "spec": {
+        "contextWindow": 400000,
+        "maxOutputTokens": 128000,
+        "capabilities": ["chat", "reasoning", "code", "vision", "long_context", "tool_use"],
+        "serviceType": ["chat"],
+        "defaultTemperature": 1,
+        "supportsReasoning": true
+      }
+    },
+    {
+      "id": "gpt-5",
+      "displayName": "GPT-5",
+      "family": "gpt-5",
+      "spec": {
+        "contextWindow": 400000,
+        "maxOutputTokens": 128000,
+        "capabilities": ["chat", "reasoning", "code", "vision", "long_context", "tool_use"],
+        "serviceType": ["chat"],
+        "defaultTemperature": 1,
+        "supportsReasoning": true
+      }
+    },
+    {
+      "id": "gpt-5-mini",
+      "displayName": "GPT-5 Mini",
+      "family": "gpt-5",
+      "match": { "patterns": ["gpt-5-mini*"] },
+      "spec": {
+        "contextWindow": 400000,
+        "maxOutputTokens": 128000,
+        "capabilities": ["chat", "fast", "tool_use", "code", "vision"],
+        "serviceType": ["chat"],
+        "defaultTemperature": 1,
+        "supportsReasoning": true
+      }
+    },
+    {
+      "id": "gpt-5-nano",
+      "displayName": "GPT-5 Nano",
+      "family": "gpt-5",
+      "match": { "patterns": ["gpt-5-nano*"] },
+      "spec": {
+        "contextWindow": 400000,
+        "maxOutputTokens": 128000,
+        "capabilities": ["chat", "code", "fast"],
+        "serviceType": ["fast"],
+        "defaultTemperature": 1
+      }
+    },
+    {
+      "id": "gpt-4.1",
+      "displayName": "GPT-4.1",
+      "family": "gpt-4.1",
+      "spec": {
+        "contextWindow": 1047576,
+        "maxOutputTokens": 32768,
+        "capabilities": ["chat", "reasoning", "code", "vision", "ultra_long_context", "tool_use"],
+        "serviceType": ["chat"],
+        "defaultTemperature": 1
+      }
+    },
+    {
+      "id": "gpt-4o",
+      "displayName": "GPT-4o",
+      "family": "gpt-4o",
+      "spec": {
+        "contextWindow": 128000,
+        "maxOutputTokens": 16384,
+        "capabilities": ["chat", "vision", "image_understanding", "tool_use"],
+        "serviceType": ["vision"],
+        "defaultTemperature": 1
+      }
+    },
+    {
+      "id": "gpt-4o-mini",
+      "displayName": "GPT-4o Mini",
+      "family": "gpt-4o",
+      "match": { "patterns": ["gpt-4o-mini*"] },
+      "spec": {
+        "contextWindow": 128000,
+        "maxOutputTokens": 16384,
+        "capabilities": ["chat", "code", "vision", "tool_use"],
+        "serviceType": ["vision"],
+        "defaultTemperature": 1
+      }
+    },
+    {
+      "id": "o3",
+      "displayName": "o3",
+      "family": "o3",
+      "spec": {
+        "contextWindow": 200000,
+        "maxOutputTokens": 100000,
+        "capabilities": ["reasoning", "deep_thinking", "code", "math", "science", "tool_use"],
+        "serviceType": ["reasoning"],
+        "defaultTemperature": null,
+        "supportsReasoning": true
+      }
+    },
+    {
+      "id": "o3-mini",
+      "displayName": "o3 Mini",
+      "family": "o3",
+      "match": { "patterns": ["o3-mini*"] },
+      "spec": {
+        "contextWindow": 200000,
+        "maxOutputTokens": 100000,
+        "capabilities": ["reasoning", "math", "code", "fast"],
+        "serviceType": ["reasoning"],
+        "defaultTemperature": null,
+        "supportsReasoning": true
+      }
+    },
+    {
+      "id": "o4-mini",
+      "displayName": "o4 Mini",
+      "family": "o4",
+      "match": { "patterns": ["o4-mini*"] },
+      "spec": {
+        "contextWindow": 200000,
+        "maxOutputTokens": 100000,
+        "capabilities": ["reasoning", "math", "code", "tool_use", "vision"],
+        "serviceType": ["reasoning"],
+        "defaultTemperature": null,
+        "supportsReasoning": true
+      }
+    }
+  ]
+}

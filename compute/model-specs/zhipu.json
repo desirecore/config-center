@@ -1,0 +1,70 @@
+{
+  "description": "智谱 GLM 系列模型规格。参数来源：config-center compute/providers/zhipu.json。glm-5 与 glm-5.1/glm-5-turbo/glm-5v-turbo 前缀相近，故各自仅用 exact 主键匹配，不用宽 pattern 以防误吞。",
+  "specs": [
+    {
+      "id": "glm-5.1",
+      "displayName": "GLM-5.1",
+      "family": "glm-5.1",
+      "spec": {
+        "contextWindow": 200000,
+        "maxOutputTokens": 128000,
+        "capabilities": ["chat", "reasoning", "code", "multilingual", "deep_thinking", "long_context", "math", "tool_use", "agent"],
+        "serviceType": ["chat"],
+        "defaultTemperature": 1,
+        "supportsReasoning": true
+      }
+    },
+    {
+      "id": "glm-5",
+      "displayName": "GLM-5",
+      "family": "glm-5",
+      "spec": {
+        "contextWindow": 200000,
+        "maxOutputTokens": 128000,
+        "capabilities": ["chat", "reasoning", "code", "multilingual", "deep_thinking", "long_context", "math", "tool_use", "agent"],
+        "serviceType": ["chat"],
+        "defaultTemperature": 1,
+        "supportsReasoning": true
+      }
+    },
+    {
+      "id": "glm-5-turbo",
+      "displayName": "GLM-5 Turbo",
+      "family": "glm-5-turbo",
+      "spec": {
+        "contextWindow": 200000,
+        "maxOutputTokens": 128000,
+        "capabilities": ["chat", "reasoning", "code", "deep_thinking", "long_context", "tool_use", "agent"],
+        "serviceType": ["chat"],
+        "defaultTemperature": 1,
+        "supportsReasoning": true
+      }
+    },
+    {
+      "id": "glm-4.7",
+      "displayName": "GLM-4.7",
+      "family": "glm-4.7",
+      "spec": {
+        "contextWindow": 200000,
+        "maxOutputTokens": 128000,
+        "capabilities": ["chat", "reasoning", "code", "multilingual", "deep_thinking", "long_context", "tool_use"],
+        "serviceType": ["chat"],
+        "defaultTemperature": 1,
+        "supportsReasoning": true
+      }
+    },
+    {
+      "id": "glm-4.6",
+      "displayName": "GLM-4.6",
+      "family": "glm-4.6",
+      "spec": {
+        "contextWindow": 200000,
+        "maxOutputTokens": 128000,
+        "capabilities": ["chat", "reasoning", "code", "multilingual", "deep_thinking"],
+        "serviceType": ["chat"],
+        "defaultTemperature": 1,
+        "supportsReasoning": true
+      }
+    }
+  ]
+}
