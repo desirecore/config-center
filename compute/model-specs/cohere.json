@@ -1,0 +1,57 @@
+{
+  "description": "Cohere 系列模型规格。参数来源：config-center compute/providers/cohere.json。包含对话、Embedding 和 Rerank 三类服务。",
+  "specs": [
+    {
+      "id": "command-a-03-2025",
+      "displayName": "Command A",
+      "family": "command-a",
+      "match": { "exact": ["command-a-03-2025"], "patterns": ["command-a*"] },
+      "spec": {
+        "contextWindow": 256000,
+        "maxOutputTokens": 8000,
+        "capabilities": ["chat", "reasoning", "code", "vision", "tool_use", "rag", "long_context"],
+        "serviceType": ["chat"],
+        "defaultTemperature": 0.3,
+        "description": "Cohere 旗舰对话模型，256K 上下文，擅长 RAG 和工具调用"
+      }
+    },
+    {
+      "id": "command-r7b-12-2024",
+      "displayName": "Command R7B",
+      "family": "command-r7b",
+      "match": { "exact": ["command-r7b-12-2024"], "patterns": ["command-r7b*"] },
+      "spec": {
+        "contextWindow": 128000,
+        "maxOutputTokens": 4000,
+        "capabilities": ["chat", "reasoning", "tool_use", "rag", "fast"],
+        "serviceType": ["fast"],
+        "defaultTemperature": 0.3,
+        "description": "Cohere 小型高速对话模型，适合高吞吐、低延迟场景"
+      }
+    },
+    {
+      "id": "embed-v4.0",
+      "displayName": "Embed V4",
+      "family": "embed-v4",
+      "match": { "exact": ["embed-v4.0"], "patterns": ["embed-v4*"] },
+      "spec": {
+        "contextWindow": 128000,
+        "capabilities": ["text_embedding", "multilingual"],
+        "serviceType": ["embedding"],
+        "description": "Cohere 最新 Embedding 模型，128K 上下文，多语言支持"
+      }
+    },
+    {
+      "id": "rerank-v3.5",
+      "displayName": "Rerank V3.5",
+      "family": "rerank-v3",
+      "match": { "exact": ["rerank-v3.5"], "patterns": ["rerank-v3*"] },
+      "spec": {
+        "contextWindow": 4096,
+        "capabilities": ["rerank", "semantic_reranking"],
+        "serviceType": ["rerank"],
+        "description": "Cohere 语义重排序模型，用于检索结果精排"
+      }
+    }
+  ]
+}

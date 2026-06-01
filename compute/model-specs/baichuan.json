@@ -1,0 +1,61 @@
+{
+  "description": "百川智能 Baichuan 系列模型规格。参数来源：config-center compute/providers/baichuan.json。M3/M2 系列为医疗增强大模型，235B 参数，支持多模态。",
+  "specs": [
+    {
+      "id": "Baichuan-M3-Plus",
+      "displayName": "百川 M3-Plus",
+      "family": "baichuan-m3",
+      "match": { "exact": ["Baichuan-M3-Plus"] },
+      "spec": {
+        "contextWindow": 32000,
+        "maxOutputTokens": 32000,
+        "capabilities": ["chat", "reasoning", "code", "multilingual", "vision", "long_context", "medical"],
+        "serviceType": ["chat"],
+        "defaultTemperature": 0.3,
+        "description": "百川智能M3-Plus医疗增强模型，235B参数，幻觉率仅2.6%"
+      }
+    },
+    {
+      "id": "Baichuan-M3",
+      "displayName": "百川 M3",
+      "family": "baichuan-m3",
+      "match": { "exact": ["Baichuan-M3"] },
+      "spec": {
+        "contextWindow": 32000,
+        "maxOutputTokens": 32000,
+        "capabilities": ["chat", "reasoning", "code", "multilingual", "vision", "medical"],
+        "serviceType": ["chat"],
+        "defaultTemperature": 0.3,
+        "description": "百川智能M3新一代开源医疗增强模型，235B参数"
+      }
+    },
+    {
+      "id": "Baichuan-M2-Plus",
+      "displayName": "百川 M2-Plus",
+      "family": "baichuan-m2",
+      "match": { "exact": ["Baichuan-M2-Plus"] },
+      "spec": {
+        "contextWindow": 32000,
+        "maxOutputTokens": 32000,
+        "capabilities": ["chat", "reasoning", "code", "multilingual", "long_context"],
+        "serviceType": ["chat"],
+        "defaultTemperature": 0.3,
+        "description": "百川智能M2-Plus旗舰模型，最强推理和创作能力"
+      }
+    },
+    {
+      "id": "Baichuan-M2",
+      "displayName": "百川 M2",
+      "family": "baichuan-m2",
+      "match": { "exact": ["Baichuan-M2"] },
+      "spec": {
+        "contextWindow": 32000,
+        "maxOutputTokens": 32000,
+        "capabilities": ["chat", "reasoning", "code", "multilingual"],
+        "serviceType": ["chat"],
+        "defaultTemperature": 0.3,
+        "description": "百川智能M2高性能通用模型"
+      }
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "description": "Stability AI 图像生成系列模型规格。参数来源：config-center compute/providers/stability.json。无上下文窗口（图像生成模型）。",
+  "specs": [
+    {
+      "id": "stable-diffusion-3.5-large",
+      "displayName": "Stable Diffusion 3.5 Large",
+      "family": "stable-diffusion-3",
+      "match": { "exact": ["stable-diffusion-3.5-large"], "patterns": ["stable-diffusion-3.5*"] },
+      "spec": {
+        "capabilities": ["image_generation", "high_quality", "controllable"],
+        "serviceType": ["image_gen"],
+        "description": "Stability AI 旗舰文生图模型，支持多种分辨率和风格"
+      }
+    }
+  ]
+}

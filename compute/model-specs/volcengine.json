@@ -1,0 +1,257 @@
+{
+  "description": "火山引擎豆包系列模型规格。参数来源：config-center compute/providers/volcengine.json。包含豆包 Seed 系列对话、DeepSeek 托管版、Embedding、语音克隆、实时语音、同传和翻译服务。doubao-seed-1.6-thinking 为推理模型。",
+  "specs": [
+    {
+      "id": "doubao-seed-2.0-pro",
+      "displayName": "豆包 2.0 Pro",
+      "family": "doubao-seed-2",
+      "match": { "exact": ["doubao-seed-2.0-pro"], "patterns": ["doubao-seed-2.0-pro*"] },
+      "spec": {
+        "contextWindow": 256000,
+        "maxOutputTokens": 128000,
+        "capabilities": ["chat", "reasoning", "code", "multilingual", "long_context", "tool_use", "vision"],
+        "serviceType": ["chat"],
+        "defaultTemperature": 1,
+        "description": "火山引擎豆包 Seed 2.0 旗舰模型，256K 上下文，支持复杂推理、Agent 和多模态"
+      }
+    },
+    {
+      "id": "doubao-seed-2.0-lite",
+      "displayName": "豆包 2.0 Lite",
+      "family": "doubao-seed-2",
+      "match": { "exact": ["doubao-seed-2.0-lite"], "patterns": ["doubao-seed-2.0-lite*"] },
+      "spec": {
+        "contextWindow": 256000,
+        "maxOutputTokens": 32000,
+        "capabilities": ["chat", "reasoning", "code", "multilingual", "long_context", "tool_use", "vision", "audio_understanding", "video_understanding"],
+        "serviceType": ["chat"],
+        "defaultTemperature": 1,
+        "description": "豆包 Seed 2.0 全模态均衡模型，支持视频/图像/音频/文本统一理解"
+      }
+    },
+    {
+      "id": "doubao-seed-2.0-mini",
+      "displayName": "豆包 2.0 Mini",
+      "family": "doubao-seed-2",
+      "match": { "exact": ["doubao-seed-2.0-mini"], "patterns": ["doubao-seed-2.0-mini*"] },
+      "spec": {
+        "contextWindow": 256000,
+        "maxOutputTokens": 32000,
+        "capabilities": ["chat", "reasoning", "code", "multilingual", "long_context", "tool_use", "vision", "audio_understanding", "video_understanding", "fast"],
+        "serviceType": ["chat"],
+        "defaultTemperature": 1,
+        "description": "豆包 Seed 2.0 全模态轻量模型，低延迟高并发，支持全模态理解"
+      }
+    },
+    {
+      "id": "doubao-seed-2.0-code",
+      "displayName": "豆包 2.0 Code",
+      "family": "doubao-seed-2",
+      "match": { "exact": ["doubao-seed-2.0-code"] },
+      "spec": {
+        "contextWindow": 256000,
+        "maxOutputTokens": 128000,
+        "capabilities": ["chat", "reasoning", "code", "long_context", "tool_use", "vision", "deep_thinking"],
+        "serviceType": ["chat"],
+        "defaultTemperature": 1,
+        "description": "豆包 Seed 2.0 编程模型，面向 Agentic Coding 场景优化"
+      }
+    },
+    {
+      "id": "doubao-seed-1.8",
+      "displayName": "豆包 Seed-1.8",
+      "family": "doubao-seed-1",
+      "match": { "exact": ["doubao-seed-1.8"], "patterns": ["doubao-seed-1.8*"] },
+      "spec": {
+        "contextWindow": 256000,
+        "maxOutputTokens": 16000,
+        "capabilities": ["chat", "reasoning", "code", "multilingual", "long_context", "tool_use", "vision"],
+        "serviceType": ["chat"],
+        "defaultTemperature": 1,
+        "description": "火山引擎豆包 1.8 旗舰模型，256K 上下文，支持深度思考和多模态"
+      }
+    },
+    {
+      "id": "doubao-seed-1.6",
+      "displayName": "豆包 Seed-1.6",
+      "family": "doubao-seed-1",
+      "match": { "exact": ["doubao-seed-1.6"], "patterns": ["doubao-seed-1.6"] },
+      "spec": {
+        "contextWindow": 256000,
+        "maxOutputTokens": 32000,
+        "capabilities": ["chat", "reasoning", "code", "multilingual", "long_context", "tool_use", "vision"],
+        "serviceType": ["chat"],
+        "defaultTemperature": 1,
+        "description": "火山引擎豆包 1.6 旗舰模型，256K 上下文"
+      }
+    },
+    {
+      "id": "doubao-seed-1.6-thinking",
+      "displayName": "豆包 Seed-1.6 思考版",
+      "family": "doubao-seed-1",
+      "match": { "exact": ["doubao-seed-1.6-thinking"] },
+      "spec": {
+        "contextWindow": 256000,
+        "maxOutputTokens": 16000,
+        "capabilities": ["reasoning", "math", "code", "deep_thinking", "long_context"],
+        "serviceType": ["chat"],
+        "defaultTemperature": null,
+        "supportsReasoning": true,
+        "description": "火山引擎豆包 1.6 深度思考模型，256K 上下文"
+      }
+    },
+    {
+      "id": "doubao-seed-1.6-flash",
+      "displayName": "豆包 Seed-1.6 Flash",
+      "family": "doubao-seed-1",
+      "match": { "exact": ["doubao-seed-1.6-flash"] },
+      "spec": {
+        "contextWindow": 256000,
+        "maxOutputTokens": 16000,
+        "capabilities": ["chat", "code", "fast", "long_context", "vision"],
+        "serviceType": ["chat"],
+        "defaultTemperature": 1,
+        "description": "火山引擎豆包 1.6 快速版，成本较前代下降 63%"
+      }
+    },
+    {
+      "id": "doubao-seed-1.6-lite",
+      "displayName": "豆包 Seed-1.6 Lite",
+      "family": "doubao-seed-1",
+      "match": { "exact": ["doubao-seed-1.6-lite"] },
+      "spec": {
+        "contextWindow": 256000,
+        "maxOutputTokens": 32000,
+        "capabilities": ["chat", "code", "fast"],
+        "serviceType": ["chat"],
+        "defaultTemperature": 1,
+        "description": "火山引擎豆包 1.6 轻量版，极致性价比"
+      }
+    },
+    {
+      "id": "doubao-seed-1.6-vision",
+      "displayName": "豆包 Seed-1.6 视觉版",
+      "family": "doubao-seed-1",
+      "match": { "exact": ["doubao-seed-1.6-vision"] },
+      "spec": {
+        "contextWindow": 256000,
+        "maxOutputTokens": 32000,
+        "capabilities": ["chat", "vision", "video_understanding", "gui_agent", "long_context"],
+        "serviceType": ["vision"],
+        "defaultTemperature": 1,
+        "description": "火山引擎豆包 1.6 视觉模型，256K 上下文，支持视频理解"
+      }
+    },
+    {
+      "id": "doubao-seed-code",
+      "displayName": "豆包 Seed-Code",
+      "family": "doubao-seed-code",
+      "match": { "exact": ["doubao-seed-code"] },
+      "spec": {
+        "contextWindow": 256000,
+        "maxOutputTokens": 32768,
+        "capabilities": ["code", "reasoning", "long_context", "deep_thinking"],
+        "serviceType": ["chat"],
+        "defaultTemperature": 1,
+        "description": "火山引擎豆包编程专用模型，256K 上下文"
+      }
+    },
+    {
+      "id": "deepseek-v3.2",
+      "displayName": "DeepSeek V3.2 (火山引擎)",
+      "family": "deepseek-v3",
+      "match": { "exact": ["deepseek-v3.2"] },
+      "spec": {
+        "contextWindow": 128000,
+        "maxOutputTokens": 32000,
+        "capabilities": ["chat", "reasoning", "code", "multilingual"],
+        "serviceType": ["chat"],
+        "defaultTemperature": 1,
+        "description": "火山引擎托管的 DeepSeek V3.2，128K 上下文"
+      }
+    },
+    {
+      "id": "deepseek-r1",
+      "displayName": "DeepSeek R1 (火山引擎)",
+      "family": "deepseek-r1",
+      "match": { "exact": ["deepseek-r1"] },
+      "spec": {
+        "contextWindow": 128000,
+        "maxOutputTokens": 65536,
+        "capabilities": ["reasoning", "math", "code", "science", "deep_thinking"],
+        "serviceType": ["reasoning"],
+        "defaultTemperature": null,
+        "supportsReasoning": true,
+        "description": "火山引擎托管的 DeepSeek R1 推理模型，128K 上下文"
+      }
+    },
+    {
+      "id": "doubao-embedding",
+      "displayName": "豆包 Embedding",
+      "family": "doubao-embedding",
+      "match": { "exact": ["doubao-embedding"] },
+      "spec": {
+        "contextWindow": 4096,
+        "capabilities": ["text_embedding", "semantic_search", "rag", "chinese_optimized"],
+        "serviceType": ["embedding"],
+        "description": "火山引擎豆包标准向量模型，默认 2048 维度，可选 512/1024/2048"
+      }
+    },
+    {
+      "id": "doubao-embedding-large",
+      "displayName": "豆包 Embedding Large",
+      "family": "doubao-embedding",
+      "match": { "exact": ["doubao-embedding-large"] },
+      "spec": {
+        "contextWindow": 4096,
+        "capabilities": ["text_embedding", "semantic_search", "rag", "chinese_optimized"],
+        "serviceType": ["embedding"],
+        "description": "火山引擎豆包大号向量模型，默认 2048 维度，可选 512/1024/2048/4096"
+      }
+    },
+    {
+      "id": "volc-mega-tts-clone",
+      "displayName": "火山声音复刻",
+      "family": "volc-tts",
+      "match": { "exact": ["volc-mega-tts-clone"] },
+      "spec": {
+        "capabilities": ["voice_clone", "chinese_optimized", "few_shot"],
+        "serviceType": ["voice_clone"],
+        "description": "火山引擎声音复刻，支持极少样本克隆"
+      }
+    },
+    {
+      "id": "volc-realtime-voice",
+      "displayName": "火山实时语音",
+      "family": "volc-voice",
+      "match": { "exact": ["volc-realtime-voice"] },
+      "spec": {
+        "capabilities": ["realtime", "speech_to_speech", "low_latency", "chinese_optimized"],
+        "serviceType": ["realtime_voice"],
+        "description": "火山引擎实时语音交互"
+      }
+    },
+    {
+      "id": "volc-simultaneous",
+      "displayName": "火山同声传译",
+      "family": "volc-interpret",
+      "match": { "exact": ["volc-simultaneous"] },
+      "spec": {
+        "capabilities": ["simultaneous_interpretation", "chinese_optimized", "low_latency"],
+        "serviceType": ["simultaneous_interpret"],
+        "description": "火山引擎同声传译，支持中英双向"
+      }
+    },
+    {
+      "id": "volc-translation",
+      "displayName": "火山翻译",
+      "family": "volc-translation",
+      "match": { "exact": ["volc-translation"] },
+      "spec": {
+        "capabilities": ["translation", "multilingual", "chinese_optimized"],
+        "serviceType": ["translation"],
+        "description": "火山引擎机器翻译，支持多语种互译"
+      }
+    }
+  ]
+}

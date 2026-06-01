@@ -1,0 +1,76 @@
+{
+  "description": "百度文心 ERNIE 系列模型规格。参数来源：config-center compute/providers/baidu.json。ernie-x1.1 为纯推理模型，defaultTemperature 为 null；ernie-5.0-thinking-latest 同时支持 chat 和 reasoning。",
+  "specs": [
+    {
+      "id": "ernie-5.0-thinking-latest",
+      "displayName": "文心 ERNIE 5.0",
+      "family": "ernie-5",
+      "match": { "exact": ["ernie-5.0-thinking-latest"], "patterns": ["ernie-5.0-thinking*"] },
+      "spec": {
+        "contextWindow": 128000,
+        "maxOutputTokens": 65536,
+        "capabilities": ["chat", "reasoning", "vision", "multimodal", "tool_use"],
+        "serviceType": ["chat", "reasoning"],
+        "supportsReasoning": true,
+        "description": "百度最新旗舰模型，支持深度推理、多模态和工具调用"
+      }
+    },
+    {
+      "id": "ernie-5.0",
+      "displayName": "文心 ERNIE 5.0 非思考",
+      "family": "ernie-5",
+      "match": { "exact": ["ernie-5.0"] },
+      "spec": {
+        "contextWindow": 131072,
+        "maxOutputTokens": 65536,
+        "capabilities": ["chat", "vision", "multimodal", "tool_use"],
+        "serviceType": ["chat"],
+        "defaultTemperature": 0.95,
+        "description": "百度 ERNIE 5.0 旗舰模型，128K 上下文，最大输出 65536 token"
+      }
+    },
+    {
+      "id": "ernie-4.5-turbo-128k",
+      "displayName": "文心 ERNIE 4.5 Turbo",
+      "family": "ernie-4.5",
+      "match": { "exact": ["ernie-4.5-turbo-128k"], "patterns": ["ernie-4.5-turbo-128k*"] },
+      "spec": {
+        "contextWindow": 131072,
+        "maxOutputTokens": 12288,
+        "capabilities": ["chat", "code", "vision", "long_context", "fast"],
+        "serviceType": ["chat"],
+        "defaultTemperature": 0.8,
+        "description": "百度高性价比长上下文模型，128K 窗口，最大输出 12288 token"
+      }
+    },
+    {
+      "id": "ernie-4.5-turbo-20260402",
+      "displayName": "文心 ERNIE 4.5 Turbo 20260402",
+      "family": "ernie-4.5",
+      "match": { "exact": ["ernie-4.5-turbo-20260402"] },
+      "spec": {
+        "contextWindow": 131072,
+        "maxOutputTokens": 12288,
+        "capabilities": ["chat", "code", "vision", "long_context", "fast"],
+        "serviceType": ["chat"],
+        "defaultTemperature": 0.8,
+        "description": "百度 ERNIE 4.5 Turbo 20260402 快照版，128K 上下文"
+      }
+    },
+    {
+      "id": "ernie-x1.1",
+      "displayName": "文心 ERNIE X1.1",
+      "family": "ernie-x1",
+      "match": { "exact": ["ernie-x1.1"], "patterns": ["ernie-x1*"] },
+      "spec": {
+        "contextWindow": 65536,
+        "maxOutputTokens": 65536,
+        "capabilities": ["chat", "reasoning", "deep_thinking", "math", "code"],
+        "serviceType": ["reasoning"],
+        "defaultTemperature": null,
+        "supportsReasoning": true,
+        "description": "百度 ERNIE X1.1 深度思考推理模型，64K 上下文"
+      }
+    }
+  ]
+}

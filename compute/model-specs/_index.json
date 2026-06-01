@@ -11,6 +11,16 @@
     "minimax",
     "xai",
     "mistral",
-    "xiaomi"
+    "xiaomi",
+    "baichuan",
+    "baidu",
+    "cohere",
+    "kling",
+    "lingyiwanwu",
+    "perplexity",
+    "stability",
+    "tencent",
+    "volcengine",
+    "xunfei"
   ]
 }
