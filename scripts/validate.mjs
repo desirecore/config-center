@@ -48,8 +48,10 @@ function pickSchemaKey(absPath) {
   if (rel === 'compute/service-map.json') return 'service-map'
   if (rel === 'compute/providers/_index.json') return 'providers-index'
   if (rel === 'compute/coding-plans/_index.json') return 'providers-index'
+  if (rel === 'compute/model-specs/_index.json') return 'providers-index'
   if (rel.startsWith('compute/providers/') && rel.endsWith('.json')) return 'provider'
   if (rel.startsWith('compute/coding-plans/') && rel.endsWith('.json')) return 'provider'
+  if (rel.startsWith('compute/model-specs/') && rel.endsWith('.json')) return 'model-spec'
   return null
 }
 

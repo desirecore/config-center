@@ -1,0 +1,314 @@
+{
+  "description": "MiniMax 系列模型规格。参数来源：config-center compute/providers/minimax.json。id 保留上游 model_name 原始写法（含大小写与点号），匹配时由匹配器归一化处理。",
+  "specs": [
+    {
+      "id": "MiniMax-M2.7",
+      "displayName": "MiniMax M2.7",
+      "family": "minimax-m2.7",
+      "spec": {
+        "contextWindow": 204800,
+        "maxOutputTokens": 131072,
+        "capabilities": ["chat", "reasoning", "code", "tool_use", "vision"],
+        "serviceType": ["chat", "reasoning"],
+        "defaultTemperature": 1,
+        "supportsReasoning": true
+      }
+    },
+    {
+      "id": "MiniMax-M2.5",
+      "displayName": "MiniMax M2.5",
+      "family": "minimax-m2.5",
+      "spec": {
+        "contextWindow": 204800,
+        "maxOutputTokens": 131072,
+        "capabilities": ["chat", "reasoning", "code", "tool_use", "long_context"],
+        "serviceType": ["chat", "reasoning"],
+        "defaultTemperature": 1,
+        "supportsReasoning": true
+      }
+    },
+    {
+      "id": "MiniMax-M2",
+      "displayName": "MiniMax M2",
+      "family": "minimax-m2",
+      "spec": {
+        "contextWindow": 204800,
+        "maxOutputTokens": 131072,
+        "capabilities": ["chat", "code", "tool_use"],
+        "serviceType": ["chat"],
+        "defaultTemperature": 1
+      }
+    },
+    {
+      "id": "MiniMax-M2.7-highspeed",
+      "displayName": "MiniMax M2.7 高速版",
+      "family": "minimax-m2.7",
+      "match": { "exact": ["MiniMax-M2.7-highspeed"] },
+      "spec": {
+        "contextWindow": 204800,
+        "maxOutputTokens": 131072,
+        "capabilities": ["chat", "reasoning", "code", "tool_use", "fast", "vision"],
+        "serviceType": ["fast"],
+        "defaultTemperature": 1,
+        "description": "MiniMax M2.7 极速版，效果一致，输出更快，适合低延迟场景"
+      }
+    },
+    {
+      "id": "MiniMax-M2.5-highspeed",
+      "displayName": "MiniMax M2.5 高速版",
+      "family": "minimax-m2.5",
+      "match": { "exact": ["MiniMax-M2.5-highspeed"] },
+      "spec": {
+        "contextWindow": 204800,
+        "maxOutputTokens": 131072,
+        "capabilities": ["chat", "reasoning", "code", "tool_use", "fast"],
+        "serviceType": ["fast"],
+        "defaultTemperature": 1,
+        "description": "MiniMax M2.5 高速推理版本（100TPS），适合低延迟场景"
+      }
+    },
+    {
+      "id": "MiniMax-M2.1",
+      "displayName": "MiniMax M2.1",
+      "family": "minimax-m2.1",
+      "match": { "exact": ["MiniMax-M2.1"] },
+      "spec": {
+        "contextWindow": 204800,
+        "maxOutputTokens": 131072,
+        "capabilities": ["chat", "code", "tool_use", "reasoning"],
+        "serviceType": ["chat"],
+        "defaultTemperature": 1,
+        "description": "MiniMax 上一代主力模型，200K 上下文，性价比优秀"
+      }
+    },
+    {
+      "id": "MiniMax-M2.1-highspeed",
+      "displayName": "MiniMax M2.1 高速版",
+      "family": "minimax-m2.1",
+      "match": { "exact": ["MiniMax-M2.1-highspeed"] },
+      "spec": {
+        "contextWindow": 204800,
+        "maxOutputTokens": 131072,
+        "capabilities": ["chat", "reasoning", "code", "tool_use", "fast"],
+        "serviceType": ["fast"],
+        "defaultTemperature": 1,
+        "description": "MiniMax M2.1 高速推理版本，适合低延迟场景"
+      }
+    },
+    {
+      "id": "M2-her",
+      "displayName": "MiniMax M2 Her",
+      "family": "minimax-m2",
+      "match": { "exact": ["M2-her"] },
+      "spec": {
+        "contextWindow": 204800,
+        "maxOutputTokens": 131072,
+        "capabilities": ["chat", "roleplay"],
+        "serviceType": ["chat"],
+        "defaultTemperature": 1,
+        "description": "MiniMax 角色扮演对话模型，专为多轮角色对话设计"
+      }
+    },
+    {
+      "id": "MiniMax-Text-01",
+      "displayName": "MiniMax Text 01",
+      "family": "minimax-text",
+      "match": { "exact": ["MiniMax-Text-01"] },
+      "spec": {
+        "contextWindow": 1000000,
+        "maxOutputTokens": 131072,
+        "capabilities": ["chat", "reasoning", "code", "long_context"],
+        "serviceType": ["chat"],
+        "defaultTemperature": 0.1,
+        "description": "MiniMax 百万级长上下文文本模型，擅长长文档处理"
+      }
+    },
+    {
+      "id": "image-01",
+      "displayName": "MiniMax Image 01",
+      "family": "minimax-image",
+      "match": { "exact": ["image-01"] },
+      "spec": {
+        "capabilities": ["image_generation", "subject_reference", "chinese_optimized"],
+        "serviceType": ["image_gen"],
+        "description": "MiniMax 文生图/图生图模型，支持主题参考（角色一致性）"
+      }
+    },
+    {
+      "id": "image-01-live",
+      "displayName": "MiniMax Image 01 Live",
+      "family": "minimax-image",
+      "match": { "exact": ["image-01-live"] },
+      "spec": {
+        "capabilities": ["image_generation", "style_control", "subject_reference", "chinese_optimized"],
+        "serviceType": ["image_gen"],
+        "description": "MiniMax 文生图模型（Live 版），支持画风控制"
+      }
+    },
+    {
+      "id": "speech-2.8-hd",
+      "displayName": "MiniMax Speech 2.8 HD",
+      "family": "minimax-speech",
+      "match": { "exact": ["speech-2.8-hd"] },
+      "spec": {
+        "capabilities": ["tts", "multilingual", "emotion_control", "voice_clone", "chinese_optimized"],
+        "serviceType": ["tts"],
+        "description": "MiniMax 最新高清语音合成，40+ 语言、100+ 预置音色"
+      }
+    },
+    {
+      "id": "speech-2.8-turbo",
+      "displayName": "MiniMax Speech 2.8 Turbo",
+      "family": "minimax-speech",
+      "match": { "exact": ["speech-2.8-turbo"] },
+      "spec": {
+        "capabilities": ["tts", "multilingual", "emotion_control", "fast", "chinese_optimized"],
+        "serviceType": ["tts"],
+        "description": "MiniMax 快速语音合成模型，速度优先，适合实时场景"
+      }
+    },
+    {
+      "id": "speech-2.6-hd",
+      "displayName": "MiniMax Speech 2.6 HD",
+      "family": "minimax-speech",
+      "match": { "exact": ["speech-2.6-hd"] },
+      "spec": {
+        "capabilities": ["tts", "multilingual", "emotion_control", "voice_clone", "chinese_optimized"],
+        "serviceType": ["tts"],
+        "description": "MiniMax 高清语音合成（2.6 版），音质优秀，生成速度快"
+      }
+    },
+    {
+      "id": "speech-2.6-turbo",
+      "displayName": "MiniMax Speech 2.6 Turbo",
+      "family": "minimax-speech",
+      "match": { "exact": ["speech-2.6-turbo"] },
+      "spec": {
+        "capabilities": ["tts", "multilingual", "emotion_control", "fast", "chinese_optimized"],
+        "serviceType": ["tts"],
+        "description": "MiniMax 快速语音合成（2.6 版），低延迟响应"
+      }
+    },
+    {
+      "id": "speech-02-hd",
+      "displayName": "MiniMax Speech 02 HD",
+      "family": "minimax-speech",
+      "match": { "exact": ["speech-02-hd"] },
+      "spec": {
+        "capabilities": ["tts", "multilingual", "voice_clone", "chinese_optimized"],
+        "serviceType": ["tts"],
+        "description": "MiniMax 高清语音合成（历史版本），韵律稳定性优秀"
+      }
+    },
+    {
+      "id": "speech-02-turbo",
+      "displayName": "MiniMax Speech 02 Turbo",
+      "family": "minimax-speech",
+      "match": { "exact": ["speech-02-turbo"] },
+      "spec": {
+        "capabilities": ["tts", "multilingual", "fast", "chinese_optimized"],
+        "serviceType": ["tts"],
+        "description": "MiniMax 快速语音合成（历史版本），增强小语种支持"
+      }
+    },
+    {
+      "id": "MiniMax-Hailuo-2.3",
+      "displayName": "海螺视频 2.3",
+      "family": "minimax-hailuo",
+      "match": { "exact": ["MiniMax-Hailuo-2.3"] },
+      "spec": {
+        "capabilities": ["video_generation", "text_to_video", "image_to_video", "camera_control", "chinese_optimized", "high_quality"],
+        "serviceType": ["video_gen"],
+        "description": "MiniMax 最新视频生成模型，支持 15 种运镜指令控制"
+      }
+    },
+    {
+      "id": "MiniMax-Hailuo-2.3-Fast",
+      "displayName": "海螺视频 2.3 快速版",
+      "family": "minimax-hailuo",
+      "match": { "exact": ["MiniMax-Hailuo-2.3-Fast"] },
+      "spec": {
+        "capabilities": ["video_generation", "image_to_video", "camera_control", "fast", "chinese_optimized"],
+        "serviceType": ["video_gen"],
+        "description": "海螺视频快速版本（仅图生视频），生成速度更快"
+      }
+    },
+    {
+      "id": "T2V-01-Director",
+      "displayName": "海螺视频 Director",
+      "family": "minimax-hailuo",
+      "match": { "exact": ["T2V-01-Director"] },
+      "spec": {
+        "capabilities": ["video_generation", "text_to_video", "camera_control", "chinese_optimized"],
+        "serviceType": ["video_gen"],
+        "description": "导演级文生视频模型，精准运镜控制（历史版本）"
+      }
+    },
+    {
+      "id": "MiniMax-Hailuo-02",
+      "displayName": "海螺视频 02",
+      "family": "minimax-hailuo",
+      "match": { "exact": ["MiniMax-Hailuo-02"] },
+      "spec": {
+        "capabilities": ["video_generation", "text_to_video", "image_to_video", "chinese_optimized"],
+        "serviceType": ["video_gen"],
+        "description": "海螺视频 02，原生 1080P 生成（历史版本）"
+      }
+    },
+    {
+      "id": "S2V-01",
+      "displayName": "海螺视频 主体参考",
+      "family": "minimax-hailuo",
+      "match": { "exact": ["S2V-01"] },
+      "spec": {
+        "capabilities": ["video_generation", "subject_reference", "chinese_optimized"],
+        "serviceType": ["video_gen"],
+        "description": "主体参考视频生成，基于参考图保持角色一致性"
+      }
+    },
+    {
+      "id": "music-2.6",
+      "displayName": "MiniMax Music 2.6",
+      "family": "minimax-music",
+      "match": { "exact": ["music-2.6"] },
+      "spec": {
+        "capabilities": ["music_generation", "lyrics_input", "instrumental", "chinese_optimized"],
+        "serviceType": ["music_gen"],
+        "description": "MiniMax AI 音乐生成模型，支持音乐灵感描述和歌词输入"
+      }
+    },
+    {
+      "id": "music-2.5+",
+      "displayName": "MiniMax Music 2.5+",
+      "family": "minimax-music",
+      "match": { "exact": ["music-2.5+"] },
+      "spec": {
+        "capabilities": ["music_generation", "lyrics_input", "instrumental", "chinese_optimized"],
+        "serviceType": ["music_gen"],
+        "description": "MiniMax AI 音乐生成（2.5+ 版），音质提升"
+      }
+    },
+    {
+      "id": "music-2.5",
+      "displayName": "MiniMax Music 2.5",
+      "family": "minimax-music",
+      "match": { "exact": ["music-2.5"] },
+      "spec": {
+        "capabilities": ["music_generation", "lyrics_input", "instrumental", "chinese_optimized"],
+        "serviceType": ["music_gen"],
+        "description": "MiniMax AI 音乐生成（2.5 版）"
+      }
+    },
+    {
+      "id": "music-cover",
+      "displayName": "MiniMax Music Cover",
+      "family": "minimax-music",
+      "match": { "exact": ["music-cover"] },
+      "spec": {
+        "capabilities": ["music_generation", "cover", "chinese_optimized"],
+        "serviceType": ["music_gen"],
+        "description": "MiniMax AI 翻唱模型，基于参考音频生成翻唱版本"
+      }
+    }
+  ]
+}

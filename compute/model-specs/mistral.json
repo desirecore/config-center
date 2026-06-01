@@ -1,0 +1,44 @@
+{
+  "description": "Mistral 系列模型规格。参数来源：config-center compute/providers/mistral.json。",
+  "specs": [
+    {
+      "id": "mistral-large-latest",
+      "displayName": "Mistral Large",
+      "family": "mistral-large",
+      "match": { "patterns": ["mistral-large*"] },
+      "spec": {
+        "contextWindow": 256000,
+        "maxOutputTokens": 262144,
+        "capabilities": ["chat", "reasoning", "code", "vision", "tool_use", "long_context"],
+        "serviceType": ["chat"],
+        "defaultTemperature": 0.7
+      }
+    },
+    {
+      "id": "mistral-small-latest",
+      "displayName": "Mistral Small",
+      "family": "mistral-small",
+      "match": { "patterns": ["mistral-small*"] },
+      "spec": {
+        "contextWindow": 128000,
+        "maxOutputTokens": 8192,
+        "capabilities": ["chat", "code", "vision", "reasoning", "fast", "tool_use"],
+        "serviceType": ["fast"],
+        "defaultTemperature": 0.7
+      }
+    },
+    {
+      "id": "codestral-latest",
+      "displayName": "Codestral",
+      "family": "codestral",
+      "match": { "patterns": ["codestral*"] },
+      "spec": {
+        "contextWindow": 128000,
+        "maxOutputTokens": 32768,
+        "capabilities": ["code", "fill_in_the_middle"],
+        "serviceType": ["chat"],
+        "defaultTemperature": 0.7
+      }
+    }
+  ]
+}

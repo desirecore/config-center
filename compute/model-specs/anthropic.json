@@ -1,0 +1,65 @@
+{
+  "description": "Anthropic Claude 系列模型规格。参数来源：config-center compute/providers/anthropic.json。",
+  "specs": [
+    {
+      "id": "claude-opus-4-7",
+      "displayName": "Claude Opus 4.7",
+      "family": "claude-opus",
+      "match": { "patterns": ["claude-opus-4-7*"] },
+      "spec": {
+        "contextWindow": 1000000,
+        "maxOutputTokens": 128000,
+        "capabilities": ["chat", "reasoning", "code", "vision", "tool_use"],
+        "serviceType": ["chat"],
+        "defaultTemperature": 1,
+        "supportsReasoning": true,
+        "description": "Anthropic 当前最强通用模型，适合复杂推理和智能体编码任务"
+      }
+    },
+    {
+      "id": "claude-sonnet-4-6",
+      "displayName": "Claude Sonnet 4.6",
+      "family": "claude-sonnet",
+      "match": { "patterns": ["claude-sonnet-4-6*"] },
+      "spec": {
+        "contextWindow": 1000000,
+        "maxOutputTokens": 64000,
+        "capabilities": ["chat", "reasoning", "code", "vision", "tool_use", "computer_use"],
+        "serviceType": ["chat", "computer_use"],
+        "defaultTemperature": 1,
+        "supportsReasoning": true,
+        "description": "Anthropic 高智能高速度模型，适合编码、工具使用和智能体任务"
+      }
+    },
+    {
+      "id": "claude-sonnet-4-5",
+      "displayName": "Claude Sonnet 4.5",
+      "family": "claude-sonnet",
+      "match": { "patterns": ["claude-sonnet-4-5*"] },
+      "spec": {
+        "contextWindow": 1000000,
+        "maxOutputTokens": 64000,
+        "capabilities": ["chat", "reasoning", "code", "vision", "tool_use"],
+        "serviceType": ["chat"],
+        "defaultTemperature": 1,
+        "supportsReasoning": true,
+        "description": "Anthropic 主力模型，长文本与代码任务表现优异"
+      }
+    },
+    {
+      "id": "claude-haiku-4-5",
+      "displayName": "Claude Haiku 4.5",
+      "family": "claude-haiku",
+      "match": { "patterns": ["claude-haiku-4-5*"] },
+      "spec": {
+        "contextWindow": 200000,
+        "maxOutputTokens": 64000,
+        "capabilities": ["chat", "reasoning", "code", "vision", "tool_use"],
+        "serviceType": ["chat"],
+        "defaultTemperature": 1,
+        "supportsReasoning": true,
+        "description": "Anthropic 最快模型，具备接近前沿模型的智能水平"
+      }
+    }
+  ]
+}

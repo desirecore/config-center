@@ -1,0 +1,93 @@
+{
+  "description": "Moonshot Kimi 系列模型规格。参数来源：config-center compute/providers/moonshot.json。注意 kimi-k2 存在多个子版本（k2.5/k2.6/k2-thinking），故 kimi-k2 仅用 exact 主键匹配，不用宽 pattern。",
+  "specs": [
+    {
+      "id": "kimi-k2.6",
+      "displayName": "Kimi K2.6",
+      "family": "kimi-k2.6",
+      "spec": {
+        "contextWindow": 262144,
+        "maxOutputTokens": 16384,
+        "capabilities": ["chat", "reasoning", "code", "tool_use", "agent", "long_context", "vision"],
+        "serviceType": ["chat"],
+        "defaultTemperature": 1,
+        "supportsReasoning": true
+      }
+    },
+    {
+      "id": "kimi-k2.5",
+      "displayName": "Kimi K2.5",
+      "family": "kimi-k2.5",
+      "spec": {
+        "contextWindow": 256000,
+        "maxOutputTokens": 32768,
+        "capabilities": ["chat", "reasoning", "code", "tool_use", "agent", "long_context", "vision"],
+        "serviceType": ["chat"],
+        "defaultTemperature": 1,
+        "supportsReasoning": true
+      }
+    },
+    {
+      "id": "kimi-k2-thinking",
+      "displayName": "Kimi K2 Thinking",
+      "family": "kimi-k2-thinking",
+      "spec": {
+        "contextWindow": 256000,
+        "maxOutputTokens": 16384,
+        "capabilities": ["reasoning", "math", "code", "deep_thinking", "long_context"],
+        "serviceType": ["reasoning"],
+        "defaultTemperature": 1,
+        "supportsReasoning": true
+      }
+    },
+    {
+      "id": "kimi-k2",
+      "displayName": "Kimi K2",
+      "family": "kimi-k2",
+      "spec": {
+        "contextWindow": 256000,
+        "maxOutputTokens": 8192,
+        "capabilities": ["chat", "reasoning", "code", "tool_use", "agent", "long_context"],
+        "serviceType": ["chat"],
+        "defaultTemperature": 0.6,
+        "supportsReasoning": true
+      }
+    },
+    {
+      "id": "moonshot-v1-8k",
+      "displayName": "Moonshot v1 8K",
+      "family": "moonshot-v1",
+      "spec": {
+        "contextWindow": 8192,
+        "maxOutputTokens": 4096,
+        "capabilities": ["chat", "code"],
+        "serviceType": ["chat"],
+        "defaultTemperature": 0
+      }
+    },
+    {
+      "id": "moonshot-v1-32k",
+      "displayName": "Moonshot v1 32K",
+      "family": "moonshot-v1",
+      "spec": {
+        "contextWindow": 32768,
+        "maxOutputTokens": 4096,
+        "capabilities": ["chat", "code", "long_context"],
+        "serviceType": ["chat"],
+        "defaultTemperature": 0
+      }
+    },
+    {
+      "id": "moonshot-v1-128k",
+      "displayName": "Moonshot v1 128K",
+      "family": "moonshot-v1",
+      "spec": {
+        "contextWindow": 131072,
+        "maxOutputTokens": 4096,
+        "capabilities": ["chat", "code", "long_context"],
+        "serviceType": ["chat"],
+        "defaultTemperature": 0
+      }
+    }
+  ]
+}
