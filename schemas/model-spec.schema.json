@@ -100,6 +100,16 @@
               "type": "object",
               "description": "模型特定附加配置（如 apiModelId 全名、推理预算等）。不含价格。",
               "additionalProperties": true
+            },
+            "releasedAt": {
+              "type": "string",
+              "description": "厂商发布年月（YYYY-MM 或 YYYY-MM-DD），辅助人工判断模型新旧。无客户端行为，仅供维护者参考何时清理该条规格。",
+              "pattern": "^\\d{4}-\\d{2}(-\\d{2})?$"
+            },
+            "retiredAt": {
+              "type": "string",
+              "description": "厂商宣布停止访问的日期（YYYY-MM-DD），辅助人工批量删除已退役的规格条目。无客户端行为，仅作数据清理依据。",
+              "pattern": "^\\d{4}-\\d{2}-\\d{2}$"
             }
           },
           "additionalProperties": false

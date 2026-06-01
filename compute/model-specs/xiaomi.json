@@ -5,12 +5,26 @@
       "id": "mimo-v2.5-pro",
       "displayName": "MiMo V2.5 Pro",
       "family": "mimo-v2.5-pro",
-      "match": { "patterns": ["mimo-v2.5-pro*", "mimo-v2-5-pro*"] },
+      "match": {
+        "patterns": [
+          "mimo-v2.5-pro*",
+          "mimo-v2-5-pro*"
+        ]
+      },
       "spec": {
         "contextWindow": 1000000,
         "maxOutputTokens": 131072,
-        "capabilities": ["chat", "reasoning", "tool_use", "code", "vision"],
-        "serviceType": ["chat", "reasoning"],
+        "capabilities": [
+          "chat",
+          "reasoning",
+          "tool_use",
+          "code",
+          "vision"
+        ],
+        "serviceType": [
+          "chat",
+          "reasoning"
+        ],
         "defaultTemperature": 1,
         "supportsReasoning": true,
         "description": "小米 MiMo 旗舰推理模型，支持文本/图像/工具调用"
@@ -21,14 +35,28 @@
       "displayName": "MiMo V2.5",
       "family": "mimo-v2.5",
       "match": {
-        "exact": ["mimo-v2.5"],
-        "patterns": ["mimo-v2.5-chat*", "mimo-v2-5*"]
+        "exact": [
+          "mimo-v2.5"
+        ],
+        "patterns": [
+          "mimo-v2.5-chat*",
+          "mimo-v2-5*"
+        ]
       },
       "spec": {
         "contextWindow": 1000000,
         "maxOutputTokens": 131072,
-        "capabilities": ["chat", "reasoning", "vision", "tool_use", "code"],
-        "serviceType": ["chat", "vision"],
+        "capabilities": [
+          "chat",
+          "reasoning",
+          "vision",
+          "tool_use",
+          "code"
+        ],
+        "serviceType": [
+          "chat",
+          "vision"
+        ],
         "defaultTemperature": 1,
         "supportsReasoning": true,
         "description": "小米 MiMo 全模态模型，支持图像/音频/视频理解"
@@ -38,42 +66,82 @@
       "id": "mimo-v2-pro",
       "displayName": "MiMo V2 Pro（已停用→转发至 V2.5 Pro）",
       "family": "mimo-v2-pro",
-      "match": { "patterns": ["mimo-v2-pro*"] },
+      "match": {
+        "patterns": [
+          "mimo-v2-pro*"
+        ]
+      },
       "spec": {
         "contextWindow": 1000000,
         "maxOutputTokens": 131072,
-        "capabilities": ["chat", "reasoning", "tool_use", "code", "vision"],
-        "serviceType": ["chat", "reasoning"],
+        "capabilities": [
+          "chat",
+          "reasoning",
+          "tool_use",
+          "code",
+          "vision"
+        ],
+        "serviceType": [
+          "chat",
+          "reasoning"
+        ],
         "defaultTemperature": 1,
         "supportsReasoning": true,
-        "description": "小米 MiMo V2 Pro（自 2026-06-01 转发至 V2.5 Pro）"
+        "description": "小米 MiMo V2 Pro（自 2026-06-01 转发至 V2.5 Pro）",
+        "retiredAt": "2026-06-30"
       }
     },
     {
       "id": "mimo-v2-omni",
       "displayName": "MiMo V2 Omni（已停用→转发至 V2.5）",
       "family": "mimo-v2-omni",
-      "match": { "patterns": ["mimo-v2-omni*"] },
+      "match": {
+        "patterns": [
+          "mimo-v2-omni*"
+        ]
+      },
       "spec": {
         "contextWindow": 256000,
         "maxOutputTokens": 131072,
-        "capabilities": ["chat", "reasoning", "vision", "tool_use", "code"],
-        "serviceType": ["chat", "vision"],
+        "capabilities": [
+          "chat",
+          "reasoning",
+          "vision",
+          "tool_use",
+          "code"
+        ],
+        "serviceType": [
+          "chat",
+          "vision"
+        ],
         "defaultTemperature": 1,
         "supportsReasoning": true,
-        "description": "小米 MiMo V2 全模态（自 2026-06-01 转发至 V2.5）"
+        "description": "小米 MiMo V2 全模态（自 2026-06-01 转发至 V2.5）",
+        "retiredAt": "2026-06-30"
       }
     },
     {
       "id": "mimo-v2-flash",
       "displayName": "MiMo V2 Flash",
       "family": "mimo-v2-flash",
-      "match": { "patterns": ["mimo-v2-flash*"] },
+      "match": {
+        "patterns": [
+          "mimo-v2-flash*"
+        ]
+      },
       "spec": {
         "contextWindow": 256000,
         "maxOutputTokens": 65536,
-        "capabilities": ["chat", "reasoning", "tool_use", "code", "fast"],
-        "serviceType": ["fast"],
+        "capabilities": [
+          "chat",
+          "reasoning",
+          "tool_use",
+          "code",
+          "fast"
+        ],
+        "serviceType": [
+          "fast"
+        ],
         "defaultTemperature": 1,
         "supportsReasoning": true,
         "description": "小米 MiMo 快速版，适合高频低延迟任务"
@@ -83,11 +151,21 @@
       "id": "mimo-v2.5-tts",
       "displayName": "MiMo V2.5 TTS",
       "family": "mimo-v2.5-tts",
-      "match": { "exact": ["mimo-v2.5-tts"] },
+      "match": {
+        "exact": [
+          "mimo-v2.5-tts"
+        ]
+      },
       "spec": {
         "contextWindow": 8192,
-        "capabilities": ["tts", "multilingual", "style_control"],
-        "serviceType": ["tts"],
+        "capabilities": [
+          "tts",
+          "multilingual",
+          "style_control"
+        ],
+        "serviceType": [
+          "tts"
+        ],
         "description": "小米 MiMo 语音合成，支持多语言与风格控制"
       }
     },
@@ -95,11 +173,22 @@
       "id": "mimo-v2.5-tts-voiceclone",
       "displayName": "MiMo V2.5 TTS Voice Clone",
       "family": "mimo-v2.5-tts",
-      "match": { "exact": ["mimo-v2.5-tts-voiceclone"] },
+      "match": {
+        "exact": [
+          "mimo-v2.5-tts-voiceclone"
+        ]
+      },
       "spec": {
         "contextWindow": 8192,
-        "capabilities": ["tts", "voice_clone", "multilingual"],
-        "serviceType": ["tts", "voice_clone"],
+        "capabilities": [
+          "tts",
+          "voice_clone",
+          "multilingual"
+        ],
+        "serviceType": [
+          "tts",
+          "voice_clone"
+        ],
         "description": "小米 MiMo 声音复刻合成"
       }
     },
@@ -107,11 +196,21 @@
       "id": "mimo-v2.5-tts-voicedesign",
       "displayName": "MiMo V2.5 TTS Voice Design",
       "family": "mimo-v2.5-tts",
-      "match": { "exact": ["mimo-v2.5-tts-voicedesign"] },
+      "match": {
+        "exact": [
+          "mimo-v2.5-tts-voicedesign"
+        ]
+      },
       "spec": {
         "contextWindow": 8192,
-        "capabilities": ["tts", "voice_design", "multilingual"],
-        "serviceType": ["tts"],
+        "capabilities": [
+          "tts",
+          "voice_design",
+          "multilingual"
+        ],
+        "serviceType": [
+          "tts"
+        ],
         "description": "小米 MiMo 自定义音色设计合成"
       }
     },
@@ -119,11 +218,20 @@
       "id": "mimo-v2-tts",
       "displayName": "MiMo V2 TTS",
       "family": "mimo-v2-tts",
-      "match": { "exact": ["mimo-v2-tts"] },
+      "match": {
+        "exact": [
+          "mimo-v2-tts"
+        ]
+      },
       "spec": {
         "contextWindow": 8192,
-        "capabilities": ["tts", "multilingual"],
-        "serviceType": ["tts"],
+        "capabilities": [
+          "tts",
+          "multilingual"
+        ],
+        "serviceType": [
+          "tts"
+        ],
         "description": "小米 MiMo V2 语音合成（旧版）"
       }
     }
