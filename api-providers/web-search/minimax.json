@@ -1,0 +1,20 @@
+{
+  "id": "minimax",
+  "name": "MiniMax 搜索（内测网关）",
+  "capability": "web_search",
+  "enabled": false,
+  "builtin": true,
+  "priority": 30,
+  "endpoint": "${baseUrl}/web_search",
+  "method": "POST",
+  "baseUrlRef": "internal-testing",
+  "auth": { "type": "bearer" },
+  "request": {
+    "bodyTemplate": { "query": "${query}", "num_results": "${maxResults}" }
+  },
+  "response": {
+    "resultsPath": "results",
+    "item": { "titlePath": "title", "urlPath": "url", "snippetPath": "content" }
+  },
+  "timeoutMs": 10000
+}

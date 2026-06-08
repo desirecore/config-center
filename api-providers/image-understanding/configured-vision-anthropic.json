@@ -1,0 +1,32 @@
+{
+  "id": "configured-vision-anthropic",
+  "name": "视觉模型（Anthropic 兼容，复用默认映射）",
+  "capability": "image_understanding",
+  "enabled": true,
+  "builtin": true,
+  "priority": 20,
+  "endpoint": "${baseUrl}/messages",
+  "method": "POST",
+  "computeServiceType": "vision",
+  "requiresApiFormat": "anthropic-messages",
+  "auth": { "type": "header", "headerName": "x-api-key" },
+  "request": {
+    "imageMode": "base64",
+    "headers": { "anthropic-version": "2023-06-01" },
+    "bodyTemplate": {
+      "model": "${model}",
+      "max_tokens": 1024,
+      "messages": [
+        {
+          "role": "user",
+          "content": [
+            { "type": "image", "source": { "type": "base64", "media_type": "${imageMime}", "data": "${imageBase64}" } },
+            { "type": "text", "text": "${prompt}" }
+          ]
+        }
+      ]
+    }
+  },
+  "response": { "textPath": "content.0.text" },
+  "timeoutMs": 30000
+}

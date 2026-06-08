@@ -1,0 +1,19 @@
+{
+  "id": "serper",
+  "name": "Serper",
+  "capability": "web_search",
+  "enabled": false,
+  "builtin": true,
+  "priority": 20,
+  "endpoint": "https://google.serper.dev/search",
+  "method": "POST",
+  "auth": { "type": "header", "headerName": "X-API-KEY", "apiKeyRef": "serper" },
+  "request": {
+    "bodyTemplate": { "q": "${query}", "num": "${maxResults}" }
+  },
+  "response": {
+    "resultsPath": "organic",
+    "item": { "titlePath": "title", "urlPath": "link", "snippetPath": "snippet" }
+  },
+  "timeoutMs": 10000
+}
