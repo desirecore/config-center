@@ -1,0 +1,176 @@
+{
+  "id": "provider-baidu-coding-001",
+  "provider": "baidu",
+  "brandGroup": "baidu",
+  "label": "百度千帆 Coding Plan",
+  "baseUrl": "https://qianfan.baidubce.com/v2/coding",
+  "apiFormat": "openai-completions",
+  "apiKeyRef": "",
+  "apiKeyVerified": false,
+  "enabled": false,
+  "status": "unconfigured",
+  "accessMode": "coding-plan",
+  "services": [
+    "chat",
+    "reasoning"
+  ],
+  "codingPlan": {
+    "quotas": {},
+    "usageTracking": {
+      "method": "none",
+      "consoleUrl": "https://console.bce.baidu.com/qianfan/codingplan"
+    }
+  },
+  "models": [
+    {
+      "modelName": "qianfan-code-latest",
+      "displayName": "Auto (自动路由)",
+      "serviceType": [
+        "chat"
+      ],
+      "description": "千帆 Coding Plan 自动路由模型，后端自动选择最优模型",
+      "capabilities": [
+        "chat",
+        "reasoning",
+        "code"
+      ],
+      "source": "preset"
+    },
+    {
+      "modelName": "deepseek-v3.2",
+      "displayName": "DeepSeek V3.2",
+      "serviceType": [
+        "chat"
+      ],
+      "description": "DeepSeek V3.2（千帆 Coding Plan 渠道），倍率 ×1",
+      "capabilities": [
+        "chat",
+        "reasoning",
+        "code",
+        "tool_use"
+      ],
+      "source": "preset"
+    },
+    {
+      "modelName": "deepseek-v4-flash",
+      "displayName": "DeepSeek V4 Flash",
+      "serviceType": [
+        "chat"
+      ],
+      "description": "DeepSeek V4 Flash（千帆 Coding Plan 渠道），倍率 ×1",
+      "capabilities": [
+        "chat",
+        "reasoning",
+        "code",
+        "fast"
+      ],
+      "source": "preset"
+    },
+    {
+      "modelName": "ernie-4.5-turbo-20260402",
+      "displayName": "文心 ERNIE 4.5 Turbo",
+      "serviceType": [
+        "chat"
+      ],
+      "description": "百度 ERNIE 4.5 Turbo（千帆 Coding Plan 渠道）",
+      "capabilities": [
+        "chat",
+        "code",
+        "vision",
+        "fast"
+      ],
+      "source": "preset"
+    },
+    {
+      "modelName": "glm-5",
+      "displayName": "GLM-5",
+      "serviceType": [
+        "chat"
+      ],
+      "description": "智谱 GLM-5（千帆 Coding Plan 渠道）",
+      "capabilities": [
+        "chat",
+        "reasoning",
+        "code",
+        "agent"
+      ],
+      "source": "preset"
+    },
+    {
+      "modelName": "glm-5.1",
+      "displayName": "GLM-5.1",
+      "serviceType": [
+        "chat"
+      ],
+      "description": "智谱 GLM-5.1（千帆 Coding Plan 渠道），倍率 ×6",
+      "capabilities": [
+        "chat",
+        "reasoning",
+        "code",
+        "agent"
+      ],
+      "source": "preset"
+    },
+    {
+      "modelName": "kimi-k2.5",
+      "displayName": "Kimi K2.5",
+      "serviceType": [
+        "chat"
+      ],
+      "description": "Kimi K2.5（千帆 Coding Plan 渠道）",
+      "capabilities": [
+        "chat",
+        "reasoning",
+        "code",
+        "agent",
+        "long_context"
+      ],
+      "source": "preset"
+    },
+    {
+      "modelName": "kimi-k2.6",
+      "displayName": "Kimi K2.6",
+      "serviceType": [
+        "chat"
+      ],
+      "description": "Kimi K2.6（千帆 Coding Plan 渠道），倍率 ×5",
+      "capabilities": [
+        "chat",
+        "reasoning",
+        "code",
+        "agent",
+        "long_context"
+      ],
+      "source": "preset"
+    },
+    {
+      "modelName": "minimax-m2.5",
+      "displayName": "MiniMax M2.5",
+      "serviceType": [
+        "chat"
+      ],
+      "description": "MiniMax M2.5（千帆 Coding Plan 渠道）",
+      "capabilities": [
+        "chat",
+        "reasoning",
+        "code"
+      ],
+      "source": "preset"
+    },
+    {
+      "modelName": "minimax-m2.7",
+      "displayName": "MiniMax M2.7",
+      "serviceType": [
+        "chat"
+      ],
+      "description": "MiniMax M2.7（千帆 Coding Plan 渠道），倍率 ×2",
+      "capabilities": [
+        "chat",
+        "reasoning",
+        "code",
+        "agent"
+      ],
+      "source": "preset"
+    }
+  ]
+}
