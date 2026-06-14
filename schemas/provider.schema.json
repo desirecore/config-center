@@ -81,6 +81,11 @@
       "type": "string",
       "description": "品牌分组标识，UI 按此字段排序"
     },
+    "credentialSource": {
+      "type": "string",
+      "enum": ["codex-cli"],
+      "description": "凭证托管来源。codex-cli：密钥由客户端本地 Codex CLI 凭证检测器托管（读取 ~/.codex/auth.json 自动刷新写回，fresh token 同步 secrets.json）。需 requiredClientVersion ≥ 引入此字段的客户端版本——老客户端不识别本字段，必须先发版铺开 compute.json 韧性（容忍未知字段）再推送本数据"
+    },
     "codingPlan": {
       "type": "object",
       "description": "Coding Plan / Token Plan 专属配置（仅当 accessMode = coding-plan 或 token-plan 时有效）",
