@@ -689,6 +689,78 @@
       "defaultTemperature": 0.65,
       "defaultTopP": 0.8,
       "extra": {}
+    },
+    {
+      "modelName": "happyhorse-1.0-t2v",
+      "displayName": "快乐马 1.0 文生视频",
+      "serviceType": [
+        "video_gen"
+      ],
+      "description": "阿里 HappyHorse 文生视频，原生音视频联合生成，最长 15s，支持多语种口型",
+      "capabilities": [
+        "video_generation",
+        "text_to_video",
+        "chinese_optimized",
+        "high_quality"
+      ],
+      "extra": {
+        "endpoint": "/services/aigc/video-generation/video-synthesis",
+        "asyncHeader": "X-DashScope-Async",
+        "taskQueryEndpoint": "/tasks",
+        "maxVideoDuration": 15,
+        "supportedResolutions": [
+          "720P",
+          "1080P"
+        ]
+      }
+    },
+    {
+      "modelName": "happyhorse-1.0-i2v",
+      "displayName": "快乐马 1.0 图生视频",
+      "serviceType": [
+        "video_gen"
+      ],
+      "description": "阿里 HappyHorse 图生视频（首帧），宽高比自动跟随输入首帧",
+      "capabilities": [
+        "video_generation",
+        "image_to_video",
+        "chinese_optimized"
+      ],
+      "extra": {
+        "endpoint": "/services/aigc/video-generation/video-synthesis",
+        "asyncHeader": "X-DashScope-Async",
+        "taskQueryEndpoint": "/tasks",
+        "maxVideoDuration": 15,
+        "supportedResolutions": [
+          "720P",
+          "1080P"
+        ]
+      }
+    },
+    {
+      "modelName": "happyhorse-1.0-r2v",
+      "displayName": "快乐马 1.0 参考生视频",
+      "serviceType": [
+        "video_gen"
+      ],
+      "description": "阿里 HappyHorse 参考生视频，支持最多 9 张参考图（多主体/元素一致性）",
+      "capabilities": [
+        "video_generation",
+        "reference_to_video",
+        "multi_image",
+        "chinese_optimized"
+      ],
+      "extra": {
+        "endpoint": "/services/aigc/video-generation/video-synthesis",
+        "asyncHeader": "X-DashScope-Async",
+        "taskQueryEndpoint": "/tasks",
+        "maxReferenceImages": 9,
+        "maxVideoDuration": 15,
+        "supportedResolutions": [
+          "720P",
+          "1080P"
+        ]
+      }
     }
   ]
 }

@@ -17,7 +17,9 @@
     "voice_clone",
     "realtime_voice",
     "simultaneous_interpret",
-    "translation"
+    "translation",
+    "image_gen",
+    "video_gen"
   ],
   "models": [
     {
@@ -545,6 +547,58 @@
         "chinese_optimized"
       ],
       "extra": {}
+    },
+    {
+      "modelName": "doubao-seedream-4-0-250828",
+      "displayName": "豆包 Seedream 4.0（文生图/图生图）",
+      "serviceType": [
+        "image_gen"
+      ],
+      "description": "字节 Seedream 图像模型，支持文生图、图生图（img2img）、局部重绘与多图融合（最多 10 张参考图）；OpenAI 风格 /images/generations 同步返回",
+      "capabilities": [
+        "image_generation",
+        "image_to_image",
+        "multi_image_fusion",
+        "chinese_optimized",
+        "high_quality"
+      ],
+      "extra": {
+        "endpoint": "/images/generations",
+        "supportedSizes": [
+          "1K",
+          "2K",
+          "4K"
+        ],
+        "maxFusionImages": 10
+      }
+    },
+    {
+      "modelName": "doubao-seedance-2-0-260128",
+      "displayName": "豆包 Seedance 2.0（文生/图生视频）",
+      "serviceType": [
+        "video_gen"
+      ],
+      "description": "字节 Seedance 视频模型，支持文生视频、图生视频、多图参考、首尾帧、参考视频/音频（多模态），异步任务",
+      "capabilities": [
+        "video_generation",
+        "text_to_video",
+        "image_to_video",
+        "first_last_frame",
+        "reference_video",
+        "reference_audio",
+        "chinese_optimized",
+        "high_quality"
+      ],
+      "extra": {
+        "endpoint": "/contents/generations/tasks",
+        "maxVideoDuration": 15,
+        "supportedResolutions": [
+          "720p",
+          "1080p"
+        ],
+        "maxReferenceImages": 9,
+        "asyncMode": true
+      }
     }
   ]
 }
