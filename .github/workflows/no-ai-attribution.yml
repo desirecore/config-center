@@ -9,7 +9,7 @@ on:
 jobs:
   scan:
     name: Scan commits for AI authorship markers
-    runs-on: ubuntu-latest
+    runs-on: lightweight
     steps:
       - uses: actions/checkout@v4
         with:
