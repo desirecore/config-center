@@ -2,7 +2,6 @@
   "description": "Provider 加载顺序索引",
   "order": [
     "openai",
-    "openai-codex",
     "anthropic",
     "deepseek",
     "dashscope",
