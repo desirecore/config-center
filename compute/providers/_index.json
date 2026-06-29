@@ -26,7 +26,6 @@
     "kling",
     "stability",
     "openrouter",
-    "perplexity",
-    "internal-testing"
+    "perplexity"
   ]
 }

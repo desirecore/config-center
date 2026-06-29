@@ -2,6 +2,20 @@
   "description": "Cohere 系列模型规格。参数来源：config-center compute/providers/cohere.json。包含对话、Embedding 和 Rerank 三类服务。",
   "specs": [
     {
+      "id": "north-mini-code",
+      "displayName": "North Mini Code",
+      "family": "north",
+      "match": { "exact": ["north-mini-code"], "patterns": ["north-mini-code*"] },
+      "spec": {
+        "contextWindow": 256000,
+        "maxOutputTokens": 64000,
+        "capabilities": ["chat", "code", "tool_use"],
+        "serviceType": ["chat"],
+        "supportsReasoning": true,
+        "description": "Cohere North 系列首发编程模型"
+      }
+    },
+    {
       "id": "command-a-03-2025",
       "displayName": "Command A",
       "family": "command-a",

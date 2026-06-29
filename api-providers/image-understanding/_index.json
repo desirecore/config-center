@@ -1,4 +1,4 @@
 {
   "description": "image_understanding 工具后端加载顺序索引",
-  "order": ["configured-vision-openai", "configured-vision-anthropic", "minimax"]
+  "order": ["configured-vision-openai", "configured-vision-anthropic"]
 }

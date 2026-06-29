@@ -1,0 +1,9 @@
+# 模型规格库增量同步水位线
+# 
+# 存储上次从 OpenRouter 同步时，OpenRouter 中最新的模型 created Unix timestamp。
+# 下次增量同步时，只处理 OpenRouter 中 created > 此值的新模型。
+# 
+# 格式: Unix timestamp（秒）
+# 人读: 2026-06-24T04:45:03Z
+# 
+1782276303

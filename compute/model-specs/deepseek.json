@@ -2,6 +2,20 @@
   "description": "DeepSeek 系列模型规格。参数来源：config-center compute/providers/deepseek.json。",
   "specs": [
     {
+      "id": "deepseek-v4-pro",
+      "displayName": "DeepSeek V4 Pro",
+      "family": "deepseek-v4",
+      "match": { "exact": ["deepseek-v4-pro"], "patterns": ["deepseek-v4-pro*"] },
+      "spec": {
+        "contextWindow": 1048576,
+        "maxOutputTokens": 384000,
+        "capabilities": ["reasoning", "deep_thinking", "code", "math", "science", "multilingual", "tool_use"],
+        "serviceType": ["reasoning"],
+        "supportsReasoning": true,
+        "description": "DeepSeek V4 Pro，1.6T MoE 架构，100 万上下文"
+      }
+    },
+    {
       "id": "deepseek-chat",
       "displayName": "DeepSeek Chat",
       "family": "deepseek-chat",
