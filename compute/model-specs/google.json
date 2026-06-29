@@ -2,6 +2,34 @@
   "description": "Google Gemini 系列模型规格。参数来源：config-center compute/providers/google.json。",
   "specs": [
     {
+      "id": "gemini-3.5-flash",
+      "displayName": "Gemini 3.5 Flash",
+      "family": "gemini-3.5",
+      "match": { "exact": ["gemini-3.5-flash"], "patterns": ["gemini-3.5-flash*"] },
+      "spec": {
+        "contextWindow": 1048576,
+        "maxOutputTokens": 65536,
+        "capabilities": ["chat", "reasoning", "code", "vision", "video_understanding", "audio_understanding", "ultra_long_context", "tool_use", "fast"],
+        "serviceType": ["chat"],
+        "defaultTemperature": 1,
+        "supportsReasoning": true,
+        "description": "Google Gemini 3.5 Flash，全模态高性价比模型，100 万上下文"
+      }
+    },
+    {
+      "id": "gemini-3.1-flash-image",
+      "displayName": "Gemini 3.1 Flash Image (Nano Banana 2)",
+      "family": "gemini-3.1",
+      "match": { "exact": ["gemini-3.1-flash-image"], "patterns": ["gemini-3.1-flash-image*"] },
+      "spec": {
+        "contextWindow": 131072,
+        "maxOutputTokens": 32768,
+        "capabilities": ["image_generation", "image_editing", "text_rendering"],
+        "serviceType": ["image_gen"],
+        "description": "Google Nano Banana 2，最新文生图与编辑模型"
+      }
+    },
+    {
       "id": "gemini-3.1-pro-preview",
       "displayName": "Gemini 3.1 Pro",
       "family": "gemini-3.1",
