@@ -1,0 +1,23 @@
+{
+  "id": "tavily",
+  "name": "Tavily",
+  "capability": "web_search",
+  "enabled": false,
+  "builtin": true,
+  "priority": 10,
+  "endpoint": "https://api.tavily.com/search",
+  "method": "POST",
+  "auth": { "type": "bearer", "apiKeyRef": "tavily" },
+  "request": {
+    "bodyTemplate": {
+      "query": "${query}",
+      "max_results": "${maxResults}",
+      "search_depth": "basic"
+    }
+  },
+  "response": {
+    "resultsPath": "results",
+    "item": { "titlePath": "title", "urlPath": "url", "snippetPath": "content" }
+  },
+  "timeoutMs": 10000
+}

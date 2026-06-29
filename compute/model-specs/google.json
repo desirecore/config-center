@@ -1,0 +1,85 @@
+{
+  "description": "Google Gemini 系列模型规格。参数来源：config-center compute/providers/google.json。",
+  "specs": [
+    {
+      "id": "gemini-3.1-pro-preview",
+      "displayName": "Gemini 3.1 Pro",
+      "family": "gemini-3.1",
+      "spec": {
+        "contextWindow": 1048576,
+        "maxOutputTokens": 65536,
+        "capabilities": ["chat", "reasoning", "code", "vision", "ultra_long_context", "tool_use"],
+        "serviceType": ["chat"],
+        "defaultTemperature": 1,
+        "supportsReasoning": true
+      }
+    },
+    {
+      "id": "gemini-3-flash-preview",
+      "displayName": "Gemini 3 Flash",
+      "family": "gemini-3",
+      "spec": {
+        "contextWindow": 1048576,
+        "maxOutputTokens": 65536,
+        "capabilities": ["chat", "reasoning", "code", "vision", "ultra_long_context", "tool_use", "fast"],
+        "serviceType": ["chat"],
+        "defaultTemperature": 1,
+        "supportsReasoning": true
+      }
+    },
+    {
+      "id": "gemini-2.5-pro",
+      "displayName": "Gemini 2.5 Pro",
+      "family": "gemini-2.5",
+      "match": { "patterns": ["gemini-2.5-pro*"] },
+      "spec": {
+        "contextWindow": 1048576,
+        "maxOutputTokens": 65536,
+        "capabilities": ["chat", "reasoning", "code", "vision", "ultra_long_context", "tool_use"],
+        "serviceType": ["chat"],
+        "defaultTemperature": 1,
+        "supportsReasoning": true
+      }
+    },
+    {
+      "id": "gemini-2.5-flash",
+      "displayName": "Gemini 2.5 Flash",
+      "family": "gemini-2.5",
+      "match": { "patterns": ["gemini-2.5-flash*"] },
+      "spec": {
+        "contextWindow": 1048576,
+        "maxOutputTokens": 65536,
+        "capabilities": ["chat", "reasoning", "code", "vision", "ultra_long_context", "tool_use", "fast"],
+        "serviceType": ["chat"],
+        "defaultTemperature": 1,
+        "supportsReasoning": true
+      }
+    },
+    {
+      "id": "gemini-3.1-flash-lite-preview",
+      "displayName": "Gemini 3.1 Flash-Lite Preview",
+      "family": "gemini-3.1",
+      "match": { "exact": ["gemini-3.1-flash-lite-preview"], "patterns": ["gemini-3.1-flash-lite*"] },
+      "spec": {
+        "contextWindow": 1048576,
+        "maxOutputTokens": 65536,
+        "capabilities": ["chat", "reasoning", "code", "vision", "ultra_long_context", "tool_use", "fast"],
+        "serviceType": ["fast"],
+        "defaultTemperature": 1,
+        "description": "Google Gemini 3.1 Flash-Lite Preview，低成本高吞吐多模态模型"
+      }
+    },
+    {
+      "id": "text-embedding-005",
+      "displayName": "Text Embedding 005",
+      "family": "text-embedding",
+      "match": { "exact": ["text-embedding-005"] },
+      "spec": {
+        "contextWindow": 2048,
+        "capabilities": ["text_embedding", "semantic_search"],
+        "serviceType": ["embedding"],
+        "description": "Google 文本嵌入模型，768 维度"
+      }
+    }
+  ]
+}

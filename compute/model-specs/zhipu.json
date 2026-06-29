@@ -1,0 +1,126 @@
+{
+  "description": "智谱 GLM 系列模型规格。参数来源：config-center compute/providers/zhipu.json。glm-5 与 glm-5.1/glm-5-turbo/glm-5v-turbo 前缀相近，故各自仅用 exact 主键匹配，不用宽 pattern 以防误吞。",
+  "specs": [
+    {
+      "id": "glm-5.1",
+      "displayName": "GLM-5.1",
+      "family": "glm-5.1",
+      "spec": {
+        "contextWindow": 200000,
+        "maxOutputTokens": 128000,
+        "capabilities": ["chat", "reasoning", "code", "multilingual", "deep_thinking", "long_context", "math", "tool_use", "agent"],
+        "serviceType": ["chat"],
+        "defaultTemperature": 1,
+        "supportsReasoning": true
+      }
+    },
+    {
+      "id": "glm-5",
+      "displayName": "GLM-5",
+      "family": "glm-5",
+      "spec": {
+        "contextWindow": 200000,
+        "maxOutputTokens": 128000,
+        "capabilities": ["chat", "reasoning", "code", "multilingual", "deep_thinking", "long_context", "math", "tool_use", "agent"],
+        "serviceType": ["chat"],
+        "defaultTemperature": 1,
+        "supportsReasoning": true
+      }
+    },
+    {
+      "id": "glm-5-turbo",
+      "displayName": "GLM-5 Turbo",
+      "family": "glm-5-turbo",
+      "spec": {
+        "contextWindow": 200000,
+        "maxOutputTokens": 128000,
+        "capabilities": ["chat", "reasoning", "code", "deep_thinking", "long_context", "tool_use", "agent"],
+        "serviceType": ["chat"],
+        "defaultTemperature": 1,
+        "supportsReasoning": true
+      }
+    },
+    {
+      "id": "glm-4.7",
+      "displayName": "GLM-4.7",
+      "family": "glm-4.7",
+      "spec": {
+        "contextWindow": 200000,
+        "maxOutputTokens": 128000,
+        "capabilities": ["chat", "reasoning", "code", "multilingual", "deep_thinking", "long_context", "tool_use"],
+        "serviceType": ["chat"],
+        "defaultTemperature": 1,
+        "supportsReasoning": true
+      }
+    },
+    {
+      "id": "glm-4.6",
+      "displayName": "GLM-4.6",
+      "family": "glm-4.6",
+      "spec": {
+        "contextWindow": 200000,
+        "maxOutputTokens": 128000,
+        "capabilities": ["chat", "reasoning", "code", "multilingual", "deep_thinking"],
+        "serviceType": ["chat"],
+        "defaultTemperature": 1,
+        "supportsReasoning": true
+      }
+    },
+    {
+      "id": "glm-4.7-thinking",
+      "displayName": "GLM-4.7 Thinking",
+      "family": "glm-4.7",
+      "match": { "exact": ["glm-4.7-thinking"] },
+      "spec": {
+        "contextWindow": 200000,
+        "maxOutputTokens": 128000,
+        "capabilities": ["reasoning", "math", "code", "deep_thinking", "long_context"],
+        "serviceType": ["reasoning"],
+        "defaultTemperature": null,
+        "supportsReasoning": true,
+        "description": "智谱GLM-4.7深度思考模式，交错式/保留式/轮级思考"
+      }
+    },
+    {
+      "id": "glm-5v-turbo",
+      "displayName": "GLM-5V-Turbo",
+      "family": "glm-5v",
+      "match": { "exact": ["glm-5v-turbo"] },
+      "spec": {
+        "contextWindow": 200000,
+        "maxOutputTokens": 128000,
+        "capabilities": ["chat", "vision", "video_understanding", "image_understanding", "file_understanding", "reasoning", "code", "deep_thinking", "long_context", "tool_use", "agent"],
+        "serviceType": ["vision"],
+        "defaultTemperature": 1,
+        "supportsReasoning": true,
+        "description": "智谱首个多模态 Coding 基座模型，支持视频、图像、文本和文件输入"
+      }
+    },
+    {
+      "id": "glm-4.6v",
+      "displayName": "GLM-4.6V",
+      "family": "glm-4.6",
+      "match": { "exact": ["glm-4.6v"] },
+      "spec": {
+        "contextWindow": 128000,
+        "maxOutputTokens": 32768,
+        "capabilities": ["chat", "vision", "video_understanding", "image_understanding", "long_context", "tool_use"],
+        "serviceType": ["vision"],
+        "defaultTemperature": 1,
+        "description": "智谱GLM-4.6V多模态版，106B/12B MoE，支持图像视频理解"
+      }
+    },
+    {
+      "id": "embedding-3",
+      "displayName": "智谱 embedding-3",
+      "family": "zhipu-embedding",
+      "match": { "exact": ["embedding-3"] },
+      "spec": {
+        "contextWindow": 8192,
+        "capabilities": ["text_embedding", "semantic_search", "rag", "custom_dimensions"],
+        "serviceType": ["embedding"],
+        "description": "智谱嵌入模型v3，支持自定义维度；单条输入最多 3072 tokens"
+      }
+    }
+  ]
+}

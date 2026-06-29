@@ -1,0 +1,69 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://desirecore.net/schemas/config-center/api-provider.schema.json",
+  "title": "ApiProvider",
+  "description": "api-providers/<capability>/*.json：声明式外部 API 供应商（web_search / image_understanding 工具后端）。镜像 desirecore 主仓 lib/schemas/agent-service/api-provider.ts。",
+  "type": "object",
+  "required": ["id", "name", "capability", "enabled", "endpoint", "auth", "request", "response"],
+  "additionalProperties": false,
+  "properties": {
+    "id": { "type": "string", "description": "同 capability 下唯一标识" },
+    "name": { "type": "string", "description": "显示名称" },
+    "capability": {
+      "type": "string",
+      "enum": ["web_search", "image_understanding"],
+      "description": "服务的工具能力"
+    },
+    "enabled": { "type": "boolean", "description": "是否启用" },
+    "builtin": { "type": "boolean", "description": "是否为内置默认", "default": false },
+    "priority": { "type": "number", "description": "优先级，越小越优先", "default": 100 },
+    "endpoint": { "type": "string", "description": "API 端点 URL，支持 ${变量}" },
+    "method": { "type": "string", "enum": ["POST", "GET"], "description": "HTTP 方法", "default": "POST" },
+    "computeServiceType": { "type": "string", "description": "复用算力默认映射的服务类型（如 vision）" },
+    "requiresApiFormat": { "type": "string", "description": "仅当解析出的 provider apiFormat 等于此值时可用" },
+    "baseUrlRef": { "type": "string", "description": "指向某算力 provider 的 provider 标识，取其 baseUrl 与密钥" },
+    "auth": {
+      "type": "object",
+      "description": "鉴权配置",
+      "required": ["type"],
+      "additionalProperties": false,
+      "properties": {
+        "type": { "type": "string", "enum": ["bearer", "header", "query", "none"] },
+        "apiKeyRef": { "type": "string", "description": "secrets.json 中的密钥引用名" },
+        "headerName": { "type": "string", "description": "type=header 时的请求头名称" },
+        "queryParam": { "type": "string", "description": "type=query 时的查询参数名" }
+      }
+    },
+    "request": {
+      "type": "object",
+      "description": "请求构造，字符串值支持 ${变量}",
+      "additionalProperties": false,
+      "properties": {
+        "headers": { "type": "object", "additionalProperties": { "type": "string" } },
+        "bodyTemplate": { "type": "object", "additionalProperties": true },
+        "queryParams": { "type": "object", "additionalProperties": { "type": "string" } },
+        "imageMode": { "type": "string", "enum": ["url", "base64"] }
+      }
+    },
+    "response": {
+      "type": "object",
+      "description": "响应提取",
+      "additionalProperties": false,
+      "properties": {
+        "resultsPath": { "type": "string", "description": "web_search 结果数组的点路径" },
+        "item": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "titlePath": { "type": "string" },
+            "urlPath": { "type": "string" },
+            "snippetPath": { "type": "string" },
+            "pageAgePath": { "type": "string" }
+          }
+        },
+        "textPath": { "type": "string", "description": "image_understanding 结果文本的点路径" }
+      }
+    },
+    "timeoutMs": { "type": "number", "description": "请求超时（毫秒）", "default": 10000 }
+  }
+}

@@ -1,0 +1,58 @@
+{
+  "description": "DeepSeek 系列模型规格。参数来源：config-center compute/providers/deepseek.json。",
+  "specs": [
+    {
+      "id": "deepseek-chat",
+      "displayName": "DeepSeek Chat",
+      "family": "deepseek-chat",
+      "match": { "patterns": ["deepseek-chat*"] },
+      "spec": {
+        "contextWindow": 1000000,
+        "maxOutputTokens": 384000,
+        "capabilities": ["chat", "code", "reasoning", "multilingual", "tool_use"],
+        "serviceType": ["chat"],
+        "defaultTemperature": 1
+      }
+    },
+    {
+      "id": "deepseek-reasoner",
+      "displayName": "DeepSeek Reasoner",
+      "family": "deepseek-reasoner",
+      "match": { "patterns": ["deepseek-reasoner*"] },
+      "spec": {
+        "contextWindow": 1000000,
+        "maxOutputTokens": 384000,
+        "capabilities": ["chat", "reasoning", "deep_thinking", "code", "math", "tool_use"],
+        "serviceType": ["reasoning"],
+        "defaultTemperature": null,
+        "supportsReasoning": true
+      }
+    },
+    {
+      "id": "deepseek-v4-pro",
+      "displayName": "DeepSeek V4 Pro",
+      "family": "deepseek-v4",
+      "spec": {
+        "contextWindow": 1000000,
+        "maxOutputTokens": 384000,
+        "capabilities": ["chat", "code", "reasoning", "deep_thinking", "multilingual", "tool_use", "math"],
+        "serviceType": ["chat", "reasoning"],
+        "defaultTemperature": 1,
+        "supportsReasoning": true
+      }
+    },
+    {
+      "id": "deepseek-v4-flash",
+      "displayName": "DeepSeek V4 Flash",
+      "family": "deepseek-v4",
+      "spec": {
+        "contextWindow": 1000000,
+        "maxOutputTokens": 384000,
+        "capabilities": ["chat", "code", "reasoning", "deep_thinking", "multilingual", "tool_use"],
+        "serviceType": ["chat", "reasoning"],
+        "defaultTemperature": 1,
+        "supportsReasoning": true
+      }
+    }
+  ]
+}

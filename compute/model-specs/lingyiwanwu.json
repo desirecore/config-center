@@ -1,0 +1,33 @@
+{
+  "description": "零一万物 Yi 系列模型规格。参数来源：config-center compute/providers/lingyiwanwu.json。",
+  "specs": [
+    {
+      "id": "yi-lightning",
+      "displayName": "Yi Lightning",
+      "family": "yi-lightning",
+      "match": { "exact": ["yi-lightning"], "patterns": ["yi-lightning*"] },
+      "spec": {
+        "contextWindow": 16000,
+        "maxOutputTokens": 4096,
+        "capabilities": ["chat", "reasoning", "code", "fast", "smart_routing"],
+        "serviceType": ["chat"],
+        "defaultTemperature": 0.3,
+        "description": "零一万物高性能模型，16K 上下文，智能路由，极高性价比"
+      }
+    },
+    {
+      "id": "yi-vision-v2",
+      "displayName": "Yi Vision V2",
+      "family": "yi-vision",
+      "match": { "exact": ["yi-vision-v2"], "patterns": ["yi-vision*"] },
+      "spec": {
+        "contextWindow": 16000,
+        "maxOutputTokens": 4096,
+        "capabilities": ["chat", "vision", "image_understanding", "ocr", "chart_analysis"],
+        "serviceType": ["vision"],
+        "defaultTemperature": 0.3,
+        "description": "零一万物复杂视觉任务模型，16K 上下文，支持多图分析"
+      }
+    }
+  ]
+}
