@@ -2,6 +2,20 @@
   "description": "Mistral 系列模型规格。参数来源：config-center compute/providers/mistral.json。",
   "specs": [
     {
+      "id": "mistral-medium-3.5",
+      "displayName": "Mistral Medium 3.5",
+      "family": "mistral-medium",
+      "match": { "exact": ["mistral-medium-3.5"], "patterns": ["mistral-medium-3.5*"] },
+      "spec": {
+        "contextWindow": 262144,
+        "capabilities": ["chat", "reasoning", "code", "vision", "tool_use"],
+        "serviceType": ["chat"],
+        "defaultTemperature": 1,
+        "supportsReasoning": true,
+        "description": "Mistral Medium 3.5，128B 指令模型"
+      }
+    },
+    {
       "id": "mistral-large-latest",
       "displayName": "Mistral Large",
       "family": "mistral-large",

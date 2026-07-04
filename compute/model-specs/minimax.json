@@ -2,6 +2,21 @@
   "description": "MiniMax 系列模型规格。参数来源：config-center compute/providers/minimax.json。id 保留上游 model_name 原始写法（含大小写与点号），匹配时由匹配器归一化处理。",
   "specs": [
     {
+      "id": "MiniMax-M3",
+      "displayName": "MiniMax M3",
+      "family": "minimax-m3",
+      "match": { "exact": ["MiniMax-M3"], "patterns": ["MiniMax-M3*"] },
+      "spec": {
+        "contextWindow": 1048576,
+        "maxOutputTokens": 512000,
+        "capabilities": ["chat", "reasoning", "code", "vision", "video_understanding", "tool_use", "long_context"],
+        "serviceType": ["chat"],
+        "defaultTemperature": 1,
+        "supportsReasoning": true,
+        "description": "MiniMax M3 全模态基础模型，100 万上下文"
+      }
+    },
+    {
       "id": "MiniMax-M2.7",
       "displayName": "MiniMax M2.7",
       "family": "minimax-m2.7",
