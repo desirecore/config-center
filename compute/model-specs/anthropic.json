@@ -2,6 +2,34 @@
   "description": "Anthropic Claude 系列模型规格。参数来源：config-center compute/providers/anthropic.json。",
   "specs": [
     {
+      "id": "claude-fable-5",
+      "displayName": "Claude Fable 5",
+      "family": "claude-fable",
+      "match": { "exact": ["claude-fable-5"], "patterns": ["claude-fable-5*"] },
+      "spec": {
+        "contextWindow": 1000000,
+        "maxOutputTokens": 128000,
+        "capabilities": ["chat", "reasoning", "deep_thinking", "code", "vision", "tool_use", "long_context"],
+        "serviceType": ["chat"],
+        "supportsReasoning": true,
+        "description": "Anthropic 最强模型，基于 Mythos 架构，支持自主知识工作"
+      }
+    },
+    {
+      "id": "claude-opus-4-8",
+      "displayName": "Claude Opus 4.8",
+      "family": "claude-opus",
+      "match": { "patterns": ["claude-opus-4-8*"] },
+      "spec": {
+        "contextWindow": 1000000,
+        "maxOutputTokens": 128000,
+        "capabilities": ["chat", "reasoning", "code", "vision", "tool_use", "long_context"],
+        "serviceType": ["chat"],
+        "supportsReasoning": true,
+        "description": "Claude Opus 4.8，Anthropic Opus 系列最新旗舰"
+      }
+    },
+    {
       "id": "claude-opus-4-7",
       "displayName": "Claude Opus 4.7",
       "family": "claude-opus",

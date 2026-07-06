@@ -2,6 +2,20 @@
   "description": "腾讯混元系列模型规格。参数来源：config-center compute/providers/tencent.json。hunyuan-2.0-thinking 和 hunyuan-t1 为推理模型。",
   "specs": [
     {
+      "id": "hy3-preview",
+      "displayName": "混元 Hy3 Preview",
+      "family": "hy3",
+      "match": { "exact": ["hy3-preview"], "patterns": ["hy3-preview*"] },
+      "spec": {
+        "contextWindow": 262144,
+        "capabilities": ["chat", "reasoning", "code", "multilingual", "tool_use"],
+        "serviceType": ["chat"],
+        "defaultTemperature": 1,
+        "supportsReasoning": true,
+        "description": "腾讯混元 Hy3 预览版，高效 MoE 模型"
+      }
+    },
+    {
       "id": "hunyuan-2.0-thinking-20251109",
       "displayName": "混元 2.0 Think",
       "family": "hunyuan-2",

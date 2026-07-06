@@ -2,6 +2,21 @@
   "description": "Moonshot Kimi 系列模型规格。参数来源：config-center compute/providers/moonshot.json。注意 kimi-k2 存在多个子版本（k2.5/k2.6/k2-thinking），故 kimi-k2 仅用 exact 主键匹配，不用宽 pattern。",
   "specs": [
     {
+      "id": "kimi-k2.7-code",
+      "displayName": "Kimi K2.7 Code",
+      "family": "kimi-k2.7",
+      "match": { "exact": ["kimi-k2.7-code"], "patterns": ["kimi-k2.7-code*"] },
+      "spec": {
+        "contextWindow": 262144,
+        "maxOutputTokens": 16384,
+        "capabilities": ["chat", "code", "vision", "tool_use"],
+        "serviceType": ["chat"],
+        "defaultTemperature": 1,
+        "supportsReasoning": true,
+        "description": "Moonshot Kimi K2.7 Code 编程专用模型"
+      }
+    },
+    {
       "id": "kimi-k2.6",
       "displayName": "Kimi K2.6",
       "family": "kimi-k2.6",

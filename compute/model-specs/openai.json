@@ -2,6 +2,46 @@
   "description": "OpenAI GPT / o 系列模型规格。参数来源：config-center compute/providers/openai.json。注意：gpt-4o / gpt-5 等存在子型号（-mini/-nano），故只用 exact 主键匹配，不使用宽泛 pattern 以防误吞子型号。o 系列 serviceType 由 responses 调整为 reasoning（responses 为 OpenAI 直连专有，对 NewAPI 网关不适用）。",
   "specs": [
     {
+      "id": "gpt-image-2",
+      "displayName": "GPT Image 2",
+      "family": "gpt-image",
+      "match": { "exact": ["gpt-image-2"], "patterns": ["gpt-image-2*"] },
+      "spec": {
+        "contextWindow": 400000,
+        "capabilities": ["image_generation", "image_editing", "high_quality"],
+        "serviceType": ["image_gen"],
+        "description": "OpenAI 最新文生图模型，支持高质量图片生成与编辑，400K 上下文"
+      }
+    },
+    {
+      "id": "gpt-5.5",
+      "displayName": "GPT-5.5",
+      "family": "gpt-5",
+      "match": { "exact": ["gpt-5.5"], "patterns": ["gpt-5.5*"] },
+      "spec": {
+        "contextWindow": 1050000,
+        "maxOutputTokens": 128000,
+        "capabilities": ["chat", "reasoning", "code", "vision", "long_context", "tool_use"],
+        "serviceType": ["chat"],
+        "defaultTemperature": 1,
+        "supportsReasoning": true
+      }
+    },
+    {
+      "id": "gpt-5.4",
+      "displayName": "GPT-5.4",
+      "family": "gpt-5",
+      "match": { "exact": ["gpt-5.4"], "patterns": ["gpt-5.4*"] },
+      "spec": {
+        "contextWindow": 1050000,
+        "maxOutputTokens": 128000,
+        "capabilities": ["chat", "reasoning", "code", "vision", "long_context", "tool_use"],
+        "serviceType": ["chat"],
+        "defaultTemperature": 1,
+        "supportsReasoning": true
+      }
+    },
+    {
       "id": "gpt-5.2",
       "displayName": "GPT-5.2",
       "family": "gpt-5",

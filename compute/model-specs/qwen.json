@@ -2,6 +2,36 @@
   "description": "阿里通义千问 Qwen 系列模型规格。参数来源：config-center compute/providers/dashscope.json。",
   "specs": [
     {
+      "id": "qwen3.7-max",
+      "displayName": "Qwen3.7 Max",
+      "family": "qwen3.7",
+      "match": { "exact": ["qwen3.7-max"], "patterns": ["qwen3.7-max*"] },
+      "spec": {
+        "contextWindow": 1000000,
+        "maxOutputTokens": 65536,
+        "capabilities": ["chat", "reasoning", "code", "multilingual", "tool_use", "long_context"],
+        "serviceType": ["chat"],
+        "defaultTemperature": 1,
+        "supportsReasoning": true,
+        "description": "通义千问 Qwen3.7 Max 旗舰模型，100 万上下文"
+      }
+    },
+    {
+      "id": "qwen3.7-plus",
+      "displayName": "Qwen3.7 Plus",
+      "family": "qwen3.7",
+      "match": { "exact": ["qwen3.7-plus"], "patterns": ["qwen3.7-plus*"] },
+      "spec": {
+        "contextWindow": 1000000,
+        "maxOutputTokens": 65536,
+        "capabilities": ["chat", "reasoning", "code", "vision", "multilingual", "tool_use", "long_context"],
+        "serviceType": ["chat"],
+        "defaultTemperature": 1,
+        "supportsReasoning": true,
+        "description": "通义千问 Qwen3.7 Plus 高性价比多模态模型，100 万上下文"
+      }
+    },
+    {
       "id": "qwen-max",
       "displayName": "Qwen Max",
       "family": "qwen-max",
