@@ -40,12 +40,12 @@
     "providerId": "provider-openai-001"
   },
   "image_gen": {
-    "modelName": "dall-e-3",
-    "providerId": "provider-openai-001"
+    "modelName": "image-01",
+    "providerId": "provider-minimax-001"
   },
   "video_gen": {
-    "modelName": "kling-v2",
-    "providerId": "provider-kling-001"
+    "modelName": "MiniMax-Hailuo-2.3",
+    "providerId": "provider-minimax-001"
   },
   "omni": {
     "modelName": "gpt-4o-realtime",
