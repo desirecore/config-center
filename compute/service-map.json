@@ -64,7 +64,7 @@
     "providerId": "provider-volcengine-001"
   },
   "translation": {
-    "modelName": "qwen3-max-trans",
+    "modelName": "qwen-mt-plus",
     "providerId": "provider-dashscope-001"
   },
   "computer_use": {

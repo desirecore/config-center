@@ -23,12 +23,32 @@
   },
   "models": [
     {
+      "modelName": "qwen3.7-plus",
+      "displayName": "Qwen3.7 Plus (Coding)",
+      "serviceType": [
+        "chat"
+      ],
+      "description": "百炼 Coding Plan，通义千问 3.7 Plus，多模态智能体模型，1M 上下文",
+      "contextWindow": 1000000,
+      "maxOutputTokens": 65536,
+      "capabilities": [
+        "chat",
+        "reasoning",
+        "code",
+        "vision",
+        "tool_use",
+        "agent",
+        "long_context"
+      ],
+      "source": "preset"
+    },
+    {
       "modelName": "qwen3.6-plus",
       "displayName": "Qwen3.6 Plus (Coding)",
       "serviceType": [
         "chat"
       ],
-      "description": "百炼 Coding Plan，通义千问 3.6 Plus 旗舰模型，1M 上下文",
+      "description": "百炼 Coding Plan，通义千问 3.6 Plus，1M 上下文",
       "contextWindow": 1000000,
       "maxOutputTokens": 65536,
       "capabilities": [
@@ -72,7 +92,6 @@
       "maxOutputTokens": 65536,
       "capabilities": [
         "chat",
-        "reasoning",
         "code",
         "tool_use"
       ],
@@ -89,7 +108,6 @@
       "maxOutputTokens": 65536,
       "capabilities": [
         "chat",
-        "reasoning",
         "code",
         "tool_use"
       ],
