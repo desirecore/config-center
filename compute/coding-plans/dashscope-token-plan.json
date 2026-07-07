@@ -133,7 +133,7 @@
       ],
       "description": "百炼 Token Plan，智谱 GLM-5，200K 上下文",
       "contextWindow": 202752,
-      "maxOutputTokens": 128000,
+      "maxOutputTokens": 131072,
       "capabilities": [
         "chat",
         "reasoning",
@@ -169,7 +169,7 @@
       ],
       "description": "百炼 Token Plan，智谱 GLM-4.7，200K 上下文",
       "contextWindow": 200000,
-      "maxOutputTokens": 128000,
+      "maxOutputTokens": 131072,
       "capabilities": [
         "chat",
         "reasoning",
