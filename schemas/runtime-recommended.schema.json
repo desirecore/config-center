@@ -1,0 +1,213 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "description": "推荐运行时版本清单：决定构建时打进安装包、首启离线导入的 Python / Node.js 版本。由 config-center 仓库远端维护（30 分钟 git fetch 热更新），主仓库 defaults 内置保底种子",
+  "required": [
+    "python",
+    "node",
+    "minClientVersion"
+  ],
+  "properties": {
+    "python": {
+      "type": "object",
+      "description": "Python 推荐版本（python-build-standalone 发行版，经内置 Hatch 安装）。归档必须与内置 Hatch 版本 pin 的发布完全一致（tag + 文件名 + 变体），否则首启离线导入后 hatch 的更新判断会出现偏差",
+      "required": [
+        "name",
+        "version",
+        "distTag",
+        "archives"
+      ],
+      "properties": {
+        "name": {
+          "type": "string",
+          "description": "Hatch distribution 名（如 \"3.13\"）：`hatch python install <name>` 的实参，也是安装目录 hatch/local/<name>/ 的目录名，幂等判断依据"
+        },
+        "version": {
+          "type": "string",
+          "description": "精确 Python 版本（如 \"3.13.9\"），仅用于展示与清单更新判断"
+        },
+        "distTag": {
+          "type": "string",
+          "description": "python-build-standalone 的 release tag（如 \"20251014\"）"
+        },
+        "archives": {
+          "type": "object",
+          "description": "各平台归档的相对路径（相对下载源根目录）。键为 `<platform>-<arch>`（Node.js process.platform/arch 语义），值为源站 URL 尾部路径，同时也是 static/runtimes/<platform>-<arch>/ 下的落盘相对路径",
+          "required": [
+            "darwin-arm64",
+            "darwin-x64",
+            "win32-x64",
+            "win32-arm64",
+            "linux-x64",
+            "linux-arm64"
+          ],
+          "properties": {
+            "darwin-arm64": {
+              "type": "string",
+              "description": "macOS Apple Silicon 的归档相对路径"
+            },
+            "darwin-x64": {
+              "type": "string",
+              "description": "macOS Intel 的归档相对路径"
+            },
+            "win32-x64": {
+              "type": "string",
+              "description": "Windows x64 的归档相对路径"
+            },
+            "win32-arm64": {
+              "type": "string",
+              "description": "Windows ARM64 的归档相对路径"
+            },
+            "linux-x64": {
+              "type": "string",
+              "description": "Linux x64 的归档相对路径"
+            },
+            "linux-arm64": {
+              "type": "string",
+              "description": "Linux ARM64 的归档相对路径"
+            }
+          },
+          "additionalProperties": false
+        },
+        "sha256": {
+          "type": "object",
+          "description": "各平台归档的 SHA-256 校验值（十六进制小写）。构建脚本下载后校验，防止归档被镜像/代理篡改或截断",
+          "properties": {
+            "darwin-arm64": {
+              "type": "string",
+              "pattern": "^[0-9a-f]{64}$",
+              "description": "macOS Apple Silicon 归档的 SHA-256"
+            },
+            "darwin-x64": {
+              "type": "string",
+              "pattern": "^[0-9a-f]{64}$",
+              "description": "macOS Intel 归档的 SHA-256"
+            },
+            "win32-x64": {
+              "type": "string",
+              "pattern": "^[0-9a-f]{64}$",
+              "description": "Windows x64 归档的 SHA-256"
+            },
+            "win32-arm64": {
+              "type": "string",
+              "pattern": "^[0-9a-f]{64}$",
+              "description": "Windows ARM64 归档的 SHA-256"
+            },
+            "linux-x64": {
+              "type": "string",
+              "pattern": "^[0-9a-f]{64}$",
+              "description": "Linux x64 归档的 SHA-256"
+            },
+            "linux-arm64": {
+              "type": "string",
+              "pattern": "^[0-9a-f]{64}$",
+              "description": "Linux ARM64 归档的 SHA-256"
+            }
+          },
+          "additionalProperties": false
+        }
+      },
+      "additionalProperties": false
+    },
+    "node": {
+      "type": "object",
+      "description": "Node.js 推荐版本（官方 dist 归档，经内置 Volta 安装）",
+      "required": [
+        "version",
+        "archives"
+      ],
+      "properties": {
+        "version": {
+          "type": "string",
+          "description": "精确 Node.js 版本（如 \"24.18.0\"，不带 v 前缀）：`volta fetch node@<version>` 的实参。必须是精确三段版本——Volta 对 Exact 版本的解析完全离线，不访问 index.json"
+        },
+        "ltsCodename": {
+          "type": "string",
+          "description": "LTS 代号（如 \"Krypton\"），仅用于展示"
+        },
+        "archives": {
+          "type": "object",
+          "description": "各平台归档的相对路径（相对下载源根目录）。键为 `<platform>-<arch>`（Node.js process.platform/arch 语义），值为源站 URL 尾部路径，同时也是 static/runtimes/<platform>-<arch>/ 下的落盘相对路径",
+          "required": [
+            "darwin-arm64",
+            "darwin-x64",
+            "win32-x64",
+            "win32-arm64",
+            "linux-x64",
+            "linux-arm64"
+          ],
+          "properties": {
+            "darwin-arm64": {
+              "type": "string",
+              "description": "macOS Apple Silicon 的归档相对路径"
+            },
+            "darwin-x64": {
+              "type": "string",
+              "description": "macOS Intel 的归档相对路径"
+            },
+            "win32-x64": {
+              "type": "string",
+              "description": "Windows x64 的归档相对路径"
+            },
+            "win32-arm64": {
+              "type": "string",
+              "description": "Windows ARM64 的归档相对路径"
+            },
+            "linux-x64": {
+              "type": "string",
+              "description": "Linux x64 的归档相对路径"
+            },
+            "linux-arm64": {
+              "type": "string",
+              "description": "Linux ARM64 的归档相对路径"
+            }
+          },
+          "additionalProperties": false
+        },
+        "sha256": {
+          "type": "object",
+          "description": "各平台归档的 SHA-256 校验值（十六进制小写）。构建脚本下载后校验，防止归档被镜像/代理篡改或截断",
+          "properties": {
+            "darwin-arm64": {
+              "type": "string",
+              "pattern": "^[0-9a-f]{64}$",
+              "description": "macOS Apple Silicon 归档的 SHA-256"
+            },
+            "darwin-x64": {
+              "type": "string",
+              "pattern": "^[0-9a-f]{64}$",
+              "description": "macOS Intel 归档的 SHA-256"
+            },
+            "win32-x64": {
+              "type": "string",
+              "pattern": "^[0-9a-f]{64}$",
+              "description": "Windows x64 归档的 SHA-256"
+            },
+            "win32-arm64": {
+              "type": "string",
+              "pattern": "^[0-9a-f]{64}$",
+              "description": "Windows ARM64 归档的 SHA-256"
+            },
+            "linux-x64": {
+              "type": "string",
+              "pattern": "^[0-9a-f]{64}$",
+              "description": "Linux x64 归档的 SHA-256"
+            },
+            "linux-arm64": {
+              "type": "string",
+              "pattern": "^[0-9a-f]{64}$",
+              "description": "Linux ARM64 归档的 SHA-256"
+            }
+          },
+          "additionalProperties": false
+        }
+      },
+      "additionalProperties": false
+    },
+    "minClientVersion": {
+      "type": "string",
+      "description": "使用此清单所需的最低客户端版本（package.json#version 语义）。远端热更新的清单若要求高于当前客户端版本，则忽略远端、继续使用内置种子——防止老客户端的内置 Hatch/Volta 不认识新版本格式"
+    }
+  },
+  "additionalProperties": false
+}

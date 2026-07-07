@@ -91,6 +91,44 @@ describe('真实数据全量校验', () => {
     assert.equal(r1.ok, true, JSON.stringify(r1.errors, null, 2))
     assert.equal(r2.ok, true, JSON.stringify(r2.errors, null, 2))
   })
+
+  it('runtimes/recommended.json 应通过 runtime-recommended schema', () => {
+    const result = validateFile(join(ROOT, 'runtimes', 'recommended.json'), validators)
+    assert.equal(result.ok, true, JSON.stringify(result.errors, null, 2))
+  })
+
+  it('runtimes/versions-fallback.json 应通过 runtime-versions-fallback schema', () => {
+    const result = validateFile(join(ROOT, 'runtimes', 'versions-fallback.json'), validators)
+    assert.equal(result.ok, true, JSON.stringify(result.errors, null, 2))
+  })
+})
+
+// ==================== Runtime 清单反例 ====================
+
+describe('runtime-recommended schema 反例', () => {
+  const validate = compile('runtime-recommended')
+
+  function makeValidManifest() {
+    return JSON.parse(readFileSync(join(ROOT, 'runtimes', 'recommended.json'), 'utf8'))
+  }
+
+  it('拒绝缺少平台归档（archives 六平台必填）', () => {
+    const data = makeValidManifest()
+    delete data.node.archives['win32-arm64']
+    assert.equal(validate(data), false)
+  })
+
+  it('拒绝非法 sha256（长度/字符集不符）', () => {
+    const data = makeValidManifest()
+    data.python.sha256['darwin-arm64'] = 'not-a-sha'
+    assert.equal(validate(data), false)
+  })
+
+  it('拒绝未知字段（additionalProperties: false 保护老客户端）', () => {
+    const data = makeValidManifest()
+    data.unknownField = true
+    assert.equal(validate(data), false)
+  })
 })
 
 // ==================== Provider schema 反例 ====================
