@@ -22,10 +22,10 @@
     {
       "modelName": "kimi-for-coding",
       "displayName": "Kimi For Coding (Auto)",
-      "serviceType": ["chat"],
-      "description": "Kimi Code 稳定路由 ID，自动映射到最新模型（当前为 K2.6），262K 上下文",
+      "serviceType": ["chat", "reasoning"],
+      "description": "Kimi Code 稳定路由 ID，自动映射到 Kimi Code 当前模型，262K 上下文",
       "contextWindow": 262144,
-      "maxOutputTokens": 16384,
+      "maxOutputTokens": 32768,
       "capabilities": ["chat", "reasoning", "code", "tool_use", "agent", "long_context", "vision"],
       "source": "preset"
     }
