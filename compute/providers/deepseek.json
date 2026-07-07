@@ -13,6 +13,10 @@
     "chat",
     "reasoning"
   ],
+  "tombstones": [
+    "deepseek-chat",
+    "deepseek-reasoner"
+  ],
   "models": [
     {
       "modelName": "deepseek-v4-flash",
@@ -21,7 +25,7 @@
         "chat",
         "reasoning"
       ],
-      "description": "DeepSeek V4 主力模型，1M 上下文，支持思考/非思考双模式，高并发（2500）",
+      "description": "DeepSeek V4 Flash，284B 总参数 / 13B 激活 MoE，1M 上下文，默认思考模式，支持非思考模式，并发上限 2500",
       "contextWindow": 1000000,
       "maxOutputTokens": 384000,
       "capabilities": [
@@ -29,17 +33,29 @@
         "code",
         "reasoning",
         "deep_thinking",
+        "long_context",
         "multilingual",
         "tool_use"
       ],
-      "inputPrice": 1,
-      "outputPrice": 2,
+      "inputPrice": 1.008,
+      "outputPrice": 2.016,
       "defaultTemperature": 1,
       "defaultTopP": 1,
       "extra": {
-        "cacheHitPrice": 0.02,
+        "cacheHitPrice": 0.02016,
+        "concurrencyLimit": 2500,
         "supportsThinking": true,
-        "thinkingDefault": true
+        "thinkingDefault": true,
+        "reasoningEffort": [
+          "high",
+          "max"
+        ],
+        "features": {
+          "jsonOutput": true,
+          "toolCalls": true,
+          "chatPrefixCompletion": "beta",
+          "fimCompletion": "non-thinking-only"
+        }
       }
     },
     {
@@ -49,7 +65,7 @@
         "chat",
         "reasoning"
       ],
-      "description": "DeepSeek V4 旗舰模型（1.6T MoE），1M 上下文，支持思考/非思考双模式，并发上限 500",
+      "description": "DeepSeek V4 Pro，1.6T 总参数 / 49B 激活 MoE，1M 上下文，默认思考模式，支持非思考模式，并发上限 500",
       "contextWindow": 1000000,
       "maxOutputTokens": 384000,
       "capabilities": [
@@ -57,71 +73,30 @@
         "code",
         "reasoning",
         "deep_thinking",
+        "long_context",
         "multilingual",
         "tool_use",
         "math"
       ],
-      "inputPrice": 3,
-      "outputPrice": 6,
+      "inputPrice": 3.132,
+      "outputPrice": 6.264,
       "defaultTemperature": 1,
       "defaultTopP": 1,
       "extra": {
-        "cacheHitPrice": 0.025,
+        "cacheHitPrice": 0.0261,
+        "concurrencyLimit": 500,
         "supportsThinking": true,
-        "thinkingDefault": true
-      }
-    },
-    {
-      "modelName": "deepseek-chat",
-      "displayName": "DeepSeek Chat (V4 Flash alias)",
-      "serviceType": [
-        "chat"
-      ],
-      "description": "deepseek-v4-flash 非思考模式的旧别名，将于 2026-07-24 弃用",
-      "contextWindow": 1000000,
-      "maxOutputTokens": 384000,
-      "capabilities": [
-        "chat",
-        "code",
-        "reasoning",
-        "multilingual",
-        "tool_use"
-      ],
-      "inputPrice": 1,
-      "outputPrice": 2,
-      "defaultTemperature": 1,
-      "defaultTopP": 1,
-      "extra": {
-        "cacheHitPrice": 0.02,
-        "deprecated": true,
-        "deprecationDate": "2026-07-24",
-        "replacedBy": "deepseek-v4-flash"
-      }
-    },
-    {
-      "modelName": "deepseek-reasoner",
-      "displayName": "DeepSeek Reasoner (V4 Flash alias)",
-      "serviceType": [
-        "reasoning"
-      ],
-      "description": "deepseek-v4-flash 思考模式的旧别名，将于 2026-07-24 弃用",
-      "contextWindow": 1000000,
-      "maxOutputTokens": 384000,
-      "capabilities": [
-        "chat",
-        "reasoning",
-        "deep_thinking",
-        "code",
-        "math",
-        "tool_use"
-      ],
-      "inputPrice": 1,
-      "outputPrice": 2,
-      "extra": {
-        "cacheHitPrice": 0.02,
-        "deprecated": true,
-        "deprecationDate": "2026-07-24",
-        "replacedBy": "deepseek-v4-flash"
+        "thinkingDefault": true,
+        "reasoningEffort": [
+          "high",
+          "max"
+        ],
+        "features": {
+          "jsonOutput": true,
+          "toolCalls": true,
+          "chatPrefixCompletion": "beta",
+          "fimCompletion": "non-thinking-only"
+        }
       }
     }
   ]
