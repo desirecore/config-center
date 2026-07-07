@@ -1,0 +1,132 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "description": "离线兜底版本清单：联网查询可安装版本列表失败时的替代数据，消除「空列表 + 无限重试」。各字段条目形状与对应实时接口的最终返回值完全同构，前端无需区分解析",
+  "required": [
+    "generatedAt",
+    "node",
+    "python",
+    "pkgManagers"
+  ],
+  "properties": {
+    "generatedAt": {
+      "type": "string",
+      "description": "快照生成时间（ISO 8601），用于展示「离线列表可能不是最新」的提示"
+    },
+    "node": {
+      "type": "array",
+      "description": "Node.js 版本条目快照（nodejs.org/dist/index.json 元素子集，含 version/date/lts/npm 等字段）",
+      "items": {
+        "type": "object",
+        "required": [
+          "version"
+        ],
+        "properties": {
+          "version": {
+            "type": "string",
+            "description": "版本号（带 v 前缀，如 \"v24.18.0\"）"
+          }
+        },
+        "additionalProperties": true
+      }
+    },
+    "python": {
+      "type": "array",
+      "description": "Python 发行版条目快照（与 `hatch python show` 解析结果同构）",
+      "items": {
+        "type": "object",
+        "required": [
+          "name",
+          "version"
+        ],
+        "properties": {
+          "name": {
+            "type": "string",
+            "description": "Hatch distribution 名（如 \"3.13\"、\"pypy3.11\"）"
+          },
+          "version": {
+            "type": "string",
+            "description": "精确版本号（如 \"3.13.9\"）"
+          }
+        },
+        "additionalProperties": false
+      }
+    },
+    "pkgManagers": {
+      "type": "object",
+      "description": "包管理器 release 条目快照（与 listAvailablePkgManagers 最终返回形状一致：已过滤预发布、yarn 已归一化 tag_name）",
+      "required": [
+        "npm",
+        "pnpm",
+        "yarn"
+      ],
+      "properties": {
+        "npm": {
+          "type": "array",
+          "description": "npm 的正式版本条目",
+          "items": {
+            "type": "object",
+            "required": [
+              "tag_name"
+            ],
+            "properties": {
+              "tag_name": {
+                "type": "string",
+                "description": "版本 tag（如 \"v11.18.0\"）"
+              },
+              "created_at": {
+                "type": "string",
+                "description": "发布时间（ISO 8601）"
+              }
+            },
+            "additionalProperties": true
+          }
+        },
+        "pnpm": {
+          "type": "array",
+          "description": "pnpm 的正式版本条目",
+          "items": {
+            "type": "object",
+            "required": [
+              "tag_name"
+            ],
+            "properties": {
+              "tag_name": {
+                "type": "string",
+                "description": "版本 tag（如 \"v10.12.1\"）"
+              },
+              "created_at": {
+                "type": "string",
+                "description": "发布时间（ISO 8601）"
+              }
+            },
+            "additionalProperties": true
+          }
+        },
+        "yarn": {
+          "type": "array",
+          "description": "yarn (berry) 的正式版本条目",
+          "items": {
+            "type": "object",
+            "required": [
+              "tag_name"
+            ],
+            "properties": {
+              "tag_name": {
+                "type": "string",
+                "description": "版本 tag（如 \"v4.17.0\"，已从 name 字段归一化）"
+              },
+              "created_at": {
+                "type": "string",
+                "description": "发布时间（ISO 8601）"
+              }
+            },
+            "additionalProperties": true
+          }
+        }
+      },
+      "additionalProperties": false
+    }
+  },
+  "additionalProperties": false
+}
