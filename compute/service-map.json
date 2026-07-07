@@ -4,7 +4,7 @@
     "providerId": "provider-openai-001"
   },
   "reasoning": {
-    "modelName": "deepseek-reasoner",
+    "modelName": "deepseek-v4-flash",
     "providerId": "provider-deepseek-001"
   },
   "fast": {
