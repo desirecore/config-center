@@ -23,15 +23,48 @@
     "omni",
     "translation"
   ],
+  "tombstones": [
+    "qwen3.6-plus",
+    "qwen3.5-plus",
+    "qwen-max",
+    "qwen-plus",
+    "qwen-turbo",
+    "qwen3-max",
+    "qwen3-max-trans"
+  ],
   "models": [
     {
-      "modelName": "qwen3.6-plus",
-      "displayName": "阿里云 Qwen3.6-Plus",
+      "modelName": "qwen3.7-max",
+      "displayName": "阿里云 Qwen3.7-Max",
+      "serviceType": [
+        "chat"
+      ],
+      "description": "通义千问3.7 Max，面向复杂推理与长程 Agent 任务的旗舰模型，100万上下文，支持内置工具和 Function Calling",
+      "contextWindow": 1000000,
+      "maxOutputTokens": 65536,
+      "capabilities": [
+        "chat",
+        "reasoning",
+        "code",
+        "multilingual",
+        "long_context",
+        "tool_use",
+        "agent"
+      ],
+      "inputPrice": 12,
+      "outputPrice": 36,
+      "defaultTemperature": 0.6,
+      "defaultTopP": 0.95,
+      "extra": {}
+    },
+    {
+      "modelName": "qwen3.7-plus",
+      "displayName": "阿里云 Qwen3.7-Plus",
       "serviceType": [
         "chat",
         "vision"
       ],
-      "description": "通义千问3.6 Plus，支持文本/图像/视频输入，100万上下文，支持内置工具和 Function Calling",
+      "description": "通义千问3.7 Plus，多模态智能体模型，100万上下文，支持内置工具、Function Calling 和结构化输出",
       "contextWindow": 1000000,
       "maxOutputTokens": 65536,
       "capabilities": [
@@ -45,7 +78,7 @@
         "vision"
       ],
       "inputPrice": 2,
-      "outputPrice": 12,
+      "outputPrice": 8,
       "defaultTemperature": 0.6,
       "defaultTopP": 0.95,
       "extra": {
@@ -53,17 +86,17 @@
           {
             "maxInputTokens": 256000,
             "inputPrice": 2,
-            "outputPrice": 12,
-            "thinkingOutputPrice": 12
+            "outputPrice": 8,
+            "thinkingOutputPrice": 8
           },
           {
             "maxInputTokens": 1000000,
-            "inputPrice": 8,
-            "outputPrice": 48,
-            "thinkingOutputPrice": 48
+            "inputPrice": 6,
+            "outputPrice": 24,
+            "thinkingOutputPrice": 24
           }
         ],
-        "thinkingMaxTokens": 81920
+        "thinkingMaxTokens": 262144
       }
     },
     {
@@ -107,140 +140,6 @@
       }
     },
     {
-      "modelName": "qwen3.5-plus",
-      "displayName": "阿里云 Qwen3.5-Plus",
-      "serviceType": [
-        "chat"
-      ],
-      "description": "通义千问3.5旗舰模型，支持文本/图像/视频输入，100万上下文，默认开启思考模式",
-      "contextWindow": 1000000,
-      "maxOutputTokens": 65536,
-      "capabilities": [
-        "chat",
-        "reasoning",
-        "code",
-        "multilingual",
-        "long_context",
-        "tool_use",
-        "agent",
-        "vision"
-      ],
-      "inputPrice": 0.8,
-      "outputPrice": 4.8,
-      "defaultTemperature": 0.6,
-      "defaultTopP": 0.95,
-      "extra": {
-        "pricingTiers": [
-          {
-            "maxInputTokens": 128000,
-            "inputPrice": 0.8,
-            "outputPrice": 4.8
-          },
-          {
-            "maxInputTokens": 256000,
-            "inputPrice": 2,
-            "outputPrice": 12
-          },
-          {
-            "maxInputTokens": 1000000,
-            "inputPrice": 4,
-            "outputPrice": 24
-          }
-        ],
-        "thinkingMaxTokens": 81920
-      }
-    },
-    {
-      "modelName": "qwen-max",
-      "displayName": "阿里云 qwen-max",
-      "serviceType": [
-        "chat"
-      ],
-      "description": "通义千问Max，千亿参数旗舰模型，32K 上下文",
-      "contextWindow": 32768,
-      "maxOutputTokens": 8192,
-      "capabilities": [
-        "chat",
-        "reasoning",
-        "code",
-        "multilingual",
-        "long_context"
-      ],
-      "inputPrice": 2.4,
-      "outputPrice": 9.6,
-      "defaultTemperature": 0.7,
-      "defaultTopP": 0.8,
-      "extra": {}
-    },
-    {
-      "modelName": "qwen-plus",
-      "displayName": "阿里云 qwen-plus",
-      "serviceType": [
-        "chat"
-      ],
-      "description": "通义千问Plus，支持思考模式，100万上下文",
-      "contextWindow": 1000000,
-      "maxOutputTokens": 32768,
-      "capabilities": [
-        "chat",
-        "reasoning",
-        "code",
-        "thinking_mode"
-      ],
-      "inputPrice": 0.8,
-      "outputPrice": 2,
-      "defaultTemperature": 0.7,
-      "defaultTopP": 0.8,
-      "extra": {
-        "pricingTiers": [
-          {
-            "maxInputTokens": 128000,
-            "inputPrice": 0.8,
-            "outputPrice": 2,
-            "thinkingOutputPrice": 8
-          },
-          {
-            "maxInputTokens": 256000,
-            "inputPrice": 2.4,
-            "outputPrice": 20,
-            "thinkingOutputPrice": 24
-          },
-          {
-            "maxInputTokens": 1000000,
-            "inputPrice": 4.8,
-            "outputPrice": 48,
-            "thinkingOutputPrice": 64
-          }
-        ],
-        "thinkingMaxTokens": 81920
-      }
-    },
-    {
-      "modelName": "qwen-turbo",
-      "displayName": "阿里云 qwen-turbo",
-      "serviceType": [
-        "chat"
-      ],
-      "description": "通义千问Turbo，非思考模式支持100万上下文，思考模式支持131K上下文",
-      "contextWindow": 1000000,
-      "maxOutputTokens": 16384,
-      "capabilities": [
-        "chat",
-        "code",
-        "long_context",
-        "fast"
-      ],
-      "inputPrice": 0.367,
-      "outputPrice": 1.468,
-      "defaultTemperature": 0.7,
-      "defaultTopP": 0.8,
-      "extra": {
-        "thinkingContextWindow": 131072,
-        "thinkingOutputPrice": 3.67,
-        "thinkingMaxTokens": 38912
-      }
-    },
-    {
       "modelName": "qwen-long",
       "displayName": "阿里云 qwen-long",
       "serviceType": [
@@ -257,31 +156,6 @@
       "inputPrice": 0.5,
       "outputPrice": 2,
       "defaultTemperature": 1,
-      "defaultTopP": 0.8,
-      "extra": {}
-    },
-    {
-      "modelName": "qwen3-max",
-      "displayName": "阿里云 Qwen3-Max",
-      "serviceType": [
-        "chat"
-      ],
-      "description": "通义千问3代旗舰模型，262K 上下文，支持思考模式",
-      "contextWindow": 262144,
-      "maxOutputTokens": 65536,
-      "capabilities": [
-        "chat",
-        "reasoning",
-        "code",
-        "multilingual",
-        "long_context",
-        "tool_use",
-        "agent",
-        "vision"
-      ],
-      "inputPrice": 2.5,
-      "outputPrice": 10,
-      "defaultTemperature": 0.7,
       "defaultTopP": 0.8,
       "extra": {}
     },
@@ -673,22 +547,26 @@
       "extra": {}
     },
     {
-      "modelName": "qwen3-max-trans",
-      "displayName": "Qwen3-Max（翻译）",
+      "modelName": "qwen-mt-plus",
+      "displayName": "Qwen-MT-Plus",
       "serviceType": [
         "translation"
       ],
-      "description": "通义千问翻译，中英日韩等多语种互译",
-      "contextWindow": 131072,
+      "description": "通义千问 Qwen-MT 旗舰翻译模型，支持 92 种语言互译，适合专业领域、正式文书和技术报告",
+      "contextWindow": 16384,
       "maxOutputTokens": 8192,
       "capabilities": [
         "translation",
         "multilingual",
-        "chinese_optimized"
+        "chinese_optimized",
+        "terminology"
       ],
-      "defaultTemperature": 0.65,
-      "defaultTopP": 0.8,
-      "extra": {}
+      "inputPrice": 1.8,
+      "outputPrice": 5.4,
+      "extra": {
+        "supportedLanguageCount": 92,
+        "supportsIncrementalStreaming": false
+      }
     },
     {
       "modelName": "happyhorse-1.0-t2v",
