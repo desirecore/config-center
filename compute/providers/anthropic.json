@@ -15,6 +15,106 @@
   ],
   "models": [
     {
+      "modelName": "claude-fable-5",
+      "displayName": "Claude Fable 5",
+      "serviceType": [
+        "chat"
+      ],
+      "description": "Anthropic 最高能力公开模型，面向长程智能体和高难推理任务",
+      "contextWindow": 1000000,
+      "maxOutputTokens": 128000,
+      "capabilities": [
+        "chat",
+        "reasoning",
+        "code",
+        "vision",
+        "tool_use",
+        "agent",
+        "long_context"
+      ],
+      "inputPrice": 10,
+      "outputPrice": 50,
+      "extra": {
+        "cachePricing": {
+          "write5m": 12.5,
+          "write1h": 20,
+          "read": 1
+        },
+        "adaptiveThinking": true,
+        "samplingParametersDeprecated": true,
+        "pricingNotes": "Prices are per 1M tokens. Full 1M context is billed at standard pricing."
+      }
+    },
+    {
+      "modelName": "claude-opus-4-8",
+      "displayName": "Claude Opus 4.8",
+      "serviceType": [
+        "chat"
+      ],
+      "description": "Anthropic Opus 级复杂智能体编码与企业任务模型，1M 上下文",
+      "contextWindow": 1000000,
+      "maxOutputTokens": 128000,
+      "capabilities": [
+        "chat",
+        "reasoning",
+        "code",
+        "vision",
+        "tool_use",
+        "agent",
+        "long_context"
+      ],
+      "inputPrice": 5,
+      "outputPrice": 25,
+      "extra": {
+        "cachePricing": {
+          "write5m": 6.25,
+          "write1h": 10,
+          "read": 0.5
+        },
+        "adaptiveThinking": true,
+        "defaultEffort": "high",
+        "samplingParametersDeprecated": true,
+        "pricingNotes": "Prices are per 1M tokens. Full 1M context is billed at standard pricing."
+      }
+    },
+    {
+      "modelName": "claude-sonnet-5",
+      "displayName": "Claude Sonnet 5",
+      "serviceType": [
+        "chat",
+        "computer_use"
+      ],
+      "description": "Anthropic Sonnet 5，速度与智能平衡模型，支持电脑使用和长上下文智能体任务",
+      "contextWindow": 1000000,
+      "maxOutputTokens": 128000,
+      "capabilities": [
+        "chat",
+        "reasoning",
+        "code",
+        "vision",
+        "tool_use",
+        "computer_use",
+        "agent",
+        "long_context"
+      ],
+      "inputPrice": 2,
+      "outputPrice": 10,
+      "extra": {
+        "cachePricing": {
+          "write5m": 2.5,
+          "write1h": 4,
+          "read": 0.2
+        },
+        "introductoryPricingUntil": "2026-08-31",
+        "standardPricingFrom": "2026-09-01",
+        "standardInputPrice": 3,
+        "standardOutputPrice": 15,
+        "adaptiveThinking": true,
+        "defaultEffort": "high",
+        "samplingParametersDeprecated": true
+      }
+    },
+    {
       "modelName": "claude-opus-4-7",
       "displayName": "Claude Opus 4.7",
       "serviceType": [
@@ -32,7 +132,6 @@
       ],
       "inputPrice": 5,
       "outputPrice": 25,
-      "defaultTemperature": 1,
       "extra": {
         "cachePricing": {
           "write5m": 6.25,

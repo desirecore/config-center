@@ -1,6 +1,6 @@
 {
   "chat": {
-    "modelName": "gpt-5-mini",
+    "modelName": "gpt-5.4-mini",
     "providerId": "provider-openai-001"
   },
   "reasoning": {
@@ -8,7 +8,7 @@
     "providerId": "provider-deepseek-001"
   },
   "fast": {
-    "modelName": "gpt-5-nano",
+    "modelName": "gpt-5.4-nano",
     "providerId": "provider-openai-001"
   },
   "embedding": {
@@ -20,7 +20,7 @@
     "providerId": "provider-dashscope-001"
   },
   "vision": {
-    "modelName": "gpt-4o",
+    "modelName": "gpt-5.4-mini",
     "providerId": "provider-openai-001"
   },
   "tts": {
@@ -36,7 +36,7 @@
     "providerId": "provider-dashscope-001"
   },
   "responses": {
-    "modelName": "o3",
+    "modelName": "gpt-5.5",
     "providerId": "provider-openai-001"
   },
   "image_gen": {
@@ -48,7 +48,7 @@
     "providerId": "provider-minimax-001"
   },
   "omni": {
-    "modelName": "gpt-4o-realtime",
+    "modelName": "gpt-realtime-2.1",
     "providerId": "provider-openai-001"
   },
   "voice_clone": {
@@ -56,7 +56,7 @@
     "providerId": "provider-dashscope-001"
   },
   "realtime_voice": {
-    "modelName": "gpt-4o-realtime-preview",
+    "modelName": "gpt-realtime-2.1",
     "providerId": "provider-openai-001"
   },
   "simultaneous_interpret": {
@@ -68,7 +68,7 @@
     "providerId": "provider-dashscope-001"
   },
   "computer_use": {
-    "modelName": "claude-sonnet-4-5-computer",
+    "modelName": "claude-sonnet-5",
     "providerId": "provider-anthropic-001"
   },
   "music_gen": {

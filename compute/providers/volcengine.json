@@ -23,6 +23,74 @@
   ],
   "models": [
     {
+      "modelName": "doubao-seed-2.1-pro",
+      "displayName": "豆包 Seed 2.1 Pro",
+      "serviceType": [
+        "chat",
+        "reasoning",
+        "vision"
+      ],
+      "description": "火山方舟豆包 Seed 2.1 Pro，生产级 Coding、Agent 与多模态旗舰模型",
+      "contextWindow": 256000,
+      "maxOutputTokens": 262144,
+      "capabilities": [
+        "chat",
+        "reasoning",
+        "code",
+        "vision",
+        "multilingual",
+        "long_context",
+        "tool_use",
+        "agent",
+        "deep_thinking"
+      ],
+      "inputPrice": 6,
+      "outputPrice": 30,
+      "defaultTemperature": 1,
+      "defaultTopP": 0.7,
+      "apiModelId": "doubao-seed-2-1-pro-260628",
+      "extra": {
+        "cacheHitPrice": 1.2,
+        "cacheStoragePricePerMillionTokenHour": 0.017,
+        "supportsResponsesApi": true,
+        "supportsChatApi": true
+      }
+    },
+    {
+      "modelName": "doubao-seed-2.1-turbo",
+      "displayName": "豆包 Seed 2.1 Turbo",
+      "serviceType": [
+        "chat",
+        "reasoning",
+        "vision"
+      ],
+      "description": "火山方舟豆包 Seed 2.1 Turbo，高吞吐低成本生产模型，适合规模化 Agent 和 Coding 调用",
+      "contextWindow": 256000,
+      "maxOutputTokens": 262144,
+      "capabilities": [
+        "chat",
+        "reasoning",
+        "code",
+        "vision",
+        "multilingual",
+        "long_context",
+        "tool_use",
+        "agent",
+        "fast"
+      ],
+      "inputPrice": 3,
+      "outputPrice": 15,
+      "defaultTemperature": 1,
+      "defaultTopP": 0.7,
+      "apiModelId": "doubao-seed-2-1-turbo-260628",
+      "extra": {
+        "cacheHitPrice": 0.6,
+        "cacheStoragePricePerMillionTokenHour": 0.017,
+        "supportsResponsesApi": true,
+        "supportsChatApi": true
+      }
+    },
+    {
       "modelName": "doubao-seed-2.0-pro",
       "displayName": "豆包 2.0 Pro",
       "serviceType": [
@@ -72,7 +140,7 @@
       ],
       "description": "火山引擎豆包 Seed 2.0 全模态均衡模型，256K上下文，支持视频/图像/音频/文本统一理解",
       "contextWindow": 256000,
-      "maxOutputTokens": 32000,
+      "maxOutputTokens": 128000,
       "capabilities": [
         "chat",
         "reasoning",
@@ -116,7 +184,7 @@
       ],
       "description": "火山引擎豆包 Seed 2.0 全模态轻量模型，256K上下文，低延迟高并发，支持全模态理解",
       "contextWindow": 256000,
-      "maxOutputTokens": 32000,
+      "maxOutputTokens": 128000,
       "capabilities": [
         "chat",
         "reasoning",
@@ -235,7 +303,10 @@
             "inputPrice": 2.4,
             "outputPrice": 24
           }
-        ]
+        ],
+        "deprecated": true,
+        "deprecationNotice": "火山方舟 2026-07-06 模型列表中标记为即将下线，建议迁移到 Seed 2.1 或 Seed 2.0 系列。",
+        "replacedBy": "doubao-seed-2.1-turbo"
       }
     },
     {
@@ -278,7 +349,10 @@
             "inputPrice": 2.4,
             "outputPrice": 24
           }
-        ]
+        ],
+        "deprecated": true,
+        "deprecationNotice": "火山方舟 2026-07-06 模型列表中标记为即将下线，建议迁移到 Seed 2.1 或 Seed 2.0 系列。",
+        "replacedBy": "doubao-seed-2.1-turbo"
       }
     },
     {
@@ -301,7 +375,11 @@
       "outputPrice": 8,
       "defaultTemperature": 1,
       "defaultTopP": 0.7,
-      "extra": {}
+      "extra": {
+        "deprecated": true,
+        "deprecationNotice": "火山方舟 2026-07-06 模型列表中标记为即将下线，建议迁移到 Seed 2.1 或 Seed 2.0 系列。",
+        "replacedBy": "doubao-seed-2.1-turbo"
+      }
     },
     {
       "modelName": "doubao-seed-1.6-flash",
@@ -323,7 +401,11 @@
       "outputPrice": 1.5,
       "defaultTemperature": 1,
       "defaultTopP": 0.7,
-      "extra": {}
+      "extra": {
+        "deprecated": true,
+        "deprecationNotice": "火山方舟 2026-07-06 模型列表中标记为即将下线，建议迁移到 Seed 2.1 或 Seed 2.0 系列。",
+        "replacedBy": "doubao-seed-2.1-turbo"
+      }
     },
     {
       "modelName": "doubao-seed-1.6-lite",
@@ -360,7 +442,10 @@
             "inputPrice": 1.2,
             "outputPrice": 12
           }
-        ]
+        ],
+        "deprecated": true,
+        "deprecationNotice": "火山方舟 2026-07-06 模型列表中标记为即将下线，建议迁移到 Seed 2.1 或 Seed 2.0 系列。",
+        "replacedBy": "doubao-seed-2.1-turbo"
       }
     },
     {
@@ -383,7 +468,11 @@
       "outputPrice": 8,
       "defaultTemperature": 1,
       "defaultTopP": 0.7,
-      "extra": {}
+      "extra": {
+        "deprecated": true,
+        "deprecationNotice": "火山方舟 2026-07-06 模型列表中标记为即将下线，建议迁移到 Seed 2.1 或 Seed 2.0 系列。",
+        "replacedBy": "doubao-seed-2.1-turbo"
+      }
     },
     {
       "modelName": "doubao-seed-code",
