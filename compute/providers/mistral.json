@@ -15,6 +15,30 @@
   ],
   "models": [
     {
+      "modelName": "mistral-medium-latest",
+      "displayName": "Mistral Medium 3.5",
+      "serviceType": [
+        "chat"
+      ],
+      "description": "Mistral 前沿多模态模型，面向 Agentic 和 Coding 场景优化，256K 上下文",
+      "contextWindow": 256000,
+      "maxOutputTokens": 262144,
+      "capabilities": [
+        "chat",
+        "reasoning",
+        "code",
+        "vision",
+        "tool_use",
+        "agent",
+        "long_context"
+      ],
+      "inputPrice": 1.5,
+      "outputPrice": 7.5,
+      "defaultTemperature": 0.7,
+      "defaultTopP": 1,
+      "extra": {}
+    },
+    {
       "modelName": "mistral-large-latest",
       "displayName": "Mistral Large 3",
       "serviceType": [
@@ -39,12 +63,12 @@
     },
     {
       "modelName": "mistral-small-latest",
-      "displayName": "Mistral Small 3.2",
+      "displayName": "Mistral Small 4",
       "serviceType": [
         "fast"
       ],
-      "description": "Mistral 高效小模型，低延迟，适合快速推理场景",
-      "contextWindow": 128000,
+      "description": "Mistral Small 4，统一指令、推理和编码能力的高效多模态模型，256K 上下文",
+      "contextWindow": 256000,
       "maxOutputTokens": 8192,
       "capabilities": [
         "chat",
@@ -52,10 +76,12 @@
         "vision",
         "reasoning",
         "fast",
-        "tool_use"
+        "tool_use",
+        "agent",
+        "long_context"
       ],
-      "inputPrice": 0.1,
-      "outputPrice": 0.3,
+      "inputPrice": 0.15,
+      "outputPrice": 0.6,
       "defaultTemperature": 0.7,
       "defaultTopP": 1,
       "extra": {}

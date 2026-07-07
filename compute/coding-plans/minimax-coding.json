@@ -30,6 +30,27 @@
   },
   "models": [
     {
+      "modelName": "MiniMax-M3",
+      "displayName": "MiniMax M3 (Token Plan)",
+      "serviceType": [
+        "chat",
+        "reasoning"
+      ],
+      "description": "MiniMax M3，Token Plan 核心文本模型，1M 上下文，面向 Coding 与 Agent",
+      "contextWindow": 1000000,
+      "maxOutputTokens": 131072,
+      "capabilities": [
+        "chat",
+        "reasoning",
+        "code",
+        "tool_use",
+        "vision",
+        "agent",
+        "long_context"
+      ],
+      "source": "preset"
+    },
+    {
       "modelName": "MiniMax-M2.7",
       "displayName": "MiniMax M2.7 (Token Plan)",
       "serviceType": [

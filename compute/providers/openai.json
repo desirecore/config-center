@@ -19,9 +19,300 @@
     "responses",
     "image_gen",
     "omni",
-    "realtime_voice"
+    "realtime_voice",
+    "simultaneous_interpret",
+    "translation"
   ],
   "models": [
+    {
+      "modelName": "gpt-5.5",
+      "displayName": "GPT-5.5",
+      "serviceType": [
+        "chat",
+        "responses"
+      ],
+      "description": "OpenAI 最新前沿模型，面向复杂推理、编码和专业工作流，1M 上下文，128K 最大输出",
+      "contextWindow": 1050000,
+      "maxOutputTokens": 128000,
+      "capabilities": [
+        "chat",
+        "reasoning",
+        "code",
+        "vision",
+        "ultra_long_context",
+        "tool_use",
+        "agent"
+      ],
+      "inputPrice": 5,
+      "outputPrice": 30,
+      "extra": {
+        "cachedInputPrice": 0.5,
+        "reasoningEffort": [
+          "none",
+          "low",
+          "medium",
+          "high",
+          "xhigh"
+        ],
+        "defaultReasoningEffort": "medium",
+        "pricingNotes": "Prices are per 1M tokens; long-context requests may use higher-tier pricing per OpenAI pricing page."
+      }
+    },
+    {
+      "modelName": "gpt-5.5-pro",
+      "displayName": "GPT-5.5 Pro",
+      "serviceType": [
+        "responses"
+      ],
+      "description": "OpenAI GPT-5.5 Pro，最高能力推理模型，仅面向 Responses API",
+      "contextWindow": 1050000,
+      "maxOutputTokens": 128000,
+      "capabilities": [
+        "chat",
+        "reasoning",
+        "code",
+        "vision",
+        "ultra_long_context",
+        "tool_use",
+        "agent"
+      ],
+      "inputPrice": 30,
+      "outputPrice": 180,
+      "extra": {
+        "responsesOnly": true,
+        "reasoningEffort": [
+          "medium",
+          "high",
+          "xhigh"
+        ],
+        "defaultReasoningEffort": "high",
+        "pricingNotes": "No cached-input discount is listed for GPT-5.5 Pro on the official pricing page."
+      }
+    },
+    {
+      "modelName": "gpt-5.4",
+      "displayName": "GPT-5.4",
+      "serviceType": [
+        "chat",
+        "responses"
+      ],
+      "description": "OpenAI GPT-5.4，高性价比前沿模型，1M 上下文，支持文本和图像输入",
+      "contextWindow": 1050000,
+      "maxOutputTokens": 128000,
+      "capabilities": [
+        "chat",
+        "reasoning",
+        "code",
+        "vision",
+        "ultra_long_context",
+        "tool_use"
+      ],
+      "inputPrice": 2.5,
+      "outputPrice": 15,
+      "extra": {
+        "cachedInputPrice": 0.25,
+        "reasoningEffort": [
+          "none",
+          "low",
+          "medium",
+          "high"
+        ],
+        "pricingNotes": "Prices are per 1M tokens; long-context requests may use higher-tier pricing per OpenAI pricing page."
+      }
+    },
+    {
+      "modelName": "gpt-5.4-pro",
+      "displayName": "GPT-5.4 Pro",
+      "serviceType": [
+        "responses"
+      ],
+      "description": "OpenAI GPT-5.4 Pro，专业推理与长程任务模型，仅面向 Responses API",
+      "contextWindow": 1050000,
+      "maxOutputTokens": 128000,
+      "capabilities": [
+        "chat",
+        "reasoning",
+        "code",
+        "vision",
+        "ultra_long_context",
+        "tool_use"
+      ],
+      "inputPrice": 30,
+      "outputPrice": 180,
+      "extra": {
+        "responsesOnly": true,
+        "reasoningEffort": [
+          "medium",
+          "high",
+          "xhigh"
+        ],
+        "defaultReasoningEffort": "high"
+      }
+    },
+    {
+      "modelName": "gpt-5.4-mini",
+      "displayName": "GPT-5.4 Mini",
+      "serviceType": [
+        "chat",
+        "fast",
+        "responses"
+      ],
+      "description": "OpenAI GPT-5.4 Mini，低延迟高性价比模型，400K 上下文，128K 最大输出",
+      "contextWindow": 400000,
+      "maxOutputTokens": 128000,
+      "capabilities": [
+        "chat",
+        "reasoning",
+        "code",
+        "vision",
+        "long_context",
+        "tool_use",
+        "fast"
+      ],
+      "inputPrice": 0.75,
+      "outputPrice": 4.5,
+      "extra": {
+        "cachedInputPrice": 0.075,
+        "reasoningEffort": [
+          "none",
+          "low",
+          "medium",
+          "high"
+        ]
+      }
+    },
+    {
+      "modelName": "gpt-5.4-nano",
+      "displayName": "GPT-5.4 Nano",
+      "serviceType": [
+        "fast",
+        "responses"
+      ],
+      "description": "OpenAI GPT-5.4 Nano，最低成本极速模型，400K 上下文，128K 最大输出",
+      "contextWindow": 400000,
+      "maxOutputTokens": 128000,
+      "capabilities": [
+        "chat",
+        "reasoning",
+        "code",
+        "fast",
+        "long_context"
+      ],
+      "inputPrice": 0.2,
+      "outputPrice": 1.25,
+      "extra": {
+        "cachedInputPrice": 0.02,
+        "reasoningEffort": [
+          "none",
+          "low",
+          "medium"
+        ]
+      }
+    },
+    {
+      "modelName": "gpt-image-2",
+      "displayName": "GPT Image 2",
+      "serviceType": [
+        "image_gen"
+      ],
+      "description": "OpenAI 最新图像生成和编辑模型，支持文本输入、图像输入与图像输出",
+      "capabilities": [
+        "image_generation",
+        "image_editing",
+        "text_rendering",
+        "vision"
+      ],
+      "inputPrice": 5,
+      "outputPrice": 30,
+      "extra": {
+        "imageInputPrice": 8,
+        "textCachedInputPrice": 1.25,
+        "imageCachedInputPrice": 2,
+        "snapshot": "gpt-image-2-2026-04-21",
+        "pricingNotes": "Text input is $5/M tokens, image input is $8/M tokens, image output is $30/M tokens."
+      }
+    },
+    {
+      "modelName": "gpt-realtime-2.1",
+      "displayName": "GPT Realtime 2.1",
+      "serviceType": [
+        "omni",
+        "realtime_voice"
+      ],
+      "description": "OpenAI 最新实时多模态语音模型，支持文本、图像和音频输入输出",
+      "contextWindow": 128000,
+      "maxOutputTokens": 32000,
+      "capabilities": [
+        "chat",
+        "vision",
+        "tts",
+        "asr",
+        "realtime",
+        "speech_to_speech",
+        "reasoning",
+        "tool_use"
+      ],
+      "inputPrice": 4,
+      "outputPrice": 24,
+      "extra": {
+        "textCachedInputPrice": 0.4,
+        "imageInputPrice": 5,
+        "imageCachedInputPrice": 0.5,
+        "audioInputPrice": 32,
+        "audioCachedInputPrice": 0.4,
+        "audioOutputPrice": 64
+      }
+    },
+    {
+      "modelName": "gpt-realtime-2.1-mini",
+      "displayName": "GPT Realtime 2.1 Mini",
+      "serviceType": [
+        "realtime_voice"
+      ],
+      "description": "OpenAI 低成本实时语音模型，适合实时语音交互",
+      "contextWindow": 128000,
+      "maxOutputTokens": 32000,
+      "capabilities": [
+        "chat",
+        "vision",
+        "tts",
+        "asr",
+        "realtime",
+        "speech_to_speech",
+        "fast"
+      ],
+      "inputPrice": 0.6,
+      "outputPrice": 2.4,
+      "extra": {
+        "textCachedInputPrice": 0.06,
+        "imageInputPrice": 0.8,
+        "imageCachedInputPrice": 0.08,
+        "audioInputPrice": 10,
+        "audioCachedInputPrice": 0.3,
+        "audioOutputPrice": 20
+      }
+    },
+    {
+      "modelName": "gpt-realtime-translate",
+      "displayName": "GPT Realtime Translate",
+      "serviceType": [
+        "simultaneous_interpret",
+        "translation"
+      ],
+      "description": "OpenAI 实时语音翻译模型，按分钟计费",
+      "contextWindow": 16000,
+      "maxOutputTokens": 2000,
+      "capabilities": [
+        "translation",
+        "simultaneous_interpretation",
+        "asr",
+        "realtime"
+      ],
+      "extra": {
+        "audioOutputPricePerMinute": 0.034,
+        "pricingNotes": "OpenAI lists this model at $0.034 per minute."
+      }
+    },
     {
       "modelName": "gpt-5.2",
       "displayName": "GPT-5.2",
@@ -41,8 +332,6 @@
       ],
       "inputPrice": 1.75,
       "outputPrice": 14,
-      "defaultTemperature": 1,
-      "defaultTopP": 1,
       "extra": {}
     },
     {
@@ -64,8 +353,6 @@
       ],
       "inputPrice": 21,
       "outputPrice": 168,
-      "defaultTemperature": 1,
-      "defaultTopP": 1,
       "extra": {}
     },
     {
@@ -87,8 +374,6 @@
       ],
       "inputPrice": 1.25,
       "outputPrice": 10,
-      "defaultTemperature": 1,
-      "defaultTopP": 1,
       "extra": {}
     },
     {
@@ -110,8 +395,6 @@
       ],
       "inputPrice": 1.25,
       "outputPrice": 10,
-      "defaultTemperature": 1,
-      "defaultTopP": 1,
       "extra": {}
     },
     {
@@ -133,8 +416,6 @@
       ],
       "inputPrice": 15,
       "outputPrice": 120,
-      "defaultTemperature": 1,
-      "defaultTopP": 1,
       "extra": {}
     },
     {
@@ -155,8 +436,6 @@
       ],
       "inputPrice": 0.25,
       "outputPrice": 2,
-      "defaultTemperature": 1,
-      "defaultTopP": 1,
       "extra": {}
     },
     {
@@ -175,8 +454,6 @@
       ],
       "inputPrice": 0.05,
       "outputPrice": 0.4,
-      "defaultTemperature": 1,
-      "defaultTopP": 1,
       "extra": {}
     },
     {
@@ -418,8 +695,6 @@
       ],
       "inputPrice": 2,
       "outputPrice": 8,
-      "defaultTemperature": 1,
-      "defaultTopP": 1,
       "extra": {}
     },
     {
@@ -440,8 +715,6 @@
       ],
       "inputPrice": 20,
       "outputPrice": 80,
-      "defaultTemperature": 1,
-      "defaultTopP": 1,
       "extra": {}
     },
     {
@@ -461,8 +734,6 @@
       ],
       "inputPrice": 1.1,
       "outputPrice": 4.4,
-      "defaultTemperature": 1,
-      "defaultTopP": 1,
       "extra": {}
     },
     {
@@ -483,86 +754,12 @@
       ],
       "inputPrice": 1.1,
       "outputPrice": 4.4,
-      "defaultTemperature": 1,
-      "defaultTopP": 1,
       "extra": {}
-    },
-    {
-      "modelName": "dall-e-3",
-      "displayName": "DALL-E 3",
-      "serviceType": [
-        "image_gen"
-      ],
-      "description": "高质量文生图模型",
-      "capabilities": [
-        "image_generation",
-        "text_rendering"
-      ],
-      "extra": {
-        "supportedImageSizes": [
-          "1024x1024",
-          "1792x1024",
-          "1024x1792"
-        ],
-        "supportedStyles": [
-          "natural",
-          "vivid"
-        ]
-      }
-    },
-    {
-      "modelName": "gpt-4o-realtime",
-      "displayName": "GPT-4o Realtime",
-      "serviceType": [
-        "omni"
-      ],
-      "description": "全能实时模型，支持语音 + 文本 + 视觉",
-      "contextWindow": 32000,
-      "maxOutputTokens": 4096,
-      "capabilities": [
-        "chat",
-        "vision",
-        "tts",
-        "asr",
-        "realtime"
-      ],
-      "inputPrice": 4,
-      "outputPrice": 16,
-      "defaultTemperature": 0.7,
-      "defaultTopP": 1,
-      "extra": {
-        "supportedModes": [
-          "speech-to-speech",
-          "text-to-speech"
-        ],
-        "latencyMs": 300
-      }
-    },
-    {
-      "modelName": "gpt-4o-realtime-preview",
-      "displayName": "GPT-4o Realtime Preview",
-      "serviceType": [
-        "realtime_voice"
-      ],
-      "description": "实时语音交互模型",
-      "contextWindow": 32000,
-      "maxOutputTokens": 4096,
-      "capabilities": [
-        "realtime",
-        "speech_to_speech",
-        "low_latency"
-      ],
-      "inputPrice": 5,
-      "outputPrice": 20,
-      "defaultTemperature": 0.7,
-      "defaultTopP": 1,
-      "extra": {
-        "supportedModes": [
-          "speech-to-speech",
-          "text-to-speech"
-        ],
-        "latencyMs": 250
-      }
     }
+  ],
+  "tombstones": [
+    "dall-e-3",
+    "gpt-4o-realtime",
+    "gpt-4o-realtime-preview"
   ]
 }

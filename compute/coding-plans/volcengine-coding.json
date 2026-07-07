@@ -29,6 +29,47 @@
   },
   "models": [
     {
+      "modelName": "doubao-seed-2.1-pro",
+      "displayName": "豆包 Seed 2.1 Pro",
+      "serviceType": [
+        "chat"
+      ],
+      "description": "火山方舟 Coding Plan，豆包 Seed 2.1 Pro，生产级 Coding 与 Agent 模型",
+      "contextWindow": 256000,
+      "maxOutputTokens": 262144,
+      "capabilities": [
+        "chat",
+        "reasoning",
+        "code",
+        "vision",
+        "tool_use",
+        "agent",
+        "long_context"
+      ],
+      "source": "preset"
+    },
+    {
+      "modelName": "doubao-seed-2.1-turbo",
+      "displayName": "豆包 Seed 2.1 Turbo",
+      "serviceType": [
+        "chat"
+      ],
+      "description": "火山方舟 Coding Plan，豆包 Seed 2.1 Turbo，高吞吐 Coding 与 Agent 模型",
+      "contextWindow": 256000,
+      "maxOutputTokens": 262144,
+      "capabilities": [
+        "chat",
+        "reasoning",
+        "code",
+        "vision",
+        "tool_use",
+        "agent",
+        "fast",
+        "long_context"
+      ],
+      "source": "preset"
+    },
+    {
       "modelName": "ark-code-latest",
       "displayName": "Ark Code Latest (Auto)",
       "serviceType": [
