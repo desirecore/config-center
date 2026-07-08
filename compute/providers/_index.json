@@ -4,7 +4,6 @@
     "openai",
     "openai-codex",
     "anthropic",
-    "anthropic-claude",
     "deepseek",
     "dashscope",
     "volcengine",
