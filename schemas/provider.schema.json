@@ -83,8 +83,8 @@
     },
     "credentialSource": {
       "type": "string",
-      "enum": ["codex-cli", "claude-oauth"],
-      "description": "凭证托管来源。codex-cli：密钥由客户端本地 Codex CLI 凭证检测器托管（读取 ~/.codex/auth.json 自动刷新写回，fresh token 同步 secrets.json）。claude-oauth：Claude 订阅接入，由客户端 claude-auth 检测器托管——首选复用本机 Claude Code 登录（Agent SDK 自读，不写不刷新），或应用内 OAuth / setup-token 兜底；模型调用经 compat-proxy 内 claude-agent-sdk 后端履约，不直连。需 requiredClientVersion ≥ 引入此字段的客户端版本——老客户端不识别本字段，必须先发版铺开 compute.json 韧性（容忍未知字段）再推送本数据"
+      "enum": ["codex-cli"],
+      "description": "凭证托管来源。codex-cli：密钥由客户端本地 Codex CLI 凭证检测器托管（读取 ~/.codex/auth.json 自动刷新写回，fresh token 同步 secrets.json）。需 requiredClientVersion ≥ 引入此字段的客户端版本——老客户端不识别本字段，必须先发版铺开 compute.json 韧性（容忍未知字段）再推送本数据"
     },
     "codingPlan": {
       "type": "object",
