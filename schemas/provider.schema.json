@@ -181,6 +181,11 @@
       "type": "array",
       "description": "预置显式删除的模型 modelName 白名单",
       "items": { "type": "string" }
+    },
+    "requiredClientVersion": {
+      "type": "string",
+      "pattern": "^\\d+\\.\\d+\\.\\d+$",
+      "description": "使用此 provider 所需的最低客户端版本（semver x.y.z）。对已铺开韧性（#848/#1021）的客户端是可安全推送的未知字段（非毒丸——毒丸只源自已知字段的 enum 值扩展）；≥ 支持版本（含 desirecore #1038）的客户端据此把 provider 优雅门控为「需更新客户端」并从模型选择器排除。规约：新凭据源/新能力 provider 必须声明本字段；降低/解除要求请改为更小版本号而非删除字段（预设合并不回传字段删除）"
     }
   },
   "additionalProperties": false,
