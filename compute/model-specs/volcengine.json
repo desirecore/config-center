@@ -252,6 +252,72 @@
         "serviceType": ["translation"],
         "description": "火山引擎机器翻译，支持多语种互译"
       }
+    },
+    {
+      "id": "doubao-seedance-2.0",
+      "displayName": "Seedance 2.0",
+      "family": "doubao-seedance-2",
+      "match": { "exact": ["doubao-seedance-2-0-260128", "doubao-seedance-2.0"], "patterns": ["doubao-seedance-2-0*"] },
+      "spec": {
+        "capabilities": ["video_generation", "image_to_video", "text_to_video", "video_editing", "video_extension", "audio_generation", "first_last_frame"],
+        "serviceType": ["video_gen"],
+        "description": "Seedance 2.0 豆包最强视频生成模型，4-15秒 2K 视频，原生同步音频，支持最多9张图片+3个视频+3个音频参考输入，~$0.14/秒"
+      }
+    },
+    {
+      "id": "doubao-seedance-2.0-fast",
+      "displayName": "Seedance 2.0 Fast",
+      "family": "doubao-seedance-2",
+      "match": { "exact": ["doubao-seedance-2-0-fast-260128", "doubao-seedance-2.0-fast"], "patterns": ["doubao-seedance-2-0-fast*"] },
+      "spec": {
+        "capabilities": ["video_generation", "image_to_video", "text_to_video", "video_editing", "video_extension", "audio_generation", "first_last_frame", "fast"],
+        "serviceType": ["video_gen"],
+        "description": "Seedance 2.0 快速版，音画同生，多模态生视频+编辑+延长"
+      }
+    },
+    {
+      "id": "doubao-seedance-2.0-mini",
+      "displayName": "Seedance 2.0 Mini",
+      "family": "doubao-seedance-2",
+      "match": { "exact": ["doubao-seedance-2-0-mini-260615", "doubao-seedance-2.0-mini"], "patterns": ["doubao-seedance-2-0-mini*"] },
+      "spec": {
+        "capabilities": ["video_generation", "image_to_video", "text_to_video", "video_editing", "video_extension", "audio_generation", "first_last_frame", "fast", "cost_effective"],
+        "serviceType": ["video_gen"],
+        "description": "Seedance 2.0 轻量版，音画同生，高性价比"
+      }
+    },
+    {
+      "id": "doubao-seedance-1.5-pro",
+      "displayName": "Seedance 1.5 Pro",
+      "family": "doubao-seedance-1",
+      "match": { "exact": ["doubao-seedance-1-5-pro-251215", "doubao-seedance-1.5-pro"], "patterns": ["doubao-seedance-1-5*"] },
+      "spec": {
+        "capabilities": ["video_generation", "image_to_video", "text_to_video", "first_last_frame", "audio_generation"],
+        "serviceType": ["video_gen"],
+        "description": "Seedance 1.5 Pro 音画同生，12秒视频，多参考图输入（即将下线）"
+      }
+    },
+    {
+      "id": "doubao-seedance-1.0-pro",
+      "displayName": "Seedance 1.0 Pro",
+      "family": "doubao-seedance-1",
+      "match": { "exact": ["doubao-seedance-1-0-pro-250528", "doubao-seedance-1.0-pro"], "patterns": ["doubao-seedance-1-0-pro*"] },
+      "spec": {
+        "capabilities": ["video_generation", "image_to_video", "text_to_video", "first_last_frame"],
+        "serviceType": ["video_gen"],
+        "description": "Seedance 1.0 Pro 文生视频/图生视频，支持首尾帧控制"
+      }
+    },
+    {
+      "id": "doubao-seedance-1.0-pro-fast",
+      "displayName": "Seedance 1.0 Pro Fast",
+      "family": "doubao-seedance-1",
+      "match": { "exact": ["doubao-seedance-1-0-pro-fast-251015", "doubao-seedance-1.0-pro-fast"], "patterns": ["doubao-seedance-1-0-pro-fast*"] },
+      "spec": {
+        "capabilities": ["video_generation", "image_to_video", "text_to_video", "fast"],
+        "serviceType": ["video_gen"],
+        "description": "Seedance 1.0 Pro 快速版，图生视频-首帧，5秒 720P 仅需 10 秒"
+      }
     }
   ]
 }
