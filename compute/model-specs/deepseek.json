@@ -7,11 +7,17 @@
       "family": "deepseek-v4",
       "match": { "exact": ["deepseek-v4-pro"], "patterns": ["deepseek-v4-pro*"] },
       "spec": {
-        "contextWindow": 1048576,
+        "contextWindow": 1000000,
         "maxOutputTokens": 384000,
-        "capabilities": ["reasoning", "deep_thinking", "code", "math", "science", "multilingual", "tool_use"],
-        "serviceType": ["reasoning"],
+        "capabilities": ["chat", "reasoning", "deep_thinking", "code", "math", "science", "multilingual", "tool_use"],
+        "serviceType": ["chat", "reasoning"],
+        "defaultTemperature": 1,
         "supportsReasoning": true,
+        "extra": {
+          "supportsThinking": true,
+          "thinkingDefault": true,
+          "reasoningEffort": ["high", "max"]
+        },
         "description": "DeepSeek V4 Pro，1.6T MoE 架构，100 万上下文"
       }
     },
@@ -43,29 +49,22 @@
       }
     },
     {
-      "id": "deepseek-v4-pro",
-      "displayName": "DeepSeek V4 Pro",
-      "family": "deepseek-v4",
-      "spec": {
-        "contextWindow": 1000000,
-        "maxOutputTokens": 384000,
-        "capabilities": ["chat", "code", "reasoning", "deep_thinking", "multilingual", "tool_use", "math"],
-        "serviceType": ["chat", "reasoning"],
-        "defaultTemperature": 1,
-        "supportsReasoning": true
-      }
-    },
-    {
       "id": "deepseek-v4-flash",
       "displayName": "DeepSeek V4 Flash",
       "family": "deepseek-v4",
+      "match": { "exact": ["deepseek-v4-flash"], "patterns": ["deepseek-v4-flash*"] },
       "spec": {
         "contextWindow": 1000000,
         "maxOutputTokens": 384000,
         "capabilities": ["chat", "code", "reasoning", "deep_thinking", "multilingual", "tool_use"],
         "serviceType": ["chat", "reasoning"],
         "defaultTemperature": 1,
-        "supportsReasoning": true
+        "supportsReasoning": true,
+        "extra": {
+          "supportsThinking": true,
+          "thinkingDefault": true,
+          "reasoningEffort": ["high", "max"]
+        }
       }
     }
   ]

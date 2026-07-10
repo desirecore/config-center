@@ -101,6 +101,39 @@ describe('真实数据全量校验', () => {
     const result = validateFile(join(ROOT, 'runtimes', 'versions-fallback.json'), validators)
     assert.equal(result.ok, true, JSON.stringify(result.errors, null, 2))
   })
+
+  it('DeepSeek V4 Pro/Flash 应与官方的 1M/384K reasoning profile 一致', () => {
+    const provider = JSON.parse(readFileSync(join(ROOT, 'compute', 'providers', 'deepseek.json'), 'utf8'))
+    const specFile = JSON.parse(readFileSync(join(ROOT, 'compute', 'model-specs', 'deepseek.json'), 'utf8'))
+    const modelIds = ['deepseek-v4-pro', 'deepseek-v4-flash']
+
+    for (const modelId of modelIds) {
+      const model = provider.models.find((item) => item.modelName === modelId)
+      assert.ok(model, `provider 缺少 ${modelId}`)
+      assert.equal(model.contextWindow, 1000000)
+      assert.equal(model.maxOutputTokens, 384000)
+      assert.ok(model.capabilities.includes('reasoning'))
+      assert.ok(model.capabilities.includes('deep_thinking'))
+      assert.ok(model.serviceType.includes('reasoning'))
+      assert.equal(model.extra.supportsThinking, true)
+      assert.equal(model.extra.thinkingDefault, true)
+      assert.deepEqual(model.extra.reasoningEffort, ['high', 'max'])
+
+      const specs = specFile.specs.filter((item) => item.id === modelId)
+      assert.equal(specs.length, 1, `model-specs 中 ${modelId} 应且仅应有一条规格`)
+      for (const { spec } of specs) {
+        assert.equal(spec.contextWindow, 1000000)
+        assert.equal(spec.maxOutputTokens, 384000)
+        assert.equal(spec.supportsReasoning, true)
+        assert.ok(spec.capabilities.includes('reasoning'))
+        assert.ok(spec.capabilities.includes('deep_thinking'))
+        assert.ok(spec.serviceType.includes('reasoning'))
+        assert.equal(spec.extra.supportsThinking, true)
+        assert.equal(spec.extra.thinkingDefault, true)
+        assert.deepEqual(spec.extra.reasoningEffort, ['high', 'max'])
+      }
+    }
+  })
 })
 
 // ==================== Runtime 清单反例 ====================
