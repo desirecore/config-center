@@ -134,6 +134,80 @@ describe('真实数据全量校验', () => {
       }
     }
   })
+
+  it('所有 Provider 应按供应商归属计价，模型来源不覆盖供应商币种', () => {
+    const expectedCurrencies = {
+      anthropic: 'USD',
+      baichuan: 'CNY',
+      baidu: 'CNY',
+      cohere: 'USD',
+      dashscope: 'CNY',
+      deepseek: 'CNY',
+      google: 'USD',
+      kling: 'CNY',
+      lingyiwanwu: 'CNY',
+      'local-whisper': 'USD',
+      minimax: 'CNY',
+      mistral: 'USD',
+      moonshot: 'CNY',
+      ollama: 'USD',
+      openai: 'USD',
+      'openai-codex': 'USD',
+      openrouter: 'USD',
+      perplexity: 'USD',
+      siliconflow: 'CNY',
+      stability: 'USD',
+      tencent: 'CNY',
+      volcengine: 'CNY',
+      xai: 'USD',
+      xiaomi: 'CNY',
+      xunfei: 'CNY',
+      zhipu: 'CNY',
+      'zhipu-embedding': 'CNY',
+    }
+    const dir = join(ROOT, 'compute', 'providers')
+    const actualProviders = []
+
+    for (const file of readdirSync(dir)) {
+      if (!file.endsWith('.json') || file === '_index.json') continue
+      const data = JSON.parse(readFileSync(join(dir, file), 'utf8'))
+      actualProviders.push(data.provider)
+      assert.ok(
+        Object.hasOwn(expectedCurrencies, data.provider),
+        `未给 Provider ${data.provider} 声明计价归属`,
+      )
+      assert.equal(
+        data.priceCurrency,
+        expectedCurrencies[data.provider],
+        `${data.label} 应按供应商归属使用 ${expectedCurrencies[data.provider]} 计价`,
+      )
+    }
+
+    assert.deepEqual(actualProviders.sort(), Object.keys(expectedCurrencies).sort())
+  })
+
+  it('MiniMax 应使用国内开放平台人民币价', () => {
+    const provider = JSON.parse(readFileSync(join(ROOT, 'compute', 'providers', 'minimax.json'), 'utf8'))
+    const model = (modelName) => provider.models.find((item) => item.modelName === modelName)
+
+    assert.equal(provider.priceCurrency, 'CNY')
+    assert.deepEqual(
+      [model('MiniMax-M3').inputPrice, model('MiniMax-M3').outputPrice],
+      [2.1, 8.4],
+    )
+    assert.deepEqual(
+      [model('MiniMax-M2.7').inputPrice, model('MiniMax-M2.7').outputPrice],
+      [2.1, 8.4],
+    )
+    assert.deepEqual(
+      [model('MiniMax-M2.7-highspeed').inputPrice, model('MiniMax-M2.7-highspeed').outputPrice],
+      [4.2, 16.8],
+    )
+    assert.equal(model('image-01').extra.pricePerImage, 0.025)
+    assert.equal(model('speech-2.8-hd').extra.pricePerMillionCharacters, 350)
+    assert.equal(model('speech-2.8-turbo').extra.pricePerMillionCharacters, 200)
+    assert.equal(model('music-2.6').extra.pricePerSongUpToFiveMinutes, 1)
+  })
 })
 
 // ==================== Runtime 清单反例 ====================

@@ -43,6 +43,14 @@ PR #1 曾把 reasoning 模型的 `defaultTemperature` / `defaultTopP` 写为 `nu
 { "modelName": "deepseek-reasoner", "displayName": "DeepSeek Reasoner", ... }
 ```
 
+### 关键规则：计价币种按 Provider 归属决定
+
+- 国内 Provider 必须使用 `priceCurrency: "CNY"`，并写入国内平台人民币价格。
+- 国外 Provider 必须使用 `priceCurrency: "USD"`，并写入美元价格。
+- Provider 归属与其托管模型的产地冲突时，以 Provider 为准。例如，OpenRouter
+  托管的 Qwen 模型仍按 USD 计价；国内 Provider 托管的国外模型仍按 CNY 计价。
+- 新增 Provider 时必须同步更新全量币种归属测试，避免未分类数据进入预置。
+
 ### 关键规则：新增字段需先升级老客户端 schema
 
 `provider` 和 `model` 顶层均启用 `additionalProperties: false`。如需新增字段：
