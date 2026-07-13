@@ -9,7 +9,7 @@
   "apiKeyVerified": false,
   "enabled": false,
   "status": "unconfigured",
-  "priceCurrency": "USD",
+  "priceCurrency": "CNY",
   "services": [
     "chat",
     "fast",
@@ -41,40 +41,40 @@
         "vision",
         "long_context"
       ],
-      "inputPrice": 0.3,
-      "outputPrice": 1.2,
+      "inputPrice": 2.1,
+      "outputPrice": 8.4,
       "defaultTemperature": 1,
       "defaultTopP": 0.95,
       "extra": {
         "pricingTiers": [
           {
             "maxInputTokens": 512000,
-            "inputPrice": 0.3,
-            "outputPrice": 1.2,
-            "cacheReadPrice": 0.06
+            "inputPrice": 2.1,
+            "outputPrice": 8.4,
+            "cacheReadPrice": 0.42
           },
           {
             "maxInputTokens": 1000000,
-            "inputPrice": 0.6,
-            "outputPrice": 2.4,
-            "cacheReadPrice": 0.12
+            "inputPrice": 4.2,
+            "outputPrice": 16.8,
+            "cacheReadPrice": 0.84
           }
         ],
         "priorityPricingTiers": [
           {
             "maxInputTokens": 512000,
-            "inputPrice": 0.45,
-            "outputPrice": 1.8,
-            "cacheReadPrice": 0.09
+            "inputPrice": 3.15,
+            "outputPrice": 12.6,
+            "cacheReadPrice": 0.63
           },
           {
             "maxInputTokens": 1000000,
-            "inputPrice": 0.9,
-            "outputPrice": 3.6,
-            "cacheReadPrice": 0.18
+            "inputPrice": 6.3,
+            "outputPrice": 25.2,
+            "cacheReadPrice": 1.26
           }
         ],
-        "pricingNotes": "Permanent 50% off prices from MiniMax Pay as You Go page."
+        "pricingNotes": "MiniMax 国内开放平台按量计费永久五折价格。"
       }
     },
     {
@@ -94,13 +94,13 @@
         "tool_use",
         "vision"
       ],
-      "inputPrice": 0.3,
-      "outputPrice": 1.2,
+      "inputPrice": 2.1,
+      "outputPrice": 8.4,
       "defaultTemperature": 1,
       "defaultTopP": 0.95,
       "extra": {
-        "cacheReadPrice": 0.06,
-        "cacheWritePrice": 0.375,
+        "cacheReadPrice": 0.42,
+        "cacheWritePrice": 2.625,
         "outputSpeedTps": 60
       }
     },
@@ -121,13 +121,13 @@
         "fast",
         "vision"
       ],
-      "inputPrice": 0.6,
-      "outputPrice": 2.4,
+      "inputPrice": 4.2,
+      "outputPrice": 16.8,
       "defaultTemperature": 1,
       "defaultTopP": 0.95,
       "extra": {
-        "cacheReadPrice": 0.06,
-        "cacheWritePrice": 0.375,
+        "cacheReadPrice": 0.42,
+        "cacheWritePrice": 2.625,
         "outputSpeedTps": 100
       }
     },
@@ -148,13 +148,13 @@
         "tool_use",
         "long_context"
       ],
-      "inputPrice": 0.3,
-      "outputPrice": 1.2,
+      "inputPrice": 2.1,
+      "outputPrice": 8.4,
       "defaultTemperature": 1,
       "defaultTopP": 0.95,
       "extra": {
-        "cacheReadPrice": 0.03,
-        "cacheWritePrice": 0.375,
+        "cacheReadPrice": 0.21,
+        "cacheWritePrice": 2.625,
         "outputSpeedTps": 60
       }
     },
@@ -174,13 +174,13 @@
         "tool_use",
         "fast"
       ],
-      "inputPrice": 0.6,
-      "outputPrice": 2.4,
+      "inputPrice": 4.2,
+      "outputPrice": 16.8,
       "defaultTemperature": 1,
       "defaultTopP": 0.95,
       "extra": {
-        "cacheReadPrice": 0.03,
-        "cacheWritePrice": 0.375,
+        "cacheReadPrice": 0.21,
+        "cacheWritePrice": 2.625,
         "outputSpeedTps": 100
       }
     },
@@ -199,13 +199,13 @@
         "tool_use",
         "reasoning"
       ],
-      "inputPrice": 0.3,
-      "outputPrice": 1.2,
+      "inputPrice": 2.1,
+      "outputPrice": 8.4,
       "defaultTemperature": 1,
       "defaultTopP": 0.95,
       "extra": {
-        "cacheReadPrice": 0.03,
-        "cacheWritePrice": 0.375,
+        "cacheReadPrice": 0.21,
+        "cacheWritePrice": 2.625,
         "outputSpeedTps": 60
       }
     },
@@ -225,13 +225,13 @@
         "tool_use",
         "fast"
       ],
-      "inputPrice": 0.6,
-      "outputPrice": 2.4,
+      "inputPrice": 4.2,
+      "outputPrice": 16.8,
       "defaultTemperature": 1,
       "defaultTopP": 0.95,
       "extra": {
-        "cacheReadPrice": 0.03,
-        "cacheWritePrice": 0.375,
+        "cacheReadPrice": 0.21,
+        "cacheWritePrice": 2.625,
         "outputSpeedTps": 100
       }
     },
@@ -249,14 +249,14 @@
         "code",
         "tool_use"
       ],
-      "inputPrice": 0.3,
-      "outputPrice": 1.2,
+      "inputPrice": 2.1,
+      "outputPrice": 8.4,
       "defaultTemperature": 1,
       "defaultTopP": 0.95,
       "extra": {
         "legacy": true,
-        "cacheReadPrice": 0.03,
-        "cacheWritePrice": 0.375
+        "cacheReadPrice": 0.21,
+        "cacheWritePrice": 2.625
       }
     },
     {
@@ -272,13 +272,13 @@
         "chat",
         "roleplay"
       ],
-      "inputPrice": 0.3,
-      "outputPrice": 1.2,
+      "inputPrice": 2.1,
+      "outputPrice": 8.4,
       "defaultTemperature": 1,
       "defaultTopP": 0.95,
       "extra": {
-        "cacheReadPrice": 0.03,
-        "cacheWritePrice": 0.375
+        "cacheReadPrice": 0.21,
+        "cacheWritePrice": 2.625
       }
     },
     {
@@ -311,7 +311,7 @@
           "base64"
         ],
         "urlExpiry": "24h",
-        "pricePerImage": 0.0035
+        "pricePerImage": 0.025
       }
     },
     {
@@ -376,7 +376,7 @@
           "aac",
           "ogg"
         ],
-        "pricePerMillionCharacters": 100
+        "pricePerMillionCharacters": 350
       }
     },
     {
@@ -403,7 +403,7 @@
           "aac",
           "ogg"
         ],
-        "pricePerMillionCharacters": 60
+        "pricePerMillionCharacters": 200
       }
     },
     {
@@ -430,7 +430,7 @@
           "aac",
           "ogg"
         ],
-        "pricePerMillionCharacters": 100
+        "pricePerMillionCharacters": 350
       }
     },
     {
@@ -457,7 +457,7 @@
           "aac",
           "ogg"
         ],
-        "pricePerMillionCharacters": 60
+        "pricePerMillionCharacters": 200
       }
     },
     {
@@ -484,7 +484,7 @@
           "ogg"
         ],
         "legacy": true,
-        "pricePerMillionCharacters": 100
+        "pricePerMillionCharacters": 350
       }
     },
     {
@@ -511,7 +511,7 @@
           "ogg"
         ],
         "legacy": true,
-        "pricePerMillionCharacters": 60
+        "pricePerMillionCharacters": 200
       }
     },
     {
@@ -656,7 +656,7 @@
           "[Solo]",
           "[Inst]"
         ],
-        "pricePerSongUpToFiveMinutes": 0.15
+        "pricePerSongUpToFiveMinutes": 1
       }
     },
     {
@@ -677,7 +677,7 @@
           "hex",
           "url"
         ],
-        "pricePerSongUpToFiveMinutes": 0.15
+        "pricePerSongUpToFiveMinutes": 1
       }
     },
     {
@@ -698,7 +698,7 @@
           "hex",
           "url"
         ],
-        "pricePerSongUpToFiveMinutes": 0.15
+        "pricePerSongUpToFiveMinutes": 1
       }
     },
     {
