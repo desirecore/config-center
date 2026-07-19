@@ -324,6 +324,14 @@ describe('provider schema 反例（防 PR #1 重演）', () => {
     assert.equal(validate(duplicate), false)
   })
 
+  it('拒绝不在 supportedEfforts 中的 defaultEffort', () => {
+    const data = makeValidProvider()
+    data.models[0].extra = {
+      reasoning: { supportedEfforts: ['low'], defaultEffort: 'high' },
+    }
+    assert.equal(validate(data), false)
+  })
+
   it('接受 defaultTemperature: 0.7（合法 number）', () => {
     const data = makeValidProvider()
     data.models[0].defaultTemperature = 0.7
@@ -370,6 +378,34 @@ describe('provider schema 反例（防 PR #1 重演）', () => {
     const data = makeValidProvider()
     data.priceCurrency = 'EUR'
     assert.equal(validate(data), false)
+  })
+})
+
+describe('model-spec schema 接入面边界', () => {
+  const validate = compile('model-spec')
+
+  it('拒绝在模型内在规格中声明 reasoning effort', () => {
+    const data = {
+      specs: [{
+        id: 'gpt-test',
+        spec: {
+          extra: {
+            reasoning: {
+              supportedEfforts: ['low', 'high'],
+              defaultEffort: 'low',
+            },
+          },
+        },
+      }],
+    }
+    assert.equal(validate(data), false)
+  })
+
+  it('仍允许模型内在扩展参数', () => {
+    const data = {
+      specs: [{ id: 'gpt-test', spec: { extra: { intrinsicBudgetHint: 8192 } } }],
+    }
+    assert.equal(validate(data), true, JSON.stringify(validate.errors))
   })
 })
 
