@@ -26,7 +26,7 @@
   "models": [
     {
       "modelName": "gpt-5.6-sol",
-      "displayName": "GPT-5.6 Sol (订阅)",
+      "displayName": "GPT-5.6 Sol",
       "serviceType": [
         "chat"
       ],
@@ -46,7 +46,7 @@
     },
     {
       "modelName": "gpt-5.6-terra",
-      "displayName": "GPT-5.6 Terra (订阅)",
+      "displayName": "GPT-5.6 Terra",
       "serviceType": [
         "chat"
       ],
@@ -66,7 +66,7 @@
     },
     {
       "modelName": "gpt-5.6-luna",
-      "displayName": "GPT-5.6 Luna (订阅)",
+      "displayName": "GPT-5.6 Luna",
       "serviceType": [
         "chat"
       ],
@@ -86,7 +86,7 @@
     },
     {
       "modelName": "gpt-5.5",
-      "displayName": "GPT-5.5 (订阅)",
+      "displayName": "GPT-5.5",
       "serviceType": [
         "chat"
       ],
@@ -106,7 +106,7 @@
     },
     {
       "modelName": "gpt-5.4",
-      "displayName": "GPT-5.4 (订阅)",
+      "displayName": "GPT-5.4",
       "serviceType": [
         "chat"
       ],
@@ -126,7 +126,7 @@
     },
     {
       "modelName": "gpt-5.4-mini",
-      "displayName": "GPT-5.4 Mini (订阅)",
+      "displayName": "GPT-5.4 Mini",
       "serviceType": [
         "chat"
       ],
@@ -146,7 +146,7 @@
     },
     {
       "modelName": "gpt-5.3-codex-spark",
-      "displayName": "GPT-5.3 Codex Spark (订阅，Pro 专属)",
+      "displayName": "GPT-5.3 Codex Spark（Pro 专属）",
       "serviceType": [
         "chat"
       ],
