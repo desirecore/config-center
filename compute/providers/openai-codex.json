@@ -25,12 +25,72 @@
   ],
   "models": [
     {
+      "modelName": "gpt-5.6-sol",
+      "displayName": "GPT-5.6 Sol (订阅)",
+      "serviceType": [
+        "chat"
+      ],
+      "description": "ChatGPT 订阅额度计费，新一代旗舰模型，复杂编程/计算机操作/网络安全能力最强，272K 上下文",
+      "contextWindow": 272000,
+      "maxOutputTokens": 128000,
+      "capabilities": [
+        "chat",
+        "reasoning",
+        "code",
+        "vision",
+        "long_context",
+        "tool_use",
+        "agent"
+      ],
+      "source": "preset"
+    },
+    {
+      "modelName": "gpt-5.6-terra",
+      "displayName": "GPT-5.6 Terra (订阅)",
+      "serviceType": [
+        "chat"
+      ],
+      "description": "ChatGPT 订阅额度计费，均衡型模型，日常工作性能对齐 GPT-5.5 且成本更低，272K 上下文",
+      "contextWindow": 272000,
+      "maxOutputTokens": 128000,
+      "capabilities": [
+        "chat",
+        "reasoning",
+        "code",
+        "vision",
+        "long_context",
+        "tool_use",
+        "agent"
+      ],
+      "source": "preset"
+    },
+    {
+      "modelName": "gpt-5.6-luna",
+      "displayName": "GPT-5.6 Luna (订阅)",
+      "serviceType": [
+        "chat"
+      ],
+      "description": "ChatGPT 订阅额度计费，GPT-5.6 家族中最快最省成本的档位，272K 上下文",
+      "contextWindow": 272000,
+      "maxOutputTokens": 128000,
+      "capabilities": [
+        "chat",
+        "reasoning",
+        "code",
+        "vision",
+        "long_context",
+        "tool_use",
+        "fast"
+      ],
+      "source": "preset"
+    },
+    {
       "modelName": "gpt-5.5",
       "displayName": "GPT-5.5 (订阅)",
       "serviceType": [
         "chat"
       ],
-      "description": "ChatGPT 订阅额度计费，旗舰模型，272K 上下文",
+      "description": "ChatGPT 订阅额度计费，上一代旗舰模型，272K 上下文",
       "contextWindow": 272000,
       "maxOutputTokens": 128000,
       "capabilities": [
@@ -65,12 +125,12 @@
       "source": "preset"
     },
     {
-      "modelName": "gpt-5.3-codex",
-      "displayName": "GPT-5.3 Codex (订阅)",
+      "modelName": "gpt-5.4-mini",
+      "displayName": "GPT-5.4 Mini (订阅)",
       "serviceType": [
         "chat"
       ],
-      "description": "ChatGPT 订阅额度计费，编程专用旗舰，272K 上下文",
+      "description": "ChatGPT 订阅额度计费，轻量高性价比模型，是 gpt-5.1-codex-mini 的官方迁移目标，272K 上下文",
       "contextWindow": 272000,
       "maxOutputTokens": 128000,
       "capabilities": [
@@ -80,47 +140,30 @@
         "vision",
         "long_context",
         "tool_use",
-        "agent"
+        "fast"
       ],
       "source": "preset"
     },
     {
-      "modelName": "gpt-5.2-codex",
-      "displayName": "GPT-5.2 Codex (订阅)",
+      "modelName": "gpt-5.3-codex-spark",
+      "displayName": "GPT-5.3 Codex Spark (订阅，Pro 专属)",
       "serviceType": [
         "chat"
       ],
-      "description": "ChatGPT 订阅额度计费，编程专用模型，272K 上下文",
-      "contextWindow": 272000,
-      "maxOutputTokens": 128000,
+      "description": "ChatGPT Pro 订阅专属研究预览模型，面向实时编程迭代优化，>1000 tok/s，纯文本，128K 上下文",
+      "contextWindow": 128000,
       "capabilities": [
         "chat",
-        "reasoning",
         "code",
-        "vision",
-        "long_context",
         "tool_use",
-        "agent"
-      ],
-      "source": "preset"
-    },
-    {
-      "modelName": "gpt-5.1-codex-mini",
-      "displayName": "GPT-5.1 Codex Mini (订阅)",
-      "serviceType": [
-        "chat"
-      ],
-      "description": "ChatGPT 订阅额度计费，轻量编程模型，272K 上下文",
-      "contextWindow": 272000,
-      "maxOutputTokens": 128000,
-      "capabilities": [
-        "chat",
-        "code",
-        "vision",
-        "long_context",
-        "tool_use"
+        "fast"
       ],
       "source": "preset"
     }
+  ],
+  "tombstones": [
+    "gpt-5.3-codex",
+    "gpt-5.2-codex",
+    "gpt-5.1-codex-mini"
   ]
 }
