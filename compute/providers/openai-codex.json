@@ -75,6 +75,7 @@
       "maxOutputTokens": 128000,
       "capabilities": [
         "chat",
+        "reasoning",
         "code",
         "vision",
         "long_context",
@@ -154,6 +155,7 @@
       "capabilities": [
         "chat",
         "code",
+        "tool_use",
         "fast"
       ],
       "source": "preset"
