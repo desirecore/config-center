@@ -274,6 +274,14 @@
                   "description": "当前模型在此接入面的推荐显式默认档位，必须同时存在于 supportedEfforts。"
                 }
               },
+              "allOf": [
+                { "if": { "required": ["defaultEffort"], "properties": { "defaultEffort": { "const": "minimal" } } }, "then": { "properties": { "supportedEfforts": { "contains": { "const": "minimal" } } } } },
+                { "if": { "required": ["defaultEffort"], "properties": { "defaultEffort": { "const": "low" } } }, "then": { "properties": { "supportedEfforts": { "contains": { "const": "low" } } } } },
+                { "if": { "required": ["defaultEffort"], "properties": { "defaultEffort": { "const": "medium" } } }, "then": { "properties": { "supportedEfforts": { "contains": { "const": "medium" } } } } },
+                { "if": { "required": ["defaultEffort"], "properties": { "defaultEffort": { "const": "high" } } }, "then": { "properties": { "supportedEfforts": { "contains": { "const": "high" } } } } },
+                { "if": { "required": ["defaultEffort"], "properties": { "defaultEffort": { "const": "xhigh" } } }, "then": { "properties": { "supportedEfforts": { "contains": { "const": "xhigh" } } } } },
+                { "if": { "required": ["defaultEffort"], "properties": { "defaultEffort": { "const": "max" } } }, "then": { "properties": { "supportedEfforts": { "contains": { "const": "max" } } } } }
+              ],
               "additionalProperties": false
             }
           },

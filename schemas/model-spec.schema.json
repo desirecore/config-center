@@ -98,7 +98,8 @@
             },
             "extra": {
               "type": "object",
-              "description": "模型特定附加配置（如 apiModelId 全名、推理预算等）。不含价格。",
+              "description": "模型内在附加配置（如 apiModelId 全名、推理预算等）。不含价格，也不得声明 Provider/接入面的 reasoning effort 能力。",
+              "not": { "required": ["reasoning"] },
               "additionalProperties": true
             },
             "releasedAt": {
