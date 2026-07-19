@@ -298,6 +298,32 @@ describe('provider schema 反例（防 PR #1 重演）', () => {
     assert.equal(validate(data), true, JSON.stringify(validate.errors))
   })
 
+  it('接受 extra.reasoning 能力矩阵，同时保留 extra 其他扩展字段', () => {
+    const data = makeValidProvider()
+    data.models[0].extra = {
+      reasoning: {
+        supportedEfforts: ['low', 'medium', 'high', 'xhigh', 'max'],
+        defaultEffort: 'medium',
+      },
+      providerSpecificFlag: true,
+    }
+    assert.equal(validate(data), true, JSON.stringify(validate.errors))
+  })
+
+  it('拒绝 Ultra 与重复 reasoning effort', () => {
+    const ultra = makeValidProvider()
+    ultra.models[0].extra = {
+      reasoning: { supportedEfforts: ['high', 'ultra'], defaultEffort: 'high' },
+    }
+    assert.equal(validate(ultra), false)
+
+    const duplicate = makeValidProvider()
+    duplicate.models[0].extra = {
+      reasoning: { supportedEfforts: ['high', 'high'], defaultEffort: 'high' },
+    }
+    assert.equal(validate(duplicate), false)
+  })
+
   it('接受 defaultTemperature: 0.7（合法 number）', () => {
     const data = makeValidProvider()
     data.models[0].defaultTemperature = 0.7
