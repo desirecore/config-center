@@ -252,7 +252,31 @@
         },
         "extra": {
           "type": "object",
-          "description": "模型特定配置：如 TTS 模型音色列表、ASR 支持格式等",
+          "description": "模型特定配置：如 TTS 模型音色列表、ASR 支持格式、模型级 reasoning effort 能力等。这里是兼容扩展面：旧客户端会安全保留并忽略未知子字段。",
+          "properties": {
+            "reasoning": {
+              "type": "object",
+              "required": ["supportedEfforts"],
+              "properties": {
+                "supportedEfforts": {
+                  "type": "array",
+                  "minItems": 1,
+                  "uniqueItems": true,
+                  "items": {
+                    "type": "string",
+                    "enum": ["none", "minimal", "low", "medium", "high", "xhigh", "max"]
+                  },
+                  "description": "当前模型与接入面实际接受的 OpenAI reasoning effort。none 在产品层映射为 off；Ultra 是多 Agent 编排模式，禁止写入。"
+                },
+                "defaultEffort": {
+                  "type": "string",
+                  "enum": ["minimal", "low", "medium", "high", "xhigh", "max"],
+                  "description": "当前模型在此接入面的推荐显式默认档位，必须同时存在于 supportedEfforts。"
+                }
+              },
+              "additionalProperties": false
+            }
+          },
           "additionalProperties": true
         },
         "apiModelId": {
