@@ -135,6 +135,16 @@ describe('真实数据全量校验', () => {
     }
   })
 
+  it('MiMo V2.5 ASR 应有独立精确规格，避免回落到 MiMo V2.5 family', () => {
+    const specFile = JSON.parse(readFileSync(join(ROOT, 'compute', 'model-specs', 'xiaomi.json'), 'utf8'))
+    const specs = specFile.specs.filter((item) => item.id === 'mimo-v2.5-asr')
+
+    assert.equal(specs.length, 1, 'mimo-v2.5-asr 应且仅应有一条规格')
+    assert.deepEqual(specs[0].match.exact, ['mimo-v2.5-asr'])
+    assert.deepEqual(specs[0].spec.serviceType, ['asr'])
+    assert.ok(specs[0].spec.capabilities.includes('asr'))
+  })
+
   it('所有 Provider 应按供应商归属计价，模型来源不覆盖供应商币种', () => {
     const expectedCurrencies = {
       anthropic: 'USD',
