@@ -170,6 +170,26 @@
       }
     },
     {
+      "id": "mimo-v2.5-asr",
+      "displayName": "MiMo V2.5 ASR",
+      "family": "mimo-v2.5-asr",
+      "match": {
+        "exact": [
+          "mimo-v2.5-asr"
+        ]
+      },
+      "spec": {
+        "capabilities": [
+          "asr",
+          "multilingual"
+        ],
+        "serviceType": [
+          "asr"
+        ],
+        "description": "小米 MiMo 语音识别模型"
+      }
+    },
+    {
       "id": "mimo-v2.5-tts-voiceclone",
       "displayName": "MiMo V2.5 TTS Voice Clone",
       "family": "mimo-v2.5-tts",
