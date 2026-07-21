@@ -2,6 +2,90 @@
   "description": "OpenAI GPT / o 系列模型规格。参数来源：config-center compute/providers/openai.json。注意：gpt-4o / gpt-5 等存在子型号（-mini/-nano），故只用 exact 主键匹配，不使用宽泛 pattern 以防误吞子型号。o 系列 serviceType 由 responses 调整为 reasoning（responses 为 OpenAI 直连专有，对 NewAPI 网关不适用）。",
   "specs": [
     {
+      "id": "gpt-5.6-sol",
+      "displayName": "GPT-5.6 Sol",
+      "family": "gpt-5.6",
+      "match": { "exact": ["gpt-5.6-sol"], "patterns": ["gpt-5.6-sol*"] },
+      "spec": {
+        "contextWindow": 1050000,
+        "maxOutputTokens": 128000,
+        "capabilities": ["chat", "reasoning", "code", "tool_use", "agent", "vision", "long_context"],
+        "serviceType": ["chat"],
+        "supportsReasoning": true,
+        "description": "GPT-5.6 旗舰模型，适合复杂推理、编程和 Agent 工作流"
+      }
+    },
+    {
+      "id": "gpt-5.6-sol-pro",
+      "displayName": "GPT-5.6 Sol Pro",
+      "family": "gpt-5.6",
+      "match": { "exact": ["gpt-5.6-sol-pro"], "patterns": ["gpt-5.6-sol-pro*"] },
+      "spec": {
+        "contextWindow": 1050000,
+        "maxOutputTokens": 128000,
+        "capabilities": ["chat", "reasoning", "code", "tool_use", "agent", "vision", "long_context"],
+        "serviceType": ["reasoning"],
+        "supportsReasoning": true,
+        "description": "GPT-5.6 Sol 的 Pro 变体，reasoning.mode=pro"
+      }
+    },
+    {
+      "id": "gpt-5.6-terra",
+      "displayName": "GPT-5.6 Terra",
+      "family": "gpt-5.6",
+      "match": { "exact": ["gpt-5.6-terra"], "patterns": ["gpt-5.6-terra*"] },
+      "spec": {
+        "contextWindow": 1050000,
+        "maxOutputTokens": 128000,
+        "capabilities": ["chat", "reasoning", "code", "tool_use", "agent", "vision", "long_context"],
+        "serviceType": ["chat"],
+        "supportsReasoning": true,
+        "description": "GPT-5.6 均衡型模型，介于 Sol 和 Luna 之间"
+      }
+    },
+    {
+      "id": "gpt-5.6-terra-pro",
+      "displayName": "GPT-5.6 Terra Pro",
+      "family": "gpt-5.6",
+      "match": { "exact": ["gpt-5.6-terra-pro"], "patterns": ["gpt-5.6-terra-pro*"] },
+      "spec": {
+        "contextWindow": 1050000,
+        "maxOutputTokens": 128000,
+        "capabilities": ["chat", "reasoning", "code", "tool_use", "agent", "vision", "long_context"],
+        "serviceType": ["reasoning"],
+        "supportsReasoning": true,
+        "description": "GPT-5.6 Terra 的 Pro 变体，reasoning.mode=pro"
+      }
+    },
+    {
+      "id": "gpt-5.6-luna",
+      "displayName": "GPT-5.6 Luna",
+      "family": "gpt-5.6",
+      "match": { "exact": ["gpt-5.6-luna"], "patterns": ["gpt-5.6-luna*"] },
+      "spec": {
+        "contextWindow": 1050000,
+        "maxOutputTokens": 128000,
+        "capabilities": ["chat", "reasoning", "code", "tool_use", "agent", "vision", "long_context"],
+        "serviceType": ["chat"],
+        "supportsReasoning": true,
+        "description": "GPT-5.6 轻量高效模型，适合高吞吐低延迟场景"
+      }
+    },
+    {
+      "id": "gpt-5.6-luna-pro",
+      "displayName": "GPT-5.6 Luna Pro",
+      "family": "gpt-5.6",
+      "match": { "exact": ["gpt-5.6-luna-pro"], "patterns": ["gpt-5.6-luna-pro*"] },
+      "spec": {
+        "contextWindow": 1050000,
+        "maxOutputTokens": 128000,
+        "capabilities": ["chat", "reasoning", "code", "tool_use", "agent", "vision", "long_context"],
+        "serviceType": ["reasoning"],
+        "supportsReasoning": true,
+        "description": "GPT-5.6 Luna 的 Pro 变体，reasoning.mode=pro"
+      }
+    },
+    {
       "id": "gpt-image-2",
       "displayName": "GPT Image 2",
       "family": "gpt-image",
