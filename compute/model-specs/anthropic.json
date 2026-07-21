@@ -2,6 +2,20 @@
   "description": "Anthropic Claude 系列模型规格。参数来源：config-center compute/providers/anthropic.json。",
   "specs": [
     {
+      "id": "claude-sonnet-5",
+      "displayName": "Claude Sonnet 5",
+      "family": "claude-sonnet-5",
+      "match": { "exact": ["claude-sonnet-5"], "patterns": ["claude-sonnet-5*"] },
+      "spec": {
+        "contextWindow": 1000000,
+        "maxOutputTokens": 128000,
+        "capabilities": ["chat", "reasoning", "code", "tool_use", "agent", "vision", "long_context"],
+        "serviceType": ["chat"],
+        "supportsReasoning": true,
+        "description": "Anthropic 最强 Sonnet 级模型，支持自适应思考（effort: low/medium/high/max）"
+      }
+    },
+    {
       "id": "claude-fable-5",
       "displayName": "Claude Fable 5",
       "family": "claude-fable",
