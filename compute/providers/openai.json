@@ -46,6 +46,12 @@
       "inputPrice": 5,
       "outputPrice": 30,
       "extra": {
+        "serverSideWebSearch": {
+          "enabled": true,
+          "dialect": "openai-responses",
+          "fallbackPriority": 1,
+          "toolType": "web_search"
+        },
         "cachedInputPrice": 0.5,
         "reasoningEffort": [
           "none",
@@ -79,6 +85,12 @@
       "inputPrice": 30,
       "outputPrice": 180,
       "extra": {
+        "serverSideWebSearch": {
+          "enabled": true,
+          "dialect": "openai-responses",
+          "fallbackPriority": 2,
+          "toolType": "web_search"
+        },
         "responsesOnly": true,
         "reasoningEffort": [
           "medium",
@@ -110,6 +122,12 @@
       "inputPrice": 2.5,
       "outputPrice": 15,
       "extra": {
+        "serverSideWebSearch": {
+          "enabled": true,
+          "dialect": "openai-responses",
+          "fallbackPriority": 3,
+          "toolType": "web_search"
+        },
         "cachedInputPrice": 0.25,
         "reasoningEffort": [
           "none",
@@ -140,6 +158,12 @@
       "inputPrice": 30,
       "outputPrice": 180,
       "extra": {
+        "serverSideWebSearch": {
+          "enabled": true,
+          "dialect": "openai-responses",
+          "fallbackPriority": 4,
+          "toolType": "web_search"
+        },
         "responsesOnly": true,
         "reasoningEffort": [
           "medium",
@@ -172,6 +196,12 @@
       "inputPrice": 0.75,
       "outputPrice": 4.5,
       "extra": {
+        "serverSideWebSearch": {
+          "enabled": true,
+          "dialect": "openai-responses",
+          "fallbackPriority": 5,
+          "toolType": "web_search"
+        },
         "cachedInputPrice": 0.075,
         "reasoningEffort": [
           "none",
@@ -201,6 +231,12 @@
       "inputPrice": 0.2,
       "outputPrice": 1.25,
       "extra": {
+        "serverSideWebSearch": {
+          "enabled": true,
+          "dialect": "openai-responses",
+          "fallbackPriority": 6,
+          "toolType": "web_search"
+        },
         "cachedInputPrice": 0.02,
         "reasoningEffort": [
           "none",
@@ -395,7 +431,14 @@
       ],
       "inputPrice": 1.25,
       "outputPrice": 10,
-      "extra": {}
+      "extra": {
+        "serverSideWebSearch": {
+          "enabled": true,
+          "dialect": "openai-responses",
+          "fallbackPriority": 7,
+          "toolType": "web_search"
+        }
+      }
     },
     {
       "modelName": "gpt-5-pro",
@@ -477,7 +520,14 @@
       "outputPrice": 8,
       "defaultTemperature": 1,
       "defaultTopP": 1,
-      "extra": {}
+      "extra": {
+        "serverSideWebSearch": {
+          "enabled": true,
+          "dialect": "openai-responses",
+          "fallbackPriority": 8,
+          "toolType": "web_search"
+        }
+      }
     },
     {
       "modelName": "gpt-4.1-mini",
@@ -499,7 +549,14 @@
       "outputPrice": 1.6,
       "defaultTemperature": 1,
       "defaultTopP": 1,
-      "extra": {}
+      "extra": {
+        "serverSideWebSearch": {
+          "enabled": true,
+          "dialect": "openai-responses",
+          "fallbackPriority": 9,
+          "toolType": "web_search"
+        }
+      }
     },
     {
       "modelName": "gpt-4.1-nano",
@@ -754,7 +811,14 @@
       ],
       "inputPrice": 1.1,
       "outputPrice": 4.4,
-      "extra": {}
+      "extra": {
+        "serverSideWebSearch": {
+          "enabled": true,
+          "dialect": "openai-responses",
+          "fallbackPriority": 10,
+          "toolType": "web_search"
+        }
+      }
     }
   ],
   "tombstones": [

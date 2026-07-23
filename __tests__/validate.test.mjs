@@ -102,6 +102,66 @@ describe('真实数据全量校验', () => {
     assert.equal(result.ok, true, JSON.stringify(result.errors, null, 2))
   })
 
+  it('WebSearch 服务端能力仅标记官方直连 Anthropic/OpenAI 模型', () => {
+    const anthropic = JSON.parse(readFileSync(join(ROOT, 'compute', 'providers', 'anthropic.json'), 'utf8'))
+    const openai = JSON.parse(readFileSync(join(ROOT, 'compute', 'providers', 'openai.json'), 'utf8'))
+    const openaiCodex = JSON.parse(readFileSync(join(ROOT, 'compute', 'providers', 'openai-codex.json'), 'utf8'))
+
+    const enabled = (provider) => provider.models
+      .filter((model) => model.extra?.serverSideWebSearch?.enabled === true)
+      .map((model) => model.modelName)
+
+    assert.deepEqual(enabled(anthropic), [
+      'claude-fable-5',
+      'claude-opus-4-8',
+      'claude-sonnet-5',
+      'claude-opus-4-7',
+      'claude-sonnet-4-6',
+    ])
+    assert.deepEqual(enabled(openai), [
+      'gpt-5.5',
+      'gpt-5.5-pro',
+      'gpt-5.4',
+      'gpt-5.4-pro',
+      'gpt-5.4-mini',
+      'gpt-5.4-nano',
+      'gpt-5',
+      'gpt-4.1',
+      'gpt-4.1-mini',
+      'o4-mini',
+    ])
+    assert.deepEqual(enabled(openaiCodex), [])
+
+    for (const model of anthropic.models.filter((item) => enabled(anthropic).includes(item.modelName))) {
+      assert.equal(model.extra.serverSideWebSearch.dialect, 'anthropic-messages')
+      assert.equal(model.extra.serverSideWebSearch.toolType, 'web_search_20260318')
+      assert.equal('maxUses' in model.extra.serverSideWebSearch, false)
+    }
+    for (const model of openai.models.filter((item) => enabled(openai).includes(item.modelName))) {
+      assert.equal(model.extra.serverSideWebSearch.dialect, 'openai-responses')
+      assert.equal(model.extra.serverSideWebSearch.toolType, 'web_search')
+      assert.equal('maxUses' in model.extra.serverSideWebSearch, false)
+    }
+  })
+
+  it('Brave Search API 使用显式密钥声明且默认关闭', () => {
+    const brave = JSON.parse(readFileSync(join(ROOT, 'api-providers', 'web-search', 'brave.json'), 'utf8'))
+    const index = JSON.parse(readFileSync(join(ROOT, 'api-providers', 'web-search', '_index.json'), 'utf8'))
+
+    assert.equal(brave.enabled, false)
+    assert.equal(brave.endpoint, 'https://api.search.brave.com/res/v1/web/search')
+    assert.deepEqual(brave.auth, {
+      type: 'header',
+      headerName: 'X-Subscription-Token',
+      apiKeyRef: 'brave',
+    })
+    assert.deepEqual(index.order, ['tavily', 'brave', 'serper'])
+    assert.equal(
+      validateFile(join(ROOT, 'api-providers', 'web-search', 'brave.json'), validators).ok,
+      true,
+    )
+  })
+
   it('DeepSeek V4 Pro/Flash 应与官方的 1M/384K reasoning profile 一致', () => {
     const provider = JSON.parse(readFileSync(join(ROOT, 'compute', 'providers', 'deepseek.json'), 'utf8'))
     const specFile = JSON.parse(readFileSync(join(ROOT, 'compute', 'model-specs', 'deepseek.json'), 'utf8'))
