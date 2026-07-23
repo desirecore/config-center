@@ -35,6 +35,12 @@
       "inputPrice": 10,
       "outputPrice": 50,
       "extra": {
+        "serverSideWebSearch": {
+          "enabled": true,
+          "dialect": "anthropic-messages",
+          "fallbackPriority": 1,
+          "toolType": "web_search_20260318"
+        },
         "cachePricing": {
           "write5m": 12.5,
           "write1h": 20,
@@ -66,6 +72,12 @@
       "inputPrice": 5,
       "outputPrice": 25,
       "extra": {
+        "serverSideWebSearch": {
+          "enabled": true,
+          "dialect": "anthropic-messages",
+          "fallbackPriority": 2,
+          "toolType": "web_search_20260318"
+        },
         "cachePricing": {
           "write5m": 6.25,
           "write1h": 10,
@@ -100,6 +112,12 @@
       "inputPrice": 2,
       "outputPrice": 10,
       "extra": {
+        "serverSideWebSearch": {
+          "enabled": true,
+          "dialect": "anthropic-messages",
+          "fallbackPriority": 3,
+          "toolType": "web_search_20260318"
+        },
         "cachePricing": {
           "write5m": 2.5,
           "write1h": 4,
@@ -133,6 +151,12 @@
       "inputPrice": 5,
       "outputPrice": 25,
       "extra": {
+        "serverSideWebSearch": {
+          "enabled": true,
+          "dialect": "anthropic-messages",
+          "fallbackPriority": 4,
+          "toolType": "web_search_20260318"
+        },
         "cachePricing": {
           "write5m": 6.25,
           "write1h": 10,
@@ -163,6 +187,12 @@
       "outputPrice": 15,
       "defaultTemperature": 1,
       "extra": {
+        "serverSideWebSearch": {
+          "enabled": true,
+          "dialect": "anthropic-messages",
+          "fallbackPriority": 5,
+          "toolType": "web_search_20260318"
+        },
         "cachePricing": {
           "write5m": 3.75,
           "write1h": 6,
