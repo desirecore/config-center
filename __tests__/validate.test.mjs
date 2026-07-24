@@ -135,11 +135,13 @@ describe('真实数据全量校验', () => {
     for (const model of anthropic.models.filter((item) => enabled(anthropic).includes(item.modelName))) {
       assert.equal(model.extra.serverSideWebSearch.dialect, 'anthropic-messages')
       assert.equal(model.extra.serverSideWebSearch.toolType, 'web_search_20260318')
+      assert.equal(model.extra.serverSideWebSearch.searchRequestPriceUsd, 0.01)
       assert.equal('maxUses' in model.extra.serverSideWebSearch, false)
     }
     for (const model of openai.models.filter((item) => enabled(openai).includes(item.modelName))) {
       assert.equal(model.extra.serverSideWebSearch.dialect, 'openai-responses')
       assert.equal(model.extra.serverSideWebSearch.toolType, 'web_search')
+      assert.equal(model.extra.serverSideWebSearch.searchRequestPriceUsd, 0.01)
       assert.equal('maxUses' in model.extra.serverSideWebSearch, false)
     }
   })
