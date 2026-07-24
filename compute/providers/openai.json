@@ -50,6 +50,7 @@
           "enabled": true,
           "dialect": "openai-responses",
           "fallbackPriority": 1,
+          "searchRequestPriceUsd": 0.01,
           "toolType": "web_search"
         },
         "cachedInputPrice": 0.5,
@@ -89,6 +90,7 @@
           "enabled": true,
           "dialect": "openai-responses",
           "fallbackPriority": 2,
+          "searchRequestPriceUsd": 0.01,
           "toolType": "web_search"
         },
         "responsesOnly": true,
@@ -126,6 +128,7 @@
           "enabled": true,
           "dialect": "openai-responses",
           "fallbackPriority": 3,
+          "searchRequestPriceUsd": 0.01,
           "toolType": "web_search"
         },
         "cachedInputPrice": 0.25,
@@ -162,6 +165,7 @@
           "enabled": true,
           "dialect": "openai-responses",
           "fallbackPriority": 4,
+          "searchRequestPriceUsd": 0.01,
           "toolType": "web_search"
         },
         "responsesOnly": true,
@@ -200,6 +204,7 @@
           "enabled": true,
           "dialect": "openai-responses",
           "fallbackPriority": 5,
+          "searchRequestPriceUsd": 0.01,
           "toolType": "web_search"
         },
         "cachedInputPrice": 0.075,
@@ -235,6 +240,7 @@
           "enabled": true,
           "dialect": "openai-responses",
           "fallbackPriority": 6,
+          "searchRequestPriceUsd": 0.01,
           "toolType": "web_search"
         },
         "cachedInputPrice": 0.02,
@@ -436,6 +442,7 @@
           "enabled": true,
           "dialect": "openai-responses",
           "fallbackPriority": 7,
+          "searchRequestPriceUsd": 0.01,
           "toolType": "web_search"
         }
       }
@@ -525,6 +532,7 @@
           "enabled": true,
           "dialect": "openai-responses",
           "fallbackPriority": 8,
+          "searchRequestPriceUsd": 0.01,
           "toolType": "web_search"
         }
       }
@@ -554,6 +562,7 @@
           "enabled": true,
           "dialect": "openai-responses",
           "fallbackPriority": 9,
+          "searchRequestPriceUsd": 0.01,
           "toolType": "web_search"
         }
       }
@@ -816,6 +825,7 @@
           "enabled": true,
           "dialect": "openai-responses",
           "fallbackPriority": 10,
+          "searchRequestPriceUsd": 0.01,
           "toolType": "web_search"
         }
       }
