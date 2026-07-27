@@ -201,8 +201,55 @@ describe('真实数据全量校验', () => {
 
     assert.equal(specs.length, 1, 'mimo-v2.5-asr 应且仅应有一条规格')
     assert.deepEqual(specs[0].match.exact, ['mimo-v2.5-asr'])
+    assert.equal(specs[0].spec.contextWindow, 8192)
+    assert.equal(specs[0].spec.maxOutputTokens, 2048)
     assert.deepEqual(specs[0].spec.serviceType, ['asr'])
     assert.ok(specs[0].spec.capabilities.includes('asr'))
+    assert.deepEqual(specs[0].spec.extra.modelOrigin, {
+      vendor: 'xiaomi',
+      canonicalModelId: 'mimo-v2.5-asr',
+      family: 'mimo-asr',
+    })
+    assert.deepEqual(specs[0].spec.extra.speech, {
+      protocol: 'xiaomi-mimo-chat-asr',
+      protocolVersion: '1',
+      modes: ['batch'],
+      inputFormats: ['wav', 'mp3'],
+      languageHints: true,
+    })
+  })
+
+  it('MiMo V2.5 TTS 应声明稳定协议与官方音色', () => {
+    const specFile = JSON.parse(readFileSync(join(ROOT, 'compute', 'model-specs', 'xiaomi.json'), 'utf8'))
+    const provider = JSON.parse(readFileSync(join(ROOT, 'compute', 'providers', 'xiaomi.json'), 'utf8'))
+    const tts = specFile.specs.find((item) => item.id === 'mimo-v2.5-tts')
+    const providerTts = provider.models.find((item) => item.modelName === 'mimo-v2.5-tts')
+
+    assert.ok(tts, 'model-specs 中缺少 mimo-v2.5-tts')
+    assert.ok(providerTts, 'provider 中缺少 mimo-v2.5-tts')
+    assert.equal(tts.spec.contextWindow, 8192)
+    assert.equal(tts.spec.maxOutputTokens, 8192)
+    assert.deepEqual(tts.spec.extra.modelOrigin, {
+      vendor: 'xiaomi',
+      canonicalModelId: 'mimo-v2.5-tts',
+      family: 'mimo-tts',
+    })
+    assert.equal(tts.spec.extra.speech.protocol, 'xiaomi-mimo-chat-tts')
+    assert.equal(tts.spec.extra.speech.protocolVersion, '1')
+    assert.deepEqual(tts.spec.extra.speech.modes, ['batch', 'streaming'])
+    assert.deepEqual(tts.spec.extra.speech.outputFormats, ['wav', 'mp3', 'pcm16le'])
+    assert.deepEqual(tts.spec.extra.speech.sampleRates, [24000])
+    assert.equal(tts.spec.extra.speech.defaultVoice, 'mimo_default')
+    assert.deepEqual(
+      tts.spec.extra.speech.voices.map((voice) => voice.id),
+      ['mimo_default', '冰糖', '茉莉', '苏打', '白桦', 'Mia', 'Chloe', 'Milo', 'Dean'],
+    )
+    assert.deepEqual(
+      providerTts.extra.voices.map((voice) => voice.id),
+      ['mimo_default', '冰糖', '茉莉', '苏打', '白桦', 'Mia', 'Chloe', 'Milo', 'Dean'],
+    )
+    assert.deepEqual(providerTts.extra.audioFormats, ['wav', 'mp3', 'pcm16le'])
+    assert.equal(providerTts.extra.sampleRate, 24000)
   })
 
   it('MiMo V2.5 仅非 Pro 型号应声明多模态能力', () => {
@@ -500,6 +547,64 @@ describe('model-spec schema 接入面边界', () => {
       specs: [{ id: 'gpt-test', spec: { extra: { intrinsicBudgetHint: 8192 } } }],
     }
     assert.equal(validate(data), true, JSON.stringify(validate.errors))
+  })
+
+  it('接受 extra.modelOrigin/speech，同时保持其他扩展开放', () => {
+    const data = {
+      specs: [{
+        id: 'mimo-v2.5-asr',
+        spec: {
+          extra: {
+            modelOrigin: {
+              vendor: 'xiaomi',
+              canonicalModelId: 'mimo-v2.5-asr',
+              family: 'mimo-asr',
+            },
+            speech: {
+              protocol: 'xiaomi-mimo-chat-asr',
+              protocolVersion: '1',
+              modes: ['batch', 'streaming'],
+              inputFormats: ['wav', 'mp3'],
+              languageHints: true,
+            },
+            intrinsicBudgetHint: 8192,
+          },
+        },
+      }],
+    }
+    assert.equal(validate(data), true, JSON.stringify(validate.errors))
+  })
+
+  it('严格拒绝非法 speech 二级结构和字段越界', () => {
+    const invalidProfile = {
+      specs: [{
+        id: 'bad-asr',
+        spec: {
+          extra: {
+            speech: {
+              protocol: 'xiaomi-mimo-chat-asr',
+              protocolVersion: '1',
+              modes: ['batch', 'batch'],
+            },
+          },
+        },
+      }],
+    }
+    assert.equal(validate(invalidProfile), false)
+
+    const misplaced = {
+      specs: [{
+        id: 'bad-asr',
+        spec: {
+          speech: {
+            protocol: 'xiaomi-mimo-chat-asr',
+            protocolVersion: '1',
+            modes: ['batch'],
+          },
+        },
+      }],
+    }
+    assert.equal(validate(misplaced), false)
   })
 })
 
