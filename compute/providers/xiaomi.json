@@ -31,8 +31,7 @@
         "chat",
         "reasoning",
         "tool_use",
-        "code",
-        "vision"
+        "code"
       ],
       "extra": {}
     },
