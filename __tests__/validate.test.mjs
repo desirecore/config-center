@@ -207,6 +207,29 @@ describe('真实数据全量校验', () => {
     assert.ok(specs[0].spec.capabilities.includes('asr'))
   })
 
+  it('MiMo V2.5 仅非 Pro 型号应声明多模态能力', () => {
+    const provider = JSON.parse(readFileSync(join(ROOT, 'compute', 'providers', 'xiaomi.json'), 'utf8'))
+    const specFile = JSON.parse(readFileSync(join(ROOT, 'compute', 'model-specs', 'xiaomi.json'), 'utf8'))
+    const specFor = (modelId) => specFile.specs.find((item) => item.id === modelId)
+
+    const mimoV25 = specFor('mimo-v2.5')
+    assert.ok(mimoV25, 'model-specs 缺少 mimo-v2.5')
+    assert.ok(mimoV25.spec.capabilities.includes('vision'))
+    assert.ok(mimoV25.spec.serviceType.includes('vision'))
+
+    for (const modelId of ['mimo-v2.5-pro', 'mimo-v2-pro']) {
+      const modelSpec = specFor(modelId)
+      assert.ok(modelSpec, `model-specs 缺少 ${modelId}`)
+      assert.equal(modelSpec.spec.capabilities.includes('vision'), false)
+      assert.equal(modelSpec.spec.serviceType.includes('vision'), false)
+    }
+
+    const pro = provider.models.find((item) => item.modelName === 'mimo-v2.5-pro')
+    assert.ok(pro, 'provider 缺少 mimo-v2.5-pro')
+    assert.equal(pro.capabilities.includes('vision'), false)
+    assert.equal(pro.serviceType.includes('vision'), false)
+  })
+
   it('所有 Provider 应按供应商归属计价，模型来源不覆盖供应商币种', () => {
     const expectedCurrencies = {
       anthropic: 'USD',
