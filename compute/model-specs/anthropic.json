@@ -16,6 +16,20 @@
       }
     },
     {
+      "id": "claude-opus-5",
+      "displayName": "Claude Opus 5",
+      "family": "claude-opus",
+      "match": { "patterns": ["claude-opus-5*"] },
+      "spec": {
+        "contextWindow": 1000000,
+        "maxOutputTokens": 128000,
+        "capabilities": ["chat", "reasoning", "code", "vision", "tool_use", "long_context"],
+        "serviceType": ["chat"],
+        "supportsReasoning": true,
+        "description": "Claude Opus 5，Anthropic Opus 系列当前旗舰；思考默认开启，effort 支持到 max"
+      }
+    },
+    {
       "id": "claude-opus-4-8",
       "displayName": "Claude Opus 4.8",
       "family": "claude-opus",
@@ -42,6 +56,20 @@
         "defaultTemperature": 1,
         "supportsReasoning": true,
         "description": "Anthropic 当前最强通用模型，适合复杂推理和智能体编码任务"
+      }
+    },
+    {
+      "id": "claude-sonnet-5",
+      "displayName": "Claude Sonnet 5",
+      "family": "claude-sonnet",
+      "match": { "patterns": ["claude-sonnet-5*"] },
+      "spec": {
+        "contextWindow": 1000000,
+        "maxOutputTokens": 128000,
+        "capabilities": ["chat", "reasoning", "code", "vision", "tool_use", "computer_use", "long_context"],
+        "serviceType": ["chat"],
+        "supportsReasoning": true,
+        "description": "Claude Sonnet 5，速度与智能平衡；思考默认开启，effort 支持到 max"
       }
     },
     {

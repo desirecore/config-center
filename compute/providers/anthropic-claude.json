@@ -43,6 +43,53 @@
         "agent",
         "long_context"
       ],
+      "extra": {
+        "adaptiveThinking": true,
+        "reasoning": {
+          "supportedEfforts": [
+            "low",
+            "medium",
+            "high",
+            "xhigh",
+            "max"
+          ],
+          "defaultEffort": "high"
+        }
+      },
+      "source": "preset"
+    },
+    {
+      "modelName": "claude-opus-5",
+      "displayName": "Claude Opus 5",
+      "serviceType": [
+        "chat"
+      ],
+      "description": "Claude 订阅额度计费，Opus 系列当前旗舰，复杂智能体编码与长程任务首选，1M 上下文",
+      "contextWindow": 1000000,
+      "maxOutputTokens": 128000,
+      "capabilities": [
+        "chat",
+        "reasoning",
+        "code",
+        "vision",
+        "tool_use",
+        "agent",
+        "long_context"
+      ],
+      "extra": {
+        "adaptiveThinking": true,
+        "thinkingOnByDefault": true,
+        "reasoning": {
+          "supportedEfforts": [
+            "low",
+            "medium",
+            "high",
+            "xhigh",
+            "max"
+          ],
+          "defaultEffort": "high"
+        }
+      },
       "source": "preset"
     },
     {
@@ -63,6 +110,19 @@
         "agent",
         "long_context"
       ],
+      "extra": {
+        "adaptiveThinking": true,
+        "reasoning": {
+          "supportedEfforts": [
+            "low",
+            "medium",
+            "high",
+            "xhigh",
+            "max"
+          ],
+          "defaultEffort": "high"
+        }
+      },
       "source": "preset"
     },
     {
@@ -83,6 +143,19 @@
         "agent",
         "long_context"
       ],
+      "extra": {
+        "adaptiveThinking": true,
+        "reasoning": {
+          "supportedEfforts": [
+            "low",
+            "medium",
+            "high",
+            "xhigh",
+            "max"
+          ],
+          "defaultEffort": "high"
+        }
+      },
       "source": "preset"
     },
     {
