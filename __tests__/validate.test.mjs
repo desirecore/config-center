@@ -233,6 +233,7 @@ describe('真实数据全量校验', () => {
   it('所有 Provider 应按供应商归属计价，模型来源不覆盖供应商币种', () => {
     const expectedCurrencies = {
       anthropic: 'USD',
+      'anthropic-claude': 'USD',
       baichuan: 'CNY',
       baidu: 'CNY',
       cohere: 'USD',
