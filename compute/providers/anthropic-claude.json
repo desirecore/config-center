@@ -93,39 +93,6 @@
       "source": "preset"
     },
     {
-      "modelName": "claude-opus-4-8",
-      "displayName": "Claude Opus 4.8",
-      "serviceType": [
-        "chat"
-      ],
-      "description": "Claude 订阅额度计费，Opus 级复杂智能体编码与企业任务模型，1M 上下文",
-      "contextWindow": 1000000,
-      "maxOutputTokens": 128000,
-      "capabilities": [
-        "chat",
-        "reasoning",
-        "code",
-        "vision",
-        "tool_use",
-        "agent",
-        "long_context"
-      ],
-      "extra": {
-        "adaptiveThinking": true,
-        "reasoning": {
-          "supportedEfforts": [
-            "low",
-            "medium",
-            "high",
-            "xhigh",
-            "max"
-          ],
-          "defaultEffort": "high"
-        }
-      },
-      "source": "preset"
-    },
-    {
       "modelName": "claude-sonnet-5",
       "displayName": "Claude Sonnet 5",
       "serviceType": [
@@ -175,5 +142,8 @@
       ],
       "source": "preset"
     }
+  ],
+  "tombstones": [
+    "claude-opus-4-8"
   ]
 }
