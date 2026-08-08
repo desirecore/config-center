@@ -53,7 +53,7 @@
             "xhigh",
             "max"
           ],
-          "defaultEffort": "high"
+          "defaultEffort": "xhigh"
         }
       },
       "source": "preset"
@@ -87,7 +87,7 @@
             "xhigh",
             "max"
           ],
-          "defaultEffort": "high"
+          "defaultEffort": "xhigh"
         }
       },
       "source": "preset"
@@ -120,7 +120,7 @@
             "xhigh",
             "max"
           ],
-          "defaultEffort": "high"
+          "defaultEffort": "xhigh"
         }
       },
       "source": "preset"
