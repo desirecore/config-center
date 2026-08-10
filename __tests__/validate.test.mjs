@@ -13,7 +13,7 @@
 
 import { describe, it } from 'node:test'
 import { strict as assert } from 'node:assert'
-import { readFileSync, readdirSync } from 'node:fs'
+import { existsSync, readFileSync, readdirSync } from 'node:fs'
 import { dirname, join, resolve } from 'node:path'
 import { fileURLToPath } from 'node:url'
 import { Ajv } from 'ajv'
@@ -85,50 +85,32 @@ describe('真实数据全量校验', () => {
     assert.equal(result.ok, true, JSON.stringify(result.errors, null, 2))
   })
 
-  it('智能路由模型目录应通过 smart-model-catalog schema', () => {
-    const result = validateFile(
-      join(ROOT, 'compute', 'smart-routing', 'model-catalog.json'),
-      validators,
-    )
+  it('model-specs 是智能路由的唯一规格主数据', () => {
+    const indexPath = join(ROOT, 'compute', 'model-specs', '_index.json')
+    const result = validateFile(indexPath, validators)
     assert.equal(result.ok, true, JSON.stringify(result.errors, null, 2))
 
-    const catalog = JSON.parse(readFileSync(
-      join(ROOT, 'compute', 'smart-routing', 'model-catalog.json'),
-      'utf8',
-    ))
-    assert.deepEqual(catalog.tiers.map((tier) => tier.id), [
+    const index = JSON.parse(readFileSync(indexPath, 'utf8'))
+    assert.deepEqual(index.routingTiers.map((tier) => tier.id), [
       'flagship',
       'balanced',
       'lightweight',
     ])
-    assert.deepEqual(catalog.providers.map((provider) => provider.provider), [
-      'openai-codex',
-      'anthropic-claude',
-      'desirecore-cloud',
-    ])
-    assert.equal(
-      catalog.providers.flatMap((provider) => provider.models).length,
-      37,
-    )
+    assert.equal(existsSync(join(ROOT, 'compute', 'smart-routing')), false)
 
-    for (const provider of catalog.providers.filter((item) => item.provider !== 'desirecore-cloud')) {
-      const providerFile = JSON.parse(readFileSync(
-        join(ROOT, 'compute', 'providers', `${provider.provider}.json`),
-        'utf8',
-      ))
-      assert.equal(providerFile.id, provider.providerId)
-      const publishedModels = new Set(providerFile.models.map((model) => model.modelName))
-      for (const model of provider.models) {
-        assert.equal(
-          publishedModels.has(model.model),
-          true,
-          `${provider.providerId}/${model.model} 必须存在于对应接入面 Provider 清单`,
-        )
+    const routed = []
+    for (const name of index.order) {
+      const file = JSON.parse(readFileSync(join(ROOT, 'compute', 'model-specs', `${name}.json`), 'utf8'))
+      for (const spec of file.specs) {
+        if (spec.routing) routed.push(spec)
       }
     }
+    assert.equal(routed.length, 37)
+    assert.equal(routed.every((spec) => spec.routing.reasoning.supportedModes.includes(spec.routing.reasoning.defaultMode)), true)
+    assert.equal(routed.every((spec) => Array.isArray(spec.spec.capabilities)), true)
   })
 
-  it('两个 _index.json 应通过 providers-index schema', () => {
+  it('Provider 与 coding plan 的 _index.json 应通过 providers-index schema', () => {
     const r1 = validateFile(join(ROOT, 'compute', 'providers', '_index.json'), validators)
     const r2 = validateFile(join(ROOT, 'compute', 'coding-plans', '_index.json'), validators)
     assert.equal(r1.ok, true, JSON.stringify(r1.errors, null, 2))
@@ -375,24 +357,19 @@ describe('真实数据全量校验', () => {
   })
 })
 
-describe('智能路由模型目录 schema 反例', () => {
-  const validate = compile('smart-model-catalog')
+describe('model-specs 智能路由 schema 反例', () => {
+  const validate = compile('model-spec')
 
-  it('拒绝未声明的策略字段，避免新旧客户端静默分叉', () => {
-    const data = JSON.parse(readFileSync(
-      join(ROOT, 'compute', 'smart-routing', 'model-catalog.json'),
-      'utf8',
-    ))
-    data.providers[0].models[0].unknownRoutingPolicy = true
+  it('拒绝未声明的 routing 字段，避免策略静默分叉', () => {
+    const data = JSON.parse(readFileSync(join(ROOT, 'compute', 'model-specs', 'openai.json'), 'utf8'))
+    data.specs.find((spec) => spec.routing).routing.unknownRoutingPolicy = true
     assert.equal(validate(data), false)
   })
 
-  it('拒绝当前客户端未声明支持的目录版本', () => {
-    const data = JSON.parse(readFileSync(
-      join(ROOT, 'compute', 'smart-routing', 'model-catalog.json'),
-      'utf8',
-    ))
-    data.version = 2
+  it('拒绝默认 reasoning 不在模型支持集合中的策略', () => {
+    const data = JSON.parse(readFileSync(join(ROOT, 'compute', 'model-specs', 'openai.json'), 'utf8'))
+    data.specs.find((spec) => spec.routing).routing.reasoning.defaultMode = 'max'
+    data.specs.find((spec) => spec.routing).routing.reasoning.supportedModes = ['auto']
     assert.equal(validate(data), false)
   })
 })

@@ -27,6 +27,24 @@
         "defaultTemperature": 1,
         "supportsReasoning": true,
         "description": "小米 MiMo 旗舰推理模型，支持文本/工具调用"
+      },
+      "routing": {
+        "tier": "flagship",
+        "routingPriority": 50,
+        "eligibleForAgent": true,
+        "defaultReference": false,
+        "reasoning": {
+          "supportedModes": [
+            "auto",
+            "off",
+            "minimal",
+            "low",
+            "medium",
+            "high",
+            "xhigh"
+          ],
+          "defaultMode": "high"
+        }
       }
     },
     {
@@ -59,6 +77,24 @@
         "defaultTemperature": 1,
         "supportsReasoning": true,
         "description": "小米 MiMo 全模态模型，支持图像/音频/视频理解"
+      },
+      "routing": {
+        "tier": "lightweight",
+        "routingPriority": 40,
+        "eligibleForAgent": true,
+        "defaultReference": false,
+        "reasoning": {
+          "supportedModes": [
+            "auto",
+            "off",
+            "minimal",
+            "low",
+            "medium",
+            "high",
+            "xhigh"
+          ],
+          "defaultMode": "low"
+        }
       }
     },
     {
@@ -165,6 +201,18 @@
           "tts"
         ],
         "description": "小米 MiMo 语音合成，支持多语言与风格控制"
+      },
+      "routing": {
+        "tier": "lightweight",
+        "routingPriority": 114,
+        "eligibleForAgent": false,
+        "defaultReference": false,
+        "reasoning": {
+          "supportedModes": [
+            "auto"
+          ],
+          "defaultMode": "auto"
+        }
       }
     },
     {
@@ -185,6 +233,18 @@
           "asr"
         ],
         "description": "小米 MiMo 语音识别模型"
+      },
+      "routing": {
+        "tier": "lightweight",
+        "routingPriority": 123,
+        "eligibleForAgent": false,
+        "defaultReference": false,
+        "reasoning": {
+          "supportedModes": [
+            "auto"
+          ],
+          "defaultMode": "auto"
+        }
       }
     },
     {

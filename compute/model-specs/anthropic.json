@@ -5,40 +5,117 @@
       "id": "claude-fable-5",
       "displayName": "Claude Fable 5",
       "family": "claude-fable",
-      "match": { "exact": ["claude-fable-5"], "patterns": ["claude-fable-5*"] },
+      "match": {
+        "exact": [
+          "claude-fable-5"
+        ],
+        "patterns": [
+          "claude-fable-5*"
+        ]
+      },
       "spec": {
         "contextWindow": 1000000,
         "maxOutputTokens": 128000,
-        "capabilities": ["chat", "reasoning", "deep_thinking", "code", "vision", "tool_use", "long_context"],
-        "serviceType": ["chat"],
+        "capabilities": [
+          "chat",
+          "reasoning",
+          "deep_thinking",
+          "code",
+          "vision",
+          "tool_use",
+          "long_context"
+        ],
+        "serviceType": [
+          "chat"
+        ],
         "supportsReasoning": true,
         "description": "Anthropic 最强模型，基于 Mythos 架构，支持自主知识工作"
+      },
+      "routing": {
+        "tier": "flagship",
+        "routingPriority": 20,
+        "eligibleForAgent": true,
+        "defaultReference": false,
+        "reasoning": {
+          "supportedModes": [
+            "auto",
+            "low",
+            "medium",
+            "high",
+            "xhigh",
+            "max"
+          ],
+          "defaultMode": "xhigh"
+        }
       }
     },
     {
       "id": "claude-opus-5",
       "displayName": "Claude Opus 5",
       "family": "claude-opus",
-      "match": { "patterns": ["claude-opus-5*"] },
+      "match": {
+        "patterns": [
+          "claude-opus-5*"
+        ]
+      },
       "spec": {
         "contextWindow": 1000000,
         "maxOutputTokens": 128000,
-        "capabilities": ["chat", "reasoning", "code", "vision", "tool_use", "long_context"],
-        "serviceType": ["chat"],
+        "capabilities": [
+          "chat",
+          "reasoning",
+          "code",
+          "vision",
+          "tool_use",
+          "long_context"
+        ],
+        "serviceType": [
+          "chat"
+        ],
         "supportsReasoning": true,
         "description": "Claude Opus 5，Anthropic Opus 系列当前旗舰；思考默认开启，effort 支持到 max"
+      },
+      "routing": {
+        "tier": "flagship",
+        "routingPriority": 25,
+        "eligibleForAgent": true,
+        "defaultReference": false,
+        "reasoning": {
+          "supportedModes": [
+            "auto",
+            "low",
+            "medium",
+            "high",
+            "xhigh",
+            "max"
+          ],
+          "defaultMode": "xhigh"
+        }
       }
     },
     {
       "id": "claude-opus-4-8",
       "displayName": "Claude Opus 4.8",
       "family": "claude-opus",
-      "match": { "patterns": ["claude-opus-4-8*"] },
+      "match": {
+        "patterns": [
+          "claude-opus-4-8*"
+        ]
+      },
       "spec": {
         "contextWindow": 1000000,
         "maxOutputTokens": 128000,
-        "capabilities": ["chat", "reasoning", "code", "vision", "tool_use", "long_context"],
-        "serviceType": ["chat"],
+        "capabilities": [
+          "chat",
+          "reasoning",
+          "code",
+          "vision",
+          "tool_use",
+          "long_context"
+        ],
+        "serviceType": [
+          "chat"
+        ],
         "supportsReasoning": true,
         "description": "Claude Opus 4.8，Anthropic Opus 系列最新旗舰"
       }
@@ -47,12 +124,24 @@
       "id": "claude-opus-4-7",
       "displayName": "Claude Opus 4.7",
       "family": "claude-opus",
-      "match": { "patterns": ["claude-opus-4-7*"] },
+      "match": {
+        "patterns": [
+          "claude-opus-4-7*"
+        ]
+      },
       "spec": {
         "contextWindow": 1000000,
         "maxOutputTokens": 128000,
-        "capabilities": ["chat", "reasoning", "code", "vision", "tool_use"],
-        "serviceType": ["chat"],
+        "capabilities": [
+          "chat",
+          "reasoning",
+          "code",
+          "vision",
+          "tool_use"
+        ],
+        "serviceType": [
+          "chat"
+        ],
         "defaultTemperature": 1,
         "supportsReasoning": true,
         "description": "Anthropic 当前最强通用模型，适合复杂推理和智能体编码任务"
@@ -62,26 +151,71 @@
       "id": "claude-sonnet-5",
       "displayName": "Claude Sonnet 5",
       "family": "claude-sonnet",
-      "match": { "patterns": ["claude-sonnet-5*"] },
+      "match": {
+        "patterns": [
+          "claude-sonnet-5*"
+        ]
+      },
       "spec": {
         "contextWindow": 1000000,
         "maxOutputTokens": 128000,
-        "capabilities": ["chat", "reasoning", "code", "vision", "tool_use", "computer_use", "long_context"],
-        "serviceType": ["chat"],
+        "capabilities": [
+          "chat",
+          "reasoning",
+          "code",
+          "vision",
+          "tool_use",
+          "computer_use",
+          "long_context"
+        ],
+        "serviceType": [
+          "chat"
+        ],
         "supportsReasoning": true,
         "description": "Claude Sonnet 5，速度与智能平衡；思考默认开启，effort 支持到 max"
+      },
+      "routing": {
+        "tier": "balanced",
+        "routingPriority": 20,
+        "eligibleForAgent": true,
+        "defaultReference": false,
+        "reasoning": {
+          "supportedModes": [
+            "auto",
+            "low",
+            "medium",
+            "high",
+            "xhigh",
+            "max"
+          ],
+          "defaultMode": "xhigh"
+        }
       }
     },
     {
       "id": "claude-sonnet-4-6",
       "displayName": "Claude Sonnet 4.6",
       "family": "claude-sonnet",
-      "match": { "patterns": ["claude-sonnet-4-6*"] },
+      "match": {
+        "patterns": [
+          "claude-sonnet-4-6*"
+        ]
+      },
       "spec": {
         "contextWindow": 1000000,
         "maxOutputTokens": 64000,
-        "capabilities": ["chat", "reasoning", "code", "vision", "tool_use", "computer_use"],
-        "serviceType": ["chat", "computer_use"],
+        "capabilities": [
+          "chat",
+          "reasoning",
+          "code",
+          "vision",
+          "tool_use",
+          "computer_use"
+        ],
+        "serviceType": [
+          "chat",
+          "computer_use"
+        ],
         "defaultTemperature": 1,
         "supportsReasoning": true,
         "description": "Anthropic 高智能高速度模型，适合编码、工具使用和智能体任务"
@@ -91,12 +225,24 @@
       "id": "claude-sonnet-4-5",
       "displayName": "Claude Sonnet 4.5",
       "family": "claude-sonnet",
-      "match": { "patterns": ["claude-sonnet-4-5*"] },
+      "match": {
+        "patterns": [
+          "claude-sonnet-4-5*"
+        ]
+      },
       "spec": {
         "contextWindow": 1000000,
         "maxOutputTokens": 64000,
-        "capabilities": ["chat", "reasoning", "code", "vision", "tool_use"],
-        "serviceType": ["chat"],
+        "capabilities": [
+          "chat",
+          "reasoning",
+          "code",
+          "vision",
+          "tool_use"
+        ],
+        "serviceType": [
+          "chat"
+        ],
         "defaultTemperature": 1,
         "supportsReasoning": true,
         "description": "Anthropic 主力模型，长文本与代码任务表现优异"
@@ -106,15 +252,39 @@
       "id": "claude-haiku-4-5",
       "displayName": "Claude Haiku 4.5",
       "family": "claude-haiku",
-      "match": { "patterns": ["claude-haiku-4-5*"] },
+      "match": {
+        "patterns": [
+          "claude-haiku-4-5*"
+        ]
+      },
       "spec": {
         "contextWindow": 200000,
         "maxOutputTokens": 64000,
-        "capabilities": ["chat", "reasoning", "code", "vision", "tool_use"],
-        "serviceType": ["chat"],
+        "capabilities": [
+          "chat",
+          "reasoning",
+          "code",
+          "vision",
+          "tool_use"
+        ],
+        "serviceType": [
+          "chat"
+        ],
         "defaultTemperature": 1,
         "supportsReasoning": true,
         "description": "Anthropic 最快模型，具备接近前沿模型的智能水平"
+      },
+      "routing": {
+        "tier": "lightweight",
+        "routingPriority": 20,
+        "eligibleForAgent": true,
+        "defaultReference": false,
+        "reasoning": {
+          "supportedModes": [
+            "auto"
+          ],
+          "defaultMode": "auto"
+        }
       }
     }
   ]

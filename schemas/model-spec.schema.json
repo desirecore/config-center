@@ -2,7 +2,7 @@
   "$schema": "http://json-schema.org/draft-07/schema#",
   "$id": "https://desirecore.net/schemas/config-center/model-spec.schema.json",
   "title": "ModelSpecFile",
-  "description": "模型规格库（compute/model-specs/*.json）数据契约。\n\n用途：维护模型的「内在参数」（上下文窗口、最大输出、能力标签、serviceType、默认采样参数等），这些参数与「从哪家 provider、什么价格调用」无关，是模型的客观物理属性。\n\n接入路径（首期仅 cloud）：登录后从 NewAPI pricing 拉到的模型，只承担「可用模型清单 + 价签」职责；客户端按 modelName 用通用匹配机制查询本规格库，补全 tags 无法表达的结构化参数（maxOutputTokens / defaultTemperature 等）。\n\n与 provider.schema.json 的区别：provider 文件是「完整 provider 接入定义」，本文件是「跨 provider 共享的模型参数字典」。本文件是老客户端不会读取的新文件，因此 schema 可以更宽松（允许 null），且不破坏已发布客户端兼容契约。\n\n严禁写入价格字段（inputPrice/outputPrice/cache 等）——价签真相源永远是 NewAPI pricing。",
+  "description": "模型规格库（compute/model-specs/*.json）数据契约。\n\n用途：维护模型的唯一规格主数据：内在参数（上下文窗口、最大输出、能力标签、serviceType、默认采样参数等）以及智能路由策略（量级、排序、Agent 可选性和标准化 reasoning 合同）。同一事实不得再写入独立 smart-routing 目录。\n\nProvider 文件只描述接入面、可用性和明确的接入面覆盖；历史 Provider 条目中已有的规格字段为旧客户端兼容副本，不能覆盖本文件。\n\n严禁写入价格字段（inputPrice/outputPrice/cache 等）——价签真相源永远是 NewAPI pricing。",
   "type": "object",
   "required": ["specs"],
   "properties": {
@@ -48,6 +48,66 @@
               "type": "array",
               "description": "glob 模式列表（如 claude-sonnet-4-6*）。仅在 exact + 去日期戳仍无法覆盖变体时使用；避免对存在子型号的父模型（如 gpt-4o 之于 gpt-4o-mini）使用宽泛通配，以防误吞。多命中取最长 pattern。",
               "items": { "type": "string", "minLength": 1 }
+            }
+          },
+          "additionalProperties": false
+        },
+        "routing": {
+          "type": "object",
+          "description": "智能路由策略。存在即表示该精确模型可进入路由候选；模型能力和 reasoning 合同均以本条目为准，Provider 只能为接入面收紧。",
+          "required": ["tier", "routingPriority", "eligibleForAgent", "defaultReference", "reasoning"],
+          "properties": {
+            "tier": {
+              "type": "string",
+              "enum": ["flagship", "balanced", "lightweight"],
+              "description": "模型在智能路由中的能力量级。"
+            },
+            "routingPriority": {
+              "type": "integer",
+              "minimum": 0,
+              "maximum": 10000,
+              "description": "同一量级内的稳定优先级，数值越小越优先。"
+            },
+            "eligibleForAgent": {
+              "type": "boolean",
+              "description": "是否允许作为 Agent 主模型；媒体专用模型必须为 false。"
+            },
+            "defaultReference": {
+              "type": "boolean",
+              "description": "是否是默认模型的策略参考，只影响同级排序，不是强制选择。"
+            },
+            "reasoning": {
+              "type": "object",
+              "description": "模型级标准化 reasoning 合同。auto 为不发送参数，off 为显式关闭；Provider 接入面可收紧此集合，但不得扩张。",
+              "required": ["supportedModes", "defaultMode"],
+              "properties": {
+                "supportedModes": {
+                  "type": "array",
+                  "minItems": 1,
+                  "uniqueItems": true,
+                  "items": {
+                    "type": "string",
+                    "enum": ["auto", "off", "minimal", "low", "medium", "high", "xhigh", "max"]
+                  },
+                  "description": "产品层可用的 reasoning 档位。"
+                },
+                "defaultMode": {
+                  "type": "string",
+                  "enum": ["auto", "off", "minimal", "low", "medium", "high", "xhigh", "max"],
+                  "description": "没有显式请求时的策略默认档位，必须包含在 supportedModes 中。"
+                }
+              },
+              "allOf": [
+                { "if": { "properties": { "defaultMode": { "const": "auto" } } }, "then": { "properties": { "supportedModes": { "contains": { "const": "auto" } } } } },
+                { "if": { "properties": { "defaultMode": { "const": "off" } } }, "then": { "properties": { "supportedModes": { "contains": { "const": "off" } } } } },
+                { "if": { "properties": { "defaultMode": { "const": "minimal" } } }, "then": { "properties": { "supportedModes": { "contains": { "const": "minimal" } } } } },
+                { "if": { "properties": { "defaultMode": { "const": "low" } } }, "then": { "properties": { "supportedModes": { "contains": { "const": "low" } } } } },
+                { "if": { "properties": { "defaultMode": { "const": "medium" } } }, "then": { "properties": { "supportedModes": { "contains": { "const": "medium" } } } } },
+                { "if": { "properties": { "defaultMode": { "const": "high" } } }, "then": { "properties": { "supportedModes": { "contains": { "const": "high" } } } } },
+                { "if": { "properties": { "defaultMode": { "const": "xhigh" } } }, "then": { "properties": { "supportedModes": { "contains": { "const": "xhigh" } } } } },
+                { "if": { "properties": { "defaultMode": { "const": "max" } } }, "then": { "properties": { "supportedModes": { "contains": { "const": "max" } } } } }
+              ],
+              "additionalProperties": false
             }
           },
           "additionalProperties": false

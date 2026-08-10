@@ -5,21 +5,58 @@
       "id": "happyhorse-1.1-t2v",
       "displayName": "HappyHorse 1.1 T2V",
       "family": "happyhorse-t2v",
-      "match": { "exact": ["happyhorse-1.1-t2v"], "patterns": ["happyhorse-1.1-t2v*"] },
+      "match": {
+        "exact": [
+          "happyhorse-1.1-t2v"
+        ],
+        "patterns": [
+          "happyhorse-1.1-t2v*"
+        ]
+      },
       "spec": {
-        "capabilities": ["video_generation", "text_to_video", "high_quality"],
-        "serviceType": ["video_gen"],
+        "capabilities": [
+          "video_generation",
+          "text_to_video",
+          "high_quality"
+        ],
+        "serviceType": [
+          "video_gen"
+        ],
         "description": "HappyHorse 1.1 文生视频，进一步提升文本词义理解、镜头调度与动态生成表现"
+      },
+      "routing": {
+        "tier": "flagship",
+        "routingPriority": 116,
+        "eligibleForAgent": false,
+        "defaultReference": false,
+        "reasoning": {
+          "supportedModes": [
+            "auto"
+          ],
+          "defaultMode": "auto"
+        }
       }
     },
     {
       "id": "happyhorse-1.0-t2v",
       "displayName": "HappyHorse 1.0 T2V",
       "family": "happyhorse-t2v",
-      "match": { "exact": ["happyhorse-1.0-t2v"], "patterns": ["happyhorse-1.0-t2v*"] },
+      "match": {
+        "exact": [
+          "happyhorse-1.0-t2v"
+        ],
+        "patterns": [
+          "happyhorse-1.0-t2v*"
+        ]
+      },
       "spec": {
-        "capabilities": ["video_generation", "text_to_video"],
-        "serviceType": ["video_gen"],
+        "capabilities": [
+          "video_generation",
+          "text_to_video"
+        ],
+        "serviceType": [
+          "video_gen"
+        ],
         "description": "HappyHorse 1.0 文生视频，具备高度还原的动态画面生成能力"
       }
     },
@@ -27,21 +64,58 @@
       "id": "happyhorse-1.1-i2v",
       "displayName": "HappyHorse 1.1 I2V",
       "family": "happyhorse-i2v",
-      "match": { "exact": ["happyhorse-1.1-i2v"], "patterns": ["happyhorse-1.1-i2v*"] },
+      "match": {
+        "exact": [
+          "happyhorse-1.1-i2v"
+        ],
+        "patterns": [
+          "happyhorse-1.1-i2v*"
+        ]
+      },
       "spec": {
-        "capabilities": ["video_generation", "image_to_video", "high_quality"],
-        "serviceType": ["video_gen"],
+        "capabilities": [
+          "video_generation",
+          "image_to_video",
+          "high_quality"
+        ],
+        "serviceType": [
+          "video_gen"
+        ],
         "description": "HappyHorse 1.1 图生视频，进一步提升画面质感、动态表现与跨片段一致性"
+      },
+      "routing": {
+        "tier": "flagship",
+        "routingPriority": 115,
+        "eligibleForAgent": false,
+        "defaultReference": false,
+        "reasoning": {
+          "supportedModes": [
+            "auto"
+          ],
+          "defaultMode": "auto"
+        }
       }
     },
     {
       "id": "happyhorse-1.0-i2v",
       "displayName": "HappyHorse 1.0 I2V",
       "family": "happyhorse-i2v",
-      "match": { "exact": ["happyhorse-1.0-i2v"], "patterns": ["happyhorse-1.0-i2v*"] },
+      "match": {
+        "exact": [
+          "happyhorse-1.0-i2v"
+        ],
+        "patterns": [
+          "happyhorse-1.0-i2v*"
+        ]
+      },
       "spec": {
-        "capabilities": ["video_generation", "image_to_video"],
-        "serviceType": ["video_gen"],
+        "capabilities": [
+          "video_generation",
+          "image_to_video"
+        ],
+        "serviceType": [
+          "video_gen"
+        ],
         "description": "HappyHorse 1.0 图生视频，具备高度还原的动态画面生成能力"
       }
     },
@@ -49,21 +123,60 @@
       "id": "happyhorse-1.1-r2v",
       "displayName": "HappyHorse 1.1 R2V",
       "family": "happyhorse-r2v",
-      "match": { "exact": ["happyhorse-1.1-r2v"], "patterns": ["happyhorse-1.1-r2v*"] },
+      "match": {
+        "exact": [
+          "happyhorse-1.1-r2v"
+        ],
+        "patterns": [
+          "happyhorse-1.1-r2v*"
+        ]
+      },
       "spec": {
-        "capabilities": ["video_generation", "reference_to_video", "multi_image", "high_quality"],
-        "serviceType": ["video_gen"],
+        "capabilities": [
+          "video_generation",
+          "reference_to_video",
+          "multi_image",
+          "high_quality"
+        ],
+        "serviceType": [
+          "video_gen"
+        ],
         "description": "HappyHorse 1.1 参考生视频，支持最多9张图片参考，更加稳定的主体与场景参考"
+      },
+      "routing": {
+        "tier": "flagship",
+        "routingPriority": 117,
+        "eligibleForAgent": false,
+        "defaultReference": false,
+        "reasoning": {
+          "supportedModes": [
+            "auto"
+          ],
+          "defaultMode": "auto"
+        }
       }
     },
     {
       "id": "happyhorse-1.0-r2v",
       "displayName": "HappyHorse 1.0 R2V",
       "family": "happyhorse-r2v",
-      "match": { "exact": ["happyhorse-1.0-r2v"], "patterns": ["happyhorse-1.0-r2v*"] },
+      "match": {
+        "exact": [
+          "happyhorse-1.0-r2v"
+        ],
+        "patterns": [
+          "happyhorse-1.0-r2v*"
+        ]
+      },
       "spec": {
-        "capabilities": ["video_generation", "reference_to_video", "multi_image"],
-        "serviceType": ["video_gen"],
+        "capabilities": [
+          "video_generation",
+          "reference_to_video",
+          "multi_image"
+        ],
+        "serviceType": [
+          "video_gen"
+        ],
         "description": "HappyHorse 1.0 参考生视频，支持最多9张图片参考"
       }
     }

@@ -5,29 +5,90 @@
       "id": "kimi-k3",
       "displayName": "Kimi K3",
       "family": "kimi-k3",
-      "match": { "exact": ["kimi-k3"], "patterns": ["kimi-k3*"] },
+      "match": {
+        "exact": [
+          "kimi-k3"
+        ],
+        "patterns": [
+          "kimi-k3*"
+        ]
+      },
       "spec": {
         "contextWindow": 1048576,
         "maxOutputTokens": 131072,
-        "capabilities": ["chat", "reasoning", "code", "tool_use", "agent", "long_context", "vision"],
-        "serviceType": ["reasoning"],
+        "capabilities": [
+          "chat",
+          "reasoning",
+          "code",
+          "tool_use",
+          "agent",
+          "long_context",
+          "vision"
+        ],
+        "serviceType": [
+          "reasoning"
+        ],
         "supportsReasoning": true,
         "description": "Moonshot Kimi K3 — 2.8T 参数多模态推理模型，默认 reasoning_effort=max，始终启用思考"
+      },
+      "routing": {
+        "tier": "flagship",
+        "routingPriority": 35,
+        "eligibleForAgent": true,
+        "defaultReference": false,
+        "reasoning": {
+          "supportedModes": [
+            "auto",
+            "off",
+            "minimal",
+            "low",
+            "medium",
+            "high",
+            "xhigh"
+          ],
+          "defaultMode": "high"
+        }
       }
     },
     {
       "id": "kimi-k2.7-code",
       "displayName": "Kimi K2.7 Code",
       "family": "kimi-k2.7",
-      "match": { "exact": ["kimi-k2.7-code"], "patterns": ["kimi-k2.7-code*"] },
+      "match": {
+        "exact": [
+          "kimi-k2.7-code"
+        ],
+        "patterns": [
+          "kimi-k2.7-code*"
+        ]
+      },
       "spec": {
         "contextWindow": 262144,
         "maxOutputTokens": 16384,
-        "capabilities": ["chat", "code", "vision", "tool_use"],
-        "serviceType": ["chat"],
+        "capabilities": [
+          "chat",
+          "code",
+          "vision",
+          "tool_use"
+        ],
+        "serviceType": [
+          "chat"
+        ],
         "defaultTemperature": 1,
         "supportsReasoning": true,
         "description": "Moonshot Kimi K2.7 Code 编程专用模型"
+      },
+      "routing": {
+        "tier": "balanced",
+        "routingPriority": 50,
+        "eligibleForAgent": true,
+        "defaultReference": false,
+        "reasoning": {
+          "supportedModes": [
+            "auto"
+          ],
+          "defaultMode": "auto"
+        }
       }
     },
     {
@@ -37,10 +98,38 @@
       "spec": {
         "contextWindow": 262144,
         "maxOutputTokens": 16384,
-        "capabilities": ["chat", "reasoning", "code", "tool_use", "agent", "long_context", "vision"],
-        "serviceType": ["chat"],
+        "capabilities": [
+          "chat",
+          "reasoning",
+          "code",
+          "tool_use",
+          "agent",
+          "long_context",
+          "vision"
+        ],
+        "serviceType": [
+          "chat"
+        ],
         "defaultTemperature": 1,
         "supportsReasoning": true
+      },
+      "routing": {
+        "tier": "balanced",
+        "routingPriority": 45,
+        "eligibleForAgent": true,
+        "defaultReference": false,
+        "reasoning": {
+          "supportedModes": [
+            "auto",
+            "off",
+            "minimal",
+            "low",
+            "medium",
+            "high",
+            "xhigh"
+          ],
+          "defaultMode": "medium"
+        }
       }
     },
     {
@@ -50,8 +139,18 @@
       "spec": {
         "contextWindow": 256000,
         "maxOutputTokens": 32768,
-        "capabilities": ["chat", "reasoning", "code", "tool_use", "agent", "long_context", "vision"],
-        "serviceType": ["chat"],
+        "capabilities": [
+          "chat",
+          "reasoning",
+          "code",
+          "tool_use",
+          "agent",
+          "long_context",
+          "vision"
+        ],
+        "serviceType": [
+          "chat"
+        ],
         "defaultTemperature": 1,
         "supportsReasoning": true
       }
@@ -63,8 +162,16 @@
       "spec": {
         "contextWindow": 256000,
         "maxOutputTokens": 16384,
-        "capabilities": ["reasoning", "math", "code", "deep_thinking", "long_context"],
-        "serviceType": ["reasoning"],
+        "capabilities": [
+          "reasoning",
+          "math",
+          "code",
+          "deep_thinking",
+          "long_context"
+        ],
+        "serviceType": [
+          "reasoning"
+        ],
         "defaultTemperature": 1,
         "supportsReasoning": true
       }
@@ -76,8 +183,17 @@
       "spec": {
         "contextWindow": 256000,
         "maxOutputTokens": 8192,
-        "capabilities": ["chat", "reasoning", "code", "tool_use", "agent", "long_context"],
-        "serviceType": ["chat"],
+        "capabilities": [
+          "chat",
+          "reasoning",
+          "code",
+          "tool_use",
+          "agent",
+          "long_context"
+        ],
+        "serviceType": [
+          "chat"
+        ],
         "defaultTemperature": 0.6,
         "supportsReasoning": true
       }
@@ -89,8 +205,13 @@
       "spec": {
         "contextWindow": 8192,
         "maxOutputTokens": 4096,
-        "capabilities": ["chat", "code"],
-        "serviceType": ["chat"],
+        "capabilities": [
+          "chat",
+          "code"
+        ],
+        "serviceType": [
+          "chat"
+        ],
         "defaultTemperature": 0
       }
     },
@@ -101,8 +222,14 @@
       "spec": {
         "contextWindow": 32768,
         "maxOutputTokens": 4096,
-        "capabilities": ["chat", "code", "long_context"],
-        "serviceType": ["chat"],
+        "capabilities": [
+          "chat",
+          "code",
+          "long_context"
+        ],
+        "serviceType": [
+          "chat"
+        ],
         "defaultTemperature": 0
       }
     },
@@ -113,8 +240,14 @@
       "spec": {
         "contextWindow": 131072,
         "maxOutputTokens": 4096,
-        "capabilities": ["chat", "code", "long_context"],
-        "serviceType": ["chat"],
+        "capabilities": [
+          "chat",
+          "code",
+          "long_context"
+        ],
+        "serviceType": [
+          "chat"
+        ],
         "defaultTemperature": 0
       }
     }

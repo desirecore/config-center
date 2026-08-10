@@ -5,12 +5,27 @@
       "id": "spark-x",
       "displayName": "讯飞星火 X1",
       "family": "spark-x",
-      "match": { "exact": ["spark-x"], "patterns": ["spark-x*"] },
+      "match": {
+        "exact": [
+          "spark-x"
+        ],
+        "patterns": [
+          "spark-x*"
+        ]
+      },
       "spec": {
         "contextWindow": 65536,
         "maxOutputTokens": 128000,
-        "capabilities": ["chat", "reasoning", "deep_thinking", "math", "code"],
-        "serviceType": ["reasoning"],
+        "capabilities": [
+          "chat",
+          "reasoning",
+          "deep_thinking",
+          "math",
+          "code"
+        ],
+        "serviceType": [
+          "reasoning"
+        ],
         "defaultTemperature": 1.2,
         "supportsReasoning": true,
         "description": "讯飞深度推理模型，64K 输入/128K 输出，支持思考模式与函数调用"
@@ -20,12 +35,26 @@
       "id": "4.0Ultra",
       "displayName": "讯飞星火 4.0 Ultra",
       "family": "spark-4",
-      "match": { "exact": ["4.0Ultra"], "patterns": ["4.0Ultra*"] },
+      "match": {
+        "exact": [
+          "4.0Ultra"
+        ],
+        "patterns": [
+          "4.0Ultra*"
+        ]
+      },
       "spec": {
         "contextWindow": 32768,
         "maxOutputTokens": 32768,
-        "capabilities": ["chat", "reasoning", "code", "tool_use"],
-        "serviceType": ["chat"],
+        "capabilities": [
+          "chat",
+          "reasoning",
+          "code",
+          "tool_use"
+        ],
+        "serviceType": [
+          "chat"
+        ],
         "defaultTemperature": 1,
         "description": "讯飞星火最强通用模型，支持推理、代码和工具调用"
       }

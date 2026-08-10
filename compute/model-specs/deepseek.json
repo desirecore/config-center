@@ -5,32 +5,80 @@
       "id": "deepseek-v4-pro",
       "displayName": "DeepSeek V4 Pro",
       "family": "deepseek-v4",
-      "match": { "exact": ["deepseek-v4-pro"], "patterns": ["deepseek-v4-pro*"] },
+      "match": {
+        "exact": [
+          "deepseek-v4-pro"
+        ],
+        "patterns": [
+          "deepseek-v4-pro*"
+        ]
+      },
       "spec": {
         "contextWindow": 1000000,
         "maxOutputTokens": 384000,
-        "capabilities": ["chat", "reasoning", "deep_thinking", "code", "math", "science", "multilingual", "tool_use"],
-        "serviceType": ["chat", "reasoning"],
+        "capabilities": [
+          "chat",
+          "reasoning",
+          "deep_thinking",
+          "code",
+          "math",
+          "science",
+          "multilingual",
+          "tool_use"
+        ],
+        "serviceType": [
+          "chat",
+          "reasoning"
+        ],
         "defaultTemperature": 1,
         "supportsReasoning": true,
         "extra": {
           "supportsThinking": true,
           "thinkingDefault": true,
-          "reasoningEffort": ["high", "max"]
+          "reasoningEffort": [
+            "high",
+            "max"
+          ]
         },
         "description": "DeepSeek V4 Pro，1.6T MoE 架构，100 万上下文"
+      },
+      "routing": {
+        "tier": "flagship",
+        "routingPriority": 30,
+        "eligibleForAgent": true,
+        "defaultReference": true,
+        "reasoning": {
+          "supportedModes": [
+            "auto",
+            "high",
+            "max"
+          ],
+          "defaultMode": "high"
+        }
       }
     },
     {
       "id": "deepseek-chat",
       "displayName": "DeepSeek Chat",
       "family": "deepseek-chat",
-      "match": { "patterns": ["deepseek-chat*"] },
+      "match": {
+        "patterns": [
+          "deepseek-chat*"
+        ]
+      },
       "spec": {
         "contextWindow": 1000000,
         "maxOutputTokens": 384000,
-        "capabilities": ["chat", "code", "reasoning", "multilingual", "tool_use"],
-        "serviceType": ["chat"],
+        "capabilities": [
+          "chat",
+          "code",
+          "reasoning",
+          "multilingual",
+          "tool_use"
+        ],
+        "serviceType": [
+          "chat"
+        ],
         "defaultTemperature": 1
       }
     },
@@ -38,12 +86,25 @@
       "id": "deepseek-reasoner",
       "displayName": "DeepSeek Reasoner",
       "family": "deepseek-reasoner",
-      "match": { "patterns": ["deepseek-reasoner*"] },
+      "match": {
+        "patterns": [
+          "deepseek-reasoner*"
+        ]
+      },
       "spec": {
         "contextWindow": 1000000,
         "maxOutputTokens": 384000,
-        "capabilities": ["chat", "reasoning", "deep_thinking", "code", "math", "tool_use"],
-        "serviceType": ["reasoning"],
+        "capabilities": [
+          "chat",
+          "reasoning",
+          "deep_thinking",
+          "code",
+          "math",
+          "tool_use"
+        ],
+        "serviceType": [
+          "reasoning"
+        ],
         "defaultTemperature": null,
         "supportsReasoning": true
       }
@@ -52,18 +113,52 @@
       "id": "deepseek-v4-flash",
       "displayName": "DeepSeek V4 Flash",
       "family": "deepseek-v4",
-      "match": { "exact": ["deepseek-v4-flash"], "patterns": ["deepseek-v4-flash*"] },
+      "match": {
+        "exact": [
+          "deepseek-v4-flash"
+        ],
+        "patterns": [
+          "deepseek-v4-flash*"
+        ]
+      },
       "spec": {
         "contextWindow": 1000000,
         "maxOutputTokens": 384000,
-        "capabilities": ["chat", "code", "reasoning", "deep_thinking", "multilingual", "tool_use"],
-        "serviceType": ["chat", "reasoning"],
+        "capabilities": [
+          "chat",
+          "code",
+          "reasoning",
+          "deep_thinking",
+          "multilingual",
+          "tool_use"
+        ],
+        "serviceType": [
+          "chat",
+          "reasoning"
+        ],
         "defaultTemperature": 1,
         "supportsReasoning": true,
         "extra": {
           "supportsThinking": true,
           "thinkingDefault": true,
-          "reasoningEffort": ["high", "max"]
+          "reasoningEffort": [
+            "high",
+            "max"
+          ]
+        }
+      },
+      "routing": {
+        "tier": "lightweight",
+        "routingPriority": 35,
+        "eligibleForAgent": true,
+        "defaultReference": false,
+        "reasoning": {
+          "supportedModes": [
+            "auto",
+            "high",
+            "max"
+          ],
+          "defaultMode": "high"
         }
       }
     }

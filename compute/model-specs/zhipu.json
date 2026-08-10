@@ -5,14 +5,48 @@
       "id": "glm-5.2",
       "displayName": "GLM-5.2",
       "family": "glm-5.2",
-      "match": { "exact": ["glm-5.2"], "patterns": ["glm-5.2*"] },
+      "match": {
+        "exact": [
+          "glm-5.2"
+        ],
+        "patterns": [
+          "glm-5.2*"
+        ]
+      },
       "spec": {
         "contextWindow": 1048576,
         "maxOutputTokens": 32768,
-        "capabilities": ["reasoning", "deep_thinking", "code", "multilingual", "tool_use", "long_context"],
-        "serviceType": ["chat"],
+        "capabilities": [
+          "reasoning",
+          "deep_thinking",
+          "code",
+          "multilingual",
+          "tool_use",
+          "long_context"
+        ],
+        "serviceType": [
+          "chat"
+        ],
         "supportsReasoning": true,
         "description": "智谱 GLM-5.2 大推理模型，100 万上下文"
+      },
+      "routing": {
+        "tier": "flagship",
+        "routingPriority": 45,
+        "eligibleForAgent": true,
+        "defaultReference": false,
+        "reasoning": {
+          "supportedModes": [
+            "auto",
+            "off",
+            "minimal",
+            "low",
+            "medium",
+            "high",
+            "xhigh"
+          ],
+          "defaultMode": "high"
+        }
       }
     },
     {
@@ -22,10 +56,40 @@
       "spec": {
         "contextWindow": 200000,
         "maxOutputTokens": 128000,
-        "capabilities": ["chat", "reasoning", "code", "multilingual", "deep_thinking", "long_context", "math", "tool_use", "agent"],
-        "serviceType": ["chat"],
+        "capabilities": [
+          "chat",
+          "reasoning",
+          "code",
+          "multilingual",
+          "deep_thinking",
+          "long_context",
+          "math",
+          "tool_use",
+          "agent"
+        ],
+        "serviceType": [
+          "chat"
+        ],
         "defaultTemperature": 1,
         "supportsReasoning": true
+      },
+      "routing": {
+        "tier": "balanced",
+        "routingPriority": 65,
+        "eligibleForAgent": true,
+        "defaultReference": false,
+        "reasoning": {
+          "supportedModes": [
+            "auto",
+            "off",
+            "minimal",
+            "low",
+            "medium",
+            "high",
+            "xhigh"
+          ],
+          "defaultMode": "medium"
+        }
       }
     },
     {
@@ -35,8 +99,20 @@
       "spec": {
         "contextWindow": 200000,
         "maxOutputTokens": 128000,
-        "capabilities": ["chat", "reasoning", "code", "multilingual", "deep_thinking", "long_context", "math", "tool_use", "agent"],
-        "serviceType": ["chat"],
+        "capabilities": [
+          "chat",
+          "reasoning",
+          "code",
+          "multilingual",
+          "deep_thinking",
+          "long_context",
+          "math",
+          "tool_use",
+          "agent"
+        ],
+        "serviceType": [
+          "chat"
+        ],
         "defaultTemperature": 1,
         "supportsReasoning": true
       }
@@ -48,8 +124,18 @@
       "spec": {
         "contextWindow": 200000,
         "maxOutputTokens": 128000,
-        "capabilities": ["chat", "reasoning", "code", "deep_thinking", "long_context", "tool_use", "agent"],
-        "serviceType": ["chat"],
+        "capabilities": [
+          "chat",
+          "reasoning",
+          "code",
+          "deep_thinking",
+          "long_context",
+          "tool_use",
+          "agent"
+        ],
+        "serviceType": [
+          "chat"
+        ],
         "defaultTemperature": 1,
         "supportsReasoning": true
       }
@@ -61,8 +147,18 @@
       "spec": {
         "contextWindow": 200000,
         "maxOutputTokens": 128000,
-        "capabilities": ["chat", "reasoning", "code", "multilingual", "deep_thinking", "long_context", "tool_use"],
-        "serviceType": ["chat"],
+        "capabilities": [
+          "chat",
+          "reasoning",
+          "code",
+          "multilingual",
+          "deep_thinking",
+          "long_context",
+          "tool_use"
+        ],
+        "serviceType": [
+          "chat"
+        ],
         "defaultTemperature": 1,
         "supportsReasoning": true
       }
@@ -74,8 +170,16 @@
       "spec": {
         "contextWindow": 200000,
         "maxOutputTokens": 128000,
-        "capabilities": ["chat", "reasoning", "code", "multilingual", "deep_thinking"],
-        "serviceType": ["chat"],
+        "capabilities": [
+          "chat",
+          "reasoning",
+          "code",
+          "multilingual",
+          "deep_thinking"
+        ],
+        "serviceType": [
+          "chat"
+        ],
         "defaultTemperature": 1,
         "supportsReasoning": true
       }
@@ -84,12 +188,24 @@
       "id": "glm-4.7-thinking",
       "displayName": "GLM-4.7 Thinking",
       "family": "glm-4.7",
-      "match": { "exact": ["glm-4.7-thinking"] },
+      "match": {
+        "exact": [
+          "glm-4.7-thinking"
+        ]
+      },
       "spec": {
         "contextWindow": 200000,
         "maxOutputTokens": 128000,
-        "capabilities": ["reasoning", "math", "code", "deep_thinking", "long_context"],
-        "serviceType": ["reasoning"],
+        "capabilities": [
+          "reasoning",
+          "math",
+          "code",
+          "deep_thinking",
+          "long_context"
+        ],
+        "serviceType": [
+          "reasoning"
+        ],
         "defaultTemperature": null,
         "supportsReasoning": true,
         "description": "智谱GLM-4.7深度思考模式，交错式/保留式/轮级思考"
@@ -99,12 +215,30 @@
       "id": "glm-5v-turbo",
       "displayName": "GLM-5V-Turbo",
       "family": "glm-5v",
-      "match": { "exact": ["glm-5v-turbo"] },
+      "match": {
+        "exact": [
+          "glm-5v-turbo"
+        ]
+      },
       "spec": {
         "contextWindow": 200000,
         "maxOutputTokens": 128000,
-        "capabilities": ["chat", "vision", "video_understanding", "image_understanding", "file_understanding", "reasoning", "code", "deep_thinking", "long_context", "tool_use", "agent"],
-        "serviceType": ["vision"],
+        "capabilities": [
+          "chat",
+          "vision",
+          "video_understanding",
+          "image_understanding",
+          "file_understanding",
+          "reasoning",
+          "code",
+          "deep_thinking",
+          "long_context",
+          "tool_use",
+          "agent"
+        ],
+        "serviceType": [
+          "vision"
+        ],
         "defaultTemperature": 1,
         "supportsReasoning": true,
         "description": "智谱首个多模态 Coding 基座模型，支持视频、图像、文本和文件输入"
@@ -114,12 +248,25 @@
       "id": "glm-4.6v",
       "displayName": "GLM-4.6V",
       "family": "glm-4.6",
-      "match": { "exact": ["glm-4.6v"] },
+      "match": {
+        "exact": [
+          "glm-4.6v"
+        ]
+      },
       "spec": {
         "contextWindow": 128000,
         "maxOutputTokens": 32768,
-        "capabilities": ["chat", "vision", "video_understanding", "image_understanding", "long_context", "tool_use"],
-        "serviceType": ["vision"],
+        "capabilities": [
+          "chat",
+          "vision",
+          "video_understanding",
+          "image_understanding",
+          "long_context",
+          "tool_use"
+        ],
+        "serviceType": [
+          "vision"
+        ],
         "defaultTemperature": 1,
         "description": "智谱GLM-4.6V多模态版，106B/12B MoE，支持图像视频理解"
       }
@@ -128,11 +275,22 @@
       "id": "embedding-3",
       "displayName": "智谱 embedding-3",
       "family": "zhipu-embedding",
-      "match": { "exact": ["embedding-3"] },
+      "match": {
+        "exact": [
+          "embedding-3"
+        ]
+      },
       "spec": {
         "contextWindow": 8192,
-        "capabilities": ["text_embedding", "semantic_search", "rag", "custom_dimensions"],
-        "serviceType": ["embedding"],
+        "capabilities": [
+          "text_embedding",
+          "semantic_search",
+          "rag",
+          "custom_dimensions"
+        ],
+        "serviceType": [
+          "embedding"
+        ],
         "description": "智谱嵌入模型v3，支持自定义维度；单条输入最多 3072 tokens"
       }
     }

@@ -1,0 +1,51 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://desirecore.net/schemas/config-center/model-specs-index.schema.json",
+  "title": "ModelSpecsIndex",
+  "description": "compute/model-specs 的加载顺序与智能路由三档定义。量级属于 model-specs 域，不得另建 smart-routing 目录。",
+  "type": "object",
+  "required": ["order", "routingTiers"],
+  "properties": {
+    "description": {
+      "type": "string",
+      "description": "索引说明。"
+    },
+    "order": {
+      "type": "array",
+      "minItems": 1,
+      "uniqueItems": true,
+      "items": { "type": "string", "minLength": 1 },
+      "description": "模型规格文件 basename 的稳定加载顺序。"
+    },
+    "routingTiers": {
+      "type": "array",
+      "minItems": 3,
+      "maxItems": 3,
+      "items": {
+        "type": "object",
+        "required": ["id", "label", "labelEn", "description", "fallbackOrder"],
+        "properties": {
+          "id": {
+            "type": "string",
+            "enum": ["flagship", "balanced", "lightweight"],
+            "description": "量级稳定标识。"
+          },
+          "label": { "type": "string", "minLength": 1, "description": "中文标签。" },
+          "labelEn": { "type": "string", "minLength": 1, "description": "英文标签。" },
+          "description": { "type": "string", "minLength": 1, "description": "适用任务说明。" },
+          "fallbackOrder": {
+            "type": "array",
+            "minItems": 3,
+            "maxItems": 3,
+            "uniqueItems": true,
+            "items": { "type": "string", "enum": ["flagship", "balanced", "lightweight"] },
+            "description": "该档位缺少可用候选时的量级降级/升级顺序，首项必须等于 id。"
+          }
+        },
+        "additionalProperties": false
+      },
+      "description": "智能路由量级定义与回退策略。"
+    }
+  },
+  "additionalProperties": false
+}
