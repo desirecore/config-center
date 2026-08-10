@@ -5,10 +5,23 @@
       "id": "stable-diffusion-3.5-large",
       "displayName": "Stable Diffusion 3.5 Large",
       "family": "stable-diffusion-3",
-      "match": { "exact": ["stable-diffusion-3.5-large"], "patterns": ["stable-diffusion-3.5*"] },
+      "match": {
+        "exact": [
+          "stable-diffusion-3.5-large"
+        ],
+        "patterns": [
+          "stable-diffusion-3.5*"
+        ]
+      },
       "spec": {
-        "capabilities": ["image_generation", "high_quality", "controllable"],
-        "serviceType": ["image_gen"],
+        "capabilities": [
+          "image_generation",
+          "high_quality",
+          "controllable"
+        ],
+        "serviceType": [
+          "image_gen"
+        ],
         "description": "Stability AI 旗舰文生图模型，支持多种分辨率和风格"
       }
     }

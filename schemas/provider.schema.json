@@ -174,7 +174,7 @@
     },
     "models": {
       "type": "array",
-      "description": "此提供商下的可用模型列表",
+      "description": "此接入面当前可调用的模型列表。可用性、凭据、价格与 API 映射属于 Provider；模型能力、上下文、Smart tier 与产品 reasoning 合同以 compute/model-specs 为准。",
       "items": { "$ref": "#/definitions/model" }
     },
     "tombstones": {
@@ -196,18 +196,18 @@
       "properties": {
         "modelName": {
           "type": "string",
-          "description": "模型 ID，用于 API 调用（如 gpt-5-mini、claude-sonnet-4）",
+          "description": "此 Provider 接入面实际接受的模型 ID，用于 API 调用并与 ModelSpec 的精确/受控别名匹配（如 gpt-5-mini、claude-sonnet-4）。",
           "minLength": 1
         },
         "displayName": {
           "type": "string",
-          "description": "模型显示名称（如 GPT-5 Mini、Claude Sonnet 4）",
+          "description": "旧客户端展示兼容副本。新 Smart 路径以 ModelSpec.displayName 为模型事实，此字段仅随接入面保留。",
           "minLength": 1
         },
         "serviceType": {
           "type": ["string", "array"],
           "items": { "type": "string" },
-          "description": "服务类型，支持单个字符串或数组：chat、reasoning、fast、responses、translation、tts、asr、voice_clone、realtime_voice、simultaneous_interpret、vision、ocr、image_gen、video_gen、embedding、rerank、omni、computer_use 等"
+          "description": "旧客户端兼容的接入面服务声明；新 Smart 路径以 ModelSpec.spec 为能力事实。支持单个字符串或数组：chat、reasoning、fast、responses、translation、tts、asr、voice_clone、realtime_voice、simultaneous_interpret、vision、ocr、image_gen、video_gen、embedding、rerank、omni、computer_use 等"
         },
         "description": {
           "type": "string",
@@ -215,17 +215,17 @@
         },
         "contextWindow": {
           "type": "number",
-          "description": "上下文窗口大小（token 数）",
+          "description": "旧客户端兼容副本；Smart 以 ModelSpec.spec.contextWindow 为模型事实，本地接入面覆盖只能收紧。",
           "minimum": 0
         },
         "maxOutputTokens": {
           "type": "number",
-          "description": "单次请求最大输出 token 数",
+          "description": "旧客户端兼容副本；新模型规格以 ModelSpec.spec.maxOutputTokens 为准。",
           "minimum": 0
         },
         "capabilities": {
           "type": "array",
-          "description": "模型能力标签：chat、vision、tool_use、code、reasoning 等",
+          "description": "旧客户端兼容副本；Smart 的能力标签以 ModelSpec.spec.capabilities 为准，接入面或用户覆盖只能收紧，不能扩张。",
           "items": { "type": "string" }
         },
         "inputPrice": {
@@ -252,7 +252,7 @@
         },
         "extra": {
           "type": "object",
-          "description": "模型特定配置：如 TTS 模型音色列表、ASR 支持格式、模型级 reasoning effort 能力等。这里是兼容扩展面：旧客户端会安全保留并忽略未知子字段。",
+          "description": "接入面特定配置：如 TTS 模型音色列表、ASR 支持格式与本 Provider 实际接受的 reasoning effort。这里是兼容扩展面：旧客户端会安全保留并忽略未知子字段。",
           "properties": {
             "reasoning": {
               "type": "object",
@@ -266,12 +266,12 @@
                     "type": "string",
                     "enum": ["none", "minimal", "low", "medium", "high", "xhigh", "max"]
                   },
-                  "description": "当前模型与接入面实际接受的 OpenAI reasoning effort。none 在产品层映射为 off；Ultra 是多 Agent 编排模式，禁止写入。"
+                  "description": "当前接入面实际接受的 OpenAI reasoning effort；它只能收紧精确 ModelSpec.routing.reasoning 合同，不能扩张。none 在产品层映射为 off；Ultra 是多 Agent 编排模式，禁止写入。"
                 },
                 "defaultEffort": {
                   "type": "string",
                   "enum": ["minimal", "low", "medium", "high", "xhigh", "max"],
-                  "description": "当前模型在此接入面的推荐显式默认档位，必须同时存在于 supportedEfforts。"
+                  "description": "当前接入面推荐的显式默认档位；仅当它仍属于 ModelSpec 合同时生效，且必须同时存在于 supportedEfforts。"
                 }
               },
               "allOf": [

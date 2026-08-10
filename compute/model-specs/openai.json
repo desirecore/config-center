@@ -5,11 +5,24 @@
       "id": "gpt-image-2",
       "displayName": "GPT Image 2",
       "family": "gpt-image",
-      "match": { "exact": ["gpt-image-2"], "patterns": ["gpt-image-2*"] },
+      "match": {
+        "exact": [
+          "gpt-image-2"
+        ],
+        "patterns": [
+          "gpt-image-2*"
+        ]
+      },
       "spec": {
         "contextWindow": 400000,
-        "capabilities": ["image_generation", "image_editing", "high_quality"],
-        "serviceType": ["image_gen"],
+        "capabilities": [
+          "image_generation",
+          "image_editing",
+          "high_quality"
+        ],
+        "serviceType": [
+          "image_gen"
+        ],
         "description": "OpenAI 最新文生图模型，支持高质量图片生成与编辑，400K 上下文"
       }
     },
@@ -17,28 +30,94 @@
       "id": "gpt-5.5",
       "displayName": "GPT-5.5",
       "family": "gpt-5",
-      "match": { "exact": ["gpt-5.5"], "patterns": ["gpt-5.5*"] },
+      "match": {
+        "exact": [
+          "gpt-5.5"
+        ],
+        "patterns": [
+          "gpt-5.5*"
+        ]
+      },
       "spec": {
         "contextWindow": 1050000,
         "maxOutputTokens": 128000,
-        "capabilities": ["chat", "reasoning", "code", "vision", "long_context", "tool_use"],
-        "serviceType": ["chat"],
+        "capabilities": [
+          "chat",
+          "reasoning",
+          "code",
+          "vision",
+          "long_context",
+          "tool_use"
+        ],
+        "serviceType": [
+          "chat"
+        ],
         "defaultTemperature": 1,
         "supportsReasoning": true
+      },
+      "routing": {
+        "tier": "flagship",
+        "routingPriority": 60,
+        "eligibleForAgent": true,
+        "defaultReference": false,
+        "reasoning": {
+          "supportedModes": [
+            "auto",
+            "off",
+            "low",
+            "medium",
+            "high",
+            "xhigh"
+          ],
+          "defaultMode": "medium"
+        }
       }
     },
     {
       "id": "gpt-5.4",
       "displayName": "GPT-5.4",
       "family": "gpt-5",
-      "match": { "exact": ["gpt-5.4"], "patterns": ["gpt-5.4*"] },
+      "match": {
+        "exact": [
+          "gpt-5.4"
+        ],
+        "patterns": [
+          "gpt-5.4*"
+        ]
+      },
       "spec": {
         "contextWindow": 1050000,
         "maxOutputTokens": 128000,
-        "capabilities": ["chat", "reasoning", "code", "vision", "long_context", "tool_use"],
-        "serviceType": ["chat"],
+        "capabilities": [
+          "chat",
+          "reasoning",
+          "code",
+          "vision",
+          "long_context",
+          "tool_use"
+        ],
+        "serviceType": [
+          "chat"
+        ],
         "defaultTemperature": 1,
         "supportsReasoning": true
+      },
+      "routing": {
+        "tier": "balanced",
+        "routingPriority": 60,
+        "eligibleForAgent": true,
+        "defaultReference": false,
+        "reasoning": {
+          "supportedModes": [
+            "auto",
+            "off",
+            "low",
+            "medium",
+            "high",
+            "xhigh"
+          ],
+          "defaultMode": "medium"
+        }
       }
     },
     {
@@ -48,8 +127,17 @@
       "spec": {
         "contextWindow": 400000,
         "maxOutputTokens": 128000,
-        "capabilities": ["chat", "reasoning", "code", "vision", "long_context", "tool_use"],
-        "serviceType": ["chat"],
+        "capabilities": [
+          "chat",
+          "reasoning",
+          "code",
+          "vision",
+          "long_context",
+          "tool_use"
+        ],
+        "serviceType": [
+          "chat"
+        ],
         "defaultTemperature": 1,
         "supportsReasoning": true
       }
@@ -61,8 +149,17 @@
       "spec": {
         "contextWindow": 400000,
         "maxOutputTokens": 128000,
-        "capabilities": ["chat", "reasoning", "code", "vision", "long_context", "tool_use"],
-        "serviceType": ["chat"],
+        "capabilities": [
+          "chat",
+          "reasoning",
+          "code",
+          "vision",
+          "long_context",
+          "tool_use"
+        ],
+        "serviceType": [
+          "chat"
+        ],
         "defaultTemperature": 1,
         "supportsReasoning": true
       }
@@ -74,8 +171,17 @@
       "spec": {
         "contextWindow": 400000,
         "maxOutputTokens": 128000,
-        "capabilities": ["chat", "reasoning", "code", "vision", "long_context", "tool_use"],
-        "serviceType": ["chat"],
+        "capabilities": [
+          "chat",
+          "reasoning",
+          "code",
+          "vision",
+          "long_context",
+          "tool_use"
+        ],
+        "serviceType": [
+          "chat"
+        ],
         "defaultTemperature": 1,
         "supportsReasoning": true
       }
@@ -84,12 +190,24 @@
       "id": "gpt-5-mini",
       "displayName": "GPT-5 Mini",
       "family": "gpt-5",
-      "match": { "patterns": ["gpt-5-mini*"] },
+      "match": {
+        "patterns": [
+          "gpt-5-mini*"
+        ]
+      },
       "spec": {
         "contextWindow": 400000,
         "maxOutputTokens": 128000,
-        "capabilities": ["chat", "fast", "tool_use", "code", "vision"],
-        "serviceType": ["chat"],
+        "capabilities": [
+          "chat",
+          "fast",
+          "tool_use",
+          "code",
+          "vision"
+        ],
+        "serviceType": [
+          "chat"
+        ],
         "defaultTemperature": 1,
         "supportsReasoning": true
       }
@@ -98,12 +216,22 @@
       "id": "gpt-5-nano",
       "displayName": "GPT-5 Nano",
       "family": "gpt-5",
-      "match": { "patterns": ["gpt-5-nano*"] },
+      "match": {
+        "patterns": [
+          "gpt-5-nano*"
+        ]
+      },
       "spec": {
         "contextWindow": 400000,
         "maxOutputTokens": 128000,
-        "capabilities": ["chat", "code", "fast"],
-        "serviceType": ["fast"],
+        "capabilities": [
+          "chat",
+          "code",
+          "fast"
+        ],
+        "serviceType": [
+          "fast"
+        ],
         "defaultTemperature": 1
       }
     },
@@ -114,8 +242,17 @@
       "spec": {
         "contextWindow": 1047576,
         "maxOutputTokens": 32768,
-        "capabilities": ["chat", "reasoning", "code", "vision", "ultra_long_context", "tool_use"],
-        "serviceType": ["chat"],
+        "capabilities": [
+          "chat",
+          "reasoning",
+          "code",
+          "vision",
+          "ultra_long_context",
+          "tool_use"
+        ],
+        "serviceType": [
+          "chat"
+        ],
         "defaultTemperature": 1
       }
     },
@@ -126,8 +263,15 @@
       "spec": {
         "contextWindow": 128000,
         "maxOutputTokens": 16384,
-        "capabilities": ["chat", "vision", "image_understanding", "tool_use"],
-        "serviceType": ["vision"],
+        "capabilities": [
+          "chat",
+          "vision",
+          "image_understanding",
+          "tool_use"
+        ],
+        "serviceType": [
+          "vision"
+        ],
         "defaultTemperature": 1
       }
     },
@@ -135,12 +279,23 @@
       "id": "gpt-4o-mini",
       "displayName": "GPT-4o Mini",
       "family": "gpt-4o",
-      "match": { "patterns": ["gpt-4o-mini*"] },
+      "match": {
+        "patterns": [
+          "gpt-4o-mini*"
+        ]
+      },
       "spec": {
         "contextWindow": 128000,
         "maxOutputTokens": 16384,
-        "capabilities": ["chat", "code", "vision", "tool_use"],
-        "serviceType": ["vision"],
+        "capabilities": [
+          "chat",
+          "code",
+          "vision",
+          "tool_use"
+        ],
+        "serviceType": [
+          "vision"
+        ],
         "defaultTemperature": 1
       }
     },
@@ -151,8 +306,17 @@
       "spec": {
         "contextWindow": 200000,
         "maxOutputTokens": 100000,
-        "capabilities": ["reasoning", "deep_thinking", "code", "math", "science", "tool_use"],
-        "serviceType": ["reasoning"],
+        "capabilities": [
+          "reasoning",
+          "deep_thinking",
+          "code",
+          "math",
+          "science",
+          "tool_use"
+        ],
+        "serviceType": [
+          "reasoning"
+        ],
         "defaultTemperature": null,
         "supportsReasoning": true
       }
@@ -161,12 +325,23 @@
       "id": "o3-mini",
       "displayName": "o3 Mini",
       "family": "o3",
-      "match": { "patterns": ["o3-mini*"] },
+      "match": {
+        "patterns": [
+          "o3-mini*"
+        ]
+      },
       "spec": {
         "contextWindow": 200000,
         "maxOutputTokens": 100000,
-        "capabilities": ["reasoning", "math", "code", "fast"],
-        "serviceType": ["reasoning"],
+        "capabilities": [
+          "reasoning",
+          "math",
+          "code",
+          "fast"
+        ],
+        "serviceType": [
+          "reasoning"
+        ],
         "defaultTemperature": null,
         "supportsReasoning": true
       }
@@ -175,12 +350,24 @@
       "id": "o4-mini",
       "displayName": "o4 Mini",
       "family": "o4",
-      "match": { "patterns": ["o4-mini*"] },
+      "match": {
+        "patterns": [
+          "o4-mini*"
+        ]
+      },
       "spec": {
         "contextWindow": 200000,
         "maxOutputTokens": 100000,
-        "capabilities": ["reasoning", "math", "code", "tool_use", "vision"],
-        "serviceType": ["reasoning"],
+        "capabilities": [
+          "reasoning",
+          "math",
+          "code",
+          "tool_use",
+          "vision"
+        ],
+        "serviceType": [
+          "reasoning"
+        ],
         "defaultTemperature": null,
         "supportsReasoning": true
       }
@@ -189,12 +376,25 @@
       "id": "gpt-5.2-pro",
       "displayName": "GPT-5.2 Pro",
       "family": "gpt-5",
-      "match": { "exact": ["gpt-5.2-pro"] },
+      "match": {
+        "exact": [
+          "gpt-5.2-pro"
+        ]
+      },
       "spec": {
         "contextWindow": 400000,
         "maxOutputTokens": 128000,
-        "capabilities": ["chat", "reasoning", "code", "vision", "long_context", "tool_use"],
-        "serviceType": ["chat"],
+        "capabilities": [
+          "chat",
+          "reasoning",
+          "code",
+          "vision",
+          "long_context",
+          "tool_use"
+        ],
+        "serviceType": [
+          "chat"
+        ],
         "defaultTemperature": 1,
         "supportsReasoning": true,
         "description": "OpenAI GPT-5.2 Pro 专业版，最高性能"
@@ -204,12 +404,25 @@
       "id": "gpt-5-pro",
       "displayName": "GPT-5 Pro",
       "family": "gpt-5",
-      "match": { "exact": ["gpt-5-pro"] },
+      "match": {
+        "exact": [
+          "gpt-5-pro"
+        ]
+      },
       "spec": {
         "contextWindow": 400000,
         "maxOutputTokens": 272000,
-        "capabilities": ["chat", "reasoning", "code", "vision", "long_context", "tool_use"],
-        "serviceType": ["chat"],
+        "capabilities": [
+          "chat",
+          "reasoning",
+          "code",
+          "vision",
+          "long_context",
+          "tool_use"
+        ],
+        "serviceType": [
+          "chat"
+        ],
         "defaultTemperature": 1,
         "supportsReasoning": true,
         "description": "OpenAI GPT-5 Pro 专业版高性能推理模型"
@@ -219,12 +432,27 @@
       "id": "gpt-4.1-mini",
       "displayName": "GPT-4.1 mini",
       "family": "gpt-4.1",
-      "match": { "exact": ["gpt-4.1-mini"], "patterns": ["gpt-4.1-mini*"] },
+      "match": {
+        "exact": [
+          "gpt-4.1-mini"
+        ],
+        "patterns": [
+          "gpt-4.1-mini*"
+        ]
+      },
       "spec": {
         "contextWindow": 1047576,
         "maxOutputTokens": 32768,
-        "capabilities": ["chat", "code", "vision", "ultra_long_context", "tool_use"],
-        "serviceType": ["chat"],
+        "capabilities": [
+          "chat",
+          "code",
+          "vision",
+          "ultra_long_context",
+          "tool_use"
+        ],
+        "serviceType": [
+          "chat"
+        ],
         "defaultTemperature": 1,
         "description": "OpenAI GPT-4.1 mini，1M 上下文，高性价比"
       }
@@ -233,12 +461,26 @@
       "id": "gpt-4.1-nano",
       "displayName": "GPT-4.1 nano",
       "family": "gpt-4.1",
-      "match": { "exact": ["gpt-4.1-nano"], "patterns": ["gpt-4.1-nano*"] },
+      "match": {
+        "exact": [
+          "gpt-4.1-nano"
+        ],
+        "patterns": [
+          "gpt-4.1-nano*"
+        ]
+      },
       "spec": {
         "contextWindow": 1047576,
         "maxOutputTokens": 32768,
-        "capabilities": ["chat", "code", "ultra_long_context", "fast"],
-        "serviceType": ["fast"],
+        "capabilities": [
+          "chat",
+          "code",
+          "ultra_long_context",
+          "fast"
+        ],
+        "serviceType": [
+          "fast"
+        ],
         "defaultTemperature": 1,
         "description": "OpenAI GPT-4.1 nano，1M 上下文，极致性价比"
       }
@@ -247,11 +489,20 @@
       "id": "text-embedding-3-small",
       "displayName": "text-embedding-3-small",
       "family": "text-embedding-3",
-      "match": { "exact": ["text-embedding-3-small"] },
+      "match": {
+        "exact": [
+          "text-embedding-3-small"
+        ]
+      },
       "spec": {
         "contextWindow": 8192,
-        "capabilities": ["text_embedding", "semantic_search"],
-        "serviceType": ["embedding"],
+        "capabilities": [
+          "text_embedding",
+          "semantic_search"
+        ],
+        "serviceType": [
+          "embedding"
+        ],
         "description": "OpenAI 轻量文本向量化模型，1536 维"
       }
     },
@@ -259,11 +510,20 @@
       "id": "text-embedding-3-large",
       "displayName": "text-embedding-3-large",
       "family": "text-embedding-3",
-      "match": { "exact": ["text-embedding-3-large"] },
+      "match": {
+        "exact": [
+          "text-embedding-3-large"
+        ]
+      },
       "spec": {
         "contextWindow": 8192,
-        "capabilities": ["text_embedding", "semantic_search"],
-        "serviceType": ["embedding"],
+        "capabilities": [
+          "text_embedding",
+          "semantic_search"
+        ],
+        "serviceType": [
+          "embedding"
+        ],
         "description": "OpenAI 高精度文本向量化模型，3072 维"
       }
     },
@@ -271,10 +531,18 @@
       "id": "tts-1",
       "displayName": "TTS-1",
       "family": "tts-1",
-      "match": { "exact": ["tts-1"] },
+      "match": {
+        "exact": [
+          "tts-1"
+        ]
+      },
       "spec": {
-        "capabilities": ["tts"],
-        "serviceType": ["tts"],
+        "capabilities": [
+          "tts"
+        ],
+        "serviceType": [
+          "tts"
+        ],
         "description": "OpenAI 标准语音合成"
       }
     },
@@ -282,10 +550,18 @@
       "id": "tts-1-hd",
       "displayName": "TTS-1-HD",
       "family": "tts-1",
-      "match": { "exact": ["tts-1-hd"] },
+      "match": {
+        "exact": [
+          "tts-1-hd"
+        ]
+      },
       "spec": {
-        "capabilities": ["tts"],
-        "serviceType": ["tts"],
+        "capabilities": [
+          "tts"
+        ],
+        "serviceType": [
+          "tts"
+        ],
         "description": "OpenAI 高清语音合成"
       }
     },
@@ -293,10 +569,19 @@
       "id": "whisper-1",
       "displayName": "Whisper",
       "family": "whisper",
-      "match": { "exact": ["whisper-1"] },
+      "match": {
+        "exact": [
+          "whisper-1"
+        ]
+      },
       "spec": {
-        "capabilities": ["asr", "multilingual"],
-        "serviceType": ["asr"],
+        "capabilities": [
+          "asr",
+          "multilingual"
+        ],
+        "serviceType": [
+          "asr"
+        ],
         "description": "OpenAI 通用语音识别"
       }
     },
@@ -304,12 +589,24 @@
       "id": "o3-pro",
       "displayName": "o3-pro",
       "family": "o3",
-      "match": { "exact": ["o3-pro"] },
+      "match": {
+        "exact": [
+          "o3-pro"
+        ]
+      },
       "spec": {
         "contextWindow": 200000,
         "maxOutputTokens": 100000,
-        "capabilities": ["reasoning", "deep_thinking", "code", "math", "science"],
-        "serviceType": ["reasoning"],
+        "capabilities": [
+          "reasoning",
+          "deep_thinking",
+          "code",
+          "math",
+          "science"
+        ],
+        "serviceType": [
+          "reasoning"
+        ],
         "defaultTemperature": null,
         "supportsReasoning": true,
         "description": "OpenAI o3-pro 高级推理模型，200K 上下文"
@@ -319,10 +616,19 @@
       "id": "dall-e-3",
       "displayName": "DALL-E 3",
       "family": "dall-e",
-      "match": { "exact": ["dall-e-3"] },
+      "match": {
+        "exact": [
+          "dall-e-3"
+        ]
+      },
       "spec": {
-        "capabilities": ["image_generation", "text_rendering"],
-        "serviceType": ["image_gen"],
+        "capabilities": [
+          "image_generation",
+          "text_rendering"
+        ],
+        "serviceType": [
+          "image_gen"
+        ],
         "description": "OpenAI 高质量文生图模型"
       }
     },
@@ -330,12 +636,24 @@
       "id": "gpt-4o-realtime",
       "displayName": "GPT-4o Realtime",
       "family": "gpt-4o-realtime",
-      "match": { "exact": ["gpt-4o-realtime"] },
+      "match": {
+        "exact": [
+          "gpt-4o-realtime"
+        ]
+      },
       "spec": {
         "contextWindow": 32000,
         "maxOutputTokens": 4096,
-        "capabilities": ["chat", "vision", "tts", "asr", "realtime"],
-        "serviceType": ["omni"],
+        "capabilities": [
+          "chat",
+          "vision",
+          "tts",
+          "asr",
+          "realtime"
+        ],
+        "serviceType": [
+          "omni"
+        ],
         "defaultTemperature": 0.7,
         "description": "OpenAI 全能实时模型，支持语音 + 文本 + 视觉"
       }
@@ -344,12 +662,25 @@
       "id": "gpt-4o-realtime-preview",
       "displayName": "GPT-4o Realtime Preview",
       "family": "gpt-4o-realtime",
-      "match": { "exact": ["gpt-4o-realtime-preview"], "patterns": ["gpt-4o-realtime-preview*"] },
+      "match": {
+        "exact": [
+          "gpt-4o-realtime-preview"
+        ],
+        "patterns": [
+          "gpt-4o-realtime-preview*"
+        ]
+      },
       "spec": {
         "contextWindow": 32000,
         "maxOutputTokens": 4096,
-        "capabilities": ["realtime", "speech_to_speech", "low_latency"],
-        "serviceType": ["realtime_voice"],
+        "capabilities": [
+          "realtime",
+          "speech_to_speech",
+          "low_latency"
+        ],
+        "serviceType": [
+          "realtime_voice"
+        ],
         "defaultTemperature": 0.7,
         "description": "OpenAI 实时语音交互模型（预览版）"
       }
@@ -358,13 +689,208 @@
       "id": "gpt-oss-120b",
       "displayName": "GPT OSS 120B",
       "family": "gpt-oss",
-      "match": { "exact": ["gpt-oss-120b", "openai/gpt-oss-120b:free", "gpt-oss-120b:free"] },
+      "match": {
+        "exact": [
+          "gpt-oss-120b",
+          "openai/gpt-oss-120b:free",
+          "gpt-oss-120b:free"
+        ]
+      },
       "spec": {
         "contextWindow": 128000,
         "maxOutputTokens": 16384,
-        "capabilities": ["chat", "code", "reasoning"],
-        "serviceType": ["chat"],
+        "capabilities": [
+          "chat",
+          "code",
+          "reasoning"
+        ],
+        "serviceType": [
+          "chat"
+        ],
         "description": "OpenAI 开源 120B 模型（通过 OpenRouter 提供，:free 层）"
+      }
+    },
+    {
+      "id": "gpt-5.6-sol",
+      "displayName": "GPT-5.6 Sol",
+      "spec": {
+        "contextWindow": 1050000,
+        "maxOutputTokens": 128000,
+        "capabilities": [
+          "chat",
+          "reasoning",
+          "code",
+          "vision",
+          "long_context",
+          "tool_use",
+          "agent"
+        ],
+        "serviceType": [
+          "chat"
+        ],
+        "supportsReasoning": true
+      },
+      "routing": {
+        "tier": "flagship",
+        "routingPriority": 10,
+        "eligibleForAgent": true,
+        "defaultReference": false,
+        "reasoning": {
+          "supportedModes": [
+            "auto",
+            "off",
+            "low",
+            "medium",
+            "high",
+            "xhigh",
+            "max"
+          ],
+          "defaultMode": "low"
+        }
+      }
+    },
+    {
+      "id": "gpt-5.6-terra",
+      "displayName": "GPT-5.6 Terra",
+      "spec": {
+        "contextWindow": 1050000,
+        "maxOutputTokens": 128000,
+        "capabilities": [
+          "chat",
+          "reasoning",
+          "code",
+          "vision",
+          "long_context",
+          "tool_use",
+          "agent"
+        ],
+        "serviceType": [
+          "chat"
+        ],
+        "supportsReasoning": true
+      },
+      "routing": {
+        "tier": "balanced",
+        "routingPriority": 10,
+        "eligibleForAgent": true,
+        "defaultReference": false,
+        "reasoning": {
+          "supportedModes": [
+            "auto",
+            "off",
+            "low",
+            "medium",
+            "high",
+            "xhigh",
+            "max"
+          ],
+          "defaultMode": "medium"
+        }
+      }
+    },
+    {
+      "id": "gpt-5.6-luna",
+      "displayName": "GPT-5.6 Luna",
+      "spec": {
+        "contextWindow": 1050000,
+        "maxOutputTokens": 128000,
+        "capabilities": [
+          "chat",
+          "reasoning",
+          "code",
+          "vision",
+          "long_context",
+          "tool_use",
+          "fast"
+        ],
+        "serviceType": [
+          "chat"
+        ],
+        "supportsReasoning": true
+      },
+      "routing": {
+        "tier": "lightweight",
+        "routingPriority": 10,
+        "eligibleForAgent": true,
+        "defaultReference": false,
+        "reasoning": {
+          "supportedModes": [
+            "auto",
+            "off",
+            "low",
+            "medium",
+            "high",
+            "xhigh",
+            "max"
+          ],
+          "defaultMode": "medium"
+        }
+      }
+    },
+    {
+      "id": "gpt-5.4-mini",
+      "displayName": "GPT-5.4 Mini",
+      "spec": {
+        "contextWindow": 400000,
+        "maxOutputTokens": 128000,
+        "capabilities": [
+          "chat",
+          "reasoning",
+          "code",
+          "vision",
+          "long_context",
+          "tool_use",
+          "fast"
+        ],
+        "serviceType": [
+          "chat"
+        ],
+        "supportsReasoning": true
+      },
+      "routing": {
+        "tier": "lightweight",
+        "routingPriority": 25,
+        "eligibleForAgent": true,
+        "defaultReference": false,
+        "reasoning": {
+          "supportedModes": [
+            "auto",
+            "off",
+            "low",
+            "medium",
+            "high",
+            "xhigh"
+          ],
+          "defaultMode": "low"
+        }
+      }
+    },
+    {
+      "id": "gpt-5.3-codex-spark",
+      "displayName": "GPT-5.3 Codex Spark（Pro 专属）",
+      "spec": {
+        "contextWindow": 128000,
+        "capabilities": [
+          "chat",
+          "code",
+          "tool_use",
+          "fast"
+        ],
+        "serviceType": [
+          "chat"
+        ]
+      },
+      "routing": {
+        "tier": "lightweight",
+        "routingPriority": 30,
+        "eligibleForAgent": true,
+        "defaultReference": false,
+        "reasoning": {
+          "supportedModes": [
+            "auto"
+          ],
+          "defaultMode": "auto"
+        }
       }
     }
   ]

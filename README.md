@@ -26,7 +26,7 @@ PR #1 曾把 reasoning 模型的 `defaultTemperature` / `defaultTopP` 写为 `nu
 | `provider.schema.json` | `compute/providers/*.json`、`compute/coding-plans/*.json` | `defaultTemperature`/`defaultTopP` 必须是 number，禁止 null/string；`additionalProperties: false` |
 | `manifest.schema.json` | `manifest.json` | `presetDataVersion` 必须是递增整数 |
 | `service-map.schema.json` | `compute/service-map.json` | 每条映射须含 `modelName` + `providerId` |
-| `smart-model-catalog.schema.json` | `compute/smart-routing/model-catalog.json` | 智能路由三档量级、接入面、exact model 能力和稳定优先级 |
+| `model-spec.schema.json` + `model-specs-index.schema.json` | `compute/model-specs/*.json` + `_index.json` | 模型内在规格、智能路由三档、exact model 策略与稳定优先级 |
 | `providers-index.schema.json` | 两个 `_index.json` | `order` 数组无重复 |
 | `pricing.schema.json` | `compute/pricing.json` | `markupRatio` / `usdToCny` 为正数 |
 
@@ -63,16 +63,14 @@ PR #1 曾把 reasoning 模型的 `defaultTemperature` / `defaultTopP` 写为 `nu
 
 否则老客户端会因未知字段校验失败死锁。
 
-### 智能路由目录的边界
+### 智能路由的模型规格边界
 
-`compute/smart-routing/model-catalog.json` 是路由器直接消费的、按接入面核对过的策略快照：
+`compute/model-specs` 是智能路由唯一的模型规格主数据：
 
-- `tier`、`routingPriority`、`eligibleForAgent` 和 `defaultReference` 属于路由策略；
-- `capabilities`、上下文和 reasoning 是该 `providerId + model` 接入面的可用能力快照；
-- 它不声明 API key、baseUrl、登录状态、用户额度或实时计价；`desirecore-cloud` 的连接与计费状态仍由登录后的 Provider 接口动态下发；
-- Codex、Claude 条目必须能在对应 `compute/providers/*.json` 中按 exact model 找到，测试会阻止已下线模型继续参与路由。
-
-客户端把本文件作为可热更新主数据源，并保留同 Schema 的内置离线兜底。调整 Provider 或 model-spec 的能力事实时，应同步审阅本目录，避免路由快照漂移。
+- 每个 ModelSpec 的 `spec` 保存能力、上下文和输出上限；`routing` 保存 tier、稳定优先级、Agent 可选性和标准化 reasoning 合同；
+- `_index.json#routingTiers` 保存三档展示和回退顺序；不得创建 `compute/smart-routing/**` 等平行目录；
+- Provider 仅保存接入面、可用性、凭据和必要的接入面收紧；历史 Provider 模型字段是旧客户端兼容副本，不能覆盖 ModelSpec；
+- `desirecore-cloud` 的连接、订阅、网关与计费仍由登录后的 Provider 接口动态下发，只有精确匹配 ModelSpec 的模型才可参加智能路由。
 
 ---
 
@@ -90,8 +88,8 @@ CI（GitHub Actions）会在每个 PR 自动运行 `validate` 和 `test`，不�
 
 ## 数据修改流程
 
-1. 编辑 `compute/providers/<name>.json`、`compute/coding-plans/<name>.json`、`compute/service-map.json` 或 `compute/smart-routing/model-catalog.json`
-2. 编辑 `compute/providers/_index.json` 或 `coding-plans/_index.json`（新增/删除 provider 时）
+1. 编辑 `compute/model-specs/<name>.json`（模型规格或智能路由策略）、`compute/providers/<name>.json`（接入面覆盖）、`compute/coding-plans/<name>.json` 或 `compute/service-map.json`
+2. 编辑 `compute/model-specs/_index.json`（新增规格文件或调整三档策略）、`compute/providers/_index.json` 或 `coding-plans/_index.json`（新增/删除 provider 时）
 3. **必须**递增 `manifest.json#presetDataVersion`，并更新 `updatedAt`
 4. `npm run validate` 本地确认通过
 5. 提 PR，等 CI 校验通过
@@ -107,4 +105,4 @@ CI（GitHub Actions）会在每个 PR 自动运行 `validate` 和 `test`，不�
 - **构建期同步**：`npm run sync-config-center` 把数据复制到 desirecore 主仓 `lib/agent-service/defaults/`
 - **运行时同步**：客户端启动后后台 git fetch 本仓库，每 30 分钟检查一次远程更新
 - **版本比对**：`presetDataVersion`（递增整数）+ digest（SHA-256）双重校验
-- **智能路由目录**：新客户端按文件 mtime 热加载 `compute/smart-routing/model-catalog.json`；缺失或校验失败时使用随客户端发布的内置 JSON
+- **智能路由规格**：新客户端按 `compute/model-specs/_index.json` 与已列出 ModelSpec 文件的版本签名热加载；缺失、无精确匹配或校验失败时，该模型不会进入 Smart 路由，fixed 模式保持兼容

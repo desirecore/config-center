@@ -5,11 +5,26 @@
       "id": "grok-4-3",
       "displayName": "Grok 4.3",
       "family": "grok-4",
-      "match": { "exact": ["grok-4.3"], "patterns": ["grok-4.3*"] },
+      "match": {
+        "exact": [
+          "grok-4.3"
+        ],
+        "patterns": [
+          "grok-4.3*"
+        ]
+      },
       "spec": {
         "contextWindow": 1000000,
-        "capabilities": ["reasoning", "code", "vision", "tool_use", "long_context"],
-        "serviceType": ["chat"],
+        "capabilities": [
+          "reasoning",
+          "code",
+          "vision",
+          "tool_use",
+          "long_context"
+        ],
+        "serviceType": [
+          "chat"
+        ],
         "supportsReasoning": true,
         "description": "xAI Grok 4.3 推理模型，100 万上下文"
       }
@@ -21,8 +36,19 @@
       "spec": {
         "contextWindow": 2000000,
         "maxOutputTokens": 16384,
-        "capabilities": ["chat", "reasoning", "code", "vision", "tool_use", "fast", "long_context"],
-        "serviceType": ["chat", "reasoning"],
+        "capabilities": [
+          "chat",
+          "reasoning",
+          "code",
+          "vision",
+          "tool_use",
+          "fast",
+          "long_context"
+        ],
+        "serviceType": [
+          "chat",
+          "reasoning"
+        ],
         "defaultTemperature": 1,
         "supportsReasoning": true
       }
@@ -34,8 +60,17 @@
       "spec": {
         "contextWindow": 2000000,
         "maxOutputTokens": 16384,
-        "capabilities": ["chat", "reasoning", "code", "vision", "tool_use"],
-        "serviceType": ["chat", "reasoning"],
+        "capabilities": [
+          "chat",
+          "reasoning",
+          "code",
+          "vision",
+          "tool_use"
+        ],
+        "serviceType": [
+          "chat",
+          "reasoning"
+        ],
         "defaultTemperature": 1,
         "supportsReasoning": true
       }

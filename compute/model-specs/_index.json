@@ -1,5 +1,5 @@
 {
-  "description": "模型规格库加载顺序索引。元素为对应 JSON 文件的 basename（不含 .json）。",
+  "description": "模型规格库加载顺序索引，以及智能路由三档的同域定义。模型级路由策略仅写入各 ModelSpec 的 routing 字段，不另建 smart-routing 目录。",
   "order": [
     "anthropic",
     "openai",
@@ -23,5 +23,28 @@
     "volcengine",
     "xunfei",
     "happyhorse"
+  ],
+  "routingTiers": [
+    {
+      "id": "flagship",
+      "label": "旗舰",
+      "labelEn": "Flagship",
+      "description": "最高能力，适合复杂推理、关键交付和长程智能体任务。",
+      "fallbackOrder": ["flagship", "balanced", "lightweight"]
+    },
+    {
+      "id": "balanced",
+      "label": "均衡",
+      "labelEn": "Balanced",
+      "description": "质量、速度与成本平衡，适合大多数日常任务。",
+      "fallbackOrder": ["balanced", "flagship", "lightweight"]
+    },
+    {
+      "id": "lightweight",
+      "label": "轻量",
+      "labelEn": "Lightweight",
+      "description": "优先低延迟与低成本，适合明确、短链路和批量任务。",
+      "fallbackOrder": ["lightweight", "balanced", "flagship"]
+    }
   ]
 }
