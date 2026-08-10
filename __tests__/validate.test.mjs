@@ -238,6 +238,28 @@ describe('真实数据全量校验', () => {
     }
   })
 
+  it('新增模型应保留官方输出上限和工作流分类', () => {
+    const loadSpecs = (provider) => JSON.parse(readFileSync(
+      join(ROOT, 'compute', 'model-specs', `${provider}.json`),
+      'utf8',
+    )).specs
+
+    const gemini = loadSpecs('google').find((item) => item.id === 'gemini-3.1-flash-lite-image')
+    assert.ok(gemini)
+    assert.equal(gemini.spec.maxOutputTokens, 4096)
+    assert.ok(gemini.spec.capabilities.includes('image_editing'))
+
+    const sonnet = loadSpecs('anthropic').filter((item) => item.id === 'claude-sonnet-5')
+    assert.equal(sonnet.length, 1, 'claude-sonnet-5 应且仅应有一条规格')
+    assert.ok(sonnet[0].spec.capabilities.includes('computer_use'))
+    assert.ok(sonnet[0].spec.serviceType.includes('computer_use'))
+
+    const grok = loadSpecs('xai').find((item) => item.id === 'grok-4.5')
+    assert.ok(grok)
+    assert.ok(grok.spec.capabilities.includes('reasoning'))
+    assert.ok(grok.spec.serviceType.includes('reasoning'))
+  })
+
   it('MiMo V2.5 ASR 应有独立精确规格，避免回落到 MiMo V2.5 family', () => {
     const specFile = JSON.parse(readFileSync(join(ROOT, 'compute', 'model-specs', 'xiaomi.json'), 'utf8'))
     const specs = specFile.specs.filter((item) => item.id === 'mimo-v2.5-asr')

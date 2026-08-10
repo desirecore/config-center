@@ -67,7 +67,7 @@
         "contextWindow": 1000000,
         "maxOutputTokens": 128000,
         "capabilities": ["chat", "reasoning", "code", "vision", "tool_use", "computer_use", "long_context"],
-        "serviceType": ["chat"],
+        "serviceType": ["chat", "computer_use"],
         "supportsReasoning": true,
         "description": "Claude Sonnet 5，速度与智能平衡；思考默认开启，effort 支持到 max"
       }
