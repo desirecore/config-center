@@ -85,6 +85,49 @@ describe('真实数据全量校验', () => {
     assert.equal(result.ok, true, JSON.stringify(result.errors, null, 2))
   })
 
+  it('智能路由模型目录应通过 smart-model-catalog schema', () => {
+    const result = validateFile(
+      join(ROOT, 'compute', 'smart-routing', 'model-catalog.json'),
+      validators,
+    )
+    assert.equal(result.ok, true, JSON.stringify(result.errors, null, 2))
+
+    const catalog = JSON.parse(readFileSync(
+      join(ROOT, 'compute', 'smart-routing', 'model-catalog.json'),
+      'utf8',
+    ))
+    assert.deepEqual(catalog.tiers.map((tier) => tier.id), [
+      'flagship',
+      'balanced',
+      'lightweight',
+    ])
+    assert.deepEqual(catalog.providers.map((provider) => provider.provider), [
+      'openai-codex',
+      'anthropic-claude',
+      'desirecore-cloud',
+    ])
+    assert.equal(
+      catalog.providers.flatMap((provider) => provider.models).length,
+      37,
+    )
+
+    for (const provider of catalog.providers.filter((item) => item.provider !== 'desirecore-cloud')) {
+      const providerFile = JSON.parse(readFileSync(
+        join(ROOT, 'compute', 'providers', `${provider.provider}.json`),
+        'utf8',
+      ))
+      assert.equal(providerFile.id, provider.providerId)
+      const publishedModels = new Set(providerFile.models.map((model) => model.modelName))
+      for (const model of provider.models) {
+        assert.equal(
+          publishedModels.has(model.model),
+          true,
+          `${provider.providerId}/${model.model} 必须存在于对应接入面 Provider 清单`,
+        )
+      }
+    }
+  })
+
   it('两个 _index.json 应通过 providers-index schema', () => {
     const r1 = validateFile(join(ROOT, 'compute', 'providers', '_index.json'), validators)
     const r2 = validateFile(join(ROOT, 'compute', 'coding-plans', '_index.json'), validators)
@@ -275,6 +318,34 @@ describe('真实数据全量校验', () => {
     assert.equal(pro.serviceType.includes('vision'), false)
   })
 
+  it('Qwen3.8 Max Preview 应在 Token Plan 中提供完整的推理与视觉规格', () => {
+    const tokenPlan = JSON.parse(readFileSync(join(ROOT, 'compute', 'coding-plans', 'dashscope-token-plan.json'), 'utf8'))
+    const specFile = JSON.parse(readFileSync(join(ROOT, 'compute', 'model-specs', 'qwen.json'), 'utf8'))
+    const modelId = 'qwen3.8-max-preview'
+    const model = tokenPlan.models.find((item) => item.modelName === modelId)
+
+    assert.ok(model, `Token Plan 缺少 ${modelId}`)
+    assert.equal(model.contextWindow, 983616)
+    assert.equal(model.defaultTemperature, 0.6)
+    assert.ok(model.capabilities.includes('reasoning'))
+    assert.ok(model.capabilities.includes('vision'))
+    assert.ok(model.serviceType.includes('reasoning'))
+    assert.ok(model.serviceType.includes('vision'))
+    assert.deepEqual(model.extra.reasoning.supportedEfforts, ['low', 'high', 'xhigh'])
+    assert.equal(model.extra.reasoning.defaultEffort, 'xhigh')
+    assert.equal(model.extra.thinkingOnly, true)
+    assert.equal(model.extra.thinkingMaxTokens, 262144)
+    assert.equal(model.extra.preserveThinkingDefault, true)
+    assert.equal(model.extra.supportsParallelToolCalls, false)
+
+    const specs = specFile.specs.filter((item) => item.id === modelId)
+    assert.equal(specs.length, 1, `model-specs 中 ${modelId} 应且仅应有一条规格`)
+    assert.equal(specs[0].spec.contextWindow, 1000000)
+    assert.equal(specs[0].spec.defaultTemperature, 0.6)
+    assert.equal(specs[0].spec.supportsReasoning, true)
+    assert.ok(specs[0].spec.capabilities.includes('vision'))
+  })
+
   it('所有 Provider 应按供应商归属计价，模型来源不覆盖供应商币种', () => {
     const expectedCurrencies = {
       anthropic: 'USD',
@@ -348,6 +419,28 @@ describe('真实数据全量校验', () => {
     assert.equal(model('speech-2.8-hd').extra.pricePerMillionCharacters, 350)
     assert.equal(model('speech-2.8-turbo').extra.pricePerMillionCharacters, 200)
     assert.equal(model('music-2.6').extra.pricePerSongUpToFiveMinutes, 1)
+  })
+})
+
+describe('智能路由模型目录 schema 反例', () => {
+  const validate = compile('smart-model-catalog')
+
+  it('拒绝未声明的策略字段，避免新旧客户端静默分叉', () => {
+    const data = JSON.parse(readFileSync(
+      join(ROOT, 'compute', 'smart-routing', 'model-catalog.json'),
+      'utf8',
+    ))
+    data.providers[0].models[0].unknownRoutingPolicy = true
+    assert.equal(validate(data), false)
+  })
+
+  it('拒绝当前客户端未声明支持的目录版本', () => {
+    const data = JSON.parse(readFileSync(
+      join(ROOT, 'compute', 'smart-routing', 'model-catalog.json'),
+      'utf8',
+    ))
+    data.version = 2
+    assert.equal(validate(data), false)
   })
 })
 
