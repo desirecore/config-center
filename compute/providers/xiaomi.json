@@ -14,7 +14,8 @@
   "services": [
     "chat",
     "reasoning",
-    "tts"
+    "tts",
+    "asr"
   ],
   "models": [
     {
@@ -49,23 +50,36 @@
       ],
       "extra": {
         "voices": [
-          {"id": "default_zh", "label": "默认中文女声"},
-          {"id": "default_en", "label": "默认英文女声"},
           {"id": "mimo_default", "label": "MiMo 默认"},
-          {"id": "Bingtang", "label": "冰糖"},
-          {"id": "Moli", "label": "茉莉"},
-          {"id": "Suda", "label": "苏打"},
-          {"id": "Baihua", "label": "白桦"},
+          {"id": "冰糖", "label": "冰糖"},
+          {"id": "茉莉", "label": "茉莉"},
+          {"id": "苏打", "label": "苏打"},
+          {"id": "白桦", "label": "白桦"},
           {"id": "Mia", "label": "Mia"},
           {"id": "Chloe", "label": "Chloe"},
           {"id": "Milo", "label": "Milo"},
           {"id": "Dean", "label": "Dean"}
         ],
-        "audioFormats": ["mp3", "wav"],
+        "audioFormats": ["wav", "mp3", "pcm16le"],
         "sampleRate": 24000,
         "endpoint": "/chat/completions",
         "authHeader": "api-key"
       }
+    },
+    {
+      "modelName": "mimo-v2.5-asr",
+      "displayName": "MiMo-V2.5-ASR",
+      "serviceType": [
+        "asr"
+      ],
+      "description": "小米 MiMo 语音识别模型，支持中英文提示与整段 WAV/MP3 识别",
+      "contextWindow": 8192,
+      "maxOutputTokens": 2048,
+      "capabilities": [
+        "asr",
+        "multilingual"
+      ],
+      "extra": {}
     },
     {
       "modelName": "mimo-v2.5-tts-voicedesign",
