@@ -271,6 +271,34 @@ describe('真实数据全量校验', () => {
     assert.equal(pro.serviceType.includes('vision'), false)
   })
 
+  it('Qwen3.8 Max Preview 应在 Token Plan 中提供完整的推理与视觉规格', () => {
+    const tokenPlan = JSON.parse(readFileSync(join(ROOT, 'compute', 'coding-plans', 'dashscope-token-plan.json'), 'utf8'))
+    const specFile = JSON.parse(readFileSync(join(ROOT, 'compute', 'model-specs', 'qwen.json'), 'utf8'))
+    const modelId = 'qwen3.8-max-preview'
+    const model = tokenPlan.models.find((item) => item.modelName === modelId)
+
+    assert.ok(model, `Token Plan 缺少 ${modelId}`)
+    assert.equal(model.contextWindow, 983616)
+    assert.equal(model.defaultTemperature, 0.6)
+    assert.ok(model.capabilities.includes('reasoning'))
+    assert.ok(model.capabilities.includes('vision'))
+    assert.ok(model.serviceType.includes('reasoning'))
+    assert.ok(model.serviceType.includes('vision'))
+    assert.deepEqual(model.extra.reasoning.supportedEfforts, ['low', 'high', 'xhigh'])
+    assert.equal(model.extra.reasoning.defaultEffort, 'xhigh')
+    assert.equal(model.extra.thinkingOnly, true)
+    assert.equal(model.extra.thinkingMaxTokens, 262144)
+    assert.equal(model.extra.preserveThinkingDefault, true)
+    assert.equal(model.extra.supportsParallelToolCalls, false)
+
+    const specs = specFile.specs.filter((item) => item.id === modelId)
+    assert.equal(specs.length, 1, `model-specs 中 ${modelId} 应且仅应有一条规格`)
+    assert.equal(specs[0].spec.contextWindow, 1000000)
+    assert.equal(specs[0].spec.defaultTemperature, 0.6)
+    assert.equal(specs[0].spec.supportsReasoning, true)
+    assert.ok(specs[0].spec.capabilities.includes('vision'))
+  })
+
   it('所有 Provider 应按供应商归属计价，模型来源不覆盖供应商币种', () => {
     const expectedCurrencies = {
       anthropic: 'USD',
