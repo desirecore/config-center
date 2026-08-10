@@ -110,6 +110,20 @@ describe('真实数据全量校验', () => {
     assert.equal(routed.every((spec) => Array.isArray(spec.spec.capabilities)), true)
   })
 
+  it('智能路由三档必须完整唯一，且每档从自身开始回退', () => {
+    const indexPath = join(ROOT, 'compute', 'model-specs', '_index.json')
+    const index = JSON.parse(readFileSync(indexPath, 'utf8'))
+    const validate = compile('model-specs-index')
+
+    const duplicateTier = structuredClone(index)
+    duplicateTier.routingTiers[1] = structuredClone(duplicateTier.routingTiers[0])
+    assert.equal(validate(duplicateTier), false)
+
+    const wrongFirstFallback = structuredClone(index)
+    wrongFirstFallback.routingTiers[0].fallbackOrder = ['balanced', 'flagship', 'lightweight']
+    assert.equal(validate(wrongFirstFallback), false)
+  })
+
   it('Provider 与 coding plan 的 _index.json 应通过 providers-index schema', () => {
     const r1 = validateFile(join(ROOT, 'compute', 'providers', '_index.json'), validators)
     const r2 = validateFile(join(ROOT, 'compute', 'coding-plans', '_index.json'), validators)
