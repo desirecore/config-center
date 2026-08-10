@@ -1,0 +1,35 @@
+{
+  "id": "brave",
+  "name": "Brave Search API",
+  "capability": "web_search",
+  "enabled": false,
+  "builtin": true,
+  "priority": 20,
+  "endpoint": "https://api.search.brave.com/res/v1/web/search",
+  "method": "GET",
+  "auth": {
+    "type": "header",
+    "headerName": "X-Subscription-Token",
+    "apiKeyRef": "brave"
+  },
+  "request": {
+    "headers": {
+      "Accept": "application/json",
+      "Accept-Encoding": "gzip"
+    },
+    "queryParams": {
+      "q": "${query}",
+      "count": "${maxResults}"
+    }
+  },
+  "response": {
+    "resultsPath": "web.results",
+    "item": {
+      "titlePath": "title",
+      "urlPath": "url",
+      "snippetPath": "description",
+      "pageAgePath": "page_age"
+    }
+  },
+  "timeoutMs": 10000
+}

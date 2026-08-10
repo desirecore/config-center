@@ -35,23 +35,40 @@
       "inputPrice": 10,
       "outputPrice": 50,
       "extra": {
+        "serverSideWebSearch": {
+          "enabled": true,
+          "dialect": "anthropic-messages",
+          "fallbackPriority": 1,
+          "searchRequestPriceUsd": 0.01,
+          "toolType": "web_search_20260318"
+        },
         "cachePricing": {
           "write5m": 12.5,
           "write1h": 20,
           "read": 1
         },
         "adaptiveThinking": true,
+        "reasoning": {
+          "supportedEfforts": [
+            "low",
+            "medium",
+            "high",
+            "xhigh",
+            "max"
+          ],
+          "defaultEffort": "xhigh"
+        },
         "samplingParametersDeprecated": true,
         "pricingNotes": "Prices are per 1M tokens. Full 1M context is billed at standard pricing."
       }
     },
     {
-      "modelName": "claude-opus-4-8",
-      "displayName": "Claude Opus 4.8",
+      "modelName": "claude-opus-5",
+      "displayName": "Claude Opus 5",
       "serviceType": [
         "chat"
       ],
-      "description": "Anthropic Opus 级复杂智能体编码与企业任务模型，1M 上下文",
+      "description": "Anthropic Opus 系列当前旗舰，复杂智能体编码与长程任务能力显著强于 Opus 4.8，价格不变，1M 上下文",
       "contextWindow": 1000000,
       "maxOutputTokens": 128000,
       "capabilities": [
@@ -66,13 +83,32 @@
       "inputPrice": 5,
       "outputPrice": 25,
       "extra": {
+        "serverSideWebSearch": {
+          "enabled": true,
+          "dialect": "anthropic-messages",
+          "fallbackPriority": 2,
+          "searchRequestPriceUsd": 0.01,
+          "toolType": "web_search_20260318"
+        },
         "cachePricing": {
           "write5m": 6.25,
           "write1h": 10,
           "read": 0.5
         },
+        "promptCacheMinTokens": 512,
         "adaptiveThinking": true,
-        "defaultEffort": "high",
+        "thinkingOnByDefault": true,
+        "reasoning": {
+          "supportedEfforts": [
+            "low",
+            "medium",
+            "high",
+            "xhigh",
+            "max"
+          ],
+          "defaultEffort": "xhigh"
+        },
+        "defaultEffort": "xhigh",
         "samplingParametersDeprecated": true,
         "pricingNotes": "Prices are per 1M tokens. Full 1M context is billed at standard pricing."
       }
@@ -100,6 +136,13 @@
       "inputPrice": 2,
       "outputPrice": 10,
       "extra": {
+        "serverSideWebSearch": {
+          "enabled": true,
+          "dialect": "anthropic-messages",
+          "fallbackPriority": 3,
+          "searchRequestPriceUsd": 0.01,
+          "toolType": "web_search_20260318"
+        },
         "cachePricing": {
           "write5m": 2.5,
           "write1h": 4,
@@ -110,65 +153,18 @@
         "standardInputPrice": 3,
         "standardOutputPrice": 15,
         "adaptiveThinking": true,
-        "defaultEffort": "high",
+        "reasoning": {
+          "supportedEfforts": [
+            "low",
+            "medium",
+            "high",
+            "xhigh",
+            "max"
+          ],
+          "defaultEffort": "xhigh"
+        },
+        "defaultEffort": "xhigh",
         "samplingParametersDeprecated": true
-      }
-    },
-    {
-      "modelName": "claude-opus-4-7",
-      "displayName": "Claude Opus 4.7",
-      "serviceType": [
-        "chat"
-      ],
-      "description": "Anthropic 当前最强通用模型，适合复杂推理和智能体编码任务",
-      "contextWindow": 1000000,
-      "maxOutputTokens": 128000,
-      "capabilities": [
-        "chat",
-        "reasoning",
-        "code",
-        "vision",
-        "tool_use"
-      ],
-      "inputPrice": 5,
-      "outputPrice": 25,
-      "extra": {
-        "cachePricing": {
-          "write5m": 6.25,
-          "write1h": 10,
-          "read": 0.5
-        },
-        "pricingNotes": "Prices are per 1M tokens. Opus 4.7 includes the full 1M context window at standard pricing."
-      }
-    },
-    {
-      "modelName": "claude-sonnet-4-6",
-      "displayName": "Claude Sonnet 4.6",
-      "serviceType": [
-        "chat",
-        "computer_use"
-      ],
-      "description": "Anthropic 高智能高速度模型，适合编码、工具使用和智能体任务",
-      "contextWindow": 1000000,
-      "maxOutputTokens": 64000,
-      "capabilities": [
-        "chat",
-        "reasoning",
-        "code",
-        "vision",
-        "tool_use",
-        "computer_use"
-      ],
-      "inputPrice": 3,
-      "outputPrice": 15,
-      "defaultTemperature": 1,
-      "extra": {
-        "cachePricing": {
-          "write5m": 3.75,
-          "write1h": 6,
-          "read": 0.3
-        },
-        "pricingNotes": "Prices are per 1M tokens. Sonnet 4.6 includes the full 1M context window at standard pricing."
       }
     },
     {
@@ -200,5 +196,10 @@
         "pricingNotes": "Prices are per 1M tokens."
       }
     }
+  ],
+  "tombstones": [
+    "claude-opus-4-8",
+    "claude-opus-4-7",
+    "claude-sonnet-4-6"
   ]
 }

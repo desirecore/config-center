@@ -8,8 +8,8 @@
       "match": { "exact": ["gemini-3.1-flash-lite-image"], "patterns": ["gemini-3.1-flash-lite-image*"] },
       "spec": {
         "contextWindow": 65536,
-        "maxOutputTokens": 65536,
-        "capabilities": ["chat", "vision", "image_generation"],
+        "maxOutputTokens": 4096,
+        "capabilities": ["chat", "vision", "image_generation", "image_editing"],
         "serviceType": ["image_gen"],
         "description": "Nano Banana 2 Lite，Google 最快的文生图模型"
       }

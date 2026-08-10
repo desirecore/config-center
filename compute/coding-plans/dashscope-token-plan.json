@@ -27,6 +27,42 @@
   },
   "models": [
     {
+      "modelName": "qwen3.8-max-preview",
+      "displayName": "Qwen3.8 Max Preview (Token Plan)",
+      "serviceType": [
+        "chat",
+        "reasoning",
+        "vision"
+      ],
+      "description": "百炼 Token Plan，通义千问 3.8 Max 预览版，支持文本与视觉输入，始终开启深度思考",
+      "contextWindow": 983616,
+      "maxOutputTokens": 65536,
+      "capabilities": [
+        "chat",
+        "reasoning",
+        "deep_thinking",
+        "code",
+        "vision",
+        "tool_use",
+        "agent",
+        "long_context"
+      ],
+      "defaultTemperature": 0.6,
+      "extra": {
+        "reasoning": {
+          "supportedEfforts": ["low", "high", "xhigh"],
+          "defaultEffort": "xhigh"
+        },
+        "supportsThinking": true,
+        "thinkingDefault": true,
+        "thinkingOnly": true,
+        "thinkingMaxTokens": 262144,
+        "preserveThinkingDefault": true,
+        "supportsParallelToolCalls": false
+      },
+      "source": "preset"
+    },
+    {
       "modelName": "qwen3.7-max",
       "displayName": "Qwen3.7 Max (Token Plan)",
       "serviceType": [

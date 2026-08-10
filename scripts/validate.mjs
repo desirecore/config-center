@@ -46,6 +46,7 @@ function pickSchemaKey(absPath) {
   if (rel === 'manifest.json') return 'manifest'
   if (rel === 'compute/pricing.json') return 'pricing'
   if (rel === 'compute/service-map.json') return 'service-map'
+  if (rel === 'compute/smart-routing/model-catalog.json') return 'smart-model-catalog'
   if (rel === 'compute/providers/_index.json') return 'providers-index'
   if (rel === 'runtimes/recommended.json') return 'runtime-recommended'
   if (rel === 'runtimes/versions-fallback.json') return 'runtime-versions-fallback'

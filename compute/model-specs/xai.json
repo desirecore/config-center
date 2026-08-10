@@ -10,7 +10,7 @@
         "contextWindow": 500000,
         "maxOutputTokens": 128000,
         "capabilities": ["chat", "reasoning", "code", "tool_use", "vision", "long_context"],
-        "serviceType": ["chat"],
+        "serviceType": ["chat", "reasoning"],
         "supportsReasoning": true,
         "description": "xAI 最新旗舰模型，编程和 STEM 领域前沿"
       }

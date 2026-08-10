@@ -85,6 +85,49 @@ describe('真实数据全量校验', () => {
     assert.equal(result.ok, true, JSON.stringify(result.errors, null, 2))
   })
 
+  it('智能路由模型目录应通过 smart-model-catalog schema', () => {
+    const result = validateFile(
+      join(ROOT, 'compute', 'smart-routing', 'model-catalog.json'),
+      validators,
+    )
+    assert.equal(result.ok, true, JSON.stringify(result.errors, null, 2))
+
+    const catalog = JSON.parse(readFileSync(
+      join(ROOT, 'compute', 'smart-routing', 'model-catalog.json'),
+      'utf8',
+    ))
+    assert.deepEqual(catalog.tiers.map((tier) => tier.id), [
+      'flagship',
+      'balanced',
+      'lightweight',
+    ])
+    assert.deepEqual(catalog.providers.map((provider) => provider.provider), [
+      'openai-codex',
+      'anthropic-claude',
+      'desirecore-cloud',
+    ])
+    assert.equal(
+      catalog.providers.flatMap((provider) => provider.models).length,
+      37,
+    )
+
+    for (const provider of catalog.providers.filter((item) => item.provider !== 'desirecore-cloud')) {
+      const providerFile = JSON.parse(readFileSync(
+        join(ROOT, 'compute', 'providers', `${provider.provider}.json`),
+        'utf8',
+      ))
+      assert.equal(providerFile.id, provider.providerId)
+      const publishedModels = new Set(providerFile.models.map((model) => model.modelName))
+      for (const model of provider.models) {
+        assert.equal(
+          publishedModels.has(model.model),
+          true,
+          `${provider.providerId}/${model.model} 必须存在于对应接入面 Provider 清单`,
+        )
+      }
+    }
+  })
+
   it('两个 _index.json 应通过 providers-index schema', () => {
     const r1 = validateFile(join(ROOT, 'compute', 'providers', '_index.json'), validators)
     const r2 = validateFile(join(ROOT, 'compute', 'coding-plans', '_index.json'), validators)
@@ -100,6 +143,66 @@ describe('真实数据全量校验', () => {
   it('runtimes/versions-fallback.json 应通过 runtime-versions-fallback schema', () => {
     const result = validateFile(join(ROOT, 'runtimes', 'versions-fallback.json'), validators)
     assert.equal(result.ok, true, JSON.stringify(result.errors, null, 2))
+  })
+
+  it('WebSearch 服务端能力仅标记官方直连 Anthropic/OpenAI 模型', () => {
+    const anthropic = JSON.parse(readFileSync(join(ROOT, 'compute', 'providers', 'anthropic.json'), 'utf8'))
+    const openai = JSON.parse(readFileSync(join(ROOT, 'compute', 'providers', 'openai.json'), 'utf8'))
+    const openaiCodex = JSON.parse(readFileSync(join(ROOT, 'compute', 'providers', 'openai-codex.json'), 'utf8'))
+
+    const enabled = (provider) => provider.models
+      .filter((model) => model.extra?.serverSideWebSearch?.enabled === true)
+      .map((model) => model.modelName)
+
+    assert.deepEqual(enabled(anthropic), [
+      'claude-fable-5',
+      'claude-opus-5',
+      'claude-sonnet-5',
+    ])
+    assert.deepEqual(enabled(openai), [
+      'gpt-5.5',
+      'gpt-5.5-pro',
+      'gpt-5.4',
+      'gpt-5.4-pro',
+      'gpt-5.4-mini',
+      'gpt-5.4-nano',
+      'gpt-5',
+      'gpt-4.1',
+      'gpt-4.1-mini',
+      'o4-mini',
+    ])
+    assert.deepEqual(enabled(openaiCodex), [])
+
+    for (const model of anthropic.models.filter((item) => enabled(anthropic).includes(item.modelName))) {
+      assert.equal(model.extra.serverSideWebSearch.dialect, 'anthropic-messages')
+      assert.equal(model.extra.serverSideWebSearch.toolType, 'web_search_20260318')
+      assert.equal(model.extra.serverSideWebSearch.searchRequestPriceUsd, 0.01)
+      assert.equal('maxUses' in model.extra.serverSideWebSearch, false)
+    }
+    for (const model of openai.models.filter((item) => enabled(openai).includes(item.modelName))) {
+      assert.equal(model.extra.serverSideWebSearch.dialect, 'openai-responses')
+      assert.equal(model.extra.serverSideWebSearch.toolType, 'web_search')
+      assert.equal(model.extra.serverSideWebSearch.searchRequestPriceUsd, 0.01)
+      assert.equal('maxUses' in model.extra.serverSideWebSearch, false)
+    }
+  })
+
+  it('Brave Search API 使用显式密钥声明且默认关闭', () => {
+    const brave = JSON.parse(readFileSync(join(ROOT, 'api-providers', 'web-search', 'brave.json'), 'utf8'))
+    const index = JSON.parse(readFileSync(join(ROOT, 'api-providers', 'web-search', '_index.json'), 'utf8'))
+
+    assert.equal(brave.enabled, false)
+    assert.equal(brave.endpoint, 'https://api.search.brave.com/res/v1/web/search')
+    assert.deepEqual(brave.auth, {
+      type: 'header',
+      headerName: 'X-Subscription-Token',
+      apiKeyRef: 'brave',
+    })
+    assert.deepEqual(index.order, ['tavily', 'brave', 'serper'])
+    assert.equal(
+      validateFile(join(ROOT, 'api-providers', 'web-search', 'brave.json'), validators).ok,
+      true,
+    )
   })
 
   it('DeepSeek V4 Pro/Flash 应与官方的 1M/384K reasoning profile 一致', () => {
@@ -135,6 +238,28 @@ describe('真实数据全量校验', () => {
     }
   })
 
+  it('新增模型应保留官方输出上限和工作流分类', () => {
+    const loadSpecs = (provider) => JSON.parse(readFileSync(
+      join(ROOT, 'compute', 'model-specs', `${provider}.json`),
+      'utf8',
+    )).specs
+
+    const gemini = loadSpecs('google').find((item) => item.id === 'gemini-3.1-flash-lite-image')
+    assert.ok(gemini)
+    assert.equal(gemini.spec.maxOutputTokens, 4096)
+    assert.ok(gemini.spec.capabilities.includes('image_editing'))
+
+    const sonnet = loadSpecs('anthropic').filter((item) => item.id === 'claude-sonnet-5')
+    assert.equal(sonnet.length, 1, 'claude-sonnet-5 应且仅应有一条规格')
+    assert.ok(sonnet[0].spec.capabilities.includes('computer_use'))
+    assert.ok(sonnet[0].spec.serviceType.includes('computer_use'))
+
+    const grok = loadSpecs('xai').find((item) => item.id === 'grok-4.5')
+    assert.ok(grok)
+    assert.ok(grok.spec.capabilities.includes('reasoning'))
+    assert.ok(grok.spec.serviceType.includes('reasoning'))
+  })
+
   it('MiMo V2.5 ASR 应有独立精确规格，避免回落到 MiMo V2.5 family', () => {
     const specFile = JSON.parse(readFileSync(join(ROOT, 'compute', 'model-specs', 'xiaomi.json'), 'utf8'))
     const specs = specFile.specs.filter((item) => item.id === 'mimo-v2.5-asr')
@@ -145,9 +270,61 @@ describe('真实数据全量校验', () => {
     assert.ok(specs[0].spec.capabilities.includes('asr'))
   })
 
+  it('MiMo V2.5 仅非 Pro 型号应声明多模态能力', () => {
+    const provider = JSON.parse(readFileSync(join(ROOT, 'compute', 'providers', 'xiaomi.json'), 'utf8'))
+    const specFile = JSON.parse(readFileSync(join(ROOT, 'compute', 'model-specs', 'xiaomi.json'), 'utf8'))
+    const specFor = (modelId) => specFile.specs.find((item) => item.id === modelId)
+
+    const mimoV25 = specFor('mimo-v2.5')
+    assert.ok(mimoV25, 'model-specs 缺少 mimo-v2.5')
+    assert.ok(mimoV25.spec.capabilities.includes('vision'))
+    assert.ok(mimoV25.spec.serviceType.includes('vision'))
+
+    for (const modelId of ['mimo-v2.5-pro', 'mimo-v2-pro']) {
+      const modelSpec = specFor(modelId)
+      assert.ok(modelSpec, `model-specs 缺少 ${modelId}`)
+      assert.equal(modelSpec.spec.capabilities.includes('vision'), false)
+      assert.equal(modelSpec.spec.serviceType.includes('vision'), false)
+    }
+
+    const pro = provider.models.find((item) => item.modelName === 'mimo-v2.5-pro')
+    assert.ok(pro, 'provider 缺少 mimo-v2.5-pro')
+    assert.equal(pro.capabilities.includes('vision'), false)
+    assert.equal(pro.serviceType.includes('vision'), false)
+  })
+
+  it('Qwen3.8 Max Preview 应在 Token Plan 中提供完整的推理与视觉规格', () => {
+    const tokenPlan = JSON.parse(readFileSync(join(ROOT, 'compute', 'coding-plans', 'dashscope-token-plan.json'), 'utf8'))
+    const specFile = JSON.parse(readFileSync(join(ROOT, 'compute', 'model-specs', 'qwen.json'), 'utf8'))
+    const modelId = 'qwen3.8-max-preview'
+    const model = tokenPlan.models.find((item) => item.modelName === modelId)
+
+    assert.ok(model, `Token Plan 缺少 ${modelId}`)
+    assert.equal(model.contextWindow, 983616)
+    assert.equal(model.defaultTemperature, 0.6)
+    assert.ok(model.capabilities.includes('reasoning'))
+    assert.ok(model.capabilities.includes('vision'))
+    assert.ok(model.serviceType.includes('reasoning'))
+    assert.ok(model.serviceType.includes('vision'))
+    assert.deepEqual(model.extra.reasoning.supportedEfforts, ['low', 'high', 'xhigh'])
+    assert.equal(model.extra.reasoning.defaultEffort, 'xhigh')
+    assert.equal(model.extra.thinkingOnly, true)
+    assert.equal(model.extra.thinkingMaxTokens, 262144)
+    assert.equal(model.extra.preserveThinkingDefault, true)
+    assert.equal(model.extra.supportsParallelToolCalls, false)
+
+    const specs = specFile.specs.filter((item) => item.id === modelId)
+    assert.equal(specs.length, 1, `model-specs 中 ${modelId} 应且仅应有一条规格`)
+    assert.equal(specs[0].spec.contextWindow, 1000000)
+    assert.equal(specs[0].spec.defaultTemperature, 0.6)
+    assert.equal(specs[0].spec.supportsReasoning, true)
+    assert.ok(specs[0].spec.capabilities.includes('vision'))
+  })
+
   it('所有 Provider 应按供应商归属计价，模型来源不覆盖供应商币种', () => {
     const expectedCurrencies = {
       anthropic: 'USD',
+      'anthropic-claude': 'USD',
       baichuan: 'CNY',
       baidu: 'CNY',
       cohere: 'USD',
@@ -217,6 +394,28 @@ describe('真实数据全量校验', () => {
     assert.equal(model('speech-2.8-hd').extra.pricePerMillionCharacters, 350)
     assert.equal(model('speech-2.8-turbo').extra.pricePerMillionCharacters, 200)
     assert.equal(model('music-2.6').extra.pricePerSongUpToFiveMinutes, 1)
+  })
+})
+
+describe('智能路由模型目录 schema 反例', () => {
+  const validate = compile('smart-model-catalog')
+
+  it('拒绝未声明的策略字段，避免新旧客户端静默分叉', () => {
+    const data = JSON.parse(readFileSync(
+      join(ROOT, 'compute', 'smart-routing', 'model-catalog.json'),
+      'utf8',
+    ))
+    data.providers[0].models[0].unknownRoutingPolicy = true
+    assert.equal(validate(data), false)
+  })
+
+  it('拒绝当前客户端未声明支持的目录版本', () => {
+    const data = JSON.parse(readFileSync(
+      join(ROOT, 'compute', 'smart-routing', 'model-catalog.json'),
+      'utf8',
+    ))
+    data.version = 2
+    assert.equal(validate(data), false)
   })
 })
 

@@ -2,20 +2,6 @@
   "description": "Anthropic Claude 系列模型规格。参数来源：config-center compute/providers/anthropic.json。",
   "specs": [
     {
-      "id": "claude-sonnet-5",
-      "displayName": "Claude Sonnet 5",
-      "family": "claude-sonnet-5",
-      "match": { "exact": ["claude-sonnet-5"], "patterns": ["claude-sonnet-5*"] },
-      "spec": {
-        "contextWindow": 1000000,
-        "maxOutputTokens": 128000,
-        "capabilities": ["chat", "reasoning", "code", "tool_use", "agent", "vision", "long_context"],
-        "serviceType": ["chat"],
-        "supportsReasoning": true,
-        "description": "Anthropic 最强 Sonnet 级模型，支持自适应思考（effort: low/medium/high/max）"
-      }
-    },
-    {
       "id": "claude-fable-5",
       "displayName": "Claude Fable 5",
       "family": "claude-fable",
@@ -27,6 +13,20 @@
         "serviceType": ["chat"],
         "supportsReasoning": true,
         "description": "Anthropic 最强模型，基于 Mythos 架构，支持自主知识工作"
+      }
+    },
+    {
+      "id": "claude-opus-5",
+      "displayName": "Claude Opus 5",
+      "family": "claude-opus",
+      "match": { "patterns": ["claude-opus-5*"] },
+      "spec": {
+        "contextWindow": 1000000,
+        "maxOutputTokens": 128000,
+        "capabilities": ["chat", "reasoning", "code", "vision", "tool_use", "long_context"],
+        "serviceType": ["chat"],
+        "supportsReasoning": true,
+        "description": "Claude Opus 5，Anthropic Opus 系列当前旗舰；思考默认开启，effort 支持到 max"
       }
     },
     {
@@ -56,6 +56,20 @@
         "defaultTemperature": 1,
         "supportsReasoning": true,
         "description": "Anthropic 当前最强通用模型，适合复杂推理和智能体编码任务"
+      }
+    },
+    {
+      "id": "claude-sonnet-5",
+      "displayName": "Claude Sonnet 5",
+      "family": "claude-sonnet",
+      "match": { "patterns": ["claude-sonnet-5*"] },
+      "spec": {
+        "contextWindow": 1000000,
+        "maxOutputTokens": 128000,
+        "capabilities": ["chat", "reasoning", "code", "vision", "tool_use", "computer_use", "long_context"],
+        "serviceType": ["chat", "computer_use"],
+        "supportsReasoning": true,
+        "description": "Claude Sonnet 5，速度与智能平衡；思考默认开启，effort 支持到 max"
       }
     },
     {
