@@ -42,10 +42,47 @@
             "description": "该档位缺少可用候选时的量级降级/升级顺序，首项必须等于 id。"
           }
         },
+        "allOf": [
+          {
+            "if": { "properties": { "id": { "const": "flagship" } }, "required": ["id"] },
+            "then": { "properties": { "fallbackOrder": { "items": [{ "const": "flagship" }] } } }
+          },
+          {
+            "if": { "properties": { "id": { "const": "balanced" } }, "required": ["id"] },
+            "then": { "properties": { "fallbackOrder": { "items": [{ "const": "balanced" }] } } }
+          },
+          {
+            "if": { "properties": { "id": { "const": "lightweight" } }, "required": ["id"] },
+            "then": { "properties": { "fallbackOrder": { "items": [{ "const": "lightweight" }] } } }
+          }
+        ],
         "additionalProperties": false
       },
       "description": "智能路由量级定义与回退策略。"
     }
   },
+  "allOf": [
+    {
+      "properties": {
+        "routingTiers": {
+          "contains": { "type": "object", "properties": { "id": { "const": "flagship" } }, "required": ["id"] }
+        }
+      }
+    },
+    {
+      "properties": {
+        "routingTiers": {
+          "contains": { "type": "object", "properties": { "id": { "const": "balanced" } }, "required": ["id"] }
+        }
+      }
+    },
+    {
+      "properties": {
+        "routingTiers": {
+          "contains": { "type": "object", "properties": { "id": { "const": "lightweight" } }, "required": ["id"] }
+        }
+      }
+    }
+  ],
   "additionalProperties": false
 }
