@@ -85,6 +85,49 @@ describe('真实数据全量校验', () => {
     assert.equal(result.ok, true, JSON.stringify(result.errors, null, 2))
   })
 
+  it('智能路由模型目录应通过 smart-model-catalog schema', () => {
+    const result = validateFile(
+      join(ROOT, 'compute', 'smart-routing', 'model-catalog.json'),
+      validators,
+    )
+    assert.equal(result.ok, true, JSON.stringify(result.errors, null, 2))
+
+    const catalog = JSON.parse(readFileSync(
+      join(ROOT, 'compute', 'smart-routing', 'model-catalog.json'),
+      'utf8',
+    ))
+    assert.deepEqual(catalog.tiers.map((tier) => tier.id), [
+      'flagship',
+      'balanced',
+      'lightweight',
+    ])
+    assert.deepEqual(catalog.providers.map((provider) => provider.provider), [
+      'openai-codex',
+      'anthropic-claude',
+      'desirecore-cloud',
+    ])
+    assert.equal(
+      catalog.providers.flatMap((provider) => provider.models).length,
+      37,
+    )
+
+    for (const provider of catalog.providers.filter((item) => item.provider !== 'desirecore-cloud')) {
+      const providerFile = JSON.parse(readFileSync(
+        join(ROOT, 'compute', 'providers', `${provider.provider}.json`),
+        'utf8',
+      ))
+      assert.equal(providerFile.id, provider.providerId)
+      const publishedModels = new Set(providerFile.models.map((model) => model.modelName))
+      for (const model of provider.models) {
+        assert.equal(
+          publishedModels.has(model.model),
+          true,
+          `${provider.providerId}/${model.model} 必须存在于对应接入面 Provider 清单`,
+        )
+      }
+    }
+  })
+
   it('两个 _index.json 应通过 providers-index schema', () => {
     const r1 = validateFile(join(ROOT, 'compute', 'providers', '_index.json'), validators)
     const r2 = validateFile(join(ROOT, 'compute', 'coding-plans', '_index.json'), validators)
@@ -301,6 +344,28 @@ describe('真实数据全量校验', () => {
     assert.equal(model('speech-2.8-hd').extra.pricePerMillionCharacters, 350)
     assert.equal(model('speech-2.8-turbo').extra.pricePerMillionCharacters, 200)
     assert.equal(model('music-2.6').extra.pricePerSongUpToFiveMinutes, 1)
+  })
+})
+
+describe('智能路由模型目录 schema 反例', () => {
+  const validate = compile('smart-model-catalog')
+
+  it('拒绝未声明的策略字段，避免新旧客户端静默分叉', () => {
+    const data = JSON.parse(readFileSync(
+      join(ROOT, 'compute', 'smart-routing', 'model-catalog.json'),
+      'utf8',
+    ))
+    data.providers[0].models[0].unknownRoutingPolicy = true
+    assert.equal(validate(data), false)
+  })
+
+  it('拒绝当前客户端未声明支持的目录版本', () => {
+    const data = JSON.parse(readFileSync(
+      join(ROOT, 'compute', 'smart-routing', 'model-catalog.json'),
+      'utf8',
+    ))
+    data.version = 2
+    assert.equal(validate(data), false)
   })
 })
 
