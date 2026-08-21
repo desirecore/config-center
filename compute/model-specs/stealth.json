@@ -1,0 +1,45 @@
+{
+  "description": "Stealth 系列模型规格。参数来源：OpenRouter Models API。",
+  "specs": [
+    {
+      "id": "ox-alpha",
+      "displayName": "Ox Alpha",
+      "family": "ox-alpha",
+      "match": {
+        "exact": [
+          "stealth/ox-alpha"
+        ]
+      },
+      "spec": {
+        "contextWindow": 1048576,
+        "maxOutputTokens": 131072,
+        "capabilities": [
+          "chat",
+          "reasoning",
+          "deep_thinking",
+          "code",
+          "tool_use",
+          "agent",
+          "long_context",
+          "vision",
+          "image_understanding",
+          "video_understanding"
+        ],
+        "serviceType": [
+          "chat",
+          "reasoning",
+          "vision"
+        ],
+        "defaultTemperature": 1,
+        "defaultTopP": 0.95,
+        "supportsReasoning": true,
+        "description": "Ox Alpha 多模态推理模型，面向编程、长程 Agent、复杂推理与生产工作负载",
+        "extra": {
+          "thinkingDefault": true,
+          "thinkingOnly": true
+        },
+        "releasedAt": "2026-08-21"
+      }
+    }
+  ]
+}

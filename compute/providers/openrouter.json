@@ -9,8 +9,54 @@
   "enabled": false,
   "status": "unconfigured",
   "priceCurrency": "USD",
-  "services": ["chat"],
+  "services": [
+    "chat",
+    "reasoning",
+    "vision"
+  ],
   "models": [
+    {
+      "modelName": "stealth/ox-alpha",
+      "displayName": "Ox Alpha (免费)",
+      "serviceType": [
+        "chat",
+        "reasoning",
+        "vision"
+      ],
+      "description": "通过 OpenRouter 免费使用的 Ox Alpha，面向编程、长程 Agent 与复杂推理，支持文本、图片和视频输入",
+      "contextWindow": 1048576,
+      "maxOutputTokens": 131072,
+      "capabilities": [
+        "chat",
+        "reasoning",
+        "deep_thinking",
+        "code",
+        "tool_use",
+        "agent",
+        "long_context",
+        "vision",
+        "image_understanding",
+        "video_understanding"
+      ],
+      "inputPrice": 0.00,
+      "outputPrice": 0.00,
+      "defaultTemperature": 1,
+      "defaultTopP": 0.95,
+      "extra": {
+        "reasoning": {
+          "supportedEfforts": [
+            "low",
+            "high",
+            "max"
+          ],
+          "defaultEffort": "max"
+        },
+        "thinking": {
+          "default": "enabled",
+          "disableSupported": false
+        }
+      }
+    },
     {
       "modelName": "openrouter/auto",
       "displayName": "OpenRouter Auto",
