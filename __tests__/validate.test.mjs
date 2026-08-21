@@ -244,6 +244,35 @@ describe('真实数据全量校验', () => {
     assert.ok(specs[0].spec.capabilities.includes('asr'))
   })
 
+  it('Ox Alpha 应提供与 OpenRouter 一致的多模态推理规格', () => {
+    const provider = JSON.parse(readFileSync(join(ROOT, 'compute', 'providers', 'openrouter.json'), 'utf8'))
+    const specFile = JSON.parse(readFileSync(join(ROOT, 'compute', 'model-specs', 'stealth.json'), 'utf8'))
+    const model = provider.models.find((item) => item.modelName === 'stealth/ox-alpha')
+    const modelSpec = specFile.specs.find((item) => item.id === 'ox-alpha')
+
+    assert.ok(model, 'OpenRouter provider 缺少 stealth/ox-alpha')
+    assert.ok(modelSpec, 'model-specs 缺少 ox-alpha')
+
+    for (const item of [model, modelSpec.spec]) {
+      assert.equal(item.contextWindow, 1048576)
+      assert.equal(item.maxOutputTokens, 131072)
+      assert.equal(item.defaultTemperature, 1)
+      assert.equal(item.defaultTopP, 0.95)
+      assert.ok(item.capabilities.includes('reasoning'))
+      assert.ok(item.capabilities.includes('vision'))
+      assert.ok(item.capabilities.includes('video_understanding'))
+    }
+
+    assert.deepEqual(model.extra.reasoning.supportedEfforts, ['low', 'high', 'max'])
+    assert.equal(model.extra.reasoning.defaultEffort, 'max')
+    assert.equal(model.extra.thinking.disableSupported, false)
+    assert.equal(model.inputPrice, 0)
+    assert.equal(model.outputPrice, 0)
+    assert.deepEqual(modelSpec.match.exact, ['stealth/ox-alpha'])
+    assert.equal(modelSpec.spec.supportsReasoning, true)
+    assert.equal(modelSpec.spec.releasedAt, '2026-08-21')
+  })
+
   it('MiMo V2.5 仅非 Pro 型号应声明多模态能力', () => {
     const provider = JSON.parse(readFileSync(join(ROOT, 'compute', 'providers', 'xiaomi.json'), 'utf8'))
     const specFile = JSON.parse(readFileSync(join(ROOT, 'compute', 'model-specs', 'xiaomi.json'), 'utf8'))
