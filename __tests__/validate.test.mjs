@@ -268,7 +268,7 @@ describe('真实数据全量校验', () => {
     assert.equal(model.extra.thinking.disableSupported, false)
     assert.equal(model.inputPrice, 0)
     assert.equal(model.outputPrice, 0)
-    assert.deepEqual(modelSpec.match.exact, ['stealth/ox-alpha'])
+    assert.deepEqual(modelSpec.match.exact, ['ox-alpha', 'stealth/ox-alpha'])
     assert.equal(modelSpec.spec.supportsReasoning, true)
     assert.equal(modelSpec.spec.releasedAt, '2026-08-21')
   })
