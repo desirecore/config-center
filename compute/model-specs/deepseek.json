@@ -162,7 +162,7 @@
     {
       "id": "deepseek-v4-flash",
       "displayName": "DeepSeek V4 Flash",
-      "family": "deepseek-v4",
+      "family": "deepseek-v4-flash",
       "match": {
         "exact": [
           "deepseek-v4-flash"
@@ -193,6 +193,57 @@
             "max"
           ]
         }
+      },
+      "routing": {
+        "tier": "lightweight",
+        "routingPriority": 35,
+        "eligibleForAgent": true,
+        "defaultReference": false,
+        "reasoning": {
+          "supportedModes": [
+            "auto",
+            "high",
+            "max"
+          ],
+          "defaultMode": "high"
+        }
+      }
+    },
+    {
+      "id": "deepseek-v4-flash-0731",
+      "displayName": "DeepSeek V4 Flash 0731",
+      "family": "deepseek-v4-flash-0731",
+      "match": {
+        "exact": [
+          "deepseek-v4-flash-0731"
+        ]
+      },
+      "spec": {
+        "contextWindow": 1000000,
+        "maxOutputTokens": 384000,
+        "capabilities": [
+          "chat",
+          "code",
+          "reasoning",
+          "deep_thinking",
+          "multilingual",
+          "tool_use"
+        ],
+        "serviceType": [
+          "chat",
+          "reasoning"
+        ],
+        "defaultTemperature": 1,
+        "supportsReasoning": true,
+        "extra": {
+          "supportsThinking": true,
+          "thinkingDefault": true,
+          "reasoningEffort": [
+            "high",
+            "max"
+          ]
+        },
+        "description": "DeepSeek V4 Flash 0731 固定版本，100 万上下文"
       },
       "routing": {
         "tier": "lightweight",
