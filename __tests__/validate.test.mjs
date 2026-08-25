@@ -105,7 +105,7 @@ describe('真实数据全量校验', () => {
         if (spec.routing) routed.push(spec)
       }
     }
-    assert.equal(routed.length, 37)
+    assert.equal(routed.length, 39)
     assert.equal(routed.every((spec) => spec.routing.reasoning.supportedModes.includes(spec.routing.reasoning.defaultMode)), true)
     assert.equal(routed.every((spec) => Array.isArray(spec.spec.capabilities)), true)
   })
@@ -322,6 +322,35 @@ describe('真实数据全量校验', () => {
     assert.equal(specs[0].spec.defaultTemperature, 0.6)
     assert.equal(specs[0].spec.supportsReasoning, true)
     assert.ok(specs[0].spec.capabilities.includes('vision'))
+  })
+
+  it('基础模型与后缀版本应使用独立精确规格，避免互相误匹配', () => {
+    const qwen = JSON.parse(readFileSync(join(ROOT, 'compute', 'model-specs', 'qwen.json'), 'utf8'))
+    const deepseek = JSON.parse(readFileSync(join(ROOT, 'compute', 'model-specs', 'deepseek.json'), 'utf8'))
+    const specFor = (file, id) => file.specs.find((item) => item.id === id)
+
+    const qwenBase = specFor(qwen, 'qwen3.8-max')
+    const qwenPreview = specFor(qwen, 'qwen3.8-max-preview')
+    const deepseekBase = specFor(deepseek, 'deepseek-v4-pro')
+    const deepseek0813 = specFor(deepseek, 'deepseek-v4-pro-0813')
+
+    for (const [id, modelSpec] of [
+      ['qwen3.8-max', qwenBase],
+      ['qwen3.8-max-preview', qwenPreview],
+      ['deepseek-v4-pro', deepseekBase],
+      ['deepseek-v4-pro-0813', deepseek0813],
+    ]) {
+      assert.ok(modelSpec, `model-specs 缺少 ${id}`)
+      assert.deepEqual(modelSpec.match.exact, [id])
+      assert.equal(modelSpec.family, id)
+    }
+
+    assert.equal('patterns' in deepseekBase.match, false)
+    assert.equal('patterns' in deepseek0813.match, false)
+    assert.equal(qwenBase.spec.contextWindow, qwenPreview.spec.contextWindow)
+    assert.equal(qwenBase.spec.maxOutputTokens, qwenPreview.spec.maxOutputTokens)
+    assert.equal(deepseekBase.spec.contextWindow, deepseek0813.spec.contextWindow)
+    assert.equal(deepseekBase.spec.maxOutputTokens, deepseek0813.spec.maxOutputTokens)
   })
 
   it('所有 Provider 应按供应商归属计价，模型来源不覆盖供应商币种', () => {
