@@ -2,9 +2,58 @@
   "description": "阿里通义千问 Qwen 系列模型规格。参数来源：config-center compute/providers/dashscope.json。",
   "specs": [
     {
+      "id": "qwen3.8-max",
+      "displayName": "Qwen3.8 Max",
+      "family": "qwen3.8-max",
+      "match": {
+        "exact": [
+          "qwen3.8-max"
+        ]
+      },
+      "spec": {
+        "contextWindow": 1000000,
+        "maxOutputTokens": 65536,
+        "capabilities": [
+          "chat",
+          "reasoning",
+          "code",
+          "multilingual",
+          "tool_use",
+          "long_context",
+          "agent",
+          "vision"
+        ],
+        "serviceType": [
+          "chat"
+        ],
+        "defaultTemperature": 0.6,
+        "defaultTopP": 0.95,
+        "supportsReasoning": true,
+        "description": "通义千问 Qwen3.8 Max，100 万上下文，支持视觉理解"
+      },
+      "routing": {
+        "tier": "flagship",
+        "routingPriority": 40,
+        "eligibleForAgent": true,
+        "defaultReference": false,
+        "reasoning": {
+          "supportedModes": [
+            "auto",
+            "off",
+            "minimal",
+            "low",
+            "medium",
+            "high",
+            "xhigh"
+          ],
+          "defaultMode": "high"
+        }
+      }
+    },
+    {
       "id": "qwen3.8-max-preview",
       "displayName": "Qwen3.8 Max Preview",
-      "family": "qwen3.8",
+      "family": "qwen3.8-max-preview",
       "match": {
         "exact": [
           "qwen3.8-max-preview"

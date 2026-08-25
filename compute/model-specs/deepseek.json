@@ -4,13 +4,10 @@
     {
       "id": "deepseek-v4-pro",
       "displayName": "DeepSeek V4 Pro",
-      "family": "deepseek-v4",
+      "family": "deepseek-v4-pro",
       "match": {
         "exact": [
           "deepseek-v4-pro"
-        ],
-        "patterns": [
-          "deepseek-v4-pro*"
         ]
       },
       "spec": {
@@ -47,6 +44,59 @@
         "routingPriority": 30,
         "eligibleForAgent": true,
         "defaultReference": true,
+        "reasoning": {
+          "supportedModes": [
+            "auto",
+            "high",
+            "max"
+          ],
+          "defaultMode": "high"
+        }
+      }
+    },
+    {
+      "id": "deepseek-v4-pro-0813",
+      "displayName": "DeepSeek V4 Pro 0813",
+      "family": "deepseek-v4-pro-0813",
+      "match": {
+        "exact": [
+          "deepseek-v4-pro-0813"
+        ]
+      },
+      "spec": {
+        "contextWindow": 1000000,
+        "maxOutputTokens": 384000,
+        "capabilities": [
+          "chat",
+          "reasoning",
+          "deep_thinking",
+          "code",
+          "math",
+          "science",
+          "multilingual",
+          "tool_use"
+        ],
+        "serviceType": [
+          "chat",
+          "reasoning"
+        ],
+        "defaultTemperature": 1,
+        "supportsReasoning": true,
+        "extra": {
+          "supportsThinking": true,
+          "thinkingDefault": true,
+          "reasoningEffort": [
+            "high",
+            "max"
+          ]
+        },
+        "description": "DeepSeek V4 Pro 0813 版本，1.6T MoE 架构，100 万上下文"
+      },
+      "routing": {
+        "tier": "flagship",
+        "routingPriority": 30,
+        "eligibleForAgent": true,
+        "defaultReference": false,
         "reasoning": {
           "supportedModes": [
             "auto",
