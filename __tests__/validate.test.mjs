@@ -105,7 +105,7 @@ describe('真实数据全量校验', () => {
         if (spec.routing) routed.push(spec)
       }
     }
-    assert.equal(routed.length, 39)
+    assert.equal(routed.length, 40)
     assert.equal(routed.every((spec) => spec.routing.reasoning.supportedModes.includes(spec.routing.reasoning.defaultMode)), true)
     assert.equal(routed.every((spec) => Array.isArray(spec.spec.capabilities)), true)
   })
@@ -232,6 +232,37 @@ describe('真实数据全量校验', () => {
         assert.deepEqual(spec.extra.reasoningEffort, ['high', 'max'])
       }
     }
+  })
+
+  it('DeepSeek V4 Flash Vision Exp 应提供独立的视觉规格', () => {
+    const provider = JSON.parse(readFileSync(join(ROOT, 'compute', 'providers', 'deepseek.json'), 'utf8'))
+    const specFile = JSON.parse(readFileSync(join(ROOT, 'compute', 'model-specs', 'deepseek.json'), 'utf8'))
+    const modelId = 'deepseek-v4-flash-vision-exp'
+    const model = provider.models.find((item) => item.modelName === modelId)
+
+    assert.ok(provider.services.includes('vision'))
+    assert.ok(model, `provider 缺少 ${modelId}`)
+    assert.equal(model.contextWindow, 1000000)
+    assert.equal(model.maxOutputTokens, 384000)
+    assert.ok(model.capabilities.includes('vision'))
+    assert.ok(model.serviceType.includes('vision'))
+    assert.equal(model.extra.supportsThinking, true)
+    assert.equal(model.extra.thinkingDefault, true)
+
+    const specs = specFile.specs.filter((item) => item.id === modelId)
+    assert.equal(specs.length, 1, `model-specs 中 ${modelId} 应且仅应有一条规格`)
+    assert.deepEqual(specs[0].match.exact, [modelId])
+    assert.equal('patterns' in specs[0].match, false)
+    assert.equal(specs[0].family, modelId)
+    assert.equal(specs[0].spec.contextWindow, 1000000)
+    assert.equal(specs[0].spec.maxOutputTokens, 384000)
+    assert.equal(specs[0].spec.supportsReasoning, true)
+    assert.ok(specs[0].spec.capabilities.includes('vision'))
+    assert.ok(specs[0].spec.serviceType.includes('vision'))
+
+    const flash = specFile.specs.find((item) => item.id === 'deepseek-v4-flash')
+    assert.deepEqual(flash.match.exact, ['deepseek-v4-flash'])
+    assert.equal('patterns' in flash.match, false)
   })
 
   it('MiMo V2.5 ASR 应有独立精确规格，避免回落到 MiMo V2.5 family', () => {

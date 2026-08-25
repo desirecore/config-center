@@ -166,9 +166,6 @@
       "match": {
         "exact": [
           "deepseek-v4-flash"
-        ],
-        "patterns": [
-          "deepseek-v4-flash*"
         ]
       },
       "spec": {
@@ -196,6 +193,60 @@
             "max"
           ]
         }
+      },
+      "routing": {
+        "tier": "lightweight",
+        "routingPriority": 35,
+        "eligibleForAgent": true,
+        "defaultReference": false,
+        "reasoning": {
+          "supportedModes": [
+            "auto",
+            "high",
+            "max"
+          ],
+          "defaultMode": "high"
+        }
+      }
+    },
+    {
+      "id": "deepseek-v4-flash-vision-exp",
+      "displayName": "DeepSeek V4 Flash Vision Exp",
+      "family": "deepseek-v4-flash-vision-exp",
+      "match": {
+        "exact": [
+          "deepseek-v4-flash-vision-exp"
+        ]
+      },
+      "spec": {
+        "contextWindow": 1000000,
+        "maxOutputTokens": 384000,
+        "capabilities": [
+          "chat",
+          "code",
+          "reasoning",
+          "deep_thinking",
+          "vision",
+          "multilingual",
+          "tool_use"
+        ],
+        "serviceType": [
+          "chat",
+          "reasoning",
+          "vision"
+        ],
+        "defaultTemperature": 1,
+        "supportsReasoning": true,
+        "releasedAt": "2026-08-21",
+        "extra": {
+          "supportsThinking": true,
+          "thinkingDefault": true,
+          "reasoningEffort": [
+            "high",
+            "max"
+          ]
+        },
+        "description": "DeepSeek V4 Flash 实验性视觉版本，支持文本与图像输入，文本能力与 V4 Flash 一致"
       },
       "routing": {
         "tier": "lightweight",
