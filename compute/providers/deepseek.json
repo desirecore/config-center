@@ -11,13 +11,56 @@
   "priceCurrency": "CNY",
   "services": [
     "chat",
-    "reasoning"
+    "reasoning",
+    "vision"
   ],
   "tombstones": [
     "deepseek-chat",
     "deepseek-reasoner"
   ],
   "models": [
+    {
+      "modelName": "deepseek-v4-flash-vision-exp",
+      "displayName": "DeepSeek V4 Flash Vision Exp",
+      "serviceType": [
+        "chat",
+        "reasoning",
+        "vision"
+      ],
+      "description": "DeepSeek V4 Flash 实验性视觉版本，支持文本与图像输入，文本能力与 V4 Flash 一致，1M 上下文，并发上限 2500",
+      "contextWindow": 1000000,
+      "maxOutputTokens": 384000,
+      "capabilities": [
+        "chat",
+        "code",
+        "reasoning",
+        "deep_thinking",
+        "vision",
+        "long_context",
+        "multilingual",
+        "tool_use"
+      ],
+      "inputPrice": 1.008,
+      "outputPrice": 2.016,
+      "defaultTemperature": 1,
+      "defaultTopP": 1,
+      "extra": {
+        "cacheHitPrice": 0.02016,
+        "concurrencyLimit": 2500,
+        "supportsThinking": true,
+        "thinkingDefault": true,
+        "reasoningEffort": [
+          "high",
+          "max"
+        ],
+        "features": {
+          "jsonOutput": true,
+          "toolCalls": true,
+          "chatPrefixCompletion": "beta",
+          "fimCompletion": false
+        }
+      }
+    },
     {
       "modelName": "deepseek-v4-flash",
       "displayName": "DeepSeek V4 Flash",
