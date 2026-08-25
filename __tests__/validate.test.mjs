@@ -105,7 +105,7 @@ describe('真实数据全量校验', () => {
         if (spec.routing) routed.push(spec)
       }
     }
-    assert.equal(routed.length, 40)
+    assert.equal(routed.length, 41)
     assert.equal(routed.every((spec) => spec.routing.reasoning.supportedModes.includes(spec.routing.reasoning.defaultMode)), true)
     assert.equal(routed.every((spec) => Array.isArray(spec.spec.capabilities)), true)
   })
@@ -364,12 +364,16 @@ describe('真实数据全量校验', () => {
     const qwenPreview = specFor(qwen, 'qwen3.8-max-preview')
     const deepseekBase = specFor(deepseek, 'deepseek-v4-pro')
     const deepseek0813 = specFor(deepseek, 'deepseek-v4-pro-0813')
+    const deepseekFlash = specFor(deepseek, 'deepseek-v4-flash')
+    const deepseekFlash0731 = specFor(deepseek, 'deepseek-v4-flash-0731')
 
     for (const [id, modelSpec] of [
       ['qwen3.8-max', qwenBase],
       ['qwen3.8-max-preview', qwenPreview],
       ['deepseek-v4-pro', deepseekBase],
       ['deepseek-v4-pro-0813', deepseek0813],
+      ['deepseek-v4-flash', deepseekFlash],
+      ['deepseek-v4-flash-0731', deepseekFlash0731],
     ]) {
       assert.ok(modelSpec, `model-specs 缺少 ${id}`)
       assert.deepEqual(modelSpec.match.exact, [id])
@@ -378,10 +382,14 @@ describe('真实数据全量校验', () => {
 
     assert.equal('patterns' in deepseekBase.match, false)
     assert.equal('patterns' in deepseek0813.match, false)
+    assert.equal('patterns' in deepseekFlash.match, false)
+    assert.equal('patterns' in deepseekFlash0731.match, false)
     assert.equal(qwenBase.spec.contextWindow, qwenPreview.spec.contextWindow)
     assert.equal(qwenBase.spec.maxOutputTokens, qwenPreview.spec.maxOutputTokens)
     assert.equal(deepseekBase.spec.contextWindow, deepseek0813.spec.contextWindow)
     assert.equal(deepseekBase.spec.maxOutputTokens, deepseek0813.spec.maxOutputTokens)
+    assert.equal(deepseekFlash.spec.contextWindow, deepseekFlash0731.spec.contextWindow)
+    assert.equal(deepseekFlash.spec.maxOutputTokens, deepseekFlash0731.spec.maxOutputTokens)
   })
 
   it('所有 Provider 应按供应商归属计价，模型来源不覆盖供应商币种', () => {
