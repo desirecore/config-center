@@ -2,6 +2,115 @@
   "description": "智谱 GLM 系列模型规格。参数来源：config-center compute/providers/zhipu.json。glm-5 与 glm-5.1/glm-5-turbo/glm-5v-turbo 前缀相近，故各自仅用 exact 主键匹配，不用宽 pattern 以防误吞。",
   "specs": [
     {
+      "id": "glm-5.3",
+      "displayName": "GLM-5.3",
+      "family": "glm-5.3",
+      "match": {
+        "exact": [
+          "glm-5.3",
+          "z-ai/glm-5.3"
+        ]
+      },
+      "spec": {
+        "contextWindow": 1048576,
+        "maxOutputTokens": 131072,
+        "capabilities": [
+          "chat",
+          "reasoning",
+          "deep_thinking",
+          "code",
+          "math",
+          "multilingual",
+          "tool_use",
+          "agent",
+          "long_context"
+        ],
+        "serviceType": [
+          "chat"
+        ],
+        "defaultTemperature": 1,
+        "defaultTopP": 0.95,
+        "supportsReasoning": true,
+        "description": "智谱 GLM-5.3 大推理模型，面向复杂软件工程与长程 Agent 任务，100 万上下文；强制思考，无法关闭",
+        "extra": {
+          "thinkingDefault": true,
+          "thinkingOnly": true
+        },
+        "releasedAt": "2026-08-16"
+      },
+      "routing": {
+        "tier": "flagship",
+        "routingPriority": 50,
+        "eligibleForAgent": true,
+        "defaultReference": false,
+        "reasoning": {
+          "supportedModes": [
+            "auto",
+            "low",
+            "high",
+            "max"
+          ],
+          "defaultMode": "high"
+        }
+      }
+    },
+    {
+      "id": "glm-5.3-flash",
+      "displayName": "GLM-5.3-Flash",
+      "family": "glm-5.3-flash",
+      "match": {
+        "exact": [
+          "glm-5.3-flash",
+          "z-ai/glm-5.3-flash"
+        ]
+      },
+      "spec": {
+        "contextWindow": 1048576,
+        "maxOutputTokens": 131072,
+        "capabilities": [
+          "chat",
+          "reasoning",
+          "deep_thinking",
+          "code",
+          "tool_use",
+          "agent",
+          "long_context",
+          "vision",
+          "image_understanding",
+          "video_understanding"
+        ],
+        "serviceType": [
+          "chat",
+          "reasoning",
+          "vision"
+        ],
+        "defaultTemperature": 1,
+        "defaultTopP": 0.95,
+        "supportsReasoning": true,
+        "description": "智谱 GLM-5.3-Flash 原生多模态模型，混合稀疏与线性注意力，面向高效编码与长程 Agent 任务，100 万上下文；强制思考，无法关闭",
+        "extra": {
+          "thinkingDefault": true,
+          "thinkingOnly": true
+        },
+        "releasedAt": "2026-08-26"
+      },
+      "routing": {
+        "tier": "balanced",
+        "routingPriority": 48,
+        "eligibleForAgent": true,
+        "defaultReference": false,
+        "reasoning": {
+          "supportedModes": [
+            "auto",
+            "low",
+            "high",
+            "max"
+          ],
+          "defaultMode": "high"
+        }
+      }
+    },
+    {
       "id": "glm-5.2",
       "displayName": "GLM-5.2",
       "family": "glm-5.2",

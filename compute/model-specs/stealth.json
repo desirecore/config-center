@@ -1,9 +1,9 @@
 {
-  "description": "Stealth 系列模型规格。参数来源：OpenRouter Models API。",
+  "description": "Stealth 系列模型规格。参数来源：OpenRouter Models API。这些是厂商匿名发布的临时别名，揭晓后用 spec.extra.modelOrigin 标注真身，条目本身保留——云端算力可能仍以旧别名下发该模型。",
   "specs": [
     {
       "id": "ox-alpha",
-      "displayName": "Ox Alpha",
+      "displayName": "GLM-5.3-Flash (Ox Alpha)",
       "family": "ox-alpha",
       "match": {
         "exact": [
@@ -34,10 +34,15 @@
         "defaultTemperature": 1,
         "defaultTopP": 0.95,
         "supportsReasoning": true,
-        "description": "Ox Alpha 多模态推理模型，面向编程、长程 Agent、复杂推理与生产工作负载",
+        "description": "Ox Alpha 是智谱 GLM-5.3-Flash 的匿名发布别名（2026-08-26 揭晓）。原生多模态推理模型，面向高效编码与长程 Agent 任务，100 万上下文；强制思考，无法关闭",
         "extra": {
           "thinkingDefault": true,
-          "thinkingOnly": true
+          "thinkingOnly": true,
+          "modelOrigin": {
+            "vendor": "zhipu",
+            "canonicalModelId": "glm-5.3-flash",
+            "family": "glm-5.3-flash"
+          }
         },
         "releasedAt": "2026-08-21"
       }
