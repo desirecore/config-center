@@ -105,7 +105,7 @@ describe('真实数据全量校验', () => {
         if (spec.routing) routed.push(spec)
       }
     }
-    assert.equal(routed.length, 45)
+    assert.equal(routed.length, 46)
     assert.equal(routed.every((spec) => spec.routing.reasoning.supportedModes.includes(spec.routing.reasoning.defaultMode)), true)
     assert.equal(routed.every((spec) => Array.isArray(spec.spec.capabilities)), true)
   })
@@ -353,6 +353,29 @@ describe('真实数据全量校验', () => {
     assert.equal(specs[0].spec.defaultTemperature, 0.6)
     assert.equal(specs[0].spec.supportsReasoning, true)
     assert.ok(specs[0].spec.capabilities.includes('vision'))
+  })
+
+  it('Qwen3.8 Flash 应提供完整的多模态推理规格', () => {
+    const specFile = JSON.parse(readFileSync(join(ROOT, 'compute', 'model-specs', 'qwen.json'), 'utf8'))
+    const modelId = 'qwen3.8-flash'
+    const specs = specFile.specs.filter((item) => item.id === modelId)
+
+    assert.equal(specs.length, 1, `model-specs 中 ${modelId} 应且仅应有一条规格`)
+    const modelSpec = specs[0]
+    assert.deepEqual(modelSpec.match.exact, [modelId])
+    assert.equal('patterns' in modelSpec.match, false)
+    assert.equal(modelSpec.family, modelId)
+    assert.equal(modelSpec.spec.contextWindow, 1000000)
+    assert.equal(modelSpec.spec.maxOutputTokens, 131072)
+    assert.equal(modelSpec.spec.supportsReasoning, true)
+    assert.equal(modelSpec.spec.releasedAt, '2026-08-26')
+    assert.ok(modelSpec.spec.capabilities.includes('vision'))
+    assert.ok(modelSpec.spec.capabilities.includes('video_understanding'))
+    assert.ok(modelSpec.spec.capabilities.includes('fast'))
+    assert.deepEqual(modelSpec.spec.serviceType, ['chat', 'reasoning', 'vision'])
+    assert.equal(modelSpec.spec.extra.thinkingMaxTokens, 262144)
+    assert.equal(modelSpec.routing.tier, 'lightweight')
+    assert.equal(modelSpec.routing.reasoning.defaultMode, 'xhigh')
   })
 
   it('基础模型与后缀版本应使用独立精确规格，避免互相误匹配', () => {

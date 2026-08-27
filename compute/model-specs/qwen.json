@@ -51,6 +51,66 @@
       }
     },
     {
+      "id": "qwen3.8-flash",
+      "displayName": "Qwen3.8 Flash",
+      "family": "qwen3.8-flash",
+      "match": {
+        "exact": [
+          "qwen3.8-flash"
+        ]
+      },
+      "spec": {
+        "contextWindow": 1000000,
+        "maxOutputTokens": 131072,
+        "capabilities": [
+          "chat",
+          "reasoning",
+          "deep_thinking",
+          "code",
+          "multilingual",
+          "tool_use",
+          "long_context",
+          "agent",
+          "vision",
+          "video_understanding",
+          "fast"
+        ],
+        "serviceType": [
+          "chat",
+          "reasoning",
+          "vision"
+        ],
+        "defaultTemperature": 0.6,
+        "defaultTopP": 0.95,
+        "supportsReasoning": true,
+        "extra": {
+          "thinkingDefault": true,
+          "thinkingMaxTokens": 262144
+        },
+        "releasedAt": "2026-08-26",
+        "description": "通义千问 Qwen3.8 Flash，高性价比多模态推理模型，支持 100 万上下文及文本、图像、视频输入"
+      },
+      "routing": {
+        "tier": "lightweight",
+        "routingPriority": 40,
+        "eligibleForAgent": true,
+        "defaultReference": false,
+        "reasoning": {
+          "supportedModes": [
+            "auto",
+            "off",
+            "minimal",
+            "low",
+            "medium",
+            "high",
+            "xhigh",
+            "max"
+          ],
+          "defaultMode": "xhigh"
+        }
+      }
+    },
+    {
       "id": "qwen3.8-max-preview",
       "displayName": "Qwen3.8 Max Preview",
       "family": "qwen3.8-max-preview",
