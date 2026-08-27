@@ -105,7 +105,7 @@ describe('真实数据全量校验', () => {
         if (spec.routing) routed.push(spec)
       }
     }
-    assert.equal(routed.length, 43)
+    assert.equal(routed.length, 46)
     assert.equal(routed.every((spec) => spec.routing.reasoning.supportedModes.includes(spec.routing.reasoning.defaultMode)), true)
     assert.equal(routed.every((spec) => Array.isArray(spec.spec.capabilities)), true)
   })
@@ -234,6 +234,37 @@ describe('真实数据全量校验', () => {
     }
   })
 
+  it('DeepSeek V4 Flash Vision Exp 应提供独立的视觉规格', () => {
+    const provider = JSON.parse(readFileSync(join(ROOT, 'compute', 'providers', 'deepseek.json'), 'utf8'))
+    const specFile = JSON.parse(readFileSync(join(ROOT, 'compute', 'model-specs', 'deepseek.json'), 'utf8'))
+    const modelId = 'deepseek-v4-flash-vision-exp'
+    const model = provider.models.find((item) => item.modelName === modelId)
+
+    assert.ok(provider.services.includes('vision'))
+    assert.ok(model, `provider 缺少 ${modelId}`)
+    assert.equal(model.contextWindow, 1000000)
+    assert.equal(model.maxOutputTokens, 384000)
+    assert.ok(model.capabilities.includes('vision'))
+    assert.ok(model.serviceType.includes('vision'))
+    assert.equal(model.extra.supportsThinking, true)
+    assert.equal(model.extra.thinkingDefault, true)
+
+    const specs = specFile.specs.filter((item) => item.id === modelId)
+    assert.equal(specs.length, 1, `model-specs 中 ${modelId} 应且仅应有一条规格`)
+    assert.deepEqual(specs[0].match.exact, [modelId])
+    assert.equal('patterns' in specs[0].match, false)
+    assert.equal(specs[0].family, modelId)
+    assert.equal(specs[0].spec.contextWindow, 1000000)
+    assert.equal(specs[0].spec.maxOutputTokens, 384000)
+    assert.equal(specs[0].spec.supportsReasoning, true)
+    assert.ok(specs[0].spec.capabilities.includes('vision'))
+    assert.ok(specs[0].spec.serviceType.includes('vision'))
+
+    const flash = specFile.specs.find((item) => item.id === 'deepseek-v4-flash')
+    assert.deepEqual(flash.match.exact, ['deepseek-v4-flash'])
+    assert.equal('patterns' in flash.match, false)
+  })
+
   it('MiMo V2.5 ASR 应有独立精确规格，避免回落到 MiMo V2.5 family', () => {
     const specFile = JSON.parse(readFileSync(join(ROOT, 'compute', 'model-specs', 'xiaomi.json'), 'utf8'))
     const specs = specFile.specs.filter((item) => item.id === 'mimo-v2.5-asr')
@@ -324,6 +355,29 @@ describe('真实数据全量校验', () => {
     assert.ok(specs[0].spec.capabilities.includes('vision'))
   })
 
+  it('Qwen3.8 Flash 应提供完整的多模态推理规格', () => {
+    const specFile = JSON.parse(readFileSync(join(ROOT, 'compute', 'model-specs', 'qwen.json'), 'utf8'))
+    const modelId = 'qwen3.8-flash'
+    const specs = specFile.specs.filter((item) => item.id === modelId)
+
+    assert.equal(specs.length, 1, `model-specs 中 ${modelId} 应且仅应有一条规格`)
+    const modelSpec = specs[0]
+    assert.deepEqual(modelSpec.match.exact, [modelId])
+    assert.equal('patterns' in modelSpec.match, false)
+    assert.equal(modelSpec.family, modelId)
+    assert.equal(modelSpec.spec.contextWindow, 1000000)
+    assert.equal(modelSpec.spec.maxOutputTokens, 131072)
+    assert.equal(modelSpec.spec.supportsReasoning, true)
+    assert.equal(modelSpec.spec.releasedAt, '2026-08-26')
+    assert.ok(modelSpec.spec.capabilities.includes('vision'))
+    assert.ok(modelSpec.spec.capabilities.includes('video_understanding'))
+    assert.ok(modelSpec.spec.capabilities.includes('fast'))
+    assert.deepEqual(modelSpec.spec.serviceType, ['chat', 'reasoning', 'vision'])
+    assert.equal(modelSpec.spec.extra.thinkingMaxTokens, 262144)
+    assert.equal(modelSpec.routing.tier, 'lightweight')
+    assert.equal(modelSpec.routing.reasoning.defaultMode, 'xhigh')
+  })
+
   it('基础模型与后缀版本应使用独立精确规格，避免互相误匹配', () => {
     const qwen = JSON.parse(readFileSync(join(ROOT, 'compute', 'model-specs', 'qwen.json'), 'utf8'))
     const deepseek = JSON.parse(readFileSync(join(ROOT, 'compute', 'model-specs', 'deepseek.json'), 'utf8'))
@@ -333,12 +387,16 @@ describe('真实数据全量校验', () => {
     const qwenPreview = specFor(qwen, 'qwen3.8-max-preview')
     const deepseekBase = specFor(deepseek, 'deepseek-v4-pro')
     const deepseek0813 = specFor(deepseek, 'deepseek-v4-pro-0813')
+    const deepseekFlash = specFor(deepseek, 'deepseek-v4-flash')
+    const deepseekFlash0731 = specFor(deepseek, 'deepseek-v4-flash-0731')
 
     for (const [id, modelSpec] of [
       ['qwen3.8-max', qwenBase],
       ['qwen3.8-max-preview', qwenPreview],
       ['deepseek-v4-pro', deepseekBase],
       ['deepseek-v4-pro-0813', deepseek0813],
+      ['deepseek-v4-flash', deepseekFlash],
+      ['deepseek-v4-flash-0731', deepseekFlash0731],
     ]) {
       assert.ok(modelSpec, `model-specs 缺少 ${id}`)
       assert.deepEqual(modelSpec.match.exact, [id])
@@ -347,10 +405,14 @@ describe('真实数据全量校验', () => {
 
     assert.equal('patterns' in deepseekBase.match, false)
     assert.equal('patterns' in deepseek0813.match, false)
+    assert.equal('patterns' in deepseekFlash.match, false)
+    assert.equal('patterns' in deepseekFlash0731.match, false)
     assert.equal(qwenBase.spec.contextWindow, qwenPreview.spec.contextWindow)
     assert.equal(qwenBase.spec.maxOutputTokens, qwenPreview.spec.maxOutputTokens)
     assert.equal(deepseekBase.spec.contextWindow, deepseek0813.spec.contextWindow)
     assert.equal(deepseekBase.spec.maxOutputTokens, deepseek0813.spec.maxOutputTokens)
+    assert.equal(deepseekFlash.spec.contextWindow, deepseekFlash0731.spec.contextWindow)
+    assert.equal(deepseekFlash.spec.maxOutputTokens, deepseekFlash0731.spec.maxOutputTokens)
   })
 
   it('所有 Provider 应按供应商归属计价，模型来源不覆盖供应商币种', () => {
