@@ -160,6 +160,16 @@
               "type": "object",
               "description": "模型内在附加配置（如 apiModelId 全名、推理预算等）。不含价格，也不得声明 Provider/接入面的 reasoning effort 能力。",
               "not": { "required": ["reasoning"] },
+              "properties": {
+                "thinkingOnly": {
+                  "type": "boolean",
+                  "description": "模型强制思考、无法关闭（如 GLM-5.3 系列 thinking.type 仅接受 enabled）。true 时客户端把 off 从可选档位移除，并把内部 suppressThinking 降级为 auto，避免发出必然被上游拒绝的关闭参数。只描述模型固有属性，不声明接入面支持哪些深度档位——后者只能写在 provider model 的 extra.reasoning 中。"
+                },
+                "thinkingDefault": {
+                  "type": "boolean",
+                  "description": "模型默认开启思考。当前不改变客户端行为，仅供维护者参考。"
+                }
+              },
               "additionalProperties": true
             },
             "releasedAt": {
