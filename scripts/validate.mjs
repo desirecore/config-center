@@ -105,6 +105,62 @@ export function validateFile(absPath, validators = loadSchemas()) {
   return { ok: false, schemaKey, errors: validator.errors }
 }
 
+/**
+ * 已知会静默失效的 extra 键名。
+ *
+ * `extra` 是开放对象：写错键名既不会被 schema 拒绝，也没有任何运行时告警——数据看着
+ * 在那儿，客户端却永远读不到。desirecore#2307 就是这么来的：model-spec 的
+ * extra.thinkingOnly 写下后零消费，provider 侧另有 10 处扁平 extra.reasoningEffort
+ * 同样从未生效，直到用户撞上一个上游 400 才暴露。
+ *
+ * 刻意只警告、不失败：存量条目的正确取值必须逐个核实各自接入面实际接受哪些 effort，
+ * 一次批量改写的风险远大于收益（声明过窄会削掉模型能力，漏写 none 会让原本能关思考
+ * 的模型失去该选项）。
+ */
+const SUSPICIOUS_EXTRA_KEYS = {
+  provider: {
+    reasoningEffort: '客户端只读嵌套的 extra.reasoning.supportedEfforts，扁平写法永不生效',
+    defaultReasoningEffort: '同上，应并入 extra.reasoning.defaultEffort',
+  },
+  spec: {
+    reasoningEffort: 'reasoning effort 是接入面能力，只能声明在 provider model 的 extra.reasoning 中',
+  },
+}
+
+/** 巡检静默失效键名，返回告警列表（不影响退出码）。 */
+function lintSuspiciousExtraKeys(targets) {
+  const warnings = []
+  for (const file of targets) {
+    const rel = relative(ROOT, file)
+    let data
+    try {
+      data = JSON.parse(readFileSync(file, 'utf8'))
+    } catch {
+      continue // 解析失败由 schema 校验负责报错
+    }
+    if (Array.isArray(data.models)) {
+      for (const model of data.models) {
+        for (const [key, hint] of Object.entries(SUSPICIOUS_EXTRA_KEYS.provider)) {
+          if (model?.extra && Object.hasOwn(model.extra, key)) {
+            warnings.push(`${rel} → models[${model.modelName}].extra.${key}：${hint}`)
+          }
+        }
+      }
+    }
+    if (Array.isArray(data.specs)) {
+      for (const entry of data.specs) {
+        const extra = entry?.spec?.extra
+        for (const [key, hint] of Object.entries(SUSPICIOUS_EXTRA_KEYS.spec)) {
+          if (extra && Object.hasOwn(extra, key)) {
+            warnings.push(`${rel} → specs[${entry.id}].spec.extra.${key}：${hint}`)
+          }
+        }
+      }
+    }
+  }
+  return warnings
+}
+
 function main() {
   const args = process.argv.slice(2)
   const fileArgIdx = args.indexOf('--file')
@@ -141,6 +197,14 @@ function main() {
       console.error(`  fail [${result.schemaKey}] ${rel}`)
       console.error(formatErrors(result.errors))
     }
+  }
+
+  const warnings = lintSuspiciousExtraKeys(targets)
+  if (warnings.length > 0) {
+    console.log()
+    console.log(`静默失效键名告警（${warnings.length} 处，不影响校验结果）：`)
+    for (const warning of warnings) console.log(`  warn ${warning}`)
+    console.log('  这些键写在 extra 里不会报错，但客户端从不读取；修正前请逐个核实该接入面实际接受的 effort。')
   }
 
   console.log()
