@@ -35,6 +35,12 @@
       "inputPrice": 10,
       "outputPrice": 50,
       "extra": {
+        "thinkingRoundTrip": {
+          "enabled": true,
+          "protocol": "anthropic-messages",
+          "allowEmptySignature": false,
+          "scope": "active-tool-turn"
+        },
         "serverSideWebSearch": {
           "enabled": true,
           "dialect": "anthropic-messages",
@@ -83,6 +89,12 @@
       "inputPrice": 5,
       "outputPrice": 25,
       "extra": {
+        "thinkingRoundTrip": {
+          "enabled": true,
+          "protocol": "anthropic-messages",
+          "allowEmptySignature": false,
+          "scope": "active-tool-turn"
+        },
         "serverSideWebSearch": {
           "enabled": true,
           "dialect": "anthropic-messages",
@@ -136,6 +148,12 @@
       "inputPrice": 2,
       "outputPrice": 10,
       "extra": {
+        "thinkingRoundTrip": {
+          "enabled": true,
+          "protocol": "anthropic-messages",
+          "allowEmptySignature": false,
+          "scope": "active-tool-turn"
+        },
         "serverSideWebSearch": {
           "enabled": true,
           "dialect": "anthropic-messages",
@@ -187,6 +205,12 @@
       "outputPrice": 5,
       "defaultTemperature": 1,
       "extra": {
+        "thinkingRoundTrip": {
+          "enabled": true,
+          "protocol": "anthropic-messages",
+          "allowEmptySignature": false,
+          "scope": "active-tool-turn"
+        },
         "modelId": "claude-haiku-4-5-20251001",
         "cachePricing": {
           "write5m": 1.25,
