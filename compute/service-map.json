@@ -74,5 +74,9 @@
   "music_gen": {
     "modelName": "music-2.6",
     "providerId": "provider-minimax-001"
+  },
+  "summary": {
+    "modelName": "deepseek-v4-flash",
+    "providerId": "desirecore-cloud"
   }
 }
