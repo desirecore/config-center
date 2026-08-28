@@ -448,7 +448,6 @@ describe('真实数据全量校验', () => {
       deepseek: 'CNY',
       google: 'USD',
       kling: 'CNY',
-      lingyiwanwu: 'CNY',
       'local-whisper': 'USD',
       minimax: 'CNY',
       mistral: 'USD',

@@ -27,7 +27,6 @@ const PROVIDER_OWNED_BY = {
   xai: ["x-ai"],
   mistral: ["mistralai"],
   kwai: ["kuaishou"],
-  lingyiwanwu: ["inclusionai"],
   siliconflow: ["qwen", "baai"],
   cohere: ["cohere"],
   perplexity: ["perplexity"],
