@@ -378,6 +378,28 @@ describe('真实数据全量校验', () => {
     assert.equal(modelSpec.routing.reasoning.defaultMode, 'xhigh')
   })
 
+  it('GLM-5.3-Flash 应在 Coding Plan 中提供强制思考的多模态接入', () => {
+    const codingPlan = JSON.parse(readFileSync(join(ROOT, 'compute', 'coding-plans', 'zhipu-coding.json'), 'utf8'))
+    const specFile = JSON.parse(readFileSync(join(ROOT, 'compute', 'model-specs', 'zhipu.json'), 'utf8'))
+    const modelId = 'glm-5.3-flash'
+    const model = codingPlan.models.find((item) => item.modelName === modelId)
+    const modelSpec = specFile.specs.find((item) => item.id === modelId)
+
+    assert.ok(model, `智谱 Coding Plan 缺少 ${modelId}`)
+    assert.equal(model.contextWindow, 1048576)
+    assert.equal(model.maxOutputTokens, 131072)
+    assert.ok(model.capabilities.includes('vision'))
+    assert.ok(model.capabilities.includes('video_understanding'))
+    assert.deepEqual(model.serviceType, ['chat', 'reasoning', 'vision'])
+    assert.equal(model.extra.thinkingOnly, true)
+    assert.deepEqual(model.extra.reasoning.supportedEfforts, ['low', 'high', 'max'])
+    assert.equal(model.extra.reasoning.defaultEffort, 'max')
+
+    assert.ok(modelSpec, `model-specs 缺少 ${modelId}`)
+    assert.equal(modelSpec.spec.extra.thinkingOnly, true)
+    assert.deepEqual(modelSpec.routing.reasoning.supportedModes, ['auto', 'low', 'high', 'max'])
+  })
+
   it('基础模型与后缀版本应使用独立精确规格，避免互相误匹配', () => {
     const qwen = JSON.parse(readFileSync(join(ROOT, 'compute', 'model-specs', 'qwen.json'), 'utf8'))
     const deepseek = JSON.parse(readFileSync(join(ROOT, 'compute', 'model-specs', 'deepseek.json'), 'utf8'))
