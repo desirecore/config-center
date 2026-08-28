@@ -629,6 +629,30 @@ describe('provider schema 反例（防 PR #1 重演）', () => {
     assert.equal(validate(data), true, JSON.stringify(validate.errors))
   })
 
+  it('严格校验 Provider model 的 native thinking round-trip 能力', () => {
+    const valid = makeValidProvider()
+    valid.models[0].extra = {
+      thinkingRoundTrip: {
+        enabled: true,
+        protocol: 'anthropic-messages',
+        allowEmptySignature: false,
+        scope: 'active-tool-turn',
+      },
+    }
+    assert.equal(validate(valid), true, JSON.stringify(validate.errors))
+
+    for (const brokenCapability of [
+      { enabled: true, protocol: 'anthropic-messages', scope: 'active-tool-turn' },
+      { enabled: true, protocol: 'openai-completions', allowEmptySignature: false, scope: 'active-tool-turn' },
+      { enabled: true, protocol: 'anthropic-messages', allowEmptySignature: false, scope: 'all-history' },
+      { enabled: true, protocol: 'anthropic-messages', allowEmptySignature: false, scope: 'active-tool-turn', completed: true },
+    ]) {
+      const invalid = makeValidProvider()
+      invalid.models[0].extra = { thinkingRoundTrip: brokenCapability }
+      assert.equal(validate(invalid), false)
+    }
+  })
+
   it('拒绝 Ultra 与重复 reasoning effort', () => {
     const ultra = makeValidProvider()
     ultra.models[0].extra = {

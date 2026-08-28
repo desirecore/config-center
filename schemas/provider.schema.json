@@ -252,8 +252,34 @@
         },
         "extra": {
           "type": "object",
-          "description": "接入面特定配置：如 TTS 模型音色列表、ASR 支持格式与本 Provider 实际接受的 reasoning effort。这里是兼容扩展面：旧客户端会安全保留并忽略未知子字段。",
+          "description": "接入面特定配置：如 TTS 模型音色列表、ASR 支持格式、reasoning effort 与 native thinking 回放能力。这里是兼容扩展面：旧客户端会安全保留并忽略未知子字段。",
           "properties": {
+            "thinkingRoundTrip": {
+              "type": "object",
+              "description": "当前 Provider/model 接入面是否允许回放 Provider 原样返回的 Anthropic thinking。只授权当前未闭合工具轨迹；UI 展示 thinking、已完成旧轮次、跨模型/凭据数据永远没有回放资格。",
+              "required": ["enabled", "protocol", "allowEmptySignature", "scope"],
+              "properties": {
+                "enabled": {
+                  "type": "boolean",
+                  "description": "显式能力开关；客户端只接受 true，false 或缺失均 fail closed。"
+                },
+                "protocol": {
+                  "type": "string",
+                  "enum": ["anthropic-messages"],
+                  "description": "能力对应的线上协议；不得由 Provider 名称或 URL 猜测。"
+                },
+                "allowEmptySignature": {
+                  "type": "boolean",
+                  "description": "是否允许回放该接入面原样返回的空 signature；只有真机证明网关确实要求时才能设为 true，不得制造空签名。"
+                },
+                "scope": {
+                  "type": "string",
+                  "enum": ["active-tool-turn"],
+                  "description": "固定只作用于当前未闭合工具轨迹，禁止扩张到完成历史。"
+                }
+              },
+              "additionalProperties": false
+            },
             "reasoning": {
               "type": "object",
               "description": "当前 Provider 接入面接受哪些 reasoning effort 值——精确档位矩阵。只能写在 provider model 的 extra 里：同一模型经不同网关支持的集合可能不同，因此 model-spec 的 spec.extra 里写本键会被客户端 applySpec 主动丢弃。想表达「这个模型根本关不掉思考」的用 model-spec 的 spec.extra.thinkingOnly，那只回答 off 能否使用、不声明任何深度档位。",
