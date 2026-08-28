@@ -28,6 +28,48 @@
   ],
   "models": [
     {
+      "modelName": "glm-5.3-flash",
+      "displayName": "GLM-5.3-Flash (Coding)",
+      "serviceType": [
+        "chat",
+        "reasoning",
+        "vision"
+      ],
+      "description": "智谱 GLM-5.3-Flash Coding Plan 版本，原生多模态高效模型，1M 上下文，128K 最大输出，强制开启思考",
+      "contextWindow": 1048576,
+      "maxOutputTokens": 131072,
+      "capabilities": [
+        "chat",
+        "reasoning",
+        "deep_thinking",
+        "code",
+        "vision",
+        "image_understanding",
+        "video_understanding",
+        "long_context",
+        "tool_use",
+        "agent",
+        "multilingual",
+        "fast"
+      ],
+      "defaultTemperature": 1,
+      "defaultTopP": 0.95,
+      "extra": {
+        "supportsThinking": true,
+        "thinkingDefault": true,
+        "thinkingOnly": true,
+        "reasoning": {
+          "supportedEfforts": [
+            "low",
+            "high",
+            "max"
+          ],
+          "defaultEffort": "max"
+        }
+      },
+      "source": "preset"
+    },
+    {
       "modelName": "glm-5.2",
       "apiModelId": "glm-5.2[1m]",
       "displayName": "GLM-5.2 (Coding)",
