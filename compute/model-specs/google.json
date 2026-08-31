@@ -2,6 +2,33 @@
   "description": "Google Gemini 系列模型规格。参数来源：config-center compute/providers/google.json。",
   "specs": [
     {
+      "id": "gemini-3.1-flash-lite-image",
+      "displayName": "Gemini 3.1 Flash Lite Image (Nano Banana 2 Lite)",
+      "family": "gemini-3.1-flash-lite-image",
+      "match": {
+        "exact": [
+          "gemini-3.1-flash-lite-image"
+        ]
+      },
+      "spec": {
+        "contextWindow": 65536,
+        "maxOutputTokens": 4096,
+        "capabilities": [
+          "chat",
+          "vision",
+          "image_generation",
+          "image_editing",
+          "tool_use"
+        ],
+        "serviceType": [
+          "image_gen"
+        ],
+        "supportsReasoning": true,
+        "description": "Nano Banana 2 Lite，Google 面向高吞吐图像生成与编辑的轻量模型",
+        "releasedAt": "2026-06-30"
+      }
+    },
+    {
       "id": "gemini-3.5-flash",
       "displayName": "Gemini 3.5 Flash",
       "family": "gemini-3.5",
