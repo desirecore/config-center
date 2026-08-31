@@ -271,8 +271,101 @@ describe('真实数据全量校验', () => {
 
     assert.equal(specs.length, 1, 'mimo-v2.5-asr 应且仅应有一条规格')
     assert.deepEqual(specs[0].match.exact, ['mimo-v2.5-asr'])
+    assert.equal(specs[0].spec.contextWindow, 8192)
+    assert.equal(specs[0].spec.maxOutputTokens, 2048)
     assert.deepEqual(specs[0].spec.serviceType, ['asr'])
     assert.ok(specs[0].spec.capabilities.includes('asr'))
+    assert.deepEqual(specs[0].spec.extra.modelOrigin, {
+      vendor: 'xiaomi',
+      canonicalModelId: 'mimo-v2.5-asr',
+      family: 'mimo-asr',
+    })
+    assert.deepEqual(specs[0].spec.extra.speech, {
+      protocol: 'xiaomi-mimo-chat-asr',
+      protocolVersion: '1',
+      modes: ['batch'],
+      inputFormats: ['wav', 'mp3'],
+      languageHints: true,
+    })
+  })
+
+  it('MiMo V2.5 TTS 应声明稳定协议与官方音色', () => {
+    const specFile = JSON.parse(readFileSync(join(ROOT, 'compute', 'model-specs', 'xiaomi.json'), 'utf8'))
+    const provider = JSON.parse(readFileSync(join(ROOT, 'compute', 'providers', 'xiaomi.json'), 'utf8'))
+    const tts = specFile.specs.find((item) => item.id === 'mimo-v2.5-tts')
+    const providerTts = provider.models.find((item) => item.modelName === 'mimo-v2.5-tts')
+    const providerAsr = provider.models.find((item) => item.modelName === 'mimo-v2.5-asr')
+
+    assert.ok(tts, 'model-specs 中缺少 mimo-v2.5-tts')
+    assert.ok(providerTts, 'provider 中缺少 mimo-v2.5-tts')
+    assert.ok(providerAsr, 'provider 中缺少 mimo-v2.5-asr')
+    assert.ok(provider.services.includes('asr'))
+    assert.equal(tts.spec.contextWindow, 8192)
+    assert.equal(tts.spec.maxOutputTokens, 8192)
+    assert.deepEqual(tts.spec.extra.modelOrigin, {
+      vendor: 'xiaomi',
+      canonicalModelId: 'mimo-v2.5-tts',
+      family: 'mimo-tts',
+    })
+    assert.equal(tts.spec.extra.speech.protocol, 'xiaomi-mimo-chat-tts')
+    assert.equal(tts.spec.extra.speech.protocolVersion, '1')
+    assert.deepEqual(tts.spec.extra.speech.modes, ['batch', 'streaming'])
+    assert.deepEqual(tts.spec.extra.speech.outputFormats, ['wav', 'mp3', 'pcm16le'])
+    assert.deepEqual(tts.spec.extra.speech.sampleRates, [24000])
+    assert.equal(tts.spec.extra.speech.defaultVoice, 'mimo_default')
+    assert.deepEqual(
+      tts.spec.extra.speech.voices.map((voice) => voice.id),
+      ['mimo_default', '冰糖', '茉莉', '苏打', '白桦', 'Mia', 'Chloe', 'Milo', 'Dean'],
+    )
+    assert.deepEqual(
+      providerTts.extra.voices.map((voice) => voice.id),
+      ['mimo_default', '冰糖', '茉莉', '苏打', '白桦', 'Mia', 'Chloe', 'Milo', 'Dean'],
+    )
+    assert.deepEqual(providerTts.extra.audioFormats, ['wav', 'mp3', 'pcm16le'])
+    assert.equal(providerTts.extra.sampleRate, 24000)
+  })
+
+  it('OpenRouter 2026-07-21 水位线前的缺失模型应使用当前精确规格', () => {
+    const openai = JSON.parse(readFileSync(join(ROOT, 'compute', 'model-specs', 'openai.json'), 'utf8'))
+    const google = JSON.parse(readFileSync(join(ROOT, 'compute', 'model-specs', 'google.json'), 'utf8'))
+    const tencent = JSON.parse(readFileSync(join(ROOT, 'compute', 'model-specs', 'tencent.json'), 'utf8'))
+    const xai = JSON.parse(readFileSync(join(ROOT, 'compute', 'model-specs', 'xai.json'), 'utf8'))
+
+    for (const id of ['gpt-5.6-sol-pro', 'gpt-5.6-terra-pro', 'gpt-5.6-luna-pro']) {
+      const modelSpec = openai.specs.find((item) => item.id === id)
+      assert.ok(modelSpec, `model-specs/openai.json 缺少 ${id}`)
+      assert.equal(modelSpec.family, id)
+      assert.deepEqual(modelSpec.match.exact, [id])
+      assert.equal('patterns' in modelSpec.match, false)
+      assert.equal(modelSpec.spec.contextWindow, 1050000)
+      assert.equal(modelSpec.spec.maxOutputTokens, 128000)
+      assert.equal(modelSpec.spec.supportsReasoning, true)
+    }
+
+    const gemini = google.specs.find((item) => item.id === 'gemini-3.1-flash-lite-image')
+    assert.ok(gemini, 'model-specs/google.json 缺少 gemini-3.1-flash-lite-image')
+    assert.deepEqual(gemini.match.exact, ['gemini-3.1-flash-lite-image'])
+    assert.equal(gemini.spec.contextWindow, 65536)
+    assert.equal(gemini.spec.maxOutputTokens, 4096)
+    assert.ok(gemini.spec.capabilities.includes('image_generation'))
+    assert.ok(gemini.spec.capabilities.includes('image_editing'))
+
+    const hy3 = tencent.specs.find((item) => item.id === 'hy3')
+    assert.ok(hy3, 'model-specs/tencent.json 缺少 hy3')
+    assert.deepEqual(hy3.match.exact, ['hy3'])
+    assert.equal(hy3.spec.contextWindow, 262144)
+    assert.equal(hy3.spec.maxOutputTokens, 128000)
+
+    const grok = xai.specs.find((item) => item.id === 'grok-4.5')
+    assert.ok(grok, 'model-specs/xai.json 缺少 grok-4.5')
+    assert.deepEqual(grok.match.exact, ['grok-4.5'])
+    assert.equal(grok.spec.contextWindow, 500000)
+    assert.equal(grok.spec.maxOutputTokens, 450000)
+    assert.equal(grok.spec.extra.thinkingOnly, true)
+
+    const watermark = readFileSync(join(ROOT, '.sync-watermark'), 'utf8')
+    assert.match(watermark, /# 人读: 2026-07-21T03:37:38Z/)
+    assert.equal(Number(watermark.trim().split(/\s+/).at(-1)), 1784554658)
   })
 
   it('Ox Alpha 应提供与 OpenRouter 一致的多模态推理规格', () => {
@@ -750,6 +843,64 @@ describe('model-spec schema 接入面边界', () => {
       specs: [{ id: 'gpt-test', spec: { extra: { intrinsicBudgetHint: 8192 } } }],
     }
     assert.equal(validate(data), true, JSON.stringify(validate.errors))
+  })
+
+  it('接受 extra.modelOrigin/speech，同时保持其他扩展开放', () => {
+    const data = {
+      specs: [{
+        id: 'mimo-v2.5-asr',
+        spec: {
+          extra: {
+            modelOrigin: {
+              vendor: 'xiaomi',
+              canonicalModelId: 'mimo-v2.5-asr',
+              family: 'mimo-asr',
+            },
+            speech: {
+              protocol: 'xiaomi-mimo-chat-asr',
+              protocolVersion: '1',
+              modes: ['batch', 'streaming'],
+              inputFormats: ['wav', 'mp3'],
+              languageHints: true,
+            },
+            intrinsicBudgetHint: 8192,
+          },
+        },
+      }],
+    }
+    assert.equal(validate(data), true, JSON.stringify(validate.errors))
+  })
+
+  it('严格拒绝非法 speech 二级结构和字段越界', () => {
+    const invalidProfile = {
+      specs: [{
+        id: 'bad-asr',
+        spec: {
+          extra: {
+            speech: {
+              protocol: 'xiaomi-mimo-chat-asr',
+              protocolVersion: '1',
+              modes: ['batch', 'batch'],
+            },
+          },
+        },
+      }],
+    }
+    assert.equal(validate(invalidProfile), false)
+
+    const misplaced = {
+      specs: [{
+        id: 'bad-asr',
+        spec: {
+          speech: {
+            protocol: 'xiaomi-mimo-chat-asr',
+            protocolVersion: '1',
+            modes: ['batch'],
+          },
+        },
+      }],
+    }
+    assert.equal(validate(misplaced), false)
   })
 })
 

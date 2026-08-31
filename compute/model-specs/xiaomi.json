@@ -192,6 +192,7 @@
       },
       "spec": {
         "contextWindow": 8192,
+        "maxOutputTokens": 8192,
         "capabilities": [
           "tts",
           "multilingual",
@@ -200,7 +201,43 @@
         "serviceType": [
           "tts"
         ],
-        "description": "小米 MiMo 语音合成，支持多语言与风格控制"
+        "description": "小米 MiMo 语音合成，支持多语言与风格控制",
+        "extra": {
+          "modelOrigin": {
+            "vendor": "xiaomi",
+            "canonicalModelId": "mimo-v2.5-tts",
+            "family": "mimo-tts"
+          },
+          "speech": {
+            "protocol": "xiaomi-mimo-chat-tts",
+            "protocolVersion": "1",
+            "modes": [
+              "batch",
+              "streaming"
+            ],
+            "outputFormats": [
+              "wav",
+              "mp3",
+              "pcm16le"
+            ],
+            "sampleRates": [
+              24000
+            ],
+            "defaultVoice": "mimo_default",
+            "voices": [
+              { "id": "mimo_default", "label": "MiMo 默认" },
+              { "id": "冰糖", "label": "冰糖" },
+              { "id": "茉莉", "label": "茉莉" },
+              { "id": "苏打", "label": "苏打" },
+              { "id": "白桦", "label": "白桦" },
+              { "id": "Mia", "label": "Mia" },
+              { "id": "Chloe", "label": "Chloe" },
+              { "id": "Milo", "label": "Milo" },
+              { "id": "Dean", "label": "Dean" }
+            ]
+          }
+        },
+        "releasedAt": "2026-04-23"
       },
       "routing": {
         "tier": "lightweight",
@@ -225,6 +262,8 @@
         ]
       },
       "spec": {
+        "contextWindow": 8192,
+        "maxOutputTokens": 2048,
         "capabilities": [
           "asr",
           "multilingual"
@@ -232,7 +271,27 @@
         "serviceType": [
           "asr"
         ],
-        "description": "小米 MiMo 语音识别模型"
+        "description": "小米 MiMo 语音识别模型，支持中英文语言提示与整段音频识别",
+        "extra": {
+          "modelOrigin": {
+            "vendor": "xiaomi",
+            "canonicalModelId": "mimo-v2.5-asr",
+            "family": "mimo-asr"
+          },
+          "speech": {
+            "protocol": "xiaomi-mimo-chat-asr",
+            "protocolVersion": "1",
+            "modes": [
+              "batch"
+            ],
+            "inputFormats": [
+              "wav",
+              "mp3"
+            ],
+            "languageHints": true
+          }
+        },
+        "releasedAt": "2026-06-02"
       },
       "routing": {
         "tier": "lightweight",

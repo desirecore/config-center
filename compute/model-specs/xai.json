@@ -2,6 +2,39 @@
   "description": "xAI Grok 系列模型规格。参数来源：config-center compute/providers/xai.json。Grok 网关命名变体较多（含日期戳/-fast/-reasoning 后缀），主要依赖 family=grok-4 兜底匹配。",
   "specs": [
     {
+      "id": "grok-4.5",
+      "displayName": "Grok 4.5",
+      "family": "grok-4.5",
+      "match": {
+        "exact": [
+          "grok-4.5"
+        ]
+      },
+      "spec": {
+        "contextWindow": 500000,
+        "maxOutputTokens": 450000,
+        "capabilities": [
+          "chat",
+          "reasoning",
+          "code",
+          "vision",
+          "long_context",
+          "tool_use"
+        ],
+        "serviceType": [
+          "chat",
+          "reasoning"
+        ],
+        "supportsReasoning": true,
+        "description": "xAI Grok 4.5，面向编程、知识工作和 STEM 的旗舰推理模型",
+        "extra": {
+          "thinkingOnly": true,
+          "thinkingDefault": true
+        },
+        "releasedAt": "2026-07-08"
+      }
+    },
+    {
       "id": "grok-4-3",
       "displayName": "Grok 4.3",
       "family": "grok-4",

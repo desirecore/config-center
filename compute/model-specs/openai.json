@@ -750,6 +750,35 @@
       }
     },
     {
+      "id": "gpt-5.6-sol-pro",
+      "displayName": "GPT-5.6 Sol Pro",
+      "family": "gpt-5.6-sol-pro",
+      "match": {
+        "exact": [
+          "gpt-5.6-sol-pro"
+        ]
+      },
+      "spec": {
+        "contextWindow": 1050000,
+        "maxOutputTokens": 128000,
+        "capabilities": [
+          "chat",
+          "reasoning",
+          "code",
+          "vision",
+          "long_context",
+          "tool_use",
+          "agent"
+        ],
+        "serviceType": [
+          "chat"
+        ],
+        "supportsReasoning": true,
+        "description": "GPT-5.6 Sol 的 Pro 固定推理变体，由上游以 reasoning.mode=pro 提供",
+        "releasedAt": "2026-07-09"
+      }
+    },
+    {
       "id": "gpt-5.6-terra",
       "displayName": "GPT-5.6 Terra",
       "spec": {
@@ -789,6 +818,35 @@
       }
     },
     {
+      "id": "gpt-5.6-terra-pro",
+      "displayName": "GPT-5.6 Terra Pro",
+      "family": "gpt-5.6-terra-pro",
+      "match": {
+        "exact": [
+          "gpt-5.6-terra-pro"
+        ]
+      },
+      "spec": {
+        "contextWindow": 1050000,
+        "maxOutputTokens": 128000,
+        "capabilities": [
+          "chat",
+          "reasoning",
+          "code",
+          "vision",
+          "long_context",
+          "tool_use",
+          "agent"
+        ],
+        "serviceType": [
+          "chat"
+        ],
+        "supportsReasoning": true,
+        "description": "GPT-5.6 Terra 的 Pro 固定推理变体，由上游以 reasoning.mode=pro 提供",
+        "releasedAt": "2026-07-09"
+      }
+    },
+    {
       "id": "gpt-5.6-luna",
       "displayName": "GPT-5.6 Luna",
       "spec": {
@@ -825,6 +883,36 @@
           ],
           "defaultMode": "medium"
         }
+      }
+    },
+    {
+      "id": "gpt-5.6-luna-pro",
+      "displayName": "GPT-5.6 Luna Pro",
+      "family": "gpt-5.6-luna-pro",
+      "match": {
+        "exact": [
+          "gpt-5.6-luna-pro"
+        ]
+      },
+      "spec": {
+        "contextWindow": 1050000,
+        "maxOutputTokens": 128000,
+        "capabilities": [
+          "chat",
+          "reasoning",
+          "code",
+          "vision",
+          "long_context",
+          "tool_use",
+          "agent",
+          "fast"
+        ],
+        "serviceType": [
+          "chat"
+        ],
+        "supportsReasoning": true,
+        "description": "GPT-5.6 Luna 的 Pro 固定推理变体，由上游以 reasoning.mode=pro 提供",
+        "releasedAt": "2026-07-09"
       }
     },
     {
