@@ -1,0 +1,28 @@
+{
+  "id": "provider-github-copilot-plan-001",
+  "provider": "github-copilot",
+  "brandGroup": "github",
+  "label": "GitHub Copilot 订阅",
+  "baseUrl": "https://api.githubcopilot.com",
+  "apiFormat": "openai-completions",
+  "apiKeyRef": "github-copilot-session-token",
+  "apiKeyVerified": false,
+  "enabled": false,
+  "status": "unconfigured",
+  "priceCurrency": "USD",
+  "accessMode": "coding-plan",
+  "credentialSource": "github-copilot",
+  "requiredClientVersion": "10.0.132",
+  "codingPlan": {
+    "quotas": {},
+    "usageTracking": {
+      "method": "none",
+      "consoleUrl": "https://github.com/settings/copilot/features"
+    }
+  },
+  "services": [
+    "chat",
+    "reasoning"
+  ],
+  "models": []
+}

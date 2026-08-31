@@ -5,6 +5,7 @@
     "openai-codex",
     "anthropic",
     "anthropic-claude",
+    "github-copilot",
     "deepseek",
     "dashscope",
     "volcengine",

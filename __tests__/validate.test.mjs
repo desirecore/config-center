@@ -446,6 +446,7 @@ describe('真实数据全量校验', () => {
       cohere: 'USD',
       dashscope: 'CNY',
       deepseek: 'CNY',
+      'github-copilot': 'USD',
       google: 'USD',
       kling: 'CNY',
       'local-whisper': 'USD',

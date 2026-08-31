@@ -83,8 +83,8 @@
     },
     "credentialSource": {
       "type": "string",
-      "enum": ["codex-cli", "claude-oauth"],
-      "description": "凭证托管来源。codex-cli：密钥由客户端本地 Codex CLI 凭证检测器托管（读取 ~/.codex/auth.json 自动刷新写回，fresh token 同步 secrets.json）。claude-oauth：Claude 订阅接入，由客户端 claude-auth 检测器托管——首选复用本机 Claude Code 登录（Agent SDK 自读，不写不刷新），或应用内 OAuth / setup-token 兜底；模型调用经 compat-proxy 内 claude-agent-sdk 后端履约，不直连。需 requiredClientVersion ≥ 引入此字段的客户端版本——老客户端不识别本字段，必须先发版铺开 compute.json 韧性（容忍未知字段）再推送本数据"
+      "enum": ["codex-cli", "claude-oauth", "github-copilot"],
+      "description": "凭证托管来源。codex-cli：密钥由客户端本地 Codex CLI 凭证检测器托管（读取 ~/.codex/auth.json 自动刷新写回，fresh token 同步 secrets.json）。claude-oauth：Claude 订阅接入，由客户端 claude-auth 检测器托管——首选复用本机 Claude Code 登录（Agent SDK 自读，不写不刷新），或应用内 OAuth / setup-token 兜底；模型调用经 compat-proxy 内 claude-agent-sdk 后端履约，不直连。github-copilot：GitHub Copilot 订阅接入，由客户端 copilot-auth 检测器托管——GitHub Device Flow 登录，长期 GitHub OAuth token 存 config/copilot-oauth.json，定期交换约 30 分钟有效的 Copilot session token 写入 secrets.json；模型调用携带 Copilot 协议 headers 直连交换响应 endpoints.api 指定域名，模型列表由客户端在登录后经 /models 动态发现（可用集合随订阅档位与组织策略变化，故预设 models 为空）。需 requiredClientVersion ≥ 引入此字段的客户端版本——老客户端不识别本字段，必须先发版铺开 compute.json 韧性（容忍未知字段）再推送本数据"
     },
     "codingPlan": {
       "type": "object",
