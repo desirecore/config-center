@@ -183,8 +183,9 @@ describe('真实数据全量校验', () => {
     }
   })
 
-  it('Brave Search API 使用显式密钥声明且默认关闭', () => {
+  it('WebSearch API providers 使用显式密钥声明且默认关闭', () => {
     const brave = JSON.parse(readFileSync(join(ROOT, 'api-providers', 'web-search', 'brave.json'), 'utf8'))
+    const doubao = JSON.parse(readFileSync(join(ROOT, 'api-providers', 'web-search', 'doubao-search-global.json'), 'utf8'))
     const index = JSON.parse(readFileSync(join(ROOT, 'api-providers', 'web-search', '_index.json'), 'utf8'))
 
     assert.equal(brave.enabled, false)
@@ -194,9 +195,36 @@ describe('真实数据全量校验', () => {
       headerName: 'X-Subscription-Token',
       apiKeyRef: 'brave',
     })
-    assert.deepEqual(index.order, ['tavily', 'brave', 'serper'])
+    assert.equal(doubao.enabled, false)
+    assert.equal(doubao.endpoint, 'https://open.feedcoopapi.com/search_api/global_search')
+    assert.deepEqual(doubao.auth, {
+      type: 'bearer',
+      apiKeyRef: 'doubao-search-global',
+    })
+    assert.deepEqual(doubao.request.bodyTemplate, {
+      Query: '${query}',
+      SearchType: 'web',
+      DocCount: '${maxResults}',
+      MaxSnippetLength: 500,
+    })
+    assert.equal(doubao.response.resultsPath, 'Result.Documents')
+    assert.deepEqual(doubao.response.item, {
+      titlePath: 'Title',
+      urlPath: 'Url',
+      snippetPath: 'Snippet.0.Text',
+      pageAgePath: 'DocumentInfo.PublishTime',
+    })
+    assert.deepEqual(doubao.response.successCondition, {
+      path: 'Result.ErrorCode',
+      equals: 0,
+    })
+    assert.deepEqual(index.order, ['tavily', 'brave', 'serper', 'doubao-search-global'])
     assert.equal(
       validateFile(join(ROOT, 'api-providers', 'web-search', 'brave.json'), validators).ok,
+      true,
+    )
+    assert.equal(
+      validateFile(join(ROOT, 'api-providers', 'web-search', 'doubao-search-global.json'), validators).ok,
       true,
     )
   })

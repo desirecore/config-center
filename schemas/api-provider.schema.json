@@ -61,7 +61,24 @@
             "pageAgePath": { "type": "string" }
           }
         },
-        "textPath": { "type": "string", "description": "image_understanding 结果文本的点路径" }
+        "textPath": { "type": "string", "description": "image_understanding 结果文本的点路径" },
+        "successCondition": {
+          "type": "object",
+          "description": "可选业务成功判定；HTTP 成功后读取 path 并与 equals 严格比较，不匹配时按 Provider 失败继续降级",
+          "required": ["path", "equals"],
+          "additionalProperties": false,
+          "properties": {
+            "path": {
+              "type": "string",
+              "minLength": 1,
+              "description": "业务成功标志的响应点路径；路径缺失也视为失败"
+            },
+            "equals": {
+              "type": ["string", "number", "boolean", "null"],
+              "description": "成功时必须严格等于的 JSON 标量值"
+            }
+          }
+        }
       }
     },
     "timeoutMs": { "type": "number", "description": "请求超时（毫秒）", "default": 10000 }
