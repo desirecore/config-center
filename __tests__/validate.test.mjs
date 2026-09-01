@@ -196,6 +196,7 @@ describe('真实数据全量校验', () => {
       apiKeyRef: 'brave',
     })
     assert.equal(doubao.enabled, false)
+    assert.equal(doubao.priority, 5)
     assert.equal(doubao.endpoint, 'https://open.feedcoopapi.com/search_api/global_search')
     assert.deepEqual(doubao.auth, {
       type: 'bearer',

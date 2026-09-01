@@ -4,7 +4,7 @@
   "capability": "web_search",
   "enabled": false,
   "builtin": true,
-  "priority": 40,
+  "priority": 5,
   "endpoint": "https://open.feedcoopapi.com/search_api/global_search",
   "method": "POST",
   "auth": {
