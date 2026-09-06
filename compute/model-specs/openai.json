@@ -2,6 +2,87 @@
   "description": "OpenAI GPT / o 系列模型规格。参数来源：config-center compute/providers/openai.json。注意：gpt-4o / gpt-5 等存在子型号（-mini/-nano），故只用 exact 主键匹配，不使用宽泛 pattern 以防误吞子型号。o 系列 serviceType 由 responses 调整为 reasoning（responses 为 OpenAI 直连专有，对 NewAPI 网关不适用）。",
   "specs": [
     {
+      "id": "gpt-6-astra",
+      "displayName": "GPT-6 Astra",
+      "spec": {
+        "contextWindow": 1050000,
+        "maxOutputTokens": 128000,
+        "capabilities": [
+          "chat",
+          "reasoning",
+          "code",
+          "vision",
+          "long_context",
+          "tool_use",
+          "agent"
+        ],
+        "serviceType": [
+          "chat"
+        ],
+        "supportsReasoning": true,
+        "extra": {
+          "thinkingOnly": true
+        }
+      },
+      "routing": {
+        "tier": "flagship",
+        "routingPriority": 10,
+        "eligibleForAgent": true,
+        "defaultReference": false,
+        "reasoning": {
+          "supportedModes": [
+            "auto",
+            "low",
+            "medium",
+            "high",
+            "xhigh",
+            "max"
+          ],
+          "defaultMode": "medium"
+        }
+      }
+    },
+    {
+      "id": "gpt-reserve",
+      "displayName": "GPT-Reserve",
+      "spec": {
+        "contextWindow": 1050000,
+        "maxOutputTokens": 128000,
+        "capabilities": [
+          "chat",
+          "reasoning",
+          "code",
+          "vision",
+          "long_context",
+          "tool_use",
+          "fast"
+        ],
+        "serviceType": [
+          "chat"
+        ],
+        "supportsReasoning": true,
+        "description": "参数暂按 GPT-5.6 Luna 配置，待官方规格确认"
+      },
+      "routing": {
+        "tier": "lightweight",
+        "routingPriority": 10,
+        "eligibleForAgent": true,
+        "defaultReference": false,
+        "reasoning": {
+          "supportedModes": [
+            "auto",
+            "off",
+            "low",
+            "medium",
+            "high",
+            "xhigh",
+            "max"
+          ],
+          "defaultMode": "medium"
+        }
+      }
+    },
+    {
       "id": "gpt-image-2",
       "displayName": "GPT Image 2",
       "family": "gpt-image",

@@ -25,6 +25,43 @@
   ],
   "models": [
     {
+      "modelName": "gpt-6-astra",
+      "displayName": "GPT-6 Astra",
+      "serviceType": [
+        "chat",
+        "responses"
+      ],
+      "description": "OpenAI GPT-6 Astra，面向复杂推理、编程和长程智能体任务，1.05M 上下文，128K 最大输出",
+      "contextWindow": 1050000,
+      "maxOutputTokens": 128000,
+      "capabilities": [
+        "chat",
+        "reasoning",
+        "code",
+        "vision",
+        "ultra_long_context",
+        "tool_use",
+        "agent"
+      ],
+      "inputPrice": 10,
+      "outputPrice": 50,
+      "extra": {
+        "serverSideWebSearch": {
+          "enabled": true,
+          "dialect": "openai-responses",
+          "fallbackPriority": 1,
+          "searchRequestPriceUsd": 0.01,
+          "toolType": "web_search"
+        },
+        "cachedInputPrice": 1,
+        "reasoning": {
+          "supportedEfforts": ["low", "medium", "high", "xhigh", "max"],
+          "defaultEffort": "medium"
+        },
+        "pricingNotes": "Prices are per 1M tokens. Cache writes cost $12.50. Above 272K input tokens, input and cache rates are 2x and output rates are 1.5x for the full request."
+      }
+    },
+    {
       "modelName": "gpt-5.5",
       "displayName": "GPT-5.5",
       "serviceType": [

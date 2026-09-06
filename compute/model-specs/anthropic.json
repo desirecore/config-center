@@ -2,6 +2,59 @@
   "description": "Anthropic Claude 系列模型规格。参数来源：config-center compute/providers/anthropic.json。",
   "specs": [
     {
+      "id": "claude-fable-5-1",
+      "displayName": "Claude Fable 5.1",
+      "family": "claude-fable",
+      "match": {
+        "exact": [
+          "claude-fable-5-1"
+        ],
+        "patterns": [
+          "claude-fable-5-1*"
+        ]
+      },
+      "spec": {
+        "contextWindow": 1000000,
+        "maxOutputTokens": 128000,
+        "capabilities": [
+          "chat",
+          "reasoning",
+          "deep_thinking",
+          "code",
+          "vision",
+          "tool_use",
+          "long_context"
+        ],
+        "serviceType": [
+          "chat"
+        ],
+        "supportsReasoning": true,
+        "description": "Claude Fable 5.1，面向高难推理和长程智能体任务，始终开启自适应思考",
+        "extra": {
+          "adaptiveThinking": true,
+          "thinkingOnByDefault": true,
+          "thinkingOnly": true
+        }
+      },
+      "routing": {
+        "tier": "flagship",
+        "routingPriority": 20,
+        "eligibleForAgent": true,
+        "defaultReference": false,
+        "reasoning": {
+          "supportedModes": [
+            "auto",
+            "low",
+            "medium",
+            "high",
+            "xhigh",
+            "max"
+          ],
+          "defaultMode": "high"
+        }
+      }
+    },
+    {
       "id": "claude-fable-5",
       "displayName": "Claude Fable 5",
       "family": "claude-fable",
