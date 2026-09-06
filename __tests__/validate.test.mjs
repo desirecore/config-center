@@ -105,7 +105,7 @@ describe('真实数据全量校验', () => {
         if (spec.routing) routed.push(spec)
       }
     }
-    assert.equal(routed.length, 46)
+    assert.equal(routed.length, 49)
     assert.equal(routed.every((spec) => spec.routing.reasoning.supportedModes.includes(spec.routing.reasoning.defaultMode)), true)
     assert.equal(routed.every((spec) => Array.isArray(spec.spec.capabilities)), true)
   })
@@ -151,11 +151,13 @@ describe('真实数据全量校验', () => {
       .map((model) => model.modelName)
 
     assert.deepEqual(enabled(anthropic), [
+      'claude-fable-5-1',
       'claude-fable-5',
       'claude-opus-5',
       'claude-sonnet-5',
     ])
     assert.deepEqual(enabled(openai), [
+      'gpt-6-astra',
       'gpt-5.5',
       'gpt-5.5-pro',
       'gpt-5.4',

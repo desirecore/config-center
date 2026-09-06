@@ -15,6 +15,56 @@
   ],
   "models": [
     {
+      "modelName": "claude-fable-5-1",
+      "displayName": "Claude Fable 5.1",
+      "serviceType": [
+        "chat"
+      ],
+      "description": "面向高难推理和长程智能体任务，1M 上下文，始终开启自适应思考",
+      "contextWindow": 1000000,
+      "maxOutputTokens": 128000,
+      "capabilities": [
+        "chat",
+        "reasoning",
+        "code",
+        "vision",
+        "tool_use",
+        "agent",
+        "long_context"
+      ],
+      "inputPrice": 10,
+      "outputPrice": 50,
+      "extra": {
+        "serverSideWebSearch": {
+          "enabled": true,
+          "dialect": "anthropic-messages",
+          "fallbackPriority": 1,
+          "searchRequestPriceUsd": 0.01,
+          "toolType": "web_search_20260318"
+        },
+        "cachePricing": {
+          "write5m": 12.5,
+          "write1h": 20,
+          "read": 0.25
+        },
+        "adaptiveThinking": true,
+        "reasoning": {
+          "supportedEfforts": [
+            "low",
+            "medium",
+            "high",
+            "xhigh",
+            "max"
+          ],
+          "defaultEffort": "high"
+        },
+        "samplingParametersDeprecated": true,
+        "pricingNotes": "Prices are per 1M tokens. Full 1M context is billed at standard pricing.",
+        "thinkingOnByDefault": true,
+        "thinkingOnly": true
+      }
+    },
+    {
       "modelName": "claude-fable-5",
       "displayName": "Claude Fable 5",
       "serviceType": [

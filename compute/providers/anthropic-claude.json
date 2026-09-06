@@ -26,6 +26,41 @@
   ],
   "models": [
     {
+      "modelName": "claude-fable-5-1",
+      "displayName": "Claude Fable 5.1",
+      "serviceType": [
+        "chat"
+      ],
+      "description": "Claude 订阅额度计费，面向高难推理和长程智能体任务，1M 上下文，始终开启自适应思考",
+      "contextWindow": 1000000,
+      "maxOutputTokens": 128000,
+      "capabilities": [
+        "chat",
+        "reasoning",
+        "code",
+        "vision",
+        "tool_use",
+        "agent",
+        "long_context"
+      ],
+      "extra": {
+        "adaptiveThinking": true,
+        "reasoning": {
+          "supportedEfforts": [
+            "low",
+            "medium",
+            "high",
+            "xhigh",
+            "max"
+          ],
+          "defaultEffort": "high"
+        },
+        "thinkingOnByDefault": true,
+        "thinkingOnly": true
+      },
+      "source": "preset"
+    },
+    {
       "modelName": "claude-fable-5",
       "displayName": "Claude Fable 5",
       "serviceType": [
