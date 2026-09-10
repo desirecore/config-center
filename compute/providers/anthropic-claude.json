@@ -61,39 +61,6 @@
       "source": "preset"
     },
     {
-      "modelName": "claude-fable-5",
-      "displayName": "Claude Fable 5",
-      "serviceType": [
-        "chat"
-      ],
-      "description": "Claude 订阅额度计费，Anthropic 最高能力公开模型，面向长程智能体与高难推理，1M 上下文",
-      "contextWindow": 1000000,
-      "maxOutputTokens": 128000,
-      "capabilities": [
-        "chat",
-        "reasoning",
-        "code",
-        "vision",
-        "tool_use",
-        "agent",
-        "long_context"
-      ],
-      "extra": {
-        "adaptiveThinking": true,
-        "reasoning": {
-          "supportedEfforts": [
-            "low",
-            "medium",
-            "high",
-            "xhigh",
-            "max"
-          ],
-          "defaultEffort": "xhigh"
-        }
-      },
-      "source": "preset"
-    },
-    {
       "modelName": "claude-opus-5",
       "displayName": "Claude Opus 5",
       "serviceType": [
@@ -159,26 +126,12 @@
         }
       },
       "source": "preset"
-    },
-    {
-      "modelName": "claude-haiku-4-5",
-      "displayName": "Claude Haiku 4.5",
-      "serviceType": [
-        "chat"
-      ],
-      "description": "Claude 订阅额度计费，最快模型，具备接近前沿模型的智能水平，200K 上下文",
-      "contextWindow": 200000,
-      "maxOutputTokens": 64000,
-      "capabilities": [
-        "chat",
-        "code",
-        "vision",
-        "tool_use"
-      ],
-      "source": "preset"
     }
   ],
   "tombstones": [
-    "claude-opus-4-8"
+    "claude-opus-4-8",
+    "claude-fable-5",
+    "claude-haiku-4-5",
+    "claude-haiku-4-5-20251001"
   ]
 }
