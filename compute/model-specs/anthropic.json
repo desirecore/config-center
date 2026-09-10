@@ -55,54 +55,6 @@
       }
     },
     {
-      "id": "claude-fable-5",
-      "displayName": "Claude Fable 5",
-      "family": "claude-fable",
-      "match": {
-        "exact": [
-          "claude-fable-5"
-        ],
-        "patterns": [
-          "claude-fable-5*"
-        ]
-      },
-      "spec": {
-        "contextWindow": 1000000,
-        "maxOutputTokens": 128000,
-        "capabilities": [
-          "chat",
-          "reasoning",
-          "deep_thinking",
-          "code",
-          "vision",
-          "tool_use",
-          "long_context"
-        ],
-        "serviceType": [
-          "chat"
-        ],
-        "supportsReasoning": true,
-        "description": "Anthropic 最强模型，基于 Mythos 架构，支持自主知识工作"
-      },
-      "routing": {
-        "tier": "flagship",
-        "routingPriority": 20,
-        "eligibleForAgent": true,
-        "defaultReference": false,
-        "reasoning": {
-          "supportedModes": [
-            "auto",
-            "low",
-            "medium",
-            "high",
-            "xhigh",
-            "max"
-          ],
-          "defaultMode": "xhigh"
-        }
-      }
-    },
-    {
       "id": "claude-opus-5",
       "displayName": "Claude Opus 5",
       "family": "claude-opus",
@@ -299,45 +251,6 @@
         "defaultTemperature": 1,
         "supportsReasoning": true,
         "description": "Anthropic 主力模型，长文本与代码任务表现优异"
-      }
-    },
-    {
-      "id": "claude-haiku-4-5",
-      "displayName": "Claude Haiku 4.5",
-      "family": "claude-haiku",
-      "match": {
-        "patterns": [
-          "claude-haiku-4-5*"
-        ]
-      },
-      "spec": {
-        "contextWindow": 200000,
-        "maxOutputTokens": 64000,
-        "capabilities": [
-          "chat",
-          "reasoning",
-          "code",
-          "vision",
-          "tool_use"
-        ],
-        "serviceType": [
-          "chat"
-        ],
-        "defaultTemperature": 1,
-        "supportsReasoning": true,
-        "description": "Anthropic 最快模型，具备接近前沿模型的智能水平"
-      },
-      "routing": {
-        "tier": "lightweight",
-        "routingPriority": 20,
-        "eligibleForAgent": true,
-        "defaultReference": false,
-        "reasoning": {
-          "supportedModes": [
-            "auto"
-          ],
-          "defaultMode": "auto"
-        }
       }
     }
   ]
