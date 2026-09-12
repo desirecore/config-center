@@ -56,7 +56,13 @@
           "defaultEffort": "high"
         },
         "thinkingOnByDefault": true,
-        "thinkingOnly": true
+        "thinkingOnly": true,
+        "thinkingRoundTrip": {
+          "enabled": true,
+          "protocol": "anthropic-messages",
+          "allowEmptySignature": false,
+          "scope": "active-tool-turn"
+        }
       },
       "source": "preset"
     },
@@ -90,6 +96,12 @@
             "max"
           ],
           "defaultEffort": "xhigh"
+        },
+        "thinkingRoundTrip": {
+          "enabled": true,
+          "protocol": "anthropic-messages",
+          "allowEmptySignature": false,
+          "scope": "active-tool-turn"
         }
       },
       "source": "preset"
@@ -123,6 +135,12 @@
             "max"
           ],
           "defaultEffort": "xhigh"
+        },
+        "thinkingRoundTrip": {
+          "enabled": true,
+          "protocol": "anthropic-messages",
+          "allowEmptySignature": false,
+          "scope": "active-tool-turn"
         }
       },
       "source": "preset"
