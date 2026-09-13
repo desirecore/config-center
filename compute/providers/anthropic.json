@@ -41,6 +41,7 @@
           "allowEmptySignature": false,
           "scope": "active-tool-turn"
         },
+        "thinkingToolTurnValidation": "accepts-thinkless",
         "serverSideWebSearch": {
           "enabled": true,
           "dialect": "anthropic-messages",
@@ -97,6 +98,7 @@
           "allowEmptySignature": false,
           "scope": "active-tool-turn"
         },
+        "thinkingToolTurnValidation": "accepts-thinkless",
         "serverSideWebSearch": {
           "enabled": true,
           "dialect": "anthropic-messages",
@@ -156,6 +158,7 @@
           "allowEmptySignature": false,
           "scope": "active-tool-turn"
         },
+        "thinkingToolTurnValidation": "accepts-thinkless",
         "serverSideWebSearch": {
           "enabled": true,
           "dialect": "anthropic-messages",

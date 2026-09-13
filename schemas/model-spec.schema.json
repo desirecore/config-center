@@ -259,8 +259,12 @@
             },
             "extra": {
               "type": "object",
-              "description": "模型内在开放扩展：modelOrigin 描述真实原厂身份，speech 描述可跨小版本复用的语音协议；不含价格，也不得声明 Provider/接入面的 reasoning effort 能力。",
-              "not": { "required": ["reasoning"] },
+              "description": "模型内在开放扩展：modelOrigin 描述真实原厂身份，speech 描述可跨小版本复用的语音协议；不含价格，也不得声明 Provider/接入面的 reasoning effort、thinking 回放能力（thinkingRoundTrip）或工具轮 thinking 校验口径（thinkingToolTurnValidation）——这些只能写在 provider model 的 extra 中，客户端 Schema 会拒收整份规格。",
+              "allOf": [
+                { "not": { "required": ["reasoning"] } },
+                { "not": { "required": ["thinkingRoundTrip"] } },
+                { "not": { "required": ["thinkingToolTurnValidation"] } }
+              ],
               "properties": {
                 "modelOrigin": { "$ref": "#/definitions/modelOrigin" },
                 "speech": { "$ref": "#/definitions/speechModelProfile" },
