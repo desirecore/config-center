@@ -35,6 +35,12 @@
       "inputPrice": 10,
       "outputPrice": 50,
       "extra": {
+        "thinkingRoundTrip": {
+          "enabled": true,
+          "protocol": "anthropic-messages",
+          "allowEmptySignature": false,
+          "scope": "active-tool-turn"
+        },
         "serverSideWebSearch": {
           "enabled": true,
           "dialect": "anthropic-messages",
