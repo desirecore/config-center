@@ -252,7 +252,7 @@
         },
         "extra": {
           "type": "object",
-          "description": "接入面特定配置：如 TTS 模型音色列表、ASR 支持格式、reasoning effort 与 native thinking 回放能力。这里是兼容扩展面：旧客户端会安全保留并忽略未知子字段。",
+          "description": "接入面特定配置：如 TTS 模型音色列表、ASR 支持格式、reasoning effort、native thinking 回放能力与工具轮 thinking 校验口径。这里是兼容扩展面：旧客户端会安全保留并忽略未知子字段。",
           "properties": {
             "thinkingRoundTrip": {
               "type": "object",
@@ -279,6 +279,11 @@
                 }
               },
               "additionalProperties": false
+            },
+            "thinkingToolTurnValidation": {
+              "type": "string",
+              "enum": ["requires-thinking", "accepts-thinkless"],
+              "description": "接入面对 thinking 工具轨迹中不含 thinking 的工具轮的校验口径，仅在同一模型声明了 thinkingRoundTrip 时生效；缺省视为 requires-thinking。requires-thinking：接入面要求每个工具轮都带可回放 thinking（例如只在首轮返回 thinking、之后会拒绝整条会话的兼容网关），客户端在执行工具前把这类响应判为上游失败并重试，同一会话再次违规时关闭思考。accepts-thinkless：接入面按 Anthropic adaptive thinking 规则校验，模型自行跳过思考的工具轮本身就是合法历史，客户端原样接受，不重试也不降级。只有官方文档或真机回放证明接受此类历史的接入面才能声明 accepts-thinkless；不得由 Provider 名称或 URL 推断。旧客户端忽略该字段并保持 requires-thinking 行为。"
             },
             "reasoning": {
               "type": "object",

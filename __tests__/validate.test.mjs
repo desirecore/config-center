@@ -777,6 +777,28 @@ describe('provider schema 反例（防 PR #1 重演）', () => {
     }
   })
 
+  it('校验 Provider model 的工具轮 thinking 校验口径', () => {
+    for (const value of ['requires-thinking', 'accepts-thinkless']) {
+      const valid = makeValidProvider()
+      valid.models[0].extra = {
+        thinkingRoundTrip: {
+          enabled: true,
+          protocol: 'anthropic-messages',
+          allowEmptySignature: false,
+          scope: 'active-tool-turn',
+        },
+        thinkingToolTurnValidation: value,
+      }
+      assert.equal(validate(valid), true, JSON.stringify(validate.errors))
+    }
+
+    for (const broken of ['accept', true, null]) {
+      const invalid = makeValidProvider()
+      invalid.models[0].extra = { thinkingToolTurnValidation: broken }
+      assert.equal(validate(invalid), false)
+    }
+  })
+
   it('拒绝 Ultra 与重复 reasoning effort', () => {
     const ultra = makeValidProvider()
     ultra.models[0].extra = {
@@ -866,6 +888,22 @@ describe('model-spec schema 接入面边界', () => {
       }],
     }
     assert.equal(validate(data), false)
+  })
+
+  it('拒绝在模型内在规格中声明接入面的 thinking 回放能力与工具轮校验口径', () => {
+    for (const extra of [
+      {
+        thinkingRoundTrip: {
+          enabled: true,
+          protocol: 'anthropic-messages',
+          allowEmptySignature: false,
+          scope: 'active-tool-turn',
+        },
+      },
+      { thinkingToolTurnValidation: 'accepts-thinkless' },
+    ]) {
+      assert.equal(validate({ specs: [{ id: 'claude-test', spec: { extra } }] }), false)
+    }
   })
 
   it('仍允许模型内在扩展参数', () => {
