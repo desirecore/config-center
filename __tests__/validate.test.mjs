@@ -607,14 +607,16 @@ describe('真实数据全量校验', () => {
     const thinkingOnlyGeneration = /^claude-(?:fable|mythos)(?:$|-)/
     // 与客户端匹配器同口径：小写、去 vendor 前缀、统一分隔符
     const normalizeId = (id) => id.toLowerCase().trim().split('/').at(-1).replace(/[._:\s]+/g, '-')
-    const specFile = JSON.parse(readFileSync(join(ROOT, 'compute', 'model-specs', 'anthropic.json'), 'utf8'))
+    const specsDir = join(ROOT, 'compute', 'model-specs')
+    const allSpecs = JSON.parse(readFileSync(join(specsDir, '_index.json'), 'utf8')).order
+      .flatMap((name) => JSON.parse(readFileSync(join(specsDir, `${name}.json`), 'utf8')).specs)
 
     it('规格按代际声明 adaptiveThinking，只有 Fable/Mythos 声明思考恒开', () => {
-      const adaptiveSpecIds = specFile.specs.map((item) => item.id).filter((id) => adaptiveGeneration.test(normalizeId(id)))
+      const adaptiveSpecIds = allSpecs.map((item) => item.id).filter((id) => adaptiveGeneration.test(normalizeId(id)))
       for (const id of ['claude-fable-5-1', 'claude-opus-5', 'claude-opus-4-8', 'claude-opus-4-7', 'claude-sonnet-5']) {
         assert.ok(adaptiveSpecIds.includes(id), `model-specs 缺少 ${id}`)
       }
-      for (const modelSpec of specFile.specs) {
+      for (const modelSpec of allSpecs) {
         const id = normalizeId(modelSpec.id)
         const extra = modelSpec.spec.extra ?? {}
         assert.equal(
@@ -622,28 +624,38 @@ describe('真实数据全量校验', () => {
           adaptiveGeneration.test(id),
           `${modelSpec.id} 的 adaptiveThinking 与代际不符；若它是新的拒绝 budget_tokens 代际，先扩展本测试的代际正则`,
         )
-        assert.equal(extra.thinkingOnly === true, thinkingOnlyGeneration.test(id), `${modelSpec.id} 的 thinkingOnly 与代际不符`)
+        if (id.startsWith('claude-')) {
+          assert.equal(extra.thinkingOnly === true, thinkingOnlyGeneration.test(id), `${modelSpec.id} 的 thinkingOnly 与代际不符`)
+        }
       }
     })
 
-    it('family 兜底不会把代际声明带给其他代际', () => {
-      // 精确/pattern 都未命中时，客户端按最长 family 前缀兜底并补上规格里缺失的 extra。
-      // 带代际声明的规格若 family 过宽（如 claude-opus），Opus 4.5 等旧型号会继承
-      // adaptiveThinking，连官方端点都被改写成 adaptive 而 400。
-      for (const modelSpec of specFile.specs) {
+    it('匹配键与 family 兜底不会把代际声明带给其他代际', () => {
+      // 客户端依次按 id/exact、pattern、最长 family 前缀匹配，并把规格 extra 写进模型条目
+      // （精确与 pattern 命中时 cloud 同步直接覆盖）。任何一个键过宽——family 写成 claude-opus、
+      // pattern 写成 claude-opus-4*——Opus 4.5 等旧型号就会继承 adaptiveThinking，
+      // 连官方端点都被改写成 adaptive 而 400。pattern 取第一个 * 之前的前缀判断。
+      const matchKeys = (modelSpec) => [
+        modelSpec.id,
+        ...(modelSpec.family ? [modelSpec.family] : []),
+        ...(modelSpec.match?.exact ?? []),
+        ...(modelSpec.match?.patterns ?? []).map((pattern) => pattern.split('*')[0]),
+      ].map(normalizeId)
+
+      for (const modelSpec of allSpecs) {
         const extra = modelSpec.spec.extra ?? {}
-        if (!modelSpec.family) continue
-        const family = normalizeId(modelSpec.family)
-        if (extra.adaptiveThinking === true) {
-          assert.ok(adaptiveGeneration.test(family), `${modelSpec.id} 声明了 adaptiveThinking，family「${modelSpec.family}」必须收窄到同一代际`)
-        }
-        if (extra.thinkingOnly === true) {
-          assert.ok(thinkingOnlyGeneration.test(family), `${modelSpec.id} 声明了 thinkingOnly，family「${modelSpec.family}」必须收窄到同一代际`)
+        for (const key of matchKeys(modelSpec)) {
+          if (extra.adaptiveThinking === true) {
+            assert.ok(adaptiveGeneration.test(key), `${modelSpec.id} 声明了 adaptiveThinking，匹配键「${key}」必须收窄到同一代际`)
+          }
+          if (extra.thinkingOnly === true && key.startsWith('claude-')) {
+            assert.ok(thinkingOnlyGeneration.test(key), `${modelSpec.id} 声明了 thinkingOnly，匹配键「${key}」必须收窄到同一代际`)
+          }
         }
       }
       // 未单独收录的 Opus / Sonnet 版本由同名家族规格保守补全，不带任何代际声明
       for (const family of ['claude-opus', 'claude-sonnet']) {
-        const holders = specFile.specs.filter((item) => item.family === family)
+        const holders = allSpecs.filter((item) => item.family === family)
         assert.deepEqual(holders.map((item) => item.id), [family], `${family} 家族兜底应只由同名规格承接`)
         assert.deepEqual(holders[0].spec.extra ?? {}, {}, `${family} 家族兜底规格不得声明代际属性`)
       }
