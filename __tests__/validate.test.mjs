@@ -597,6 +597,89 @@ describe('真实数据全量校验', () => {
     assert.equal(deepseekFlash.spec.maxOutputTokens, deepseekFlash0731.spec.maxOutputTokens)
   })
 
+  describe('Anthropic adaptive thinking 代际声明', () => {
+    // 这些代际收到 thinking.type=enabled + budget_tokens 会直接 400。客户端只在官方
+    // api.anthropic.com 端点按模型 ID 兜底；desirecore-cloud 等动态 Provider、非官方域名的
+    // Anthropic Messages 中转只能从 ModelSpec 补全拿到声明，预置 Provider 条目不经补全，
+    // 两处漏写都会回退成 budget_tokens（desirecore#2940）。Opus 4.6 / Sonnet 4.6 仍接受
+    // budget_tokens（仅弃用），不在强制范围内。新代际若同样拒绝 budget_tokens，先扩展这里的正则。
+    const adaptiveGeneration = /^claude-(?:fable|mythos)(?:$|-)|^claude-(?:opus|sonnet)-(?:[5-9]|[1-9]\d)(?:$|-)|^claude-opus-4-[78](?:$|-)/
+    const thinkingOnlyGeneration = /^claude-(?:fable|mythos)(?:$|-)/
+    // 与客户端匹配器同口径：小写、去 vendor 前缀、统一分隔符
+    const normalizeId = (id) => id.toLowerCase().trim().split('/').at(-1).replace(/[._:\s]+/g, '-')
+    const specsDir = join(ROOT, 'compute', 'model-specs')
+    const allSpecs = JSON.parse(readFileSync(join(specsDir, '_index.json'), 'utf8')).order
+      .flatMap((name) => JSON.parse(readFileSync(join(specsDir, `${name}.json`), 'utf8')).specs)
+
+    it('规格按代际声明 adaptiveThinking，只有 Fable/Mythos 声明思考恒开', () => {
+      const adaptiveSpecIds = allSpecs.map((item) => item.id).filter((id) => adaptiveGeneration.test(normalizeId(id)))
+      for (const id of ['claude-fable-5-1', 'claude-opus-5', 'claude-opus-4-8', 'claude-opus-4-7', 'claude-sonnet-5']) {
+        assert.ok(adaptiveSpecIds.includes(id), `model-specs 缺少 ${id}`)
+      }
+      for (const modelSpec of allSpecs) {
+        const id = normalizeId(modelSpec.id)
+        const extra = modelSpec.spec.extra ?? {}
+        assert.equal(
+          extra.adaptiveThinking === true,
+          adaptiveGeneration.test(id),
+          `${modelSpec.id} 的 adaptiveThinking 与代际不符；若它是新的拒绝 budget_tokens 代际，先扩展本测试的代际正则`,
+        )
+        if (id.startsWith('claude-')) {
+          assert.equal(extra.thinkingOnly === true, thinkingOnlyGeneration.test(id), `${modelSpec.id} 的 thinkingOnly 与代际不符`)
+        }
+      }
+    })
+
+    it('匹配键与 family 兜底不会把代际声明带给其他代际', () => {
+      // 客户端依次按 id/exact、pattern、最长 family 前缀匹配，并把规格 extra 写进模型条目
+      // （精确与 pattern 命中时 cloud 同步直接覆盖）。任何一个键过宽——family 写成 claude-opus、
+      // pattern 写成 claude-opus-4*——Opus 4.5 等旧型号就会继承 adaptiveThinking，
+      // 连官方端点都被改写成 adaptive 而 400。pattern 取第一个 * 之前的前缀判断。
+      const matchKeys = (modelSpec) => [
+        modelSpec.id,
+        ...(modelSpec.family ? [modelSpec.family] : []),
+        ...(modelSpec.match?.exact ?? []),
+        ...(modelSpec.match?.patterns ?? []).map((pattern) => pattern.split('*')[0]),
+      ].map(normalizeId)
+
+      for (const modelSpec of allSpecs) {
+        const extra = modelSpec.spec.extra ?? {}
+        for (const key of matchKeys(modelSpec)) {
+          if (extra.adaptiveThinking === true) {
+            assert.ok(adaptiveGeneration.test(key), `${modelSpec.id} 声明了 adaptiveThinking，匹配键「${key}」必须收窄到同一代际`)
+          }
+          if (extra.thinkingOnly === true && key.startsWith('claude-')) {
+            assert.ok(thinkingOnlyGeneration.test(key), `${modelSpec.id} 声明了 thinkingOnly，匹配键「${key}」必须收窄到同一代际`)
+          }
+        }
+      }
+      // 未单独收录的 Opus / Sonnet 版本由同名家族规格保守补全，不带任何代际声明
+      for (const family of ['claude-opus', 'claude-sonnet']) {
+        const holders = allSpecs.filter((item) => item.family === family)
+        assert.deepEqual(holders.map((item) => item.id), [family], `${family} 家族兜底应只由同名规格承接`)
+        assert.deepEqual(holders[0].spec.extra ?? {}, {}, `${family} 家族兜底规格不得声明代际属性`)
+      }
+    })
+
+    it('预置 anthropic-messages 条目自行声明 adaptiveThinking', () => {
+      let checked = 0
+      for (const dir of [join(ROOT, 'compute', 'providers'), join(ROOT, 'compute', 'coding-plans')]) {
+        for (const file of readdirSync(dir).filter((name) => name.endsWith('.json') && !name.startsWith('_'))) {
+          const provider = JSON.parse(readFileSync(join(dir, file), 'utf8'))
+          for (const model of provider.models ?? []) {
+            const apiFormat = model.apiFormat ?? provider.apiFormat
+            if (apiFormat !== 'anthropic-messages') continue
+            const adaptive = adaptiveGeneration.test(normalizeId(model.apiModelId ?? model.modelName))
+            if (!adaptive) continue
+            checked += 1
+            assert.equal(model.extra?.adaptiveThinking, true, `${file} 的 ${model.modelName} 缺少 extra.adaptiveThinking`)
+          }
+        }
+      }
+      assert.ok(checked > 0, '未检查到任何 adaptive 代际的预置条目，数据结构可能已变化')
+    })
+  })
+
   it('所有 Provider 应按供应商归属计价，模型来源不覆盖供应商币种', () => {
     const expectedCurrencies = {
       anthropic: 'USD',
@@ -790,6 +873,19 @@ describe('provider schema 反例（防 PR #1 重演）', () => {
     assert.equal(validate(data), true, JSON.stringify(validate.errors))
   })
 
+  it('Provider model 的 adaptiveThinking 只接受布尔值', () => {
+    for (const value of [true, false]) {
+      const valid = makeValidProvider()
+      valid.models[0].extra = { adaptiveThinking: value }
+      assert.equal(validate(valid), true, JSON.stringify(validate.errors))
+    }
+    for (const value of ['true', 1, null]) {
+      const invalid = makeValidProvider()
+      invalid.models[0].extra = { adaptiveThinking: value }
+      assert.equal(validate(invalid), false)
+    }
+  })
+
   it('严格校验 Provider model 的 native thinking round-trip 能力', () => {
     const valid = makeValidProvider()
     valid.models[0].extra = {
@@ -940,6 +1036,16 @@ describe('model-spec schema 接入面边界', () => {
       { thinkingToolTurnValidation: 'accepts-thinkless' },
     ]) {
       assert.equal(validate({ specs: [{ id: 'claude-test', spec: { extra } }] }), false)
+    }
+  })
+
+  it('adaptiveThinking 是模型内在属性，只接受布尔值', () => {
+    for (const value of [true, false]) {
+      const data = { specs: [{ id: 'claude-test', spec: { extra: { adaptiveThinking: value } } }] }
+      assert.equal(validate(data), true, JSON.stringify(validate.errors))
+    }
+    for (const value of ['true', 1, null]) {
+      assert.equal(validate({ specs: [{ id: 'claude-test', spec: { extra: { adaptiveThinking: value } } }] }), false)
     }
   })
 

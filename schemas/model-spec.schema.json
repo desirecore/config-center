@@ -259,7 +259,7 @@
             },
             "extra": {
               "type": "object",
-              "description": "模型内在开放扩展：modelOrigin 描述真实原厂身份，speech 描述可跨小版本复用的语音协议；不含价格，也不得声明 Provider/接入面的 reasoning effort、thinking 回放能力（thinkingRoundTrip）或工具轮 thinking 校验口径（thinkingToolTurnValidation）——这些只能写在 provider model 的 extra 中，客户端 Schema 会拒收整份规格。",
+              "description": "模型内在开放扩展：modelOrigin 描述真实原厂身份，speech 描述可跨小版本复用的语音协议，thinkingOnly 描述模型是否强制思考，adaptiveThinking 描述 Anthropic 模型是否只接受 adaptive thinking 线上形态；不含价格，也不得声明 Provider/接入面的 reasoning effort、thinking 回放能力（thinkingRoundTrip）或工具轮 thinking 校验口径（thinkingToolTurnValidation）——这些只能写在 provider model 的 extra 中，客户端 Schema 会拒收整份规格。",
               "allOf": [
                 { "not": { "required": ["reasoning"] } },
                 { "not": { "required": ["thinkingRoundTrip"] } },
@@ -271,6 +271,10 @@
                 "thinkingOnly": {
                   "type": "boolean",
                   "description": "模型强制思考、无法关闭（如 GLM-5.3 系列 thinking.type 仅接受 enabled）。true 时客户端把 off 从可选档位移除，并把内部 suppressThinking 降级为 auto，避免发出必然被上游拒绝的关闭参数。只描述模型固有属性，不声明接入面支持哪些深度档位——后者只能写在 provider model 的 extra.reasoning 中。"
+                },
+                "adaptiveThinking": {
+                  "type": "boolean",
+                  "description": "Anthropic Messages 模型是否属于 adaptive thinking 代际（Claude Opus 4.7+ / Opus 5 / Sonnet 5 / Fable / Mythos）。true 时客户端把思考参数发成 thinking.type=adaptive + output_config.effort，而不是会被上游 400 拒绝的 thinking.type=enabled + budget_tokens；false 表示明确不是，禁止客户端按模型 ID 推断；缺省时客户端仅在官方 api.anthropic.com 端点上按模型代际表兜底。只作用于 anthropic-messages 接入面，Claude 订阅（claude-oauth）由 Claude CLI 自行改写、不受本字段影响。命中本规格的模型由客户端 applySpec 复制到 provider model extra，运行时读的是那份副本——desirecore-cloud 等动态 Provider、非官方域名的 Anthropic Messages 中转只能从这里拿到声明，漏写即回退为 budget_tokens。match.exact、match.patterns 与 family 兜底命中时都会带上本键，因此声明本键的规格，其 exact、pattern 前缀与 family 都必须收窄到同一代际（如 family 写 claude-opus-5 而不是 claude-opus，pattern 写 claude-opus-4-7* 而不是 claude-opus-4*），否则 Opus 4.5 等旧型号会继承声明并被上游 400 拒绝。"
                 },
                 "thinkingDefault": {
                   "type": "boolean",
