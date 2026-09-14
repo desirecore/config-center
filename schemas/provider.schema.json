@@ -284,6 +284,14 @@
               },
               "additionalProperties": false
             },
+            "samplingParametersDeprecated": {
+              "type": "boolean",
+              "description": "模型是否拒绝采样参数（如 Claude Opus 4.7+ / Opus 5 / Fable / Mythos 携带 temperature、top_p 或 top_k 即 400，Sonnet 5 对非默认值 400）。true 时客户端出站删除请求体顶层的 temperature / top_p / top_k——无论取值来自模型 defaultTemperature、用户覆写、工作流默认值还是父会话继承；false 或缺省时原样发送，客户端不按模型 ID 推断。只描述模型固有属性：精确命中的 ModelSpec 会补全到各接入面的同名模型，family 兜底不继承；作用于 Agent 引擎发出的模型请求，Claude 订阅（claude-oauth）请求由 Claude CLI 自建、不受本字段影响。"
+            },
+            "forcedToolChoiceUnsupported": {
+              "type": "boolean",
+              "description": "模型是否拒绝强制工具选择（如 Claude Fable 5.1 / Mythos 5.1：tool_choice.type 为 any 或 tool 即 400）。true 时客户端把强制工具选择降级为 auto（Anthropic 的 any / tool、OpenAI 的 required / 指定函数），Anthropic 请求保留 disable_parallel_tool_use，none 与 auto 不受影响；false 或缺省时按调用方要求发送，客户端不按模型 ID 推断。只描述模型固有属性：精确命中的 ModelSpec 会补全到各接入面的同名模型，family 兜底不继承；作用于 Agent 引擎发出的模型请求，Claude 订阅（claude-oauth）请求由 Claude CLI 自建、不受本字段影响。"
+            },
             "thinkingToolTurnValidation": {
               "type": "string",
               "enum": ["requires-thinking", "accepts-thinkless"],
