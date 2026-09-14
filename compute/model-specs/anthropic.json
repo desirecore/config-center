@@ -32,7 +32,6 @@
         "description": "Claude Fable 5.1，面向高难推理和长程智能体任务，始终开启自适应思考",
         "extra": {
           "adaptiveThinking": true,
-          "thinkingOnByDefault": true,
           "thinkingOnly": true,
           "samplingParametersDeprecated": true,
           "forcedToolChoiceUnsupported": true
