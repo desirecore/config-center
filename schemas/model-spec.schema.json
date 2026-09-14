@@ -274,7 +274,7 @@
                 },
                 "adaptiveThinking": {
                   "type": "boolean",
-                  "description": "Anthropic Messages 模型是否属于 adaptive thinking 代际（Claude Opus 4.7+ / Opus 5 / Sonnet 5 / Fable / Mythos）。true 时客户端把思考参数发成 thinking.type=adaptive + output_config.effort，而不是会被上游 400 拒绝的 thinking.type=enabled + budget_tokens；false 表示明确不是，禁止客户端按模型 ID 推断；缺省时客户端仅在官方 api.anthropic.com 端点上按模型代际表兜底。只作用于 anthropic-messages 接入面，Claude 订阅（claude-oauth）由 Claude CLI 自行改写、不受本字段影响。命中本规格的模型由客户端 applySpec 复制到 provider model extra，运行时读的是那份副本——desirecore-cloud 等动态 Provider、非官方域名的 Anthropic Messages 中转只能从这里拿到声明，漏写即回退为 budget_tokens。"
+                  "description": "Anthropic Messages 模型是否属于 adaptive thinking 代际（Claude Opus 4.7+ / Opus 5 / Sonnet 5 / Fable / Mythos）。true 时客户端把思考参数发成 thinking.type=adaptive + output_config.effort，而不是会被上游 400 拒绝的 thinking.type=enabled + budget_tokens；false 表示明确不是，禁止客户端按模型 ID 推断；缺省时客户端仅在官方 api.anthropic.com 端点上按模型代际表兜底。只作用于 anthropic-messages 接入面，Claude 订阅（claude-oauth）由 Claude CLI 自行改写、不受本字段影响。命中本规格的模型由客户端 applySpec 复制到 provider model extra，运行时读的是那份副本——desirecore-cloud 等动态 Provider、非官方域名的 Anthropic Messages 中转只能从这里拿到声明，漏写即回退为 budget_tokens。family 兜底同样会补上本键，因此声明本键的规格 family 必须收窄到同一代际（如 claude-opus-5，而不是 claude-opus），否则 Opus 4.5 等旧型号会继承声明并被上游 400 拒绝。"
                 },
                 "thinkingDefault": {
                   "type": "boolean",

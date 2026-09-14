@@ -57,7 +57,7 @@
     {
       "id": "claude-opus-5",
       "displayName": "Claude Opus 5",
-      "family": "claude-opus",
+      "family": "claude-opus-5",
       "match": {
         "patterns": [
           "claude-opus-5*"
@@ -104,7 +104,7 @@
     {
       "id": "claude-opus-4-8",
       "displayName": "Claude Opus 4.8",
-      "family": "claude-opus",
+      "family": "claude-opus-4-8",
       "match": {
         "patterns": [
           "claude-opus-4-8*"
@@ -134,7 +134,7 @@
     {
       "id": "claude-opus-4-7",
       "displayName": "Claude Opus 4.7",
-      "family": "claude-opus",
+      "family": "claude-opus-4-7",
       "match": {
         "patterns": [
           "claude-opus-4-7*"
@@ -162,9 +162,29 @@
       }
     },
     {
+      "id": "claude-opus",
+      "family": "claude-opus",
+      "spec": {
+        "contextWindow": 1000000,
+        "maxOutputTokens": 128000,
+        "capabilities": [
+          "chat",
+          "reasoning",
+          "code",
+          "vision",
+          "tool_use",
+          "long_context"
+        ],
+        "serviceType": [
+          "chat"
+        ],
+        "supportsReasoning": true
+      }
+    },
+    {
       "id": "claude-sonnet-5",
       "displayName": "Claude Sonnet 5",
-      "family": "claude-sonnet",
+      "family": "claude-sonnet-5",
       "match": {
         "patterns": [
           "claude-sonnet-5*"
@@ -212,7 +232,7 @@
     {
       "id": "claude-sonnet-4-6",
       "displayName": "Claude Sonnet 4.6",
-      "family": "claude-sonnet",
+      "family": "claude-sonnet-4-6",
       "match": {
         "patterns": [
           "claude-sonnet-4-6*"
@@ -241,7 +261,7 @@
     {
       "id": "claude-sonnet-4-5",
       "displayName": "Claude Sonnet 4.5",
-      "family": "claude-sonnet",
+      "family": "claude-sonnet-4-5",
       "match": {
         "patterns": [
           "claude-sonnet-4-5*"
@@ -263,6 +283,27 @@
         "defaultTemperature": 1,
         "supportsReasoning": true,
         "description": "Anthropic 主力模型，长文本与代码任务表现优异"
+      }
+    },
+    {
+      "id": "claude-sonnet",
+      "family": "claude-sonnet",
+      "spec": {
+        "contextWindow": 1000000,
+        "maxOutputTokens": 128000,
+        "capabilities": [
+          "chat",
+          "reasoning",
+          "code",
+          "vision",
+          "tool_use",
+          "computer_use",
+          "long_context"
+        ],
+        "serviceType": [
+          "chat"
+        ],
+        "supportsReasoning": true
       }
     }
   ]

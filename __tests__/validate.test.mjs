@@ -597,42 +597,75 @@ describe('真实数据全量校验', () => {
     assert.equal(deepseekFlash.spec.maxOutputTokens, deepseekFlash0731.spec.maxOutputTokens)
   })
 
-  it('Anthropic adaptive thinking 代际应声明 adaptiveThinking，只有 Fable/Mythos 声明思考恒开', () => {
-    // 这些模型收到 thinking.type=enabled + budget_tokens 会直接 400。客户端只在官方
+  describe('Anthropic adaptive thinking 代际声明', () => {
+    // 这些代际收到 thinking.type=enabled + budget_tokens 会直接 400。客户端只在官方
     // api.anthropic.com 端点按模型 ID 兜底；desirecore-cloud 等动态 Provider、非官方域名的
     // Anthropic Messages 中转只能从 ModelSpec 补全拿到声明，预置 Provider 条目不经补全，
-    // 两处漏写都会回退成 budget_tokens（desirecore#2940）。
-    // Opus 4.6 / Sonnet 4.6 仍接受 budget_tokens（仅弃用），不在强制范围内。
-    const adaptiveGeneration = /^claude-(?:fable|mythos)-|^claude-(?:opus|sonnet)-5(?:$|-)|^claude-opus-4-[78](?:$|-)/
-    const thinkingOnlyGeneration = /^claude-(?:fable|mythos)-/
-
+    // 两处漏写都会回退成 budget_tokens（desirecore#2940）。Opus 4.6 / Sonnet 4.6 仍接受
+    // budget_tokens（仅弃用），不在强制范围内。新代际若同样拒绝 budget_tokens，先扩展这里的正则。
+    const adaptiveGeneration = /^claude-(?:fable|mythos)(?:$|-)|^claude-(?:opus|sonnet)-(?:[5-9]|[1-9]\d)(?:$|-)|^claude-opus-4-[78](?:$|-)/
+    const thinkingOnlyGeneration = /^claude-(?:fable|mythos)(?:$|-)/
+    // 与客户端匹配器同口径：小写、去 vendor 前缀、统一分隔符
+    const normalizeId = (id) => id.toLowerCase().trim().split('/').at(-1).replace(/[._:\s]+/g, '-')
     const specFile = JSON.parse(readFileSync(join(ROOT, 'compute', 'model-specs', 'anthropic.json'), 'utf8'))
-    const adaptiveSpecIds = specFile.specs.map((item) => item.id).filter((id) => adaptiveGeneration.test(id))
-    for (const id of ['claude-fable-5-1', 'claude-opus-5', 'claude-opus-4-8', 'claude-opus-4-7', 'claude-sonnet-5']) {
-      assert.ok(adaptiveSpecIds.includes(id), `model-specs 缺少 ${id}`)
-    }
-    for (const modelSpec of specFile.specs) {
-      const extra = modelSpec.spec.extra ?? {}
-      if (adaptiveGeneration.test(modelSpec.id)) {
-        assert.equal(extra.adaptiveThinking, true, `${modelSpec.id} 缺少 spec.extra.adaptiveThinking`)
-        assert.equal(extra.thinkingOnly === true, thinkingOnlyGeneration.test(modelSpec.id), `${modelSpec.id} 的 thinkingOnly 与代际不符`)
-      } else {
-        assert.notEqual(extra.adaptiveThinking, true, `${modelSpec.id} 不属于 adaptive 强制代际`)
-      }
-    }
 
-    const presetDirs = [join(ROOT, 'compute', 'providers'), join(ROOT, 'compute', 'coding-plans')]
-    for (const dir of presetDirs) {
-      for (const file of readdirSync(dir).filter((name) => name.endsWith('.json') && !name.startsWith('_'))) {
-        const provider = JSON.parse(readFileSync(join(dir, file), 'utf8'))
-        for (const model of provider.models ?? []) {
-          const apiFormat = model.apiFormat ?? provider.apiFormat
-          const upstreamId = model.apiModelId ?? model.modelName
-          if (apiFormat !== 'anthropic-messages' || !adaptiveGeneration.test(upstreamId)) continue
-          assert.equal(model.extra?.adaptiveThinking, true, `${file} 的 ${model.modelName} 缺少 extra.adaptiveThinking`)
+    it('规格按代际声明 adaptiveThinking，只有 Fable/Mythos 声明思考恒开', () => {
+      const adaptiveSpecIds = specFile.specs.map((item) => item.id).filter((id) => adaptiveGeneration.test(normalizeId(id)))
+      for (const id of ['claude-fable-5-1', 'claude-opus-5', 'claude-opus-4-8', 'claude-opus-4-7', 'claude-sonnet-5']) {
+        assert.ok(adaptiveSpecIds.includes(id), `model-specs 缺少 ${id}`)
+      }
+      for (const modelSpec of specFile.specs) {
+        const id = normalizeId(modelSpec.id)
+        const extra = modelSpec.spec.extra ?? {}
+        assert.equal(
+          extra.adaptiveThinking === true,
+          adaptiveGeneration.test(id),
+          `${modelSpec.id} 的 adaptiveThinking 与代际不符；若它是新的拒绝 budget_tokens 代际，先扩展本测试的代际正则`,
+        )
+        assert.equal(extra.thinkingOnly === true, thinkingOnlyGeneration.test(id), `${modelSpec.id} 的 thinkingOnly 与代际不符`)
+      }
+    })
+
+    it('family 兜底不会把代际声明带给其他代际', () => {
+      // 精确/pattern 都未命中时，客户端按最长 family 前缀兜底并补上规格里缺失的 extra。
+      // 带代际声明的规格若 family 过宽（如 claude-opus），Opus 4.5 等旧型号会继承
+      // adaptiveThinking，连官方端点都被改写成 adaptive 而 400。
+      for (const modelSpec of specFile.specs) {
+        const extra = modelSpec.spec.extra ?? {}
+        if (!modelSpec.family) continue
+        const family = normalizeId(modelSpec.family)
+        if (extra.adaptiveThinking === true) {
+          assert.ok(adaptiveGeneration.test(family), `${modelSpec.id} 声明了 adaptiveThinking，family「${modelSpec.family}」必须收窄到同一代际`)
+        }
+        if (extra.thinkingOnly === true) {
+          assert.ok(thinkingOnlyGeneration.test(family), `${modelSpec.id} 声明了 thinkingOnly，family「${modelSpec.family}」必须收窄到同一代际`)
         }
       }
-    }
+      // 未单独收录的 Opus / Sonnet 版本由同名家族规格保守补全，不带任何代际声明
+      for (const family of ['claude-opus', 'claude-sonnet']) {
+        const holders = specFile.specs.filter((item) => item.family === family)
+        assert.deepEqual(holders.map((item) => item.id), [family], `${family} 家族兜底应只由同名规格承接`)
+        assert.deepEqual(holders[0].spec.extra ?? {}, {}, `${family} 家族兜底规格不得声明代际属性`)
+      }
+    })
+
+    it('预置 anthropic-messages 条目自行声明 adaptiveThinking', () => {
+      let checked = 0
+      for (const dir of [join(ROOT, 'compute', 'providers'), join(ROOT, 'compute', 'coding-plans')]) {
+        for (const file of readdirSync(dir).filter((name) => name.endsWith('.json') && !name.startsWith('_'))) {
+          const provider = JSON.parse(readFileSync(join(dir, file), 'utf8'))
+          for (const model of provider.models ?? []) {
+            const apiFormat = model.apiFormat ?? provider.apiFormat
+            if (apiFormat !== 'anthropic-messages') continue
+            const adaptive = adaptiveGeneration.test(normalizeId(model.apiModelId ?? model.modelName))
+            if (!adaptive) continue
+            checked += 1
+            assert.equal(model.extra?.adaptiveThinking, true, `${file} 的 ${model.modelName} 缺少 extra.adaptiveThinking`)
+          }
+        }
+      }
+      assert.ok(checked > 0, '未检查到任何 adaptive 代际的预置条目，数据结构可能已变化')
+    })
   })
 
   it('所有 Provider 应按供应商归属计价，模型来源不覆盖供应商币种', () => {
