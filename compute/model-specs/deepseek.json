@@ -160,6 +160,55 @@
       }
     },
     {
+      "id": "deepseek-flash",
+      "displayName": "DeepSeek V4.1 Flash",
+      "family": "deepseek-flash",
+      "match": {
+        "exact": [
+          "deepseek-flash"
+        ]
+      },
+      "spec": {
+        "contextWindow": 1000000,
+        "maxOutputTokens": 384000,
+        "capabilities": [
+          "chat",
+          "code",
+          "reasoning",
+          "deep_thinking",
+          "vision",
+          "multilingual",
+          "tool_use"
+        ],
+        "serviceType": [
+          "chat",
+          "reasoning",
+          "vision"
+        ],
+        "defaultTemperature": 1,
+        "supportsReasoning": true,
+        "extra": {
+          "supportsThinking": true,
+          "thinkingDefault": true
+        },
+        "description": "DeepSeek V4.1 Flash，支持文本与图像输入，100 万上下文"
+      },
+      "routing": {
+        "tier": "lightweight",
+        "routingPriority": 35,
+        "eligibleForAgent": true,
+        "defaultReference": false,
+        "reasoning": {
+          "supportedModes": [
+            "auto",
+            "high",
+            "max"
+          ],
+          "defaultMode": "high"
+        }
+      }
+    },
+    {
       "id": "deepseek-v4-flash",
       "displayName": "DeepSeek V4 Flash",
       "family": "deepseek-v4-flash",

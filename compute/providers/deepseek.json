@@ -20,6 +20,66 @@
   ],
   "models": [
     {
+      "modelName": "deepseek-flash",
+      "displayName": "DeepSeek V4.1 Flash",
+      "serviceType": [
+        "chat",
+        "reasoning",
+        "vision"
+      ],
+      "description": "DeepSeek V4.1 Flash，支持文本与图像输入，1M 上下文，最大输出 384K，并发上限 2500",
+      "contextWindow": 1000000,
+      "maxOutputTokens": 384000,
+      "capabilities": [
+        "chat",
+        "code",
+        "reasoning",
+        "deep_thinking",
+        "vision",
+        "long_context",
+        "multilingual",
+        "tool_use"
+      ],
+      "inputPrice": 1,
+      "outputPrice": 4,
+      "defaultTemperature": 1,
+      "defaultTopP": 1,
+      "extra": {
+        "cacheHitPrice": 0.02,
+        "concurrencyLimit": 2500,
+        "supportsThinking": true,
+        "thinkingDefault": true,
+        "reasoning": {
+          "supportedEfforts": [
+            "high",
+            "max"
+          ],
+          "defaultEffort": "high"
+        },
+        "pricingTiers": [
+          {
+            "condition": "idle",
+            "inputPrice": 1,
+            "outputPrice": 4,
+            "cacheHitPrice": 0.02
+          },
+          {
+            "condition": "peak",
+            "inputPrice": 2,
+            "outputPrice": 8,
+            "cacheHitPrice": 0.04
+          }
+        ],
+        "pricingNotes": "空闲时段为北京时间工作日 09:00-12:00、14:00-18:00 之外的时段；高峰时段价格为输入 2 元、输出 8 元、缓存命中输入 0.04 元/百万 tokens。",
+        "features": {
+          "jsonOutput": true,
+          "toolCalls": true,
+          "chatPrefixCompletion": "beta",
+          "fimCompletion": "non-thinking-only"
+        }
+      }
+    },
+    {
       "modelName": "deepseek-v4-flash-vision-exp",
       "displayName": "DeepSeek V4 Flash Vision Exp",
       "serviceType": [
