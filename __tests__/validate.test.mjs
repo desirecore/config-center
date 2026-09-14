@@ -300,6 +300,7 @@ describe('真实数据全量校验', () => {
     const specFile = JSON.parse(readFileSync(join(ROOT, 'compute', 'model-specs', 'deepseek.json'), 'utf8'))
     const serviceMap = JSON.parse(readFileSync(join(ROOT, 'compute', 'service-map.json'), 'utf8'))
     const modelId = 'deepseek-flash'
+    const aliasId = 'deepseek-v4.1-flash'
     const model = provider.models.find((item) => item.modelName === modelId)
     const modelSpec = specFile.specs.find((item) => item.id === modelId)
 
@@ -323,7 +324,12 @@ describe('真实数据全量校验', () => {
     ])
 
     assert.ok(modelSpec, `model-specs 缺少 ${modelId}`)
-    assert.deepEqual(modelSpec.match.exact, [modelId])
+    assert.deepEqual(modelSpec.match.exact, [modelId, aliasId])
+    assert.equal(
+      specFile.specs.filter((item) => item.match?.exact?.includes(aliasId)).length,
+      1,
+    )
+    assert.ok(modelSpec.match.exact.includes(aliasId))
     assert.equal(modelSpec.spec.contextWindow, 1000000)
     assert.equal(modelSpec.spec.maxOutputTokens, 384000)
     assert.ok(modelSpec.spec.capabilities.includes('vision'))

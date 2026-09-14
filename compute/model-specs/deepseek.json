@@ -165,7 +165,8 @@
       "family": "deepseek-flash",
       "match": {
         "exact": [
-          "deepseek-flash"
+          "deepseek-flash",
+          "deepseek-v4.1-flash"
         ]
       },
       "spec": {
