@@ -680,6 +680,50 @@ describe('真实数据全量校验', () => {
     })
   })
 
+  it('拒绝采样参数 / 强制工具选择的 Anthropic 模型应在规格与 API Key 预置条目中声明', () => {
+    // 这些模型收到 temperature / top_p / top_k（Fable 5.1 还有 tool_choice any/tool）会直接 400。
+    // 客户端纯按声明改写出站请求体、不按模型 ID 推断：API Key 预置条目不经 ModelSpec 补全，
+    // desirecore-cloud 等动态 Provider 只能从精确命中的 ModelSpec 拿到声明，两处漏写都会把参数原样发出。
+    // 只做单向断言（已知拒绝的代际必须声明），新代际按官方文档补声明即可，不维护反向代际表。
+    // 订阅（claude-oauth）请求由 Claude CLI 自建，客户端 compat 层对这两类参数显式 fail closed，不依赖声明。
+    const samplingRemoved = /^claude-(?:fable|mythos)-|^claude-(?:opus|sonnet)-5(?:$|-)|^claude-opus-4-[78](?:$|-)/
+    const forcedToolChoiceRemoved = /^claude-(?:fable|mythos)-5-1(?:$|-)/
+
+    const specFile = JSON.parse(readFileSync(join(ROOT, 'compute', 'model-specs', 'anthropic.json'), 'utf8'))
+    for (const id of ['claude-fable-5-1', 'claude-opus-5', 'claude-opus-4-8', 'claude-opus-4-7', 'claude-sonnet-5']) {
+      assert.ok(specFile.specs.some((item) => item.id === id), `model-specs 缺少 ${id}`)
+    }
+    for (const modelSpec of specFile.specs) {
+      const extra = modelSpec.spec.extra ?? {}
+      if (samplingRemoved.test(modelSpec.id)) {
+        assert.equal(extra.samplingParametersDeprecated, true, `${modelSpec.id} 缺少 spec.extra.samplingParametersDeprecated`)
+        assert.notEqual(typeof modelSpec.spec.defaultTemperature, 'number', `${modelSpec.id} 拒绝采样参数，不应声明数值 defaultTemperature`)
+      }
+      if (forcedToolChoiceRemoved.test(modelSpec.id)) {
+        assert.equal(extra.forcedToolChoiceUnsupported, true, `${modelSpec.id} 缺少 spec.extra.forcedToolChoiceUnsupported`)
+      }
+    }
+
+    const presetDirs = [join(ROOT, 'compute', 'providers'), join(ROOT, 'compute', 'coding-plans')]
+    for (const dir of presetDirs) {
+      for (const file of readdirSync(dir).filter((name) => name.endsWith('.json') && !name.startsWith('_'))) {
+        const provider = JSON.parse(readFileSync(join(dir, file), 'utf8'))
+        if (provider.credentialSource === 'claude-oauth') continue
+        for (const model of provider.models ?? []) {
+          const apiFormat = model.apiFormat ?? provider.apiFormat
+          const upstreamId = model.apiModelId ?? model.modelName
+          if (apiFormat !== 'anthropic-messages') continue
+          if (samplingRemoved.test(upstreamId)) {
+            assert.equal(model.extra?.samplingParametersDeprecated, true, `${file} 的 ${model.modelName} 缺少 extra.samplingParametersDeprecated`)
+          }
+          if (forcedToolChoiceRemoved.test(upstreamId)) {
+            assert.equal(model.extra?.forcedToolChoiceUnsupported, true, `${file} 的 ${model.modelName} 缺少 extra.forcedToolChoiceUnsupported`)
+          }
+        }
+      }
+    }
+  })
+
   it('所有 Provider 应按供应商归属计价，模型来源不覆盖供应商币种', () => {
     const expectedCurrencies = {
       anthropic: 'USD',
@@ -886,6 +930,21 @@ describe('provider schema 反例（防 PR #1 重演）', () => {
     }
   })
 
+  it('Provider model 的 samplingParametersDeprecated / forcedToolChoiceUnsupported 只接受布尔值', () => {
+    for (const key of ['samplingParametersDeprecated', 'forcedToolChoiceUnsupported']) {
+      for (const value of [true, false]) {
+        const valid = makeValidProvider()
+        valid.models[0].extra = { [key]: value }
+        assert.equal(validate(valid), true, JSON.stringify(validate.errors))
+      }
+      for (const value of ['true', 1, null]) {
+        const invalid = makeValidProvider()
+        invalid.models[0].extra = { [key]: value }
+        assert.equal(validate(invalid), false)
+      }
+    }
+  })
+
   it('严格校验 Provider model 的 native thinking round-trip 能力', () => {
     const valid = makeValidProvider()
     valid.models[0].extra = {
@@ -1046,6 +1105,18 @@ describe('model-spec schema 接入面边界', () => {
     }
     for (const value of ['true', 1, null]) {
       assert.equal(validate({ specs: [{ id: 'claude-test', spec: { extra: { adaptiveThinking: value } } }] }), false)
+    }
+  })
+
+  it('samplingParametersDeprecated / forcedToolChoiceUnsupported 是模型内在属性，只接受布尔值', () => {
+    for (const key of ['samplingParametersDeprecated', 'forcedToolChoiceUnsupported']) {
+      for (const value of [true, false]) {
+        const data = { specs: [{ id: 'claude-test', spec: { extra: { [key]: value } } }] }
+        assert.equal(validate(data), true, JSON.stringify(validate.errors))
+      }
+      for (const value of ['true', 1, null]) {
+        assert.equal(validate({ specs: [{ id: 'claude-test', spec: { extra: { [key]: value } } }] }), false)
+      }
     }
   })
 

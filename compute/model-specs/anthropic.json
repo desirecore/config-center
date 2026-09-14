@@ -33,7 +33,9 @@
         "extra": {
           "adaptiveThinking": true,
           "thinkingOnByDefault": true,
-          "thinkingOnly": true
+          "thinkingOnly": true,
+          "samplingParametersDeprecated": true,
+          "forcedToolChoiceUnsupported": true
         }
       },
       "routing": {
@@ -80,7 +82,8 @@
         "supportsReasoning": true,
         "description": "Claude Opus 5，Anthropic Opus 系列当前旗舰；思考默认开启，effort 支持到 max",
         "extra": {
-          "adaptiveThinking": true
+          "adaptiveThinking": true,
+          "samplingParametersDeprecated": true
         }
       },
       "routing": {
@@ -127,7 +130,8 @@
         "supportsReasoning": true,
         "description": "Claude Opus 4.8，Anthropic Opus 系列最新旗舰",
         "extra": {
-          "adaptiveThinking": true
+          "adaptiveThinking": true,
+          "samplingParametersDeprecated": true
         }
       }
     },
@@ -153,11 +157,12 @@
         "serviceType": [
           "chat"
         ],
-        "defaultTemperature": 1,
+        "defaultTemperature": null,
         "supportsReasoning": true,
         "description": "Anthropic 当前最强通用模型，适合复杂推理和智能体编码任务",
         "extra": {
-          "adaptiveThinking": true
+          "adaptiveThinking": true,
+          "samplingParametersDeprecated": true
         }
       }
     },
@@ -208,7 +213,8 @@
         "supportsReasoning": true,
         "description": "Claude Sonnet 5，速度与智能平衡；思考默认开启，effort 支持到 max",
         "extra": {
-          "adaptiveThinking": true
+          "adaptiveThinking": true,
+          "samplingParametersDeprecated": true
         }
       },
       "routing": {

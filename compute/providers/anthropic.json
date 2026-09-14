@@ -66,6 +66,7 @@
           "defaultEffort": "high"
         },
         "samplingParametersDeprecated": true,
+        "forcedToolChoiceUnsupported": true,
         "pricingNotes": "Prices are per 1M tokens. Full 1M context is billed at standard pricing.",
         "thinkingOnByDefault": true,
         "thinkingOnly": true
