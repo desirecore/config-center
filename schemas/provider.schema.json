@@ -254,6 +254,10 @@
           "type": "object",
           "description": "接入面特定配置：如 TTS 模型音色列表、ASR 支持格式、reasoning effort、native thinking 回放能力与工具轮 thinking 校验口径。这里是兼容扩展面：旧客户端会安全保留并忽略未知子字段。",
           "properties": {
+            "adaptiveThinking": {
+              "type": "boolean",
+              "description": "Anthropic Messages 模型是否属于 adaptive thinking 代际（Claude Opus 4.7+ / Opus 5 / Sonnet 5 / Fable / Mythos）。true 时客户端把思考参数发成 thinking.type=adaptive + output_config.effort，而不是会被上游 400 拒绝的 thinking.type=enabled + budget_tokens；false 表示明确不是，禁止客户端按模型 ID 推断；缺省时客户端仅在官方 api.anthropic.com 端点上按模型代际表兜底。只作用于 anthropic-messages 接入面，Claude 订阅（claude-oauth）由 Claude CLI 自行改写、不受本字段影响。这是模型固有属性，权威声明写在 model-spec 的 spec.extra.adaptiveThinking；预置 Provider 条目不经规格库补全，必须在这里同样声明。"
+            },
             "thinkingRoundTrip": {
               "type": "object",
               "description": "当前 Provider/model 接入面是否允许回放 Provider 原样返回的 Anthropic thinking。只授权当前未闭合工具轨迹；UI 展示 thinking、已完成旧轮次、跨模型/凭据数据永远没有回放资格。",

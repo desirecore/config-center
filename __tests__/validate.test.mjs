@@ -597,6 +597,44 @@ describe('真实数据全量校验', () => {
     assert.equal(deepseekFlash.spec.maxOutputTokens, deepseekFlash0731.spec.maxOutputTokens)
   })
 
+  it('Anthropic adaptive thinking 代际应声明 adaptiveThinking，只有 Fable/Mythos 声明思考恒开', () => {
+    // 这些模型收到 thinking.type=enabled + budget_tokens 会直接 400。客户端只在官方
+    // api.anthropic.com 端点按模型 ID 兜底；desirecore-cloud 等动态 Provider、非官方域名的
+    // Anthropic Messages 中转只能从 ModelSpec 补全拿到声明，预置 Provider 条目不经补全，
+    // 两处漏写都会回退成 budget_tokens（desirecore#2940）。
+    // Opus 4.6 / Sonnet 4.6 仍接受 budget_tokens（仅弃用），不在强制范围内。
+    const adaptiveGeneration = /^claude-(?:fable|mythos)-|^claude-(?:opus|sonnet)-5(?:$|-)|^claude-opus-4-[78](?:$|-)/
+    const thinkingOnlyGeneration = /^claude-(?:fable|mythos)-/
+
+    const specFile = JSON.parse(readFileSync(join(ROOT, 'compute', 'model-specs', 'anthropic.json'), 'utf8'))
+    const adaptiveSpecIds = specFile.specs.map((item) => item.id).filter((id) => adaptiveGeneration.test(id))
+    for (const id of ['claude-fable-5-1', 'claude-opus-5', 'claude-opus-4-8', 'claude-opus-4-7', 'claude-sonnet-5']) {
+      assert.ok(adaptiveSpecIds.includes(id), `model-specs 缺少 ${id}`)
+    }
+    for (const modelSpec of specFile.specs) {
+      const extra = modelSpec.spec.extra ?? {}
+      if (adaptiveGeneration.test(modelSpec.id)) {
+        assert.equal(extra.adaptiveThinking, true, `${modelSpec.id} 缺少 spec.extra.adaptiveThinking`)
+        assert.equal(extra.thinkingOnly === true, thinkingOnlyGeneration.test(modelSpec.id), `${modelSpec.id} 的 thinkingOnly 与代际不符`)
+      } else {
+        assert.notEqual(extra.adaptiveThinking, true, `${modelSpec.id} 不属于 adaptive 强制代际`)
+      }
+    }
+
+    const presetDirs = [join(ROOT, 'compute', 'providers'), join(ROOT, 'compute', 'coding-plans')]
+    for (const dir of presetDirs) {
+      for (const file of readdirSync(dir).filter((name) => name.endsWith('.json') && !name.startsWith('_'))) {
+        const provider = JSON.parse(readFileSync(join(dir, file), 'utf8'))
+        for (const model of provider.models ?? []) {
+          const apiFormat = model.apiFormat ?? provider.apiFormat
+          const upstreamId = model.apiModelId ?? model.modelName
+          if (apiFormat !== 'anthropic-messages' || !adaptiveGeneration.test(upstreamId)) continue
+          assert.equal(model.extra?.adaptiveThinking, true, `${file} 的 ${model.modelName} 缺少 extra.adaptiveThinking`)
+        }
+      }
+    }
+  })
+
   it('所有 Provider 应按供应商归属计价，模型来源不覆盖供应商币种', () => {
     const expectedCurrencies = {
       anthropic: 'USD',
@@ -790,6 +828,19 @@ describe('provider schema 反例（防 PR #1 重演）', () => {
     assert.equal(validate(data), true, JSON.stringify(validate.errors))
   })
 
+  it('Provider model 的 adaptiveThinking 只接受布尔值', () => {
+    for (const value of [true, false]) {
+      const valid = makeValidProvider()
+      valid.models[0].extra = { adaptiveThinking: value }
+      assert.equal(validate(valid), true, JSON.stringify(validate.errors))
+    }
+    for (const value of ['true', 1, null]) {
+      const invalid = makeValidProvider()
+      invalid.models[0].extra = { adaptiveThinking: value }
+      assert.equal(validate(invalid), false)
+    }
+  })
+
   it('严格校验 Provider model 的 native thinking round-trip 能力', () => {
     const valid = makeValidProvider()
     valid.models[0].extra = {
@@ -940,6 +991,16 @@ describe('model-spec schema 接入面边界', () => {
       { thinkingToolTurnValidation: 'accepts-thinkless' },
     ]) {
       assert.equal(validate({ specs: [{ id: 'claude-test', spec: { extra } }] }), false)
+    }
+  })
+
+  it('adaptiveThinking 是模型内在属性，只接受布尔值', () => {
+    for (const value of [true, false]) {
+      const data = { specs: [{ id: 'claude-test', spec: { extra: { adaptiveThinking: value } } }] }
+      assert.equal(validate(data), true, JSON.stringify(validate.errors))
+    }
+    for (const value of ['true', 1, null]) {
+      assert.equal(validate({ specs: [{ id: 'claude-test', spec: { extra: { adaptiveThinking: value } } }] }), false)
     }
   })
 
