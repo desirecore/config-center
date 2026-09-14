@@ -105,7 +105,7 @@ describe('真实数据全量校验', () => {
         if (spec.routing) routed.push(spec)
       }
     }
-    assert.equal(routed.length, 47)
+    assert.equal(routed.length, 48)
     assert.equal(routed.every((spec) => spec.routing.reasoning.supportedModes.includes(spec.routing.reasoning.defaultMode)), true)
     assert.equal(routed.every((spec) => Array.isArray(spec.spec.capabilities)), true)
   })
@@ -293,6 +293,43 @@ describe('真实数据全量校验', () => {
     const flash = specFile.specs.find((item) => item.id === 'deepseek-v4-flash')
     assert.deepEqual(flash.match.exact, ['deepseek-v4-flash'])
     assert.equal('patterns' in flash.match, false)
+  })
+
+  it('DeepSeek V4.1 Flash 应使用官方模型 ID、视觉能力和分时价格', () => {
+    const provider = JSON.parse(readFileSync(join(ROOT, 'compute', 'providers', 'deepseek.json'), 'utf8'))
+    const specFile = JSON.parse(readFileSync(join(ROOT, 'compute', 'model-specs', 'deepseek.json'), 'utf8'))
+    const serviceMap = JSON.parse(readFileSync(join(ROOT, 'compute', 'service-map.json'), 'utf8'))
+    const modelId = 'deepseek-flash'
+    const model = provider.models.find((item) => item.modelName === modelId)
+    const modelSpec = specFile.specs.find((item) => item.id === modelId)
+
+    assert.equal(serviceMap.reasoning.modelName, modelId)
+    assert.ok(model, `provider 缺少 ${modelId}`)
+    assert.deepEqual(model.serviceType, ['chat', 'reasoning', 'vision'])
+    assert.equal(model.contextWindow, 1000000)
+    assert.equal(model.maxOutputTokens, 384000)
+    assert.ok(model.capabilities.includes('vision'))
+    assert.equal(model.inputPrice, 1)
+    assert.equal(model.outputPrice, 4)
+    assert.equal(model.extra.cacheHitPrice, 0.02)
+    assert.equal(model.extra.concurrencyLimit, 2500)
+    assert.deepEqual(model.extra.reasoning, {
+      supportedEfforts: ['high', 'max'],
+      defaultEffort: 'high',
+    })
+    assert.deepEqual(model.extra.pricingTiers, [
+      { condition: 'idle', inputPrice: 1, outputPrice: 4, cacheHitPrice: 0.02 },
+      { condition: 'peak', inputPrice: 2, outputPrice: 8, cacheHitPrice: 0.04 },
+    ])
+
+    assert.ok(modelSpec, `model-specs 缺少 ${modelId}`)
+    assert.deepEqual(modelSpec.match.exact, [modelId])
+    assert.equal(modelSpec.spec.contextWindow, 1000000)
+    assert.equal(modelSpec.spec.maxOutputTokens, 384000)
+    assert.ok(modelSpec.spec.capabilities.includes('vision'))
+    assert.deepEqual(modelSpec.spec.serviceType, ['chat', 'reasoning', 'vision'])
+    assert.equal(modelSpec.spec.supportsReasoning, true)
+    assert.deepEqual(modelSpec.routing.reasoning.supportedModes, ['auto', 'high', 'max'])
   })
 
   it('MiMo V2.5 ASR 应有独立精确规格，避免回落到 MiMo V2.5 family', () => {
