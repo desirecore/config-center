@@ -55,7 +55,6 @@
           ],
           "defaultEffort": "high"
         },
-        "thinkingOnByDefault": true,
         "thinkingOnly": true,
         "thinkingRoundTrip": {
           "enabled": true,
@@ -87,7 +86,6 @@
       ],
       "extra": {
         "adaptiveThinking": true,
-        "thinkingOnByDefault": true,
         "reasoning": {
           "supportedEfforts": [
             "low",
