@@ -493,6 +493,28 @@ describe('真实数据全量校验', () => {
     assert.equal(pro.serviceType.includes('vision'), false)
   })
 
+  it('MiMo-X 内测模型应声明 1M 上下文与图片识别能力', () => {
+    const provider = JSON.parse(readFileSync(join(ROOT, 'compute', 'providers', 'xiaomi.json'), 'utf8'))
+    const specFile = JSON.parse(readFileSync(join(ROOT, 'compute', 'model-specs', 'xiaomi.json'), 'utf8'))
+    const modelIds = ['mimo-x-flash-preview', 'mimo-x-pro-preview']
+
+    assert.ok(provider.services.includes('vision'))
+    for (const modelId of modelIds) {
+      const model = provider.models.find((item) => item.modelName === modelId)
+      const modelSpec = specFile.specs.find((item) => item.id === modelId)
+
+      assert.ok(model, `provider 缺少 ${modelId}`)
+      assert.ok(modelSpec, `model-specs 缺少 ${modelId}`)
+      assert.deepEqual(modelSpec.match.exact, [modelId])
+      assert.equal(model.contextWindow, 1000000)
+      assert.equal(modelSpec.spec.contextWindow, 1000000)
+      assert.ok(model.capabilities.includes('vision'))
+      assert.ok(model.serviceType.includes('vision'))
+      assert.ok(modelSpec.spec.capabilities.includes('vision'))
+      assert.ok(modelSpec.spec.serviceType.includes('vision'))
+    }
+  })
+
   it('Qwen3.8 Max Preview 应在 Token Plan 中提供完整的推理与视觉规格', () => {
     const tokenPlan = JSON.parse(readFileSync(join(ROOT, 'compute', 'coding-plans', 'dashscope-token-plan.json'), 'utf8'))
     const specFile = JSON.parse(readFileSync(join(ROOT, 'compute', 'model-specs', 'qwen.json'), 'utf8'))
