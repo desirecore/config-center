@@ -14,10 +14,41 @@
   "services": [
     "chat",
     "reasoning",
+    "vision",
     "tts",
     "asr"
   ],
   "models": [
+    {
+      "modelName": "mimo-x-flash-preview",
+      "displayName": "MiMo-X-Flash Preview",
+      "serviceType": [
+        "chat",
+        "vision"
+      ],
+      "description": "小米 MiMo-X Flash 内测模型，1M 上下文，支持图片识别",
+      "contextWindow": 1000000,
+      "capabilities": [
+        "chat",
+        "vision"
+      ],
+      "extra": {}
+    },
+    {
+      "modelName": "mimo-x-pro-preview",
+      "displayName": "MiMo-X-Pro Preview",
+      "serviceType": [
+        "chat",
+        "vision"
+      ],
+      "description": "小米 MiMo-X Pro 内测模型，1M 上下文，支持图片识别",
+      "contextWindow": 1000000,
+      "capabilities": [
+        "chat",
+        "vision"
+      ],
+      "extra": {}
+    },
     {
       "modelName": "mimo-v2.5-pro",
       "displayName": "MiMo-V2.5-Pro",
