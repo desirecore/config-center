@@ -105,7 +105,7 @@ describe('真实数据全量校验', () => {
         if (spec.routing) routed.push(spec)
       }
     }
-    assert.equal(routed.length, 56)
+    assert.equal(routed.length, 58)
     assert.equal(routed.every((spec) => spec.routing.reasoning.supportedModes.includes(spec.routing.reasoning.defaultMode)), true)
     assert.equal(routed.every((spec) => Array.isArray(spec.spec.capabilities)), true)
   })
@@ -516,6 +516,43 @@ describe('真实数据全量校验', () => {
       assert.ok(modelSpec.spec.capabilities.includes('vision'))
       assert.ok(modelSpec.spec.serviceType.includes('vision'))
     }
+  })
+
+  it('MiMo V2.6 三款官方 API 模型应保持全模态规格与接入差异', () => {
+    const provider = JSON.parse(readFileSync(join(ROOT, 'compute', 'providers', 'xiaomi.json'), 'utf8'))
+    const specFile = JSON.parse(readFileSync(join(ROOT, 'compute', 'model-specs', 'xiaomi.json'), 'utf8'))
+    const cases = [
+      ['mimo-v2.6-pro', 3, 6, 0.025, 'flagship'],
+      ['mimo-v2.6-flash', 1, 2, 0.02, 'balanced'],
+      ['mimo-v2.6-pro-ultraspeed', 30, 60, 0.25, null],
+    ]
+
+    for (const [id, inputPrice, outputPrice, cachedInputPrice, tier] of cases) {
+      const models = provider.models.filter((item) => item.modelName === id)
+      const specs = specFile.specs.filter((item) => item.id === id)
+      assert.equal(models.length, 1, `Provider 缺少或重复 ${id}`)
+      assert.equal(specs.length, 1, `model-specs 缺少或重复 ${id}`)
+      const model = models[0]
+      const modelSpec = specs[0]
+      assert.deepEqual(modelSpec.match.exact, [id])
+      assert.equal(model.contextWindow, 1000000)
+      assert.equal(model.maxOutputTokens, 131072)
+      assert.equal(modelSpec.spec.contextWindow, model.contextWindow)
+      assert.equal(modelSpec.spec.maxOutputTokens, model.maxOutputTokens)
+      assert.equal(model.inputPrice, inputPrice)
+      assert.equal(model.outputPrice, outputPrice)
+      assert.equal(model.extra.cachedInputPrice, cachedInputPrice)
+      for (const capability of ['vision', 'audio_understanding', 'video_understanding', 'tool_use']) {
+        assert.ok(model.capabilities.includes(capability), `${id} 缺少 ${capability}`)
+        assert.ok(modelSpec.spec.capabilities.includes(capability), `${id} 规格缺少 ${capability}`)
+      }
+      assert.equal(modelSpec.spec.extra.thinkingDefault, true)
+      assert.equal(modelSpec.routing?.tier ?? null, tier)
+    }
+
+    const previous = provider.models.find((item) => item.modelName === 'mimo-v2.5-pro')
+    assert.ok(previous, '尚未到官方下线日，应保留 mimo-v2.5-pro')
+    assert.equal(previous.maxOutputTokens, 131072)
   })
 
   it('Token Plan 应使用 Qwen3.8 正式版 ID 并淘汰 Preview 预置', () => {
