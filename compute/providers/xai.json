@@ -15,13 +15,47 @@
   ],
   "models": [
     {
+      "modelName": "grok-4.7",
+      "displayName": "Grok 4.7",
+      "serviceType": [
+        "chat",
+        "reasoning"
+      ],
+      "description": "xAI 面向编程与智能体任务的旗舰模型，500K 上下文，支持图像输入和可配置推理",
+      "contextWindow": 500000,
+      "capabilities": [
+        "chat",
+        "reasoning",
+        "code",
+        "vision",
+        "tool_use",
+        "structured_output",
+        "long_context"
+      ],
+      "inputPrice": 2,
+      "outputPrice": 6,
+      "extra": {
+        "cachedInputPrice": 0.5,
+        "reasoning": {
+          "supportedEfforts": [
+            "low",
+            "medium",
+            "high",
+            "xhigh"
+          ],
+          "defaultEffort": "high"
+        },
+        "pricingNotes": "Prices are per 1M tokens below 200K prompt tokens; above 200K, input and cache rates are 2x and output rates are 2x. No text output limit is documented."
+      }
+    },
+    {
       "modelName": "grok-4.3",
       "displayName": "Grok 4.3",
       "serviceType": [
         "chat",
         "reasoning"
       ],
-      "description": "xAI 最新旗舰通用模型，1M 上下文，支持可配置推理、函数调用和结构化输出",
+      "description": "xAI Grok 4.3 通用模型，1M 上下文，支持可配置推理、函数调用和结构化输出",
       "contextWindow": 1000000,
       "capabilities": [
         "chat",

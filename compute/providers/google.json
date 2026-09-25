@@ -16,6 +16,101 @@
   ],
   "models": [
     {
+      "modelName": "gemini-3.8-flash",
+      "displayName": "Gemini 3.8 Flash",
+      "serviceType": [
+        "chat"
+      ],
+      "description": "Google 最新稳定版 Flash，面向长程编程和智能体任务，1M 上下文",
+      "contextWindow": 1048576,
+      "maxOutputTokens": 65536,
+      "capabilities": [
+        "chat",
+        "reasoning",
+        "code",
+        "vision",
+        "ultra_long_context",
+        "tool_use",
+        "fast"
+      ],
+      "inputPrice": 0.75,
+      "outputPrice": 3.75,
+      "defaultTemperature": 1,
+      "defaultTopP": 0.95,
+      "extra": {
+        "cachePricing": {
+          "inputCacheRead": 0.075
+        },
+        "reasoning": {
+          "supportedEfforts": ["low", "medium", "high"],
+          "defaultEffort": "medium"
+        },
+        "pricingNotes": "Standard paid tier introductory price through 2026-12-31; standard rates rise on 2027-01-01."
+      }
+    },
+    {
+      "modelName": "gemini-3.7-flash",
+      "displayName": "Gemini 3.7 Flash",
+      "serviceType": [
+        "chat"
+      ],
+      "description": "Google 稳定版 Flash，面向日常编程和多步工具调用，1M 上下文",
+      "contextWindow": 1048576,
+      "maxOutputTokens": 65536,
+      "capabilities": [
+        "chat",
+        "reasoning",
+        "code",
+        "vision",
+        "ultra_long_context",
+        "tool_use",
+        "fast"
+      ],
+      "inputPrice": 0.75,
+      "outputPrice": 3.75,
+      "defaultTemperature": 1,
+      "defaultTopP": 0.95,
+      "extra": {
+        "cachePricing": {
+          "inputCacheRead": 0.075
+        },
+        "reasoning": {
+          "supportedEfforts": ["low", "medium", "high"],
+          "defaultEffort": "medium"
+        },
+        "pricingNotes": "Standard paid tier introductory price through 2026-12-31; standard rates rise on 2027-01-01."
+      }
+    },
+    {
+      "modelName": "gemini-3.5-flash-lite",
+      "displayName": "Gemini 3.5 Flash-Lite",
+      "serviceType": [
+        "chat",
+        "fast"
+      ],
+      "description": "Google 低延迟轻量模型，支持多模态输入，1M 上下文",
+      "contextWindow": 1048576,
+      "maxOutputTokens": 65536,
+      "capabilities": [
+        "chat",
+        "reasoning",
+        "code",
+        "vision",
+        "ultra_long_context",
+        "tool_use",
+        "fast"
+      ],
+      "inputPrice": 0.3,
+      "outputPrice": 2.5,
+      "defaultTemperature": 1,
+      "defaultTopP": 0.95,
+      "extra": {
+        "cachePricing": {
+          "inputCacheRead": 0.03
+        }
+      }
+    },
+    {
       "modelName": "gemini-3.5-flash",
       "displayName": "Gemini 3.5 Flash",
       "serviceType": [
@@ -141,7 +236,7 @@
       "serviceType": [
         "chat"
       ],
-      "description": "Google 最新旗舰模型，1,048,576 token 上下文，多模态",
+      "description": "Google Gemini 2.5 Pro，1,048,576 token 上下文，多模态",
       "contextWindow": 1048576,
       "maxOutputTokens": 65536,
       "capabilities": [

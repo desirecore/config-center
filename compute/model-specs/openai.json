@@ -2,6 +2,144 @@
   "description": "OpenAI GPT / o 系列模型规格。参数来源：config-center compute/providers/openai.json。注意：gpt-4o / gpt-5 等存在子型号（-mini/-nano），故只用 exact 主键匹配，不使用宽泛 pattern 以防误吞子型号。o 系列 serviceType 由 responses 调整为 reasoning（responses 为 OpenAI 直连专有，对 NewAPI 网关不适用）。",
   "specs": [
     {
+      "id": "gpt-image-2.5-sunburst",
+      "displayName": "GPT Image 2.5 Sunburst",
+      "family": "gpt-image-2.5-sunburst",
+      "match": {
+        "exact": [
+          "gpt-image-2.5-sunburst"
+        ]
+      },
+      "spec": {
+        "capabilities": [
+          "image_generation",
+          "image_editing",
+          "text_rendering",
+          "vision",
+          "high_quality"
+        ],
+        "serviceType": [
+          "image_gen"
+        ],
+        "description": "图像生成与编辑模型，适合对编辑精度要求高的任务"
+      }
+    },
+    {
+      "id": "gpt-image-2.5-flare",
+      "displayName": "GPT Image 2.5 Flare",
+      "family": "gpt-image-2.5-flare",
+      "match": {
+        "exact": [
+          "gpt-image-2.5-flare"
+        ]
+      },
+      "spec": {
+        "capabilities": [
+          "image_generation",
+          "image_editing",
+          "text_rendering",
+          "vision",
+          "fast"
+        ],
+        "serviceType": [
+          "image_gen"
+        ],
+        "description": "快速图像生成与编辑模型，适合日常高质量出图"
+      }
+    },
+    {
+      "id": "gpt-6-sol",
+      "displayName": "GPT-6 Sol",
+      "family": "gpt-6-sol",
+      "match": {
+        "exact": [
+          "gpt-6-sol"
+        ]
+      },
+      "spec": {
+        "contextWindow": 1050000,
+        "maxOutputTokens": 128000,
+        "capabilities": [
+          "chat",
+          "reasoning",
+          "code",
+          "vision",
+          "long_context",
+          "tool_use",
+          "agent"
+        ],
+        "serviceType": [
+          "chat"
+        ],
+        "supportsReasoning": true,
+        "description": "GPT-6 Sol，1.05M 上下文，128K 最大输出"
+      },
+      "routing": {
+        "tier": "balanced",
+        "routingPriority": 5,
+        "eligibleForAgent": true,
+        "defaultReference": false,
+        "reasoning": {
+          "supportedModes": [
+            "auto",
+            "off",
+            "low",
+            "medium",
+            "high",
+            "xhigh",
+            "max"
+          ],
+          "defaultMode": "medium"
+        }
+      }
+    },
+    {
+      "id": "gpt-6-luna",
+      "displayName": "GPT-6 Luna",
+      "family": "gpt-6-luna",
+      "match": {
+        "exact": [
+          "gpt-6-luna"
+        ]
+      },
+      "spec": {
+        "contextWindow": 1050000,
+        "maxOutputTokens": 128000,
+        "capabilities": [
+          "chat",
+          "reasoning",
+          "code",
+          "vision",
+          "long_context",
+          "tool_use",
+          "fast"
+        ],
+        "serviceType": [
+          "chat"
+        ],
+        "supportsReasoning": true,
+        "description": "GPT-6 Luna，1.05M 上下文，128K 最大输出"
+      },
+      "routing": {
+        "tier": "lightweight",
+        "routingPriority": 5,
+        "eligibleForAgent": true,
+        "defaultReference": false,
+        "reasoning": {
+          "supportedModes": [
+            "auto",
+            "off",
+            "low",
+            "medium",
+            "high",
+            "xhigh",
+            "max"
+          ],
+          "defaultMode": "medium"
+        }
+      }
+    },
+    {
       "id": "gpt-6-astra",
       "displayName": "GPT-6 Astra",
       "spec": {
@@ -89,9 +227,6 @@
       "match": {
         "exact": [
           "gpt-image-2"
-        ],
-        "patterns": [
-          "gpt-image-2*"
         ]
       },
       "spec": {
@@ -104,7 +239,7 @@
         "serviceType": [
           "image_gen"
         ],
-        "description": "OpenAI 最新文生图模型，支持高质量图片生成与编辑，400K 上下文"
+        "description": "OpenAI GPT Image 2 文生图模型，支持高质量图片生成与编辑，400K 上下文"
       }
     },
     {

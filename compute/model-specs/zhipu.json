@@ -2,6 +2,57 @@
   "description": "智谱 GLM 系列模型规格。参数来源：config-center compute/providers/zhipu.json。glm-5 与 glm-5.1/glm-5-turbo/glm-5v-turbo 前缀相近，故各自仅用 exact 主键匹配，不用宽 pattern 以防误吞。",
   "specs": [
     {
+      "id": "glm-5.3-flashx",
+      "displayName": "GLM-5.3-FlashX",
+      "family": "glm-5.3-flashx",
+      "match": {
+        "exact": [
+          "glm-5.3-flashx",
+          "z-ai/glm-5.3-flashx"
+        ]
+      },
+      "spec": {
+        "contextWindow": 1000000,
+        "maxOutputTokens": 128000,
+        "capabilities": [
+          "chat",
+          "reasoning",
+          "code",
+          "multilingual",
+          "vision",
+          "video_understanding",
+          "tool_use",
+          "long_context",
+          "fast"
+        ],
+        "serviceType": [
+          "chat",
+          "reasoning",
+          "vision"
+        ],
+        "supportsReasoning": true,
+        "description": "Z.ai GLM-5.3-FlashX，高速多模态推理模型，100 万上下文，始终开启推理",
+        "extra": {
+          "thinkingOnly": true
+        }
+      },
+      "routing": {
+        "tier": "balanced",
+        "routingPriority": 49,
+        "eligibleForAgent": true,
+        "defaultReference": false,
+        "reasoning": {
+          "supportedModes": [
+            "auto",
+            "low",
+            "high",
+            "max"
+          ],
+          "defaultMode": "max"
+        }
+      }
+    },
+    {
       "id": "glm-5.3",
       "displayName": "GLM-5.3",
       "family": "glm-5.3",

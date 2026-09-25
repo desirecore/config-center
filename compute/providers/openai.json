@@ -25,6 +25,141 @@
   ],
   "models": [
     {
+      "modelName": "gpt-image-2.5-sunburst",
+      "displayName": "GPT Image 2.5 Sunburst",
+      "serviceType": [
+        "image_gen"
+      ],
+      "description": "图像生成与编辑模型，适合对编辑精度要求高的任务",
+      "capabilities": [
+        "image_generation",
+        "image_editing",
+        "text_rendering",
+        "vision",
+        "high_quality"
+      ],
+      "inputPrice": 5,
+      "outputPrice": 30,
+      "extra": {
+        "imageInputPrice": 8,
+        "textCachedInputPrice": 1.25,
+        "imageCachedInputPrice": 2,
+        "pricingNotes": "Text input $5/M tokens, image input $8/M tokens, image output $30/M tokens; quality supports low, medium, high, xhigh, max, auto."
+      }
+    },
+    {
+      "modelName": "gpt-image-2.5-flare",
+      "displayName": "GPT Image 2.5 Flare",
+      "serviceType": [
+        "image_gen"
+      ],
+      "description": "快速图像生成与编辑模型，适合日常高质量出图",
+      "capabilities": [
+        "image_generation",
+        "image_editing",
+        "text_rendering",
+        "vision",
+        "fast"
+      ],
+      "inputPrice": 5,
+      "outputPrice": 30,
+      "extra": {
+        "imageInputPrice": 8,
+        "textCachedInputPrice": 1.25,
+        "imageCachedInputPrice": 2,
+        "pricingNotes": "Text input $5/M tokens, image input $8/M tokens, image output $30/M tokens; quality supports low, medium, high, xhigh, max, auto."
+      }
+    },
+    {
+      "modelName": "gpt-6-sol",
+      "displayName": "GPT-6 Sol",
+      "serviceType": [
+        "chat",
+        "responses"
+      ],
+      "contextWindow": 1050000,
+      "maxOutputTokens": 128000,
+      "capabilities": [
+        "chat",
+        "reasoning",
+        "code",
+        "vision",
+        "ultra_long_context",
+        "tool_use",
+        "agent"
+      ],
+      "description": "兼顾复杂编程、智能体工作流与成本的 GPT-6 模型；1.05M 上下文",
+      "inputPrice": 2,
+      "outputPrice": 10,
+      "extra": {
+        "serverSideWebSearch": {
+          "enabled": true,
+          "dialect": "openai-responses",
+          "fallbackPriority": 2,
+          "searchRequestPriceUsd": 0.01,
+          "toolType": "web_search"
+        },
+        "cachedInputPrice": 0.2,
+        "reasoning": {
+          "supportedEfforts": [
+            "none",
+            "low",
+            "medium",
+            "high",
+            "xhigh",
+            "max"
+          ],
+          "defaultEffort": "medium"
+        },
+        "pricingNotes": "Prices are per 1M tokens. Above 272K input tokens, input and cache rates are 2x and output rates are 1.5x for the full request. Chat Completions function calling requires reasoning_effort=none."
+      }
+    },
+    {
+      "modelName": "gpt-6-luna",
+      "displayName": "GPT-6 Luna",
+      "serviceType": [
+        "chat",
+        "fast",
+        "responses"
+      ],
+      "contextWindow": 1050000,
+      "maxOutputTokens": 128000,
+      "capabilities": [
+        "chat",
+        "reasoning",
+        "code",
+        "vision",
+        "ultra_long_context",
+        "tool_use",
+        "fast"
+      ],
+      "description": "面向明确任务和高吞吐场景的 GPT-6 轻量模型；1.05M 上下文",
+      "inputPrice": 0.1,
+      "outputPrice": 0.5,
+      "extra": {
+        "serverSideWebSearch": {
+          "enabled": true,
+          "dialect": "openai-responses",
+          "fallbackPriority": 3,
+          "searchRequestPriceUsd": 0.01,
+          "toolType": "web_search"
+        },
+        "cachedInputPrice": 0.01,
+        "reasoning": {
+          "supportedEfforts": [
+            "none",
+            "low",
+            "medium",
+            "high",
+            "xhigh",
+            "max"
+          ],
+          "defaultEffort": "medium"
+        },
+        "pricingNotes": "Prices are per 1M tokens. Above 272K input tokens, input and cache rates are 2x and output rates are 1.5x for the full request. Chat Completions function calling requires reasoning_effort=none."
+      }
+    },
+    {
       "modelName": "gpt-6-astra",
       "displayName": "GPT-6 Astra",
       "serviceType": [
@@ -68,7 +203,7 @@
         "chat",
         "responses"
       ],
-      "description": "OpenAI 最新前沿模型，面向复杂推理、编码和专业工作流，1M 上下文，128K 最大输出",
+      "description": "OpenAI GPT-5.5 前沿模型，面向复杂推理、编码和专业工作流，1M 上下文，128K 最大输出",
       "contextWindow": 1050000,
       "maxOutputTokens": 128000,
       "capabilities": [
@@ -294,7 +429,7 @@
       "serviceType": [
         "image_gen"
       ],
-      "description": "OpenAI 最新图像生成和编辑模型，支持文本输入、图像输入与图像输出",
+      "description": "OpenAI GPT Image 2 图像生成和编辑模型，支持文本输入、图像输入与图像输出",
       "capabilities": [
         "image_generation",
         "image_editing",
@@ -398,7 +533,7 @@
       "serviceType": [
         "chat"
       ],
-      "description": "OpenAI 最新旗舰模型，400K 上下文，编码和智能体任务优化",
+      "description": "OpenAI GPT-5.2，400K 上下文，面向编码和智能体任务",
       "contextWindow": 400000,
       "maxOutputTokens": 128000,
       "capabilities": [

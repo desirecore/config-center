@@ -20,6 +20,98 @@
   ],
   "models": [
     {
+      "modelName": "mimo-v2.6-pro",
+      "displayName": "MiMo-V2.6-Pro",
+      "serviceType": [
+        "chat",
+        "reasoning",
+        "vision"
+      ],
+      "description": "小米全模态旗舰推理模型，适合复杂项目与长程智能体任务",
+      "contextWindow": 1000000,
+      "maxOutputTokens": 131072,
+      "capabilities": [
+        "chat",
+        "reasoning",
+        "code",
+        "vision",
+        "audio_understanding",
+        "video_understanding",
+        "tool_use",
+        "agent",
+        "long_context"
+      ],
+      "inputPrice": 3,
+      "outputPrice": 6,
+      "extra": {
+        "cachedInputPrice": 0.025,
+        "thinkingDefault": true,
+        "pricingNotes": "CNY per 1M tokens on the Xiaomi MiMo API."
+      }
+    },
+    {
+      "modelName": "mimo-v2.6-flash",
+      "displayName": "MiMo-V2.6-Flash",
+      "serviceType": [
+        "chat",
+        "reasoning",
+        "vision"
+      ],
+      "description": "小米全模态高效推理模型，适合高频调用与规模化任务",
+      "contextWindow": 1000000,
+      "maxOutputTokens": 131072,
+      "capabilities": [
+        "chat",
+        "reasoning",
+        "code",
+        "vision",
+        "audio_understanding",
+        "video_understanding",
+        "tool_use",
+        "agent",
+        "long_context",
+        "fast"
+      ],
+      "inputPrice": 1,
+      "outputPrice": 2,
+      "extra": {
+        "cachedInputPrice": 0.02,
+        "thinkingDefault": true,
+        "pricingNotes": "CNY per 1M tokens on the Xiaomi MiMo API."
+      }
+    },
+    {
+      "modelName": "mimo-v2.6-pro-ultraspeed",
+      "displayName": "MiMo-V2.6-Pro-UltraSpeed",
+      "serviceType": [
+        "chat",
+        "reasoning",
+        "vision"
+      ],
+      "description": "MiMo-V2.6-Pro 的超高速服务，需向小米申请定制配额",
+      "contextWindow": 1000000,
+      "maxOutputTokens": 131072,
+      "capabilities": [
+        "chat",
+        "reasoning",
+        "code",
+        "vision",
+        "audio_understanding",
+        "video_understanding",
+        "tool_use",
+        "agent",
+        "long_context",
+        "fast"
+      ],
+      "inputPrice": 30,
+      "outputPrice": 60,
+      "extra": {
+        "cachedInputPrice": 0.25,
+        "thinkingDefault": true,
+        "pricingNotes": "CNY per 1M tokens on the Xiaomi MiMo API; UltraSpeed requires custom rate limits."
+      }
+    },
+    {
       "modelName": "mimo-x-flash-preview",
       "displayName": "MiMo-X-Flash Preview",
       "serviceType": [
@@ -56,9 +148,9 @@
         "chat",
         "reasoning"
       ],
-      "description": "小米旗舰推理模型，1M 上下文，1T MoE 参数，擅长复杂 Agent、编程与长文本",
+      "description": "小米 MiMo-V2.5-Pro，1M 上下文，1T MoE 参数，计划于 2026-10-21 下线",
       "contextWindow": 1000000,
-      "maxOutputTokens": 65536,
+      "maxOutputTokens": 131072,
       "capabilities": [
         "chat",
         "reasoning",

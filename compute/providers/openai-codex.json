@@ -25,6 +25,72 @@
   ],
   "models": [
     {
+      "modelName": "gpt-6-sol",
+      "displayName": "GPT-6 Sol",
+      "serviceType": [
+        "chat"
+      ],
+      "description": "ChatGPT 订阅额度计费，兼顾复杂编程、智能体工作流与成本的 GPT-6 模型；1.05M 上下文",
+      "contextWindow": 1050000,
+      "maxOutputTokens": 128000,
+      "capabilities": [
+        "chat",
+        "reasoning",
+        "code",
+        "vision",
+        "ultra_long_context",
+        "tool_use",
+        "agent"
+      ],
+      "extra": {
+        "reasoning": {
+          "supportedEfforts": [
+            "none",
+            "low",
+            "medium",
+            "high",
+            "xhigh",
+            "max"
+          ],
+          "defaultEffort": "medium"
+        }
+      },
+      "source": "preset"
+    },
+    {
+      "modelName": "gpt-6-luna",
+      "displayName": "GPT-6 Luna",
+      "serviceType": [
+        "chat"
+      ],
+      "description": "ChatGPT 订阅额度计费，面向明确任务和高吞吐场景的 GPT-6 轻量模型；1.05M 上下文",
+      "contextWindow": 1050000,
+      "maxOutputTokens": 128000,
+      "capabilities": [
+        "chat",
+        "reasoning",
+        "code",
+        "vision",
+        "ultra_long_context",
+        "tool_use",
+        "fast"
+      ],
+      "extra": {
+        "reasoning": {
+          "supportedEfforts": [
+            "none",
+            "low",
+            "medium",
+            "high",
+            "xhigh",
+            "max"
+          ],
+          "defaultEffort": "medium"
+        }
+      },
+      "source": "preset"
+    },
+    {
       "modelName": "gpt-6-astra",
       "displayName": "GPT-6 Astra",
       "serviceType": [

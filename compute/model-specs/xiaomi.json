@@ -1,6 +1,142 @@
 {
-  "description": "小米 MiMo 系列模型规格。参数来源：https://platform.xiaomimimo.com/docs/zh-CN/quick-start/model。注意 v2-pro/v2-omni 自 2026-06-01 起转发到 v2.5 系列，2026-06-30 正式停用，规格库仍保留供存量 NewAPI 渠道正确展示参数。",
+  "description": "小米 MiMo 系列模型规格。参数来源：https://mimo.mi.com/docs/zh-CN/quick-start/summary/model。注意 v2-pro/v2-omni 自 2026-06-01 起转发到 v2.5 系列，2026-06-30 正式停用，规格库仍保留供存量 NewAPI 渠道正确展示参数。",
   "specs": [
+    {
+      "id": "mimo-v2.6-pro",
+      "displayName": "MiMo-V2.6-Pro",
+      "family": "mimo-v2.6-pro",
+      "match": {
+        "exact": [
+          "mimo-v2.6-pro"
+        ]
+      },
+      "spec": {
+        "contextWindow": 1000000,
+        "maxOutputTokens": 131072,
+        "capabilities": [
+          "chat",
+          "reasoning",
+          "code",
+          "vision",
+          "audio_understanding",
+          "video_understanding",
+          "tool_use",
+          "agent",
+          "long_context"
+        ],
+        "serviceType": [
+          "chat",
+          "reasoning",
+          "vision"
+        ],
+        "supportsReasoning": true,
+        "description": "小米全模态旗舰推理模型，适合复杂项目与长程智能体任务",
+        "extra": {
+          "thinkingDefault": true
+        },
+        "releasedAt": "2026-09-22"
+      },
+      "routing": {
+        "tier": "flagship",
+        "routingPriority": 28,
+        "eligibleForAgent": true,
+        "defaultReference": false,
+        "reasoning": {
+          "supportedModes": [
+            "auto",
+            "off"
+          ],
+          "defaultMode": "auto"
+        }
+      }
+    },
+    {
+      "id": "mimo-v2.6-flash",
+      "displayName": "MiMo-V2.6-Flash",
+      "family": "mimo-v2.6-flash",
+      "match": {
+        "exact": [
+          "mimo-v2.6-flash"
+        ]
+      },
+      "spec": {
+        "contextWindow": 1000000,
+        "maxOutputTokens": 131072,
+        "capabilities": [
+          "chat",
+          "reasoning",
+          "code",
+          "vision",
+          "audio_understanding",
+          "video_understanding",
+          "tool_use",
+          "agent",
+          "long_context",
+          "fast"
+        ],
+        "serviceType": [
+          "chat",
+          "reasoning",
+          "vision"
+        ],
+        "supportsReasoning": true,
+        "description": "小米全模态高效推理模型，适合高频调用与规模化任务",
+        "extra": {
+          "thinkingDefault": true
+        },
+        "releasedAt": "2026-09-22"
+      },
+      "routing": {
+        "tier": "balanced",
+        "routingPriority": 28,
+        "eligibleForAgent": true,
+        "defaultReference": false,
+        "reasoning": {
+          "supportedModes": [
+            "auto",
+            "off"
+          ],
+          "defaultMode": "auto"
+        }
+      }
+    },
+    {
+      "id": "mimo-v2.6-pro-ultraspeed",
+      "displayName": "MiMo-V2.6-Pro-UltraSpeed",
+      "family": "mimo-v2.6-pro-ultraspeed",
+      "match": {
+        "exact": [
+          "mimo-v2.6-pro-ultraspeed"
+        ]
+      },
+      "spec": {
+        "contextWindow": 1000000,
+        "maxOutputTokens": 131072,
+        "capabilities": [
+          "chat",
+          "reasoning",
+          "code",
+          "vision",
+          "audio_understanding",
+          "video_understanding",
+          "tool_use",
+          "agent",
+          "long_context",
+          "fast"
+        ],
+        "serviceType": [
+          "chat",
+          "reasoning",
+          "vision"
+        ],
+        "supportsReasoning": true,
+        "description": "MiMo-V2.6-Pro 的超高速服务，需向小米申请定制配额",
+        "extra": {
+          "thinkingDefault": true
+        },
+        "releasedAt": "2026-09-22"
+      }
+    },
     {
       "id": "mimo-x-flash-preview",
       "displayName": "MiMo-X-Flash Preview",
