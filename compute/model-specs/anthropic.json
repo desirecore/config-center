@@ -2,6 +2,56 @@
   "description": "Anthropic Claude 系列模型规格。参数来源：config-center compute/providers/anthropic.json。",
   "specs": [
     {
+      "id": "claude-opus-5-5",
+      "displayName": "Claude Opus 5.5",
+      "family": "claude-opus-5-5",
+      "match": {
+        "exact": [
+          "claude-opus-5-5"
+        ]
+      },
+      "spec": {
+        "contextWindow": 1000000,
+        "maxOutputTokens": 128000,
+        "capabilities": [
+          "chat",
+          "reasoning",
+          "code",
+          "vision",
+          "tool_use",
+          "long_context"
+        ],
+        "serviceType": [
+          "chat"
+        ],
+        "supportsReasoning": true,
+        "description": "Claude Opus 5.5，始终开启自适应思考，默认 medium effort",
+        "extra": {
+          "adaptiveThinking": true,
+          "thinkingOnly": true,
+          "samplingParametersDeprecated": true,
+          "forcedToolChoiceUnsupported": true
+        }
+      },
+      "routing": {
+        "tier": "flagship",
+        "routingPriority": 22,
+        "eligibleForAgent": true,
+        "defaultReference": false,
+        "reasoning": {
+          "supportedModes": [
+            "auto",
+            "low",
+            "medium",
+            "high",
+            "xhigh",
+            "max"
+          ],
+          "defaultMode": "medium"
+        }
+      }
+    },
+    {
       "id": "claude-fable-5-1",
       "displayName": "Claude Fable 5.1",
       "family": "claude-fable",
@@ -60,8 +110,8 @@
       "displayName": "Claude Opus 5",
       "family": "claude-opus-5",
       "match": {
-        "patterns": [
-          "claude-opus-5*"
+        "exact": [
+          "claude-opus-5"
         ]
       },
       "spec": {

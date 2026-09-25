@@ -12,7 +12,7 @@
       },
       "spec": {
         "contextWindow": 1000000,
-        "maxOutputTokens": 65536,
+        "maxOutputTokens": 131072,
         "capabilities": [
           "chat",
           "reasoning",
@@ -21,7 +21,8 @@
           "tool_use",
           "long_context",
           "agent",
-          "vision"
+          "vision",
+          "video_understanding"
         ],
         "serviceType": [
           "chat"
@@ -29,7 +30,7 @@
         "defaultTemperature": 0.6,
         "defaultTopP": 0.95,
         "supportsReasoning": true,
-        "description": "通义千问 Qwen3.8 Max，100 万上下文，支持视觉理解"
+        "description": "通义千问 Qwen3.8 Max 稳定版，100 万上下文，支持视觉与视频理解"
       },
       "routing": {
         "tier": "flagship",
@@ -46,7 +47,7 @@
             "high",
             "xhigh"
           ],
-          "defaultMode": "high"
+          "defaultMode": "xhigh"
         }
       }
     },

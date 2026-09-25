@@ -26,6 +26,47 @@
   ],
   "models": [
     {
+      "modelName": "claude-opus-5-5",
+      "displayName": "Claude Opus 5.5",
+      "serviceType": [
+        "chat"
+      ],
+      "contextWindow": 1000000,
+      "maxOutputTokens": 128000,
+      "capabilities": [
+        "chat",
+        "reasoning",
+        "code",
+        "vision",
+        "tool_use",
+        "agent",
+        "long_context"
+      ],
+      "description": "Claude 订阅额度计费，长程智能体编程与知识工作模型，1M 上下文",
+      "extra": {
+        "adaptiveThinking": true,
+        "reasoning": {
+          "supportedEfforts": [
+            "low",
+            "medium",
+            "high",
+            "xhigh",
+            "max"
+          ],
+          "defaultEffort": "medium"
+        },
+        "thinkingOnly": true,
+        "thinkingRoundTrip": {
+          "enabled": true,
+          "protocol": "anthropic-messages",
+          "allowEmptySignature": false,
+          "scope": "active-tool-turn"
+        },
+        "thinkingToolTurnValidation": "accepts-thinkless"
+      },
+      "source": "preset"
+    },
+    {
       "modelName": "claude-fable-5-1",
       "displayName": "Claude Fable 5.1",
       "serviceType": [
@@ -72,7 +113,7 @@
       "serviceType": [
         "chat"
       ],
-      "description": "Claude 订阅额度计费，Opus 系列当前旗舰，复杂智能体编码与长程任务首选，1M 上下文",
+      "description": "Claude 订阅额度计费，Opus 5 系列模型，复杂智能体编码与长程任务首选，1M 上下文",
       "contextWindow": 1000000,
       "maxOutputTokens": 128000,
       "capabilities": [

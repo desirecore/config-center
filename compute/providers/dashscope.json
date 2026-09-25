@@ -24,6 +24,7 @@
     "translation"
   ],
   "tombstones": [
+    "qwen3.8-max-preview",
     "qwen3.6-plus",
     "qwen3.5-plus",
     "qwen-max",
@@ -34,15 +35,15 @@
   ],
   "models": [
     {
-      "modelName": "qwen3.8-max-preview",
-      "displayName": "阿里云 Qwen3.8-Max (Preview)",
+      "modelName": "qwen3.8-max",
+      "displayName": "阿里云 Qwen3.8-Max",
       "serviceType": [
         "chat",
         "vision"
       ],
-      "description": "通义千问3.8 Max 预览版，面向复杂推理与长程 Agent 任务的旗舰模型，100万上下文，支持视觉理解、内置工具和 Function Calling",
+      "description": "通义千问3.8 Max 稳定版，支持视觉、视频理解和工具调用，100万上下文",
       "contextWindow": 1000000,
-      "maxOutputTokens": 65536,
+      "maxOutputTokens": 131072,
       "capabilities": [
         "chat",
         "reasoning",
@@ -51,13 +52,67 @@
         "long_context",
         "tool_use",
         "agent",
-        "vision"
+        "vision",
+        "video_understanding"
       ],
       "inputPrice": 12,
       "outputPrice": 36,
       "defaultTemperature": 0.6,
       "defaultTopP": 0.95,
-      "extra": {}
+      "extra": {
+        "cachedInputPrice": 1.5,
+        "pricingNotes": "CNY per 1M tokens, Beijing region standard price.",
+        "reasoning": {
+          "supportedEfforts": [
+            "low",
+            "medium",
+            "xhigh"
+          ],
+          "defaultEffort": "xhigh"
+        },
+        "preserveThinkingDefault": true,
+        "thinkingMaxTokens": 262144
+      }
+    },
+    {
+      "modelName": "qwen3.8-flash",
+      "displayName": "阿里云 Qwen3.8-Flash",
+      "serviceType": [
+        "chat",
+        "vision"
+      ],
+      "description": "通义千问3.8 Flash 稳定版，高速多模态推理，100万上下文",
+      "contextWindow": 1000000,
+      "maxOutputTokens": 131072,
+      "capabilities": [
+        "chat",
+        "reasoning",
+        "code",
+        "multilingual",
+        "long_context",
+        "tool_use",
+        "agent",
+        "vision",
+        "video_understanding"
+      ],
+      "inputPrice": 0.8,
+      "outputPrice": 2.7,
+      "defaultTemperature": 0.6,
+      "defaultTopP": 0.95,
+      "extra": {
+        "cachedInputPrice": 0.1,
+        "pricingNotes": "CNY per 1M tokens, Beijing region standard price.",
+        "reasoning": {
+          "supportedEfforts": [
+            "low",
+            "medium",
+            "xhigh"
+          ],
+          "defaultEffort": "xhigh"
+        },
+        "preserveThinkingDefault": true,
+        "thinkingMaxTokens": 262144
+      }
     },
     {
       "modelName": "qwen3.7-max",

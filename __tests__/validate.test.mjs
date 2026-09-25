@@ -105,7 +105,7 @@ describe('真实数据全量校验', () => {
         if (spec.routing) routed.push(spec)
       }
     }
-    assert.equal(routed.length, 48)
+    assert.equal(routed.length, 56)
     assert.equal(routed.every((spec) => spec.routing.reasoning.supportedModes.includes(spec.routing.reasoning.defaultMode)), true)
     assert.equal(routed.every((spec) => Array.isArray(spec.spec.capabilities)), true)
   })
@@ -151,11 +151,14 @@ describe('真实数据全量校验', () => {
       .map((model) => model.modelName)
 
     assert.deepEqual(enabled(anthropic), [
+      'claude-opus-5-5',
       'claude-fable-5-1',
       'claude-opus-5',
       'claude-sonnet-5',
     ])
     assert.deepEqual(enabled(openai), [
+      'gpt-6-sol',
+      'gpt-6-luna',
       'gpt-6-astra',
       'gpt-5.5',
       'gpt-5.5-pro',
@@ -515,32 +518,111 @@ describe('真实数据全量校验', () => {
     }
   })
 
-  it('Qwen3.8 Max Preview 应在 Token Plan 中提供完整的推理与视觉规格', () => {
+  it('Token Plan 应使用 Qwen3.8 正式版 ID 并淘汰 Preview 预置', () => {
     const tokenPlan = JSON.parse(readFileSync(join(ROOT, 'compute', 'coding-plans', 'dashscope-token-plan.json'), 'utf8'))
+    const apiProvider = JSON.parse(readFileSync(join(ROOT, 'compute', 'providers', 'dashscope.json'), 'utf8'))
     const specFile = JSON.parse(readFileSync(join(ROOT, 'compute', 'model-specs', 'qwen.json'), 'utf8'))
-    const modelId = 'qwen3.8-max-preview'
-    const model = tokenPlan.models.find((item) => item.modelName === modelId)
+    assert.equal(tokenPlan.models.some((item) => item.modelName === 'qwen3.8-max-preview'), false)
+    assert.equal(apiProvider.models.some((item) => item.modelName === 'qwen3.8-max-preview'), false)
+    assert.ok(tokenPlan.tombstones.includes('qwen3.8-max-preview'))
+    assert.ok(apiProvider.tombstones.includes('qwen3.8-max-preview'))
+    for (const modelId of ['qwen3.8-max', 'qwen3.8-flash']) {
+      const model = tokenPlan.models.find((item) => item.modelName === modelId)
+      const modelSpec = specFile.specs.find((item) => item.id === modelId)
+      assert.ok(model, `Token Plan 缺少 ${modelId}`)
+      assert.ok(modelSpec, `model-specs 缺少 ${modelId}`)
+      assert.equal(model.contextWindow, 1000000)
+      assert.equal(model.maxOutputTokens, 131072)
+      assert.ok(model.capabilities.includes('vision'))
+      assert.deepEqual(model.extra.reasoning.supportedEfforts, ['low', 'medium', 'xhigh'])
+      assert.equal(model.extra.reasoning.defaultEffort, 'xhigh')
+      assert.equal(model.extra.thinkingOnly, undefined)
+      assert.equal(model.extra.preserveThinkingDefault, true)
+      assert.equal(modelSpec.spec.maxOutputTokens, 131072)
+      const apiModel = apiProvider.models.find((item) => item.modelName === modelId)
+      assert.deepEqual(apiModel.extra.reasoning.supportedEfforts, ['low', 'medium', 'xhigh'])
+      assert.equal(apiModel.extra.preserveThinkingDefault, true)
+    }
+  })
 
-    assert.ok(model, `Token Plan 缺少 ${modelId}`)
-    assert.equal(model.contextWindow, 983616)
-    assert.equal(model.defaultTemperature, 0.6)
-    assert.ok(model.capabilities.includes('reasoning'))
-    assert.ok(model.capabilities.includes('vision'))
-    assert.ok(model.serviceType.includes('reasoning'))
-    assert.ok(model.serviceType.includes('vision'))
-    assert.deepEqual(model.extra.reasoning.supportedEfforts, ['low', 'high', 'xhigh'])
-    assert.equal(model.extra.reasoning.defaultEffort, 'xhigh')
-    assert.equal(model.extra.thinkingOnly, true)
-    assert.equal(model.extra.thinkingMaxTokens, 262144)
-    assert.equal(model.extra.preserveThinkingDefault, true)
-    assert.equal(model.extra.supportsParallelToolCalls, false)
+  it('新增主流模型应在官方 Provider 与共享规格中保持 ID、窗口和推理配置一致', () => {
+    const cases = [
+      ['openai', 'openai', 'gpt-6-sol', 1050000, 128000, 2, 10, 'medium'],
+      ['openai', 'openai', 'gpt-6-luna', 1050000, 128000, 0.1, 0.5, 'medium'],
+      ['anthropic', 'anthropic', 'claude-opus-5-5', 1000000, 128000, 4, 20, 'medium'],
+      ['google', 'google', 'gemini-3.8-flash', 1048576, 65536, 0.75, 3.75, null],
+      ['google', 'google', 'gemini-3.7-flash', 1048576, 65536, 0.75, 3.75, null],
+      ['google', 'google', 'gemini-3.5-flash-lite', 1048576, 65536, 0.3, 2.5, null],
+      ['dashscope', 'qwen', 'qwen3.8-max', 1000000, 131072, 12, 36, null],
+      ['dashscope', 'qwen', 'qwen3.8-flash', 1000000, 131072, 0.8, 2.7, null],
+      ['xai', 'xai', 'grok-4.7', 500000, undefined, 2, 6, 'high'],
+    ]
 
-    const specs = specFile.specs.filter((item) => item.id === modelId)
-    assert.equal(specs.length, 1, `model-specs 中 ${modelId} 应且仅应有一条规格`)
-    assert.equal(specs[0].spec.contextWindow, 1000000)
-    assert.equal(specs[0].spec.defaultTemperature, 0.6)
-    assert.equal(specs[0].spec.supportsReasoning, true)
-    assert.ok(specs[0].spec.capabilities.includes('vision'))
+    for (const [providerName, specName, id, contextWindow, maxOutputTokens, inputPrice, outputPrice, defaultEffort] of cases) {
+      const provider = JSON.parse(readFileSync(join(ROOT, 'compute', 'providers', `${providerName}.json`), 'utf8'))
+      const specFile = JSON.parse(readFileSync(join(ROOT, 'compute', 'model-specs', `${specName}.json`), 'utf8'))
+      const models = provider.models.filter((item) => item.modelName === id)
+      const specs = specFile.specs.filter((item) => item.id === id)
+      assert.equal(models.length, 1, `${providerName} 缺少或重复 ${id}`)
+      assert.equal(specs.length, 1, `${specName} 缺少或重复 ${id}`)
+      assert.equal(models[0].contextWindow, contextWindow)
+      assert.equal(specs[0].spec.contextWindow, contextWindow)
+      assert.equal(models[0].maxOutputTokens, maxOutputTokens)
+      assert.equal(specs[0].spec.maxOutputTokens, maxOutputTokens)
+      assert.equal(models[0].inputPrice, inputPrice)
+      assert.equal(models[0].outputPrice, outputPrice)
+      assert.equal(specs[0].routing.reasoning.supportedModes.includes(specs[0].routing.reasoning.defaultMode), true)
+      if (defaultEffort) assert.equal(models[0].extra.reasoning.defaultEffort, defaultEffort)
+    }
+
+    const anthropic = JSON.parse(readFileSync(join(ROOT, 'compute', 'providers', 'anthropic.json'), 'utf8'))
+    const opus = anthropic.models.find((item) => item.modelName === 'claude-opus-5-5')
+    assert.equal(opus.extra.adaptiveThinking, true)
+    assert.equal(opus.extra.thinkingOnly, true)
+    assert.equal(opus.extra.forcedToolChoiceUnsupported, true)
+    assert.equal(opus.extra.cachePricing.read, 0.2)
+
+    const xai = JSON.parse(readFileSync(join(ROOT, 'compute', 'providers', 'xai.json'), 'utf8'))
+    assert.deepEqual(xai.models.find((item) => item.modelName === 'grok-4.7').extra.reasoning.supportedEfforts, ['low', 'medium', 'high', 'xhigh'])
+
+    const codex = JSON.parse(readFileSync(join(ROOT, 'compute', 'providers', 'openai-codex.json'), 'utf8'))
+    for (const id of ['gpt-6-sol', 'gpt-6-luna']) {
+      const model = codex.models.find((item) => item.modelName === id)
+      assert.ok(model, `Codex 订阅 Provider 缺少 ${id}`)
+      assert.equal(model.source, 'preset')
+      assert.equal(model.extra.reasoning.defaultEffort, 'medium')
+    }
+  })
+
+  it('GLM-5.3-FlashX 仅加入共享规格，避免假定中国区智谱 API 已提供该 ID', () => {
+    const provider = JSON.parse(readFileSync(join(ROOT, 'compute', 'providers', 'zhipu.json'), 'utf8'))
+    const specs = JSON.parse(readFileSync(join(ROOT, 'compute', 'model-specs', 'zhipu.json'), 'utf8')).specs
+    assert.equal(provider.models.some((item) => item.modelName === 'glm-5.3-flashx'), false)
+    const spec = specs.find((item) => item.id === 'glm-5.3-flashx')
+    assert.ok(spec)
+    assert.deepEqual(spec.match.exact, ['glm-5.3-flashx', 'z-ai/glm-5.3-flashx'])
+    assert.equal(spec.spec.contextWindow, 1000000)
+    assert.equal(spec.spec.maxOutputTokens, 128000)
+    assert.ok(spec.spec.capabilities.includes('vision'))
+  })
+
+  it('GPT Image 2.5 双型号应使用图像生成接入，并与 GPT Image 2 精确区分', () => {
+    const provider = JSON.parse(readFileSync(join(ROOT, 'compute', 'providers', 'openai.json'), 'utf8'))
+    const specs = JSON.parse(readFileSync(join(ROOT, 'compute', 'model-specs', 'openai.json'), 'utf8')).specs
+    for (const id of ['gpt-image-2.5-sunburst', 'gpt-image-2.5-flare']) {
+      const model = provider.models.find((item) => item.modelName === id)
+      const spec = specs.find((item) => item.id === id)
+      assert.ok(model, `OpenAI Provider 缺少 ${id}`)
+      assert.ok(spec, `model-specs 缺少 ${id}`)
+      assert.deepEqual(model.serviceType, ['image_gen'])
+      assert.deepEqual(spec.match.exact, [id])
+      assert.equal(model.inputPrice, 5)
+      assert.equal(model.extra.imageInputPrice, 8)
+      assert.equal(model.outputPrice, 30)
+    }
+    const older = specs.find((item) => item.id === 'gpt-image-2')
+    assert.deepEqual(older.match.exact, ['gpt-image-2'])
+    assert.equal('patterns' in older.match, false)
   })
 
   it('Qwen3.8 Flash 应提供完整的多模态推理规格', () => {
@@ -618,7 +700,8 @@ describe('真实数据全量校验', () => {
     assert.equal('patterns' in deepseekFlash.match, false)
     assert.equal('patterns' in deepseekFlash0731.match, false)
     assert.equal(qwenBase.spec.contextWindow, qwenPreview.spec.contextWindow)
-    assert.equal(qwenBase.spec.maxOutputTokens, qwenPreview.spec.maxOutputTokens)
+    assert.equal(qwenBase.spec.maxOutputTokens, 131072)
+    assert.equal(qwenPreview.spec.maxOutputTokens, 65536)
     assert.equal(deepseekBase.spec.contextWindow, deepseek0813.spec.contextWindow)
     assert.equal(deepseekBase.spec.maxOutputTokens, deepseek0813.spec.maxOutputTokens)
     assert.equal(deepseekFlash.spec.contextWindow, deepseekFlash0731.spec.contextWindow)
@@ -632,16 +715,16 @@ describe('真实数据全量校验', () => {
     // 两处漏写都会回退成 budget_tokens（desirecore#2940）。Opus 4.6 / Sonnet 4.6 仍接受
     // budget_tokens（仅弃用），不在强制范围内。新代际若同样拒绝 budget_tokens，先扩展这里的正则。
     const adaptiveGeneration = /^claude-(?:fable|mythos)(?:$|-)|^claude-(?:opus|sonnet)-(?:[5-9]|[1-9]\d)(?:$|-)|^claude-opus-4-[78](?:$|-)/
-    const thinkingOnlyGeneration = /^claude-(?:fable|mythos)(?:$|-)/
+    const thinkingOnlyGeneration = /^claude-(?:fable|mythos)(?:$|-)|^claude-opus-5-5(?:$|-)/
     // 与客户端匹配器同口径：小写、去 vendor 前缀、统一分隔符
     const normalizeId = (id) => id.toLowerCase().trim().split('/').at(-1).replace(/[._:\s]+/g, '-')
     const specsDir = join(ROOT, 'compute', 'model-specs')
     const allSpecs = JSON.parse(readFileSync(join(specsDir, '_index.json'), 'utf8')).order
       .flatMap((name) => JSON.parse(readFileSync(join(specsDir, `${name}.json`), 'utf8')).specs)
 
-    it('规格按代际声明 adaptiveThinking，只有 Fable/Mythos 声明思考恒开', () => {
+    it('规格按代际声明 adaptiveThinking，并标记始终开启思考的模型', () => {
       const adaptiveSpecIds = allSpecs.map((item) => item.id).filter((id) => adaptiveGeneration.test(normalizeId(id)))
-      for (const id of ['claude-fable-5-1', 'claude-opus-5', 'claude-opus-4-8', 'claude-opus-4-7', 'claude-sonnet-5']) {
+      for (const id of ['claude-fable-5-1', 'claude-opus-5-5', 'claude-opus-5', 'claude-opus-4-8', 'claude-opus-4-7', 'claude-sonnet-5']) {
         assert.ok(adaptiveSpecIds.includes(id), `model-specs 缺少 ${id}`)
       }
       for (const modelSpec of allSpecs) {
@@ -715,10 +798,10 @@ describe('真实数据全量校验', () => {
     // 只做单向断言（已知拒绝的代际必须声明），新代际按官方文档补声明即可，不维护反向代际表。
     // 订阅（claude-oauth）请求由 Claude CLI 自建，客户端 compat 层对这两类参数显式 fail closed，不依赖声明。
     const samplingRemoved = /^claude-(?:fable|mythos)-|^claude-(?:opus|sonnet)-5(?:$|-)|^claude-opus-4-[78](?:$|-)/
-    const forcedToolChoiceRemoved = /^claude-(?:fable|mythos)-5-1(?:$|-)/
+    const forcedToolChoiceRemoved = /^claude-(?:fable|mythos)-5-1(?:$|-)|^claude-opus-5-5(?:$|-)/
 
     const specFile = JSON.parse(readFileSync(join(ROOT, 'compute', 'model-specs', 'anthropic.json'), 'utf8'))
-    for (const id of ['claude-fable-5-1', 'claude-opus-5', 'claude-opus-4-8', 'claude-opus-4-7', 'claude-sonnet-5']) {
+    for (const id of ['claude-fable-5-1', 'claude-opus-5-5', 'claude-opus-5', 'claude-opus-4-8', 'claude-opus-4-7', 'claude-sonnet-5']) {
       assert.ok(specFile.specs.some((item) => item.id === id), `model-specs 缺少 ${id}`)
     }
     for (const modelSpec of specFile.specs) {

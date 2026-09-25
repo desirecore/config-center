@@ -15,6 +15,7 @@
     "reasoning"
   ],
   "tombstones": [
+    "qwen3.8-max-preview",
     "qwen3.5-plus",
     "qwen3-coder-plus"
   ],
@@ -27,16 +28,16 @@
   },
   "models": [
     {
-      "modelName": "qwen3.8-max-preview",
-      "displayName": "Qwen3.8 Max Preview (Token Plan)",
+      "modelName": "qwen3.8-max",
+      "displayName": "Qwen3.8 Max (Token Plan)",
       "serviceType": [
         "chat",
         "reasoning",
         "vision"
       ],
-      "description": "百炼 Token Plan，通义千问 3.8 Max 预览版，支持文本与视觉输入，始终开启深度思考",
-      "contextWindow": 983616,
-      "maxOutputTokens": 65536,
+      "description": "百炼 Token Plan，通义千问 3.8 Max 正式版，支持文本、图像和视频输入",
+      "contextWindow": 1000000,
+      "maxOutputTokens": 131072,
       "capabilities": [
         "chat",
         "reasoning",
@@ -50,12 +51,55 @@
       "defaultTemperature": 0.6,
       "extra": {
         "reasoning": {
-          "supportedEfforts": ["low", "high", "xhigh"],
+          "supportedEfforts": [
+            "low",
+            "medium",
+            "xhigh"
+          ],
           "defaultEffort": "xhigh"
         },
         "supportsThinking": true,
         "thinkingDefault": true,
-        "thinkingOnly": true,
+        "thinkingMaxTokens": 262144,
+        "preserveThinkingDefault": true,
+        "supportsParallelToolCalls": false
+      },
+      "source": "preset"
+    },
+    {
+      "modelName": "qwen3.8-flash",
+      "displayName": "Qwen3.8 Flash (Token Plan)",
+      "serviceType": [
+        "chat",
+        "reasoning",
+        "vision"
+      ],
+      "description": "百炼 Token Plan，通义千问 3.8 Flash 正式版，高速多模态推理",
+      "contextWindow": 1000000,
+      "maxOutputTokens": 131072,
+      "capabilities": [
+        "chat",
+        "reasoning",
+        "deep_thinking",
+        "code",
+        "vision",
+        "tool_use",
+        "agent",
+        "long_context",
+        "fast"
+      ],
+      "defaultTemperature": 0.6,
+      "extra": {
+        "reasoning": {
+          "supportedEfforts": [
+            "low",
+            "medium",
+            "xhigh"
+          ],
+          "defaultEffort": "xhigh"
+        },
+        "supportsThinking": true,
+        "thinkingDefault": true,
         "thinkingMaxTokens": 262144,
         "preserveThinkingDefault": true,
         "supportsParallelToolCalls": false

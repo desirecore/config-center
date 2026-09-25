@@ -2,6 +2,144 @@
   "description": "Google Gemini 系列模型规格。参数来源：config-center compute/providers/google.json。",
   "specs": [
     {
+      "id": "gemini-3.8-flash",
+      "displayName": "Gemini 3.8 Flash",
+      "family": "gemini-3.8-flash",
+      "match": {
+        "exact": [
+          "gemini-3.8-flash"
+        ]
+      },
+      "spec": {
+        "contextWindow": 1048576,
+        "maxOutputTokens": 65536,
+        "capabilities": [
+          "chat",
+          "reasoning",
+          "code",
+          "vision",
+          "video_understanding",
+          "audio_understanding",
+          "ultra_long_context",
+          "tool_use",
+          "fast"
+        ],
+        "serviceType": [
+          "chat"
+        ],
+        "defaultTemperature": 1,
+        "supportsReasoning": true,
+        "description": "Gemini 3.8 Flash，稳定版，支持多模态输入和 1M 上下文"
+      },
+      "routing": {
+        "tier": "balanced",
+        "routingPriority": 10,
+        "eligibleForAgent": true,
+        "defaultReference": false,
+        "reasoning": {
+          "supportedModes": [
+            "auto",
+            "low",
+            "medium",
+            "high"
+          ],
+          "defaultMode": "medium"
+        }
+      }
+    },
+    {
+      "id": "gemini-3.7-flash",
+      "displayName": "Gemini 3.7 Flash",
+      "family": "gemini-3.7-flash",
+      "match": {
+        "exact": [
+          "gemini-3.7-flash"
+        ]
+      },
+      "spec": {
+        "contextWindow": 1048576,
+        "maxOutputTokens": 65536,
+        "capabilities": [
+          "chat",
+          "reasoning",
+          "code",
+          "vision",
+          "video_understanding",
+          "audio_understanding",
+          "ultra_long_context",
+          "tool_use",
+          "fast"
+        ],
+        "serviceType": [
+          "chat"
+        ],
+        "defaultTemperature": 1,
+        "supportsReasoning": true,
+        "description": "Gemini 3.7 Flash，稳定版，支持多模态输入和 1M 上下文"
+      },
+      "routing": {
+        "tier": "balanced",
+        "routingPriority": 20,
+        "eligibleForAgent": true,
+        "defaultReference": false,
+        "reasoning": {
+          "supportedModes": [
+            "auto",
+            "low",
+            "medium",
+            "high"
+          ],
+          "defaultMode": "medium"
+        }
+      }
+    },
+    {
+      "id": "gemini-3.5-flash-lite",
+      "displayName": "Gemini 3.5 Flash-Lite",
+      "family": "gemini-3.5-flash-lite",
+      "match": {
+        "exact": [
+          "gemini-3.5-flash-lite"
+        ]
+      },
+      "spec": {
+        "contextWindow": 1048576,
+        "maxOutputTokens": 65536,
+        "capabilities": [
+          "chat",
+          "reasoning",
+          "code",
+          "vision",
+          "video_understanding",
+          "audio_understanding",
+          "ultra_long_context",
+          "tool_use",
+          "fast"
+        ],
+        "serviceType": [
+          "chat"
+        ],
+        "defaultTemperature": 1,
+        "supportsReasoning": true,
+        "description": "Gemini 3.5 Flash-Lite，稳定版，支持多模态输入和 1M 上下文"
+      },
+      "routing": {
+        "tier": "lightweight",
+        "routingPriority": 20,
+        "eligibleForAgent": true,
+        "defaultReference": false,
+        "reasoning": {
+          "supportedModes": [
+            "auto",
+            "low",
+            "medium",
+            "high"
+          ],
+          "defaultMode": "medium"
+        }
+      }
+    },
+    {
       "id": "gemini-3.1-flash-lite-image",
       "displayName": "Gemini 3.1 Flash Lite Image (Nano Banana 2 Lite)",
       "family": "gemini-3.1-flash-lite-image",
