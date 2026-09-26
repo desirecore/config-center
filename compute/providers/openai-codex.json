@@ -45,7 +45,6 @@
       "extra": {
         "reasoning": {
           "supportedEfforts": [
-            "none",
             "low",
             "medium",
             "high",
@@ -78,7 +77,6 @@
       "extra": {
         "reasoning": {
           "supportedEfforts": [
-            "none",
             "low",
             "medium",
             "high",

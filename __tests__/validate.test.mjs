@@ -631,6 +631,18 @@ describe('真实数据全量校验', () => {
     }
   })
 
+  it('Codex 订阅接入面不声明 none 档：ChatGPT 后端不接受关闭思考', () => {
+    // OpenAI 下发给 Codex 的模型元数据（models_cache.json#supported_reasoning_levels）里，
+    // 该接入面没有任何模型支持 none。声明了 none，客户端会在 AI 审批等关闭思考的调用上发
+    // reasoning.effort=none，上游 400，审批拿不到建议即自动拒绝（2026-09-26 gpt-6-sol 真机复现）。
+    // 不声明时客户端对这类模型不发关闭参数，改用上游默认档位。
+    const codex = JSON.parse(readFileSync(join(ROOT, 'compute', 'providers', 'openai-codex.json'), 'utf8'))
+    for (const model of codex.models) {
+      const efforts = model.extra?.reasoning?.supportedEfforts ?? []
+      assert.equal(efforts.includes('none'), false, `${model.modelName} 不应在 Codex 订阅接入面声明 none`)
+    }
+  })
+
   it('GLM-5.3-FlashX 仅加入共享规格，避免假定中国区智谱 API 已提供该 ID', () => {
     const provider = JSON.parse(readFileSync(join(ROOT, 'compute', 'providers', 'zhipu.json'), 'utf8'))
     const specs = JSON.parse(readFileSync(join(ROOT, 'compute', 'model-specs', 'zhipu.json'), 'utf8')).specs
