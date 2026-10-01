@@ -105,7 +105,7 @@ describe('真实数据全量校验', () => {
         if (spec.routing) routed.push(spec)
       }
     }
-    assert.equal(routed.length, 58)
+    assert.equal(routed.length, 60)
     assert.equal(routed.every((spec) => spec.routing.reasoning.supportedModes.includes(spec.routing.reasoning.defaultMode)), true)
     assert.equal(routed.every((spec) => Array.isArray(spec.spec.capabilities)), true)
   })
@@ -154,9 +154,11 @@ describe('真实数据全量校验', () => {
       'claude-opus-5-5',
       'claude-fable-5-1',
       'claude-opus-5',
+      'claude-sonnet-5-5',
       'claude-sonnet-5',
     ])
     assert.deepEqual(enabled(openai), [
+      'gpt-6.1-sol',
       'gpt-6-sol',
       'gpt-6-luna',
       'gpt-6-astra',
@@ -584,6 +586,8 @@ describe('真实数据全量校验', () => {
 
   it('新增主流模型应在官方 Provider 与共享规格中保持 ID、窗口和推理配置一致', () => {
     const cases = [
+      ['openai', 'openai', 'gpt-6.1-sol', 1050000, 128000, 2, 10, 'medium'],
+      ['anthropic', 'anthropic', 'claude-sonnet-5-5', 1000000, 128000, 2, 10, 'high'],
       ['openai', 'openai', 'gpt-6-sol', 1050000, 128000, 2, 10, 'medium'],
       ['openai', 'openai', 'gpt-6-luna', 1050000, 128000, 0.1, 0.5, 'medium'],
       ['anthropic', 'anthropic', 'claude-opus-5-5', 1000000, 128000, 4, 20, 'medium'],
@@ -623,12 +627,41 @@ describe('真实数据全量校验', () => {
     assert.deepEqual(xai.models.find((item) => item.modelName === 'grok-4.7').extra.reasoning.supportedEfforts, ['low', 'medium', 'high', 'xhigh'])
 
     const codex = JSON.parse(readFileSync(join(ROOT, 'compute', 'providers', 'openai-codex.json'), 'utf8'))
-    for (const id of ['gpt-6-sol', 'gpt-6-luna']) {
+    for (const id of ['gpt-6.1-sol', 'gpt-6-sol', 'gpt-6-luna']) {
       const model = codex.models.find((item) => item.modelName === id)
       assert.ok(model, `Codex 订阅 Provider 缺少 ${id}`)
       assert.equal(model.source, 'preset')
       assert.equal(model.extra.reasoning.defaultEffort, 'medium')
     }
+  })
+
+  it('GPT-6.1 与 Sonnet 5.5 的协议约束在 API、订阅与共享规格中保持一致', () => {
+    const read = (dir, name) => JSON.parse(readFileSync(join(ROOT, 'compute', dir, `${name}.json`), 'utf8'))
+    const efforts = ['low', 'medium', 'high', 'xhigh', 'max']
+    for (const provider of ['openai', 'openai-codex']) {
+      const model = read('providers', provider).models.find((item) => item.modelName === 'gpt-6.1-sol')
+      assert.deepEqual(model.extra.reasoning.supportedEfforts, efforts)
+      if (provider === 'openai') {
+        assert.equal(model.extra.responsesOnly, true)
+        assert.equal(model.extra.cachedInputPrice, 0.1)
+      }
+    }
+    const gpt = read('model-specs', 'openai').specs.find((item) => item.id === 'gpt-6.1-sol')
+    assert.deepEqual(gpt.match.exact, ['gpt-6.1-sol'])
+    assert.deepEqual(gpt.routing.reasoning.supportedModes, ['auto', ...efforts])
+    for (const provider of ['anthropic', 'anthropic-claude']) {
+      const model = read('providers', provider).models.find((item) => item.modelName === 'claude-sonnet-5-5')
+      assert.equal(model.extra.reasoning.defaultEffort, 'high')
+      assert.equal(model.extra.forcedToolChoiceUnsupported, true)
+      assert.equal(model.extra.samplingParametersDeprecated, true)
+      assert.equal(model.extra.thinkingOnly, undefined)
+      if (provider === 'anthropic') assert.equal(model.extra.promptCacheMinTokens, 512)
+    }
+    const sonnet = read('model-specs', 'anthropic').specs.find((item) => item.id === 'claude-sonnet-5-5')
+    assert.deepEqual(sonnet.match.exact, ['claude-sonnet-5-5'])
+    assert.equal(sonnet.spec.extra.forcedToolChoiceUnsupported, true)
+    assert.equal(sonnet.spec.extra.thinkingOnly, undefined)
+    assert.equal(sonnet.routing.reasoning.defaultMode, 'high')
   })
 
   it('Codex 订阅接入面不声明 none 档：ChatGPT 后端不接受关闭思考', () => {
@@ -847,7 +880,7 @@ describe('真实数据全量校验', () => {
     // 只做单向断言（已知拒绝的代际必须声明），新代际按官方文档补声明即可，不维护反向代际表。
     // 订阅（claude-oauth）请求由 Claude CLI 自建，客户端 compat 层对这两类参数显式 fail closed，不依赖声明。
     const samplingRemoved = /^claude-(?:fable|mythos)-|^claude-(?:opus|sonnet)-5(?:$|-)|^claude-opus-4-[78](?:$|-)/
-    const forcedToolChoiceRemoved = /^claude-(?:fable|mythos)-5-1(?:$|-)|^claude-opus-5-5(?:$|-)/
+    const forcedToolChoiceRemoved = /^claude-(?:fable|mythos)-5-1(?:$|-)|^claude-(?:opus|sonnet)-5-5(?:$|-)/
 
     const specFile = JSON.parse(readFileSync(join(ROOT, 'compute', 'model-specs', 'anthropic.json'), 'utf8'))
     for (const id of ['claude-fable-5-1', 'claude-opus-5-5', 'claude-opus-5', 'claude-opus-4-8', 'claude-opus-4-7', 'claude-sonnet-5']) {

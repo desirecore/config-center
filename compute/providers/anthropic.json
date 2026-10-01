@@ -187,6 +187,65 @@
       }
     },
     {
+      "modelName": "claude-sonnet-5-5",
+      "displayName": "Claude Sonnet 5.5",
+      "serviceType": [
+        "chat",
+        "computer_use"
+      ],
+      "description": "Claude Sonnet 5.5，速度与智能平衡，1M 上下文，默认 high effort，自适应思考",
+      "contextWindow": 1000000,
+      "maxOutputTokens": 128000,
+      "capabilities": [
+        "chat",
+        "reasoning",
+        "code",
+        "vision",
+        "tool_use",
+        "computer_use",
+        "agent",
+        "long_context"
+      ],
+      "inputPrice": 2,
+      "outputPrice": 10,
+      "extra": {
+        "thinkingRoundTrip": {
+          "enabled": true,
+          "protocol": "anthropic-messages",
+          "allowEmptySignature": false,
+          "scope": "active-tool-turn"
+        },
+        "thinkingToolTurnValidation": "accepts-thinkless",
+        "serverSideWebSearch": {
+          "enabled": true,
+          "dialect": "anthropic-messages",
+          "fallbackPriority": 3,
+          "searchRequestPriceUsd": 0.01,
+          "toolType": "web_search_20260318"
+        },
+        "cachePricing": {
+          "write5m": 2.5,
+          "write1h": 4,
+          "read": 0.2
+        },
+        "adaptiveThinking": true,
+        "reasoning": {
+          "supportedEfforts": [
+            "low",
+            "medium",
+            "high",
+            "xhigh",
+            "max"
+          ],
+          "defaultEffort": "high"
+        },
+        "defaultEffort": "xhigh",
+        "samplingParametersDeprecated": true,
+        "forcedToolChoiceUnsupported": true,
+        "promptCacheMinTokens": 512
+      }
+    },
+    {
       "modelName": "claude-sonnet-5",
       "displayName": "Claude Sonnet 5",
       "serviceType": [
