@@ -31,7 +31,8 @@
           "thinkingOnly": true,
           "samplingParametersDeprecated": true,
           "forcedToolChoiceUnsupported": true
-        }
+        },
+        "releasedAt": "2026-09-22"
       },
       "routing": {
         "tier": "flagship",
@@ -233,6 +234,57 @@
           "chat"
         ],
         "supportsReasoning": true
+      }
+    },
+    {
+      "id": "claude-sonnet-5-5",
+      "displayName": "Claude Sonnet 5.5",
+      "family": "claude-sonnet-5-5",
+      "match": {
+        "exact": [
+          "claude-sonnet-5-5"
+        ]
+      },
+      "spec": {
+        "contextWindow": 1000000,
+        "maxOutputTokens": 128000,
+        "capabilities": [
+          "chat",
+          "reasoning",
+          "code",
+          "vision",
+          "tool_use",
+          "computer_use",
+          "long_context"
+        ],
+        "serviceType": [
+          "chat"
+        ],
+        "supportsReasoning": true,
+        "description": "Claude Sonnet 5.5，速度与智能平衡，默认 high effort，自适应思考",
+        "extra": {
+          "adaptiveThinking": true,
+          "samplingParametersDeprecated": true,
+          "forcedToolChoiceUnsupported": true
+        },
+        "releasedAt": "2026-09-28"
+      },
+      "routing": {
+        "tier": "balanced",
+        "routingPriority": 18,
+        "eligibleForAgent": true,
+        "defaultReference": false,
+        "reasoning": {
+          "supportedModes": [
+            "auto",
+            "low",
+            "medium",
+            "high",
+            "xhigh",
+            "max"
+          ],
+          "defaultMode": "high"
+        }
       }
     },
     {
