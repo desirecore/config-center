@@ -25,6 +25,44 @@
   ],
   "models": [
     {
+      "modelName": "gpt-6.1-sol",
+      "displayName": "GPT-6.1 Sol",
+      "serviceType": [
+        "chat",
+        "responses"
+      ],
+      "contextWindow": 1050000,
+      "maxOutputTokens": 128000,
+      "capabilities": [
+        "chat",
+        "reasoning",
+        "code",
+        "vision",
+        "ultra_long_context",
+        "tool_use",
+        "agent"
+      ],
+      "description": "GPT-6.1 Sol，面向复杂编程、电脑使用和专业工作，1.05M 上下文；工具调用使用 Responses API",
+      "inputPrice": 2,
+      "outputPrice": 10,
+      "extra": {
+        "serverSideWebSearch": {
+          "enabled": true,
+          "dialect": "openai-responses",
+          "fallbackPriority": 2,
+          "searchRequestPriceUsd": 0.01,
+          "toolType": "web_search"
+        },
+        "cachedInputPrice": 0.1,
+        "reasoning": {
+          "supportedEfforts": ["low", "medium", "high", "xhigh", "max"],
+          "defaultEffort": "medium"
+        },
+        "pricingNotes": "Prices are per 1M tokens. Cache writes $2.50/M. Above 272K input tokens, input and cache rates are 2x and output rates are 1.5x for the full request. Fast mode is 2x; Batch and Flex are 50% lower. Tool calling requires Responses API; none/minimal reasoning are unsupported.",
+        "responsesOnly": true
+      }
+    },
+    {
       "modelName": "gpt-image-2.5-sunburst",
       "displayName": "GPT Image 2.5 Sunburst",
       "serviceType": [

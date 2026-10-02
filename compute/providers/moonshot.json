@@ -26,6 +26,44 @@
   ],
   "models": [
     {
+      "modelName": "kimi-k3",
+      "displayName": "Kimi K3",
+      "contextWindow": 1048576,
+      "maxOutputTokens": 1048576,
+      "capabilities": [
+        "chat",
+        "reasoning",
+        "code",
+        "tool_use",
+        "agent",
+        "long_context",
+        "vision",
+        "video_understanding"
+      ],
+      "serviceType": [
+        "reasoning"
+      ],
+      "description": "Kimi K3，1M 上下文，始终开启思考，low/high/max 三档（默认 max）；输出上限与输入共享窗口，默认 max_completion_tokens=131072",
+      "extra": {
+        "thinkingOnly": true,
+        "thinking": {
+          "default": "enabled",
+          "disableSupported": false,
+          "preserveReasoningContent": true
+        },
+        "reasoning": {
+          "supportedEfforts": [
+            "low",
+            "high",
+            "max"
+          ],
+          "defaultEffort": "max"
+        },
+        "pricingNotes": "国内官方价格表当前未返回模型单价；不将国际美元价格换算为国内人民币价格。",
+        "samplingParametersDeprecated": true
+      }
+    },
+    {
       "modelName": "kimi-k2.7-code",
       "displayName": "Kimi K2.7 Code",
       "serviceType": [

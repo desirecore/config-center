@@ -4,13 +4,12 @@
     {
       "id": "mistral-medium-3.5",
       "displayName": "Mistral Medium 3.5",
-      "family": "mistral-medium",
+      "family": "mistral-medium-3-5",
       "match": {
         "exact": [
-          "mistral-medium-3.5"
-        ],
-        "patterns": [
-          "mistral-medium-3.5*"
+          "mistral-medium-3-5",
+          "mistral-medium-3.5",
+          "mistral-medium-latest"
         ]
       },
       "spec": {
@@ -27,21 +26,21 @@
         ],
         "defaultTemperature": 1,
         "supportsReasoning": true,
-        "description": "Mistral Medium 3.5，128B 指令模型"
+        "description": "Mistral Medium 3.5，官方 API ID mistral-medium-3-5，256K 上下文"
       }
     },
     {
       "id": "mistral-large-latest",
       "displayName": "Mistral Large",
-      "family": "mistral-large",
+      "family": "mistral-large-2512",
       "match": {
-        "patterns": [
-          "mistral-large*"
+        "exact": [
+          "mistral-large-latest",
+          "mistral-large-2512"
         ]
       },
       "spec": {
         "contextWindow": 256000,
-        "maxOutputTokens": 262144,
         "capabilities": [
           "chat",
           "reasoning",
@@ -58,16 +57,16 @@
     },
     {
       "id": "mistral-small-latest",
-      "displayName": "Mistral Small",
-      "family": "mistral-small",
+      "displayName": "Mistral Small 4",
+      "family": "mistral-small-2603",
       "match": {
-        "patterns": [
-          "mistral-small*"
+        "exact": [
+          "mistral-small-latest",
+          "mistral-small-2603"
         ]
       },
       "spec": {
-        "contextWindow": 128000,
-        "maxOutputTokens": 8192,
+        "contextWindow": 262144,
         "capabilities": [
           "chat",
           "code",

@@ -16,6 +16,30 @@
   ],
   "models": [
     {
+      "modelName": "gemini-embedding-2",
+      "displayName": "Gemini Embedding 2",
+      "contextWindow": 8192,
+      "capabilities": [
+        "text_embedding",
+        "vision",
+        "audio_understanding",
+        "video_understanding",
+        "multilingual"
+      ],
+      "serviceType": [
+        "embedding"
+      ],
+      "description": "Gemini Embedding 2，原生多模态嵌入，8192 token 输入，共享文本/图像/音视频向量空间",
+      "extra": {
+        "dimensions": [
+          768,
+          1536,
+          3072
+        ],
+        "defaultDimension": 3072
+      }
+    },
+    {
       "modelName": "gemini-3.8-flash",
       "displayName": "Gemini 3.8 Flash",
       "serviceType": [

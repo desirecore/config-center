@@ -101,7 +101,7 @@
             "high",
             "max"
           ],
-          "defaultMode": "high"
+          "defaultMode": "max"
         }
       }
     },
@@ -157,7 +157,7 @@
             "high",
             "max"
           ],
-          "defaultMode": "high"
+          "defaultMode": "max"
         }
       }
     },

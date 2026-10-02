@@ -105,7 +105,7 @@ describe('真实数据全量校验', () => {
         if (spec.routing) routed.push(spec)
       }
     }
-    assert.equal(routed.length, 58)
+    assert.equal(routed.length, 60)
     assert.equal(routed.every((spec) => spec.routing.reasoning.supportedModes.includes(spec.routing.reasoning.defaultMode)), true)
     assert.equal(routed.every((spec) => Array.isArray(spec.spec.capabilities)), true)
   })
@@ -154,9 +154,11 @@ describe('真实数据全量校验', () => {
       'claude-opus-5-5',
       'claude-fable-5-1',
       'claude-opus-5',
+      'claude-sonnet-5-5',
       'claude-sonnet-5',
     ])
     assert.deepEqual(enabled(openai), [
+      'gpt-6.1-sol',
       'gpt-6-sol',
       'gpt-6-luna',
       'gpt-6-astra',
@@ -249,7 +251,7 @@ describe('真实数据全量校验', () => {
       assert.ok(model.serviceType.includes('reasoning'))
       assert.equal(model.extra.supportsThinking, true)
       assert.equal(model.extra.thinkingDefault, true)
-      assert.deepEqual(model.extra.reasoningEffort, ['high', 'max'])
+      assert.deepEqual(model.extra.reasoning.supportedEfforts, ['low', 'high', 'max'])
 
       const specs = specFile.specs.filter((item) => item.id === modelId)
       assert.equal(specs.length, 1, `model-specs 中 ${modelId} 应且仅应有一条规格`)
@@ -262,7 +264,7 @@ describe('真实数据全量校验', () => {
         assert.ok(spec.serviceType.includes('reasoning'))
         assert.equal(spec.extra.supportsThinking, true)
         assert.equal(spec.extra.thinkingDefault, true)
-        assert.deepEqual(spec.extra.reasoningEffort, ['high', 'max'])
+        assert.equal('reasoning' in spec.extra, false)
       }
     }
   })
@@ -318,7 +320,7 @@ describe('真实数据全量校验', () => {
     assert.equal(model.extra.cacheHitPrice, 0.02)
     assert.equal(model.extra.concurrencyLimit, 2500)
     assert.deepEqual(model.extra.reasoning, {
-      supportedEfforts: ['high', 'max'],
+      supportedEfforts: ['low', 'high', 'max'],
       defaultEffort: 'high',
     })
     assert.deepEqual(model.extra.pricingTiers, [
@@ -327,7 +329,7 @@ describe('真实数据全量校验', () => {
     ])
 
     assert.ok(modelSpec, `model-specs 缺少 ${modelId}`)
-    assert.deepEqual(modelSpec.match.exact, [modelId, aliasId])
+    assert.deepEqual(modelSpec.match.exact, [modelId, aliasId, 'deepseek/deepseek-v4.1-flash'])
     assert.equal(
       specFile.specs.filter((item) => item.match?.exact?.includes(aliasId)).length,
       1,
@@ -338,7 +340,7 @@ describe('真实数据全量校验', () => {
     assert.ok(modelSpec.spec.capabilities.includes('vision'))
     assert.deepEqual(modelSpec.spec.serviceType, ['chat', 'reasoning', 'vision'])
     assert.equal(modelSpec.spec.supportsReasoning, true)
-    assert.deepEqual(modelSpec.routing.reasoning.supportedModes, ['auto', 'high', 'max'])
+    assert.deepEqual(modelSpec.routing.reasoning.supportedModes, ['auto', 'low', 'high', 'max'])
   })
 
   it('MiMo V2.5 ASR 应有独立精确规格，避免回落到 MiMo V2.5 family', () => {
@@ -584,6 +586,8 @@ describe('真实数据全量校验', () => {
 
   it('新增主流模型应在官方 Provider 与共享规格中保持 ID、窗口和推理配置一致', () => {
     const cases = [
+      ['openai', 'openai', 'gpt-6.1-sol', 1050000, 128000, 2, 10, 'medium'],
+      ['anthropic', 'anthropic', 'claude-sonnet-5-5', 1000000, 128000, 2, 10, 'high'],
       ['openai', 'openai', 'gpt-6-sol', 1050000, 128000, 2, 10, 'medium'],
       ['openai', 'openai', 'gpt-6-luna', 1050000, 128000, 0.1, 0.5, 'medium'],
       ['anthropic', 'anthropic', 'claude-opus-5-5', 1000000, 128000, 4, 20, 'medium'],
@@ -623,12 +627,41 @@ describe('真实数据全量校验', () => {
     assert.deepEqual(xai.models.find((item) => item.modelName === 'grok-4.7').extra.reasoning.supportedEfforts, ['low', 'medium', 'high', 'xhigh'])
 
     const codex = JSON.parse(readFileSync(join(ROOT, 'compute', 'providers', 'openai-codex.json'), 'utf8'))
-    for (const id of ['gpt-6-sol', 'gpt-6-luna']) {
+    for (const id of ['gpt-6.1-sol', 'gpt-6-sol', 'gpt-6-luna']) {
       const model = codex.models.find((item) => item.modelName === id)
       assert.ok(model, `Codex 订阅 Provider 缺少 ${id}`)
       assert.equal(model.source, 'preset')
       assert.equal(model.extra.reasoning.defaultEffort, 'medium')
     }
+  })
+
+  it('GPT-6.1 与 Sonnet 5.5 的协议约束在 API、订阅与共享规格中保持一致', () => {
+    const read = (dir, name) => JSON.parse(readFileSync(join(ROOT, 'compute', dir, `${name}.json`), 'utf8'))
+    const efforts = ['low', 'medium', 'high', 'xhigh', 'max']
+    for (const provider of ['openai', 'openai-codex']) {
+      const model = read('providers', provider).models.find((item) => item.modelName === 'gpt-6.1-sol')
+      assert.deepEqual(model.extra.reasoning.supportedEfforts, efforts)
+      if (provider === 'openai') {
+        assert.equal(model.extra.responsesOnly, true)
+        assert.equal(model.extra.cachedInputPrice, 0.1)
+      }
+    }
+    const gpt = read('model-specs', 'openai').specs.find((item) => item.id === 'gpt-6.1-sol')
+    assert.deepEqual(gpt.match.exact, ['gpt-6.1-sol', 'openai/gpt-6.1-sol'])
+    assert.deepEqual(gpt.routing.reasoning.supportedModes, ['auto', ...efforts])
+    for (const provider of ['anthropic', 'anthropic-claude']) {
+      const model = read('providers', provider).models.find((item) => item.modelName === 'claude-sonnet-5-5')
+      assert.equal(model.extra.reasoning.defaultEffort, 'high')
+      assert.equal(model.extra.forcedToolChoiceUnsupported, true)
+      assert.equal(model.extra.samplingParametersDeprecated, true)
+      assert.equal(model.extra.thinkingOnly, undefined)
+      if (provider === 'anthropic') assert.equal(model.extra.promptCacheMinTokens, 512)
+    }
+    const sonnet = read('model-specs', 'anthropic').specs.find((item) => item.id === 'claude-sonnet-5-5')
+    assert.deepEqual(sonnet.match.exact, ['claude-sonnet-5-5', 'anthropic/claude-sonnet-5.5'])
+    assert.equal(sonnet.spec.extra.forcedToolChoiceUnsupported, true)
+    assert.equal(sonnet.spec.extra.thinkingOnly, undefined)
+    assert.equal(sonnet.routing.reasoning.defaultMode, 'high')
   })
 
   it('Codex 订阅接入面不声明 none 档：ChatGPT 后端不接受关闭思考', () => {
@@ -643,10 +676,12 @@ describe('真实数据全量校验', () => {
     }
   })
 
-  it('GLM-5.3-FlashX 仅加入共享规格，避免假定中国区智谱 API 已提供该 ID', () => {
+  it('GLM-5.3-FlashX 官方中国区已开放 API，但套餐仍不提供', () => {
     const provider = JSON.parse(readFileSync(join(ROOT, 'compute', 'providers', 'zhipu.json'), 'utf8'))
     const specs = JSON.parse(readFileSync(join(ROOT, 'compute', 'model-specs', 'zhipu.json'), 'utf8')).specs
-    assert.equal(provider.models.some((item) => item.modelName === 'glm-5.3-flashx'), false)
+    assert.equal(provider.models.some((item) => item.modelName === 'glm-5.3-flashx'), true)
+    const plan = JSON.parse(readFileSync(join(ROOT, 'compute', 'coding-plans', 'zhipu-coding.json'), 'utf8'))
+    assert.equal(plan.models.some((item) => item.modelName === 'glm-5.3-flashx'), false)
     const spec = specs.find((item) => item.id === 'glm-5.3-flashx')
     assert.ok(spec)
     assert.deepEqual(spec.match.exact, ['glm-5.3-flashx', 'z-ai/glm-5.3-flashx'])
@@ -763,7 +798,7 @@ describe('真实数据全量校验', () => {
     // Anthropic Messages 中转只能从 ModelSpec 补全拿到声明，预置 Provider 条目不经补全，
     // 两处漏写都会回退成 budget_tokens（desirecore#2940）。Opus 4.6 / Sonnet 4.6 仍接受
     // budget_tokens（仅弃用），不在强制范围内。新代际若同样拒绝 budget_tokens，先扩展这里的正则。
-    const adaptiveGeneration = /^claude-(?:fable|mythos)(?:$|-)|^claude-(?:opus|sonnet)-(?:[5-9]|[1-9]\d)(?:$|-)|^claude-opus-4-[78](?:$|-)/
+    const adaptiveGeneration = /^claude-(?:fable|mythos)(?:$|-)|^claude-(?:opus|sonnet)-(?:[5-9]|[1-9]\d)(?:$|-)|^claude-opus-4-[78](?:$|-)|^minimax-m3-1-flash-preview$/
     const thinkingOnlyGeneration = /^claude-(?:fable|mythos)(?:$|-)|^claude-opus-5-5(?:$|-)/
     // 与客户端匹配器同口径：小写、去 vendor 前缀、统一分隔符
     const normalizeId = (id) => id.toLowerCase().trim().split('/').at(-1).replace(/[._:\s]+/g, '-')
@@ -847,7 +882,7 @@ describe('真实数据全量校验', () => {
     // 只做单向断言（已知拒绝的代际必须声明），新代际按官方文档补声明即可，不维护反向代际表。
     // 订阅（claude-oauth）请求由 Claude CLI 自建，客户端 compat 层对这两类参数显式 fail closed，不依赖声明。
     const samplingRemoved = /^claude-(?:fable|mythos)-|^claude-(?:opus|sonnet)-5(?:$|-)|^claude-opus-4-[78](?:$|-)/
-    const forcedToolChoiceRemoved = /^claude-(?:fable|mythos)-5-1(?:$|-)|^claude-opus-5-5(?:$|-)/
+    const forcedToolChoiceRemoved = /^claude-(?:fable|mythos)-5-1(?:$|-)|^claude-(?:opus|sonnet)-5-5(?:$|-)/
 
     const specFile = JSON.parse(readFileSync(join(ROOT, 'compute', 'model-specs', 'anthropic.json'), 'utf8'))
     for (const id of ['claude-fable-5-1', 'claude-opus-5-5', 'claude-opus-5', 'claude-opus-4-8', 'claude-opus-4-7', 'claude-sonnet-5']) {
@@ -882,6 +917,80 @@ describe('真实数据全量校验', () => {
         }
       }
     }
+  })
+
+  it('全供应商更新保持官方接入边界、强制推理合同与非 token 计价', () => {
+    const read = (folder, name) => JSON.parse(readFileSync(join(ROOT, 'compute', folder, `${name}.json`), 'utf8'))
+    const findModel = (folder, name, id) => {
+      const row = read(folder, name).models.find((item) => item.modelName === id)
+      assert.ok(row, `${name} 缺少 ${id}`)
+      return row
+    }
+    const glm = findModel('providers', 'zhipu', 'glm-5.3')
+    assert.deepEqual(glm.extra.reasoning, { supportedEfforts: ['low', 'high', 'max'], defaultEffort: 'max' })
+    assert.equal(glm.inputPrice, 8)
+    assert.equal(glm.outputPrice, 28)
+    const flashx = findModel('providers', 'zhipu', 'glm-5.3-flashx')
+    assert.equal(flashx.inputPrice, 2)
+    assert.equal(flashx.outputPrice, 7)
+    const kimi = findModel('providers', 'moonshot', 'kimi-k3')
+    const kimiSpec = read('model-specs', 'moonshot').specs.find((item) => item.id === 'kimi-k3')
+    assert.equal(kimi.extra.thinking.disableSupported, false)
+    assert.equal(kimi.extra.samplingParametersDeprecated, true)
+    assert.equal(kimiSpec.spec.extra.samplingParametersDeprecated, true)
+    assert.equal(kimi.extra.reasoning.defaultEffort, 'max')
+    assert.deepEqual(kimiSpec.routing.reasoning.supportedModes, ['auto', 'low', 'high', 'max'])
+    assert.equal(kimi.maxOutputTokens, 1048576)
+    assert.equal(kimi.inputPrice, undefined, '不把国际美元价混写到国内人民币 Provider')
+    const previewId = 'MiniMax-M3.1-Flash-Preview'
+    const preview = findModel('coding-plans', 'minimax-coding', previewId)
+    assert.equal(preview.extra.thinkingOnly, true)
+    assert.equal(preview.extra.reasoning.defaultEffort, 'max')
+    assert.equal(read('providers', 'minimax').models.some((item) => item.modelName === previewId), false)
+    const embed = findModel('providers', 'cohere', 'embed-v5.0-pro')
+    assert.deepEqual(embed.extra.dimensions, [256, 512, 768, 1024, 1536, 2048])
+    assert.equal(embed.inputPrice, undefined)
+    assert.equal(read('providers', 'cohere').models.some((item) => item.modelName === 'rerank-v4.0-fast'), false, '不向 OpenAI 兼容端点声明原生 Rerank 接入')
+    assert.ok(read('model-specs', 'cohere').specs.some((item) => item.id === 'rerank-v4.0-fast'))
+    const command = findModel('providers', 'cohere', 'command-a-plus-05-2026')
+    assert.deepEqual(command.extra.reasoning.supportedEfforts, ['none', 'high'])
+    assert.equal(embed.capabilities.includes('vision'), false, '兼容 Embeddings 接入仅接受文本')
+    const small = findModel('providers', 'mistral', 'mistral-small-latest')
+    assert.equal(small.contextWindow, 262144)
+    assert.equal(small.inputPrice, 0.15)
+    assert.equal(small.outputPrice, 0.6)
+    const omni = findModel('providers', 'dashscope', 'qwen3.8-omni-flash')
+    assert.equal(omni.inputPrice, 0.8)
+    assert.equal(omni.outputPrice, 2.7)
+    assert.deepEqual(omni.serviceType, ['chat', 'vision'])
+    assert.equal(omni.capabilities.includes('tts'), false, 'Omni Flash 当前只输出文本')
+    assert.equal(findModel('providers', 'google', 'gemini-embedding-2').contextWindow, 8192)
+    assert.ok(findModel('providers', 'kling', 'kling-v3'))
+    assert.equal(read('providers', 'kling').models.some((item) => item.modelName === 'kling-3.0-turbo'), false)
+    assert.equal(read('providers', 'tencent').models.some((item) => item.modelName === 'hy4-preview'), false)
+    for (const id of ['deepseek-v4.1-flash', 'glm-5.3', 'qwen-image-3.0-pro', 'happyhorse-1.1-t2v']) {
+      assert.ok(findModel('coding-plans', 'dashscope-token-plan', id))
+    }
+  })
+
+  it('新版 Mistral 与 Command A 规格的 family 不误吞其他代际或子型号', () => {
+    const readSpecs = (name) => JSON.parse(readFileSync(join(ROOT, 'compute', 'model-specs', `${name}.json`), 'utf8')).specs
+    const normalize = (id) => id.toLowerCase().split('/').at(-1).replace(/[._]/g, '-')
+    const keys = (row) => [row.id, row.family, ...(row.match?.exact ?? []), ...(row.match?.patterns ?? []).map((p) => p.split('*')[0])].filter(Boolean).map(normalize)
+    for (const [id, forbidden] of [
+      ['mistral-medium-3.5', ['mistral-medium-2508', 'mistral-medium-2312']],
+      ['mistral-small-latest', ['mistral-small-2506', 'mistral-small-2402']],
+      ['mistral-large-latest', ['mistral-large-2411', 'mistral-large-2407']],
+    ]) {
+      const row = readSpecs('mistral').find((item) => item.id === id)
+      for (const oldId of forbidden) {
+        assert.equal(keys(row).some((key) => normalize(oldId) === key || normalize(oldId).startsWith(key + '-')), false, `${id} 的匹配键会误吞 ${oldId}`)
+      }
+    }
+    const command = readSpecs('cohere').find((item) => item.id === 'command-a-03-2025')
+    assert.equal(normalize(command.family) === 'command-a' || 'command-a-plus'.startsWith(normalize(command.family) + '-'), false)
+    assert.equal((command.match.patterns ?? []).length, 0)
+    assert.equal((command.match.exact ?? []).map(normalize).includes('command-a-plus'), false)
   })
 
   it('所有 Provider 应按供应商归属计价，模型来源不覆盖供应商币种', () => {

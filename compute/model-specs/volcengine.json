@@ -2,6 +2,66 @@
   "description": "火山引擎豆包系列模型规格。参数来源：config-center compute/providers/volcengine.json。包含豆包 Seed 系列对话、DeepSeek 托管版、Embedding、语音克隆、实时语音、同传和翻译服务。doubao-seed-1.6-thinking 为推理模型。",
   "specs": [
     {
+      "id": "doubao-seed-evolving",
+      "displayName": "Doubao Seed Evolving",
+      "family": "doubao-seed-evolving",
+      "match": {
+        "exact": [
+          "doubao-seed-evolving"
+        ]
+      },
+      "spec": {
+        "contextWindow": 1000000,
+        "capabilities": [
+          "chat",
+          "reasoning",
+          "code",
+          "vision",
+          "tool_use",
+          "agent",
+          "long_context"
+        ],
+        "serviceType": [
+          "chat",
+          "reasoning"
+        ],
+        "supportsReasoning": true,
+        "description": "Seed 系列持续迭代模型，通过固定 ID 获取最新版本，2026-09-09 更新"
+      }
+    },
+    {
+      "id": "doubao-seed-2.1-pro",
+      "displayName": "豆包 Seed 2.1 Pro",
+      "family": "doubao-seed-2.1-pro",
+      "match": {
+        "exact": [
+          "doubao-seed-2.1-pro"
+        ]
+      },
+      "spec": {
+        "serviceType": [
+          "chat",
+          "reasoning",
+          "vision"
+        ],
+        "description": "火山方舟豆包 Seed 2.1 Pro，生产级 Coding、Agent 与多模态旗舰模型",
+        "contextWindow": 256000,
+        "maxOutputTokens": 262144,
+        "capabilities": [
+          "chat",
+          "reasoning",
+          "code",
+          "vision",
+          "multilingual",
+          "long_context",
+          "tool_use",
+          "agent",
+          "deep_thinking"
+        ],
+        "supportsReasoning": true
+      }
+    },
+    {
       "id": "doubao-seed-2.0-pro",
       "displayName": "豆包 2.0 Pro",
       "family": "doubao-seed-2",

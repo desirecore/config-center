@@ -1,0 +1,461 @@
+{
+  "checkedAt": "2026-10-02",
+  "cutoff": "2025-10-02",
+  "scope": {
+    "providers": 28,
+    "codingPlans": 11
+  },
+  "method": "逐项检索官方模型目录/发布记录；模型发布日期与本仓文件更新时间分别统计。完整最新名单、接入端点或单价无法确认时明确保留疑点。配置和 schema 校验不等同真实账号调用验收。",
+  "confirmedSuppliersWithoutModelUpdatesForOneYear": [],
+  "inactivityConclusion": "未找到足够官方证据确认某个自研供应商在整个过去一年没有任何模型更新。来源受限或无完整日期记录的项目不能按无更新判定。",
+  "stalePresetFamilies": [
+    {
+      "config": "compute/providers/stability.json",
+      "family": "Stable Diffusion 3.5",
+      "releasedAt": "2024-10-22",
+      "source": "https://stability.ai/news-updates/introducing-stable-diffusion-3-5",
+      "note": "图像代际超过一年；Stability 在 2026-05-20 发布 Stable Audio 3.0，供应商整体仍更新。"
+    },
+    {
+      "config": "compute/providers/local-whisper.json",
+      "family": "Whisper large-v3",
+      "releasedAt": "2023-11-07",
+      "source": "https://huggingface.co/api/models/openai/whisper-large-v3",
+      "note": "这是本地模型预置，不是独立供应商；后继 large-v3-turbo 2024-10-01 已发布，未假定本地服务已安装。"
+    },
+    {
+      "config": "compute/providers/mistral.json",
+      "family": "Codestral 25.08",
+      "releasedAt": "2025-07-30",
+      "source": "https://docs.mistral.ai/models/codestral-25-08",
+      "note": "编程补全代际超过一年；Mistral Medium 3.5 和 Small 4 在 2026 已发布。"
+    }
+  ],
+  "entries": [
+    {
+      "config": "compute/providers/openai.json",
+      "name": "openai",
+      "source": "https://developers.openai.com/api/docs/models",
+      "finding": "GPT-6.1 Sol / GPT Image 2.5，已在上次发布补齐",
+      "newPresetIds": [],
+      "modelCount": 37,
+      "configurationChanged": false
+    },
+    {
+      "config": "compute/providers/openai-codex.json",
+      "name": "openai-codex",
+      "source": "https://developers.openai.com/api/docs/models/gpt-6.1-sol",
+      "finding": "GPT-6.1 Sol 已存在，保留订阅推理档位",
+      "newPresetIds": [],
+      "modelCount": 12,
+      "configurationChanged": false
+    },
+    {
+      "config": "compute/providers/anthropic.json",
+      "name": "anthropic",
+      "source": "https://platform.claude.com/docs/en/models/overview",
+      "finding": "Opus 5.5 / Sonnet 5.5 / Fable 5.1 已存在",
+      "newPresetIds": [],
+      "modelCount": 5,
+      "configurationChanged": false
+    },
+    {
+      "config": "compute/providers/anthropic-claude.json",
+      "name": "anthropic-claude",
+      "source": "https://platform.claude.com/docs/en/models/overview",
+      "finding": "订阅 Provider 已包含当前代际",
+      "newPresetIds": [],
+      "modelCount": 5,
+      "configurationChanged": false
+    },
+    {
+      "config": "compute/providers/github-copilot.json",
+      "name": "github-copilot",
+      "source": "https://docs.github.com/en/copilot/reference/ai-models/supported-models",
+      "finding": "目录由已授权账号动态发现；保持空的静态模型列表",
+      "newPresetIds": [],
+      "modelCount": 0,
+      "configurationChanged": false
+    },
+    {
+      "config": "compute/providers/deepseek.json",
+      "name": "deepseek",
+      "source": "https://api-docs.deepseek.com/guides/thinking_mode/",
+      "finding": "V4.1 Flash 已存在，新增 low 推理档并清除旧的无效 flat effort 字段",
+      "newPresetIds": [],
+      "modelCount": 4,
+      "configurationChanged": true
+    },
+    {
+      "config": "compute/providers/dashscope.json",
+      "name": "dashscope",
+      "source": "https://help.aliyun.com/zh/model-studio/models",
+      "finding": "新增 Omni Flash、Image 3.0 与向量/重排序代际",
+      "newPresetIds": [
+        "qwen-image-3.0",
+        "qwen-image-3.0-pro",
+        "qwen3.7-text-embedding",
+        "qwen3.7-text-embedding-flash",
+        "qwen3.7-text-rerank",
+        "qwen3.8-omni-flash"
+      ],
+      "modelCount": 35,
+      "configurationChanged": true
+    },
+    {
+      "config": "compute/providers/volcengine.json",
+      "name": "volcengine",
+      "source": "https://docs.volcengine.com/docs/ark/latest-model?lang=zh",
+      "finding": "Seed Evolving、Seed 2.1；补齐 Provider/shared-spec，其他套餐候选待当前端点核对",
+      "newPresetIds": [
+        "doubao-seed-evolving"
+      ],
+      "modelCount": 24,
+      "configurationChanged": true
+    },
+    {
+      "config": "compute/providers/moonshot.json",
+      "name": "moonshot",
+      "source": "https://platform.kimi.com/docs/guide/kimi-k3-quickstart",
+      "finding": "新增国内 K3 接入，纠正始终思考与默认 max；当前国内官方价格表未返回单价",
+      "newPresetIds": [
+        "kimi-k3"
+      ],
+      "modelCount": 11,
+      "configurationChanged": true
+    },
+    {
+      "config": "compute/providers/zhipu.json",
+      "name": "zhipu",
+      "source": "https://docs.bigmodel.cn/cn/guide/models/vlm/glm-5.3-flash",
+      "finding": "新增 GLM-5.3 / Flash / FlashX 的国内 API 接入，标准人民币价格已核对",
+      "newPresetIds": [
+        "glm-5.3",
+        "glm-5.3-flash",
+        "glm-5.3-flashx"
+      ],
+      "modelCount": 12,
+      "configurationChanged": true
+    },
+    {
+      "config": "compute/providers/zhipu-embedding.json",
+      "name": "zhipu-embedding",
+      "source": "https://docs.bigmodel.cn/cn/guide/start/pricing.md",
+      "finding": "未发现 embedding-3 的已验证后继 ID，保留",
+      "newPresetIds": [],
+      "modelCount": 1,
+      "configurationChanged": false
+    },
+    {
+      "config": "compute/providers/baichuan.json",
+      "name": "baichuan",
+      "source": "https://www.baichuan-ai.com/blog/baichuan-M3",
+      "finding": "M3 系列已存在；官网正文读取受限，不能保证无更新型号",
+      "newPresetIds": [],
+      "modelCount": 4,
+      "configurationChanged": false
+    },
+    {
+      "config": "compute/providers/minimax.json",
+      "name": "minimax",
+      "source": "https://platform.minimax.cn/docs/api-reference/text-anthropic-api",
+      "finding": "M3.1 Preview 仅供套餐；H3/H3 Max 新视频协议只加入共享规格",
+      "newPresetIds": [],
+      "modelCount": 26,
+      "configurationChanged": false
+    },
+    {
+      "config": "compute/providers/xiaomi.json",
+      "name": "xiaomi",
+      "source": "https://mimo.mi.com/docs/en-US/news/latest/v2-6",
+      "finding": "MiMo V2.6 系列已有，未发现已验证后继 API 代际",
+      "newPresetIds": [],
+      "modelCount": 10,
+      "configurationChanged": false
+    },
+    {
+      "config": "compute/providers/baidu.json",
+      "name": "baidu",
+      "source": "https://intl.cloud.baidu.com/en/doc/qianfan/s/7m95lyy43-intl-en",
+      "finding": "ERNIE 5.0 已有；区域文档与国内控制台存在差异，未增加猜测的 ID",
+      "newPresetIds": [],
+      "modelCount": 5,
+      "configurationChanged": false
+    },
+    {
+      "config": "compute/providers/tencent.json",
+      "name": "tencent",
+      "source": "https://www.tencent.com/tencent-releases-and-open-sources-tencent-hy4-preview/",
+      "finding": "新增 Hy4 Preview 共享规格及 OpenRouter 接入；既有 Hunyuan 端点支持尚未确认",
+      "newPresetIds": [],
+      "modelCount": 6,
+      "configurationChanged": false
+    },
+    {
+      "config": "compute/providers/xunfei.json",
+      "name": "xunfei",
+      "source": "https://xinghuo.xfyun.cn/sparkapi",
+      "finding": "官网展示 Spark X2.5；现有 spark-x 的 X2 文档要求 /x2 端点，当前 /v1 还承载 Ultra，不能直接替换；X2.5 API ID 未验证",
+      "newPresetIds": [],
+      "modelCount": 2,
+      "configurationChanged": false
+    },
+    {
+      "config": "compute/providers/siliconflow.json",
+      "name": "siliconflow",
+      "source": "https://www.siliconflow.cn/models",
+      "finding": "最新目录已检索；国际站 GLM-5.3 有发布，国内模型 ID/人民币价格待模型列表确认，未混用国际美元价",
+      "newPresetIds": [],
+      "modelCount": 3,
+      "configurationChanged": false
+    },
+    {
+      "config": "compute/providers/local-whisper.json",
+      "name": "local-whisper",
+      "source": "https://github.com/openai/whisper/releases",
+      "finding": "本地运行器；预置 large-v3 是旧模型，软件更新日期不能视作模型更新日期",
+      "newPresetIds": [],
+      "modelCount": 1,
+      "configurationChanged": false
+    },
+    {
+      "config": "compute/providers/ollama.json",
+      "name": "ollama",
+      "source": "https://ollama.com/blog",
+      "finding": "本地运行器，实际模型由 /api/tags 动态发现；保留本地安装样例，不假定新模型已安装",
+      "newPresetIds": [],
+      "modelCount": 1,
+      "configurationChanged": false
+    },
+    {
+      "config": "compute/providers/google.json",
+      "name": "google",
+      "source": "https://ai.google.dev/gemini-api/docs/models",
+      "finding": "Gemini 3.8 Flash 已有；新增 Gemini Embedding 2，音频代际补入共享规格；新 wire schema 需客户端适配",
+      "newPresetIds": [
+        "gemini-embedding-2"
+      ],
+      "modelCount": 11,
+      "configurationChanged": true
+    },
+    {
+      "config": "compute/providers/mistral.json",
+      "name": "mistral",
+      "source": "https://docs.mistral.ai/models",
+      "finding": "修正最新 API 拼写、Small 4 窗口及 Large 3 / Small 4 价格",
+      "newPresetIds": [
+        "mistral-medium-3-5"
+      ],
+      "modelCount": 5,
+      "configurationChanged": true
+    },
+    {
+      "config": "compute/providers/xai.json",
+      "name": "xai",
+      "source": "https://docs.x.ai/developers/release-notes",
+      "finding": "Grok 4.7 已存在，未发现已验证更新的通用模型代际",
+      "newPresetIds": [],
+      "modelCount": 4,
+      "configurationChanged": false
+    },
+    {
+      "config": "compute/providers/cohere.json",
+      "name": "cohere",
+      "source": "https://docs.cohere.com/docs/models",
+      "finding": "新增 Command A+ 与 Embed 5 Provider；Rerank 4 仅共享规格，需原生协议适配",
+      "newPresetIds": [
+        "command-a-plus-05-2026",
+        "embed-v5.0-fast",
+        "embed-v5.0-pro"
+      ],
+      "modelCount": 7,
+      "configurationChanged": true
+    },
+    {
+      "config": "compute/providers/kling.json",
+      "name": "kling",
+      "source": "https://kling.ai/document-api/api/video/3-0-omni/text-to-video/legacy",
+      "finding": "旧任务协议明确支持 kling-v3，已加入 Provider；3.0 Turbo 新协议仅共享规格",
+      "newPresetIds": [
+        "kling-v3"
+      ],
+      "modelCount": 5,
+      "configurationChanged": true
+    },
+    {
+      "config": "compute/providers/stability.json",
+      "name": "stability",
+      "source": "https://stability.ai/news-updates",
+      "finding": "2026 发布 Stable Audio 3.0，加入共享规格；预置 SD 3.5 图像代际较旧",
+      "newPresetIds": [],
+      "modelCount": 1,
+      "configurationChanged": false
+    },
+    {
+      "config": "compute/providers/openrouter.json",
+      "name": "openrouter",
+      "source": "https://openrouter.ai/api/v1/models",
+      "finding": "读取官方公共目录，新增当前通用模型；价格按该平台 USD 目录",
+      "newPresetIds": [
+        "anthropic/claude-opus-5.5",
+        "anthropic/claude-sonnet-5.5",
+        "cohere/command-a-plus",
+        "deepseek/deepseek-v4.1-flash",
+        "google/gemini-3.8-flash",
+        "minimax/minimax-m3",
+        "mistralai/mistral-medium-3-5",
+        "moonshotai/kimi-k3",
+        "openai/gpt-6.1-sol",
+        "qwen/qwen3.8-max-prime",
+        "qwen/qwen3.8-omni-flash",
+        "tencent/hy4-preview",
+        "z-ai/glm-5.3",
+        "z-ai/glm-5.3-flash"
+      ],
+      "modelCount": 18,
+      "configurationChanged": true
+    },
+    {
+      "config": "compute/providers/perplexity.json",
+      "name": "perplexity",
+      "source": "https://docs.perplexity.ai/docs/agent-api/migrate-from-sonar/overview",
+      "finding": "官方推动 Sonar 迁移到 Agent API；不是改静态模型名即可完成，保留旧接入并记录迁移事项",
+      "newPresetIds": [],
+      "modelCount": 3,
+      "configurationChanged": false
+    },
+    {
+      "config": "compute/coding-plans/zhipu-coding.json",
+      "name": "zhipu-coding",
+      "source": "https://docs.bigmodel.cn/cn/coding-plan/latest-model.md",
+      "finding": "新增 5.3，保留 Flash，套餐仍不提供 FlashX",
+      "newPresetIds": [
+        "glm-5.3"
+      ],
+      "modelCount": 5,
+      "configurationChanged": true
+    },
+    {
+      "config": "compute/coding-plans/dashscope-coding.json",
+      "name": "dashscope-coding",
+      "source": "https://help.aliyun.com/zh/model-studio/coding-plan",
+      "finding": "当前仍提供 qwen3.7-plus 等旧套餐名单，未混用 Token Plan 名单",
+      "newPresetIds": [],
+      "modelCount": 10,
+      "configurationChanged": false
+    },
+    {
+      "config": "compute/coding-plans/dashscope-token-plan.json",
+      "name": "dashscope-token-plan",
+      "source": "https://help.aliyun.com/zh/model-studio/token-plan-personal-overview",
+      "finding": "新增当前官方名单中的 DeepSeek/GLM/Image/HappyHorse；音频协议待客户端支持",
+      "newPresetIds": [
+        "deepseek-v4-flash-0731",
+        "deepseek-v4-pro",
+        "deepseek-v4-pro-0813",
+        "deepseek-v4.1-flash",
+        "glm-5.2",
+        "glm-5.3",
+        "happyhorse-1.1-i2v",
+        "happyhorse-1.1-r2v",
+        "happyhorse-1.1-t2v",
+        "qwen-image-3.0-pro",
+        "wan2.7-image",
+        "wan2.7-image-pro"
+      ],
+      "modelCount": 22,
+      "configurationChanged": true
+    },
+    {
+      "config": "compute/coding-plans/volcengine-coding.json",
+      "name": "volcengine-coding",
+      "source": "https://docs.volcengine.com/docs/ark/coding-plan-personal-model-release?lang=zh",
+      "finding": "检索发现 K3 / K2.8 Preview / V4.1 Flash；版本化 API ID 与当前套餐端点配额待确认，未猜测价格/限制",
+      "newPresetIds": [],
+      "modelCount": 14,
+      "configurationChanged": false
+    },
+    {
+      "config": "compute/coding-plans/tencent-token.json",
+      "name": "tencent-token",
+      "source": "https://cloud.tencent.com.cn/document/product/1823/130095",
+      "finding": "官方结果支持 tc-code-latest；完整最新套餐清单读取受限",
+      "newPresetIds": [],
+      "modelCount": 10,
+      "configurationChanged": false
+    },
+    {
+      "config": "compute/coding-plans/minimax-coding.json",
+      "name": "minimax-coding",
+      "source": "https://platform.minimax.cn/docs/api-reference/text-anthropic-api",
+      "finding": "新增 M3.1 Flash Preview，始终思考，默认 max；不把它放入按量 API Provider",
+      "newPresetIds": [
+        "MiniMax-M3.1-Flash-Preview"
+      ],
+      "modelCount": 11,
+      "configurationChanged": true
+    },
+    {
+      "config": "compute/coding-plans/moonshot-coding.json",
+      "name": "moonshot-coding",
+      "source": "https://platform.kimi.com/docs/guide/kimi-code-cli",
+      "finding": "套餐固定 kimi-for-coding，底层模型由服务端更新；未替换为不保证套餐可用的 K3 ID",
+      "newPresetIds": [],
+      "modelCount": 1,
+      "configurationChanged": false
+    },
+    {
+      "config": "compute/coding-plans/baidu-coding.json",
+      "name": "baidu-coding",
+      "source": "https://cloud.baidu.com/doc/qianfan/s/imlg0beiu",
+      "finding": "官方套餐仍列旧代际，保留 qianfan-code-latest；未把自研或按量新模型自动加入套餐",
+      "newPresetIds": [],
+      "modelCount": 10,
+      "configurationChanged": false
+    },
+    {
+      "config": "compute/coding-plans/infini-coding.json",
+      "name": "infini-coding",
+      "source": "https://docs.infini-ai.com/",
+      "finding": "官方入口检索可定位，但正文读取失败；未确认最新套餐 ID",
+      "newPresetIds": [],
+      "modelCount": 1,
+      "configurationChanged": false
+    },
+    {
+      "config": "compute/coding-plans/moorethread-coding.json",
+      "name": "moorethread-coding",
+      "source": "https://code.mthreads.com/",
+      "finding": "官方页面仅加载壳，搜索结果显示托管 GLM；mt-coder 最新映射无法确认",
+      "newPresetIds": [],
+      "modelCount": 1,
+      "configurationChanged": false
+    },
+    {
+      "config": "compute/coding-plans/kwai-coding.json",
+      "name": "kwai-coding",
+      "source": "https://arxiv.org/abs/2607.05471",
+      "finding": "KAT-Coder V2.5 技术报告为 2026 新模型，套餐 kwai-coder 映射与可调用 ID 未确认",
+      "newPresetIds": [],
+      "modelCount": 1,
+      "configurationChanged": false
+    }
+  ],
+  "validation": {
+    "schemaFilesPassed": 78,
+    "testsPassed": 80,
+    "liveAccountModelCalls": "未执行；缺少逐个供应商测试账号，官方元数据验证不等同真实调用验收"
+  },
+  "coverageLimitations": [
+    "部分供应商仅提供登录后模型清单；没有读取凭据或调用收费模型。",
+    "当前无问芯穹、摩尔线程套餐模型清单读取受限。",
+    "讯飞 X2.5、腾讯 Hy4 原生端点、可灵 3.0 Turbo 等涉及新的协议/端点；共享规格与预置可调用列表有意区分。",
+    "国内 Kimi 当前价格表未返回模型单价，未采用国际价格换算。"
+  ],
+  "reviewFixes": [
+    "收窄 Mistral 和旧 Command A 的 family/pattern，避免旧型号或 A+ 继承错误规格。",
+    "Cohere 新 Rerank 型号只保留共享规格；当前 Compatibility API 未声明 rerank 支持。",
+    "Cohere Command A+ 限定 Compatibility API reasoning_effort 为 none/high；Embedding Provider 只声明兼容接入支持的文本输入。",
+    "Kimi K3 声明拒绝自定义采样参数，删除显式温度/top_p 默认值；共享规格移除接入面的 thinking 回放配置。"
+  ]
+}

@@ -25,6 +25,38 @@
   ],
   "models": [
     {
+      "modelName": "gpt-6.1-sol",
+      "displayName": "GPT-6.1 Sol",
+      "serviceType": [
+        "chat"
+      ],
+      "description": "GPT-6.1 Sol，面向复杂编程、电脑使用和专业工作，1.05M 上下文；工具调用使用 Responses API",
+      "contextWindow": 1050000,
+      "maxOutputTokens": 128000,
+      "capabilities": [
+        "chat",
+        "reasoning",
+        "code",
+        "vision",
+        "ultra_long_context",
+        "tool_use",
+        "agent"
+      ],
+      "extra": {
+        "reasoning": {
+          "supportedEfforts": [
+            "low",
+            "medium",
+            "high",
+            "xhigh",
+            "max"
+          ],
+          "defaultEffort": "medium"
+        }
+      },
+      "source": "preset"
+    },
+    {
       "modelName": "gpt-6-sol",
       "displayName": "GPT-6 Sol",
       "serviceType": [

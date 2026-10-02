@@ -35,6 +35,103 @@
   ],
   "models": [
     {
+      "modelName": "qwen-image-3.0",
+      "displayName": "qwen-image-3.0",
+      "capabilities": [
+        "image_generation",
+        "image_editing",
+        "text_rendering"
+      ],
+      "serviceType": [
+        "image_gen"
+      ],
+      "description": "qwen-image-3.0",
+      "extra": {
+        "pricingNotes": "按图片计费，北京：输入 0.02 元/张；Pro 输出 1K 0.25 元、2K 0.5 元；普通版输出 0.18 元/张。"
+      }
+    },
+    {
+      "modelName": "qwen-image-3.0-pro",
+      "displayName": "qwen-image-3.0-pro",
+      "capabilities": [
+        "image_generation",
+        "image_editing",
+        "text_rendering"
+      ],
+      "serviceType": [
+        "image_gen"
+      ],
+      "description": "qwen-image-3.0-pro",
+      "extra": {
+        "pricingNotes": "按图片计费，北京：输入 0.02 元/张；Pro 输出 1K 0.25 元、2K 0.5 元；普通版输出 0.18 元/张。"
+      }
+    },
+    {
+      "modelName": "qwen3.7-text-rerank",
+      "displayName": "Qwen3.7 Text Rerank",
+      "capabilities": [
+        "rerank",
+        "multilingual"
+      ],
+      "serviceType": [
+        "rerank"
+      ],
+      "description": "Qwen3.7 Text Rerank"
+    },
+    {
+      "modelName": "qwen3.7-text-embedding-flash",
+      "displayName": "qwen3.7-text-embedding-flash",
+      "capabilities": [
+        "text_embedding",
+        "multilingual"
+      ],
+      "serviceType": [
+        "embedding"
+      ],
+      "description": "qwen3.7-text-embedding-flash",
+      "inputPrice": 0.125,
+      "outputPrice": 0
+    },
+    {
+      "modelName": "qwen3.7-text-embedding",
+      "displayName": "qwen3.7-text-embedding",
+      "capabilities": [
+        "text_embedding",
+        "multilingual"
+      ],
+      "serviceType": [
+        "embedding"
+      ],
+      "description": "qwen3.7-text-embedding",
+      "inputPrice": 0.5,
+      "outputPrice": 0
+    },
+    {
+      "modelName": "qwen3.8-omni-flash",
+      "displayName": "Qwen3.8 Omni Flash",
+      "capabilities": [
+        "chat",
+        "reasoning",
+        "vision",
+        "audio_understanding",
+        "video_understanding",
+        "tool_use",
+        "long_context"
+      ],
+      "serviceType": [
+        "chat",
+        "vision"
+      ],
+      "description": "Qwen3.8 Omni Flash",
+      "contextWindow": 1000000,
+      "maxOutputTokens": 131072,
+      "inputPrice": 0.8,
+      "outputPrice": 2.7,
+      "extra": {
+        "cachedInputPrice": 0.1
+      }
+    },
+    {
       "modelName": "qwen3.8-max",
       "displayName": "阿里云 Qwen3.8-Max",
       "serviceType": [

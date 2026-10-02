@@ -2,6 +2,159 @@
   "description": "Google Gemini 系列模型规格。参数来源：config-center compute/providers/google.json。",
   "specs": [
     {
+      "id": "gemini-embedding-2",
+      "displayName": "Gemini Embedding 2",
+      "family": "gemini-embedding-2",
+      "match": {
+        "exact": [
+          "gemini-embedding-2"
+        ]
+      },
+      "spec": {
+        "contextWindow": 8192,
+        "capabilities": [
+          "text_embedding",
+          "vision",
+          "audio_understanding",
+          "video_understanding",
+          "multilingual"
+        ],
+        "serviceType": [
+          "embedding"
+        ],
+        "description": "Gemini Embedding 2，原生多模态嵌入，8192 token 输入，共享文本/图像/音视频向量空间",
+        "extra": {
+          "dimensions": [
+            768,
+            1536,
+            3072
+          ],
+          "defaultDimension": 3072
+        }
+      }
+    },
+    {
+      "id": "gemini-3.5-transcribe-live",
+      "displayName": "gemini-3.5-transcribe-live",
+      "family": "gemini-3.5-transcribe-live",
+      "match": {
+        "exact": [
+          "gemini-3.5-transcribe-live"
+        ]
+      },
+      "spec": {
+        "capabilities": [
+          "asr",
+          "realtime"
+        ],
+        "serviceType": [
+          "asr"
+        ],
+        "description": "gemini-3.5-transcribe-live，官方模型目录；原生音频协议需客户端适配"
+      }
+    },
+    {
+      "id": "gemini-3.5-transcribe",
+      "displayName": "gemini-3.5-transcribe",
+      "family": "gemini-3.5-transcribe",
+      "match": {
+        "exact": [
+          "gemini-3.5-transcribe"
+        ]
+      },
+      "spec": {
+        "capabilities": [
+          "asr"
+        ],
+        "serviceType": [
+          "asr"
+        ],
+        "description": "gemini-3.5-transcribe，官方模型目录；原生音频协议需客户端适配"
+      }
+    },
+    {
+      "id": "gemini-3.8-live-extended-thinking",
+      "displayName": "gemini-3.8-live-extended-thinking",
+      "family": "gemini-3.8-live-extended-thinking",
+      "match": {
+        "exact": [
+          "gemini-3.8-live-extended-thinking"
+        ]
+      },
+      "spec": {
+        "capabilities": [
+          "realtime",
+          "speech_to_speech",
+          "reasoning"
+        ],
+        "serviceType": [
+          "realtime_voice"
+        ],
+        "description": "gemini-3.8-live-extended-thinking，官方模型目录；原生音频协议需客户端适配"
+      }
+    },
+    {
+      "id": "gemini-3.8-live",
+      "displayName": "gemini-3.8-live",
+      "family": "gemini-3.8-live",
+      "match": {
+        "exact": [
+          "gemini-3.8-live"
+        ]
+      },
+      "spec": {
+        "capabilities": [
+          "realtime",
+          "speech_to_speech"
+        ],
+        "serviceType": [
+          "realtime_voice"
+        ],
+        "description": "gemini-3.8-live，官方模型目录；原生音频协议需客户端适配"
+      }
+    },
+    {
+      "id": "gemini-3.8-flash-lite-tts",
+      "displayName": "gemini-3.8-flash-lite-tts",
+      "family": "gemini-3.8-flash-lite-tts",
+      "match": {
+        "exact": [
+          "gemini-3.8-flash-lite-tts"
+        ]
+      },
+      "spec": {
+        "capabilities": [
+          "tts",
+          "fast"
+        ],
+        "serviceType": [
+          "tts"
+        ],
+        "description": "gemini-3.8-flash-lite-tts，官方模型目录；原生音频协议需客户端适配"
+      }
+    },
+    {
+      "id": "gemini-3.8-flash-tts",
+      "displayName": "gemini-3.8-flash-tts",
+      "family": "gemini-3.8-flash-tts",
+      "match": {
+        "exact": [
+          "gemini-3.8-flash-tts"
+        ]
+      },
+      "spec": {
+        "capabilities": [
+          "tts"
+        ],
+        "serviceType": [
+          "tts"
+        ],
+        "description": "gemini-3.8-flash-tts，官方模型目录；原生音频协议需客户端适配",
+        "contextWindow": 8192,
+        "maxOutputTokens": 16384
+      }
+    },
+    {
       "id": "gemini-3.8-flash",
       "displayName": "Gemini 3.8 Flash",
       "family": "gemini-3.8-flash",

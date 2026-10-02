@@ -2,6 +2,165 @@
   "description": "阿里通义千问 Qwen 系列模型规格。参数来源：config-center compute/providers/dashscope.json。",
   "specs": [
     {
+      "id": "qwen3.8-max-prime",
+      "displayName": "Qwen3.8 Max Prime",
+      "family": "qwen3.8-max-prime",
+      "match": {
+        "exact": [
+          "qwen3.8-max-prime",
+          "qwen/qwen3.8-max-prime"
+        ]
+      },
+      "spec": {
+        "contextWindow": 1000000,
+        "capabilities": [
+          "chat",
+          "reasoning",
+          "code",
+          "vision",
+          "tool_use",
+          "long_context"
+        ],
+        "serviceType": [
+          "chat"
+        ],
+        "supportsReasoning": true,
+        "description": "Qwen3.8 Max Prime；OpenRouter 官方目录已提供该 ID，不推断国内 DashScope 同名接入"
+      }
+    },
+    {
+      "id": "qwen-image-3.0",
+      "displayName": "qwen-image-3.0",
+      "family": "qwen-image-3.0",
+      "match": {
+        "exact": [
+          "qwen-image-3.0"
+        ]
+      },
+      "spec": {
+        "capabilities": [
+          "image_generation",
+          "image_editing",
+          "text_rendering"
+        ],
+        "serviceType": [
+          "image_gen"
+        ],
+        "description": "qwen-image-3.0"
+      }
+    },
+    {
+      "id": "qwen-image-3.0-pro",
+      "displayName": "qwen-image-3.0-pro",
+      "family": "qwen-image-3.0-pro",
+      "match": {
+        "exact": [
+          "qwen-image-3.0-pro"
+        ]
+      },
+      "spec": {
+        "capabilities": [
+          "image_generation",
+          "image_editing",
+          "text_rendering"
+        ],
+        "serviceType": [
+          "image_gen"
+        ],
+        "description": "qwen-image-3.0-pro"
+      }
+    },
+    {
+      "id": "qwen3.7-text-rerank",
+      "displayName": "Qwen3.7 Text Rerank",
+      "family": "qwen3.7-text-rerank",
+      "match": {
+        "exact": [
+          "qwen3.7-text-rerank"
+        ]
+      },
+      "spec": {
+        "capabilities": [
+          "rerank",
+          "multilingual"
+        ],
+        "serviceType": [
+          "rerank"
+        ],
+        "description": "Qwen3.7 Text Rerank"
+      }
+    },
+    {
+      "id": "qwen3.7-text-embedding-flash",
+      "displayName": "qwen3.7-text-embedding-flash",
+      "family": "qwen3.7-text-embedding-flash",
+      "match": {
+        "exact": [
+          "qwen3.7-text-embedding-flash"
+        ]
+      },
+      "spec": {
+        "capabilities": [
+          "text_embedding",
+          "multilingual"
+        ],
+        "serviceType": [
+          "embedding"
+        ],
+        "description": "qwen3.7-text-embedding-flash"
+      }
+    },
+    {
+      "id": "qwen3.7-text-embedding",
+      "displayName": "qwen3.7-text-embedding",
+      "family": "qwen3.7-text-embedding",
+      "match": {
+        "exact": [
+          "qwen3.7-text-embedding"
+        ]
+      },
+      "spec": {
+        "capabilities": [
+          "text_embedding",
+          "multilingual"
+        ],
+        "serviceType": [
+          "embedding"
+        ],
+        "description": "qwen3.7-text-embedding"
+      }
+    },
+    {
+      "id": "qwen3.8-omni-flash",
+      "displayName": "Qwen3.8 Omni Flash",
+      "family": "qwen3.8-omni-flash",
+      "match": {
+        "exact": [
+          "qwen3.8-omni-flash",
+          "qwen/qwen3.8-omni-flash"
+        ]
+      },
+      "spec": {
+        "capabilities": [
+          "chat",
+          "reasoning",
+          "vision",
+          "audio_understanding",
+          "video_understanding",
+          "tool_use",
+          "long_context"
+        ],
+        "serviceType": [
+          "chat",
+          "vision"
+        ],
+        "description": "Qwen3.8 Omni Flash",
+        "contextWindow": 1000000,
+        "maxOutputTokens": 131072,
+        "supportsReasoning": true
+      }
+    },
+    {
       "id": "qwen3.8-max",
       "displayName": "Qwen3.8 Max",
       "family": "qwen3.8-max",
