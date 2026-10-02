@@ -2,6 +2,86 @@
   "description": "MiniMax 系列模型规格。参数来源：config-center compute/providers/minimax.json。id 保留上游 model_name 原始写法（含大小写与点号），匹配时由匹配器归一化处理。",
   "specs": [
     {
+      "id": "MiniMax-H3-Max",
+      "displayName": "MiniMax H3 Max",
+      "family": "MiniMax-H3-Max",
+      "match": {
+        "exact": [
+          "MiniMax-H3-Max"
+        ]
+      },
+      "spec": {
+        "capabilities": [
+          "video_generation",
+          "image_to_video"
+        ],
+        "serviceType": [
+          "video_gen"
+        ],
+        "description": "MiniMax H3 Max，使用原生视频 V2 API（/v1/video_generation_v2），不适用 Anthropic Messages",
+        "extra": {
+          "maxVideoDuration": 15
+        }
+      }
+    },
+    {
+      "id": "MiniMax-H3",
+      "displayName": "MiniMax H3",
+      "family": "MiniMax-H3",
+      "match": {
+        "exact": [
+          "MiniMax-H3"
+        ]
+      },
+      "spec": {
+        "capabilities": [
+          "video_generation",
+          "image_to_video"
+        ],
+        "serviceType": [
+          "video_gen"
+        ],
+        "description": "MiniMax H3，使用原生视频 V2 API（/v1/video_generation_v2），不适用 Anthropic Messages",
+        "extra": {
+          "maxVideoDuration": 15
+        }
+      }
+    },
+    {
+      "id": "MiniMax-M3.1-Flash-Preview",
+      "displayName": "MiniMax M3.1 Flash Preview",
+      "family": "MiniMax-M3.1-Flash-Preview",
+      "match": {
+        "exact": [
+          "MiniMax-M3.1-Flash-Preview"
+        ]
+      },
+      "spec": {
+        "capabilities": [
+          "chat",
+          "reasoning",
+          "code",
+          "vision",
+          "video_understanding",
+          "tool_use",
+          "agent",
+          "long_context"
+        ],
+        "serviceType": [
+          "chat",
+          "reasoning",
+          "vision"
+        ],
+        "description": "MiniMax M3.1 Flash Preview",
+        "contextWindow": 1000000,
+        "extra": {
+          "adaptiveThinking": true,
+          "thinkingOnly": true
+        },
+        "supportsReasoning": true
+      }
+    },
+    {
       "id": "MiniMax-M3",
       "displayName": "MiniMax M3",
       "family": "minimax-m3",

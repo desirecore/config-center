@@ -31,11 +31,7 @@
         "supportsReasoning": true,
         "extra": {
           "supportsThinking": true,
-          "thinkingDefault": true,
-          "reasoningEffort": [
-            "high",
-            "max"
-          ]
+          "thinkingDefault": true
         },
         "description": "DeepSeek V4 Pro，1.6T MoE 架构，100 万上下文"
       },
@@ -47,6 +43,7 @@
         "reasoning": {
           "supportedModes": [
             "auto",
+            "low",
             "high",
             "max"
           ],
@@ -84,11 +81,7 @@
         "supportsReasoning": true,
         "extra": {
           "supportsThinking": true,
-          "thinkingDefault": true,
-          "reasoningEffort": [
-            "high",
-            "max"
-          ]
+          "thinkingDefault": true
         },
         "description": "DeepSeek V4 Pro 0813 版本，1.6T MoE 架构，100 万上下文"
       },
@@ -100,6 +93,7 @@
         "reasoning": {
           "supportedModes": [
             "auto",
+            "low",
             "high",
             "max"
           ],
@@ -166,7 +160,8 @@
       "match": {
         "exact": [
           "deepseek-flash",
-          "deepseek-v4.1-flash"
+          "deepseek-v4.1-flash",
+          "deepseek/deepseek-v4.1-flash"
         ]
       },
       "spec": {
@@ -202,6 +197,7 @@
         "reasoning": {
           "supportedModes": [
             "auto",
+            "low",
             "high",
             "max"
           ],
@@ -237,11 +233,7 @@
         "supportsReasoning": true,
         "extra": {
           "supportsThinking": true,
-          "thinkingDefault": true,
-          "reasoningEffort": [
-            "high",
-            "max"
-          ]
+          "thinkingDefault": true
         }
       },
       "routing": {
@@ -252,6 +244,7 @@
         "reasoning": {
           "supportedModes": [
             "auto",
+            "low",
             "high",
             "max"
           ],
@@ -341,11 +334,7 @@
         "releasedAt": "2026-08-21",
         "extra": {
           "supportsThinking": true,
-          "thinkingDefault": true,
-          "reasoningEffort": [
-            "high",
-            "max"
-          ]
+          "thinkingDefault": true
         },
         "description": "DeepSeek V4 Flash 实验性视觉版本，支持文本与图像输入，文本能力与 V4 Flash 一致"
       },
@@ -357,6 +346,7 @@
         "reasoning": {
           "supportedModes": [
             "auto",
+            "low",
             "high",
             "max"
           ],

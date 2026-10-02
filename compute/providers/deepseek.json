@@ -51,6 +51,7 @@
         "thinkingDefault": true,
         "reasoning": {
           "supportedEfforts": [
+            "low",
             "high",
             "max"
           ],
@@ -109,15 +110,19 @@
         "concurrencyLimit": 2500,
         "supportsThinking": true,
         "thinkingDefault": true,
-        "reasoningEffort": [
-          "high",
-          "max"
-        ],
         "features": {
           "jsonOutput": true,
           "toolCalls": true,
           "chatPrefixCompletion": "beta",
           "fimCompletion": false
+        },
+        "reasoning": {
+          "supportedEfforts": [
+            "low",
+            "high",
+            "max"
+          ],
+          "defaultEffort": "high"
         }
       }
     },
@@ -149,15 +154,19 @@
         "concurrencyLimit": 2500,
         "supportsThinking": true,
         "thinkingDefault": true,
-        "reasoningEffort": [
-          "high",
-          "max"
-        ],
         "features": {
           "jsonOutput": true,
           "toolCalls": true,
           "chatPrefixCompletion": "beta",
           "fimCompletion": "non-thinking-only"
+        },
+        "reasoning": {
+          "supportedEfforts": [
+            "low",
+            "high",
+            "max"
+          ],
+          "defaultEffort": "high"
         }
       }
     },
@@ -190,15 +199,19 @@
         "concurrencyLimit": 500,
         "supportsThinking": true,
         "thinkingDefault": true,
-        "reasoningEffort": [
-          "high",
-          "max"
-        ],
         "features": {
           "jsonOutput": true,
           "toolCalls": true,
           "chatPrefixCompletion": "beta",
           "fimCompletion": "non-thinking-only"
+        },
+        "reasoning": {
+          "supportedEfforts": [
+            "low",
+            "high",
+            "max"
+          ],
+          "defaultEffort": "high"
         }
       }
     }

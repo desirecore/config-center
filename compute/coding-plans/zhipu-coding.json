@@ -28,6 +28,43 @@
   ],
   "models": [
     {
+      "modelName": "glm-5.3",
+      "displayName": "GLM-5.3",
+      "contextWindow": 1048576,
+      "maxOutputTokens": 131072,
+      "capabilities": [
+        "chat",
+        "reasoning",
+        "deep_thinking",
+        "code",
+        "math",
+        "multilingual",
+        "tool_use",
+        "agent",
+        "long_context"
+      ],
+      "serviceType": [
+        "chat"
+      ],
+      "defaultTemperature": 1,
+      "defaultTopP": 0.95,
+      "description": "智谱 GLM-5.3 大推理模型，面向复杂软件工程与长程 Agent 任务，100 万上下文；强制思考，无法关闭",
+      "extra": {
+        "thinkingDefault": true,
+        "thinkingOnly": true,
+        "reasoning": {
+          "supportedEfforts": [
+            "low",
+            "high",
+            "max"
+          ],
+          "defaultEffort": "max"
+        },
+        "pricingNotes": "国内官方标准价，人民币/百万 tokens；Flash 限时优惠以控制台实际结算为准。"
+      },
+      "source": "preset"
+    },
+    {
       "modelName": "glm-5.3-flash",
       "displayName": "GLM-5.3-Flash (Coding)",
       "serviceType": [

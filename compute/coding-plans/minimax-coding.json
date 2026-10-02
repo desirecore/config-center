@@ -30,6 +30,42 @@
   },
   "models": [
     {
+      "modelName": "MiniMax-M3.1-Flash-Preview",
+      "displayName": "MiniMax M3.1 Flash Preview",
+      "capabilities": [
+        "chat",
+        "reasoning",
+        "code",
+        "vision",
+        "video_understanding",
+        "tool_use",
+        "agent",
+        "long_context"
+      ],
+      "serviceType": [
+        "chat",
+        "reasoning",
+        "vision"
+      ],
+      "description": "MiniMax M3.1 Flash Preview，目前仅通过 M Plan / MiniMax Code 提供",
+      "contextWindow": 1000000,
+      "extra": {
+        "adaptiveThinking": true,
+        "thinkingOnly": true,
+        "reasoning": {
+          "supportedEfforts": [
+            "low",
+            "medium",
+            "high",
+            "xhigh",
+            "max"
+          ],
+          "defaultEffort": "max"
+        }
+      },
+      "source": "preset"
+    },
+    {
       "modelName": "MiniMax-M3",
       "displayName": "MiniMax M3 (Token Plan)",
       "serviceType": [

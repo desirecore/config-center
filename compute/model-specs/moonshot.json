@@ -7,15 +7,13 @@
       "family": "kimi-k3",
       "match": {
         "exact": [
-          "kimi-k3"
-        ],
-        "patterns": [
-          "kimi-k3*"
+          "kimi-k3",
+          "moonshotai/kimi-k3"
         ]
       },
       "spec": {
         "contextWindow": 1048576,
-        "maxOutputTokens": 131072,
+        "maxOutputTokens": 1048576,
         "capabilities": [
           "chat",
           "reasoning",
@@ -23,13 +21,18 @@
           "tool_use",
           "agent",
           "long_context",
-          "vision"
+          "vision",
+          "video_understanding"
         ],
         "serviceType": [
           "reasoning"
         ],
         "supportsReasoning": true,
-        "description": "Moonshot Kimi K3 — 2.8T 参数多模态推理模型，默认 reasoning_effort=max，始终启用思考"
+        "description": "Kimi K3，1M 上下文，始终开启思考，low/high/max 三档（默认 max）；输出上限与输入共享窗口，默认 max_completion_tokens=131072",
+        "extra": {
+          "thinkingOnly": true,
+          "samplingParametersDeprecated": true
+        }
       },
       "routing": {
         "tier": "flagship",
@@ -39,14 +42,11 @@
         "reasoning": {
           "supportedModes": [
             "auto",
-            "off",
-            "minimal",
             "low",
-            "medium",
             "high",
-            "xhigh"
+            "max"
           ],
-          "defaultMode": "high"
+          "defaultMode": "max"
         }
       }
     },
