@@ -2,6 +2,33 @@
   "description": "腾讯混元系列模型规格。参数来源：config-center compute/providers/tencent.json。hunyuan-2.0-thinking 和 hunyuan-t1 为推理模型。",
   "specs": [
     {
+      "id": "hy4-preview",
+      "displayName": "Tencent Hy4 Preview",
+      "family": "hy4-preview",
+      "match": {
+        "exact": [
+          "hy4-preview",
+          "tencent/hy4-preview"
+        ]
+      },
+      "spec": {
+        "capabilities": [
+          "chat",
+          "reasoning",
+          "code",
+          "tool_use",
+          "agent",
+          "long_context"
+        ],
+        "serviceType": [
+          "chat"
+        ],
+        "description": "Tencent Hy4 Preview，通过 TokenHub 提供；既有 Hunyuan Provider 端点可用性尚未确认",
+        "contextWindow": 1048576,
+        "releasedAt": "2026-08-28"
+      }
+    },
+    {
       "id": "hy3",
       "displayName": "混元 Hy3",
       "family": "hy3",

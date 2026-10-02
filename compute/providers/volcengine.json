@@ -23,6 +23,25 @@
   ],
   "models": [
     {
+      "modelName": "doubao-seed-evolving",
+      "displayName": "Doubao Seed Evolving",
+      "contextWindow": 1000000,
+      "capabilities": [
+        "chat",
+        "reasoning",
+        "code",
+        "vision",
+        "tool_use",
+        "agent",
+        "long_context"
+      ],
+      "serviceType": [
+        "chat",
+        "reasoning"
+      ],
+      "description": "Seed 系列持续迭代模型，通过固定 ID 获取最新版本，2026-09-09 更新"
+    },
+    {
       "modelName": "doubao-seed-2.1-pro",
       "displayName": "豆包 Seed 2.1 Pro",
       "serviceType": [

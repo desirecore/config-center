@@ -28,6 +28,297 @@
   },
   "models": [
     {
+      "modelName": "deepseek-v4.1-flash",
+      "displayName": "DeepSeek V4.1 Flash",
+      "contextWindow": 1000000,
+      "maxOutputTokens": 384000,
+      "capabilities": [
+        "chat",
+        "code",
+        "reasoning",
+        "deep_thinking",
+        "vision",
+        "multilingual",
+        "tool_use"
+      ],
+      "serviceType": [
+        "chat",
+        "reasoning",
+        "vision"
+      ],
+      "extra": {
+        "supportsThinking": true,
+        "thinkingDefault": true,
+        "reasoning": {
+          "supportedEfforts": [
+            "low",
+            "high",
+            "max"
+          ],
+          "defaultEffort": "high"
+        }
+      },
+      "description": "DeepSeek V4.1 Flash，支持文本与图像输入，100 万上下文",
+      "source": "preset"
+    },
+    {
+      "modelName": "wan2.7-image-pro",
+      "displayName": "通义万相 2.7 Pro",
+      "capabilities": [
+        "image_generation",
+        "chinese_optimized",
+        "high_quality"
+      ],
+      "serviceType": [
+        "image_gen"
+      ],
+      "description": "万相最新旗舰文生图模型，支持 4K 分辨率",
+      "source": "preset",
+      "extra": {}
+    },
+    {
+      "modelName": "wan2.7-image",
+      "displayName": "通义万相 2.7",
+      "capabilities": [
+        "image_generation",
+        "chinese_optimized"
+      ],
+      "serviceType": [
+        "image_gen"
+      ],
+      "description": "万相最新标准文生图模型，高画质",
+      "source": "preset",
+      "extra": {}
+    },
+    {
+      "modelName": "qwen-image-3.0-pro",
+      "displayName": "qwen-image-3.0-pro",
+      "capabilities": [
+        "image_generation",
+        "image_editing",
+        "text_rendering"
+      ],
+      "serviceType": [
+        "image_gen"
+      ],
+      "description": "qwen-image-3.0-pro",
+      "source": "preset"
+    },
+    {
+      "modelName": "happyhorse-1.1-t2v",
+      "displayName": "HappyHorse 1.1 T2V",
+      "capabilities": [
+        "video_generation",
+        "text_to_video",
+        "high_quality"
+      ],
+      "serviceType": [
+        "video_gen"
+      ],
+      "description": "HappyHorse 1.1 文生视频，进一步提升文本词义理解、镜头调度与动态生成表现",
+      "source": "preset",
+      "extra": {}
+    },
+    {
+      "modelName": "happyhorse-1.1-r2v",
+      "displayName": "HappyHorse 1.1 R2V",
+      "capabilities": [
+        "video_generation",
+        "reference_to_video",
+        "multi_image",
+        "high_quality"
+      ],
+      "serviceType": [
+        "video_gen"
+      ],
+      "description": "HappyHorse 1.1 参考生视频，支持最多9张图片参考，更加稳定的主体与场景参考",
+      "source": "preset",
+      "extra": {}
+    },
+    {
+      "modelName": "happyhorse-1.1-i2v",
+      "displayName": "HappyHorse 1.1 I2V",
+      "capabilities": [
+        "video_generation",
+        "image_to_video",
+        "high_quality"
+      ],
+      "serviceType": [
+        "video_gen"
+      ],
+      "description": "HappyHorse 1.1 图生视频，进一步提升画面质感、动态表现与跨片段一致性",
+      "source": "preset",
+      "extra": {}
+    },
+    {
+      "modelName": "glm-5.3",
+      "displayName": "GLM-5.3",
+      "contextWindow": 1048576,
+      "maxOutputTokens": 131072,
+      "capabilities": [
+        "chat",
+        "reasoning",
+        "deep_thinking",
+        "code",
+        "math",
+        "multilingual",
+        "tool_use",
+        "agent",
+        "long_context"
+      ],
+      "serviceType": [
+        "chat"
+      ],
+      "description": "智谱 GLM-5.3 大推理模型，面向复杂软件工程与长程 Agent 任务，100 万上下文；强制思考，无法关闭",
+      "extra": {
+        "thinkingDefault": true,
+        "thinkingOnly": true,
+        "reasoning": {
+          "supportedEfforts": [
+            "low",
+            "high",
+            "max"
+          ],
+          "defaultEffort": "max"
+        }
+      },
+      "source": "preset"
+    },
+    {
+      "modelName": "glm-5.2",
+      "displayName": "GLM-5.2",
+      "contextWindow": 1048576,
+      "maxOutputTokens": 32768,
+      "capabilities": [
+        "reasoning",
+        "deep_thinking",
+        "code",
+        "multilingual",
+        "tool_use",
+        "long_context"
+      ],
+      "serviceType": [
+        "chat"
+      ],
+      "description": "智谱 GLM-5.2 大推理模型，100 万上下文",
+      "source": "preset",
+      "extra": {
+        "reasoning": {
+          "supportedEfforts": [
+            "minimal",
+            "low",
+            "medium",
+            "high",
+            "xhigh"
+          ],
+          "defaultEffort": "high"
+        }
+      }
+    },
+    {
+      "modelName": "deepseek-v4-pro-0813",
+      "displayName": "DeepSeek V4 Pro 0813",
+      "contextWindow": 1000000,
+      "maxOutputTokens": 384000,
+      "capabilities": [
+        "chat",
+        "reasoning",
+        "deep_thinking",
+        "code",
+        "math",
+        "science",
+        "multilingual",
+        "tool_use"
+      ],
+      "serviceType": [
+        "chat",
+        "reasoning"
+      ],
+      "extra": {
+        "supportsThinking": true,
+        "thinkingDefault": true,
+        "reasoning": {
+          "supportedEfforts": [
+            "low",
+            "high",
+            "max"
+          ],
+          "defaultEffort": "high"
+        }
+      },
+      "description": "DeepSeek V4 Pro 0813 版本，1.6T MoE 架构，100 万上下文",
+      "source": "preset"
+    },
+    {
+      "modelName": "deepseek-v4-pro",
+      "displayName": "DeepSeek V4 Pro",
+      "contextWindow": 1000000,
+      "maxOutputTokens": 384000,
+      "capabilities": [
+        "chat",
+        "reasoning",
+        "deep_thinking",
+        "code",
+        "math",
+        "science",
+        "multilingual",
+        "tool_use"
+      ],
+      "serviceType": [
+        "chat",
+        "reasoning"
+      ],
+      "extra": {
+        "supportsThinking": true,
+        "thinkingDefault": true,
+        "reasoning": {
+          "supportedEfforts": [
+            "low",
+            "high",
+            "max"
+          ],
+          "defaultEffort": "high"
+        }
+      },
+      "description": "DeepSeek V4 Pro，1.6T MoE 架构，100 万上下文",
+      "source": "preset"
+    },
+    {
+      "modelName": "deepseek-v4-flash-0731",
+      "displayName": "DeepSeek V4 Flash 0731",
+      "contextWindow": 1000000,
+      "maxOutputTokens": 384000,
+      "capabilities": [
+        "chat",
+        "code",
+        "reasoning",
+        "deep_thinking",
+        "multilingual",
+        "tool_use"
+      ],
+      "serviceType": [
+        "chat",
+        "reasoning"
+      ],
+      "extra": {
+        "supportsThinking": true,
+        "thinkingDefault": true,
+        "reasoningEffort": [
+          "high",
+          "max"
+        ],
+        "reasoning": {
+          "supportedEfforts": [
+            "high",
+            "max"
+          ],
+          "defaultEffort": "high"
+        }
+      },
+      "description": "DeepSeek V4 Flash 0731 固定版本，100 万上下文",
+      "source": "preset"
+    },
+    {
       "modelName": "qwen3.8-max",
       "displayName": "Qwen3.8 Max (Token Plan)",
       "serviceType": [

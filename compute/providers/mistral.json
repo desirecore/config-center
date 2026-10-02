@@ -15,14 +15,32 @@
   ],
   "models": [
     {
+      "modelName": "mistral-medium-3-5",
+      "displayName": "Mistral Medium 3.5",
+      "contextWindow": 262144,
+      "capabilities": [
+        "chat",
+        "reasoning",
+        "code",
+        "vision",
+        "tool_use"
+      ],
+      "serviceType": [
+        "chat"
+      ],
+      "defaultTemperature": 1,
+      "description": "Mistral Medium 3.5，官方 API ID mistral-medium-3-5，256K 上下文",
+      "inputPrice": 1.5,
+      "outputPrice": 7.5
+    },
+    {
       "modelName": "mistral-medium-latest",
       "displayName": "Mistral Medium 3.5",
       "serviceType": [
         "chat"
       ],
       "description": "Mistral 前沿多模态模型，面向 Agentic 和 Coding 场景优化，256K 上下文",
-      "contextWindow": 256000,
-      "maxOutputTokens": 262144,
+      "contextWindow": 262144,
       "capabilities": [
         "chat",
         "reasoning",
@@ -46,7 +64,6 @@
       ],
       "description": "Mistral 旗舰模型，256K 上下文，支持视觉和工具调用",
       "contextWindow": 256000,
-      "maxOutputTokens": 262144,
       "capabilities": [
         "chat",
         "reasoning",
@@ -67,9 +84,8 @@
       "serviceType": [
         "fast"
       ],
-      "description": "Mistral Small 4，统一指令、推理和编码能力的高效多模态模型，256K 上下文",
-      "contextWindow": 256000,
-      "maxOutputTokens": 8192,
+      "description": "Mistral Small 4，指令、推理与编码混合模型，256K 上下文",
+      "contextWindow": 262144,
       "capabilities": [
         "chat",
         "code",

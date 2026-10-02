@@ -16,19 +16,94 @@
   ],
   "models": [
     {
+      "modelName": "embed-v5.0-fast",
+      "displayName": "Embed 5 Fast",
+      "capabilities": [
+        "text_embedding",
+        "multilingual"
+      ],
+      "serviceType": [
+        "embedding"
+      ],
+      "description": "Embed 5 Fast；当前 OpenAI 兼容接入仅声明文本向量能力",
+      "contextWindow": 128000,
+      "extra": {
+        "dimensions": [
+          256,
+          512,
+          768,
+          1024,
+          1536,
+          2048
+        ],
+        "defaultDimension": 2048,
+        "pricingNotes": "Token 单价未由当前官方价格页公开确认；Model Vault 按实例计价。"
+      }
+    },
+    {
+      "modelName": "embed-v5.0-pro",
+      "displayName": "Embed 5 Pro",
+      "capabilities": [
+        "text_embedding",
+        "multilingual"
+      ],
+      "serviceType": [
+        "embedding"
+      ],
+      "description": "Embed 5 Pro；当前 OpenAI 兼容接入仅声明文本向量能力",
+      "contextWindow": 128000,
+      "extra": {
+        "dimensions": [
+          256,
+          512,
+          768,
+          1024,
+          1536,
+          2048
+        ],
+        "defaultDimension": 2048,
+        "pricingNotes": "Token 单价未由当前官方价格页公开确认；Model Vault 按实例计价。"
+      }
+    },
+    {
+      "modelName": "command-a-plus-05-2026",
+      "displayName": "Command A+",
+      "capabilities": [
+        "chat",
+        "reasoning",
+        "vision",
+        "tool_use",
+        "multilingual",
+        "long_context"
+      ],
+      "serviceType": [
+        "chat"
+      ],
+      "description": "Command A+",
+      "contextWindow": 128000,
+      "maxOutputTokens": 64000,
+      "extra": {
+        "pricingNotes": "官方文档声明限流额度内免费；生产 Model Vault 按实例单独计价，不预填 token 单价。",
+        "reasoning": {
+          "supportedEfforts": [
+            "none",
+            "high"
+          ]
+        }
+      }
+    },
+    {
       "modelName": "command-a-03-2025",
       "displayName": "Command A",
       "serviceType": [
         "chat"
       ],
-      "description": "Cohere 旗舰对话模型，256K 上下文，擅长 RAG 和工具调用",
+      "description": "Cohere Command A 文本模型，256K 上下文，支持 RAG 和工具调用",
       "contextWindow": 256000,
       "maxOutputTokens": 8000,
       "capabilities": [
         "chat",
-        "reasoning",
         "code",
-        "vision",
         "tool_use",
         "rag",
         "long_context"

@@ -2,6 +2,141 @@
   "description": "Cohere 系列模型规格。参数来源：config-center compute/providers/cohere.json。包含对话、Embedding 和 Rerank 三类服务。",
   "specs": [
     {
+      "id": "rerank-v4.0-fast",
+      "displayName": "Rerank 4 Fast",
+      "family": "rerank-v4.0-fast",
+      "match": {
+        "exact": [
+          "rerank-v4.0-fast"
+        ]
+      },
+      "spec": {
+        "capabilities": [
+          "rerank",
+          "multilingual"
+        ],
+        "serviceType": [
+          "rerank"
+        ],
+        "description": "Rerank 4 Fast"
+      }
+    },
+    {
+      "id": "embed-v5.0-fast",
+      "displayName": "Embed 5 Fast",
+      "family": "embed-v5.0-fast",
+      "match": {
+        "exact": [
+          "embed-v5.0-fast"
+        ]
+      },
+      "spec": {
+        "capabilities": [
+          "text_embedding",
+          "vision",
+          "multilingual"
+        ],
+        "serviceType": [
+          "embedding"
+        ],
+        "description": "Embed 5 Fast",
+        "contextWindow": 128000,
+        "extra": {
+          "dimensions": [
+            256,
+            512,
+            768,
+            1024,
+            1536,
+            2048
+          ],
+          "defaultDimension": 2048
+        },
+        "releasedAt": "2026-09-30"
+      }
+    },
+    {
+      "id": "rerank-v4.0-pro",
+      "displayName": "Rerank 4 Pro",
+      "family": "rerank-v4.0-pro",
+      "match": {
+        "exact": [
+          "rerank-v4.0-pro"
+        ]
+      },
+      "spec": {
+        "capabilities": [
+          "rerank",
+          "multilingual"
+        ],
+        "serviceType": [
+          "rerank"
+        ],
+        "description": "Rerank 4 Pro"
+      }
+    },
+    {
+      "id": "embed-v5.0-pro",
+      "displayName": "Embed 5 Pro",
+      "family": "embed-v5.0-pro",
+      "match": {
+        "exact": [
+          "embed-v5.0-pro"
+        ]
+      },
+      "spec": {
+        "capabilities": [
+          "text_embedding",
+          "vision",
+          "multilingual"
+        ],
+        "serviceType": [
+          "embedding"
+        ],
+        "description": "Embed 5 Pro",
+        "contextWindow": 128000,
+        "extra": {
+          "dimensions": [
+            256,
+            512,
+            768,
+            1024,
+            1536,
+            2048
+          ],
+          "defaultDimension": 2048
+        },
+        "releasedAt": "2026-09-30"
+      }
+    },
+    {
+      "id": "command-a-plus-05-2026",
+      "displayName": "Command A+",
+      "family": "command-a-plus-05-2026",
+      "match": {
+        "exact": [
+          "command-a-plus-05-2026"
+        ]
+      },
+      "spec": {
+        "capabilities": [
+          "chat",
+          "reasoning",
+          "vision",
+          "tool_use",
+          "multilingual",
+          "long_context"
+        ],
+        "serviceType": [
+          "chat"
+        ],
+        "description": "Command A+",
+        "contextWindow": 128000,
+        "maxOutputTokens": 64000,
+        "supportsReasoning": true
+      }
+    },
+    {
       "id": "north-mini-code",
       "displayName": "North Mini Code",
       "family": "north",
@@ -31,13 +166,11 @@
     {
       "id": "command-a-03-2025",
       "displayName": "Command A",
-      "family": "command-a",
+      "family": "command-a-03-2025",
       "match": {
         "exact": [
-          "command-a-03-2025"
-        ],
-        "patterns": [
-          "command-a*"
+          "command-a-03-2025",
+          "cohere/command-a"
         ]
       },
       "spec": {
@@ -45,9 +178,7 @@
         "maxOutputTokens": 8000,
         "capabilities": [
           "chat",
-          "reasoning",
           "code",
-          "vision",
           "tool_use",
           "rag",
           "long_context"
@@ -56,7 +187,7 @@
           "chat"
         ],
         "defaultTemperature": 0.3,
-        "description": "Cohere 旗舰对话模型，256K 上下文，擅长 RAG 和工具调用"
+        "description": "Cohere Command A 文本模型，256K 上下文，支持 RAG 和工具调用"
       }
     },
     {
