@@ -28,16 +28,8 @@
       "description": "Embed 5 Fast；当前 OpenAI 兼容接入仅声明文本向量能力",
       "contextWindow": 128000,
       "extra": {
-        "dimensions": [
-          256,
-          512,
-          768,
-          1024,
-          1536,
-          2048
-        ],
         "defaultDimension": 2048,
-        "pricingNotes": "Token 单价未由当前官方价格页公开确认；Model Vault 按实例计价。"
+        "pricingNotes": "Token 单价未由当前官方价格页公开确认；Model Vault 按实例计价。 Compatibility API 不接受 dimensions 参数；返回默认维度，多维度选择需原生 Embed API。"
       }
     },
     {
@@ -53,16 +45,8 @@
       "description": "Embed 5 Pro；当前 OpenAI 兼容接入仅声明文本向量能力",
       "contextWindow": 128000,
       "extra": {
-        "dimensions": [
-          256,
-          512,
-          768,
-          1024,
-          1536,
-          2048
-        ],
         "defaultDimension": 2048,
-        "pricingNotes": "Token 单价未由当前官方价格页公开确认；Model Vault 按实例计价。"
+        "pricingNotes": "Token 单价未由当前官方价格页公开确认；Model Vault 按实例计价。 Compatibility API 不接受 dimensions 参数；返回默认维度，多维度选择需原生 Embed API。"
       }
     },
     {
@@ -156,14 +140,8 @@
       "inputPrice": 0.12,
       "outputPrice": 0,
       "extra": {
-        "dimensions": [
-          256,
-          512,
-          1024,
-          1536
-        ],
         "defaultDimension": 1536,
-        "pricingNotes": "Embedding models are priced by embedded tokens; price is per 1M tokens."
+        "pricingNotes": "Embedding models are priced by embedded tokens; price is per 1M tokens. Compatibility API 不接受 dimensions 参数；返回默认维度，多维度选择需原生 Embed API。"
       }
     },
     {

@@ -219,7 +219,7 @@
       ],
       "description": "通义千问3.7 Max，面向复杂推理与长程 Agent 任务的旗舰模型，100万上下文，支持内置工具和 Function Calling",
       "contextWindow": 1000000,
-      "maxOutputTokens": 65536,
+      "maxOutputTokens": 131072,
       "capabilities": [
         "chat",
         "reasoning",
@@ -233,7 +233,9 @@
       "outputPrice": 36,
       "defaultTemperature": 0.6,
       "defaultTopP": 0.95,
-      "extra": {}
+      "extra": {
+        "cacheHitPrice": 2.4
+      }
     },
     {
       "modelName": "qwen3.7-plus",

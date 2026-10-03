@@ -2,6 +2,35 @@
   "description": "阿里通义千问 Qwen 系列模型规格。参数来源：config-center compute/providers/dashscope.json。",
   "specs": [
     {
+      "id": "qwen3.7-max",
+      "displayName": "Qwen3.7 Max",
+      "family": "qwen3.7-max",
+      "match": {
+        "exact": [
+          "qwen3.7-max",
+          "qwen3.7-max-2026-05-20"
+        ]
+      },
+      "spec": {
+        "contextWindow": 1000000,
+        "maxOutputTokens": 131072,
+        "capabilities": [
+          "chat",
+          "reasoning",
+          "code",
+          "multilingual",
+          "tool_use",
+          "long_context"
+        ],
+        "serviceType": [
+          "chat"
+        ],
+        "defaultTemperature": 1,
+        "supportsReasoning": true,
+        "description": "Qwen3.7 Max，纯文本模型，100 万上下文，131072 最大输出；当前版本等同 2026-05-20 快照"
+      }
+    },
+    {
       "id": "qwen3.8-max-prime",
       "displayName": "Qwen3.8 Max Prime",
       "family": "qwen3.8-max-prime",
@@ -320,37 +349,6 @@
           ],
           "defaultMode": "high"
         }
-      }
-    },
-    {
-      "id": "qwen3.7-max",
-      "displayName": "Qwen3.7 Max",
-      "family": "qwen3.7",
-      "match": {
-        "exact": [
-          "qwen3.7-max"
-        ],
-        "patterns": [
-          "qwen3.7-max*"
-        ]
-      },
-      "spec": {
-        "contextWindow": 1000000,
-        "maxOutputTokens": 65536,
-        "capabilities": [
-          "chat",
-          "reasoning",
-          "code",
-          "multilingual",
-          "tool_use",
-          "long_context"
-        ],
-        "serviceType": [
-          "chat"
-        ],
-        "defaultTemperature": 1,
-        "supportsReasoning": true,
-        "description": "通义千问 Qwen3.7 Max 旗舰模型，100 万上下文"
       }
     },
     {
@@ -1006,35 +1004,6 @@
         ],
         "defaultTemperature": 0.7,
         "description": "通义千问3 Coder 编程模型（通过 OpenRouter 提供，:free 层）"
-      }
-    },
-    {
-      "id": "qwen3.7-max",
-      "displayName": "Qwen3.7 Max",
-      "family": "qwen3.7",
-      "match": {
-        "exact": [
-          "qwen3.7-max"
-        ]
-      },
-      "spec": {
-        "contextWindow": 500000,
-        "maxOutputTokens": 65536,
-        "capabilities": [
-          "chat",
-          "reasoning",
-          "code",
-          "vision",
-          "tool_use",
-          "agent",
-          "deep_thinking"
-        ],
-        "serviceType": [
-          "chat"
-        ],
-        "defaultTemperature": 0.7,
-        "supportsReasoning": true,
-        "description": "阿里通义千问 Qwen3.7 Max，原生 1M 上下文，Hybrid MoE 架构"
       }
     },
     {
