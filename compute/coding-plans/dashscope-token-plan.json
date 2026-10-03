@@ -303,10 +303,6 @@
       "extra": {
         "supportsThinking": true,
         "thinkingDefault": true,
-        "reasoningEffort": [
-          "high",
-          "max"
-        ],
         "reasoning": {
           "supportedEfforts": [
             "high",
@@ -405,7 +401,7 @@
       ],
       "description": "百炼 Token Plan，通义千问 3.7 Max，1M 上下文，面向复杂推理与长程 Agent 任务",
       "contextWindow": 1000000,
-      "maxOutputTokens": 65536,
+      "maxOutputTokens": 131072,
       "capabilities": [
         "chat",
         "reasoning",

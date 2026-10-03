@@ -94,7 +94,7 @@
         ]
       },
       "spec": {
-        "contextWindow": 1048576,
+        "contextWindow": 1000000,
         "maxOutputTokens": 512000,
         "capabilities": [
           "chat",
@@ -142,8 +142,7 @@
           "chat",
           "reasoning",
           "code",
-          "tool_use",
-          "vision"
+          "tool_use"
         ],
         "serviceType": [
           "chat",
@@ -210,8 +209,7 @@
           "reasoning",
           "code",
           "tool_use",
-          "fast",
-          "vision"
+          "fast"
         ],
         "serviceType": [
           "fast"
@@ -575,10 +573,11 @@
     {
       "id": "MiniMax-Hailuo-2.3-Fast",
       "displayName": "海螺视频 2.3 快速版",
-      "family": "minimax-hailuo",
+      "family": "minimax-hailuo-2.3-fast",
       "match": {
         "exact": [
-          "MiniMax-Hailuo-2.3-Fast"
+          "MiniMax-Hailuo-2.3-Fast",
+          "MiniMax-Hailuo-2.3-fast"
         ]
       },
       "spec": {
@@ -593,6 +592,18 @@
           "video_gen"
         ],
         "description": "海螺视频快速版本（仅图生视频），生成速度更快"
+      },
+      "routing": {
+        "tier": "lightweight",
+        "routingPriority": 101,
+        "eligibleForAgent": false,
+        "defaultReference": false,
+        "reasoning": {
+          "supportedModes": [
+            "auto"
+          ],
+          "defaultMode": "auto"
+        }
       }
     },
     {
@@ -679,7 +690,7 @@
         "serviceType": [
           "music_gen"
         ],
-        "description": "MiniMax AI 音乐生成模型，支持音乐灵感描述和歌词输入"
+        "description": "MiniMax AI 音乐生成模型，支持音乐灵感描述和歌词输入；音乐付费 API 自2026-08-20起仅历史付费用户可继续使用，不向新用户开放；免费音乐接口已停止服务"
       }
     },
     {
@@ -701,7 +712,7 @@
         "serviceType": [
           "music_gen"
         ],
-        "description": "MiniMax AI 音乐生成（2.5+ 版），音质提升"
+        "description": "MiniMax AI 音乐生成（2.5+ 版），音质提升；音乐付费 API 自2026-08-20起仅历史付费用户可继续使用，不向新用户开放；免费音乐接口已停止服务"
       }
     },
     {
@@ -723,7 +734,7 @@
         "serviceType": [
           "music_gen"
         ],
-        "description": "MiniMax AI 音乐生成（2.5 版）"
+        "description": "MiniMax AI 音乐生成（2.5 版）；音乐付费 API 自2026-08-20起仅历史付费用户可继续使用，不向新用户开放；免费音乐接口已停止服务"
       }
     },
     {
@@ -744,36 +755,7 @@
         "serviceType": [
           "music_gen"
         ],
-        "description": "MiniMax AI 翻唱模型，基于参考音频生成翻唱版本"
-      }
-    },
-    {
-      "id": "MiniMax-Hailuo-2.3-fast",
-      "displayName": "海螺视频 2.3 快速版",
-      "spec": {
-        "capabilities": [
-          "chat",
-          "video_generation",
-          "image_to_video",
-          "camera_control",
-          "fast",
-          "chinese_optimized"
-        ],
-        "serviceType": [
-          "video_gen"
-        ]
-      },
-      "routing": {
-        "tier": "lightweight",
-        "routingPriority": 101,
-        "eligibleForAgent": false,
-        "defaultReference": false,
-        "reasoning": {
-          "supportedModes": [
-            "auto"
-          ],
-          "defaultMode": "auto"
-        }
+        "description": "MiniMax AI 翻唱模型，基于参考音频生成翻唱版本；音乐付费 API 自2026-08-20起仅历史付费用户可继续使用，不向新用户开放；免费音乐接口已停止服务"
       }
     }
   ]

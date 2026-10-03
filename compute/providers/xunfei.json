@@ -9,32 +9,17 @@
   "enabled": false,
   "status": "unconfigured",
   "priceCurrency": "CNY",
-  "services": ["chat", "reasoning"],
+  "services": [
+    "chat",
+    "reasoning"
+  ],
   "models": [
-    {
-      "modelName": "spark-x",
-      "displayName": "讯飞星火 X1",
-      "serviceType": ["reasoning"],
-      "description": "讯飞深度推理模型（X2），输入64K/输出128K，支持思考模式与函数调用",
-      "contextWindow": 65536,
-      "maxOutputTokens": 128000,
-      "capabilities": [
-        "chat",
-        "reasoning",
-        "deep_thinking",
-        "math",
-        "code"
-      ],
-      "defaultTemperature": 1.2,
-      "defaultTopP": 0.95,
-      "extra": {
-        "pricingNote": "官方公开文档说明模型价格以控制台及实际购买页为准，未公开固定 token 单价"
-      }
-    },
     {
       "modelName": "4.0Ultra",
       "displayName": "讯飞星火 4.0 Ultra",
-      "serviceType": ["chat"],
+      "serviceType": [
+        "chat"
+      ],
       "description": "讯飞星火最强通用模型，支持推理、代码和工具调用",
       "contextWindow": 32768,
       "maxOutputTokens": 32768,
@@ -50,5 +35,8 @@
         "pricingNote": "官方公开文档说明模型价格以控制台及实际购买页为准，未公开固定 token 单价"
       }
     }
+  ],
+  "tombstones": [
+    "spark-x"
   ]
 }

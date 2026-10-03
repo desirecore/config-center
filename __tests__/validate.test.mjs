@@ -446,16 +446,17 @@ describe('真实数据全量校验', () => {
     assert.equal(Number(watermark.trim().split(/\s+/).at(-1)), 1784554658)
   })
 
-  it('Ox Alpha 应提供与 OpenRouter 一致的多模态推理规格', () => {
+  it('OpenRouter 不再预置当前官网目录未列出的 Ox Alpha，历史兼容规格保留', () => {
     const provider = JSON.parse(readFileSync(join(ROOT, 'compute', 'providers', 'openrouter.json'), 'utf8'))
     const specFile = JSON.parse(readFileSync(join(ROOT, 'compute', 'model-specs', 'stealth.json'), 'utf8'))
     const model = provider.models.find((item) => item.modelName === 'stealth/ox-alpha')
     const modelSpec = specFile.specs.find((item) => item.id === 'ox-alpha')
 
-    assert.ok(model, 'OpenRouter provider 缺少 stealth/ox-alpha')
+    assert.equal(model, undefined)
+    assert.ok(provider.tombstones.includes('stealth/ox-alpha'))
     assert.ok(modelSpec, 'model-specs 缺少 ox-alpha')
 
-    for (const item of [model, modelSpec.spec]) {
+    for (const item of [modelSpec.spec]) {
       assert.equal(item.contextWindow, 1048576)
       assert.equal(item.maxOutputTokens, 131072)
       assert.equal(item.defaultTemperature, 1)
@@ -465,11 +466,6 @@ describe('真实数据全量校验', () => {
       assert.ok(item.capabilities.includes('video_understanding'))
     }
 
-    assert.deepEqual(model.extra.reasoning.supportedEfforts, ['low', 'high', 'max'])
-    assert.equal(model.extra.reasoning.defaultEffort, 'max')
-    assert.equal(model.extra.thinking.disableSupported, false)
-    assert.equal(model.inputPrice, 0)
-    assert.equal(model.outputPrice, 0)
     assert.deepEqual(modelSpec.match.exact, ['ox-alpha', 'stealth/ox-alpha'])
     assert.equal(modelSpec.spec.supportsReasoning, true)
     assert.equal(modelSpec.spec.releasedAt, '2026-08-21')
@@ -941,14 +937,18 @@ describe('真实数据全量校验', () => {
     assert.equal(kimi.extra.reasoning.defaultEffort, 'max')
     assert.deepEqual(kimiSpec.routing.reasoning.supportedModes, ['auto', 'low', 'high', 'max'])
     assert.equal(kimi.maxOutputTokens, 1048576)
-    assert.equal(kimi.inputPrice, undefined, '不把国际美元价混写到国内人民币 Provider')
+    assert.equal(kimi.inputPrice, 20, '采用国内官网人民币单价，不换算国际美元价')
+    assert.equal(kimi.outputPrice, 100)
+    assert.equal(kimi.extra.cacheHitPrice, 2)
     const previewId = 'MiniMax-M3.1-Flash-Preview'
     const preview = findModel('coding-plans', 'minimax-coding', previewId)
     assert.equal(preview.extra.thinkingOnly, true)
     assert.equal(preview.extra.reasoning.defaultEffort, 'max')
     assert.equal(read('providers', 'minimax').models.some((item) => item.modelName === previewId), false)
     const embed = findModel('providers', 'cohere', 'embed-v5.0-pro')
-    assert.deepEqual(embed.extra.dimensions, [256, 512, 768, 1024, 1536, 2048])
+    assert.equal(embed.extra.dimensions, undefined, '当前兼容 API 不支持 dimensions 参数')
+    const intrinsicEmbed = read('model-specs', 'cohere').specs.find((item) => item.id === 'embed-v5.0-pro')
+    assert.deepEqual(intrinsicEmbed.spec.extra.dimensions, [256, 512, 768, 1024, 1536, 2048])
     assert.equal(embed.inputPrice, undefined)
     assert.equal(read('providers', 'cohere').models.some((item) => item.modelName === 'rerank-v4.0-fast'), false, '不向 OpenAI 兼容端点声明原生 Rerank 接入')
     assert.ok(read('model-specs', 'cohere').specs.some((item) => item.id === 'rerank-v4.0-fast'))
@@ -991,6 +991,30 @@ describe('真实数据全量校验', () => {
     assert.equal(normalize(command.family) === 'command-a' || 'command-a-plus'.startsWith(normalize(command.family) + '-'), false)
     assert.equal((command.match.patterns ?? []).length, 0)
     assert.equal((command.match.exact ?? []).map(normalize).includes('command-a-plus'), false)
+  })
+
+  it('官网复核修正 Qwen 重复规格、Fast 大小写别名与 OpenRouter 动态价格', () => {
+    const read = (folder, name) => JSON.parse(readFileSync(join(ROOT, 'compute', folder, `${name}.json`), 'utf8'))
+    const qwen = read('model-specs', 'qwen').specs.filter((item) => item.id === 'qwen3.7-max')
+    assert.equal(qwen.length, 1)
+    assert.equal(qwen[0].spec.contextWindow, 1000000)
+    assert.equal(qwen[0].spec.maxOutputTokens, 131072)
+    assert.equal(qwen[0].spec.capabilities.includes('vision'), false)
+    for (const [folder, name] of [['providers', 'dashscope'], ['coding-plans', 'dashscope-token-plan']]) {
+      assert.equal(read(folder, name).models.find((item) => item.modelName === 'qwen3.7-max').maxOutputTokens, 131072)
+    }
+    const fast = read('model-specs', 'minimax').specs.filter((item) => item.id.toLowerCase() === 'minimax-hailuo-2.3-fast')
+    assert.equal(fast.length, 1)
+    assert.deepEqual(fast[0].match.exact, ['MiniMax-Hailuo-2.3-Fast', 'MiniMax-Hailuo-2.3-fast'])
+    assert.equal(fast[0].routing.eligibleForAgent, false)
+    const router = read('providers', 'openrouter')
+    const auto = router.models.find((item) => item.modelName === 'openrouter/auto')
+    assert.equal(auto.inputPrice, undefined)
+    assert.equal(auto.outputPrice, undefined)
+    for (const id of ['stealth/ox-alpha', 'openai/gpt-oss-120b:free', 'qwen/qwen3-coder:free']) {
+      assert.equal(router.models.some((item) => item.modelName === id), false)
+      assert.ok(router.tombstones.includes(id))
+    }
   })
 
   it('所有 Provider 应按供应商归属计价，模型来源不覆盖供应商币种', () => {
@@ -1042,7 +1066,7 @@ describe('真实数据全量校验', () => {
       )
     }
 
-    assert.deepEqual(actualProviders.sort(), Object.keys(expectedCurrencies).sort())
+    assert.deepEqual([...new Set(actualProviders)].sort(), Object.keys(expectedCurrencies).sort())
   })
 
   it('MiniMax 应使用国内开放平台人民币价', () => {

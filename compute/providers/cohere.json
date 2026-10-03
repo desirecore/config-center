@@ -28,16 +28,8 @@
       "description": "Embed 5 Fast；当前 OpenAI 兼容接入仅声明文本向量能力",
       "contextWindow": 128000,
       "extra": {
-        "dimensions": [
-          256,
-          512,
-          768,
-          1024,
-          1536,
-          2048
-        ],
         "defaultDimension": 2048,
-        "pricingNotes": "Token 单价未由当前官方价格页公开确认；Model Vault 按实例计价。"
+        "pricingNotes": "Token 单价未由当前官方价格页公开确认；Model Vault 按实例计价。 Compatibility API 不接受 dimensions 参数；返回默认维度，多维度选择需原生 Embed API。"
       }
     },
     {
@@ -53,16 +45,8 @@
       "description": "Embed 5 Pro；当前 OpenAI 兼容接入仅声明文本向量能力",
       "contextWindow": 128000,
       "extra": {
-        "dimensions": [
-          256,
-          512,
-          768,
-          1024,
-          1536,
-          2048
-        ],
         "defaultDimension": 2048,
-        "pricingNotes": "Token 单价未由当前官方价格页公开确认；Model Vault 按实例计价。"
+        "pricingNotes": "Token 单价未由当前官方价格页公开确认；Model Vault 按实例计价。 Compatibility API 不接受 dimensions 参数；返回默认维度，多维度选择需原生 Embed API。"
       }
     },
     {
@@ -109,7 +93,7 @@
         "long_context"
       ],
       "inputPrice": 2.5,
-      "outputPrice": 10.0,
+      "outputPrice": 10,
       "defaultTemperature": 0.3,
       "defaultTopP": 0.75,
       "extra": {
@@ -156,34 +140,12 @@
       "inputPrice": 0.12,
       "outputPrice": 0,
       "extra": {
-        "dimensions": [
-          256,
-          512,
-          1024,
-          1536
-        ],
         "defaultDimension": 1536,
-        "pricingNotes": "Embedding models are priced by embedded tokens; price is per 1M tokens."
-      }
-    },
-    {
-      "modelName": "rerank-v3.5",
-      "displayName": "Rerank V3.5",
-      "serviceType": [
-        "rerank"
-      ],
-      "description": "Cohere 语义重排序模型，用于检索结果精排，默认单文档截断 4096 token",
-      "contextWindow": 4096,
-      "maxOutputTokens": 0,
-      "capabilities": [
-        "rerank",
-        "semantic_reranking"
-      ],
-      "inputPrice": 2.0,
-      "outputPrice": 0,
-      "extra": {
-        "pricingNotes": "Cohere Rerank is priced by search units, not input/output tokens; one search unit is one query with up to 100 documents. The token price fields are retained for schema compatibility."
+        "pricingNotes": "Embedding models are priced by embedded tokens; price is per 1M tokens. Compatibility API 不接受 dimensions 参数；返回默认维度，多维度选择需原生 Embed API。"
       }
     }
+  ],
+  "tombstones": [
+    "rerank-v3.5"
   ]
 }

@@ -1,0 +1,84 @@
+# 项目协作规范
+
+本文件是本仓库唯一的 Agent 工作规范入口。开始修改配置、文档或校验脚本前先阅读本文件；具体来源导航见 [docs/model-sources/README.md](docs/model-sources/README.md)。用户在当前会话明确给出的要求优先，同一任务内已有提交/合并授权不因后续修正而自动失效，不将其扩展到无关任务。
+
+## 工作区与子模块
+
+- 建立 worktree 时务必拉取最新子模块代码。若存在子模块，先同步配置，再初始化并更新到所跟踪分支的最新提交：
+
+  ```bash
+  git submodule sync --recursive
+  git submodule update --init --recursive --remote
+  ```
+
+- 检查并记录子模块 HEAD、目标分支和 gitlink 差异；保留与当前任务无关的改动，不默认将无关 gitlink 变化一并提交。
+- 修改前检查 `git status --short`，拉取 `origin/main` 并确认当前工作基线。不得覆盖、reset 或顺带格式化无关文件，尤其是用户已有的 `logs/`、环境和缓存。
+- 分支默认使用 `work/` 前缀。未明确要求新 worktree 时优先复用合适工作区。
+
+## 提交身份
+
+| 项目 | 规则 |
+| --- | --- |
+| Commit 身份 | 仅以用户身份提交，**禁止**添加 `Co-Authored-By`、AI 署名或任何 AI 辅助标记 |
+
+## Provider 数据向后兼容规约（强制）
+
+`schemas/provider.schema.json` 是已发布客户端的兼容契约（frozen baseline），推送数据前必须理解两类变更的风险差异：
+
+| 变更类型 | 风险 | 规则 |
+| --- | --- | --- |
+| **已知字段扩 enum 值**（如 `credentialSource` 加新值） | **毒丸**：老客户端把「已知字段的非法枚举值」判为结构性错误。pre-#1021（≤10.0.82）客户端会整份拒绝合并 → 停收所有预设更新；新装用户 compute.json 建不出来 | 必须先发布并**铺开**支持该值的客户端版本，再推送数据（v68/v69 事故教训，见 desirecore #1016/#1021） |
+| **新增可选字段** | 安全：已铺开韧性（#848/#1021）的客户端把它当未知字段（读时内存剥离、写时原样保留） | 先在 desirecore 主仓 `computeProviderSchema` 声明该字段（否则新客户端也读不到），再更新本仓 schema，最后推数据 |
+
+**requiredClientVersion 强制规约**：
+
+- 新增依赖新凭据源（`credentialSource` 新值）或新客户端能力的 provider 时，**必须**声明 `requiredClientVersion`（取包含该能力支持的客户端发布版本号）。≥ desirecore #1038 的客户端据此把不满足版本的 provider 优雅门控为「需更新客户端」
+- 注意它保护不了 pre-#1038 的存量客户端——enum 扩值场景仍必须遵守上表第一行的"先发版铺开"规则，二者不可互替
+- 降低/解除版本要求时**改为更小版本号**（如 `0.0.0`）而非删除字段：客户端预设合并只遍历上游存在的字段，不回传字段删除
+
+## 每次更新前必须核查
+
+| 核查项 | 必须核查的内容 |
+| --- | --- |
+| 当前基线 | 最新 `origin/main`、当前提交、工作区改动、远端 manifest 版本；不要用过期分支或旧快照判断线上配置 |
+| 更新范围 | 哪些原厂模型、哪个 API/订阅/套餐、哪个地域；列出受影响 Provider、ModelSpec、索引、service-map、测试与文档 |
+| 官方证据 | 打开对应供应商 `SOURCES.md` 与单模型/接入面文件；实际读取官网正文、官方 API 或官方仓库；核对最终跳转域名、读取日期和失败/页面壳状态 |
+| 精确身份 | API 模型 ID、大小写、日期版本、别名、默认路由名称；检查重复 ID、归一化冲突与 exact/pattern/family 是否误吞其他代际 |
+| 当前可用性 | 正式/预览/历史/退役状态及停止服务时间；原厂存在不代表某套餐提供，公共目录缺失不直接证明原厂退役 |
+| 输入输出限制 | 上下文、最大输入、最大输出、默认输出、思维链预算；优先官网明文整数，K/M 简写写清换算，输入/输出独立限制不可混作总窗口 |
+| 模态与工具 | 文本、图片、音频、视频的输入/输出能力；工具调用、结构化输出、联网搜索是否由该接入面实际支持 |
+| 推理与采样 | 支持的 effort、默认档、能否关闭思考、adaptive/budget 形态、thinking 回放、temperature/top_p/top_k 和强制 tool_choice 限制 |
+| 端点与版本 | baseUrl、API 格式、媒体端点、凭据来源、所需客户端版本；不向未适配协议的 Provider 放入新型号，也不新增未被客户端读取的扩展键 |
+| 计价 | Provider 的币种/地域、token/图片/秒/字符/search unit/实例单位；原价/限时优惠、缓存写读、阶梯/峰谷分别核对；未知价格省略，动态占位不是免费 |
+| 本仓策略 | tier、routingPriority、defaultReference、Agent 可选性等本仓选择与原厂事实分开；没有依据时不扩大自动路由范围 |
+| 兼容同步 | Provider 副本、共享规格、套餐模型表及版本清单是否一致；Schema 是否接受，老客户端是否已支持；移除需检查 tombstones 与所有实际别名 |
+| 核验边界 | 只将实际核实字段记为已核；不能把 ID 存在、HTTP 200、Schema/构建成功或其他平台参数说成全部参数核实或账号实测通过 |
+
+## 修改与来源记录规则
+
+- 数据主文件仍是 `compute/**` JSON。共享规格不包含价格；接入面推理 effort、回放能力不能混入共享规格；官网没有支持的新字段先查客户端和 frozen schema。
+- 来源使用细分目录：`docs/model-sources/providers/<supplier>/SOURCES.md` 保存官网证据；`models/<model-id>.md` 每个模型独立记录；`access/<category>--<config-id>.md` 每个接入面独立记录；README 只保留导航。
+- 一个模型在原厂、订阅、套餐和聚合平台上的差异分段记录，不合并价格/窗口/可用性。同名不等于同一接入合同；文件名规范见维护指南。
+- 基于已有文件增量编辑，保留既有证据、日期、待核实项和历史说明。批量迁移目录只能迁移记录，不能凭迁移提高核验状态或刷新核验日期。
+- 同步单模型参数详情、字段→官网引用、核验状态和模型指纹；平台字段变化时更新单接入面文件及平台指纹。禁止只换指纹来掩盖未重新核实的数据。
+- `partial` 只核实列出的字段，`pending` 尚缺字段级证据，`historical` 仅作历史兼容。来源目录读取失败、返回壳或需要权限时如实记录，不用第三方补数。
+- 修改共享规格时同步更新 `compute/model-specs/_index.json` 的数据批次说明；已核客户端使用该索引 mtime 失效规格缓存，仅修改单个规格文件可能不触发重读。
+- 非模型官方 API 契约与本仓定价/默认策略分别记录在 `docs/data-sources`；运行时官方目录、归档摘要及 Hatch pin 记录在 `docs/runtime-sources`。离线来源校验只验证配置与记录一致，联网刷新和安装/账号验收分别进行。
+- 数据变化时基于最新远端版本递增 `manifest.json#presetDataVersion` 并更新日期；仅文档结构/工作规范调整不改变预设数据版本。
+- 禁止将 API Key、密码、Token、私有运行时配置写入聊天、文档、日志或源码。来源链接不含凭据，官网内容只保存必要摘要/指纹与核验结论。
+
+## 提交前与发布核查
+
+```bash
+npm run validate:sources
+npm run validate:data-sources
+npm run validate:runtimes
+npm run validate
+npm test
+git diff --check
+```
+
+- 来源校验必须保持完整覆盖、模型/平台指纹、参数详情、来源引用与官网域名归属检查；拆分或调整文档格式时补充对应回归，不降低原有校验。
+- 只暂存当前任务文件并检查 `git diff --cached --check`。配置校验不是账号调用验收；需要且已有测试账号授权时做聚焦实测并记录限制。
+- 有提交/合并授权时完成 PR 和远端复查：确认最新 base、精确 head、required checks 全绿、`CLEAN`、`MERGEABLE`、零未解决 review threads；使用 `--match-head-commit` 合并，不绕过保护。
+- 合并后确认远端 main、manifest 与实际更改，检查合并后的 CI；说明真实完成范围、剩余待核实项与客户端后台同步边界。
