@@ -575,10 +575,11 @@
     {
       "id": "MiniMax-Hailuo-2.3-Fast",
       "displayName": "海螺视频 2.3 快速版",
-      "family": "minimax-hailuo",
+      "family": "minimax-hailuo-2.3-fast",
       "match": {
         "exact": [
-          "MiniMax-Hailuo-2.3-Fast"
+          "MiniMax-Hailuo-2.3-Fast",
+          "MiniMax-Hailuo-2.3-fast"
         ]
       },
       "spec": {
@@ -593,6 +594,18 @@
           "video_gen"
         ],
         "description": "海螺视频快速版本（仅图生视频），生成速度更快"
+      },
+      "routing": {
+        "tier": "lightweight",
+        "routingPriority": 101,
+        "eligibleForAgent": false,
+        "defaultReference": false,
+        "reasoning": {
+          "supportedModes": [
+            "auto"
+          ],
+          "defaultMode": "auto"
+        }
       }
     },
     {
@@ -745,35 +758,6 @@
           "music_gen"
         ],
         "description": "MiniMax AI 翻唱模型，基于参考音频生成翻唱版本"
-      }
-    },
-    {
-      "id": "MiniMax-Hailuo-2.3-fast",
-      "displayName": "海螺视频 2.3 快速版",
-      "spec": {
-        "capabilities": [
-          "chat",
-          "video_generation",
-          "image_to_video",
-          "camera_control",
-          "fast",
-          "chinese_optimized"
-        ],
-        "serviceType": [
-          "video_gen"
-        ]
-      },
-      "routing": {
-        "tier": "lightweight",
-        "routingPriority": 101,
-        "eligibleForAgent": false,
-        "defaultReference": false,
-        "reasoning": {
-          "supportedModes": [
-            "auto"
-          ],
-          "defaultMode": "auto"
-        }
       }
     }
   ]

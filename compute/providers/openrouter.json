@@ -290,51 +290,11 @@
       "maxOutputTokens": 128000
     },
     {
-      "modelName": "stealth/ox-alpha",
-      "displayName": "Ox Alpha (免费)",
-      "serviceType": [
-        "chat",
-        "reasoning",
-        "vision"
-      ],
-      "description": "通过 OpenRouter 免费使用的 Ox Alpha，面向编程、长程 Agent 与复杂推理，支持文本、图片和视频输入",
-      "contextWindow": 1048576,
-      "maxOutputTokens": 131072,
-      "capabilities": [
-        "chat",
-        "reasoning",
-        "deep_thinking",
-        "code",
-        "tool_use",
-        "agent",
-        "long_context",
-        "vision",
-        "image_understanding",
-        "video_understanding"
-      ],
-      "inputPrice": 0.00,
-      "outputPrice": 0.00,
-      "defaultTemperature": 1,
-      "defaultTopP": 0.95,
-      "extra": {
-        "reasoning": {
-          "supportedEfforts": [
-            "low",
-            "high",
-            "max"
-          ],
-          "defaultEffort": "max"
-        },
-        "thinking": {
-          "default": "enabled",
-          "disableSupported": false
-        }
-      }
-    },
-    {
       "modelName": "openrouter/auto",
       "displayName": "OpenRouter Auto",
-      "serviceType": ["chat"],
+      "serviceType": [
+        "chat"
+      ],
       "description": "OpenRouter 自动路由，智能选择最优模型",
       "contextWindow": 2000000,
       "maxOutputTokens": 16384,
@@ -342,48 +302,16 @@
         "chat",
         "auto_routing"
       ],
-      "inputPrice": 0.00,
-      "outputPrice": 0.00,
       "defaultTemperature": 1,
       "defaultTopP": 1,
-      "extra": {}
-    },
-    {
-      "modelName": "openai/gpt-oss-120b:free",
-      "displayName": "GPT-OSS 120B (免费)",
-      "serviceType": ["chat"],
-      "description": "通过 OpenRouter 免费使用的 OpenAI GPT-OSS 120B",
-      "contextWindow": 131072,
-      "maxOutputTokens": 131072,
-      "capabilities": [
-        "chat",
-        "reasoning",
-        "code"
-      ],
-      "inputPrice": 0.00,
-      "outputPrice": 0.00,
-      "defaultTemperature": 1,
-      "defaultTopP": 1,
-      "extra": {}
-    },
-    {
-      "modelName": "qwen/qwen3-coder:free",
-      "displayName": "Qwen3 Coder 480B (免费)",
-      "serviceType": ["chat"],
-      "description": "通过 OpenRouter 免费使用的 Qwen3 Coder 480B",
-      "contextWindow": 262000,
-      "maxOutputTokens": 262000,
-      "capabilities": [
-        "code",
-        "reasoning",
-        "agent",
-        "tool_use"
-      ],
-      "inputPrice": 0.00,
-      "outputPrice": 0.00,
-      "defaultTemperature": 1,
-      "defaultTopP": 1,
-      "extra": {}
+      "extra": {
+        "pricingNotes": "OpenRouter Models API 的 prompt/completion=-1 为动态路由占位值，实际价格取决于选中的模型，不代表免费。"
+      }
     }
+  ],
+  "tombstones": [
+    "stealth/ox-alpha",
+    "openai/gpt-oss-120b:free",
+    "qwen/qwen3-coder:free"
   ]
 }
