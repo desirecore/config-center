@@ -78,11 +78,12 @@ export function parseSourcePage(text) {
     if (cells.length !== 7) throw new Error('来源表必须有 7 列')
     const id = cells[0].match(/^`([^`]+)`$/)?.[1]
     const fingerprint = cells[6].match(/^`([a-f0-9]{64})`$/)?.[1]
-    const fieldSources = [...cells[3].matchAll(/`([^`]+)`→\[([\w-]+)\]\(#([\w-]+)\)/g)].map((m) => ({ field: m[1], source: m[2], anchor: m[3] }))
-    const sources = [...cells[4].matchAll(/\[([\w-]+)\]\(#([\w-]+)\)/g)].map((m) => ({ source: m[1], anchor: m[2] }))
+    const fieldSources = [...cells[3].matchAll(/`([^`]+)`→\[([\w-]+)\]\(([^)]*?)#([\w-]+)\)/g)].map((m) => ({ field: m[1], source: m[2], target: m[3], anchor: m[4] }))
+    const sources = [...cells[4].matchAll(/\[([\w-]+)\]\(([^)]*?)#([\w-]+)\)/g)].map((m) => ({ source: m[1], target: m[2], anchor: m[3] }))
     records.push({ config, id, fingerprint, fieldSources, sources, status: cells[5], limits: cells[1], pricing: cells[2] })
   }
-  return { metadata, records, configFingerprints }
+  const details = [...text.matchAll(/<!-- source-details: (\{[^\n]+\}) -->\s*```json\s*([\s\S]*?)\s*```\s*<!-- source-details:end -->/g)].map((m) => ({ ...JSON.parse(m[1]), fields: JSON.parse(m[2]) }))
+  return { metadata, records, configFingerprints, details }
 }
 
 export function validateSources(root = ROOT) {
@@ -103,12 +104,31 @@ export function validateSources(root = ROOT) {
   const dir = join(root, 'docs/model-sources/providers')
   let pages = 0, partial = 0, pending = 0, historical = 0
   if (!existsSync(dir)) errors.push('缺少 docs/model-sources/providers')
-  for (const file of existsSync(dir) ? readdirSync(dir).filter((f) => f.endsWith('.md')) : []) {
-    pages++
+  const walk = (folder) => readdirSync(folder, { withFileTypes: true }).flatMap((item) => {
+    const path = join(folder, item.name)
+    return item.isDirectory() ? walk(path) : item.name.endsWith('.md') ? [path] : []
+  })
+  for (const path of existsSync(dir) ? walk(dir) : []) {
+    const file = relative(dir, path)
     let page
-    const text = readFileSync(join(dir, file), 'utf8')
+    const text = readFileSync(path, 'utf8')
+    if (!text.includes('<!-- source-metadata:start -->') && !text.includes('<!-- source-config:')) continue
+    pages++
     try { page = parseSourcePage(text) } catch (e) { errors.push(`${file}: ${e.message}`); continue }
-    const { metadata, records, configFingerprints } = page
+    let evidenceText = text
+    const { records, configFingerprints, details } = page
+    let { metadata } = page
+    if (metadata.sourceCatalog) {
+      if (metadata.sourceCatalog !== '../SOURCES.md') { errors.push(`${file}: 非法官网证据目录引用`); continue }
+      const catalogPath = resolve(dirname(path), metadata.sourceCatalog)
+      if (!existsSync(catalogPath)) { errors.push(`${file}: 官网证据目录不存在`); continue }
+      try {
+        evidenceText = readFileSync(catalogPath, 'utf8')
+        const catalog = parseSourcePage(evidenceText).metadata
+        if (catalog.supplier !== metadata.supplier) { errors.push(`${file}: 官网证据目录供应商不一致`); continue }
+        metadata = { ...metadata, sources: catalog.sources }
+      } catch (e) { errors.push(`${file}: 官网证据目录 ${e.message}`); continue }
+    }
     for (const [config, fingerprint] of configFingerprints) {
       if (!configurations.has(config)) errors.push(`${file}: 无对应配置 ${config}`)
       else if (configFingerprint(configurations.get(config)) !== fingerprint) errors.push(`${config}: 端点/协议/平台元数据来源记录过期`)
@@ -132,10 +152,22 @@ export function validateSources(root = ROOT) {
       if (src.contentSha256 != null && !/^[a-f0-9]{64}$/.test(src.contentSha256)) errors.push(`${file}#${src.id}: 无效官网内容摘要`)
       if (!['official-doc', 'official-api', 'official-repository', 'official-announcement'].includes(src.kind)) errors.push(`${file}#${src.id}: 不允许第三方来源类型`)
       if (!['fetched', 'shell', 'unreadable'].includes(src.retrieval) || !dateValid(src.checkedAt)) errors.push(`${file}#${src.id}: 缺少读取状态或日期`)
-      if (!text.includes(`### ${src.id}\n`)) errors.push(`${file}#${src.id}: 缺少人读来源锚点`)
+      if (!evidenceText.includes(`### ${src.id}\n`)) errors.push(`${file}#${src.id}: 缺少人读来源锚点`)
+    }
+    const detailAddresses = new Set()
+    for (const detail of details) {
+      const address = `${detail.config}#${detail.id}`
+      const row = inventory.get(address)?.row
+      if (!row) { errors.push(`${file}: 参数详情没有对应模型 ${address}`); continue }
+      if (detailAddresses.has(address)) errors.push(`${address}: 参数详情重复`)
+      detailAddresses.add(address)
+      for (const [key, value] of Object.entries(detail.fields)) {
+        if (get(row, key) === undefined || modelFingerprint(get(row, key)) !== modelFingerprint(value)) errors.push(`${address}: 参数详情与配置不一致 ${key}`)
+      }
     }
     for (const rec of records) {
       const address = `${rec.config}#${rec.id}`
+      if (metadata.sourceCatalog && !detailAddresses.has(address)) errors.push(`${address}: 单模型文档缺少参数详情`)
       if (documented.has(address)) errors.push(`${address}: 来源记录重复`)
       documented.add(address)
       if (configSupplier(rec.config) !== metadata.supplier) errors.push(`${address}: 来源页面供应商与配置归属不一致`)
@@ -150,7 +182,7 @@ export function validateSources(root = ROOT) {
       if (rec.status === 'pending' && rec.fieldSources.length > 0) errors.push(`${address}: pending 不应包含已核字段`)
       if (rec.sources.length === 0) errors.push(`${address}: 缺少官网入口`)
       for (const ref of [...rec.sources, ...rec.fieldSources]) {
-        if (!sources.has(ref.source) || ref.anchor !== ref.source) errors.push(`${address}: 无效来源引用 ${ref.source}`)
+        if (!sources.has(ref.source) || ref.anchor !== ref.source || ref.target !== (metadata.sourceCatalog ?? '')) errors.push(`${address}: 无效来源引用 ${ref.source}`)
       }
       for (const proof of rec.fieldSources) {
         if (get(current.row, proof.field) === undefined) errors.push(`${address}: 已核字段不存在 ${proof.field}`)

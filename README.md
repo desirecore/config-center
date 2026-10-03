@@ -88,7 +88,7 @@ CI（GitHub Actions）会在每个 PR 自动运行 `validate` 和 `test`，不�
 
 ## 数据修改流程
 
-官网来源、字段级核验状态与更新流程统一记录在 [docs/model-sources/README.md](docs/model-sources/README.md)。新增或修改模型条目时，必须增量更新对应供应商 Markdown；来源记录指纹过期会导致 CI 校验失败。未核实字段明确标为 pending，不以官网首页或 HTTP 200 代替参数证明。
+更新前先读 [AGENTS.md](AGENTS.md)；官网来源、字段级核验状态与更新流程从 [docs/model-sources/README.md](docs/model-sources/README.md) 进入分层目录查阅。新增或修改模型条目时，必须增量更新对应供应商的单模型/接入面 Markdown；来源记录指纹过期会导致 CI 校验失败。未核实字段明确标为 pending，不以官网首页或 HTTP 200 代替参数证明。
 
 1. 编辑 `compute/model-specs/<name>.json`（模型规格或智能路由策略）、`compute/providers/<name>.json`（接入面覆盖）、`compute/coding-plans/<name>.json` 或 `compute/service-map.json`
 2. 编辑 `compute/model-specs/_index.json`（新增规格文件或调整三档策略）、`compute/providers/_index.json` 或 `coding-plans/_index.json`（新增/删除 provider 时）

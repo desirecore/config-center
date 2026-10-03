@@ -1,6 +1,6 @@
 import { test } from 'node:test'
 import assert from 'node:assert/strict'
-import { mkdtempSync, mkdirSync, writeFileSync, rmSync } from 'node:fs'
+import { mkdtempSync, mkdirSync, writeFileSync, readFileSync, rmSync } from 'node:fs'
 import { tmpdir } from 'node:os'
 import { join } from 'node:path'
 import { modelFingerprint, configFingerprint, sourceUrlError, validateSources } from '../scripts/validate-sources.mjs'
@@ -63,4 +63,38 @@ test('端点变化也必须复核来源，即使模型参数完全未变', () =>
   provider.baseUrl = 'https://api.openai.com/v1'
   writeFileSync(dataPath, JSON.stringify(provider))
   assert.ok(validateSources(root).errors.some((message) => message.includes('平台元数据来源记录过期')))
+}))
+
+function splitFixture(f) {
+  const dir = join(f.root, 'docs/model-sources/providers/openai')
+  mkdirSync(join(dir, 'models'), { recursive: true })
+  mkdirSync(join(dir, 'access'), { recursive: true })
+  const meta = { formatVersion: 1, supplier: 'openai', checkedAt: '2026-10-03', sourceCatalog: '../SOURCES.md' }
+  const metadataBlock = (value) => `<!-- source-metadata:start -->\n\`\`\`json\n${JSON.stringify(value)}\n\`\`\`\n<!-- source-metadata:end -->\n`
+  writeFileSync(join(dir, 'SOURCES.md'), '# 官网证据\n\n### official\n\n' + metadataBlock(f.metadata))
+  const details = '<!-- source-details: {"config":"compute/providers/openai.json","id":"gpt-test"} -->\n```json\n{"contextWindow":1000}\n```\n<!-- source-details:end -->\n'
+  const original = f.page('partial', meta).replace(/^<!-- source-config-fingerprint:.*\n/m, '').replace(/\]\(#official\)/g, '](../SOURCES.md#official)')
+  const modelPath = join(dir, 'models/gpt-test.md')
+  writeFileSync(modelPath, details + original)
+  writeFileSync(join(dir, 'access/providers--openai.md'), `<!-- source-config: compute/providers/openai.json -->\n<!-- source-config-fingerprint: ${configFingerprint(f.provider)} -->\n\n${metadataBlock(meta)}`)
+  rmSync(f.docPath)
+  return { dir, modelPath }
+}
+
+test('分层单模型/接入面文档可复用官网目录且参数详情必须保持一致', () => fixture((f) => {
+  const { modelPath } = splitFixture(f)
+  assert.equal(validateSources(f.root).errors.length, 0)
+  const text = readFileSync(modelPath, 'utf8').replace('"contextWindow":1000', '"contextWindow":2000')
+  writeFileSync(modelPath, text)
+  assert.ok(validateSources(f.root).errors.some((message) => message.includes('参数详情与配置不一致')))
+}))
+
+test('拒绝分层文档越级引用及跨供应商证据目录', () => fixture((f) => {
+  const { dir, modelPath } = splitFixture(f)
+  const original = readFileSync(modelPath, 'utf8')
+  writeFileSync(modelPath, original.replaceAll('../SOURCES.md', '../../SOURCES.md'))
+  assert.ok(validateSources(f.root).errors.some((message) => message.includes('非法官网证据目录引用')))
+  writeFileSync(modelPath, original)
+  writeFileSync(join(dir, 'SOURCES.md'), readFileSync(join(dir, 'SOURCES.md'), 'utf8').replace('"supplier":"openai"', '"supplier":"cohere"'))
+  assert.ok(validateSources(f.root).errors.some((message) => message.includes('证据目录供应商不一致')))
 }))
