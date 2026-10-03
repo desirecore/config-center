@@ -1,0 +1,219 @@
+{
+  "id": "provider-deepseek-001",
+  "provider": "deepseek",
+  "label": "DeepSeek",
+  "baseUrl": "https://api.deepseek.com",
+  "apiFormat": "openai-completions",
+  "apiKeyRef": "deepseek",
+  "apiKeyVerified": false,
+  "enabled": false,
+  "status": "unconfigured",
+  "priceCurrency": "CNY",
+  "services": [
+    "chat",
+    "reasoning",
+    "vision"
+  ],
+  "tombstones": [
+    "deepseek-chat",
+    "deepseek-reasoner"
+  ],
+  "models": [
+    {
+      "modelName": "deepseek-flash",
+      "displayName": "DeepSeek V4.1 Flash",
+      "serviceType": [
+        "chat",
+        "reasoning",
+        "vision"
+      ],
+      "description": "DeepSeek V4.1 Flash，支持文本与图像输入，1M 上下文，最大输出 384K，并发上限 2500",
+      "contextWindow": 1000000,
+      "maxOutputTokens": 384000,
+      "capabilities": [
+        "chat",
+        "code",
+        "reasoning",
+        "deep_thinking",
+        "vision",
+        "long_context",
+        "multilingual",
+        "tool_use"
+      ],
+      "inputPrice": 1,
+      "outputPrice": 4,
+      "defaultTemperature": 1,
+      "defaultTopP": 1,
+      "extra": {
+        "cacheHitPrice": 0.02,
+        "concurrencyLimit": 2500,
+        "supportsThinking": true,
+        "thinkingDefault": true,
+        "reasoning": {
+          "supportedEfforts": [
+            "low",
+            "high",
+            "max"
+          ],
+          "defaultEffort": "high"
+        },
+        "pricingTiers": [
+          {
+            "condition": "idle",
+            "inputPrice": 1,
+            "outputPrice": 4,
+            "cacheHitPrice": 0.02
+          },
+          {
+            "condition": "peak",
+            "inputPrice": 2,
+            "outputPrice": 8,
+            "cacheHitPrice": 0.04
+          }
+        ],
+        "pricingNotes": "空闲时段为北京时间工作日 09:00-12:00、14:00-18:00 之外的时段；高峰时段价格为输入 2 元、输出 8 元、缓存命中输入 0.04 元/百万 tokens。",
+        "features": {
+          "jsonOutput": true,
+          "toolCalls": true,
+          "chatPrefixCompletion": "beta",
+          "fimCompletion": "non-thinking-only"
+        }
+      }
+    },
+    {
+      "modelName": "deepseek-v4-flash-vision-exp",
+      "displayName": "DeepSeek V4 Flash Vision Exp",
+      "serviceType": [
+        "chat",
+        "reasoning",
+        "vision"
+      ],
+      "description": "DeepSeek V4 Flash 实验性视觉版本，支持文本与图像输入，文本能力与 V4 Flash 一致，1M 上下文，并发上限 2500",
+      "contextWindow": 1000000,
+      "maxOutputTokens": 384000,
+      "capabilities": [
+        "chat",
+        "code",
+        "reasoning",
+        "deep_thinking",
+        "vision",
+        "long_context",
+        "multilingual",
+        "tool_use"
+      ],
+      "inputPrice": 1.008,
+      "outputPrice": 2.016,
+      "defaultTemperature": 1,
+      "defaultTopP": 1,
+      "extra": {
+        "cacheHitPrice": 0.02016,
+        "concurrencyLimit": 2500,
+        "supportsThinking": true,
+        "thinkingDefault": true,
+        "features": {
+          "jsonOutput": true,
+          "toolCalls": true,
+          "chatPrefixCompletion": "beta",
+          "fimCompletion": false
+        },
+        "reasoning": {
+          "supportedEfforts": [
+            "low",
+            "high",
+            "max"
+          ],
+          "defaultEffort": "high"
+        }
+      }
+    },
+    {
+      "modelName": "deepseek-v4-flash",
+      "displayName": "DeepSeek V4 Flash",
+      "serviceType": [
+        "chat",
+        "reasoning"
+      ],
+      "description": "DeepSeek V4 Flash，284B 总参数 / 13B 激活 MoE，1M 上下文，默认思考模式，支持非思考模式，并发上限 2500",
+      "contextWindow": 1000000,
+      "maxOutputTokens": 384000,
+      "capabilities": [
+        "chat",
+        "code",
+        "reasoning",
+        "deep_thinking",
+        "long_context",
+        "multilingual",
+        "tool_use"
+      ],
+      "inputPrice": 1.008,
+      "outputPrice": 2.016,
+      "defaultTemperature": 1,
+      "defaultTopP": 1,
+      "extra": {
+        "cacheHitPrice": 0.02016,
+        "concurrencyLimit": 2500,
+        "supportsThinking": true,
+        "thinkingDefault": true,
+        "features": {
+          "jsonOutput": true,
+          "toolCalls": true,
+          "chatPrefixCompletion": "beta",
+          "fimCompletion": "non-thinking-only"
+        },
+        "reasoning": {
+          "supportedEfforts": [
+            "low",
+            "high",
+            "max"
+          ],
+          "defaultEffort": "high"
+        }
+      }
+    },
+    {
+      "modelName": "deepseek-v4-pro",
+      "displayName": "DeepSeek V4 Pro",
+      "serviceType": [
+        "chat",
+        "reasoning"
+      ],
+      "description": "DeepSeek V4 Pro，1.6T 总参数 / 49B 激活 MoE，1M 上下文，默认思考模式，支持非思考模式，并发上限 500",
+      "contextWindow": 1000000,
+      "maxOutputTokens": 384000,
+      "capabilities": [
+        "chat",
+        "code",
+        "reasoning",
+        "deep_thinking",
+        "long_context",
+        "multilingual",
+        "tool_use",
+        "math"
+      ],
+      "inputPrice": 3.132,
+      "outputPrice": 6.264,
+      "defaultTemperature": 1,
+      "defaultTopP": 1,
+      "extra": {
+        "cacheHitPrice": 0.0261,
+        "concurrencyLimit": 500,
+        "supportsThinking": true,
+        "thinkingDefault": true,
+        "features": {
+          "jsonOutput": true,
+          "toolCalls": true,
+          "chatPrefixCompletion": "beta",
+          "fimCompletion": "non-thinking-only"
+        },
+        "reasoning": {
+          "supportedEfforts": [
+            "low",
+            "high",
+            "max"
+          ],
+          "defaultEffort": "high"
+        }
+      }
+    }
+  ]
+}

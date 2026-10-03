@@ -32,7 +32,7 @@
 | [`wan2.7-image`](../../model-sources/providers/alibaba/models/wan2.7-image.md) | [`compute/coding-plans/dashscope-token-plan.json`](../../../compute/coding-plans/dashscope-token-plan.json) | `modelName` | [qwen-models](../../model-sources/providers/alibaba/SOURCES.md#qwen-models)：fetched |
 | [`wan2.7-image`](../../model-sources/providers/alibaba/models/wan2.7-image.md) | [`compute/model-specs/qwen.json`](../../../compute/model-specs/qwen.json) | `id` | [qwen-models](../../model-sources/providers/alibaba/SOURCES.md#qwen-models)：fetched |
 
-## 仅确认 ID，参数来源未登记（96 条）
+## 仅确认 ID，参数来源未登记（98 条）
 
 | 模型 | 接入面 | 未登记证明的关键字段 | 官网入口/读取结果 |
 | --- | --- | --- | --- |
@@ -78,7 +78,9 @@
 | [`qwen-plus`](../../model-sources/providers/alibaba/models/qwen-plus.md) | [`compute/model-specs/qwen.json`](../../../compute/model-specs/qwen.json) | `spec.contextWindow`、`spec.defaultTemperature`、`spec.maxOutputTokens` | [qwen-pricing](../../model-sources/providers/alibaba/SOURCES.md#qwen-pricing)：fetched |
 | [`qwen-turbo`](../../model-sources/providers/alibaba/models/qwen-turbo.md) | [`compute/model-specs/qwen.json`](../../../compute/model-specs/qwen.json) | `spec.contextWindow`、`spec.defaultTemperature`、`spec.maxOutputTokens` | [qwen-pricing](../../model-sources/providers/alibaba/SOURCES.md#qwen-pricing)：fetched |
 | [`qwen3-coder-next`](../../model-sources/providers/alibaba/models/qwen3-coder-next.md) | [`compute/coding-plans/dashscope-coding.json`](../../../compute/coding-plans/dashscope-coding.json) | `contextWindow`、`maxOutputTokens` | [qwen-pricing](../../model-sources/providers/alibaba/SOURCES.md#qwen-pricing)：fetched |
+| [`qwen3-coder-next`](../../model-sources/providers/alibaba/models/qwen3-coder-next.md) | [`compute/model-specs/qwen.json`](../../../compute/model-specs/qwen.json) | 已登记关键字段都有证明；其他合同限制仍按原记录复核 | [qwen-coding](../../model-sources/providers/alibaba/SOURCES.md#qwen-coding)：fetched |
 | [`qwen3-coder-plus`](../../model-sources/providers/alibaba/models/qwen3-coder-plus.md) | [`compute/coding-plans/dashscope-coding.json`](../../../compute/coding-plans/dashscope-coding.json) | `contextWindow`、`maxOutputTokens` | [qwen-pricing](../../model-sources/providers/alibaba/SOURCES.md#qwen-pricing)：fetched |
+| [`qwen3-coder-plus`](../../model-sources/providers/alibaba/models/qwen3-coder-plus.md) | [`compute/model-specs/qwen.json`](../../../compute/model-specs/qwen.json) | 已登记关键字段都有证明；其他合同限制仍按原记录复核 | [qwen-coding](../../model-sources/providers/alibaba/SOURCES.md#qwen-coding)：fetched |
 | [`qwen3-max-2026-01-23`](../../model-sources/providers/alibaba/models/qwen3-max-2026-01-23.md) | [`compute/coding-plans/dashscope-coding.json`](../../../compute/coding-plans/dashscope-coding.json) | `contextWindow`、`maxOutputTokens` | [qwen-pricing](../../model-sources/providers/alibaba/SOURCES.md#qwen-pricing)：fetched |
 | [`qwen3-max`](../../model-sources/providers/alibaba/models/qwen3-max.md) | [`compute/model-specs/qwen.json`](../../../compute/model-specs/qwen.json) | `spec.contextWindow`、`spec.defaultTemperature`、`spec.maxOutputTokens`、`spec.supportsReasoning` | [qwen-pricing](../../model-sources/providers/alibaba/SOURCES.md#qwen-pricing)：fetched |
 | [`qwen3-rerank`](../../model-sources/providers/alibaba/models/qwen3-rerank.md) | [`compute/providers/dashscope.json`](../../../compute/providers/dashscope.json) | `contextWindow`、`inputPrice` | [qwen-pricing](../../model-sources/providers/alibaba/SOURCES.md#qwen-pricing)：fetched |

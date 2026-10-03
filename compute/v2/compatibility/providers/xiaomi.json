@@ -1,0 +1,285 @@
+{
+  "id": "provider-xiaomi-001",
+  "provider": "xiaomi",
+  "label": "小米 MiMo",
+  "baseUrl": "https://api.xiaomimimo.com/v1",
+  "apiFormat": "openai-completions",
+  "apiKeyRef": "xiaomi",
+  "apiKeyVerified": false,
+  "enabled": false,
+  "status": "unconfigured",
+  "brandGroup": "xiaomi",
+  "priceCurrency": "CNY",
+  "accessMode": "api",
+  "services": [
+    "chat",
+    "reasoning",
+    "vision",
+    "tts",
+    "asr"
+  ],
+  "models": [
+    {
+      "modelName": "mimo-v2.6-pro",
+      "displayName": "MiMo-V2.6-Pro",
+      "serviceType": [
+        "chat",
+        "reasoning",
+        "vision"
+      ],
+      "description": "小米全模态旗舰推理模型，适合复杂项目与长程智能体任务",
+      "contextWindow": 1000000,
+      "maxOutputTokens": 131072,
+      "capabilities": [
+        "chat",
+        "reasoning",
+        "code",
+        "vision",
+        "audio_understanding",
+        "video_understanding",
+        "tool_use",
+        "agent",
+        "long_context"
+      ],
+      "inputPrice": 3,
+      "outputPrice": 6,
+      "extra": {
+        "cachedInputPrice": 0.025,
+        "thinkingDefault": true,
+        "pricingNotes": "CNY per 1M tokens on the Xiaomi MiMo API."
+      }
+    },
+    {
+      "modelName": "mimo-v2.6-flash",
+      "displayName": "MiMo-V2.6-Flash",
+      "serviceType": [
+        "chat",
+        "reasoning",
+        "vision"
+      ],
+      "description": "小米全模态高效推理模型，适合高频调用与规模化任务",
+      "contextWindow": 1000000,
+      "maxOutputTokens": 131072,
+      "capabilities": [
+        "chat",
+        "reasoning",
+        "code",
+        "vision",
+        "audio_understanding",
+        "video_understanding",
+        "tool_use",
+        "agent",
+        "long_context",
+        "fast"
+      ],
+      "inputPrice": 1,
+      "outputPrice": 2,
+      "extra": {
+        "cachedInputPrice": 0.02,
+        "thinkingDefault": true,
+        "pricingNotes": "CNY per 1M tokens on the Xiaomi MiMo API."
+      }
+    },
+    {
+      "modelName": "mimo-v2.6-pro-ultraspeed",
+      "displayName": "MiMo-V2.6-Pro-UltraSpeed",
+      "serviceType": [
+        "chat",
+        "reasoning",
+        "vision"
+      ],
+      "description": "MiMo-V2.6-Pro 的超高速服务，需向小米申请定制配额",
+      "contextWindow": 1000000,
+      "maxOutputTokens": 131072,
+      "capabilities": [
+        "chat",
+        "reasoning",
+        "code",
+        "vision",
+        "audio_understanding",
+        "video_understanding",
+        "tool_use",
+        "agent",
+        "long_context",
+        "fast"
+      ],
+      "inputPrice": 30,
+      "outputPrice": 60,
+      "extra": {
+        "cachedInputPrice": 0.25,
+        "thinkingDefault": true,
+        "pricingNotes": "CNY per 1M tokens on the Xiaomi MiMo API; UltraSpeed requires custom rate limits."
+      }
+    },
+    {
+      "modelName": "mimo-x-flash-preview",
+      "displayName": "MiMo-X-Flash Preview",
+      "serviceType": [
+        "chat",
+        "vision"
+      ],
+      "description": "小米 MiMo-X Flash 内测模型，1M 上下文，支持图片识别",
+      "contextWindow": 1000000,
+      "capabilities": [
+        "chat",
+        "vision"
+      ],
+      "extra": {}
+    },
+    {
+      "modelName": "mimo-x-pro-preview",
+      "displayName": "MiMo-X-Pro Preview",
+      "serviceType": [
+        "chat",
+        "vision"
+      ],
+      "description": "小米 MiMo-X Pro 内测模型，1M 上下文，支持图片识别",
+      "contextWindow": 1000000,
+      "capabilities": [
+        "chat",
+        "vision"
+      ],
+      "extra": {}
+    },
+    {
+      "modelName": "mimo-v2.5-pro",
+      "displayName": "MiMo-V2.5-Pro",
+      "serviceType": [
+        "chat",
+        "reasoning"
+      ],
+      "description": "小米 MiMo-V2.5-Pro，1M 上下文，1T MoE 参数，计划于 2026-10-21 下线",
+      "contextWindow": 1000000,
+      "maxOutputTokens": 131072,
+      "capabilities": [
+        "chat",
+        "reasoning",
+        "tool_use",
+        "code"
+      ],
+      "extra": {
+        "cachedInputPrice": 0.025
+      },
+      "inputPrice": 3,
+      "outputPrice": 6
+    },
+    {
+      "modelName": "mimo-v2.5-tts",
+      "displayName": "MiMo-V2.5-TTS",
+      "serviceType": [
+        "tts"
+      ],
+      "description": "小米最新高品质语音合成模型，内置多种精调音色，支持情感/语速/语调精细控制、方言和歌唱",
+      "capabilities": [
+        "tts",
+        "style_control",
+        "chinese_optimized"
+      ],
+      "extra": {
+        "voices": [
+          {
+            "id": "mimo_default",
+            "label": "MiMo 默认"
+          },
+          {
+            "id": "冰糖",
+            "label": "冰糖"
+          },
+          {
+            "id": "茉莉",
+            "label": "茉莉"
+          },
+          {
+            "id": "苏打",
+            "label": "苏打"
+          },
+          {
+            "id": "白桦",
+            "label": "白桦"
+          },
+          {
+            "id": "Mia",
+            "label": "Mia"
+          },
+          {
+            "id": "Chloe",
+            "label": "Chloe"
+          },
+          {
+            "id": "Milo",
+            "label": "Milo"
+          },
+          {
+            "id": "Dean",
+            "label": "Dean"
+          }
+        ],
+        "audioFormats": [
+          "wav",
+          "mp3",
+          "pcm16le"
+        ],
+        "sampleRate": 24000,
+        "endpoint": "/chat/completions",
+        "authHeader": "api-key"
+      }
+    },
+    {
+      "modelName": "mimo-v2.5-asr",
+      "displayName": "MiMo-V2.5-ASR",
+      "serviceType": [
+        "asr"
+      ],
+      "description": "小米 MiMo 语音识别模型，支持中英文提示与整段 WAV/MP3 识别",
+      "contextWindow": 8192,
+      "maxOutputTokens": 2048,
+      "capabilities": [
+        "asr",
+        "multilingual"
+      ],
+      "extra": {}
+    },
+    {
+      "modelName": "mimo-v2.5-tts-voicedesign",
+      "displayName": "MiMo-V2.5-TTS-VoiceDesign",
+      "serviceType": [
+        "tts"
+      ],
+      "description": "语音设计模型，通过一句话描述即可生成全新音色",
+      "capabilities": [
+        "tts",
+        "voice_design"
+      ],
+      "extra": {
+        "audioFormats": [
+          "mp3",
+          "wav"
+        ],
+        "sampleRate": 24000,
+        "endpoint": "/chat/completions",
+        "authHeader": "api-key"
+      }
+    },
+    {
+      "modelName": "mimo-v2.5-tts-voiceclone",
+      "displayName": "MiMo-V2.5-TTS-VoiceClone",
+      "serviceType": [
+        "tts"
+      ],
+      "description": "语音克隆模型，少量样本即可高保真复刻目标音色",
+      "capabilities": [
+        "tts",
+        "voice_clone"
+      ],
+      "extra": {
+        "audioFormats": [
+          "mp3",
+          "wav"
+        ],
+        "sampleRate": 24000,
+        "endpoint": "/chat/completions",
+        "authHeader": "api-key"
+      }
+    }
+  ]
+}

@@ -1153,6 +1153,32 @@
         ],
         "description": "千问图像生成 2.0 标准版"
       }
+    },
+    {
+      "id": "qwen3-coder-plus",
+      "displayName": "qwen3-coder-plus",
+      "family": "qwen3-coder-plus",
+      "match": {
+        "exact": [
+          "qwen3-coder-plus"
+        ]
+      },
+      "spec": {
+        "description": "精确绑定已有接入型号，参数未核实；identity-only规格不继承旧family能力、窗口、协议或自动路由资格。"
+      }
+    },
+    {
+      "id": "qwen3-coder-next",
+      "displayName": "qwen3-coder-next",
+      "family": "qwen3-coder-next",
+      "match": {
+        "exact": [
+          "qwen3-coder-next"
+        ]
+      },
+      "spec": {
+        "description": "精确绑定已有接入型号，参数未核实；identity-only规格不继承旧family能力、窗口、协议或自动路由资格。"
+      }
     }
   ]
 }

@@ -1,0 +1,365 @@
+{
+  "id": "provider-openai-codex-plan-001",
+  "provider": "openai-codex",
+  "brandGroup": "openai",
+  "label": "ChatGPT 订阅 (Codex)",
+  "baseUrl": "https://chatgpt.com/backend-api",
+  "apiFormat": "openai-codex-responses",
+  "apiKeyRef": "openai-codex-access-token",
+  "apiKeyVerified": false,
+  "enabled": false,
+  "status": "unconfigured",
+  "priceCurrency": "USD",
+  "accessMode": "coding-plan",
+  "credentialSource": "codex-cli",
+  "codingPlan": {
+    "quotas": {},
+    "usageTracking": {
+      "method": "none",
+      "consoleUrl": "https://chatgpt.com/codex/settings/usage"
+    }
+  },
+  "services": [
+    "chat",
+    "reasoning"
+  ],
+  "tombstones": [
+    "gpt-5.3-codex",
+    "gpt-5.2-codex",
+    "gpt-5.1-codex-mini"
+  ],
+  "models": [
+    {
+      "modelName": "gpt-6.1-sol",
+      "displayName": "GPT-6.1 Sol",
+      "serviceType": [
+        "chat"
+      ],
+      "description": "GPT-6.1 Sol，面向复杂编程、电脑使用和专业工作，1.05M 上下文；工具调用使用 Responses API",
+      "contextWindow": 1050000,
+      "maxOutputTokens": 128000,
+      "capabilities": [
+        "chat",
+        "reasoning",
+        "code",
+        "vision",
+        "ultra_long_context",
+        "tool_use",
+        "agent"
+      ],
+      "extra": {
+        "reasoning": {
+          "supportedEfforts": [
+            "low",
+            "medium",
+            "high",
+            "xhigh",
+            "max"
+          ],
+          "defaultEffort": "medium"
+        }
+      },
+      "source": "preset"
+    },
+    {
+      "modelName": "gpt-6-sol",
+      "displayName": "GPT-6 Sol",
+      "serviceType": [
+        "chat"
+      ],
+      "description": "ChatGPT 订阅额度计费，兼顾复杂编程、智能体工作流与成本的 GPT-6 模型；1.05M 上下文",
+      "contextWindow": 1050000,
+      "maxOutputTokens": 128000,
+      "capabilities": [
+        "chat",
+        "reasoning",
+        "code",
+        "vision",
+        "ultra_long_context",
+        "tool_use",
+        "agent"
+      ],
+      "extra": {
+        "reasoning": {
+          "supportedEfforts": [
+            "low",
+            "medium",
+            "high",
+            "xhigh",
+            "max"
+          ],
+          "defaultEffort": "medium"
+        }
+      },
+      "source": "preset"
+    },
+    {
+      "modelName": "gpt-6-luna",
+      "displayName": "GPT-6 Luna",
+      "serviceType": [
+        "chat"
+      ],
+      "description": "ChatGPT 订阅额度计费，面向明确任务和高吞吐场景的 GPT-6 轻量模型；1.05M 上下文",
+      "contextWindow": 1050000,
+      "maxOutputTokens": 128000,
+      "capabilities": [
+        "chat",
+        "reasoning",
+        "code",
+        "vision",
+        "ultra_long_context",
+        "tool_use",
+        "fast"
+      ],
+      "extra": {
+        "reasoning": {
+          "supportedEfforts": [
+            "low",
+            "medium",
+            "high",
+            "xhigh",
+            "max"
+          ],
+          "defaultEffort": "medium"
+        }
+      },
+      "source": "preset"
+    },
+    {
+      "modelName": "gpt-6-astra",
+      "displayName": "GPT-6 Astra",
+      "serviceType": [
+        "chat"
+      ],
+      "description": "ChatGPT 订阅额度计费，面向复杂推理、编程和长程智能体任务，1.05M 上下文",
+      "contextWindow": 1050000,
+      "maxOutputTokens": 128000,
+      "capabilities": [
+        "chat",
+        "reasoning",
+        "code",
+        "vision",
+        "long_context",
+        "tool_use",
+        "agent"
+      ],
+      "extra": {
+        "reasoning": {
+          "supportedEfforts": [
+            "low",
+            "medium",
+            "high",
+            "xhigh",
+            "max"
+          ],
+          "defaultEffort": "medium"
+        }
+      },
+      "source": "preset"
+    },
+    {
+      "modelName": "gpt-reserve",
+      "displayName": "GPT-Reserve",
+      "serviceType": [
+        "chat"
+      ],
+      "description": "ChatGPT 订阅额度计费，参数暂按 GPT-5.6 Luna 配置，待官方规格确认，272K 上下文",
+      "contextWindow": 272000,
+      "maxOutputTokens": 128000,
+      "capabilities": [
+        "chat",
+        "reasoning",
+        "code",
+        "vision",
+        "long_context",
+        "tool_use",
+        "fast"
+      ],
+      "extra": {
+        "reasoning": {
+          "supportedEfforts": [
+            "low",
+            "medium",
+            "high",
+            "xhigh",
+            "max"
+          ],
+          "defaultEffort": "medium"
+        }
+      },
+      "source": "preset"
+    },
+    {
+      "modelName": "gpt-5.6-sol",
+      "displayName": "GPT-5.6 Sol",
+      "serviceType": [
+        "chat"
+      ],
+      "description": "ChatGPT 订阅额度计费，新一代旗舰模型，复杂编程/计算机操作/网络安全能力最强，272K 上下文",
+      "contextWindow": 272000,
+      "maxOutputTokens": 128000,
+      "capabilities": [
+        "chat",
+        "reasoning",
+        "code",
+        "vision",
+        "long_context",
+        "tool_use",
+        "agent"
+      ],
+      "extra": {
+        "reasoning": {
+          "supportedEfforts": [
+            "low",
+            "medium",
+            "high",
+            "xhigh",
+            "max"
+          ],
+          "defaultEffort": "low"
+        }
+      },
+      "source": "preset"
+    },
+    {
+      "modelName": "gpt-5.6-terra",
+      "displayName": "GPT-5.6 Terra",
+      "serviceType": [
+        "chat"
+      ],
+      "description": "ChatGPT 订阅额度计费，均衡型模型，日常工作性能对齐 GPT-5.5 且成本更低，272K 上下文",
+      "contextWindow": 272000,
+      "maxOutputTokens": 128000,
+      "capabilities": [
+        "chat",
+        "reasoning",
+        "code",
+        "vision",
+        "long_context",
+        "tool_use",
+        "agent"
+      ],
+      "extra": {
+        "reasoning": {
+          "supportedEfforts": [
+            "low",
+            "medium",
+            "high",
+            "xhigh",
+            "max"
+          ],
+          "defaultEffort": "medium"
+        }
+      },
+      "source": "preset"
+    },
+    {
+      "modelName": "gpt-5.6-luna",
+      "displayName": "GPT-5.6 Luna",
+      "serviceType": [
+        "chat"
+      ],
+      "description": "ChatGPT 订阅额度计费，GPT-5.6 家族中最快最省成本的档位，272K 上下文",
+      "contextWindow": 272000,
+      "maxOutputTokens": 128000,
+      "capabilities": [
+        "chat",
+        "reasoning",
+        "code",
+        "vision",
+        "long_context",
+        "tool_use",
+        "fast"
+      ],
+      "extra": {
+        "reasoning": {
+          "supportedEfforts": [
+            "low",
+            "medium",
+            "high",
+            "xhigh",
+            "max"
+          ],
+          "defaultEffort": "medium"
+        }
+      },
+      "source": "preset"
+    },
+    {
+      "modelName": "gpt-5.5",
+      "displayName": "GPT-5.5",
+      "serviceType": [
+        "chat"
+      ],
+      "description": "ChatGPT 订阅额度计费，上一代旗舰模型，272K 上下文",
+      "contextWindow": 272000,
+      "maxOutputTokens": 128000,
+      "capabilities": [
+        "chat",
+        "reasoning",
+        "code",
+        "vision",
+        "long_context",
+        "tool_use",
+        "agent"
+      ],
+      "source": "preset"
+    },
+    {
+      "modelName": "gpt-5.4",
+      "displayName": "GPT-5.4",
+      "serviceType": [
+        "chat"
+      ],
+      "description": "ChatGPT 订阅额度计费，高阶通用模型，272K 上下文",
+      "contextWindow": 272000,
+      "maxOutputTokens": 128000,
+      "capabilities": [
+        "chat",
+        "reasoning",
+        "code",
+        "vision",
+        "long_context",
+        "tool_use",
+        "agent"
+      ],
+      "source": "preset"
+    },
+    {
+      "modelName": "gpt-5.4-mini",
+      "displayName": "GPT-5.4 Mini",
+      "serviceType": [
+        "chat"
+      ],
+      "description": "ChatGPT 订阅额度计费，轻量高性价比模型，是 gpt-5.1-codex-mini 的官方迁移目标，272K 上下文",
+      "contextWindow": 272000,
+      "maxOutputTokens": 128000,
+      "capabilities": [
+        "chat",
+        "reasoning",
+        "code",
+        "vision",
+        "long_context",
+        "tool_use",
+        "fast"
+      ],
+      "source": "preset"
+    },
+    {
+      "modelName": "gpt-5.3-codex-spark",
+      "displayName": "GPT-5.3 Codex Spark（Pro 专属）",
+      "serviceType": [
+        "chat"
+      ],
+      "description": "ChatGPT Pro 订阅专属研究预览模型，面向实时编程迭代优化，>1000 tok/s，纯文本，128K 上下文",
+      "contextWindow": 128000,
+      "capabilities": [
+        "chat",
+        "code",
+        "tool_use",
+        "fast"
+      ],
+      "source": "preset"
+    }
+  ]
+}

@@ -1,0 +1,354 @@
+{
+  "description": "DeepSeek 系列模型规格。参数来源：config-center compute/providers/deepseek.json。",
+  "specs": [
+    {
+      "displayName": "DeepSeek V4 Pro",
+      "family": "deepseek-v4-pro",
+      "match": {
+        "exact": [
+          "deepseek-v4-pro"
+        ]
+      },
+      "id": "deepseek-v4-pro",
+      "spec": {
+        "contextWindow": 1000000,
+        "maxOutputTokens": 384000,
+        "capabilities": [
+          "chat",
+          "reasoning",
+          "deep_thinking",
+          "code",
+          "math",
+          "science",
+          "multilingual",
+          "tool_use"
+        ],
+        "serviceType": [
+          "chat",
+          "reasoning"
+        ],
+        "defaultTemperature": 1,
+        "supportsReasoning": true,
+        "extra": {
+          "supportsThinking": true,
+          "thinkingDefault": true
+        },
+        "description": "DeepSeek V4 Pro，1.6T MoE 架构，100 万上下文"
+      },
+      "routing": {
+        "tier": "flagship",
+        "routingPriority": 30,
+        "eligibleForAgent": true,
+        "defaultReference": true,
+        "reasoning": {
+          "supportedModes": [
+            "auto",
+            "low",
+            "high",
+            "max"
+          ],
+          "defaultMode": "high"
+        }
+      }
+    },
+    {
+      "displayName": "DeepSeek V4 Pro 0813",
+      "family": "deepseek-v4-pro-0813",
+      "match": {
+        "exact": [
+          "deepseek-v4-pro-0813"
+        ]
+      },
+      "id": "deepseek-v4-pro-0813",
+      "spec": {
+        "contextWindow": 1000000,
+        "maxOutputTokens": 384000,
+        "capabilities": [
+          "chat",
+          "reasoning",
+          "deep_thinking",
+          "code",
+          "math",
+          "science",
+          "multilingual",
+          "tool_use"
+        ],
+        "serviceType": [
+          "chat",
+          "reasoning"
+        ],
+        "defaultTemperature": 1,
+        "supportsReasoning": true,
+        "extra": {
+          "supportsThinking": true,
+          "thinkingDefault": true
+        },
+        "description": "DeepSeek V4 Pro 0813 版本，1.6T MoE 架构，100 万上下文"
+      },
+      "routing": {
+        "tier": "flagship",
+        "routingPriority": 30,
+        "eligibleForAgent": true,
+        "defaultReference": false,
+        "reasoning": {
+          "supportedModes": [
+            "auto",
+            "low",
+            "high",
+            "max"
+          ],
+          "defaultMode": "high"
+        }
+      }
+    },
+    {
+      "displayName": "DeepSeek Chat",
+      "family": "deepseek-chat",
+      "match": {
+        "patterns": [
+          "deepseek-chat*"
+        ]
+      },
+      "id": "deepseek-chat",
+      "spec": {
+        "contextWindow": 1000000,
+        "maxOutputTokens": 384000,
+        "capabilities": [
+          "chat",
+          "code",
+          "reasoning",
+          "multilingual",
+          "tool_use"
+        ],
+        "serviceType": [
+          "chat"
+        ],
+        "defaultTemperature": 1
+      }
+    },
+    {
+      "displayName": "DeepSeek Reasoner",
+      "family": "deepseek-reasoner",
+      "match": {
+        "patterns": [
+          "deepseek-reasoner*"
+        ]
+      },
+      "id": "deepseek-reasoner",
+      "spec": {
+        "contextWindow": 1000000,
+        "maxOutputTokens": 384000,
+        "capabilities": [
+          "chat",
+          "reasoning",
+          "deep_thinking",
+          "code",
+          "math",
+          "tool_use"
+        ],
+        "serviceType": [
+          "reasoning"
+        ],
+        "defaultTemperature": null,
+        "supportsReasoning": true
+      }
+    },
+    {
+      "displayName": "DeepSeek V4.1 Flash",
+      "family": "deepseek-flash",
+      "match": {
+        "exact": [
+          "deepseek-flash",
+          "deepseek-v4.1-flash",
+          "deepseek/deepseek-v4.1-flash"
+        ]
+      },
+      "id": "deepseek-flash",
+      "spec": {
+        "contextWindow": 1000000,
+        "maxOutputTokens": 384000,
+        "capabilities": [
+          "chat",
+          "code",
+          "reasoning",
+          "deep_thinking",
+          "vision",
+          "multilingual",
+          "tool_use"
+        ],
+        "serviceType": [
+          "chat",
+          "reasoning",
+          "vision"
+        ],
+        "defaultTemperature": 1,
+        "supportsReasoning": true,
+        "extra": {
+          "supportsThinking": true,
+          "thinkingDefault": true
+        },
+        "description": "DeepSeek V4.1 Flash，支持文本与图像输入，100 万上下文"
+      },
+      "routing": {
+        "tier": "lightweight",
+        "routingPriority": 35,
+        "eligibleForAgent": true,
+        "defaultReference": false,
+        "reasoning": {
+          "supportedModes": [
+            "auto",
+            "low",
+            "high",
+            "max"
+          ],
+          "defaultMode": "high"
+        }
+      }
+    },
+    {
+      "displayName": "DeepSeek V4 Flash",
+      "family": "deepseek-v4-flash",
+      "match": {
+        "exact": [
+          "deepseek-v4-flash"
+        ]
+      },
+      "id": "deepseek-v4-flash",
+      "spec": {
+        "contextWindow": 1000000,
+        "maxOutputTokens": 384000,
+        "capabilities": [
+          "chat",
+          "code",
+          "reasoning",
+          "deep_thinking",
+          "multilingual",
+          "tool_use"
+        ],
+        "serviceType": [
+          "chat",
+          "reasoning"
+        ],
+        "defaultTemperature": 1,
+        "supportsReasoning": true,
+        "extra": {
+          "supportsThinking": true,
+          "thinkingDefault": true
+        }
+      },
+      "routing": {
+        "tier": "lightweight",
+        "routingPriority": 35,
+        "eligibleForAgent": true,
+        "defaultReference": false,
+        "reasoning": {
+          "supportedModes": [
+            "auto",
+            "low",
+            "high",
+            "max"
+          ],
+          "defaultMode": "high"
+        }
+      }
+    },
+    {
+      "displayName": "DeepSeek V4 Flash 0731",
+      "family": "deepseek-v4-flash-0731",
+      "match": {
+        "exact": [
+          "deepseek-v4-flash-0731"
+        ]
+      },
+      "id": "deepseek-v4-flash-0731",
+      "spec": {
+        "contextWindow": 1000000,
+        "maxOutputTokens": 384000,
+        "capabilities": [
+          "chat",
+          "code",
+          "reasoning",
+          "deep_thinking",
+          "multilingual",
+          "tool_use"
+        ],
+        "serviceType": [
+          "chat",
+          "reasoning"
+        ],
+        "defaultTemperature": 1,
+        "supportsReasoning": true,
+        "extra": {
+          "supportsThinking": true,
+          "thinkingDefault": true
+        },
+        "description": "DeepSeek V4 Flash 0731 固定版本，100 万上下文"
+      },
+      "routing": {
+        "tier": "lightweight",
+        "routingPriority": 35,
+        "eligibleForAgent": true,
+        "defaultReference": false,
+        "reasoning": {
+          "supportedModes": [
+            "auto",
+            "high",
+            "max"
+          ],
+          "defaultMode": "high"
+        }
+      }
+    },
+    {
+      "displayName": "DeepSeek V4 Flash Vision Exp",
+      "family": "deepseek-v4-flash-vision-exp",
+      "match": {
+        "exact": [
+          "deepseek-v4-flash-vision-exp"
+        ]
+      },
+      "id": "deepseek-v4-flash-vision-exp",
+      "spec": {
+        "contextWindow": 1000000,
+        "maxOutputTokens": 384000,
+        "capabilities": [
+          "chat",
+          "code",
+          "reasoning",
+          "deep_thinking",
+          "vision",
+          "multilingual",
+          "tool_use"
+        ],
+        "serviceType": [
+          "chat",
+          "reasoning",
+          "vision"
+        ],
+        "defaultTemperature": 1,
+        "supportsReasoning": true,
+        "releasedAt": "2026-08-21",
+        "extra": {
+          "supportsThinking": true,
+          "thinkingDefault": true
+        },
+        "description": "DeepSeek V4 Flash 实验性视觉版本，支持文本与图像输入，文本能力与 V4 Flash 一致"
+      },
+      "routing": {
+        "tier": "lightweight",
+        "routingPriority": 35,
+        "eligibleForAgent": true,
+        "defaultReference": false,
+        "reasoning": {
+          "supportedModes": [
+            "auto",
+            "low",
+            "high",
+            "max"
+          ],
+          "defaultMode": "high"
+        }
+      }
+    }
+  ]
+}

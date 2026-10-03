@@ -1,0 +1,80 @@
+{
+  "id": "provider-siliconflow-001",
+  "provider": "siliconflow",
+  "label": "硅基流动",
+  "baseUrl": "https://api.siliconflow.cn/v1",
+  "apiFormat": "openai-completions",
+  "apiKeyRef": "siliconflow",
+  "apiKeyVerified": false,
+  "enabled": false,
+  "status": "unconfigured",
+  "priceCurrency": "CNY",
+  "services": [
+    "chat",
+    "embedding"
+  ],
+  "models": [
+    {
+      "modelName": "Qwen/Qwen3-Coder-480B-A35B-Instruct",
+      "displayName": "Qwen3 Coder 480B (硅基)",
+      "serviceType": [
+        "chat"
+      ],
+      "description": "Qwen3-Coder-480B-A35B-Instruct，480B MoE（35B 激活），原生 256K 上下文，可通过外推扩展至 1M，面向 Agentic Coding",
+      "contextWindow": 262144,
+      "maxOutputTokens": 262144,
+      "capabilities": [
+        "chat",
+        "code",
+        "long_context",
+        "agent",
+        "tool_use"
+      ],
+      "inputPrice": 8,
+      "outputPrice": 16,
+      "defaultTemperature": 0.7,
+      "defaultTopP": 0.7,
+      "extra": {}
+    },
+    {
+      "modelName": "Qwen/Qwen3-235B-A22B-Instruct-2507",
+      "displayName": "Qwen3 235B (硅基)",
+      "serviceType": [
+        "chat"
+      ],
+      "description": "Qwen3-235B-A22B-Instruct-2507，235B MoE（22B 激活）通用指令模型，262K 上下文",
+      "contextWindow": 262144,
+      "maxOutputTokens": 262144,
+      "capabilities": [
+        "chat",
+        "code",
+        "multilingual",
+        "tool_use",
+        "agent",
+        "long_context"
+      ],
+      "inputPrice": 2.5,
+      "outputPrice": 10,
+      "defaultTemperature": 0.7,
+      "defaultTopP": 0.7,
+      "extra": {}
+    },
+    {
+      "modelName": "BAAI/bge-m3",
+      "displayName": "BGE-M3 (硅基)",
+      "serviceType": [
+        "embedding"
+      ],
+      "description": "多语言 Embedding 模型，支持 8K 上下文，免费版",
+      "contextWindow": 8192,
+      "maxOutputTokens": 0,
+      "capabilities": [
+        "text_embedding",
+        "multilingual"
+      ],
+      "inputPrice": 0,
+      "outputPrice": 0,
+      "extra": {}
+    }
+  ]
+}

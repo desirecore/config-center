@@ -1,0 +1,1337 @@
+[
+  {
+    "path": "extra.adaptiveThinking",
+    "owner": "request",
+    "consumerCandidates": [
+      "packages/agent-service/src/compute/resolver.ts",
+      "packages/shared/src/compute/thinking-profiles.ts"
+    ],
+    "minimumVersion": null,
+    "versionStatus": "candidate-contract-not-released",
+    "verification": "static-property-read-candidate-not-runtime-acceptance"
+  },
+  {
+    "path": "extra.aliases",
+    "owner": "metadata",
+    "consumerCandidates": [],
+    "minimumVersion": null,
+    "versionStatus": "candidate-contract-not-released",
+    "verification": "static-property-read-candidate-not-runtime-acceptance"
+  },
+  {
+    "path": "extra.asyncHeader",
+    "owner": "metadata",
+    "consumerCandidates": [],
+    "minimumVersion": null,
+    "versionStatus": "candidate-contract-not-released",
+    "verification": "static-property-read-candidate-not-runtime-acceptance"
+  },
+  {
+    "path": "extra.asyncMode",
+    "owner": "metadata",
+    "consumerCandidates": [],
+    "minimumVersion": null,
+    "versionStatus": "candidate-contract-not-released",
+    "verification": "static-property-read-candidate-not-runtime-acceptance"
+  },
+  {
+    "path": "extra.audioCachedInputPrice",
+    "owner": "billing",
+    "consumerCandidates": [],
+    "minimumVersion": null,
+    "versionStatus": "candidate-contract-not-released",
+    "verification": "static-property-read-candidate-not-runtime-acceptance"
+  },
+  {
+    "path": "extra.audioFormats",
+    "owner": "metadata",
+    "consumerCandidates": [],
+    "minimumVersion": null,
+    "versionStatus": "candidate-contract-not-released",
+    "verification": "static-property-read-candidate-not-runtime-acceptance"
+  },
+  {
+    "path": "extra.audioInputPrice",
+    "owner": "billing",
+    "consumerCandidates": [],
+    "minimumVersion": null,
+    "versionStatus": "candidate-contract-not-released",
+    "verification": "static-property-read-candidate-not-runtime-acceptance"
+  },
+  {
+    "path": "extra.audioOutputPrice",
+    "owner": "billing",
+    "consumerCandidates": [],
+    "minimumVersion": null,
+    "versionStatus": "candidate-contract-not-released",
+    "verification": "static-property-read-candidate-not-runtime-acceptance"
+  },
+  {
+    "path": "extra.audioOutputPricePerMinute",
+    "owner": "billing",
+    "consumerCandidates": [],
+    "minimumVersion": null,
+    "versionStatus": "candidate-contract-not-released",
+    "verification": "static-property-read-candidate-not-runtime-acceptance"
+  },
+  {
+    "path": "extra.authHeader",
+    "owner": "metadata",
+    "consumerCandidates": [],
+    "minimumVersion": null,
+    "versionStatus": "candidate-contract-not-released",
+    "verification": "static-property-read-candidate-not-runtime-acceptance"
+  },
+  {
+    "path": "extra.cachedInputPrice",
+    "owner": "billing",
+    "consumerCandidates": [],
+    "minimumVersion": null,
+    "versionStatus": "candidate-contract-not-released",
+    "verification": "static-property-read-candidate-not-runtime-acceptance"
+  },
+  {
+    "path": "extra.cacheHitPrice",
+    "owner": "billing",
+    "consumerCandidates": [],
+    "minimumVersion": null,
+    "versionStatus": "candidate-contract-not-released",
+    "verification": "static-property-read-candidate-not-runtime-acceptance"
+  },
+  {
+    "path": "extra.cachePricing.audioInputCacheRead",
+    "owner": "billing",
+    "consumerCandidates": [],
+    "minimumVersion": null,
+    "versionStatus": "candidate-contract-not-released",
+    "verification": "static-property-read-candidate-not-runtime-acceptance"
+  },
+  {
+    "path": "extra.cachePricing.inputCacheRead",
+    "owner": "billing",
+    "consumerCandidates": [],
+    "minimumVersion": null,
+    "versionStatus": "candidate-contract-not-released",
+    "verification": "static-property-read-candidate-not-runtime-acceptance"
+  },
+  {
+    "path": "extra.cachePricing.inputCacheReadOver200k",
+    "owner": "billing",
+    "consumerCandidates": [],
+    "minimumVersion": null,
+    "versionStatus": "candidate-contract-not-released",
+    "verification": "static-property-read-candidate-not-runtime-acceptance"
+  },
+  {
+    "path": "extra.cachePricing.read",
+    "owner": "billing",
+    "consumerCandidates": [],
+    "minimumVersion": null,
+    "versionStatus": "candidate-contract-not-released",
+    "verification": "static-property-read-candidate-not-runtime-acceptance"
+  },
+  {
+    "path": "extra.cachePricing.storagePerMillionTokensPerHour",
+    "owner": "billing",
+    "consumerCandidates": [],
+    "minimumVersion": null,
+    "versionStatus": "candidate-contract-not-released",
+    "verification": "static-property-read-candidate-not-runtime-acceptance"
+  },
+  {
+    "path": "extra.cachePricing.write1h",
+    "owner": "billing",
+    "consumerCandidates": [],
+    "minimumVersion": null,
+    "versionStatus": "candidate-contract-not-released",
+    "verification": "static-property-read-candidate-not-runtime-acceptance"
+  },
+  {
+    "path": "extra.cachePricing.write5m",
+    "owner": "billing",
+    "consumerCandidates": [],
+    "minimumVersion": null,
+    "versionStatus": "candidate-contract-not-released",
+    "verification": "static-property-read-candidate-not-runtime-acceptance"
+  },
+  {
+    "path": "extra.cacheReadPrice",
+    "owner": "billing",
+    "consumerCandidates": [],
+    "minimumVersion": null,
+    "versionStatus": "candidate-contract-not-released",
+    "verification": "static-property-read-candidate-not-runtime-acceptance"
+  },
+  {
+    "path": "extra.cacheStoragePrice",
+    "owner": "billing",
+    "consumerCandidates": [],
+    "minimumVersion": null,
+    "versionStatus": "candidate-contract-not-released",
+    "verification": "static-property-read-candidate-not-runtime-acceptance"
+  },
+  {
+    "path": "extra.cacheStoragePricePerMillionTokenHour",
+    "owner": "billing",
+    "consumerCandidates": [],
+    "minimumVersion": null,
+    "versionStatus": "candidate-contract-not-released",
+    "verification": "static-property-read-candidate-not-runtime-acceptance"
+  },
+  {
+    "path": "extra.cacheWritePrice",
+    "owner": "billing",
+    "consumerCandidates": [],
+    "minimumVersion": null,
+    "versionStatus": "candidate-contract-not-released",
+    "verification": "static-property-read-candidate-not-runtime-acceptance"
+  },
+  {
+    "path": "extra.codingPlanLongContextModelId",
+    "owner": "metadata",
+    "consumerCandidates": [],
+    "minimumVersion": null,
+    "versionStatus": "candidate-contract-not-released",
+    "verification": "static-property-read-candidate-not-runtime-acceptance"
+  },
+  {
+    "path": "extra.concurrencyLimit",
+    "owner": "metadata",
+    "consumerCandidates": [],
+    "minimumVersion": null,
+    "versionStatus": "candidate-contract-not-released",
+    "verification": "static-property-read-candidate-not-runtime-acceptance"
+  },
+  {
+    "path": "extra.decodeSpeed",
+    "owner": "metadata",
+    "consumerCandidates": [],
+    "minimumVersion": null,
+    "versionStatus": "candidate-contract-not-released",
+    "verification": "static-property-read-candidate-not-runtime-acceptance"
+  },
+  {
+    "path": "extra.defaultDimension",
+    "owner": "intrinsic",
+    "consumerCandidates": [],
+    "minimumVersion": null,
+    "versionStatus": "candidate-contract-not-released",
+    "verification": "static-property-read-candidate-not-runtime-acceptance"
+  },
+  {
+    "path": "extra.deprecated",
+    "owner": "lifecycle",
+    "consumerCandidates": [
+      "packages/agent-service/src/compute/preset-merge.ts",
+      "packages/schemas/src/agent-service/preset-updates.ts",
+      "packages/shared/src/compute/model-availability.ts"
+    ],
+    "minimumVersion": null,
+    "versionStatus": "candidate-contract-not-released",
+    "verification": "static-property-read-candidate-not-runtime-acceptance"
+  },
+  {
+    "path": "extra.deprecationNotice",
+    "owner": "lifecycle",
+    "consumerCandidates": [],
+    "minimumVersion": null,
+    "versionStatus": "candidate-contract-not-released",
+    "verification": "static-property-read-candidate-not-runtime-acceptance"
+  },
+  {
+    "path": "extra.dimensions",
+    "owner": "intrinsic",
+    "consumerCandidates": [],
+    "minimumVersion": null,
+    "versionStatus": "candidate-contract-not-released",
+    "verification": "static-property-read-candidate-not-runtime-acceptance"
+  },
+  {
+    "path": "extra.endpoint",
+    "owner": "metadata",
+    "consumerCandidates": [],
+    "minimumVersion": null,
+    "versionStatus": "candidate-contract-not-released",
+    "verification": "static-property-read-candidate-not-runtime-acceptance"
+  },
+  {
+    "path": "extra.features.chatPrefixCompletion",
+    "owner": "metadata",
+    "consumerCandidates": [],
+    "minimumVersion": null,
+    "versionStatus": "candidate-contract-not-released",
+    "verification": "static-property-read-candidate-not-runtime-acceptance"
+  },
+  {
+    "path": "extra.features.fimCompletion",
+    "owner": "metadata",
+    "consumerCandidates": [],
+    "minimumVersion": null,
+    "versionStatus": "candidate-contract-not-released",
+    "verification": "static-property-read-candidate-not-runtime-acceptance"
+  },
+  {
+    "path": "extra.features.jsonOutput",
+    "owner": "metadata",
+    "consumerCandidates": [],
+    "minimumVersion": null,
+    "versionStatus": "candidate-contract-not-released",
+    "verification": "static-property-read-candidate-not-runtime-acceptance"
+  },
+  {
+    "path": "extra.features.toolCalls",
+    "owner": "metadata",
+    "consumerCandidates": [],
+    "minimumVersion": null,
+    "versionStatus": "candidate-contract-not-released",
+    "verification": "static-property-read-candidate-not-runtime-acceptance"
+  },
+  {
+    "path": "extra.forcedToolChoiceUnsupported",
+    "owner": "intrinsic",
+    "consumerCandidates": [
+      "packages/agent-service/src/compute/resolver.ts",
+      "packages/shared/src/compute/request-constraints.ts"
+    ],
+    "minimumVersion": null,
+    "versionStatus": "candidate-contract-not-released",
+    "verification": "static-property-read-candidate-not-runtime-acceptance"
+  },
+  {
+    "path": "extra.fps",
+    "owner": "metadata",
+    "consumerCandidates": [],
+    "minimumVersion": null,
+    "versionStatus": "candidate-contract-not-released",
+    "verification": "static-property-read-candidate-not-runtime-acceptance"
+  },
+  {
+    "path": "extra.imageCachedInputPrice",
+    "owner": "billing",
+    "consumerCandidates": [],
+    "minimumVersion": null,
+    "versionStatus": "candidate-contract-not-released",
+    "verification": "static-property-read-candidate-not-runtime-acceptance"
+  },
+  {
+    "path": "extra.imageInputPrice",
+    "owner": "billing",
+    "consumerCandidates": [],
+    "minimumVersion": null,
+    "versionStatus": "candidate-contract-not-released",
+    "verification": "static-property-read-candidate-not-runtime-acceptance"
+  },
+  {
+    "path": "extra.inputModalities",
+    "owner": "metadata",
+    "consumerCandidates": [],
+    "minimumVersion": null,
+    "versionStatus": "candidate-contract-not-released",
+    "verification": "static-property-read-candidate-not-runtime-acceptance"
+  },
+  {
+    "path": "extra.latencyMs",
+    "owner": "metadata",
+    "consumerCandidates": [],
+    "minimumVersion": null,
+    "versionStatus": "candidate-contract-not-released",
+    "verification": "static-property-read-candidate-not-runtime-acceptance"
+  },
+  {
+    "path": "extra.legacy",
+    "owner": "lifecycle",
+    "consumerCandidates": [],
+    "minimumVersion": null,
+    "versionStatus": "candidate-contract-not-released",
+    "verification": "static-property-read-candidate-not-runtime-acceptance"
+  },
+  {
+    "path": "extra.maxAudioDuration",
+    "owner": "metadata",
+    "consumerCandidates": [],
+    "minimumVersion": null,
+    "versionStatus": "candidate-contract-not-released",
+    "verification": "static-property-read-candidate-not-runtime-acceptance"
+  },
+  {
+    "path": "extra.maxAudioLength",
+    "owner": "metadata",
+    "consumerCandidates": [],
+    "minimumVersion": null,
+    "versionStatus": "candidate-contract-not-released",
+    "verification": "static-property-read-candidate-not-runtime-acceptance"
+  },
+  {
+    "path": "extra.maxAudioSize",
+    "owner": "metadata",
+    "consumerCandidates": [],
+    "minimumVersion": null,
+    "versionStatus": "candidate-contract-not-released",
+    "verification": "static-property-read-candidate-not-runtime-acceptance"
+  },
+  {
+    "path": "extra.maxBatchItems",
+    "owner": "metadata",
+    "consumerCandidates": [],
+    "minimumVersion": null,
+    "versionStatus": "candidate-contract-not-released",
+    "verification": "static-property-read-candidate-not-runtime-acceptance"
+  },
+  {
+    "path": "extra.maxBatchSize",
+    "owner": "metadata",
+    "consumerCandidates": [],
+    "minimumVersion": null,
+    "versionStatus": "candidate-contract-not-released",
+    "verification": "static-property-read-candidate-not-runtime-acceptance"
+  },
+  {
+    "path": "extra.maxCloneSamples",
+    "owner": "metadata",
+    "consumerCandidates": [],
+    "minimumVersion": null,
+    "versionStatus": "candidate-contract-not-released",
+    "verification": "static-property-read-candidate-not-runtime-acceptance"
+  },
+  {
+    "path": "extra.maxFusionImages",
+    "owner": "metadata",
+    "consumerCandidates": [],
+    "minimumVersion": null,
+    "versionStatus": "candidate-contract-not-released",
+    "verification": "static-property-read-candidate-not-runtime-acceptance"
+  },
+  {
+    "path": "extra.maxInputTokensPerItem",
+    "owner": "metadata",
+    "consumerCandidates": [],
+    "minimumVersion": null,
+    "versionStatus": "candidate-contract-not-released",
+    "verification": "static-property-read-candidate-not-runtime-acceptance"
+  },
+  {
+    "path": "extra.maxLyricsLength",
+    "owner": "metadata",
+    "consumerCandidates": [],
+    "minimumVersion": null,
+    "versionStatus": "candidate-contract-not-released",
+    "verification": "static-property-read-candidate-not-runtime-acceptance"
+  },
+  {
+    "path": "extra.maxN",
+    "owner": "metadata",
+    "consumerCandidates": [],
+    "minimumVersion": null,
+    "versionStatus": "candidate-contract-not-released",
+    "verification": "static-property-read-candidate-not-runtime-acceptance"
+  },
+  {
+    "path": "extra.maxPromptLength",
+    "owner": "metadata",
+    "consumerCandidates": [],
+    "minimumVersion": null,
+    "versionStatus": "candidate-contract-not-released",
+    "verification": "static-property-read-candidate-not-runtime-acceptance"
+  },
+  {
+    "path": "extra.maxReferenceAudios",
+    "owner": "metadata",
+    "consumerCandidates": [],
+    "minimumVersion": null,
+    "versionStatus": "candidate-contract-not-released",
+    "verification": "static-property-read-candidate-not-runtime-acceptance"
+  },
+  {
+    "path": "extra.maxReferenceImages",
+    "owner": "metadata",
+    "consumerCandidates": [],
+    "minimumVersion": null,
+    "versionStatus": "candidate-contract-not-released",
+    "verification": "static-property-read-candidate-not-runtime-acceptance"
+  },
+  {
+    "path": "extra.maxReferenceVideos",
+    "owner": "metadata",
+    "consumerCandidates": [],
+    "minimumVersion": null,
+    "versionStatus": "candidate-contract-not-released",
+    "verification": "static-property-read-candidate-not-runtime-acceptance"
+  },
+  {
+    "path": "extra.maxTextLength",
+    "owner": "metadata",
+    "consumerCandidates": [],
+    "minimumVersion": null,
+    "versionStatus": "candidate-contract-not-released",
+    "verification": "static-property-read-candidate-not-runtime-acceptance"
+  },
+  {
+    "path": "extra.maxVideoDuration",
+    "owner": "metadata",
+    "consumerCandidates": [],
+    "minimumVersion": null,
+    "versionStatus": "candidate-contract-not-released",
+    "verification": "static-property-read-candidate-not-runtime-acceptance"
+  },
+  {
+    "path": "extra.mediaInputTypes",
+    "owner": "metadata",
+    "consumerCandidates": [],
+    "minimumVersion": null,
+    "versionStatus": "candidate-contract-not-released",
+    "verification": "static-property-read-candidate-not-runtime-acceptance"
+  },
+  {
+    "path": "extra.minCloneDuration",
+    "owner": "metadata",
+    "consumerCandidates": [],
+    "minimumVersion": null,
+    "versionStatus": "candidate-contract-not-released",
+    "verification": "static-property-read-candidate-not-runtime-acceptance"
+  },
+  {
+    "path": "extra.modelOrigin.canonicalModelId",
+    "owner": "intrinsic",
+    "consumerCandidates": [
+      "packages/agent-service/src/compute/speech-model-profile.ts",
+      "packages/schemas/src/agent-service/compute.ts"
+    ],
+    "minimumVersion": null,
+    "versionStatus": "candidate-contract-not-released",
+    "verification": "static-property-read-candidate-not-runtime-acceptance"
+  },
+  {
+    "path": "extra.modelOrigin.family",
+    "owner": "intrinsic",
+    "consumerCandidates": [
+      "packages/agent-service/src/compute/speech-model-profile.ts",
+      "packages/schemas/src/agent-service/compute.ts"
+    ],
+    "minimumVersion": null,
+    "versionStatus": "candidate-contract-not-released",
+    "verification": "static-property-read-candidate-not-runtime-acceptance"
+  },
+  {
+    "path": "extra.modelOrigin.vendor",
+    "owner": "intrinsic",
+    "consumerCandidates": [
+      "packages/agent-service/src/compute/speech-model-profile.ts",
+      "packages/schemas/src/agent-service/compute.ts"
+    ],
+    "minimumVersion": null,
+    "versionStatus": "candidate-contract-not-released",
+    "verification": "static-property-read-candidate-not-runtime-acceptance"
+  },
+  {
+    "path": "extra.outputFormats",
+    "owner": "metadata",
+    "consumerCandidates": [],
+    "minimumVersion": null,
+    "versionStatus": "candidate-contract-not-released",
+    "verification": "static-property-read-candidate-not-runtime-acceptance"
+  },
+  {
+    "path": "extra.outputSpeedTps",
+    "owner": "metadata",
+    "consumerCandidates": [],
+    "minimumVersion": null,
+    "versionStatus": "candidate-contract-not-released",
+    "verification": "static-property-read-candidate-not-runtime-acceptance"
+  },
+  {
+    "path": "extra.preserveThinkingDefault",
+    "owner": "metadata",
+    "consumerCandidates": [],
+    "minimumVersion": null,
+    "versionStatus": "candidate-contract-not-released",
+    "verification": "static-property-read-candidate-not-runtime-acceptance"
+  },
+  {
+    "path": "extra.pricePerGeneration",
+    "owner": "billing",
+    "consumerCandidates": [],
+    "minimumVersion": null,
+    "versionStatus": "candidate-contract-not-released",
+    "verification": "static-property-read-candidate-not-runtime-acceptance"
+  },
+  {
+    "path": "extra.pricePerImage",
+    "owner": "billing",
+    "consumerCandidates": [],
+    "minimumVersion": null,
+    "versionStatus": "candidate-contract-not-released",
+    "verification": "static-property-read-candidate-not-runtime-acceptance"
+  },
+  {
+    "path": "extra.pricePerMillionCharacters",
+    "owner": "billing",
+    "consumerCandidates": [],
+    "minimumVersion": null,
+    "versionStatus": "candidate-contract-not-released",
+    "verification": "static-property-read-candidate-not-runtime-acceptance"
+  },
+  {
+    "path": "extra.pricePerSongUpToFiveMinutes",
+    "owner": "billing",
+    "consumerCandidates": [],
+    "minimumVersion": null,
+    "versionStatus": "candidate-contract-not-released",
+    "verification": "static-property-read-candidate-not-runtime-acceptance"
+  },
+  {
+    "path": "extra.pricingNote",
+    "owner": "billing",
+    "consumerCandidates": [],
+    "minimumVersion": null,
+    "versionStatus": "candidate-contract-not-released",
+    "verification": "static-property-read-candidate-not-runtime-acceptance"
+  },
+  {
+    "path": "extra.pricingNotes",
+    "owner": "billing",
+    "consumerCandidates": [],
+    "minimumVersion": null,
+    "versionStatus": "candidate-contract-not-released",
+    "verification": "static-property-read-candidate-not-runtime-acceptance"
+  },
+  {
+    "path": "extra.pricingTiers",
+    "owner": "billing",
+    "consumerCandidates": [],
+    "minimumVersion": null,
+    "versionStatus": "candidate-contract-not-released",
+    "verification": "static-property-read-candidate-not-runtime-acceptance"
+  },
+  {
+    "path": "extra.priorityPricingTiers",
+    "owner": "billing",
+    "consumerCandidates": [],
+    "minimumVersion": null,
+    "versionStatus": "candidate-contract-not-released",
+    "verification": "static-property-read-candidate-not-runtime-acceptance"
+  },
+  {
+    "path": "extra.promptCacheMinTokens",
+    "owner": "metadata",
+    "consumerCandidates": [],
+    "minimumVersion": null,
+    "versionStatus": "candidate-contract-not-released",
+    "verification": "static-property-read-candidate-not-runtime-acceptance"
+  },
+  {
+    "path": "extra.reasoning.defaultEffort",
+    "owner": "request",
+    "consumerCandidates": [
+      "app/services/compute-api.ts",
+      "packages/agent-service/src/agent/query.ts",
+      "packages/agent-service/src/approval/ai-approve.ts",
+      "packages/agent-service/src/approval/constants.ts",
+      "packages/agent-service/src/builtin-tools/agent-manage.ts",
+      "packages/agent-service/src/compute/catalog-migration.ts",
+      "packages/agent-service/src/compute/copilot-models.ts",
+      "packages/agent-service/src/compute/resolver.ts",
+      "packages/agent-service/src/compute/smart-route-resolution.ts",
+      "packages/agent-service/src/compute/smart-routing.ts",
+      "packages/agent-service/src/runtime/agent-factory.ts",
+      "packages/schemas/src/agent-service/compute.ts",
+      "packages/shared/src/compute/thinking-profiles.ts"
+    ],
+    "minimumVersion": null,
+    "versionStatus": "candidate-contract-not-released",
+    "verification": "static-property-read-candidate-not-runtime-acceptance"
+  },
+  {
+    "path": "extra.reasoning.supportedEfforts",
+    "owner": "request",
+    "consumerCandidates": [
+      "app/services/compute-api.ts",
+      "packages/agent-service/src/agent/query.ts",
+      "packages/agent-service/src/approval/ai-approve.ts",
+      "packages/agent-service/src/approval/constants.ts",
+      "packages/agent-service/src/builtin-tools/agent-manage.ts",
+      "packages/agent-service/src/compute/catalog-migration.ts",
+      "packages/agent-service/src/compute/copilot-models.ts",
+      "packages/agent-service/src/compute/resolver.ts",
+      "packages/agent-service/src/compute/smart-route-resolution.ts",
+      "packages/agent-service/src/compute/smart-routing.ts",
+      "packages/agent-service/src/runtime/agent-factory.ts",
+      "packages/schemas/src/agent-service/compute.ts",
+      "packages/shared/src/compute/thinking-profiles.ts"
+    ],
+    "minimumVersion": null,
+    "versionStatus": "candidate-contract-not-released",
+    "verification": "static-property-read-candidate-not-runtime-acceptance"
+  },
+  {
+    "path": "extra.replacedBy",
+    "owner": "lifecycle",
+    "consumerCandidates": [],
+    "minimumVersion": null,
+    "versionStatus": "candidate-contract-not-released",
+    "verification": "static-property-read-candidate-not-runtime-acceptance"
+  },
+  {
+    "path": "extra.requestPricingPer1k.high",
+    "owner": "billing",
+    "consumerCandidates": [],
+    "minimumVersion": null,
+    "versionStatus": "candidate-contract-not-released",
+    "verification": "static-property-read-candidate-not-runtime-acceptance"
+  },
+  {
+    "path": "extra.requestPricingPer1k.low",
+    "owner": "billing",
+    "consumerCandidates": [],
+    "minimumVersion": null,
+    "versionStatus": "candidate-contract-not-released",
+    "verification": "static-property-read-candidate-not-runtime-acceptance"
+  },
+  {
+    "path": "extra.requestPricingPer1k.medium",
+    "owner": "billing",
+    "consumerCandidates": [],
+    "minimumVersion": null,
+    "versionStatus": "candidate-contract-not-released",
+    "verification": "static-property-read-candidate-not-runtime-acceptance"
+  },
+  {
+    "path": "extra.responseFormats",
+    "owner": "metadata",
+    "consumerCandidates": [],
+    "minimumVersion": null,
+    "versionStatus": "candidate-contract-not-released",
+    "verification": "static-property-read-candidate-not-runtime-acceptance"
+  },
+  {
+    "path": "extra.responsesOnly",
+    "owner": "request",
+    "consumerCandidates": [],
+    "minimumVersion": null,
+    "versionStatus": "candidate-contract-not-released",
+    "verification": "static-property-read-candidate-not-runtime-acceptance"
+  },
+  {
+    "path": "extra.sampleRate",
+    "owner": "metadata",
+    "consumerCandidates": [],
+    "minimumVersion": null,
+    "versionStatus": "candidate-contract-not-released",
+    "verification": "static-property-read-candidate-not-runtime-acceptance"
+  },
+  {
+    "path": "extra.samplingParametersDeprecated",
+    "owner": "intrinsic",
+    "consumerCandidates": [
+      "packages/agent-service/src/compute/resolver.ts",
+      "packages/shared/src/compute/request-constraints.ts"
+    ],
+    "minimumVersion": null,
+    "versionStatus": "candidate-contract-not-released",
+    "verification": "static-property-read-candidate-not-runtime-acceptance"
+  },
+  {
+    "path": "extra.serverSideWebSearch.dialect",
+    "owner": "request",
+    "consumerCandidates": [
+      "packages/agent-service/src/auth/sapi-client.ts",
+      "packages/agent-service/src/compute/server-side-web-search.ts",
+      "packages/schemas/src/agent-service/compute.ts"
+    ],
+    "minimumVersion": null,
+    "versionStatus": "candidate-contract-not-released",
+    "verification": "static-property-read-candidate-not-runtime-acceptance"
+  },
+  {
+    "path": "extra.serverSideWebSearch.enabled",
+    "owner": "request",
+    "consumerCandidates": [
+      "packages/agent-service/src/auth/sapi-client.ts",
+      "packages/agent-service/src/compute/server-side-web-search.ts",
+      "packages/schemas/src/agent-service/compute.ts"
+    ],
+    "minimumVersion": null,
+    "versionStatus": "candidate-contract-not-released",
+    "verification": "static-property-read-candidate-not-runtime-acceptance"
+  },
+  {
+    "path": "extra.serverSideWebSearch.fallbackPriority",
+    "owner": "request",
+    "consumerCandidates": [
+      "packages/agent-service/src/auth/sapi-client.ts",
+      "packages/agent-service/src/compute/server-side-web-search.ts",
+      "packages/schemas/src/agent-service/compute.ts"
+    ],
+    "minimumVersion": null,
+    "versionStatus": "candidate-contract-not-released",
+    "verification": "static-property-read-candidate-not-runtime-acceptance"
+  },
+  {
+    "path": "extra.serverSideWebSearch.searchRequestPriceUsd",
+    "owner": "billing",
+    "consumerCandidates": [
+      "packages/agent-service/src/auth/sapi-client.ts",
+      "packages/agent-service/src/compute/server-side-web-search.ts",
+      "packages/schemas/src/agent-service/compute.ts"
+    ],
+    "minimumVersion": null,
+    "versionStatus": "candidate-contract-not-released",
+    "verification": "static-property-read-candidate-not-runtime-acceptance"
+  },
+  {
+    "path": "extra.serverSideWebSearch.toolType",
+    "owner": "request",
+    "consumerCandidates": [
+      "packages/agent-service/src/auth/sapi-client.ts",
+      "packages/agent-service/src/compute/server-side-web-search.ts",
+      "packages/schemas/src/agent-service/compute.ts"
+    ],
+    "minimumVersion": null,
+    "versionStatus": "candidate-contract-not-released",
+    "verification": "static-property-read-candidate-not-runtime-acceptance"
+  },
+  {
+    "path": "extra.sizeShortcuts.1K",
+    "owner": "metadata",
+    "consumerCandidates": [],
+    "minimumVersion": null,
+    "versionStatus": "candidate-contract-not-released",
+    "verification": "static-property-read-candidate-not-runtime-acceptance"
+  },
+  {
+    "path": "extra.sizeShortcuts.2K",
+    "owner": "metadata",
+    "consumerCandidates": [],
+    "minimumVersion": null,
+    "versionStatus": "candidate-contract-not-released",
+    "verification": "static-property-read-candidate-not-runtime-acceptance"
+  },
+  {
+    "path": "extra.sizeShortcuts.4K",
+    "owner": "metadata",
+    "consumerCandidates": [],
+    "minimumVersion": null,
+    "versionStatus": "candidate-contract-not-released",
+    "verification": "static-property-read-candidate-not-runtime-acceptance"
+  },
+  {
+    "path": "extra.snapshot",
+    "owner": "metadata",
+    "consumerCandidates": [],
+    "minimumVersion": null,
+    "versionStatus": "candidate-contract-not-released",
+    "verification": "static-property-read-candidate-not-runtime-acceptance"
+  },
+  {
+    "path": "extra.speech.defaultVoice",
+    "owner": "intrinsic",
+    "consumerCandidates": [
+      "packages/agent-service/src/compute/speech-model-profile.ts",
+      "packages/agent-service/src/speech/speech-resolver.ts",
+      "packages/speech-core/src/adapter-registry.ts"
+    ],
+    "minimumVersion": null,
+    "versionStatus": "candidate-contract-not-released",
+    "verification": "static-property-read-candidate-not-runtime-acceptance"
+  },
+  {
+    "path": "extra.speech.inputFormats",
+    "owner": "intrinsic",
+    "consumerCandidates": [
+      "packages/agent-service/src/compute/speech-model-profile.ts",
+      "packages/agent-service/src/speech/speech-resolver.ts",
+      "packages/speech-core/src/adapter-registry.ts"
+    ],
+    "minimumVersion": null,
+    "versionStatus": "candidate-contract-not-released",
+    "verification": "static-property-read-candidate-not-runtime-acceptance"
+  },
+  {
+    "path": "extra.speech.languageHints",
+    "owner": "intrinsic",
+    "consumerCandidates": [
+      "packages/agent-service/src/compute/speech-model-profile.ts",
+      "packages/agent-service/src/speech/speech-resolver.ts",
+      "packages/speech-core/src/adapter-registry.ts"
+    ],
+    "minimumVersion": null,
+    "versionStatus": "candidate-contract-not-released",
+    "verification": "static-property-read-candidate-not-runtime-acceptance"
+  },
+  {
+    "path": "extra.speech.modes",
+    "owner": "intrinsic",
+    "consumerCandidates": [
+      "packages/agent-service/src/compute/speech-model-profile.ts",
+      "packages/agent-service/src/speech/speech-resolver.ts",
+      "packages/speech-core/src/adapter-registry.ts"
+    ],
+    "minimumVersion": null,
+    "versionStatus": "candidate-contract-not-released",
+    "verification": "static-property-read-candidate-not-runtime-acceptance"
+  },
+  {
+    "path": "extra.speech.outputFormats",
+    "owner": "intrinsic",
+    "consumerCandidates": [
+      "packages/agent-service/src/compute/speech-model-profile.ts",
+      "packages/agent-service/src/speech/speech-resolver.ts",
+      "packages/speech-core/src/adapter-registry.ts"
+    ],
+    "minimumVersion": null,
+    "versionStatus": "candidate-contract-not-released",
+    "verification": "static-property-read-candidate-not-runtime-acceptance"
+  },
+  {
+    "path": "extra.speech.protocol",
+    "owner": "intrinsic",
+    "consumerCandidates": [
+      "packages/agent-service/src/compute/speech-model-profile.ts",
+      "packages/agent-service/src/speech/speech-resolver.ts",
+      "packages/speech-core/src/adapter-registry.ts"
+    ],
+    "minimumVersion": null,
+    "versionStatus": "candidate-contract-not-released",
+    "verification": "static-property-read-candidate-not-runtime-acceptance"
+  },
+  {
+    "path": "extra.speech.protocolVersion",
+    "owner": "intrinsic",
+    "consumerCandidates": [
+      "packages/agent-service/src/compute/speech-model-profile.ts",
+      "packages/agent-service/src/speech/speech-resolver.ts",
+      "packages/speech-core/src/adapter-registry.ts"
+    ],
+    "minimumVersion": null,
+    "versionStatus": "candidate-contract-not-released",
+    "verification": "static-property-read-candidate-not-runtime-acceptance"
+  },
+  {
+    "path": "extra.speech.sampleRates",
+    "owner": "intrinsic",
+    "consumerCandidates": [
+      "packages/agent-service/src/compute/speech-model-profile.ts",
+      "packages/agent-service/src/speech/speech-resolver.ts",
+      "packages/speech-core/src/adapter-registry.ts"
+    ],
+    "minimumVersion": null,
+    "versionStatus": "candidate-contract-not-released",
+    "verification": "static-property-read-candidate-not-runtime-acceptance"
+  },
+  {
+    "path": "extra.speech.voices",
+    "owner": "intrinsic",
+    "consumerCandidates": [
+      "packages/agent-service/src/compute/speech-model-profile.ts",
+      "packages/agent-service/src/speech/speech-resolver.ts",
+      "packages/speech-core/src/adapter-registry.ts"
+    ],
+    "minimumVersion": null,
+    "versionStatus": "candidate-contract-not-released",
+    "verification": "static-property-read-candidate-not-runtime-acceptance"
+  },
+  {
+    "path": "extra.streamingSupported",
+    "owner": "metadata",
+    "consumerCandidates": [],
+    "minimumVersion": null,
+    "versionStatus": "candidate-contract-not-released",
+    "verification": "static-property-read-candidate-not-runtime-acceptance"
+  },
+  {
+    "path": "extra.supportedAspectRatios",
+    "owner": "metadata",
+    "consumerCandidates": [],
+    "minimumVersion": null,
+    "versionStatus": "candidate-contract-not-released",
+    "verification": "static-property-read-candidate-not-runtime-acceptance"
+  },
+  {
+    "path": "extra.supportedAudioFormats",
+    "owner": "metadata",
+    "consumerCandidates": [],
+    "minimumVersion": null,
+    "versionStatus": "candidate-contract-not-released",
+    "verification": "static-property-read-candidate-not-runtime-acceptance"
+  },
+  {
+    "path": "extra.supportedFormats",
+    "owner": "metadata",
+    "consumerCandidates": [],
+    "minimumVersion": null,
+    "versionStatus": "candidate-contract-not-released",
+    "verification": "static-property-read-candidate-not-runtime-acceptance"
+  },
+  {
+    "path": "extra.supportedImageFormats",
+    "owner": "metadata",
+    "consumerCandidates": [],
+    "minimumVersion": null,
+    "versionStatus": "candidate-contract-not-released",
+    "verification": "static-property-read-candidate-not-runtime-acceptance"
+  },
+  {
+    "path": "extra.supportedImageSizes",
+    "owner": "metadata",
+    "consumerCandidates": [],
+    "minimumVersion": null,
+    "versionStatus": "candidate-contract-not-released",
+    "verification": "static-property-read-candidate-not-runtime-acceptance"
+  },
+  {
+    "path": "extra.supportedInputFormats",
+    "owner": "metadata",
+    "consumerCandidates": [],
+    "minimumVersion": null,
+    "versionStatus": "candidate-contract-not-released",
+    "verification": "static-property-read-candidate-not-runtime-acceptance"
+  },
+  {
+    "path": "extra.supportedLanguageCount",
+    "owner": "metadata",
+    "consumerCandidates": [],
+    "minimumVersion": null,
+    "versionStatus": "candidate-contract-not-released",
+    "verification": "static-property-read-candidate-not-runtime-acceptance"
+  },
+  {
+    "path": "extra.supportedLyricsStructures",
+    "owner": "metadata",
+    "consumerCandidates": [],
+    "minimumVersion": null,
+    "versionStatus": "candidate-contract-not-released",
+    "verification": "static-property-read-candidate-not-runtime-acceptance"
+  },
+  {
+    "path": "extra.supportedModes",
+    "owner": "metadata",
+    "consumerCandidates": [],
+    "minimumVersion": null,
+    "versionStatus": "candidate-contract-not-released",
+    "verification": "static-property-read-candidate-not-runtime-acceptance"
+  },
+  {
+    "path": "extra.supportedRatios",
+    "owner": "metadata",
+    "consumerCandidates": [],
+    "minimumVersion": null,
+    "versionStatus": "candidate-contract-not-released",
+    "verification": "static-property-read-candidate-not-runtime-acceptance"
+  },
+  {
+    "path": "extra.supportedResolutions",
+    "owner": "metadata",
+    "consumerCandidates": [],
+    "minimumVersion": null,
+    "versionStatus": "candidate-contract-not-released",
+    "verification": "static-property-read-candidate-not-runtime-acceptance"
+  },
+  {
+    "path": "extra.supportedSizes",
+    "owner": "metadata",
+    "consumerCandidates": [],
+    "minimumVersion": null,
+    "versionStatus": "candidate-contract-not-released",
+    "verification": "static-property-read-candidate-not-runtime-acceptance"
+  },
+  {
+    "path": "extra.supportedStyles",
+    "owner": "metadata",
+    "consumerCandidates": [],
+    "minimumVersion": null,
+    "versionStatus": "candidate-contract-not-released",
+    "verification": "static-property-read-candidate-not-runtime-acceptance"
+  },
+  {
+    "path": "extra.supportedVideoFormats",
+    "owner": "metadata",
+    "consumerCandidates": [],
+    "minimumVersion": null,
+    "versionStatus": "candidate-contract-not-released",
+    "verification": "static-property-read-candidate-not-runtime-acceptance"
+  },
+  {
+    "path": "extra.supportsChatApi",
+    "owner": "metadata",
+    "consumerCandidates": [],
+    "minimumVersion": null,
+    "versionStatus": "candidate-contract-not-released",
+    "verification": "static-property-read-candidate-not-runtime-acceptance"
+  },
+  {
+    "path": "extra.supportsColorPalette",
+    "owner": "metadata",
+    "consumerCandidates": [],
+    "minimumVersion": null,
+    "versionStatus": "candidate-contract-not-released",
+    "verification": "static-property-read-candidate-not-runtime-acceptance"
+  },
+  {
+    "path": "extra.supportsIncrementalStreaming",
+    "owner": "metadata",
+    "consumerCandidates": [],
+    "minimumVersion": null,
+    "versionStatus": "candidate-contract-not-released",
+    "verification": "static-property-read-candidate-not-runtime-acceptance"
+  },
+  {
+    "path": "extra.supportsIntelligentDuration",
+    "owner": "metadata",
+    "consumerCandidates": [],
+    "minimumVersion": null,
+    "versionStatus": "candidate-contract-not-released",
+    "verification": "static-property-read-candidate-not-runtime-acceptance"
+  },
+  {
+    "path": "extra.supportsNegativePrompt",
+    "owner": "metadata",
+    "consumerCandidates": [],
+    "minimumVersion": null,
+    "versionStatus": "candidate-contract-not-released",
+    "verification": "static-property-read-candidate-not-runtime-acceptance"
+  },
+  {
+    "path": "extra.supportsOutputAudio",
+    "owner": "metadata",
+    "consumerCandidates": [],
+    "minimumVersion": null,
+    "versionStatus": "candidate-contract-not-released",
+    "verification": "static-property-read-candidate-not-runtime-acceptance"
+  },
+  {
+    "path": "extra.supportsParallelToolCalls",
+    "owner": "metadata",
+    "consumerCandidates": [],
+    "minimumVersion": null,
+    "versionStatus": "candidate-contract-not-released",
+    "verification": "static-property-read-candidate-not-runtime-acceptance"
+  },
+  {
+    "path": "extra.supportsPromptExtend",
+    "owner": "metadata",
+    "consumerCandidates": [],
+    "minimumVersion": null,
+    "versionStatus": "candidate-contract-not-released",
+    "verification": "static-property-read-candidate-not-runtime-acceptance"
+  },
+  {
+    "path": "extra.supportsResponsesApi",
+    "owner": "metadata",
+    "consumerCandidates": [],
+    "minimumVersion": null,
+    "versionStatus": "candidate-contract-not-released",
+    "verification": "static-property-read-candidate-not-runtime-acceptance"
+  },
+  {
+    "path": "extra.supportsSeed",
+    "owner": "metadata",
+    "consumerCandidates": [],
+    "minimumVersion": null,
+    "versionStatus": "candidate-contract-not-released",
+    "verification": "static-property-read-candidate-not-runtime-acceptance"
+  },
+  {
+    "path": "extra.supportsThinking",
+    "owner": "metadata",
+    "consumerCandidates": [],
+    "minimumVersion": null,
+    "versionStatus": "candidate-contract-not-released",
+    "verification": "static-property-read-candidate-not-runtime-acceptance"
+  },
+  {
+    "path": "extra.supportsThinkingMode",
+    "owner": "metadata",
+    "consumerCandidates": [],
+    "minimumVersion": null,
+    "versionStatus": "candidate-contract-not-released",
+    "verification": "static-property-read-candidate-not-runtime-acceptance"
+  },
+  {
+    "path": "extra.supportsWatermark",
+    "owner": "metadata",
+    "consumerCandidates": [],
+    "minimumVersion": null,
+    "versionStatus": "candidate-contract-not-released",
+    "verification": "static-property-read-candidate-not-runtime-acceptance"
+  },
+  {
+    "path": "extra.taskQueryEndpoint",
+    "owner": "metadata",
+    "consumerCandidates": [],
+    "minimumVersion": null,
+    "versionStatus": "candidate-contract-not-released",
+    "verification": "static-property-read-candidate-not-runtime-acceptance"
+  },
+  {
+    "path": "extra.textCachedInputPrice",
+    "owner": "billing",
+    "consumerCandidates": [],
+    "minimumVersion": null,
+    "versionStatus": "candidate-contract-not-released",
+    "verification": "static-property-read-candidate-not-runtime-acceptance"
+  },
+  {
+    "path": "extra.thinking.default",
+    "owner": "request",
+    "consumerCandidates": [
+      "packages/agent-service/src/approval/ai-approve.ts"
+    ],
+    "minimumVersion": null,
+    "versionStatus": "candidate-contract-not-released",
+    "verification": "static-property-read-candidate-not-runtime-acceptance"
+  },
+  {
+    "path": "extra.thinking.disabledTemperature",
+    "owner": "request",
+    "consumerCandidates": [
+      "packages/agent-service/src/approval/ai-approve.ts"
+    ],
+    "minimumVersion": null,
+    "versionStatus": "candidate-contract-not-released",
+    "verification": "static-property-read-candidate-not-runtime-acceptance"
+  },
+  {
+    "path": "extra.thinking.disableSupported",
+    "owner": "request",
+    "consumerCandidates": [
+      "packages/agent-service/src/approval/ai-approve.ts"
+    ],
+    "minimumVersion": null,
+    "versionStatus": "candidate-contract-not-released",
+    "verification": "static-property-read-candidate-not-runtime-acceptance"
+  },
+  {
+    "path": "extra.thinking.mode",
+    "owner": "request",
+    "consumerCandidates": [
+      "packages/agent-service/src/approval/ai-approve.ts"
+    ],
+    "minimumVersion": null,
+    "versionStatus": "candidate-contract-not-released",
+    "verification": "static-property-read-candidate-not-runtime-acceptance"
+  },
+  {
+    "path": "extra.thinking.preserveReasoningContent",
+    "owner": "request",
+    "consumerCandidates": [
+      "packages/agent-service/src/approval/ai-approve.ts"
+    ],
+    "minimumVersion": null,
+    "versionStatus": "candidate-contract-not-released",
+    "verification": "static-property-read-candidate-not-runtime-acceptance"
+  },
+  {
+    "path": "extra.thinkingDefault",
+    "owner": "metadata",
+    "consumerCandidates": [
+      "packages/agent-service/src/approval/constants.ts"
+    ],
+    "minimumVersion": null,
+    "versionStatus": "candidate-contract-not-released",
+    "verification": "static-property-read-candidate-not-runtime-acceptance"
+  },
+  {
+    "path": "extra.thinkingMaxTokens",
+    "owner": "metadata",
+    "consumerCandidates": [],
+    "minimumVersion": null,
+    "versionStatus": "candidate-contract-not-released",
+    "verification": "static-property-read-candidate-not-runtime-acceptance"
+  },
+  {
+    "path": "extra.thinkingOnly",
+    "owner": "intrinsic",
+    "consumerCandidates": [
+      "app/components/chat/ModelReasoningPill.tsx",
+      "packages/agent-service/src/approval/ai-approve.ts",
+      "packages/agent-service/src/approval/constants.ts",
+      "packages/agent-service/src/compute/model-spec-matcher.ts",
+      "packages/agent-service/src/compute/resolver.ts",
+      "packages/agent-service/src/compute/smart-route-resolution.ts",
+      "packages/agent-service/src/query/model-fallback.ts",
+      "packages/agent-service/src/runtime/error-shapes.ts",
+      "packages/agent-service/src/runtime/types.ts",
+      "packages/schemas/src/agent-service/compute.ts",
+      "packages/shared/src/compat-proxy/converter.ts",
+      "packages/shared/src/compat-proxy/types.ts",
+      "packages/shared/src/compute/thinking-profiles.ts"
+    ],
+    "minimumVersion": null,
+    "versionStatus": "candidate-contract-not-released",
+    "verification": "static-property-read-candidate-not-runtime-acceptance"
+  },
+  {
+    "path": "extra.thinkingRoundTrip.allowEmptySignature",
+    "owner": "request",
+    "consumerCandidates": [
+      "packages/agent-service/src/compute/thinking-roundtrip.ts"
+    ],
+    "minimumVersion": null,
+    "versionStatus": "candidate-contract-not-released",
+    "verification": "static-property-read-candidate-not-runtime-acceptance"
+  },
+  {
+    "path": "extra.thinkingRoundTrip.enabled",
+    "owner": "request",
+    "consumerCandidates": [
+      "packages/agent-service/src/compute/thinking-roundtrip.ts"
+    ],
+    "minimumVersion": null,
+    "versionStatus": "candidate-contract-not-released",
+    "verification": "static-property-read-candidate-not-runtime-acceptance"
+  },
+  {
+    "path": "extra.thinkingRoundTrip.protocol",
+    "owner": "request",
+    "consumerCandidates": [
+      "packages/agent-service/src/compute/thinking-roundtrip.ts"
+    ],
+    "minimumVersion": null,
+    "versionStatus": "candidate-contract-not-released",
+    "verification": "static-property-read-candidate-not-runtime-acceptance"
+  },
+  {
+    "path": "extra.thinkingRoundTrip.scope",
+    "owner": "request",
+    "consumerCandidates": [
+      "packages/agent-service/src/compute/thinking-roundtrip.ts"
+    ],
+    "minimumVersion": null,
+    "versionStatus": "candidate-contract-not-released",
+    "verification": "static-property-read-candidate-not-runtime-acceptance"
+  },
+  {
+    "path": "extra.thinkingToolTurnValidation",
+    "owner": "request",
+    "consumerCandidates": [
+      "packages/agent-service/src/compute/thinking-roundtrip.ts",
+      "packages/agent-service/src/runtime/thinking-tool-turn-guard.ts"
+    ],
+    "minimumVersion": null,
+    "versionStatus": "candidate-contract-not-released",
+    "verification": "static-property-read-candidate-not-runtime-acceptance"
+  },
+  {
+    "path": "extra.urlExpiry",
+    "owner": "metadata",
+    "consumerCandidates": [],
+    "minimumVersion": null,
+    "versionStatus": "candidate-contract-not-released",
+    "verification": "static-property-read-candidate-not-runtime-acceptance"
+  },
+  {
+    "path": "extra.vectorDimensions",
+    "owner": "metadata",
+    "consumerCandidates": [],
+    "minimumVersion": null,
+    "versionStatus": "candidate-contract-not-released",
+    "verification": "static-property-read-candidate-not-runtime-acceptance"
+  },
+  {
+    "path": "extra.voices",
+    "owner": "metadata",
+    "consumerCandidates": [],
+    "minimumVersion": null,
+    "versionStatus": "candidate-contract-not-released",
+    "verification": "static-property-read-candidate-not-runtime-acceptance"
+  }
+]

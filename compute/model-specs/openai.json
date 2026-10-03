@@ -341,10 +341,8 @@
       "family": "gpt-5",
       "match": {
         "exact": [
-          "gpt-5.4"
-        ],
-        "patterns": [
-          "gpt-5.4*"
+          "gpt-5.4",
+          "gpt-5.4-2026-03-05"
         ]
       },
       "spec": {
@@ -1241,6 +1239,82 @@
           ],
           "defaultMode": "auto"
         }
+      }
+    },
+    {
+      "id": "gpt-5.4-nano",
+      "displayName": "GPT-5.4 Nano",
+      "family": "gpt-5.4-nano",
+      "match": {
+        "exact": [
+          "gpt-5.4-nano",
+          "gpt-5.4-nano-2026-03-17"
+        ]
+      },
+      "spec": {
+        "contextWindow": 400000,
+        "maxOutputTokens": 128000,
+        "description": "GPT-5.4 Nano；官网确认400000总窗口、128000最大输出。2026-10-01宣布deprecated，停止服务日2027-04-01；当前不据此退役。独立输入上限未由本页确认。"
+      }
+    },
+    {
+      "id": "gpt-realtime-2.1",
+      "displayName": "gpt-realtime-2.1",
+      "family": "gpt-realtime-2.1",
+      "match": {
+        "exact": [
+          "gpt-realtime-2.1"
+        ]
+      },
+      "spec": {
+        "contextWindow": 128000,
+        "maxOutputTokens": 32000,
+        "description": "官方精确型号与窗口/输出已核；独立实时协议适配与账号验收由接入面决定，不继承通用Chat合同。"
+      }
+    },
+    {
+      "id": "gpt-realtime-2.1-mini",
+      "displayName": "gpt-realtime-2.1-mini",
+      "family": "gpt-realtime-2.1-mini",
+      "match": {
+        "exact": [
+          "gpt-realtime-2.1-mini"
+        ]
+      },
+      "spec": {
+        "contextWindow": 128000,
+        "maxOutputTokens": 32000,
+        "description": "官方精确型号与窗口/输出已核；独立实时协议适配与账号验收由接入面决定，不继承通用Chat合同。"
+      }
+    },
+    {
+      "id": "gpt-realtime-translate",
+      "displayName": "gpt-realtime-translate",
+      "family": "gpt-realtime-translate",
+      "match": {
+        "exact": [
+          "gpt-realtime-translate"
+        ]
+      },
+      "spec": {
+        "contextWindow": 16000,
+        "maxOutputTokens": 2000,
+        "description": "官方精确型号与窗口/输出已核；独立实时协议适配与账号验收由接入面决定，不继承通用Chat合同。"
+      }
+    },
+    {
+      "id": "gpt-5.4-pro",
+      "displayName": "GPT-5.4 Pro",
+      "family": "gpt-5.4-pro",
+      "match": {
+        "exact": [
+          "gpt-5.4-pro"
+        ]
+      },
+      "spec": {
+        "contextWindow": 1050000,
+        "maxOutputTokens": 128000,
+        "description": "官方独立Pro规格；Responses协议限制由实际接入面执行，不沿用基础型号或其他代际family。"
       }
     }
   ]

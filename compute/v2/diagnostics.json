@@ -1,0 +1,5423 @@
+{
+  "specs": 286,
+  "accesses": 40,
+  "models": 340,
+  "bindings": {
+    "exact": 304,
+    "access-local": 28,
+    "dynamic": 8
+  },
+  "overrides": [
+    {
+      "accessId": "provider-anthropic-claude-plan-001",
+      "apiModelId": "claude-opus-5-5",
+      "field": "capabilities",
+      "value": [
+        "chat",
+        "reasoning",
+        "code",
+        "vision",
+        "tool_use",
+        "agent",
+        "long_context"
+      ],
+      "reason": "preserved-access-contract",
+      "evidence": "compute/providers/anthropic-claude.json#claude-opus-5-5",
+      "verification": "inherited-not-reverified"
+    },
+    {
+      "accessId": "provider-anthropic-claude-plan-001",
+      "apiModelId": "claude-fable-5-1",
+      "field": "capabilities",
+      "value": [
+        "chat",
+        "reasoning",
+        "code",
+        "vision",
+        "tool_use",
+        "agent",
+        "long_context"
+      ],
+      "reason": "preserved-access-contract",
+      "evidence": "compute/providers/anthropic-claude.json#claude-fable-5-1",
+      "verification": "inherited-not-reverified"
+    },
+    {
+      "accessId": "provider-anthropic-claude-plan-001",
+      "apiModelId": "claude-opus-5",
+      "field": "capabilities",
+      "value": [
+        "chat",
+        "reasoning",
+        "code",
+        "vision",
+        "tool_use",
+        "agent",
+        "long_context"
+      ],
+      "reason": "preserved-access-contract",
+      "evidence": "compute/providers/anthropic-claude.json#claude-opus-5",
+      "verification": "inherited-not-reverified"
+    },
+    {
+      "accessId": "provider-anthropic-claude-plan-001",
+      "apiModelId": "claude-sonnet-5-5",
+      "field": "capabilities",
+      "value": [
+        "chat",
+        "reasoning",
+        "code",
+        "vision",
+        "tool_use",
+        "agent",
+        "long_context"
+      ],
+      "reason": "preserved-access-contract",
+      "evidence": "compute/providers/anthropic-claude.json#claude-sonnet-5-5",
+      "verification": "inherited-not-reverified"
+    },
+    {
+      "accessId": "provider-anthropic-claude-plan-001",
+      "apiModelId": "claude-sonnet-5",
+      "field": "capabilities",
+      "value": [
+        "chat",
+        "reasoning",
+        "code",
+        "vision",
+        "tool_use",
+        "agent",
+        "long_context"
+      ],
+      "reason": "preserved-access-contract",
+      "evidence": "compute/providers/anthropic-claude.json#claude-sonnet-5",
+      "verification": "inherited-not-reverified"
+    },
+    {
+      "accessId": "provider-anthropic-001",
+      "apiModelId": "claude-opus-5-5",
+      "field": "capabilities",
+      "value": [
+        "chat",
+        "reasoning",
+        "code",
+        "vision",
+        "tool_use",
+        "agent",
+        "long_context"
+      ],
+      "reason": "preserved-access-contract",
+      "evidence": "compute/providers/anthropic.json#claude-opus-5-5",
+      "verification": "inherited-not-reverified"
+    },
+    {
+      "accessId": "provider-anthropic-001",
+      "apiModelId": "claude-fable-5-1",
+      "field": "capabilities",
+      "value": [
+        "chat",
+        "reasoning",
+        "code",
+        "vision",
+        "tool_use",
+        "agent",
+        "long_context"
+      ],
+      "reason": "preserved-access-contract",
+      "evidence": "compute/providers/anthropic.json#claude-fable-5-1",
+      "verification": "inherited-not-reverified"
+    },
+    {
+      "accessId": "provider-anthropic-001",
+      "apiModelId": "claude-opus-5",
+      "field": "capabilities",
+      "value": [
+        "chat",
+        "reasoning",
+        "code",
+        "vision",
+        "tool_use",
+        "agent",
+        "long_context"
+      ],
+      "reason": "preserved-access-contract",
+      "evidence": "compute/providers/anthropic.json#claude-opus-5",
+      "verification": "inherited-not-reverified"
+    },
+    {
+      "accessId": "provider-anthropic-001",
+      "apiModelId": "claude-sonnet-5-5",
+      "field": "serviceType",
+      "value": [
+        "chat",
+        "computer_use"
+      ],
+      "reason": "preserved-access-contract",
+      "evidence": "compute/providers/anthropic.json#claude-sonnet-5-5",
+      "verification": "inherited-not-reverified"
+    },
+    {
+      "accessId": "provider-anthropic-001",
+      "apiModelId": "claude-sonnet-5-5",
+      "field": "capabilities",
+      "value": [
+        "chat",
+        "reasoning",
+        "code",
+        "vision",
+        "tool_use",
+        "computer_use",
+        "agent",
+        "long_context"
+      ],
+      "reason": "preserved-access-contract",
+      "evidence": "compute/providers/anthropic.json#claude-sonnet-5-5",
+      "verification": "inherited-not-reverified"
+    },
+    {
+      "accessId": "provider-anthropic-001",
+      "apiModelId": "claude-sonnet-5",
+      "field": "serviceType",
+      "value": [
+        "chat",
+        "computer_use"
+      ],
+      "reason": "preserved-access-contract",
+      "evidence": "compute/providers/anthropic.json#claude-sonnet-5",
+      "verification": "inherited-not-reverified"
+    },
+    {
+      "accessId": "provider-anthropic-001",
+      "apiModelId": "claude-sonnet-5",
+      "field": "capabilities",
+      "value": [
+        "chat",
+        "reasoning",
+        "code",
+        "vision",
+        "tool_use",
+        "computer_use",
+        "agent",
+        "long_context"
+      ],
+      "reason": "preserved-access-contract",
+      "evidence": "compute/providers/anthropic.json#claude-sonnet-5",
+      "verification": "inherited-not-reverified"
+    },
+    {
+      "accessId": "provider-baichuan-001",
+      "apiModelId": "Baichuan-M3-Plus",
+      "field": "defaultTopP",
+      "value": 0.85,
+      "reason": "preserved-access-contract",
+      "evidence": "compute/providers/baichuan.json#Baichuan-M3-Plus",
+      "verification": "inherited-not-reverified"
+    },
+    {
+      "accessId": "provider-baichuan-001",
+      "apiModelId": "Baichuan-M3",
+      "field": "defaultTopP",
+      "value": 0.85,
+      "reason": "preserved-access-contract",
+      "evidence": "compute/providers/baichuan.json#Baichuan-M3",
+      "verification": "inherited-not-reverified"
+    },
+    {
+      "accessId": "provider-baichuan-001",
+      "apiModelId": "Baichuan-M2-Plus",
+      "field": "defaultTopP",
+      "value": 0.85,
+      "reason": "preserved-access-contract",
+      "evidence": "compute/providers/baichuan.json#Baichuan-M2-Plus",
+      "verification": "inherited-not-reverified"
+    },
+    {
+      "accessId": "provider-baichuan-001",
+      "apiModelId": "Baichuan-M2",
+      "field": "defaultTopP",
+      "value": 0.85,
+      "reason": "preserved-access-contract",
+      "evidence": "compute/providers/baichuan.json#Baichuan-M2",
+      "verification": "inherited-not-reverified"
+    },
+    {
+      "accessId": "provider-baidu-001",
+      "apiModelId": "ernie-5.0",
+      "field": "defaultTopP",
+      "value": 0.7,
+      "reason": "preserved-access-contract",
+      "evidence": "compute/providers/baidu.json#ernie-5.0",
+      "verification": "inherited-not-reverified"
+    },
+    {
+      "accessId": "provider-baidu-001",
+      "apiModelId": "ernie-4.5-turbo-128k",
+      "field": "defaultTopP",
+      "value": 1,
+      "reason": "preserved-access-contract",
+      "evidence": "compute/providers/baidu.json#ernie-4.5-turbo-128k",
+      "verification": "inherited-not-reverified"
+    },
+    {
+      "accessId": "provider-baidu-001",
+      "apiModelId": "ernie-4.5-turbo-20260402",
+      "field": "defaultTopP",
+      "value": 1,
+      "reason": "preserved-access-contract",
+      "evidence": "compute/providers/baidu.json#ernie-4.5-turbo-20260402",
+      "verification": "inherited-not-reverified"
+    },
+    {
+      "accessId": "provider-cohere-001",
+      "apiModelId": "embed-v5.0-fast",
+      "field": "capabilities",
+      "value": [
+        "text_embedding",
+        "multilingual"
+      ],
+      "reason": "preserved-access-contract",
+      "evidence": "compute/providers/cohere.json#embed-v5.0-fast",
+      "verification": "inherited-not-reverified"
+    },
+    {
+      "accessId": "provider-cohere-001",
+      "apiModelId": "embed-v5.0-pro",
+      "field": "capabilities",
+      "value": [
+        "text_embedding",
+        "multilingual"
+      ],
+      "reason": "preserved-access-contract",
+      "evidence": "compute/providers/cohere.json#embed-v5.0-pro",
+      "verification": "inherited-not-reverified"
+    },
+    {
+      "accessId": "provider-cohere-001",
+      "apiModelId": "command-a-03-2025",
+      "field": "defaultTopP",
+      "value": 0.75,
+      "reason": "preserved-access-contract",
+      "evidence": "compute/providers/cohere.json#command-a-03-2025",
+      "verification": "inherited-not-reverified"
+    },
+    {
+      "accessId": "provider-cohere-001",
+      "apiModelId": "command-r7b-12-2024",
+      "field": "defaultTopP",
+      "value": 0.75,
+      "reason": "preserved-access-contract",
+      "evidence": "compute/providers/cohere.json#command-r7b-12-2024",
+      "verification": "inherited-not-reverified"
+    },
+    {
+      "accessId": "provider-cohere-001",
+      "apiModelId": "embed-v4.0",
+      "field": "maxOutputTokens",
+      "value": 0,
+      "reason": "preserved-access-contract",
+      "evidence": "compute/providers/cohere.json#embed-v4.0",
+      "verification": "inherited-not-reverified"
+    },
+    {
+      "accessId": "provider-dashscope-001",
+      "apiModelId": "qwen3.8-max",
+      "field": "serviceType",
+      "value": [
+        "chat",
+        "vision"
+      ],
+      "reason": "preserved-access-contract",
+      "evidence": "compute/providers/dashscope.json#qwen3.8-max",
+      "verification": "inherited-not-reverified"
+    },
+    {
+      "accessId": "provider-dashscope-001",
+      "apiModelId": "qwen3.8-max",
+      "field": "capabilities",
+      "value": [
+        "chat",
+        "reasoning",
+        "code",
+        "multilingual",
+        "long_context",
+        "tool_use",
+        "agent",
+        "vision",
+        "video_understanding"
+      ],
+      "reason": "preserved-access-contract",
+      "evidence": "compute/providers/dashscope.json#qwen3.8-max",
+      "verification": "inherited-not-reverified"
+    },
+    {
+      "accessId": "provider-dashscope-001",
+      "apiModelId": "qwen3.8-flash",
+      "field": "serviceType",
+      "value": [
+        "chat",
+        "vision"
+      ],
+      "reason": "preserved-access-contract",
+      "evidence": "compute/providers/dashscope.json#qwen3.8-flash",
+      "verification": "inherited-not-reverified"
+    },
+    {
+      "accessId": "provider-dashscope-001",
+      "apiModelId": "qwen3.8-flash",
+      "field": "capabilities",
+      "value": [
+        "chat",
+        "reasoning",
+        "code",
+        "multilingual",
+        "long_context",
+        "tool_use",
+        "agent",
+        "vision",
+        "video_understanding"
+      ],
+      "reason": "preserved-access-contract",
+      "evidence": "compute/providers/dashscope.json#qwen3.8-flash",
+      "verification": "inherited-not-reverified"
+    },
+    {
+      "accessId": "provider-dashscope-001",
+      "apiModelId": "qwen3.7-max",
+      "field": "capabilities",
+      "value": [
+        "chat",
+        "reasoning",
+        "code",
+        "multilingual",
+        "long_context",
+        "tool_use",
+        "agent"
+      ],
+      "reason": "preserved-access-contract",
+      "evidence": "compute/providers/dashscope.json#qwen3.7-max",
+      "verification": "inherited-not-reverified"
+    },
+    {
+      "accessId": "provider-dashscope-001",
+      "apiModelId": "qwen3.7-max",
+      "field": "defaultTemperature",
+      "value": 0.6,
+      "reason": "preserved-access-contract",
+      "evidence": "compute/providers/dashscope.json#qwen3.7-max",
+      "verification": "inherited-not-reverified"
+    },
+    {
+      "accessId": "provider-dashscope-001",
+      "apiModelId": "qwen3.7-max",
+      "field": "defaultTopP",
+      "value": 0.95,
+      "reason": "preserved-access-contract",
+      "evidence": "compute/providers/dashscope.json#qwen3.7-max",
+      "verification": "inherited-not-reverified"
+    },
+    {
+      "accessId": "provider-dashscope-001",
+      "apiModelId": "qwen3.7-plus",
+      "field": "serviceType",
+      "value": [
+        "chat",
+        "vision"
+      ],
+      "reason": "preserved-access-contract",
+      "evidence": "compute/providers/dashscope.json#qwen3.7-plus",
+      "verification": "inherited-not-reverified"
+    },
+    {
+      "accessId": "provider-dashscope-001",
+      "apiModelId": "qwen3.7-plus",
+      "field": "capabilities",
+      "value": [
+        "chat",
+        "reasoning",
+        "code",
+        "multilingual",
+        "long_context",
+        "tool_use",
+        "agent",
+        "vision"
+      ],
+      "reason": "preserved-access-contract",
+      "evidence": "compute/providers/dashscope.json#qwen3.7-plus",
+      "verification": "inherited-not-reverified"
+    },
+    {
+      "accessId": "provider-dashscope-001",
+      "apiModelId": "qwen3.7-plus",
+      "field": "defaultTemperature",
+      "value": 0.6,
+      "reason": "preserved-access-contract",
+      "evidence": "compute/providers/dashscope.json#qwen3.7-plus",
+      "verification": "inherited-not-reverified"
+    },
+    {
+      "accessId": "provider-dashscope-001",
+      "apiModelId": "qwen3.7-plus",
+      "field": "defaultTopP",
+      "value": 0.95,
+      "reason": "preserved-access-contract",
+      "evidence": "compute/providers/dashscope.json#qwen3.7-plus",
+      "verification": "inherited-not-reverified"
+    },
+    {
+      "accessId": "provider-dashscope-001",
+      "apiModelId": "qwen3.6-flash",
+      "field": "defaultTopP",
+      "value": 0.95,
+      "reason": "preserved-access-contract",
+      "evidence": "compute/providers/dashscope.json#qwen3.6-flash",
+      "verification": "inherited-not-reverified"
+    },
+    {
+      "accessId": "provider-dashscope-001",
+      "apiModelId": "qwen-long",
+      "field": "defaultTopP",
+      "value": 0.8,
+      "reason": "preserved-access-contract",
+      "evidence": "compute/providers/dashscope.json#qwen-long",
+      "verification": "inherited-not-reverified"
+    },
+    {
+      "accessId": "provider-dashscope-001",
+      "apiModelId": "qwen3-vl-plus",
+      "field": "defaultTopP",
+      "value": 0.8,
+      "reason": "preserved-access-contract",
+      "evidence": "compute/providers/dashscope.json#qwen3-vl-plus",
+      "verification": "inherited-not-reverified"
+    },
+    {
+      "accessId": "provider-dashscope-001",
+      "apiModelId": "qwen3-vl-flash",
+      "field": "defaultTopP",
+      "value": 0.8,
+      "reason": "preserved-access-contract",
+      "evidence": "compute/providers/dashscope.json#qwen3-vl-flash",
+      "verification": "inherited-not-reverified"
+    },
+    {
+      "accessId": "provider-dashscope-001",
+      "apiModelId": "wan3.0-video-prime",
+      "field": "capabilities",
+      "value": [
+        "video_generation",
+        "text_to_video",
+        "image_to_video",
+        "reference_to_video",
+        "multi_image",
+        "reference_video",
+        "reference_audio",
+        "first_last_frame",
+        "audio_generation",
+        "chinese_optimized",
+        "high_quality",
+        "fast"
+      ],
+      "reason": "preserved-access-contract",
+      "evidence": "compute/providers/dashscope.json#wan3.0-video-prime",
+      "verification": "inherited-not-reverified"
+    },
+    {
+      "accessId": "provider-dashscope-001",
+      "apiModelId": "wan3.0-video",
+      "field": "capabilities",
+      "value": [
+        "video_generation",
+        "text_to_video",
+        "image_to_video",
+        "reference_to_video",
+        "multi_image",
+        "reference_video",
+        "reference_audio",
+        "first_last_frame",
+        "audio_generation",
+        "chinese_optimized",
+        "high_quality"
+      ],
+      "reason": "preserved-access-contract",
+      "evidence": "compute/providers/dashscope.json#wan3.0-video",
+      "verification": "inherited-not-reverified"
+    },
+    {
+      "accessId": "provider-dashscope-001",
+      "apiModelId": "qwen-omni-turbo",
+      "field": "defaultTopP",
+      "value": 0.01,
+      "reason": "preserved-access-contract",
+      "evidence": "compute/providers/dashscope.json#qwen-omni-turbo",
+      "verification": "inherited-not-reverified"
+    },
+    {
+      "accessId": "provider-dashscope-001",
+      "apiModelId": "qwen-mt-plus",
+      "field": "serviceType",
+      "value": [
+        "translation"
+      ],
+      "reason": "preserved-access-contract",
+      "evidence": "compute/providers/dashscope.json#qwen-mt-plus",
+      "verification": "inherited-not-reverified"
+    },
+    {
+      "accessId": "provider-dashscope-001",
+      "apiModelId": "qwen-mt-plus",
+      "field": "contextWindow",
+      "value": 16384,
+      "reason": "preserved-access-contract",
+      "evidence": "compute/providers/dashscope.json#qwen-mt-plus",
+      "verification": "inherited-not-reverified"
+    },
+    {
+      "accessId": "provider-dashscope-001",
+      "apiModelId": "qwen-mt-plus",
+      "field": "maxOutputTokens",
+      "value": 8192,
+      "reason": "preserved-access-contract",
+      "evidence": "compute/providers/dashscope.json#qwen-mt-plus",
+      "verification": "inherited-not-reverified"
+    },
+    {
+      "accessId": "provider-dashscope-001",
+      "apiModelId": "qwen-mt-plus",
+      "field": "capabilities",
+      "value": [
+        "translation",
+        "multilingual",
+        "chinese_optimized",
+        "terminology"
+      ],
+      "reason": "preserved-access-contract",
+      "evidence": "compute/providers/dashscope.json#qwen-mt-plus",
+      "verification": "inherited-not-reverified"
+    },
+    {
+      "accessId": "provider-dashscope-001",
+      "apiModelId": "happyhorse-1.0-t2v",
+      "field": "capabilities",
+      "value": [
+        "video_generation",
+        "text_to_video",
+        "chinese_optimized",
+        "high_quality"
+      ],
+      "reason": "preserved-access-contract",
+      "evidence": "compute/providers/dashscope.json#happyhorse-1.0-t2v",
+      "verification": "inherited-not-reverified"
+    },
+    {
+      "accessId": "provider-dashscope-001",
+      "apiModelId": "happyhorse-1.0-i2v",
+      "field": "capabilities",
+      "value": [
+        "video_generation",
+        "image_to_video",
+        "chinese_optimized"
+      ],
+      "reason": "preserved-access-contract",
+      "evidence": "compute/providers/dashscope.json#happyhorse-1.0-i2v",
+      "verification": "inherited-not-reverified"
+    },
+    {
+      "accessId": "provider-dashscope-001",
+      "apiModelId": "happyhorse-1.0-r2v",
+      "field": "capabilities",
+      "value": [
+        "video_generation",
+        "reference_to_video",
+        "multi_image",
+        "chinese_optimized"
+      ],
+      "reason": "preserved-access-contract",
+      "evidence": "compute/providers/dashscope.json#happyhorse-1.0-r2v",
+      "verification": "inherited-not-reverified"
+    },
+    {
+      "accessId": "provider-deepseek-001",
+      "apiModelId": "deepseek-flash",
+      "field": "capabilities",
+      "value": [
+        "chat",
+        "code",
+        "reasoning",
+        "deep_thinking",
+        "vision",
+        "long_context",
+        "multilingual",
+        "tool_use"
+      ],
+      "reason": "preserved-access-contract",
+      "evidence": "compute/providers/deepseek.json#deepseek-flash",
+      "verification": "inherited-not-reverified"
+    },
+    {
+      "accessId": "provider-deepseek-001",
+      "apiModelId": "deepseek-flash",
+      "field": "defaultTopP",
+      "value": 1,
+      "reason": "preserved-access-contract",
+      "evidence": "compute/providers/deepseek.json#deepseek-flash",
+      "verification": "inherited-not-reverified"
+    },
+    {
+      "accessId": "provider-deepseek-001",
+      "apiModelId": "deepseek-v4-flash-vision-exp",
+      "field": "capabilities",
+      "value": [
+        "chat",
+        "code",
+        "reasoning",
+        "deep_thinking",
+        "vision",
+        "long_context",
+        "multilingual",
+        "tool_use"
+      ],
+      "reason": "preserved-access-contract",
+      "evidence": "compute/providers/deepseek.json#deepseek-v4-flash-vision-exp",
+      "verification": "inherited-not-reverified"
+    },
+    {
+      "accessId": "provider-deepseek-001",
+      "apiModelId": "deepseek-v4-flash-vision-exp",
+      "field": "defaultTopP",
+      "value": 1,
+      "reason": "preserved-access-contract",
+      "evidence": "compute/providers/deepseek.json#deepseek-v4-flash-vision-exp",
+      "verification": "inherited-not-reverified"
+    },
+    {
+      "accessId": "provider-deepseek-001",
+      "apiModelId": "deepseek-v4-flash",
+      "field": "capabilities",
+      "value": [
+        "chat",
+        "code",
+        "reasoning",
+        "deep_thinking",
+        "long_context",
+        "multilingual",
+        "tool_use"
+      ],
+      "reason": "preserved-access-contract",
+      "evidence": "compute/providers/deepseek.json#deepseek-v4-flash",
+      "verification": "inherited-not-reverified"
+    },
+    {
+      "accessId": "provider-deepseek-001",
+      "apiModelId": "deepseek-v4-flash",
+      "field": "defaultTopP",
+      "value": 1,
+      "reason": "preserved-access-contract",
+      "evidence": "compute/providers/deepseek.json#deepseek-v4-flash",
+      "verification": "inherited-not-reverified"
+    },
+    {
+      "accessId": "provider-deepseek-001",
+      "apiModelId": "deepseek-v4-pro",
+      "field": "capabilities",
+      "value": [
+        "chat",
+        "code",
+        "reasoning",
+        "deep_thinking",
+        "long_context",
+        "multilingual",
+        "tool_use",
+        "math"
+      ],
+      "reason": "preserved-access-contract",
+      "evidence": "compute/providers/deepseek.json#deepseek-v4-pro",
+      "verification": "inherited-not-reverified"
+    },
+    {
+      "accessId": "provider-deepseek-001",
+      "apiModelId": "deepseek-v4-pro",
+      "field": "defaultTopP",
+      "value": 1,
+      "reason": "preserved-access-contract",
+      "evidence": "compute/providers/deepseek.json#deepseek-v4-pro",
+      "verification": "inherited-not-reverified"
+    },
+    {
+      "accessId": "provider-google-001",
+      "apiModelId": "gemini-3.8-flash",
+      "field": "capabilities",
+      "value": [
+        "chat",
+        "reasoning",
+        "code",
+        "vision",
+        "ultra_long_context",
+        "tool_use",
+        "fast"
+      ],
+      "reason": "preserved-access-contract",
+      "evidence": "compute/providers/google.json#gemini-3.8-flash",
+      "verification": "inherited-not-reverified"
+    },
+    {
+      "accessId": "provider-google-001",
+      "apiModelId": "gemini-3.8-flash",
+      "field": "defaultTopP",
+      "value": 0.95,
+      "reason": "preserved-access-contract",
+      "evidence": "compute/providers/google.json#gemini-3.8-flash",
+      "verification": "inherited-not-reverified"
+    },
+    {
+      "accessId": "provider-google-001",
+      "apiModelId": "gemini-3.7-flash",
+      "field": "capabilities",
+      "value": [
+        "chat",
+        "reasoning",
+        "code",
+        "vision",
+        "ultra_long_context",
+        "tool_use",
+        "fast"
+      ],
+      "reason": "preserved-access-contract",
+      "evidence": "compute/providers/google.json#gemini-3.7-flash",
+      "verification": "inherited-not-reverified"
+    },
+    {
+      "accessId": "provider-google-001",
+      "apiModelId": "gemini-3.7-flash",
+      "field": "defaultTopP",
+      "value": 0.95,
+      "reason": "preserved-access-contract",
+      "evidence": "compute/providers/google.json#gemini-3.7-flash",
+      "verification": "inherited-not-reverified"
+    },
+    {
+      "accessId": "provider-google-001",
+      "apiModelId": "gemini-3.5-flash-lite",
+      "field": "serviceType",
+      "value": [
+        "chat",
+        "fast"
+      ],
+      "reason": "preserved-access-contract",
+      "evidence": "compute/providers/google.json#gemini-3.5-flash-lite",
+      "verification": "inherited-not-reverified"
+    },
+    {
+      "accessId": "provider-google-001",
+      "apiModelId": "gemini-3.5-flash-lite",
+      "field": "capabilities",
+      "value": [
+        "chat",
+        "reasoning",
+        "code",
+        "vision",
+        "ultra_long_context",
+        "tool_use",
+        "fast"
+      ],
+      "reason": "preserved-access-contract",
+      "evidence": "compute/providers/google.json#gemini-3.5-flash-lite",
+      "verification": "inherited-not-reverified"
+    },
+    {
+      "accessId": "provider-google-001",
+      "apiModelId": "gemini-3.5-flash-lite",
+      "field": "defaultTopP",
+      "value": 0.95,
+      "reason": "preserved-access-contract",
+      "evidence": "compute/providers/google.json#gemini-3.5-flash-lite",
+      "verification": "inherited-not-reverified"
+    },
+    {
+      "accessId": "provider-google-001",
+      "apiModelId": "gemini-3.5-flash",
+      "field": "capabilities",
+      "value": [
+        "chat",
+        "reasoning",
+        "code",
+        "vision",
+        "ultra_long_context",
+        "tool_use",
+        "fast"
+      ],
+      "reason": "preserved-access-contract",
+      "evidence": "compute/providers/google.json#gemini-3.5-flash",
+      "verification": "inherited-not-reverified"
+    },
+    {
+      "accessId": "provider-google-001",
+      "apiModelId": "gemini-3.5-flash",
+      "field": "defaultTopP",
+      "value": 0.95,
+      "reason": "preserved-access-contract",
+      "evidence": "compute/providers/google.json#gemini-3.5-flash",
+      "verification": "inherited-not-reverified"
+    },
+    {
+      "accessId": "provider-google-001",
+      "apiModelId": "gemini-3.1-flash-lite",
+      "field": "serviceType",
+      "value": [
+        "fast"
+      ],
+      "reason": "preserved-access-contract",
+      "evidence": "compute/providers/google.json#gemini-3.1-flash-lite",
+      "verification": "inherited-not-reverified"
+    },
+    {
+      "accessId": "provider-google-001",
+      "apiModelId": "gemini-3.1-flash-lite",
+      "field": "contextWindow",
+      "value": 1048576,
+      "reason": "preserved-access-contract",
+      "evidence": "compute/providers/google.json#gemini-3.1-flash-lite",
+      "verification": "inherited-not-reverified"
+    },
+    {
+      "accessId": "provider-google-001",
+      "apiModelId": "gemini-3.1-flash-lite",
+      "field": "maxOutputTokens",
+      "value": 65536,
+      "reason": "preserved-access-contract",
+      "evidence": "compute/providers/google.json#gemini-3.1-flash-lite",
+      "verification": "inherited-not-reverified"
+    },
+    {
+      "accessId": "provider-google-001",
+      "apiModelId": "gemini-3.1-flash-lite",
+      "field": "capabilities",
+      "value": [
+        "chat",
+        "reasoning",
+        "code",
+        "vision",
+        "ultra_long_context",
+        "tool_use",
+        "fast"
+      ],
+      "reason": "preserved-access-contract",
+      "evidence": "compute/providers/google.json#gemini-3.1-flash-lite",
+      "verification": "inherited-not-reverified"
+    },
+    {
+      "accessId": "provider-google-001",
+      "apiModelId": "gemini-3.1-flash-lite",
+      "field": "defaultTemperature",
+      "value": 1,
+      "reason": "preserved-access-contract",
+      "evidence": "compute/providers/google.json#gemini-3.1-flash-lite",
+      "verification": "inherited-not-reverified"
+    },
+    {
+      "accessId": "provider-google-001",
+      "apiModelId": "gemini-3.1-flash-lite",
+      "field": "defaultTopP",
+      "value": 0.95,
+      "reason": "preserved-access-contract",
+      "evidence": "compute/providers/google.json#gemini-3.1-flash-lite",
+      "verification": "inherited-not-reverified"
+    },
+    {
+      "accessId": "provider-google-001",
+      "apiModelId": "gemini-3.1-pro-preview",
+      "field": "defaultTopP",
+      "value": 0.95,
+      "reason": "preserved-access-contract",
+      "evidence": "compute/providers/google.json#gemini-3.1-pro-preview",
+      "verification": "inherited-not-reverified"
+    },
+    {
+      "accessId": "provider-google-001",
+      "apiModelId": "gemini-3-flash-preview",
+      "field": "defaultTopP",
+      "value": 0.95,
+      "reason": "preserved-access-contract",
+      "evidence": "compute/providers/google.json#gemini-3-flash-preview",
+      "verification": "inherited-not-reverified"
+    },
+    {
+      "accessId": "provider-google-001",
+      "apiModelId": "gemini-2.5-pro",
+      "field": "defaultTopP",
+      "value": 0.95,
+      "reason": "preserved-access-contract",
+      "evidence": "compute/providers/google.json#gemini-2.5-pro",
+      "verification": "inherited-not-reverified"
+    },
+    {
+      "accessId": "provider-google-001",
+      "apiModelId": "gemini-2.5-flash",
+      "field": "defaultTopP",
+      "value": 0.95,
+      "reason": "preserved-access-contract",
+      "evidence": "compute/providers/google.json#gemini-2.5-flash",
+      "verification": "inherited-not-reverified"
+    },
+    {
+      "accessId": "provider-local-whisper",
+      "apiModelId": "whisper-large-v3",
+      "field": "serviceType",
+      "value": [
+        "asr"
+      ],
+      "reason": "preserved-access-contract",
+      "evidence": "compute/providers/local-whisper.json#whisper-large-v3",
+      "verification": "inherited-not-reverified"
+    },
+    {
+      "accessId": "provider-local-whisper",
+      "apiModelId": "whisper-large-v3",
+      "field": "capabilities",
+      "value": [
+        "asr",
+        "multilingual"
+      ],
+      "reason": "preserved-access-contract",
+      "evidence": "compute/providers/local-whisper.json#whisper-large-v3",
+      "verification": "inherited-not-reverified"
+    },
+    {
+      "accessId": "provider-minimax-001",
+      "apiModelId": "MiniMax-M3",
+      "field": "serviceType",
+      "value": [
+        "chat",
+        "reasoning",
+        "vision"
+      ],
+      "reason": "preserved-access-contract",
+      "evidence": "compute/providers/minimax.json#MiniMax-M3",
+      "verification": "inherited-not-reverified"
+    },
+    {
+      "accessId": "provider-minimax-001",
+      "apiModelId": "MiniMax-M3",
+      "field": "maxOutputTokens",
+      "value": 131072,
+      "reason": "preserved-access-contract",
+      "evidence": "compute/providers/minimax.json#MiniMax-M3",
+      "verification": "inherited-not-reverified"
+    },
+    {
+      "accessId": "provider-minimax-001",
+      "apiModelId": "MiniMax-M3",
+      "field": "capabilities",
+      "value": [
+        "chat",
+        "reasoning",
+        "code",
+        "tool_use",
+        "agent",
+        "vision",
+        "long_context"
+      ],
+      "reason": "preserved-access-contract",
+      "evidence": "compute/providers/minimax.json#MiniMax-M3",
+      "verification": "inherited-not-reverified"
+    },
+    {
+      "accessId": "provider-minimax-001",
+      "apiModelId": "MiniMax-M3",
+      "field": "defaultTopP",
+      "value": 0.95,
+      "reason": "preserved-access-contract",
+      "evidence": "compute/providers/minimax.json#MiniMax-M3",
+      "verification": "inherited-not-reverified"
+    },
+    {
+      "accessId": "provider-minimax-001",
+      "apiModelId": "MiniMax-M2.7",
+      "field": "defaultTopP",
+      "value": 0.95,
+      "reason": "preserved-access-contract",
+      "evidence": "compute/providers/minimax.json#MiniMax-M2.7",
+      "verification": "inherited-not-reverified"
+    },
+    {
+      "accessId": "provider-minimax-001",
+      "apiModelId": "MiniMax-M2.7-highspeed",
+      "field": "defaultTopP",
+      "value": 0.95,
+      "reason": "preserved-access-contract",
+      "evidence": "compute/providers/minimax.json#MiniMax-M2.7-highspeed",
+      "verification": "inherited-not-reverified"
+    },
+    {
+      "accessId": "provider-minimax-001",
+      "apiModelId": "MiniMax-M2.5",
+      "field": "defaultTopP",
+      "value": 0.95,
+      "reason": "preserved-access-contract",
+      "evidence": "compute/providers/minimax.json#MiniMax-M2.5",
+      "verification": "inherited-not-reverified"
+    },
+    {
+      "accessId": "provider-minimax-001",
+      "apiModelId": "MiniMax-M2.5-highspeed",
+      "field": "defaultTopP",
+      "value": 0.95,
+      "reason": "preserved-access-contract",
+      "evidence": "compute/providers/minimax.json#MiniMax-M2.5-highspeed",
+      "verification": "inherited-not-reverified"
+    },
+    {
+      "accessId": "provider-minimax-001",
+      "apiModelId": "MiniMax-M2.1",
+      "field": "defaultTopP",
+      "value": 0.95,
+      "reason": "preserved-access-contract",
+      "evidence": "compute/providers/minimax.json#MiniMax-M2.1",
+      "verification": "inherited-not-reverified"
+    },
+    {
+      "accessId": "provider-minimax-001",
+      "apiModelId": "MiniMax-M2.1-highspeed",
+      "field": "defaultTopP",
+      "value": 0.95,
+      "reason": "preserved-access-contract",
+      "evidence": "compute/providers/minimax.json#MiniMax-M2.1-highspeed",
+      "verification": "inherited-not-reverified"
+    },
+    {
+      "accessId": "provider-minimax-001",
+      "apiModelId": "MiniMax-M2",
+      "field": "defaultTopP",
+      "value": 0.95,
+      "reason": "preserved-access-contract",
+      "evidence": "compute/providers/minimax.json#MiniMax-M2",
+      "verification": "inherited-not-reverified"
+    },
+    {
+      "accessId": "provider-minimax-001",
+      "apiModelId": "M2-her",
+      "field": "defaultTopP",
+      "value": 0.95,
+      "reason": "preserved-access-contract",
+      "evidence": "compute/providers/minimax.json#M2-her",
+      "verification": "inherited-not-reverified"
+    },
+    {
+      "accessId": "provider-mistral-001",
+      "apiModelId": "mistral-medium-latest",
+      "field": "capabilities",
+      "value": [
+        "chat",
+        "reasoning",
+        "code",
+        "vision",
+        "tool_use",
+        "agent",
+        "long_context"
+      ],
+      "reason": "preserved-access-contract",
+      "evidence": "compute/providers/mistral.json#mistral-medium-latest",
+      "verification": "inherited-not-reverified"
+    },
+    {
+      "accessId": "provider-mistral-001",
+      "apiModelId": "mistral-medium-latest",
+      "field": "defaultTemperature",
+      "value": 0.7,
+      "reason": "preserved-access-contract",
+      "evidence": "compute/providers/mistral.json#mistral-medium-latest",
+      "verification": "inherited-not-reverified"
+    },
+    {
+      "accessId": "provider-mistral-001",
+      "apiModelId": "mistral-medium-latest",
+      "field": "defaultTopP",
+      "value": 1,
+      "reason": "preserved-access-contract",
+      "evidence": "compute/providers/mistral.json#mistral-medium-latest",
+      "verification": "inherited-not-reverified"
+    },
+    {
+      "accessId": "provider-mistral-001",
+      "apiModelId": "mistral-large-latest",
+      "field": "defaultTopP",
+      "value": 1,
+      "reason": "preserved-access-contract",
+      "evidence": "compute/providers/mistral.json#mistral-large-latest",
+      "verification": "inherited-not-reverified"
+    },
+    {
+      "accessId": "provider-mistral-001",
+      "apiModelId": "mistral-small-latest",
+      "field": "capabilities",
+      "value": [
+        "chat",
+        "code",
+        "vision",
+        "reasoning",
+        "fast",
+        "tool_use",
+        "agent",
+        "long_context"
+      ],
+      "reason": "preserved-access-contract",
+      "evidence": "compute/providers/mistral.json#mistral-small-latest",
+      "verification": "inherited-not-reverified"
+    },
+    {
+      "accessId": "provider-mistral-001",
+      "apiModelId": "mistral-small-latest",
+      "field": "defaultTopP",
+      "value": 1,
+      "reason": "preserved-access-contract",
+      "evidence": "compute/providers/mistral.json#mistral-small-latest",
+      "verification": "inherited-not-reverified"
+    },
+    {
+      "accessId": "provider-mistral-001",
+      "apiModelId": "codestral-latest",
+      "field": "defaultTopP",
+      "value": 1,
+      "reason": "preserved-access-contract",
+      "evidence": "compute/providers/mistral.json#codestral-latest",
+      "verification": "inherited-not-reverified"
+    },
+    {
+      "accessId": "provider-moonshot-001",
+      "apiModelId": "kimi-k2.7-code",
+      "field": "serviceType",
+      "value": [
+        "chat",
+        "reasoning"
+      ],
+      "reason": "preserved-access-contract",
+      "evidence": "compute/providers/moonshot.json#kimi-k2.7-code",
+      "verification": "inherited-not-reverified"
+    },
+    {
+      "accessId": "provider-moonshot-001",
+      "apiModelId": "kimi-k2.7-code",
+      "field": "maxOutputTokens",
+      "value": 32768,
+      "reason": "preserved-access-contract",
+      "evidence": "compute/providers/moonshot.json#kimi-k2.7-code",
+      "verification": "inherited-not-reverified"
+    },
+    {
+      "accessId": "provider-moonshot-001",
+      "apiModelId": "kimi-k2.7-code",
+      "field": "capabilities",
+      "value": [
+        "chat",
+        "reasoning",
+        "deep_thinking",
+        "code",
+        "tool_use",
+        "agent",
+        "long_context",
+        "vision",
+        "video_understanding",
+        "image_understanding"
+      ],
+      "reason": "preserved-access-contract",
+      "evidence": "compute/providers/moonshot.json#kimi-k2.7-code",
+      "verification": "inherited-not-reverified"
+    },
+    {
+      "accessId": "provider-moonshot-001",
+      "apiModelId": "kimi-k2.7-code",
+      "field": "defaultTopP",
+      "value": 0.95,
+      "reason": "preserved-access-contract",
+      "evidence": "compute/providers/moonshot.json#kimi-k2.7-code",
+      "verification": "inherited-not-reverified"
+    },
+    {
+      "accessId": "provider-moonshot-001",
+      "apiModelId": "kimi-k2.7-code-highspeed",
+      "field": "serviceType",
+      "value": [
+        "chat",
+        "reasoning"
+      ],
+      "reason": "preserved-access-contract",
+      "evidence": "compute/providers/moonshot.json#kimi-k2.7-code-highspeed",
+      "verification": "inherited-not-reverified"
+    },
+    {
+      "accessId": "provider-moonshot-001",
+      "apiModelId": "kimi-k2.7-code-highspeed",
+      "field": "contextWindow",
+      "value": 262144,
+      "reason": "preserved-access-contract",
+      "evidence": "compute/providers/moonshot.json#kimi-k2.7-code-highspeed",
+      "verification": "inherited-not-reverified"
+    },
+    {
+      "accessId": "provider-moonshot-001",
+      "apiModelId": "kimi-k2.7-code-highspeed",
+      "field": "maxOutputTokens",
+      "value": 32768,
+      "reason": "preserved-access-contract",
+      "evidence": "compute/providers/moonshot.json#kimi-k2.7-code-highspeed",
+      "verification": "inherited-not-reverified"
+    },
+    {
+      "accessId": "provider-moonshot-001",
+      "apiModelId": "kimi-k2.7-code-highspeed",
+      "field": "capabilities",
+      "value": [
+        "chat",
+        "reasoning",
+        "deep_thinking",
+        "code",
+        "tool_use",
+        "agent",
+        "long_context",
+        "vision",
+        "video_understanding",
+        "image_understanding",
+        "fast"
+      ],
+      "reason": "preserved-access-contract",
+      "evidence": "compute/providers/moonshot.json#kimi-k2.7-code-highspeed",
+      "verification": "inherited-not-reverified"
+    },
+    {
+      "accessId": "provider-moonshot-001",
+      "apiModelId": "kimi-k2.7-code-highspeed",
+      "field": "defaultTemperature",
+      "value": 1,
+      "reason": "preserved-access-contract",
+      "evidence": "compute/providers/moonshot.json#kimi-k2.7-code-highspeed",
+      "verification": "inherited-not-reverified"
+    },
+    {
+      "accessId": "provider-moonshot-001",
+      "apiModelId": "kimi-k2.7-code-highspeed",
+      "field": "defaultTopP",
+      "value": 0.95,
+      "reason": "preserved-access-contract",
+      "evidence": "compute/providers/moonshot.json#kimi-k2.7-code-highspeed",
+      "verification": "inherited-not-reverified"
+    },
+    {
+      "accessId": "provider-moonshot-001",
+      "apiModelId": "kimi-k2.6",
+      "field": "serviceType",
+      "value": [
+        "chat",
+        "reasoning"
+      ],
+      "reason": "preserved-access-contract",
+      "evidence": "compute/providers/moonshot.json#kimi-k2.6",
+      "verification": "inherited-not-reverified"
+    },
+    {
+      "accessId": "provider-moonshot-001",
+      "apiModelId": "kimi-k2.6",
+      "field": "maxOutputTokens",
+      "value": 32768,
+      "reason": "preserved-access-contract",
+      "evidence": "compute/providers/moonshot.json#kimi-k2.6",
+      "verification": "inherited-not-reverified"
+    },
+    {
+      "accessId": "provider-moonshot-001",
+      "apiModelId": "kimi-k2.6",
+      "field": "capabilities",
+      "value": [
+        "chat",
+        "reasoning",
+        "deep_thinking",
+        "code",
+        "tool_use",
+        "agent",
+        "long_context",
+        "vision",
+        "video_understanding",
+        "image_understanding"
+      ],
+      "reason": "preserved-access-contract",
+      "evidence": "compute/providers/moonshot.json#kimi-k2.6",
+      "verification": "inherited-not-reverified"
+    },
+    {
+      "accessId": "provider-moonshot-001",
+      "apiModelId": "kimi-k2.6",
+      "field": "defaultTopP",
+      "value": 0.95,
+      "reason": "preserved-access-contract",
+      "evidence": "compute/providers/moonshot.json#kimi-k2.6",
+      "verification": "inherited-not-reverified"
+    },
+    {
+      "accessId": "provider-moonshot-001",
+      "apiModelId": "kimi-k2.5",
+      "field": "serviceType",
+      "value": [
+        "chat",
+        "reasoning"
+      ],
+      "reason": "preserved-access-contract",
+      "evidence": "compute/providers/moonshot.json#kimi-k2.5",
+      "verification": "inherited-not-reverified"
+    },
+    {
+      "accessId": "provider-moonshot-001",
+      "apiModelId": "kimi-k2.5",
+      "field": "contextWindow",
+      "value": 262144,
+      "reason": "preserved-access-contract",
+      "evidence": "compute/providers/moonshot.json#kimi-k2.5",
+      "verification": "inherited-not-reverified"
+    },
+    {
+      "accessId": "provider-moonshot-001",
+      "apiModelId": "kimi-k2.5",
+      "field": "capabilities",
+      "value": [
+        "chat",
+        "reasoning",
+        "deep_thinking",
+        "code",
+        "tool_use",
+        "agent",
+        "long_context",
+        "vision",
+        "video_understanding",
+        "image_understanding"
+      ],
+      "reason": "preserved-access-contract",
+      "evidence": "compute/providers/moonshot.json#kimi-k2.5",
+      "verification": "inherited-not-reverified"
+    },
+    {
+      "accessId": "provider-moonshot-001",
+      "apiModelId": "kimi-k2.5",
+      "field": "defaultTopP",
+      "value": 0.95,
+      "reason": "preserved-access-contract",
+      "evidence": "compute/providers/moonshot.json#kimi-k2.5",
+      "verification": "inherited-not-reverified"
+    },
+    {
+      "accessId": "provider-moonshot-001",
+      "apiModelId": "moonshot-v1-8k",
+      "field": "defaultTopP",
+      "value": 1,
+      "reason": "preserved-access-contract",
+      "evidence": "compute/providers/moonshot.json#moonshot-v1-8k",
+      "verification": "inherited-not-reverified"
+    },
+    {
+      "accessId": "provider-moonshot-001",
+      "apiModelId": "moonshot-v1-32k",
+      "field": "defaultTopP",
+      "value": 1,
+      "reason": "preserved-access-contract",
+      "evidence": "compute/providers/moonshot.json#moonshot-v1-32k",
+      "verification": "inherited-not-reverified"
+    },
+    {
+      "accessId": "provider-moonshot-001",
+      "apiModelId": "moonshot-v1-128k",
+      "field": "defaultTopP",
+      "value": 1,
+      "reason": "preserved-access-contract",
+      "evidence": "compute/providers/moonshot.json#moonshot-v1-128k",
+      "verification": "inherited-not-reverified"
+    },
+    {
+      "accessId": "provider-moonshot-001",
+      "apiModelId": "moonshot-v1-8k-vision-preview",
+      "field": "serviceType",
+      "value": [
+        "vision"
+      ],
+      "reason": "preserved-access-contract",
+      "evidence": "compute/providers/moonshot.json#moonshot-v1-8k-vision-preview",
+      "verification": "inherited-not-reverified"
+    },
+    {
+      "accessId": "provider-moonshot-001",
+      "apiModelId": "moonshot-v1-8k-vision-preview",
+      "field": "contextWindow",
+      "value": 8192,
+      "reason": "preserved-access-contract",
+      "evidence": "compute/providers/moonshot.json#moonshot-v1-8k-vision-preview",
+      "verification": "inherited-not-reverified"
+    },
+    {
+      "accessId": "provider-moonshot-001",
+      "apiModelId": "moonshot-v1-8k-vision-preview",
+      "field": "maxOutputTokens",
+      "value": 4096,
+      "reason": "preserved-access-contract",
+      "evidence": "compute/providers/moonshot.json#moonshot-v1-8k-vision-preview",
+      "verification": "inherited-not-reverified"
+    },
+    {
+      "accessId": "provider-moonshot-001",
+      "apiModelId": "moonshot-v1-8k-vision-preview",
+      "field": "capabilities",
+      "value": [
+        "chat",
+        "vision",
+        "image_understanding"
+      ],
+      "reason": "preserved-access-contract",
+      "evidence": "compute/providers/moonshot.json#moonshot-v1-8k-vision-preview",
+      "verification": "inherited-not-reverified"
+    },
+    {
+      "accessId": "provider-moonshot-001",
+      "apiModelId": "moonshot-v1-8k-vision-preview",
+      "field": "defaultTemperature",
+      "value": 0,
+      "reason": "preserved-access-contract",
+      "evidence": "compute/providers/moonshot.json#moonshot-v1-8k-vision-preview",
+      "verification": "inherited-not-reverified"
+    },
+    {
+      "accessId": "provider-moonshot-001",
+      "apiModelId": "moonshot-v1-8k-vision-preview",
+      "field": "defaultTopP",
+      "value": 1,
+      "reason": "preserved-access-contract",
+      "evidence": "compute/providers/moonshot.json#moonshot-v1-8k-vision-preview",
+      "verification": "inherited-not-reverified"
+    },
+    {
+      "accessId": "provider-moonshot-001",
+      "apiModelId": "moonshot-v1-32k-vision-preview",
+      "field": "serviceType",
+      "value": [
+        "vision"
+      ],
+      "reason": "preserved-access-contract",
+      "evidence": "compute/providers/moonshot.json#moonshot-v1-32k-vision-preview",
+      "verification": "inherited-not-reverified"
+    },
+    {
+      "accessId": "provider-moonshot-001",
+      "apiModelId": "moonshot-v1-32k-vision-preview",
+      "field": "contextWindow",
+      "value": 32768,
+      "reason": "preserved-access-contract",
+      "evidence": "compute/providers/moonshot.json#moonshot-v1-32k-vision-preview",
+      "verification": "inherited-not-reverified"
+    },
+    {
+      "accessId": "provider-moonshot-001",
+      "apiModelId": "moonshot-v1-32k-vision-preview",
+      "field": "maxOutputTokens",
+      "value": 4096,
+      "reason": "preserved-access-contract",
+      "evidence": "compute/providers/moonshot.json#moonshot-v1-32k-vision-preview",
+      "verification": "inherited-not-reverified"
+    },
+    {
+      "accessId": "provider-moonshot-001",
+      "apiModelId": "moonshot-v1-32k-vision-preview",
+      "field": "capabilities",
+      "value": [
+        "chat",
+        "vision",
+        "image_understanding",
+        "long_context"
+      ],
+      "reason": "preserved-access-contract",
+      "evidence": "compute/providers/moonshot.json#moonshot-v1-32k-vision-preview",
+      "verification": "inherited-not-reverified"
+    },
+    {
+      "accessId": "provider-moonshot-001",
+      "apiModelId": "moonshot-v1-32k-vision-preview",
+      "field": "defaultTemperature",
+      "value": 0,
+      "reason": "preserved-access-contract",
+      "evidence": "compute/providers/moonshot.json#moonshot-v1-32k-vision-preview",
+      "verification": "inherited-not-reverified"
+    },
+    {
+      "accessId": "provider-moonshot-001",
+      "apiModelId": "moonshot-v1-32k-vision-preview",
+      "field": "defaultTopP",
+      "value": 1,
+      "reason": "preserved-access-contract",
+      "evidence": "compute/providers/moonshot.json#moonshot-v1-32k-vision-preview",
+      "verification": "inherited-not-reverified"
+    },
+    {
+      "accessId": "provider-moonshot-001",
+      "apiModelId": "moonshot-v1-128k-vision-preview",
+      "field": "serviceType",
+      "value": [
+        "vision"
+      ],
+      "reason": "preserved-access-contract",
+      "evidence": "compute/providers/moonshot.json#moonshot-v1-128k-vision-preview",
+      "verification": "inherited-not-reverified"
+    },
+    {
+      "accessId": "provider-moonshot-001",
+      "apiModelId": "moonshot-v1-128k-vision-preview",
+      "field": "contextWindow",
+      "value": 131072,
+      "reason": "preserved-access-contract",
+      "evidence": "compute/providers/moonshot.json#moonshot-v1-128k-vision-preview",
+      "verification": "inherited-not-reverified"
+    },
+    {
+      "accessId": "provider-moonshot-001",
+      "apiModelId": "moonshot-v1-128k-vision-preview",
+      "field": "maxOutputTokens",
+      "value": 4096,
+      "reason": "preserved-access-contract",
+      "evidence": "compute/providers/moonshot.json#moonshot-v1-128k-vision-preview",
+      "verification": "inherited-not-reverified"
+    },
+    {
+      "accessId": "provider-moonshot-001",
+      "apiModelId": "moonshot-v1-128k-vision-preview",
+      "field": "capabilities",
+      "value": [
+        "chat",
+        "vision",
+        "image_understanding",
+        "long_context"
+      ],
+      "reason": "preserved-access-contract",
+      "evidence": "compute/providers/moonshot.json#moonshot-v1-128k-vision-preview",
+      "verification": "inherited-not-reverified"
+    },
+    {
+      "accessId": "provider-moonshot-001",
+      "apiModelId": "moonshot-v1-128k-vision-preview",
+      "field": "defaultTemperature",
+      "value": 0,
+      "reason": "preserved-access-contract",
+      "evidence": "compute/providers/moonshot.json#moonshot-v1-128k-vision-preview",
+      "verification": "inherited-not-reverified"
+    },
+    {
+      "accessId": "provider-moonshot-001",
+      "apiModelId": "moonshot-v1-128k-vision-preview",
+      "field": "defaultTopP",
+      "value": 1,
+      "reason": "preserved-access-contract",
+      "evidence": "compute/providers/moonshot.json#moonshot-v1-128k-vision-preview",
+      "verification": "inherited-not-reverified"
+    },
+    {
+      "accessId": "provider-local-ollama",
+      "apiModelId": "llama3.1:70b",
+      "field": "serviceType",
+      "value": [
+        "chat"
+      ],
+      "reason": "preserved-access-contract",
+      "evidence": "compute/providers/ollama.json#llama3.1:70b",
+      "verification": "inherited-not-reverified"
+    },
+    {
+      "accessId": "provider-local-ollama",
+      "apiModelId": "llama3.1:70b",
+      "field": "contextWindow",
+      "value": 131072,
+      "reason": "preserved-access-contract",
+      "evidence": "compute/providers/ollama.json#llama3.1:70b",
+      "verification": "inherited-not-reverified"
+    },
+    {
+      "accessId": "provider-local-ollama",
+      "apiModelId": "llama3.1:70b",
+      "field": "maxOutputTokens",
+      "value": 8192,
+      "reason": "preserved-access-contract",
+      "evidence": "compute/providers/ollama.json#llama3.1:70b",
+      "verification": "inherited-not-reverified"
+    },
+    {
+      "accessId": "provider-local-ollama",
+      "apiModelId": "llama3.1:70b",
+      "field": "capabilities",
+      "value": [
+        "chat",
+        "code",
+        "reasoning"
+      ],
+      "reason": "preserved-access-contract",
+      "evidence": "compute/providers/ollama.json#llama3.1:70b",
+      "verification": "inherited-not-reverified"
+    },
+    {
+      "accessId": "provider-local-ollama",
+      "apiModelId": "llama3.1:70b",
+      "field": "defaultTemperature",
+      "value": 0.8,
+      "reason": "preserved-access-contract",
+      "evidence": "compute/providers/ollama.json#llama3.1:70b",
+      "verification": "inherited-not-reverified"
+    },
+    {
+      "accessId": "provider-local-ollama",
+      "apiModelId": "llama3.1:70b",
+      "field": "defaultTopP",
+      "value": 0.9,
+      "reason": "preserved-access-contract",
+      "evidence": "compute/providers/ollama.json#llama3.1:70b",
+      "verification": "inherited-not-reverified"
+    },
+    {
+      "accessId": "provider-openai-codex-plan-001",
+      "apiModelId": "gpt-6.1-sol",
+      "field": "capabilities",
+      "value": [
+        "chat",
+        "reasoning",
+        "code",
+        "vision",
+        "ultra_long_context",
+        "tool_use",
+        "agent"
+      ],
+      "reason": "preserved-access-contract",
+      "evidence": "compute/providers/openai-codex.json#gpt-6.1-sol",
+      "verification": "inherited-not-reverified"
+    },
+    {
+      "accessId": "provider-openai-codex-plan-001",
+      "apiModelId": "gpt-6-sol",
+      "field": "capabilities",
+      "value": [
+        "chat",
+        "reasoning",
+        "code",
+        "vision",
+        "ultra_long_context",
+        "tool_use",
+        "agent"
+      ],
+      "reason": "preserved-access-contract",
+      "evidence": "compute/providers/openai-codex.json#gpt-6-sol",
+      "verification": "inherited-not-reverified"
+    },
+    {
+      "accessId": "provider-openai-codex-plan-001",
+      "apiModelId": "gpt-6-luna",
+      "field": "capabilities",
+      "value": [
+        "chat",
+        "reasoning",
+        "code",
+        "vision",
+        "ultra_long_context",
+        "tool_use",
+        "fast"
+      ],
+      "reason": "preserved-access-contract",
+      "evidence": "compute/providers/openai-codex.json#gpt-6-luna",
+      "verification": "inherited-not-reverified"
+    },
+    {
+      "accessId": "provider-openai-codex-plan-001",
+      "apiModelId": "gpt-reserve",
+      "field": "contextWindow",
+      "value": 272000,
+      "reason": "preserved-access-contract",
+      "evidence": "compute/providers/openai-codex.json#gpt-reserve",
+      "verification": "inherited-not-reverified"
+    },
+    {
+      "accessId": "provider-openai-codex-plan-001",
+      "apiModelId": "gpt-5.6-sol",
+      "field": "contextWindow",
+      "value": 272000,
+      "reason": "preserved-access-contract",
+      "evidence": "compute/providers/openai-codex.json#gpt-5.6-sol",
+      "verification": "inherited-not-reverified"
+    },
+    {
+      "accessId": "provider-openai-codex-plan-001",
+      "apiModelId": "gpt-5.6-terra",
+      "field": "contextWindow",
+      "value": 272000,
+      "reason": "preserved-access-contract",
+      "evidence": "compute/providers/openai-codex.json#gpt-5.6-terra",
+      "verification": "inherited-not-reverified"
+    },
+    {
+      "accessId": "provider-openai-codex-plan-001",
+      "apiModelId": "gpt-5.6-luna",
+      "field": "contextWindow",
+      "value": 272000,
+      "reason": "preserved-access-contract",
+      "evidence": "compute/providers/openai-codex.json#gpt-5.6-luna",
+      "verification": "inherited-not-reverified"
+    },
+    {
+      "accessId": "provider-openai-codex-plan-001",
+      "apiModelId": "gpt-5.5",
+      "field": "contextWindow",
+      "value": 272000,
+      "reason": "preserved-access-contract",
+      "evidence": "compute/providers/openai-codex.json#gpt-5.5",
+      "verification": "inherited-not-reverified"
+    },
+    {
+      "accessId": "provider-openai-codex-plan-001",
+      "apiModelId": "gpt-5.5",
+      "field": "capabilities",
+      "value": [
+        "chat",
+        "reasoning",
+        "code",
+        "vision",
+        "long_context",
+        "tool_use",
+        "agent"
+      ],
+      "reason": "preserved-access-contract",
+      "evidence": "compute/providers/openai-codex.json#gpt-5.5",
+      "verification": "inherited-not-reverified"
+    },
+    {
+      "accessId": "provider-openai-codex-plan-001",
+      "apiModelId": "gpt-5.4",
+      "field": "contextWindow",
+      "value": 272000,
+      "reason": "preserved-access-contract",
+      "evidence": "compute/providers/openai-codex.json#gpt-5.4",
+      "verification": "inherited-not-reverified"
+    },
+    {
+      "accessId": "provider-openai-codex-plan-001",
+      "apiModelId": "gpt-5.4",
+      "field": "capabilities",
+      "value": [
+        "chat",
+        "reasoning",
+        "code",
+        "vision",
+        "long_context",
+        "tool_use",
+        "agent"
+      ],
+      "reason": "preserved-access-contract",
+      "evidence": "compute/providers/openai-codex.json#gpt-5.4",
+      "verification": "inherited-not-reverified"
+    },
+    {
+      "accessId": "provider-openai-codex-plan-001",
+      "apiModelId": "gpt-5.4-mini",
+      "field": "contextWindow",
+      "value": 272000,
+      "reason": "preserved-access-contract",
+      "evidence": "compute/providers/openai-codex.json#gpt-5.4-mini",
+      "verification": "inherited-not-reverified"
+    },
+    {
+      "accessId": "provider-openai-001",
+      "apiModelId": "gpt-6.1-sol",
+      "field": "serviceType",
+      "value": [
+        "chat",
+        "responses"
+      ],
+      "reason": "preserved-access-contract",
+      "evidence": "compute/providers/openai.json#gpt-6.1-sol",
+      "verification": "inherited-not-reverified"
+    },
+    {
+      "accessId": "provider-openai-001",
+      "apiModelId": "gpt-6.1-sol",
+      "field": "capabilities",
+      "value": [
+        "chat",
+        "reasoning",
+        "code",
+        "vision",
+        "ultra_long_context",
+        "tool_use",
+        "agent"
+      ],
+      "reason": "preserved-access-contract",
+      "evidence": "compute/providers/openai.json#gpt-6.1-sol",
+      "verification": "inherited-not-reverified"
+    },
+    {
+      "accessId": "provider-openai-001",
+      "apiModelId": "gpt-6-sol",
+      "field": "serviceType",
+      "value": [
+        "chat",
+        "responses"
+      ],
+      "reason": "preserved-access-contract",
+      "evidence": "compute/providers/openai.json#gpt-6-sol",
+      "verification": "inherited-not-reverified"
+    },
+    {
+      "accessId": "provider-openai-001",
+      "apiModelId": "gpt-6-sol",
+      "field": "capabilities",
+      "value": [
+        "chat",
+        "reasoning",
+        "code",
+        "vision",
+        "ultra_long_context",
+        "tool_use",
+        "agent"
+      ],
+      "reason": "preserved-access-contract",
+      "evidence": "compute/providers/openai.json#gpt-6-sol",
+      "verification": "inherited-not-reverified"
+    },
+    {
+      "accessId": "provider-openai-001",
+      "apiModelId": "gpt-6-luna",
+      "field": "serviceType",
+      "value": [
+        "chat",
+        "fast",
+        "responses"
+      ],
+      "reason": "preserved-access-contract",
+      "evidence": "compute/providers/openai.json#gpt-6-luna",
+      "verification": "inherited-not-reverified"
+    },
+    {
+      "accessId": "provider-openai-001",
+      "apiModelId": "gpt-6-luna",
+      "field": "capabilities",
+      "value": [
+        "chat",
+        "reasoning",
+        "code",
+        "vision",
+        "ultra_long_context",
+        "tool_use",
+        "fast"
+      ],
+      "reason": "preserved-access-contract",
+      "evidence": "compute/providers/openai.json#gpt-6-luna",
+      "verification": "inherited-not-reverified"
+    },
+    {
+      "accessId": "provider-openai-001",
+      "apiModelId": "gpt-6-astra",
+      "field": "serviceType",
+      "value": [
+        "chat",
+        "responses"
+      ],
+      "reason": "preserved-access-contract",
+      "evidence": "compute/providers/openai.json#gpt-6-astra",
+      "verification": "inherited-not-reverified"
+    },
+    {
+      "accessId": "provider-openai-001",
+      "apiModelId": "gpt-6-astra",
+      "field": "capabilities",
+      "value": [
+        "chat",
+        "reasoning",
+        "code",
+        "vision",
+        "ultra_long_context",
+        "tool_use",
+        "agent"
+      ],
+      "reason": "preserved-access-contract",
+      "evidence": "compute/providers/openai.json#gpt-6-astra",
+      "verification": "inherited-not-reverified"
+    },
+    {
+      "accessId": "provider-openai-001",
+      "apiModelId": "gpt-5.5",
+      "field": "serviceType",
+      "value": [
+        "chat",
+        "responses"
+      ],
+      "reason": "preserved-access-contract",
+      "evidence": "compute/providers/openai.json#gpt-5.5",
+      "verification": "inherited-not-reverified"
+    },
+    {
+      "accessId": "provider-openai-001",
+      "apiModelId": "gpt-5.5",
+      "field": "capabilities",
+      "value": [
+        "chat",
+        "reasoning",
+        "code",
+        "vision",
+        "ultra_long_context",
+        "tool_use",
+        "agent"
+      ],
+      "reason": "preserved-access-contract",
+      "evidence": "compute/providers/openai.json#gpt-5.5",
+      "verification": "inherited-not-reverified"
+    },
+    {
+      "accessId": "provider-openai-001",
+      "apiModelId": "gpt-5.5-pro",
+      "field": "serviceType",
+      "value": [
+        "responses"
+      ],
+      "reason": "preserved-access-contract",
+      "evidence": "compute/providers/openai.json#gpt-5.5-pro",
+      "verification": "inherited-not-reverified"
+    },
+    {
+      "accessId": "provider-openai-001",
+      "apiModelId": "gpt-5.5-pro",
+      "field": "contextWindow",
+      "value": 1050000,
+      "reason": "preserved-access-contract",
+      "evidence": "compute/providers/openai.json#gpt-5.5-pro",
+      "verification": "inherited-not-reverified"
+    },
+    {
+      "accessId": "provider-openai-001",
+      "apiModelId": "gpt-5.5-pro",
+      "field": "maxOutputTokens",
+      "value": 128000,
+      "reason": "preserved-access-contract",
+      "evidence": "compute/providers/openai.json#gpt-5.5-pro",
+      "verification": "inherited-not-reverified"
+    },
+    {
+      "accessId": "provider-openai-001",
+      "apiModelId": "gpt-5.5-pro",
+      "field": "capabilities",
+      "value": [
+        "chat",
+        "reasoning",
+        "code",
+        "vision",
+        "ultra_long_context",
+        "tool_use",
+        "agent"
+      ],
+      "reason": "preserved-access-contract",
+      "evidence": "compute/providers/openai.json#gpt-5.5-pro",
+      "verification": "inherited-not-reverified"
+    },
+    {
+      "accessId": "provider-openai-001",
+      "apiModelId": "gpt-5.4",
+      "field": "serviceType",
+      "value": [
+        "chat",
+        "responses"
+      ],
+      "reason": "preserved-access-contract",
+      "evidence": "compute/providers/openai.json#gpt-5.4",
+      "verification": "inherited-not-reverified"
+    },
+    {
+      "accessId": "provider-openai-001",
+      "apiModelId": "gpt-5.4",
+      "field": "capabilities",
+      "value": [
+        "chat",
+        "reasoning",
+        "code",
+        "vision",
+        "ultra_long_context",
+        "tool_use"
+      ],
+      "reason": "preserved-access-contract",
+      "evidence": "compute/providers/openai.json#gpt-5.4",
+      "verification": "inherited-not-reverified"
+    },
+    {
+      "accessId": "provider-openai-001",
+      "apiModelId": "gpt-5.4-pro",
+      "field": "serviceType",
+      "value": [
+        "responses"
+      ],
+      "reason": "preserved-access-contract",
+      "evidence": "compute/providers/openai.json#gpt-5.4-pro",
+      "verification": "inherited-not-reverified"
+    },
+    {
+      "accessId": "provider-openai-001",
+      "apiModelId": "gpt-5.4-pro",
+      "field": "capabilities",
+      "value": [
+        "chat",
+        "reasoning",
+        "code",
+        "vision",
+        "ultra_long_context",
+        "tool_use"
+      ],
+      "reason": "preserved-access-contract",
+      "evidence": "compute/providers/openai.json#gpt-5.4-pro",
+      "verification": "inherited-not-reverified"
+    },
+    {
+      "accessId": "provider-openai-001",
+      "apiModelId": "gpt-5.4-mini",
+      "field": "serviceType",
+      "value": [
+        "chat",
+        "fast",
+        "responses"
+      ],
+      "reason": "preserved-access-contract",
+      "evidence": "compute/providers/openai.json#gpt-5.4-mini",
+      "verification": "inherited-not-reverified"
+    },
+    {
+      "accessId": "provider-openai-001",
+      "apiModelId": "gpt-5.4-nano",
+      "field": "serviceType",
+      "value": [
+        "fast",
+        "responses"
+      ],
+      "reason": "preserved-access-contract",
+      "evidence": "compute/providers/openai.json#gpt-5.4-nano",
+      "verification": "inherited-not-reverified"
+    },
+    {
+      "accessId": "provider-openai-001",
+      "apiModelId": "gpt-5.4-nano",
+      "field": "capabilities",
+      "value": [
+        "chat",
+        "reasoning",
+        "code",
+        "fast",
+        "long_context"
+      ],
+      "reason": "preserved-access-contract",
+      "evidence": "compute/providers/openai.json#gpt-5.4-nano",
+      "verification": "inherited-not-reverified"
+    },
+    {
+      "accessId": "provider-openai-001",
+      "apiModelId": "gpt-image-2",
+      "field": "capabilities",
+      "value": [
+        "image_generation",
+        "image_editing",
+        "text_rendering",
+        "vision"
+      ],
+      "reason": "preserved-access-contract",
+      "evidence": "compute/providers/openai.json#gpt-image-2",
+      "verification": "inherited-not-reverified"
+    },
+    {
+      "accessId": "provider-openai-001",
+      "apiModelId": "gpt-realtime-2.1",
+      "field": "serviceType",
+      "value": [
+        "omni",
+        "realtime_voice"
+      ],
+      "reason": "preserved-access-contract",
+      "evidence": "compute/providers/openai.json#gpt-realtime-2.1",
+      "verification": "inherited-not-reverified"
+    },
+    {
+      "accessId": "provider-openai-001",
+      "apiModelId": "gpt-realtime-2.1",
+      "field": "capabilities",
+      "value": [
+        "chat",
+        "vision",
+        "tts",
+        "asr",
+        "realtime",
+        "speech_to_speech",
+        "reasoning",
+        "tool_use"
+      ],
+      "reason": "preserved-access-contract",
+      "evidence": "compute/providers/openai.json#gpt-realtime-2.1",
+      "verification": "inherited-not-reverified"
+    },
+    {
+      "accessId": "provider-openai-001",
+      "apiModelId": "gpt-realtime-2.1-mini",
+      "field": "serviceType",
+      "value": [
+        "realtime_voice"
+      ],
+      "reason": "preserved-access-contract",
+      "evidence": "compute/providers/openai.json#gpt-realtime-2.1-mini",
+      "verification": "inherited-not-reverified"
+    },
+    {
+      "accessId": "provider-openai-001",
+      "apiModelId": "gpt-realtime-2.1-mini",
+      "field": "capabilities",
+      "value": [
+        "chat",
+        "vision",
+        "tts",
+        "asr",
+        "realtime",
+        "speech_to_speech",
+        "fast"
+      ],
+      "reason": "preserved-access-contract",
+      "evidence": "compute/providers/openai.json#gpt-realtime-2.1-mini",
+      "verification": "inherited-not-reverified"
+    },
+    {
+      "accessId": "provider-openai-001",
+      "apiModelId": "gpt-realtime-translate",
+      "field": "serviceType",
+      "value": [
+        "simultaneous_interpret",
+        "translation"
+      ],
+      "reason": "preserved-access-contract",
+      "evidence": "compute/providers/openai.json#gpt-realtime-translate",
+      "verification": "inherited-not-reverified"
+    },
+    {
+      "accessId": "provider-openai-001",
+      "apiModelId": "gpt-realtime-translate",
+      "field": "capabilities",
+      "value": [
+        "translation",
+        "simultaneous_interpretation",
+        "asr",
+        "realtime"
+      ],
+      "reason": "preserved-access-contract",
+      "evidence": "compute/providers/openai.json#gpt-realtime-translate",
+      "verification": "inherited-not-reverified"
+    },
+    {
+      "accessId": "provider-openai-001",
+      "apiModelId": "gpt-4.1",
+      "field": "defaultTopP",
+      "value": 1,
+      "reason": "preserved-access-contract",
+      "evidence": "compute/providers/openai.json#gpt-4.1",
+      "verification": "inherited-not-reverified"
+    },
+    {
+      "accessId": "provider-openai-001",
+      "apiModelId": "gpt-4.1-mini",
+      "field": "defaultTopP",
+      "value": 1,
+      "reason": "preserved-access-contract",
+      "evidence": "compute/providers/openai.json#gpt-4.1-mini",
+      "verification": "inherited-not-reverified"
+    },
+    {
+      "accessId": "provider-openai-001",
+      "apiModelId": "gpt-4.1-nano",
+      "field": "defaultTopP",
+      "value": 1,
+      "reason": "preserved-access-contract",
+      "evidence": "compute/providers/openai.json#gpt-4.1-nano",
+      "verification": "inherited-not-reverified"
+    },
+    {
+      "accessId": "provider-openai-001",
+      "apiModelId": "gpt-4o",
+      "field": "defaultTopP",
+      "value": 1,
+      "reason": "preserved-access-contract",
+      "evidence": "compute/providers/openai.json#gpt-4o",
+      "verification": "inherited-not-reverified"
+    },
+    {
+      "accessId": "provider-openai-001",
+      "apiModelId": "gpt-4o-mini",
+      "field": "defaultTopP",
+      "value": 1,
+      "reason": "preserved-access-contract",
+      "evidence": "compute/providers/openai.json#gpt-4o-mini",
+      "verification": "inherited-not-reverified"
+    },
+    {
+      "accessId": "provider-openai-001",
+      "apiModelId": "o3",
+      "field": "serviceType",
+      "value": [
+        "responses"
+      ],
+      "reason": "preserved-access-contract",
+      "evidence": "compute/providers/openai.json#o3",
+      "verification": "inherited-not-reverified"
+    },
+    {
+      "accessId": "provider-openai-001",
+      "apiModelId": "o3-pro",
+      "field": "serviceType",
+      "value": [
+        "responses"
+      ],
+      "reason": "preserved-access-contract",
+      "evidence": "compute/providers/openai.json#o3-pro",
+      "verification": "inherited-not-reverified"
+    },
+    {
+      "accessId": "provider-openai-001",
+      "apiModelId": "o3-mini",
+      "field": "serviceType",
+      "value": [
+        "responses"
+      ],
+      "reason": "preserved-access-contract",
+      "evidence": "compute/providers/openai.json#o3-mini",
+      "verification": "inherited-not-reverified"
+    },
+    {
+      "accessId": "provider-openai-001",
+      "apiModelId": "o4-mini",
+      "field": "serviceType",
+      "value": [
+        "responses"
+      ],
+      "reason": "preserved-access-contract",
+      "evidence": "compute/providers/openai.json#o4-mini",
+      "verification": "inherited-not-reverified"
+    },
+    {
+      "accessId": "provider-openrouter-001",
+      "apiModelId": "cohere/command-a-plus",
+      "field": "serviceType",
+      "value": [
+        "chat"
+      ],
+      "reason": "preserved-access-contract",
+      "evidence": "compute/providers/openrouter.json#cohere/command-a-plus",
+      "verification": "inherited-not-reverified"
+    },
+    {
+      "accessId": "provider-openrouter-001",
+      "apiModelId": "cohere/command-a-plus",
+      "field": "contextWindow",
+      "value": 192000,
+      "reason": "preserved-access-contract",
+      "evidence": "compute/providers/openrouter.json#cohere/command-a-plus",
+      "verification": "inherited-not-reverified"
+    },
+    {
+      "accessId": "provider-openrouter-001",
+      "apiModelId": "cohere/command-a-plus",
+      "field": "capabilities",
+      "value": [
+        "chat",
+        "vision",
+        "tool_use",
+        "reasoning"
+      ],
+      "reason": "preserved-access-contract",
+      "evidence": "compute/providers/openrouter.json#cohere/command-a-plus",
+      "verification": "inherited-not-reverified"
+    },
+    {
+      "accessId": "provider-openrouter-001",
+      "apiModelId": "cohere/command-a-plus",
+      "field": "maxOutputTokens",
+      "value": 64000,
+      "reason": "preserved-access-contract",
+      "evidence": "compute/providers/openrouter.json#cohere/command-a-plus",
+      "verification": "inherited-not-reverified"
+    },
+    {
+      "accessId": "provider-openrouter-001",
+      "apiModelId": "mistralai/mistral-medium-3-5",
+      "field": "serviceType",
+      "value": [
+        "chat"
+      ],
+      "reason": "preserved-access-contract",
+      "evidence": "compute/providers/openrouter.json#mistralai/mistral-medium-3-5",
+      "verification": "inherited-not-reverified"
+    },
+    {
+      "accessId": "provider-openrouter-001",
+      "apiModelId": "mistralai/mistral-medium-3-5",
+      "field": "contextWindow",
+      "value": 262144,
+      "reason": "preserved-access-contract",
+      "evidence": "compute/providers/openrouter.json#mistralai/mistral-medium-3-5",
+      "verification": "inherited-not-reverified"
+    },
+    {
+      "accessId": "provider-openrouter-001",
+      "apiModelId": "mistralai/mistral-medium-3-5",
+      "field": "capabilities",
+      "value": [
+        "chat",
+        "vision",
+        "tool_use",
+        "reasoning"
+      ],
+      "reason": "preserved-access-contract",
+      "evidence": "compute/providers/openrouter.json#mistralai/mistral-medium-3-5",
+      "verification": "inherited-not-reverified"
+    },
+    {
+      "accessId": "provider-openrouter-001",
+      "apiModelId": "mistralai/mistral-medium-3-5",
+      "field": "maxOutputTokens",
+      "value": 209715,
+      "reason": "preserved-access-contract",
+      "evidence": "compute/providers/openrouter.json#mistralai/mistral-medium-3-5",
+      "verification": "inherited-not-reverified"
+    },
+    {
+      "accessId": "provider-openrouter-001",
+      "apiModelId": "google/gemini-3.8-flash",
+      "field": "serviceType",
+      "value": [
+        "chat"
+      ],
+      "reason": "preserved-access-contract",
+      "evidence": "compute/providers/openrouter.json#google/gemini-3.8-flash",
+      "verification": "inherited-not-reverified"
+    },
+    {
+      "accessId": "provider-openrouter-001",
+      "apiModelId": "google/gemini-3.8-flash",
+      "field": "contextWindow",
+      "value": 1048576,
+      "reason": "preserved-access-contract",
+      "evidence": "compute/providers/openrouter.json#google/gemini-3.8-flash",
+      "verification": "inherited-not-reverified"
+    },
+    {
+      "accessId": "provider-openrouter-001",
+      "apiModelId": "google/gemini-3.8-flash",
+      "field": "capabilities",
+      "value": [
+        "chat",
+        "vision",
+        "tool_use",
+        "reasoning"
+      ],
+      "reason": "preserved-access-contract",
+      "evidence": "compute/providers/openrouter.json#google/gemini-3.8-flash",
+      "verification": "inherited-not-reverified"
+    },
+    {
+      "accessId": "provider-openrouter-001",
+      "apiModelId": "google/gemini-3.8-flash",
+      "field": "maxOutputTokens",
+      "value": 65536,
+      "reason": "preserved-access-contract",
+      "evidence": "compute/providers/openrouter.json#google/gemini-3.8-flash",
+      "verification": "inherited-not-reverified"
+    },
+    {
+      "accessId": "provider-openrouter-001",
+      "apiModelId": "minimax/minimax-m3",
+      "field": "serviceType",
+      "value": [
+        "chat"
+      ],
+      "reason": "preserved-access-contract",
+      "evidence": "compute/providers/openrouter.json#minimax/minimax-m3",
+      "verification": "inherited-not-reverified"
+    },
+    {
+      "accessId": "provider-openrouter-001",
+      "apiModelId": "minimax/minimax-m3",
+      "field": "contextWindow",
+      "value": 1048576,
+      "reason": "本次OpenRouter官方API原样返回独立context_length和top_provider.max_completion_tokens；接入值保留，不复制到原厂规格。顶层目录窗口与top_provider路由窗口不同，二者不得合并。",
+      "evidence": "https://openrouter.ai/api/v1/models",
+      "verification": "officially-verified-access-contract"
+    },
+    {
+      "accessId": "provider-openrouter-001",
+      "apiModelId": "minimax/minimax-m3",
+      "field": "capabilities",
+      "value": [
+        "chat",
+        "vision",
+        "tool_use",
+        "reasoning"
+      ],
+      "reason": "preserved-access-contract",
+      "evidence": "compute/providers/openrouter.json#minimax/minimax-m3",
+      "verification": "inherited-not-reverified"
+    },
+    {
+      "accessId": "provider-openrouter-001",
+      "apiModelId": "minimax/minimax-m3",
+      "field": "maxOutputTokens",
+      "value": 512000,
+      "reason": "preserved-access-contract",
+      "evidence": "compute/providers/openrouter.json#minimax/minimax-m3",
+      "verification": "inherited-not-reverified"
+    },
+    {
+      "accessId": "provider-openrouter-001",
+      "apiModelId": "qwen/qwen3.8-omni-flash",
+      "field": "serviceType",
+      "value": [
+        "chat"
+      ],
+      "reason": "preserved-access-contract",
+      "evidence": "compute/providers/openrouter.json#qwen/qwen3.8-omni-flash",
+      "verification": "inherited-not-reverified"
+    },
+    {
+      "accessId": "provider-openrouter-001",
+      "apiModelId": "qwen/qwen3.8-omni-flash",
+      "field": "capabilities",
+      "value": [
+        "chat",
+        "vision",
+        "tool_use",
+        "reasoning"
+      ],
+      "reason": "preserved-access-contract",
+      "evidence": "compute/providers/openrouter.json#qwen/qwen3.8-omni-flash",
+      "verification": "inherited-not-reverified"
+    },
+    {
+      "accessId": "provider-openrouter-001",
+      "apiModelId": "qwen/qwen3.8-max-prime",
+      "field": "capabilities",
+      "value": [
+        "chat",
+        "vision",
+        "tool_use",
+        "reasoning"
+      ],
+      "reason": "preserved-access-contract",
+      "evidence": "compute/providers/openrouter.json#qwen/qwen3.8-max-prime",
+      "verification": "inherited-not-reverified"
+    },
+    {
+      "accessId": "provider-openrouter-001",
+      "apiModelId": "qwen/qwen3.8-max-prime",
+      "field": "maxOutputTokens",
+      "value": 131072,
+      "reason": "preserved-access-contract",
+      "evidence": "compute/providers/openrouter.json#qwen/qwen3.8-max-prime",
+      "verification": "inherited-not-reverified"
+    },
+    {
+      "accessId": "provider-openrouter-001",
+      "apiModelId": "deepseek/deepseek-v4.1-flash",
+      "field": "serviceType",
+      "value": [
+        "chat"
+      ],
+      "reason": "preserved-access-contract",
+      "evidence": "compute/providers/openrouter.json#deepseek/deepseek-v4.1-flash",
+      "verification": "inherited-not-reverified"
+    },
+    {
+      "accessId": "provider-openrouter-001",
+      "apiModelId": "deepseek/deepseek-v4.1-flash",
+      "field": "contextWindow",
+      "value": 1048576,
+      "reason": "本次OpenRouter官方API原样返回独立context_length和top_provider.max_completion_tokens；接入值保留，不复制到原厂规格。顶层目录窗口与top_provider路由窗口不同，二者不得合并。",
+      "evidence": "https://openrouter.ai/api/v1/models",
+      "verification": "officially-verified-access-contract"
+    },
+    {
+      "accessId": "provider-openrouter-001",
+      "apiModelId": "deepseek/deepseek-v4.1-flash",
+      "field": "capabilities",
+      "value": [
+        "chat",
+        "vision",
+        "tool_use",
+        "reasoning"
+      ],
+      "reason": "preserved-access-contract",
+      "evidence": "compute/providers/openrouter.json#deepseek/deepseek-v4.1-flash",
+      "verification": "inherited-not-reverified"
+    },
+    {
+      "accessId": "provider-openrouter-001",
+      "apiModelId": "deepseek/deepseek-v4.1-flash",
+      "field": "maxOutputTokens",
+      "value": 943718,
+      "reason": "本次OpenRouter官方API原样返回独立context_length和top_provider.max_completion_tokens；接入值保留，不复制到原厂规格。顶层目录窗口与top_provider路由窗口不同，二者不得合并。",
+      "evidence": "https://openrouter.ai/api/v1/models",
+      "verification": "officially-verified-access-contract"
+    },
+    {
+      "accessId": "provider-openrouter-001",
+      "apiModelId": "tencent/hy4-preview",
+      "field": "capabilities",
+      "value": [
+        "chat",
+        "tool_use",
+        "reasoning"
+      ],
+      "reason": "preserved-access-contract",
+      "evidence": "compute/providers/openrouter.json#tencent/hy4-preview",
+      "verification": "inherited-not-reverified"
+    },
+    {
+      "accessId": "provider-openrouter-001",
+      "apiModelId": "tencent/hy4-preview",
+      "field": "maxOutputTokens",
+      "value": 64000,
+      "reason": "preserved-access-contract",
+      "evidence": "compute/providers/openrouter.json#tencent/hy4-preview",
+      "verification": "inherited-not-reverified"
+    },
+    {
+      "accessId": "provider-openrouter-001",
+      "apiModelId": "z-ai/glm-5.3-flash",
+      "field": "serviceType",
+      "value": [
+        "chat"
+      ],
+      "reason": "preserved-access-contract",
+      "evidence": "compute/providers/openrouter.json#z-ai/glm-5.3-flash",
+      "verification": "inherited-not-reverified"
+    },
+    {
+      "accessId": "provider-openrouter-001",
+      "apiModelId": "z-ai/glm-5.3-flash",
+      "field": "capabilities",
+      "value": [
+        "chat",
+        "vision",
+        "tool_use",
+        "reasoning"
+      ],
+      "reason": "preserved-access-contract",
+      "evidence": "compute/providers/openrouter.json#z-ai/glm-5.3-flash",
+      "verification": "inherited-not-reverified"
+    },
+    {
+      "accessId": "provider-openrouter-001",
+      "apiModelId": "z-ai/glm-5.3-flash",
+      "field": "maxOutputTokens",
+      "value": 943717,
+      "reason": "本次OpenRouter官方API原样返回独立context_length和top_provider.max_completion_tokens；接入值保留，不复制到原厂规格。顶层目录窗口与top_provider路由窗口不同，二者不得合并。",
+      "evidence": "https://openrouter.ai/api/v1/models",
+      "verification": "officially-verified-access-contract"
+    },
+    {
+      "accessId": "provider-openrouter-001",
+      "apiModelId": "z-ai/glm-5.3",
+      "field": "capabilities",
+      "value": [
+        "chat",
+        "tool_use",
+        "reasoning"
+      ],
+      "reason": "preserved-access-contract",
+      "evidence": "compute/providers/openrouter.json#z-ai/glm-5.3",
+      "verification": "inherited-not-reverified"
+    },
+    {
+      "accessId": "provider-openrouter-001",
+      "apiModelId": "moonshotai/kimi-k3",
+      "field": "serviceType",
+      "value": [
+        "chat"
+      ],
+      "reason": "preserved-access-contract",
+      "evidence": "compute/providers/openrouter.json#moonshotai/kimi-k3",
+      "verification": "inherited-not-reverified"
+    },
+    {
+      "accessId": "provider-openrouter-001",
+      "apiModelId": "moonshotai/kimi-k3",
+      "field": "capabilities",
+      "value": [
+        "chat",
+        "vision",
+        "tool_use",
+        "reasoning"
+      ],
+      "reason": "preserved-access-contract",
+      "evidence": "compute/providers/openrouter.json#moonshotai/kimi-k3",
+      "verification": "inherited-not-reverified"
+    },
+    {
+      "accessId": "provider-openrouter-001",
+      "apiModelId": "moonshotai/kimi-k3",
+      "field": "maxOutputTokens",
+      "value": 943718,
+      "reason": "本次OpenRouter官方API原样返回独立context_length和top_provider.max_completion_tokens；接入值保留，不复制到原厂规格。顶层目录窗口与top_provider路由窗口不同，二者不得合并。",
+      "evidence": "https://openrouter.ai/api/v1/models",
+      "verification": "officially-verified-access-contract"
+    },
+    {
+      "accessId": "provider-openrouter-001",
+      "apiModelId": "anthropic/claude-sonnet-5.5",
+      "field": "capabilities",
+      "value": [
+        "chat",
+        "vision",
+        "tool_use",
+        "reasoning"
+      ],
+      "reason": "preserved-access-contract",
+      "evidence": "compute/providers/openrouter.json#anthropic/claude-sonnet-5.5",
+      "verification": "inherited-not-reverified"
+    },
+    {
+      "accessId": "provider-openrouter-001",
+      "apiModelId": "anthropic/claude-opus-5.5",
+      "field": "capabilities",
+      "value": [
+        "chat",
+        "vision",
+        "tool_use",
+        "reasoning"
+      ],
+      "reason": "preserved-access-contract",
+      "evidence": "compute/providers/openrouter.json#anthropic/claude-opus-5.5",
+      "verification": "inherited-not-reverified"
+    },
+    {
+      "accessId": "provider-openrouter-001",
+      "apiModelId": "openai/gpt-6.1-sol",
+      "field": "capabilities",
+      "value": [
+        "chat",
+        "vision",
+        "tool_use",
+        "reasoning"
+      ],
+      "reason": "preserved-access-contract",
+      "evidence": "compute/providers/openrouter.json#openai/gpt-6.1-sol",
+      "verification": "inherited-not-reverified"
+    },
+    {
+      "accessId": "provider-openrouter-001",
+      "apiModelId": "openrouter/auto",
+      "field": "serviceType",
+      "value": [
+        "chat"
+      ],
+      "reason": "preserved-access-contract",
+      "evidence": "compute/providers/openrouter.json#openrouter/auto",
+      "verification": "inherited-not-reverified"
+    },
+    {
+      "accessId": "provider-openrouter-001",
+      "apiModelId": "openrouter/auto",
+      "field": "contextWindow",
+      "value": 2000000,
+      "reason": "preserved-access-contract",
+      "evidence": "compute/providers/openrouter.json#openrouter/auto",
+      "verification": "inherited-not-reverified"
+    },
+    {
+      "accessId": "provider-openrouter-001",
+      "apiModelId": "openrouter/auto",
+      "field": "maxOutputTokens",
+      "value": 16384,
+      "reason": "preserved-access-contract",
+      "evidence": "compute/providers/openrouter.json#openrouter/auto",
+      "verification": "inherited-not-reverified"
+    },
+    {
+      "accessId": "provider-openrouter-001",
+      "apiModelId": "openrouter/auto",
+      "field": "capabilities",
+      "value": [
+        "chat",
+        "auto_routing"
+      ],
+      "reason": "preserved-access-contract",
+      "evidence": "compute/providers/openrouter.json#openrouter/auto",
+      "verification": "inherited-not-reverified"
+    },
+    {
+      "accessId": "provider-openrouter-001",
+      "apiModelId": "openrouter/auto",
+      "field": "defaultTemperature",
+      "value": 1,
+      "reason": "preserved-access-contract",
+      "evidence": "compute/providers/openrouter.json#openrouter/auto",
+      "verification": "inherited-not-reverified"
+    },
+    {
+      "accessId": "provider-openrouter-001",
+      "apiModelId": "openrouter/auto",
+      "field": "defaultTopP",
+      "value": 1,
+      "reason": "preserved-access-contract",
+      "evidence": "compute/providers/openrouter.json#openrouter/auto",
+      "verification": "inherited-not-reverified"
+    },
+    {
+      "accessId": "provider-siliconflow-001",
+      "apiModelId": "Qwen/Qwen3-Coder-480B-A35B-Instruct",
+      "field": "defaultTopP",
+      "value": 0.7,
+      "reason": "preserved-access-contract",
+      "evidence": "compute/providers/siliconflow.json#Qwen/Qwen3-Coder-480B-A35B-Instruct",
+      "verification": "inherited-not-reverified"
+    },
+    {
+      "accessId": "provider-siliconflow-001",
+      "apiModelId": "Qwen/Qwen3-235B-A22B-Instruct-2507",
+      "field": "defaultTopP",
+      "value": 0.7,
+      "reason": "preserved-access-contract",
+      "evidence": "compute/providers/siliconflow.json#Qwen/Qwen3-235B-A22B-Instruct-2507",
+      "verification": "inherited-not-reverified"
+    },
+    {
+      "accessId": "provider-siliconflow-001",
+      "apiModelId": "BAAI/bge-m3",
+      "field": "serviceType",
+      "value": [
+        "embedding"
+      ],
+      "reason": "preserved-access-contract",
+      "evidence": "compute/providers/siliconflow.json#BAAI/bge-m3",
+      "verification": "inherited-not-reverified"
+    },
+    {
+      "accessId": "provider-siliconflow-001",
+      "apiModelId": "BAAI/bge-m3",
+      "field": "contextWindow",
+      "value": 8192,
+      "reason": "preserved-access-contract",
+      "evidence": "compute/providers/siliconflow.json#BAAI/bge-m3",
+      "verification": "inherited-not-reverified"
+    },
+    {
+      "accessId": "provider-siliconflow-001",
+      "apiModelId": "BAAI/bge-m3",
+      "field": "maxOutputTokens",
+      "value": 0,
+      "reason": "preserved-access-contract",
+      "evidence": "compute/providers/siliconflow.json#BAAI/bge-m3",
+      "verification": "inherited-not-reverified"
+    },
+    {
+      "accessId": "provider-siliconflow-001",
+      "apiModelId": "BAAI/bge-m3",
+      "field": "capabilities",
+      "value": [
+        "text_embedding",
+        "multilingual"
+      ],
+      "reason": "preserved-access-contract",
+      "evidence": "compute/providers/siliconflow.json#BAAI/bge-m3",
+      "verification": "inherited-not-reverified"
+    },
+    {
+      "accessId": "provider-tencent-001",
+      "apiModelId": "hunyuan-2.0-thinking-20251109",
+      "field": "defaultTemperature",
+      "value": 1,
+      "reason": "preserved-access-contract",
+      "evidence": "compute/providers/tencent.json#hunyuan-2.0-thinking-20251109",
+      "verification": "inherited-not-reverified"
+    },
+    {
+      "accessId": "provider-tencent-001",
+      "apiModelId": "hunyuan-2.0-thinking-20251109",
+      "field": "defaultTopP",
+      "value": 1,
+      "reason": "preserved-access-contract",
+      "evidence": "compute/providers/tencent.json#hunyuan-2.0-thinking-20251109",
+      "verification": "inherited-not-reverified"
+    },
+    {
+      "accessId": "provider-tencent-001",
+      "apiModelId": "hunyuan-2.0-instruct-20251111",
+      "field": "defaultTopP",
+      "value": 1,
+      "reason": "preserved-access-contract",
+      "evidence": "compute/providers/tencent.json#hunyuan-2.0-instruct-20251111",
+      "verification": "inherited-not-reverified"
+    },
+    {
+      "accessId": "provider-tencent-001",
+      "apiModelId": "hunyuan-turbos-latest",
+      "field": "defaultTopP",
+      "value": 1,
+      "reason": "preserved-access-contract",
+      "evidence": "compute/providers/tencent.json#hunyuan-turbos-latest",
+      "verification": "inherited-not-reverified"
+    },
+    {
+      "accessId": "provider-tencent-001",
+      "apiModelId": "hunyuan-t1-latest",
+      "field": "defaultTemperature",
+      "value": 1,
+      "reason": "preserved-access-contract",
+      "evidence": "compute/providers/tencent.json#hunyuan-t1-latest",
+      "verification": "inherited-not-reverified"
+    },
+    {
+      "accessId": "provider-tencent-001",
+      "apiModelId": "hunyuan-t1-latest",
+      "field": "defaultTopP",
+      "value": 1,
+      "reason": "preserved-access-contract",
+      "evidence": "compute/providers/tencent.json#hunyuan-t1-latest",
+      "verification": "inherited-not-reverified"
+    },
+    {
+      "accessId": "provider-tencent-001",
+      "apiModelId": "hunyuan-t1-vision",
+      "field": "defaultTemperature",
+      "value": 1,
+      "reason": "preserved-access-contract",
+      "evidence": "compute/providers/tencent.json#hunyuan-t1-vision",
+      "verification": "inherited-not-reverified"
+    },
+    {
+      "accessId": "provider-tencent-001",
+      "apiModelId": "hunyuan-t1-vision",
+      "field": "defaultTopP",
+      "value": 1,
+      "reason": "preserved-access-contract",
+      "evidence": "compute/providers/tencent.json#hunyuan-t1-vision",
+      "verification": "inherited-not-reverified"
+    },
+    {
+      "accessId": "provider-tencent-001",
+      "apiModelId": "hunyuan-turbos-vision",
+      "field": "defaultTopP",
+      "value": 1,
+      "reason": "preserved-access-contract",
+      "evidence": "compute/providers/tencent.json#hunyuan-turbos-vision",
+      "verification": "inherited-not-reverified"
+    },
+    {
+      "accessId": "provider-volcengine-001",
+      "apiModelId": "doubao-seed-2.1-pro",
+      "field": "defaultTemperature",
+      "value": 1,
+      "reason": "preserved-access-contract",
+      "evidence": "compute/providers/volcengine.json#doubao-seed-2.1-pro",
+      "verification": "inherited-not-reverified"
+    },
+    {
+      "accessId": "provider-volcengine-001",
+      "apiModelId": "doubao-seed-2.1-pro",
+      "field": "defaultTopP",
+      "value": 0.7,
+      "reason": "preserved-access-contract",
+      "evidence": "compute/providers/volcengine.json#doubao-seed-2.1-pro",
+      "verification": "inherited-not-reverified"
+    },
+    {
+      "accessId": "provider-volcengine-001",
+      "apiModelId": "doubao-seed-2.1-turbo",
+      "field": "serviceType",
+      "value": [
+        "chat",
+        "reasoning",
+        "vision"
+      ],
+      "reason": "preserved-access-contract",
+      "evidence": "compute/providers/volcengine.json#doubao-seed-2.1-turbo",
+      "verification": "inherited-not-reverified"
+    },
+    {
+      "accessId": "provider-volcengine-001",
+      "apiModelId": "doubao-seed-2.1-turbo",
+      "field": "maxOutputTokens",
+      "value": 262144,
+      "reason": "preserved-access-contract",
+      "evidence": "compute/providers/volcengine.json#doubao-seed-2.1-turbo",
+      "verification": "inherited-not-reverified"
+    },
+    {
+      "accessId": "provider-volcengine-001",
+      "apiModelId": "doubao-seed-2.1-turbo",
+      "field": "capabilities",
+      "value": [
+        "chat",
+        "reasoning",
+        "code",
+        "vision",
+        "multilingual",
+        "long_context",
+        "tool_use",
+        "agent",
+        "fast"
+      ],
+      "reason": "preserved-access-contract",
+      "evidence": "compute/providers/volcengine.json#doubao-seed-2.1-turbo",
+      "verification": "inherited-not-reverified"
+    },
+    {
+      "accessId": "provider-volcengine-001",
+      "apiModelId": "doubao-seed-2.1-turbo",
+      "field": "defaultTemperature",
+      "value": 1,
+      "reason": "preserved-access-contract",
+      "evidence": "compute/providers/volcengine.json#doubao-seed-2.1-turbo",
+      "verification": "inherited-not-reverified"
+    },
+    {
+      "accessId": "provider-volcengine-001",
+      "apiModelId": "doubao-seed-2.1-turbo",
+      "field": "defaultTopP",
+      "value": 0.7,
+      "reason": "preserved-access-contract",
+      "evidence": "compute/providers/volcengine.json#doubao-seed-2.1-turbo",
+      "verification": "inherited-not-reverified"
+    },
+    {
+      "accessId": "provider-volcengine-001",
+      "apiModelId": "doubao-seed-2.0-pro",
+      "field": "defaultTopP",
+      "value": 0.7,
+      "reason": "preserved-access-contract",
+      "evidence": "compute/providers/volcengine.json#doubao-seed-2.0-pro",
+      "verification": "inherited-not-reverified"
+    },
+    {
+      "accessId": "provider-volcengine-001",
+      "apiModelId": "doubao-seed-2.0-lite",
+      "field": "maxOutputTokens",
+      "value": 128000,
+      "reason": "preserved-access-contract",
+      "evidence": "compute/providers/volcengine.json#doubao-seed-2.0-lite",
+      "verification": "inherited-not-reverified"
+    },
+    {
+      "accessId": "provider-volcengine-001",
+      "apiModelId": "doubao-seed-2.0-lite",
+      "field": "defaultTopP",
+      "value": 0.7,
+      "reason": "preserved-access-contract",
+      "evidence": "compute/providers/volcengine.json#doubao-seed-2.0-lite",
+      "verification": "inherited-not-reverified"
+    },
+    {
+      "accessId": "provider-volcengine-001",
+      "apiModelId": "doubao-seed-2.0-mini",
+      "field": "maxOutputTokens",
+      "value": 128000,
+      "reason": "preserved-access-contract",
+      "evidence": "compute/providers/volcengine.json#doubao-seed-2.0-mini",
+      "verification": "inherited-not-reverified"
+    },
+    {
+      "accessId": "provider-volcengine-001",
+      "apiModelId": "doubao-seed-2.0-mini",
+      "field": "defaultTopP",
+      "value": 0.7,
+      "reason": "preserved-access-contract",
+      "evidence": "compute/providers/volcengine.json#doubao-seed-2.0-mini",
+      "verification": "inherited-not-reverified"
+    },
+    {
+      "accessId": "provider-volcengine-001",
+      "apiModelId": "doubao-seed-2.0-code",
+      "field": "defaultTopP",
+      "value": 0.7,
+      "reason": "preserved-access-contract",
+      "evidence": "compute/providers/volcengine.json#doubao-seed-2.0-code",
+      "verification": "inherited-not-reverified"
+    },
+    {
+      "accessId": "provider-volcengine-001",
+      "apiModelId": "doubao-seed-1.8",
+      "field": "defaultTopP",
+      "value": 0.7,
+      "reason": "preserved-access-contract",
+      "evidence": "compute/providers/volcengine.json#doubao-seed-1.8",
+      "verification": "inherited-not-reverified"
+    },
+    {
+      "accessId": "provider-volcengine-001",
+      "apiModelId": "doubao-seed-1.6",
+      "field": "defaultTopP",
+      "value": 0.7,
+      "reason": "preserved-access-contract",
+      "evidence": "compute/providers/volcengine.json#doubao-seed-1.6",
+      "verification": "inherited-not-reverified"
+    },
+    {
+      "accessId": "provider-volcengine-001",
+      "apiModelId": "doubao-seed-1.6-thinking",
+      "field": "defaultTemperature",
+      "value": 1,
+      "reason": "preserved-access-contract",
+      "evidence": "compute/providers/volcengine.json#doubao-seed-1.6-thinking",
+      "verification": "inherited-not-reverified"
+    },
+    {
+      "accessId": "provider-volcengine-001",
+      "apiModelId": "doubao-seed-1.6-thinking",
+      "field": "defaultTopP",
+      "value": 0.7,
+      "reason": "preserved-access-contract",
+      "evidence": "compute/providers/volcengine.json#doubao-seed-1.6-thinking",
+      "verification": "inherited-not-reverified"
+    },
+    {
+      "accessId": "provider-volcengine-001",
+      "apiModelId": "doubao-seed-1.6-flash",
+      "field": "defaultTopP",
+      "value": 0.7,
+      "reason": "preserved-access-contract",
+      "evidence": "compute/providers/volcengine.json#doubao-seed-1.6-flash",
+      "verification": "inherited-not-reverified"
+    },
+    {
+      "accessId": "provider-volcengine-001",
+      "apiModelId": "doubao-seed-1.6-lite",
+      "field": "defaultTopP",
+      "value": 0.7,
+      "reason": "preserved-access-contract",
+      "evidence": "compute/providers/volcengine.json#doubao-seed-1.6-lite",
+      "verification": "inherited-not-reverified"
+    },
+    {
+      "accessId": "provider-volcengine-001",
+      "apiModelId": "doubao-seed-1.6-vision",
+      "field": "defaultTopP",
+      "value": 0.7,
+      "reason": "preserved-access-contract",
+      "evidence": "compute/providers/volcengine.json#doubao-seed-1.6-vision",
+      "verification": "inherited-not-reverified"
+    },
+    {
+      "accessId": "provider-volcengine-001",
+      "apiModelId": "doubao-seed-code",
+      "field": "defaultTopP",
+      "value": 0.7,
+      "reason": "preserved-access-contract",
+      "evidence": "compute/providers/volcengine.json#doubao-seed-code",
+      "verification": "inherited-not-reverified"
+    },
+    {
+      "accessId": "provider-volcengine-001",
+      "apiModelId": "deepseek-v3.2",
+      "field": "defaultTopP",
+      "value": 1,
+      "reason": "preserved-access-contract",
+      "evidence": "compute/providers/volcengine.json#deepseek-v3.2",
+      "verification": "inherited-not-reverified"
+    },
+    {
+      "accessId": "provider-volcengine-001",
+      "apiModelId": "doubao-seedream-4-0-250828",
+      "field": "serviceType",
+      "value": [
+        "image_gen"
+      ],
+      "reason": "preserved-access-contract",
+      "evidence": "compute/providers/volcengine.json#doubao-seedream-4-0-250828",
+      "verification": "inherited-not-reverified"
+    },
+    {
+      "accessId": "provider-volcengine-001",
+      "apiModelId": "doubao-seedream-4-0-250828",
+      "field": "capabilities",
+      "value": [
+        "image_generation",
+        "image_to_image",
+        "multi_image_fusion",
+        "chinese_optimized",
+        "high_quality"
+      ],
+      "reason": "preserved-access-contract",
+      "evidence": "compute/providers/volcengine.json#doubao-seedream-4-0-250828",
+      "verification": "inherited-not-reverified"
+    },
+    {
+      "accessId": "provider-volcengine-001",
+      "apiModelId": "doubao-seedance-2-0-260128",
+      "field": "capabilities",
+      "value": [
+        "video_generation",
+        "text_to_video",
+        "image_to_video",
+        "first_last_frame",
+        "reference_video",
+        "reference_audio",
+        "chinese_optimized",
+        "high_quality"
+      ],
+      "reason": "preserved-access-contract",
+      "evidence": "compute/providers/volcengine.json#doubao-seedance-2-0-260128",
+      "verification": "inherited-not-reverified"
+    },
+    {
+      "accessId": "provider-xai-001",
+      "apiModelId": "grok-4.7",
+      "field": "capabilities",
+      "value": [
+        "chat",
+        "reasoning",
+        "code",
+        "vision",
+        "tool_use",
+        "structured_output",
+        "long_context"
+      ],
+      "reason": "preserved-access-contract",
+      "evidence": "compute/providers/xai.json#grok-4.7",
+      "verification": "inherited-not-reverified"
+    },
+    {
+      "accessId": "provider-xai-001",
+      "apiModelId": "grok-4.3",
+      "field": "serviceType",
+      "value": [
+        "chat",
+        "reasoning"
+      ],
+      "reason": "preserved-access-contract",
+      "evidence": "compute/providers/xai.json#grok-4.3",
+      "verification": "inherited-not-reverified"
+    },
+    {
+      "accessId": "provider-xai-001",
+      "apiModelId": "grok-4.3",
+      "field": "capabilities",
+      "value": [
+        "chat",
+        "reasoning",
+        "vision",
+        "tool_use",
+        "structured_output",
+        "long_context"
+      ],
+      "reason": "preserved-access-contract",
+      "evidence": "compute/providers/xai.json#grok-4.3",
+      "verification": "inherited-not-reverified"
+    },
+    {
+      "accessId": "provider-xai-001",
+      "apiModelId": "grok-4.3",
+      "field": "defaultTemperature",
+      "value": 1,
+      "reason": "preserved-access-contract",
+      "evidence": "compute/providers/xai.json#grok-4.3",
+      "verification": "inherited-not-reverified"
+    },
+    {
+      "accessId": "provider-xai-001",
+      "apiModelId": "grok-4.3",
+      "field": "defaultTopP",
+      "value": 1,
+      "reason": "preserved-access-contract",
+      "evidence": "compute/providers/xai.json#grok-4.3",
+      "verification": "inherited-not-reverified"
+    },
+    {
+      "accessId": "provider-xai-001",
+      "apiModelId": "grok-build-0.1",
+      "field": "serviceType",
+      "value": [
+        "chat"
+      ],
+      "reason": "preserved-access-contract",
+      "evidence": "compute/providers/xai.json#grok-build-0.1",
+      "verification": "inherited-not-reverified"
+    },
+    {
+      "accessId": "provider-xai-001",
+      "apiModelId": "grok-build-0.1",
+      "field": "contextWindow",
+      "value": 256000,
+      "reason": "preserved-access-contract",
+      "evidence": "compute/providers/xai.json#grok-build-0.1",
+      "verification": "inherited-not-reverified"
+    },
+    {
+      "accessId": "provider-xai-001",
+      "apiModelId": "grok-build-0.1",
+      "field": "capabilities",
+      "value": [
+        "chat",
+        "code",
+        "agent",
+        "tool_use",
+        "structured_output"
+      ],
+      "reason": "preserved-access-contract",
+      "evidence": "compute/providers/xai.json#grok-build-0.1",
+      "verification": "inherited-not-reverified"
+    },
+    {
+      "accessId": "provider-xai-001",
+      "apiModelId": "grok-build-0.1",
+      "field": "defaultTemperature",
+      "value": 1,
+      "reason": "preserved-access-contract",
+      "evidence": "compute/providers/xai.json#grok-build-0.1",
+      "verification": "inherited-not-reverified"
+    },
+    {
+      "accessId": "provider-xai-001",
+      "apiModelId": "grok-build-0.1",
+      "field": "defaultTopP",
+      "value": 1,
+      "reason": "preserved-access-contract",
+      "evidence": "compute/providers/xai.json#grok-build-0.1",
+      "verification": "inherited-not-reverified"
+    },
+    {
+      "accessId": "provider-xai-001",
+      "apiModelId": "grok-4.20-0309-reasoning",
+      "field": "contextWindow",
+      "value": 1000000,
+      "reason": "preserved-access-contract",
+      "evidence": "compute/providers/xai.json#grok-4.20-0309-reasoning",
+      "verification": "inherited-not-reverified"
+    },
+    {
+      "accessId": "provider-xai-001",
+      "apiModelId": "grok-4.20-0309-reasoning",
+      "field": "capabilities",
+      "value": [
+        "chat",
+        "reasoning",
+        "vision",
+        "tool_use",
+        "structured_output",
+        "long_context"
+      ],
+      "reason": "preserved-access-contract",
+      "evidence": "compute/providers/xai.json#grok-4.20-0309-reasoning",
+      "verification": "inherited-not-reverified"
+    },
+    {
+      "accessId": "provider-xai-001",
+      "apiModelId": "grok-4.20-0309-reasoning",
+      "field": "defaultTopP",
+      "value": 1,
+      "reason": "preserved-access-contract",
+      "evidence": "compute/providers/xai.json#grok-4.20-0309-reasoning",
+      "verification": "inherited-not-reverified"
+    },
+    {
+      "accessId": "provider-xiaomi-001",
+      "apiModelId": "mimo-v2.5-tts",
+      "field": "capabilities",
+      "value": [
+        "tts",
+        "style_control",
+        "chinese_optimized"
+      ],
+      "reason": "preserved-access-contract",
+      "evidence": "compute/providers/xiaomi.json#mimo-v2.5-tts",
+      "verification": "inherited-not-reverified"
+    },
+    {
+      "accessId": "provider-xiaomi-001",
+      "apiModelId": "mimo-v2.5-tts-voicedesign",
+      "field": "capabilities",
+      "value": [
+        "tts",
+        "voice_design"
+      ],
+      "reason": "preserved-access-contract",
+      "evidence": "compute/providers/xiaomi.json#mimo-v2.5-tts-voicedesign",
+      "verification": "inherited-not-reverified"
+    },
+    {
+      "accessId": "provider-xiaomi-001",
+      "apiModelId": "mimo-v2.5-tts-voiceclone",
+      "field": "serviceType",
+      "value": [
+        "tts"
+      ],
+      "reason": "preserved-access-contract",
+      "evidence": "compute/providers/xiaomi.json#mimo-v2.5-tts-voiceclone",
+      "verification": "inherited-not-reverified"
+    },
+    {
+      "accessId": "provider-xiaomi-001",
+      "apiModelId": "mimo-v2.5-tts-voiceclone",
+      "field": "capabilities",
+      "value": [
+        "tts",
+        "voice_clone"
+      ],
+      "reason": "preserved-access-contract",
+      "evidence": "compute/providers/xiaomi.json#mimo-v2.5-tts-voiceclone",
+      "verification": "inherited-not-reverified"
+    },
+    {
+      "accessId": "provider-xunfei-x2-001",
+      "apiModelId": "spark-x",
+      "field": "defaultTopP",
+      "value": 0.95,
+      "reason": "preserved-access-contract",
+      "evidence": "compute/providers/xunfei-x2.json#spark-x",
+      "verification": "inherited-not-reverified"
+    },
+    {
+      "accessId": "provider-xunfei-x2-001",
+      "apiModelId": "spark-x",
+      "field": "maxInputTokens",
+      "value": 65536,
+      "reason": "V2将旧contextWindow65536拆为独立输入上限，总窗口unknown；V1冻结投影保留旧字段待客户端正式发布。",
+      "evidence": "https://www.xfyun.cn/doc/spark/X1http.html",
+      "verification": "officially-verified-independent-budget"
+    },
+    {
+      "accessId": "provider-xunfei-x2-001",
+      "apiModelId": "spark-x",
+      "field": "contextWindow",
+      "value": null,
+      "reason": "V2将旧contextWindow65536拆为独立输入上限，总窗口unknown；V1冻结投影保留旧字段待客户端正式发布。",
+      "evidence": "https://www.xfyun.cn/doc/spark/X1http.html",
+      "verification": "officially-verified-independent-budget"
+    },
+    {
+      "accessId": "provider-xunfei-x2-001",
+      "apiModelId": "spark-x",
+      "field": "maxOutputTokens",
+      "value": 131072,
+      "reason": "V2将旧contextWindow65536拆为独立输入上限，总窗口unknown；V1冻结投影保留旧字段待客户端正式发布。",
+      "evidence": "https://www.xfyun.cn/doc/spark/X1http.html",
+      "verification": "officially-verified-independent-budget"
+    },
+    {
+      "accessId": "provider-xunfei-001",
+      "apiModelId": "4.0Ultra",
+      "field": "defaultTopP",
+      "value": 1,
+      "reason": "preserved-access-contract",
+      "evidence": "compute/providers/xunfei.json#4.0Ultra",
+      "verification": "inherited-not-reverified"
+    },
+    {
+      "accessId": "provider-zhipu-001",
+      "apiModelId": "glm-5.2",
+      "field": "serviceType",
+      "value": [
+        "chat",
+        "reasoning"
+      ],
+      "reason": "preserved-access-contract",
+      "evidence": "compute/providers/zhipu.json#glm-5.2",
+      "verification": "inherited-not-reverified"
+    },
+    {
+      "accessId": "provider-zhipu-001",
+      "apiModelId": "glm-5.2",
+      "field": "contextWindow",
+      "value": 1000000,
+      "reason": "preserved-access-contract",
+      "evidence": "compute/providers/zhipu.json#glm-5.2",
+      "verification": "inherited-not-reverified"
+    },
+    {
+      "accessId": "provider-zhipu-001",
+      "apiModelId": "glm-5.2",
+      "field": "maxOutputTokens",
+      "value": 131072,
+      "reason": "preserved-access-contract",
+      "evidence": "compute/providers/zhipu.json#glm-5.2",
+      "verification": "inherited-not-reverified"
+    },
+    {
+      "accessId": "provider-zhipu-001",
+      "apiModelId": "glm-5.2",
+      "field": "capabilities",
+      "value": [
+        "chat",
+        "reasoning",
+        "code",
+        "multilingual",
+        "deep_thinking",
+        "long_context",
+        "math",
+        "tool_use",
+        "agent"
+      ],
+      "reason": "preserved-access-contract",
+      "evidence": "compute/providers/zhipu.json#glm-5.2",
+      "verification": "inherited-not-reverified"
+    },
+    {
+      "accessId": "provider-zhipu-001",
+      "apiModelId": "glm-5.2",
+      "field": "defaultTemperature",
+      "value": 1,
+      "reason": "preserved-access-contract",
+      "evidence": "compute/providers/zhipu.json#glm-5.2",
+      "verification": "inherited-not-reverified"
+    },
+    {
+      "accessId": "provider-zhipu-001",
+      "apiModelId": "glm-5.2",
+      "field": "defaultTopP",
+      "value": 0.95,
+      "reason": "preserved-access-contract",
+      "evidence": "compute/providers/zhipu.json#glm-5.2",
+      "verification": "inherited-not-reverified"
+    },
+    {
+      "accessId": "provider-zhipu-001",
+      "apiModelId": "glm-5.1",
+      "field": "serviceType",
+      "value": [
+        "chat",
+        "reasoning"
+      ],
+      "reason": "preserved-access-contract",
+      "evidence": "compute/providers/zhipu.json#glm-5.1",
+      "verification": "inherited-not-reverified"
+    },
+    {
+      "accessId": "provider-zhipu-001",
+      "apiModelId": "glm-5.1",
+      "field": "maxOutputTokens",
+      "value": 131072,
+      "reason": "preserved-access-contract",
+      "evidence": "compute/providers/zhipu.json#glm-5.1",
+      "verification": "inherited-not-reverified"
+    },
+    {
+      "accessId": "provider-zhipu-001",
+      "apiModelId": "glm-5.1",
+      "field": "defaultTopP",
+      "value": 0.95,
+      "reason": "preserved-access-contract",
+      "evidence": "compute/providers/zhipu.json#glm-5.1",
+      "verification": "inherited-not-reverified"
+    },
+    {
+      "accessId": "provider-zhipu-001",
+      "apiModelId": "glm-5-turbo",
+      "field": "serviceType",
+      "value": [
+        "chat",
+        "reasoning"
+      ],
+      "reason": "preserved-access-contract",
+      "evidence": "compute/providers/zhipu.json#glm-5-turbo",
+      "verification": "inherited-not-reverified"
+    },
+    {
+      "accessId": "provider-zhipu-001",
+      "apiModelId": "glm-5-turbo",
+      "field": "maxOutputTokens",
+      "value": 131072,
+      "reason": "preserved-access-contract",
+      "evidence": "compute/providers/zhipu.json#glm-5-turbo",
+      "verification": "inherited-not-reverified"
+    },
+    {
+      "accessId": "provider-zhipu-001",
+      "apiModelId": "glm-5-turbo",
+      "field": "capabilities",
+      "value": [
+        "chat",
+        "reasoning",
+        "code",
+        "deep_thinking",
+        "long_context",
+        "tool_use",
+        "agent",
+        "fast"
+      ],
+      "reason": "preserved-access-contract",
+      "evidence": "compute/providers/zhipu.json#glm-5-turbo",
+      "verification": "inherited-not-reverified"
+    },
+    {
+      "accessId": "provider-zhipu-001",
+      "apiModelId": "glm-5-turbo",
+      "field": "defaultTopP",
+      "value": 0.95,
+      "reason": "preserved-access-contract",
+      "evidence": "compute/providers/zhipu.json#glm-5-turbo",
+      "verification": "inherited-not-reverified"
+    },
+    {
+      "accessId": "provider-zhipu-001",
+      "apiModelId": "glm-5",
+      "field": "serviceType",
+      "value": [
+        "chat",
+        "reasoning"
+      ],
+      "reason": "preserved-access-contract",
+      "evidence": "compute/providers/zhipu.json#glm-5",
+      "verification": "inherited-not-reverified"
+    },
+    {
+      "accessId": "provider-zhipu-001",
+      "apiModelId": "glm-5",
+      "field": "maxOutputTokens",
+      "value": 131072,
+      "reason": "preserved-access-contract",
+      "evidence": "compute/providers/zhipu.json#glm-5",
+      "verification": "inherited-not-reverified"
+    },
+    {
+      "accessId": "provider-zhipu-001",
+      "apiModelId": "glm-5",
+      "field": "defaultTopP",
+      "value": 0.95,
+      "reason": "preserved-access-contract",
+      "evidence": "compute/providers/zhipu.json#glm-5",
+      "verification": "inherited-not-reverified"
+    },
+    {
+      "accessId": "provider-zhipu-001",
+      "apiModelId": "glm-4.7",
+      "field": "serviceType",
+      "value": [
+        "chat",
+        "reasoning"
+      ],
+      "reason": "preserved-access-contract",
+      "evidence": "compute/providers/zhipu.json#glm-4.7",
+      "verification": "inherited-not-reverified"
+    },
+    {
+      "accessId": "provider-zhipu-001",
+      "apiModelId": "glm-4.7",
+      "field": "maxOutputTokens",
+      "value": 131072,
+      "reason": "preserved-access-contract",
+      "evidence": "compute/providers/zhipu.json#glm-4.7",
+      "verification": "inherited-not-reverified"
+    },
+    {
+      "accessId": "provider-zhipu-001",
+      "apiModelId": "glm-4.7",
+      "field": "capabilities",
+      "value": [
+        "chat",
+        "reasoning",
+        "code",
+        "multilingual",
+        "deep_thinking",
+        "long_context",
+        "tool_use",
+        "agent"
+      ],
+      "reason": "preserved-access-contract",
+      "evidence": "compute/providers/zhipu.json#glm-4.7",
+      "verification": "inherited-not-reverified"
+    },
+    {
+      "accessId": "provider-zhipu-001",
+      "apiModelId": "glm-4.7",
+      "field": "defaultTopP",
+      "value": 0.95,
+      "reason": "preserved-access-contract",
+      "evidence": "compute/providers/zhipu.json#glm-4.7",
+      "verification": "inherited-not-reverified"
+    },
+    {
+      "accessId": "provider-zhipu-001",
+      "apiModelId": "glm-4.7-flashx",
+      "field": "serviceType",
+      "value": [
+        "chat",
+        "fast"
+      ],
+      "reason": "preserved-access-contract",
+      "evidence": "compute/providers/zhipu.json#glm-4.7-flashx",
+      "verification": "inherited-not-reverified"
+    },
+    {
+      "accessId": "provider-zhipu-001",
+      "apiModelId": "glm-4.7-flashx",
+      "field": "contextWindow",
+      "value": 200000,
+      "reason": "preserved-access-contract",
+      "evidence": "compute/providers/zhipu.json#glm-4.7-flashx",
+      "verification": "inherited-not-reverified"
+    },
+    {
+      "accessId": "provider-zhipu-001",
+      "apiModelId": "glm-4.7-flashx",
+      "field": "maxOutputTokens",
+      "value": 131072,
+      "reason": "preserved-access-contract",
+      "evidence": "compute/providers/zhipu.json#glm-4.7-flashx",
+      "verification": "inherited-not-reverified"
+    },
+    {
+      "accessId": "provider-zhipu-001",
+      "apiModelId": "glm-4.7-flashx",
+      "field": "capabilities",
+      "value": [
+        "chat",
+        "fast",
+        "long_context",
+        "multilingual"
+      ],
+      "reason": "preserved-access-contract",
+      "evidence": "compute/providers/zhipu.json#glm-4.7-flashx",
+      "verification": "inherited-not-reverified"
+    },
+    {
+      "accessId": "provider-zhipu-001",
+      "apiModelId": "glm-4.7-flashx",
+      "field": "defaultTemperature",
+      "value": 1,
+      "reason": "preserved-access-contract",
+      "evidence": "compute/providers/zhipu.json#glm-4.7-flashx",
+      "verification": "inherited-not-reverified"
+    },
+    {
+      "accessId": "provider-zhipu-001",
+      "apiModelId": "glm-4.7-flashx",
+      "field": "defaultTopP",
+      "value": 0.95,
+      "reason": "preserved-access-contract",
+      "evidence": "compute/providers/zhipu.json#glm-4.7-flashx",
+      "verification": "inherited-not-reverified"
+    },
+    {
+      "accessId": "provider-zhipu-001",
+      "apiModelId": "glm-5v-turbo",
+      "field": "maxOutputTokens",
+      "value": 131072,
+      "reason": "preserved-access-contract",
+      "evidence": "compute/providers/zhipu.json#glm-5v-turbo",
+      "verification": "inherited-not-reverified"
+    },
+    {
+      "accessId": "provider-zhipu-001",
+      "apiModelId": "glm-5v-turbo",
+      "field": "defaultTopP",
+      "value": 0.95,
+      "reason": "preserved-access-contract",
+      "evidence": "compute/providers/zhipu.json#glm-5v-turbo",
+      "verification": "inherited-not-reverified"
+    },
+    {
+      "accessId": "provider-zhipu-001",
+      "apiModelId": "glm-4.6v",
+      "field": "capabilities",
+      "value": [
+        "chat",
+        "vision",
+        "video_understanding",
+        "image_understanding",
+        "file_understanding",
+        "long_context",
+        "tool_use",
+        "reasoning"
+      ],
+      "reason": "preserved-access-contract",
+      "evidence": "compute/providers/zhipu.json#glm-4.6v",
+      "verification": "inherited-not-reverified"
+    },
+    {
+      "accessId": "provider-zhipu-001",
+      "apiModelId": "glm-4.6v",
+      "field": "defaultTopP",
+      "value": 0.95,
+      "reason": "preserved-access-contract",
+      "evidence": "compute/providers/zhipu.json#glm-4.6v",
+      "verification": "inherited-not-reverified"
+    },
+    {
+      "accessId": "provider-zhipu-001",
+      "apiModelId": "glm-4.6",
+      "field": "serviceType",
+      "value": [
+        "chat",
+        "reasoning"
+      ],
+      "reason": "preserved-access-contract",
+      "evidence": "compute/providers/zhipu.json#glm-4.6",
+      "verification": "inherited-not-reverified"
+    },
+    {
+      "accessId": "provider-zhipu-001",
+      "apiModelId": "glm-4.6",
+      "field": "maxOutputTokens",
+      "value": 131072,
+      "reason": "preserved-access-contract",
+      "evidence": "compute/providers/zhipu.json#glm-4.6",
+      "verification": "inherited-not-reverified"
+    },
+    {
+      "accessId": "provider-zhipu-001",
+      "apiModelId": "glm-4.6",
+      "field": "capabilities",
+      "value": [
+        "chat",
+        "reasoning",
+        "code",
+        "multilingual",
+        "deep_thinking",
+        "long_context",
+        "tool_use"
+      ],
+      "reason": "preserved-access-contract",
+      "evidence": "compute/providers/zhipu.json#glm-4.6",
+      "verification": "inherited-not-reverified"
+    },
+    {
+      "accessId": "provider-zhipu-001",
+      "apiModelId": "glm-4.6",
+      "field": "defaultTopP",
+      "value": 0.95,
+      "reason": "preserved-access-contract",
+      "evidence": "compute/providers/zhipu.json#glm-4.6",
+      "verification": "inherited-not-reverified"
+    },
+    {
+      "accessId": "provider-baidu-coding-001",
+      "apiModelId": "qianfan-code-latest",
+      "field": "serviceType",
+      "value": [
+        "chat"
+      ],
+      "reason": "preserved-access-contract",
+      "evidence": "compute/coding-plans/baidu-coding.json#qianfan-code-latest",
+      "verification": "inherited-not-reverified"
+    },
+    {
+      "accessId": "provider-baidu-coding-001",
+      "apiModelId": "qianfan-code-latest",
+      "field": "capabilities",
+      "value": [
+        "chat",
+        "reasoning",
+        "code"
+      ],
+      "reason": "preserved-access-contract",
+      "evidence": "compute/coding-plans/baidu-coding.json#qianfan-code-latest",
+      "verification": "inherited-not-reverified"
+    },
+    {
+      "accessId": "provider-baidu-coding-001",
+      "apiModelId": "deepseek-v3.2",
+      "field": "capabilities",
+      "value": [
+        "chat",
+        "reasoning",
+        "code",
+        "tool_use"
+      ],
+      "reason": "preserved-access-contract",
+      "evidence": "compute/coding-plans/baidu-coding.json#deepseek-v3.2",
+      "verification": "inherited-not-reverified"
+    },
+    {
+      "accessId": "provider-baidu-coding-001",
+      "apiModelId": "deepseek-v4-flash",
+      "field": "serviceType",
+      "value": [
+        "chat"
+      ],
+      "reason": "preserved-access-contract",
+      "evidence": "compute/coding-plans/baidu-coding.json#deepseek-v4-flash",
+      "verification": "inherited-not-reverified"
+    },
+    {
+      "accessId": "provider-baidu-coding-001",
+      "apiModelId": "deepseek-v4-flash",
+      "field": "capabilities",
+      "value": [
+        "chat",
+        "reasoning",
+        "code",
+        "fast"
+      ],
+      "reason": "preserved-access-contract",
+      "evidence": "compute/coding-plans/baidu-coding.json#deepseek-v4-flash",
+      "verification": "inherited-not-reverified"
+    },
+    {
+      "accessId": "provider-baidu-coding-001",
+      "apiModelId": "ernie-4.5-turbo-20260402",
+      "field": "capabilities",
+      "value": [
+        "chat",
+        "code",
+        "fast"
+      ],
+      "reason": "preserved-access-contract",
+      "evidence": "compute/coding-plans/baidu-coding.json#ernie-4.5-turbo-20260402",
+      "verification": "inherited-not-reverified"
+    },
+    {
+      "accessId": "provider-baidu-coding-001",
+      "apiModelId": "glm-5",
+      "field": "capabilities",
+      "value": [
+        "chat",
+        "reasoning",
+        "code",
+        "agent"
+      ],
+      "reason": "preserved-access-contract",
+      "evidence": "compute/coding-plans/baidu-coding.json#glm-5",
+      "verification": "inherited-not-reverified"
+    },
+    {
+      "accessId": "provider-baidu-coding-001",
+      "apiModelId": "glm-5.1",
+      "field": "capabilities",
+      "value": [
+        "chat",
+        "reasoning",
+        "code",
+        "agent"
+      ],
+      "reason": "preserved-access-contract",
+      "evidence": "compute/coding-plans/baidu-coding.json#glm-5.1",
+      "verification": "inherited-not-reverified"
+    },
+    {
+      "accessId": "provider-baidu-coding-001",
+      "apiModelId": "kimi-k2.5",
+      "field": "capabilities",
+      "value": [
+        "chat",
+        "reasoning",
+        "code",
+        "agent",
+        "long_context"
+      ],
+      "reason": "preserved-access-contract",
+      "evidence": "compute/coding-plans/baidu-coding.json#kimi-k2.5",
+      "verification": "inherited-not-reverified"
+    },
+    {
+      "accessId": "provider-baidu-coding-001",
+      "apiModelId": "kimi-k2.6",
+      "field": "capabilities",
+      "value": [
+        "chat",
+        "reasoning",
+        "code",
+        "agent",
+        "long_context"
+      ],
+      "reason": "preserved-access-contract",
+      "evidence": "compute/coding-plans/baidu-coding.json#kimi-k2.6",
+      "verification": "inherited-not-reverified"
+    },
+    {
+      "accessId": "provider-baidu-coding-001",
+      "apiModelId": "minimax-m2.5",
+      "field": "serviceType",
+      "value": [
+        "chat"
+      ],
+      "reason": "preserved-access-contract",
+      "evidence": "compute/coding-plans/baidu-coding.json#minimax-m2.5",
+      "verification": "inherited-not-reverified"
+    },
+    {
+      "accessId": "provider-baidu-coding-001",
+      "apiModelId": "minimax-m2.5",
+      "field": "capabilities",
+      "value": [
+        "chat",
+        "reasoning",
+        "code"
+      ],
+      "reason": "preserved-access-contract",
+      "evidence": "compute/coding-plans/baidu-coding.json#minimax-m2.5",
+      "verification": "inherited-not-reverified"
+    },
+    {
+      "accessId": "provider-baidu-coding-001",
+      "apiModelId": "minimax-m2.7",
+      "field": "serviceType",
+      "value": [
+        "chat"
+      ],
+      "reason": "preserved-access-contract",
+      "evidence": "compute/coding-plans/baidu-coding.json#minimax-m2.7",
+      "verification": "inherited-not-reverified"
+    },
+    {
+      "accessId": "provider-baidu-coding-001",
+      "apiModelId": "minimax-m2.7",
+      "field": "capabilities",
+      "value": [
+        "chat",
+        "reasoning",
+        "code",
+        "agent"
+      ],
+      "reason": "preserved-access-contract",
+      "evidence": "compute/coding-plans/baidu-coding.json#minimax-m2.7",
+      "verification": "inherited-not-reverified"
+    },
+    {
+      "accessId": "provider-dashscope-coding-001",
+      "apiModelId": "qwen3.7-plus",
+      "field": "capabilities",
+      "value": [
+        "chat",
+        "reasoning",
+        "code",
+        "vision",
+        "tool_use",
+        "agent",
+        "long_context"
+      ],
+      "reason": "preserved-access-contract",
+      "evidence": "compute/coding-plans/dashscope-coding.json#qwen3.7-plus",
+      "verification": "inherited-not-reverified"
+    },
+    {
+      "accessId": "provider-dashscope-coding-001",
+      "apiModelId": "qwen3.6-plus",
+      "field": "serviceType",
+      "value": [
+        "chat"
+      ],
+      "reason": "preserved-access-contract",
+      "evidence": "compute/coding-plans/dashscope-coding.json#qwen3.6-plus",
+      "verification": "inherited-not-reverified"
+    },
+    {
+      "accessId": "provider-dashscope-coding-001",
+      "apiModelId": "qwen3.6-plus",
+      "field": "capabilities",
+      "value": [
+        "chat",
+        "reasoning",
+        "code",
+        "vision",
+        "tool_use",
+        "agent",
+        "long_context"
+      ],
+      "reason": "preserved-access-contract",
+      "evidence": "compute/coding-plans/dashscope-coding.json#qwen3.6-plus",
+      "verification": "inherited-not-reverified"
+    },
+    {
+      "accessId": "provider-dashscope-coding-001",
+      "apiModelId": "qwen3.5-plus",
+      "field": "capabilities",
+      "value": [
+        "chat",
+        "reasoning",
+        "code",
+        "vision",
+        "tool_use",
+        "long_context"
+      ],
+      "reason": "preserved-access-contract",
+      "evidence": "compute/coding-plans/dashscope-coding.json#qwen3.5-plus",
+      "verification": "inherited-not-reverified"
+    },
+    {
+      "accessId": "provider-dashscope-coding-001",
+      "apiModelId": "qwen3-coder-plus",
+      "field": "serviceType",
+      "value": [
+        "chat"
+      ],
+      "reason": "preserved-access-contract",
+      "evidence": "compute/coding-plans/dashscope-coding.json#qwen3-coder-plus",
+      "verification": "inherited-not-reverified"
+    },
+    {
+      "accessId": "provider-dashscope-coding-001",
+      "apiModelId": "qwen3-coder-plus",
+      "field": "contextWindow",
+      "value": 1000000,
+      "reason": "preserved-access-contract",
+      "evidence": "compute/coding-plans/dashscope-coding.json#qwen3-coder-plus",
+      "verification": "inherited-not-reverified"
+    },
+    {
+      "accessId": "provider-dashscope-coding-001",
+      "apiModelId": "qwen3-coder-plus",
+      "field": "maxOutputTokens",
+      "value": 65536,
+      "reason": "preserved-access-contract",
+      "evidence": "compute/coding-plans/dashscope-coding.json#qwen3-coder-plus",
+      "verification": "inherited-not-reverified"
+    },
+    {
+      "accessId": "provider-dashscope-coding-001",
+      "apiModelId": "qwen3-coder-plus",
+      "field": "capabilities",
+      "value": [
+        "chat",
+        "code",
+        "tool_use"
+      ],
+      "reason": "preserved-access-contract",
+      "evidence": "compute/coding-plans/dashscope-coding.json#qwen3-coder-plus",
+      "verification": "inherited-not-reverified"
+    },
+    {
+      "accessId": "provider-dashscope-coding-001",
+      "apiModelId": "qwen3-coder-next",
+      "field": "serviceType",
+      "value": [
+        "chat"
+      ],
+      "reason": "preserved-access-contract",
+      "evidence": "compute/coding-plans/dashscope-coding.json#qwen3-coder-next",
+      "verification": "inherited-not-reverified"
+    },
+    {
+      "accessId": "provider-dashscope-coding-001",
+      "apiModelId": "qwen3-coder-next",
+      "field": "contextWindow",
+      "value": 262144,
+      "reason": "preserved-access-contract",
+      "evidence": "compute/coding-plans/dashscope-coding.json#qwen3-coder-next",
+      "verification": "inherited-not-reverified"
+    },
+    {
+      "accessId": "provider-dashscope-coding-001",
+      "apiModelId": "qwen3-coder-next",
+      "field": "maxOutputTokens",
+      "value": 65536,
+      "reason": "preserved-access-contract",
+      "evidence": "compute/coding-plans/dashscope-coding.json#qwen3-coder-next",
+      "verification": "inherited-not-reverified"
+    },
+    {
+      "accessId": "provider-dashscope-coding-001",
+      "apiModelId": "qwen3-coder-next",
+      "field": "capabilities",
+      "value": [
+        "chat",
+        "code",
+        "tool_use"
+      ],
+      "reason": "preserved-access-contract",
+      "evidence": "compute/coding-plans/dashscope-coding.json#qwen3-coder-next",
+      "verification": "inherited-not-reverified"
+    },
+    {
+      "accessId": "provider-dashscope-coding-001",
+      "apiModelId": "qwen3-max-2026-01-23",
+      "field": "serviceType",
+      "value": [
+        "chat"
+      ],
+      "reason": "preserved-access-contract",
+      "evidence": "compute/coding-plans/dashscope-coding.json#qwen3-max-2026-01-23",
+      "verification": "inherited-not-reverified"
+    },
+    {
+      "accessId": "provider-dashscope-coding-001",
+      "apiModelId": "qwen3-max-2026-01-23",
+      "field": "contextWindow",
+      "value": 262144,
+      "reason": "preserved-access-contract",
+      "evidence": "compute/coding-plans/dashscope-coding.json#qwen3-max-2026-01-23",
+      "verification": "inherited-not-reverified"
+    },
+    {
+      "accessId": "provider-dashscope-coding-001",
+      "apiModelId": "qwen3-max-2026-01-23",
+      "field": "maxOutputTokens",
+      "value": 65536,
+      "reason": "preserved-access-contract",
+      "evidence": "compute/coding-plans/dashscope-coding.json#qwen3-max-2026-01-23",
+      "verification": "inherited-not-reverified"
+    },
+    {
+      "accessId": "provider-dashscope-coding-001",
+      "apiModelId": "qwen3-max-2026-01-23",
+      "field": "capabilities",
+      "value": [
+        "chat",
+        "reasoning",
+        "code",
+        "multilingual",
+        "tool_use",
+        "long_context",
+        "vision"
+      ],
+      "reason": "preserved-access-contract",
+      "evidence": "compute/coding-plans/dashscope-coding.json#qwen3-max-2026-01-23",
+      "verification": "inherited-not-reverified"
+    },
+    {
+      "accessId": "provider-dashscope-coding-001",
+      "apiModelId": "kimi-k2.5",
+      "field": "contextWindow",
+      "value": 262144,
+      "reason": "preserved-access-contract",
+      "evidence": "compute/coding-plans/dashscope-coding.json#kimi-k2.5",
+      "verification": "inherited-not-reverified"
+    },
+    {
+      "accessId": "provider-dashscope-coding-001",
+      "apiModelId": "kimi-k2.5",
+      "field": "capabilities",
+      "value": [
+        "chat",
+        "reasoning",
+        "code",
+        "tool_use",
+        "agent",
+        "vision",
+        "long_context"
+      ],
+      "reason": "preserved-access-contract",
+      "evidence": "compute/coding-plans/dashscope-coding.json#kimi-k2.5",
+      "verification": "inherited-not-reverified"
+    },
+    {
+      "accessId": "provider-dashscope-coding-001",
+      "apiModelId": "glm-5",
+      "field": "contextWindow",
+      "value": 202752,
+      "reason": "preserved-access-contract",
+      "evidence": "compute/coding-plans/dashscope-coding.json#glm-5",
+      "verification": "inherited-not-reverified"
+    },
+    {
+      "accessId": "provider-dashscope-coding-001",
+      "apiModelId": "glm-5",
+      "field": "maxOutputTokens",
+      "value": 131072,
+      "reason": "preserved-access-contract",
+      "evidence": "compute/coding-plans/dashscope-coding.json#glm-5",
+      "verification": "inherited-not-reverified"
+    },
+    {
+      "accessId": "provider-dashscope-coding-001",
+      "apiModelId": "glm-5",
+      "field": "capabilities",
+      "value": [
+        "chat",
+        "reasoning",
+        "code",
+        "tool_use",
+        "agent"
+      ],
+      "reason": "preserved-access-contract",
+      "evidence": "compute/coding-plans/dashscope-coding.json#glm-5",
+      "verification": "inherited-not-reverified"
+    },
+    {
+      "accessId": "provider-dashscope-coding-001",
+      "apiModelId": "glm-4.7",
+      "field": "contextWindow",
+      "value": 202752,
+      "reason": "preserved-access-contract",
+      "evidence": "compute/coding-plans/dashscope-coding.json#glm-4.7",
+      "verification": "inherited-not-reverified"
+    },
+    {
+      "accessId": "provider-dashscope-coding-001",
+      "apiModelId": "glm-4.7",
+      "field": "maxOutputTokens",
+      "value": 131072,
+      "reason": "preserved-access-contract",
+      "evidence": "compute/coding-plans/dashscope-coding.json#glm-4.7",
+      "verification": "inherited-not-reverified"
+    },
+    {
+      "accessId": "provider-dashscope-coding-001",
+      "apiModelId": "glm-4.7",
+      "field": "capabilities",
+      "value": [
+        "chat",
+        "reasoning",
+        "code"
+      ],
+      "reason": "preserved-access-contract",
+      "evidence": "compute/coding-plans/dashscope-coding.json#glm-4.7",
+      "verification": "inherited-not-reverified"
+    },
+    {
+      "accessId": "provider-dashscope-coding-001",
+      "apiModelId": "MiniMax-M2.5",
+      "field": "serviceType",
+      "value": [
+        "chat"
+      ],
+      "reason": "preserved-access-contract",
+      "evidence": "compute/coding-plans/dashscope-coding.json#MiniMax-M2.5",
+      "verification": "inherited-not-reverified"
+    },
+    {
+      "accessId": "provider-dashscope-coding-001",
+      "apiModelId": "MiniMax-M2.5",
+      "field": "contextWindow",
+      "value": 196608,
+      "reason": "preserved-access-contract",
+      "evidence": "compute/coding-plans/dashscope-coding.json#MiniMax-M2.5",
+      "verification": "inherited-not-reverified"
+    },
+    {
+      "accessId": "provider-dashscope-coding-001",
+      "apiModelId": "MiniMax-M2.5",
+      "field": "maxOutputTokens",
+      "value": 8192,
+      "reason": "preserved-access-contract",
+      "evidence": "compute/coding-plans/dashscope-coding.json#MiniMax-M2.5",
+      "verification": "inherited-not-reverified"
+    },
+    {
+      "accessId": "provider-dashscope-token-plan-001",
+      "apiModelId": "qwen3.8-max",
+      "field": "serviceType",
+      "value": [
+        "chat",
+        "reasoning",
+        "vision"
+      ],
+      "reason": "preserved-access-contract",
+      "evidence": "compute/coding-plans/dashscope-token-plan.json#qwen3.8-max",
+      "verification": "inherited-not-reverified"
+    },
+    {
+      "accessId": "provider-dashscope-token-plan-001",
+      "apiModelId": "qwen3.8-max",
+      "field": "capabilities",
+      "value": [
+        "chat",
+        "reasoning",
+        "deep_thinking",
+        "code",
+        "vision",
+        "tool_use",
+        "agent",
+        "long_context"
+      ],
+      "reason": "preserved-access-contract",
+      "evidence": "compute/coding-plans/dashscope-token-plan.json#qwen3.8-max",
+      "verification": "inherited-not-reverified"
+    },
+    {
+      "accessId": "provider-dashscope-token-plan-001",
+      "apiModelId": "qwen3.8-flash",
+      "field": "capabilities",
+      "value": [
+        "chat",
+        "reasoning",
+        "deep_thinking",
+        "code",
+        "vision",
+        "tool_use",
+        "agent",
+        "long_context",
+        "fast"
+      ],
+      "reason": "preserved-access-contract",
+      "evidence": "compute/coding-plans/dashscope-token-plan.json#qwen3.8-flash",
+      "verification": "inherited-not-reverified"
+    },
+    {
+      "accessId": "provider-dashscope-token-plan-001",
+      "apiModelId": "qwen3.7-max",
+      "field": "capabilities",
+      "value": [
+        "chat",
+        "reasoning",
+        "code",
+        "tool_use",
+        "agent",
+        "long_context"
+      ],
+      "reason": "preserved-access-contract",
+      "evidence": "compute/coding-plans/dashscope-token-plan.json#qwen3.7-max",
+      "verification": "inherited-not-reverified"
+    },
+    {
+      "accessId": "provider-dashscope-token-plan-001",
+      "apiModelId": "qwen3.7-plus",
+      "field": "capabilities",
+      "value": [
+        "chat",
+        "reasoning",
+        "code",
+        "vision",
+        "tool_use",
+        "agent",
+        "long_context"
+      ],
+      "reason": "preserved-access-contract",
+      "evidence": "compute/coding-plans/dashscope-token-plan.json#qwen3.7-plus",
+      "verification": "inherited-not-reverified"
+    },
+    {
+      "accessId": "provider-dashscope-token-plan-001",
+      "apiModelId": "qwen3.6-plus",
+      "field": "serviceType",
+      "value": [
+        "chat"
+      ],
+      "reason": "preserved-access-contract",
+      "evidence": "compute/coding-plans/dashscope-token-plan.json#qwen3.6-plus",
+      "verification": "inherited-not-reverified"
+    },
+    {
+      "accessId": "provider-dashscope-token-plan-001",
+      "apiModelId": "qwen3.6-plus",
+      "field": "capabilities",
+      "value": [
+        "chat",
+        "reasoning",
+        "code",
+        "vision",
+        "tool_use",
+        "agent",
+        "long_context"
+      ],
+      "reason": "preserved-access-contract",
+      "evidence": "compute/coding-plans/dashscope-token-plan.json#qwen3.6-plus",
+      "verification": "inherited-not-reverified"
+    },
+    {
+      "accessId": "provider-dashscope-token-plan-001",
+      "apiModelId": "qwen3.6-flash",
+      "field": "serviceType",
+      "value": [
+        "chat"
+      ],
+      "reason": "preserved-access-contract",
+      "evidence": "compute/coding-plans/dashscope-token-plan.json#qwen3.6-flash",
+      "verification": "inherited-not-reverified"
+    },
+    {
+      "accessId": "provider-dashscope-token-plan-001",
+      "apiModelId": "qwen3.6-flash",
+      "field": "capabilities",
+      "value": [
+        "chat",
+        "reasoning",
+        "code",
+        "vision",
+        "tool_use",
+        "long_context",
+        "fast"
+      ],
+      "reason": "preserved-access-contract",
+      "evidence": "compute/coding-plans/dashscope-token-plan.json#qwen3.6-flash",
+      "verification": "inherited-not-reverified"
+    },
+    {
+      "accessId": "provider-dashscope-token-plan-001",
+      "apiModelId": "kimi-k2.5",
+      "field": "contextWindow",
+      "value": 262144,
+      "reason": "preserved-access-contract",
+      "evidence": "compute/coding-plans/dashscope-token-plan.json#kimi-k2.5",
+      "verification": "inherited-not-reverified"
+    },
+    {
+      "accessId": "provider-dashscope-token-plan-001",
+      "apiModelId": "kimi-k2.5",
+      "field": "capabilities",
+      "value": [
+        "chat",
+        "reasoning",
+        "code",
+        "vision",
+        "tool_use",
+        "agent",
+        "long_context"
+      ],
+      "reason": "preserved-access-contract",
+      "evidence": "compute/coding-plans/dashscope-token-plan.json#kimi-k2.5",
+      "verification": "inherited-not-reverified"
+    },
+    {
+      "accessId": "provider-dashscope-token-plan-001",
+      "apiModelId": "glm-5",
+      "field": "contextWindow",
+      "value": 202752,
+      "reason": "preserved-access-contract",
+      "evidence": "compute/coding-plans/dashscope-token-plan.json#glm-5",
+      "verification": "inherited-not-reverified"
+    },
+    {
+      "accessId": "provider-dashscope-token-plan-001",
+      "apiModelId": "glm-5",
+      "field": "maxOutputTokens",
+      "value": 131072,
+      "reason": "preserved-access-contract",
+      "evidence": "compute/coding-plans/dashscope-token-plan.json#glm-5",
+      "verification": "inherited-not-reverified"
+    },
+    {
+      "accessId": "provider-dashscope-token-plan-001",
+      "apiModelId": "glm-5",
+      "field": "capabilities",
+      "value": [
+        "chat",
+        "reasoning",
+        "code",
+        "tool_use",
+        "agent"
+      ],
+      "reason": "preserved-access-contract",
+      "evidence": "compute/coding-plans/dashscope-token-plan.json#glm-5",
+      "verification": "inherited-not-reverified"
+    },
+    {
+      "accessId": "provider-dashscope-token-plan-001",
+      "apiModelId": "MiniMax-M2.5",
+      "field": "serviceType",
+      "value": [
+        "chat"
+      ],
+      "reason": "preserved-access-contract",
+      "evidence": "compute/coding-plans/dashscope-token-plan.json#MiniMax-M2.5",
+      "verification": "inherited-not-reverified"
+    },
+    {
+      "accessId": "provider-dashscope-token-plan-001",
+      "apiModelId": "MiniMax-M2.5",
+      "field": "contextWindow",
+      "value": 196608,
+      "reason": "preserved-access-contract",
+      "evidence": "compute/coding-plans/dashscope-token-plan.json#MiniMax-M2.5",
+      "verification": "inherited-not-reverified"
+    },
+    {
+      "accessId": "provider-dashscope-token-plan-001",
+      "apiModelId": "MiniMax-M2.5",
+      "field": "maxOutputTokens",
+      "value": 8192,
+      "reason": "preserved-access-contract",
+      "evidence": "compute/coding-plans/dashscope-token-plan.json#MiniMax-M2.5",
+      "verification": "inherited-not-reverified"
+    },
+    {
+      "accessId": "provider-dashscope-token-plan-001",
+      "apiModelId": "glm-4.7",
+      "field": "maxOutputTokens",
+      "value": 131072,
+      "reason": "preserved-access-contract",
+      "evidence": "compute/coding-plans/dashscope-token-plan.json#glm-4.7",
+      "verification": "inherited-not-reverified"
+    },
+    {
+      "accessId": "provider-dashscope-token-plan-001",
+      "apiModelId": "glm-4.7",
+      "field": "capabilities",
+      "value": [
+        "chat",
+        "reasoning",
+        "code",
+        "tool_use"
+      ],
+      "reason": "preserved-access-contract",
+      "evidence": "compute/coding-plans/dashscope-token-plan.json#glm-4.7",
+      "verification": "inherited-not-reverified"
+    },
+    {
+      "accessId": "provider-infini-coding-001",
+      "apiModelId": "deepseek-v3",
+      "field": "serviceType",
+      "value": [
+        "chat"
+      ],
+      "reason": "preserved-access-contract",
+      "evidence": "compute/coding-plans/infini-coding.json#deepseek-v3",
+      "verification": "inherited-not-reverified"
+    },
+    {
+      "accessId": "provider-infini-coding-001",
+      "apiModelId": "deepseek-v3",
+      "field": "contextWindow",
+      "value": 128000,
+      "reason": "preserved-access-contract",
+      "evidence": "compute/coding-plans/infini-coding.json#deepseek-v3",
+      "verification": "inherited-not-reverified"
+    },
+    {
+      "accessId": "provider-infini-coding-001",
+      "apiModelId": "deepseek-v3",
+      "field": "maxOutputTokens",
+      "value": 8192,
+      "reason": "preserved-access-contract",
+      "evidence": "compute/coding-plans/infini-coding.json#deepseek-v3",
+      "verification": "inherited-not-reverified"
+    },
+    {
+      "accessId": "provider-infini-coding-001",
+      "apiModelId": "deepseek-v3",
+      "field": "capabilities",
+      "value": [
+        "chat",
+        "reasoning",
+        "code",
+        "multilingual"
+      ],
+      "reason": "preserved-access-contract",
+      "evidence": "compute/coding-plans/infini-coding.json#deepseek-v3",
+      "verification": "inherited-not-reverified"
+    },
+    {
+      "accessId": "provider-kwai-coding-001",
+      "apiModelId": "kwai-coder",
+      "field": "serviceType",
+      "value": [
+        "chat"
+      ],
+      "reason": "preserved-access-contract",
+      "evidence": "compute/coding-plans/kwai-coding.json#kwai-coder",
+      "verification": "inherited-not-reverified"
+    },
+    {
+      "accessId": "provider-kwai-coding-001",
+      "apiModelId": "kwai-coder",
+      "field": "capabilities",
+      "value": [
+        "chat",
+        "code"
+      ],
+      "reason": "preserved-access-contract",
+      "evidence": "compute/coding-plans/kwai-coding.json#kwai-coder",
+      "verification": "inherited-not-reverified"
+    },
+    {
+      "accessId": "provider-minimax-coding-001",
+      "apiModelId": "MiniMax-M3",
+      "field": "serviceType",
+      "value": [
+        "chat",
+        "reasoning"
+      ],
+      "reason": "preserved-access-contract",
+      "evidence": "compute/coding-plans/minimax-coding.json#MiniMax-M3",
+      "verification": "inherited-not-reverified"
+    },
+    {
+      "accessId": "provider-minimax-coding-001",
+      "apiModelId": "MiniMax-M3",
+      "field": "maxOutputTokens",
+      "value": 131072,
+      "reason": "preserved-access-contract",
+      "evidence": "compute/coding-plans/minimax-coding.json#MiniMax-M3",
+      "verification": "inherited-not-reverified"
+    },
+    {
+      "accessId": "provider-minimax-coding-001",
+      "apiModelId": "MiniMax-M3",
+      "field": "capabilities",
+      "value": [
+        "chat",
+        "reasoning",
+        "code",
+        "tool_use",
+        "vision",
+        "agent",
+        "long_context"
+      ],
+      "reason": "preserved-access-contract",
+      "evidence": "compute/coding-plans/minimax-coding.json#MiniMax-M3",
+      "verification": "inherited-not-reverified"
+    },
+    {
+      "accessId": "provider-minimax-coding-001",
+      "apiModelId": "speech-2.8-hd",
+      "field": "capabilities",
+      "value": [
+        "tts",
+        "multilingual",
+        "emotion_control",
+        "voice_clone"
+      ],
+      "reason": "preserved-access-contract",
+      "evidence": "compute/coding-plans/minimax-coding.json#speech-2.8-hd",
+      "verification": "inherited-not-reverified"
+    },
+    {
+      "accessId": "provider-minimax-coding-001",
+      "apiModelId": "speech-2.8-turbo",
+      "field": "capabilities",
+      "value": [
+        "tts",
+        "multilingual",
+        "emotion_control",
+        "fast"
+      ],
+      "reason": "preserved-access-contract",
+      "evidence": "compute/coding-plans/minimax-coding.json#speech-2.8-turbo",
+      "verification": "inherited-not-reverified"
+    },
+    {
+      "accessId": "provider-minimax-coding-001",
+      "apiModelId": "image-01",
+      "field": "capabilities",
+      "value": [
+        "image_generation",
+        "subject_reference"
+      ],
+      "reason": "preserved-access-contract",
+      "evidence": "compute/coding-plans/minimax-coding.json#image-01",
+      "verification": "inherited-not-reverified"
+    },
+    {
+      "accessId": "provider-minimax-coding-001",
+      "apiModelId": "image-01-live",
+      "field": "capabilities",
+      "value": [
+        "image_generation",
+        "style_control",
+        "subject_reference"
+      ],
+      "reason": "preserved-access-contract",
+      "evidence": "compute/coding-plans/minimax-coding.json#image-01-live",
+      "verification": "inherited-not-reverified"
+    },
+    {
+      "accessId": "provider-minimax-coding-001",
+      "apiModelId": "MiniMax-Hailuo-2.3",
+      "field": "capabilities",
+      "value": [
+        "video_generation",
+        "text_to_video",
+        "image_to_video",
+        "camera_control"
+      ],
+      "reason": "preserved-access-contract",
+      "evidence": "compute/coding-plans/minimax-coding.json#MiniMax-Hailuo-2.3",
+      "verification": "inherited-not-reverified"
+    },
+    {
+      "accessId": "provider-minimax-coding-001",
+      "apiModelId": "MiniMax-Hailuo-2.3-Fast",
+      "field": "capabilities",
+      "value": [
+        "video_generation",
+        "image_to_video",
+        "fast"
+      ],
+      "reason": "preserved-access-contract",
+      "evidence": "compute/coding-plans/minimax-coding.json#MiniMax-Hailuo-2.3-Fast",
+      "verification": "inherited-not-reverified"
+    },
+    {
+      "accessId": "provider-minimax-coding-001",
+      "apiModelId": "music-2.6",
+      "field": "capabilities",
+      "value": [
+        "music_generation",
+        "lyrics_input",
+        "instrumental"
+      ],
+      "reason": "preserved-access-contract",
+      "evidence": "compute/coding-plans/minimax-coding.json#music-2.6",
+      "verification": "inherited-not-reverified"
+    },
+    {
+      "accessId": "provider-moonshot-coding-001",
+      "apiModelId": "kimi-for-coding",
+      "field": "serviceType",
+      "value": [
+        "chat",
+        "reasoning"
+      ],
+      "reason": "preserved-access-contract",
+      "evidence": "compute/coding-plans/moonshot-coding.json#kimi-for-coding",
+      "verification": "inherited-not-reverified"
+    },
+    {
+      "accessId": "provider-moonshot-coding-001",
+      "apiModelId": "kimi-for-coding",
+      "field": "contextWindow",
+      "value": 262144,
+      "reason": "preserved-access-contract",
+      "evidence": "compute/coding-plans/moonshot-coding.json#kimi-for-coding",
+      "verification": "inherited-not-reverified"
+    },
+    {
+      "accessId": "provider-moonshot-coding-001",
+      "apiModelId": "kimi-for-coding",
+      "field": "maxOutputTokens",
+      "value": 32768,
+      "reason": "preserved-access-contract",
+      "evidence": "compute/coding-plans/moonshot-coding.json#kimi-for-coding",
+      "verification": "inherited-not-reverified"
+    },
+    {
+      "accessId": "provider-moonshot-coding-001",
+      "apiModelId": "kimi-for-coding",
+      "field": "capabilities",
+      "value": [
+        "chat",
+        "reasoning",
+        "code",
+        "tool_use",
+        "agent",
+        "long_context",
+        "vision"
+      ],
+      "reason": "preserved-access-contract",
+      "evidence": "compute/coding-plans/moonshot-coding.json#kimi-for-coding",
+      "verification": "inherited-not-reverified"
+    },
+    {
+      "accessId": "provider-moorethread-coding-001",
+      "apiModelId": "mt-coder",
+      "field": "serviceType",
+      "value": [
+        "chat"
+      ],
+      "reason": "preserved-access-contract",
+      "evidence": "compute/coding-plans/moorethread-coding.json#mt-coder",
+      "verification": "inherited-not-reverified"
+    },
+    {
+      "accessId": "provider-moorethread-coding-001",
+      "apiModelId": "mt-coder",
+      "field": "capabilities",
+      "value": [
+        "chat",
+        "code"
+      ],
+      "reason": "preserved-access-contract",
+      "evidence": "compute/coding-plans/moorethread-coding.json#mt-coder",
+      "verification": "inherited-not-reverified"
+    },
+    {
+      "accessId": "provider-tencent-token-001",
+      "apiModelId": "tc-code-latest",
+      "field": "serviceType",
+      "value": [
+        "chat"
+      ],
+      "reason": "preserved-access-contract",
+      "evidence": "compute/coding-plans/tencent-token.json#tc-code-latest",
+      "verification": "inherited-not-reverified"
+    },
+    {
+      "accessId": "provider-tencent-token-001",
+      "apiModelId": "tc-code-latest",
+      "field": "capabilities",
+      "value": [
+        "chat",
+        "reasoning",
+        "code"
+      ],
+      "reason": "preserved-access-contract",
+      "evidence": "compute/coding-plans/tencent-token.json#tc-code-latest",
+      "verification": "inherited-not-reverified"
+    },
+    {
+      "accessId": "provider-tencent-token-001",
+      "apiModelId": "hunyuan-2.0-instruct",
+      "field": "serviceType",
+      "value": [
+        "chat"
+      ],
+      "reason": "preserved-access-contract",
+      "evidence": "compute/coding-plans/tencent-token.json#hunyuan-2.0-instruct",
+      "verification": "inherited-not-reverified"
+    },
+    {
+      "accessId": "provider-tencent-token-001",
+      "apiModelId": "hunyuan-2.0-instruct",
+      "field": "capabilities",
+      "value": [
+        "chat",
+        "reasoning",
+        "code",
+        "long_context",
+        "tool_use"
+      ],
+      "reason": "preserved-access-contract",
+      "evidence": "compute/coding-plans/tencent-token.json#hunyuan-2.0-instruct",
+      "verification": "inherited-not-reverified"
+    },
+    {
+      "accessId": "provider-tencent-token-001",
+      "apiModelId": "hunyuan-2.0-thinking",
+      "field": "serviceType",
+      "value": [
+        "chat"
+      ],
+      "reason": "preserved-access-contract",
+      "evidence": "compute/coding-plans/tencent-token.json#hunyuan-2.0-thinking",
+      "verification": "inherited-not-reverified"
+    },
+    {
+      "accessId": "provider-tencent-token-001",
+      "apiModelId": "hunyuan-2.0-thinking",
+      "field": "capabilities",
+      "value": [
+        "chat",
+        "reasoning",
+        "code",
+        "deep_thinking",
+        "long_context"
+      ],
+      "reason": "preserved-access-contract",
+      "evidence": "compute/coding-plans/tencent-token.json#hunyuan-2.0-thinking",
+      "verification": "inherited-not-reverified"
+    },
+    {
+      "accessId": "provider-tencent-token-001",
+      "apiModelId": "hunyuan-t1",
+      "field": "serviceType",
+      "value": [
+        "chat"
+      ],
+      "reason": "preserved-access-contract",
+      "evidence": "compute/coding-plans/tencent-token.json#hunyuan-t1",
+      "verification": "inherited-not-reverified"
+    },
+    {
+      "accessId": "provider-tencent-token-001",
+      "apiModelId": "hunyuan-t1",
+      "field": "capabilities",
+      "value": [
+        "chat",
+        "reasoning",
+        "code",
+        "deep_thinking"
+      ],
+      "reason": "preserved-access-contract",
+      "evidence": "compute/coding-plans/tencent-token.json#hunyuan-t1",
+      "verification": "inherited-not-reverified"
+    },
+    {
+      "accessId": "provider-tencent-token-001",
+      "apiModelId": "hunyuan-turbos",
+      "field": "serviceType",
+      "value": [
+        "chat"
+      ],
+      "reason": "preserved-access-contract",
+      "evidence": "compute/coding-plans/tencent-token.json#hunyuan-turbos",
+      "verification": "inherited-not-reverified"
+    },
+    {
+      "accessId": "provider-tencent-token-001",
+      "apiModelId": "hunyuan-turbos",
+      "field": "capabilities",
+      "value": [
+        "chat",
+        "reasoning",
+        "code",
+        "fast"
+      ],
+      "reason": "preserved-access-contract",
+      "evidence": "compute/coding-plans/tencent-token.json#hunyuan-turbos",
+      "verification": "inherited-not-reverified"
+    },
+    {
+      "accessId": "provider-tencent-token-001",
+      "apiModelId": "glm-5.1",
+      "field": "capabilities",
+      "value": [
+        "chat",
+        "reasoning",
+        "code",
+        "agent"
+      ],
+      "reason": "preserved-access-contract",
+      "evidence": "compute/coding-plans/tencent-token.json#glm-5.1",
+      "verification": "inherited-not-reverified"
+    },
+    {
+      "accessId": "provider-tencent-token-001",
+      "apiModelId": "glm-5",
+      "field": "capabilities",
+      "value": [
+        "chat",
+        "reasoning",
+        "code",
+        "agent"
+      ],
+      "reason": "preserved-access-contract",
+      "evidence": "compute/coding-plans/tencent-token.json#glm-5",
+      "verification": "inherited-not-reverified"
+    },
+    {
+      "accessId": "provider-tencent-token-001",
+      "apiModelId": "minimax-m2.7",
+      "field": "serviceType",
+      "value": [
+        "chat"
+      ],
+      "reason": "preserved-access-contract",
+      "evidence": "compute/coding-plans/tencent-token.json#minimax-m2.7",
+      "verification": "inherited-not-reverified"
+    },
+    {
+      "accessId": "provider-tencent-token-001",
+      "apiModelId": "minimax-m2.7",
+      "field": "capabilities",
+      "value": [
+        "chat",
+        "reasoning",
+        "code",
+        "agent"
+      ],
+      "reason": "preserved-access-contract",
+      "evidence": "compute/coding-plans/tencent-token.json#minimax-m2.7",
+      "verification": "inherited-not-reverified"
+    },
+    {
+      "accessId": "provider-tencent-token-001",
+      "apiModelId": "minimax-m2.5",
+      "field": "serviceType",
+      "value": [
+        "chat"
+      ],
+      "reason": "preserved-access-contract",
+      "evidence": "compute/coding-plans/tencent-token.json#minimax-m2.5",
+      "verification": "inherited-not-reverified"
+    },
+    {
+      "accessId": "provider-tencent-token-001",
+      "apiModelId": "minimax-m2.5",
+      "field": "capabilities",
+      "value": [
+        "chat",
+        "reasoning",
+        "code",
+        "agent"
+      ],
+      "reason": "preserved-access-contract",
+      "evidence": "compute/coding-plans/tencent-token.json#minimax-m2.5",
+      "verification": "inherited-not-reverified"
+    },
+    {
+      "accessId": "provider-tencent-token-001",
+      "apiModelId": "kimi-k2.5",
+      "field": "capabilities",
+      "value": [
+        "chat",
+        "reasoning",
+        "code",
+        "agent",
+        "long_context"
+      ],
+      "reason": "preserved-access-contract",
+      "evidence": "compute/coding-plans/tencent-token.json#kimi-k2.5",
+      "verification": "inherited-not-reverified"
+    },
+    {
+      "accessId": "provider-volcengine-coding-001",
+      "apiModelId": "doubao-seed-2.1-pro",
+      "field": "serviceType",
+      "value": [
+        "chat"
+      ],
+      "reason": "preserved-access-contract",
+      "evidence": "compute/coding-plans/volcengine-coding.json#doubao-seed-2.1-pro",
+      "verification": "inherited-not-reverified"
+    },
+    {
+      "accessId": "provider-volcengine-coding-001",
+      "apiModelId": "doubao-seed-2.1-pro",
+      "field": "capabilities",
+      "value": [
+        "chat",
+        "reasoning",
+        "code",
+        "vision",
+        "tool_use",
+        "agent",
+        "long_context"
+      ],
+      "reason": "preserved-access-contract",
+      "evidence": "compute/coding-plans/volcengine-coding.json#doubao-seed-2.1-pro",
+      "verification": "inherited-not-reverified"
+    },
+    {
+      "accessId": "provider-volcengine-coding-001",
+      "apiModelId": "doubao-seed-2.1-turbo",
+      "field": "maxOutputTokens",
+      "value": 262144,
+      "reason": "preserved-access-contract",
+      "evidence": "compute/coding-plans/volcengine-coding.json#doubao-seed-2.1-turbo",
+      "verification": "inherited-not-reverified"
+    },
+    {
+      "accessId": "provider-volcengine-coding-001",
+      "apiModelId": "doubao-seed-2.1-turbo",
+      "field": "capabilities",
+      "value": [
+        "chat",
+        "reasoning",
+        "code",
+        "vision",
+        "tool_use",
+        "agent",
+        "fast",
+        "long_context"
+      ],
+      "reason": "preserved-access-contract",
+      "evidence": "compute/coding-plans/volcengine-coding.json#doubao-seed-2.1-turbo",
+      "verification": "inherited-not-reverified"
+    },
+    {
+      "accessId": "provider-volcengine-coding-001",
+      "apiModelId": "ark-code-latest",
+      "field": "serviceType",
+      "value": [
+        "chat"
+      ],
+      "reason": "preserved-access-contract",
+      "evidence": "compute/coding-plans/volcengine-coding.json#ark-code-latest",
+      "verification": "inherited-not-reverified"
+    },
+    {
+      "accessId": "provider-volcengine-coding-001",
+      "apiModelId": "ark-code-latest",
+      "field": "capabilities",
+      "value": [
+        "code",
+        "reasoning",
+        "chat"
+      ],
+      "reason": "preserved-access-contract",
+      "evidence": "compute/coding-plans/volcengine-coding.json#ark-code-latest",
+      "verification": "inherited-not-reverified"
+    },
+    {
+      "accessId": "provider-volcengine-coding-001",
+      "apiModelId": "doubao-seed-2.0-code",
+      "field": "capabilities",
+      "value": [
+        "code",
+        "reasoning",
+        "chat",
+        "long_context"
+      ],
+      "reason": "preserved-access-contract",
+      "evidence": "compute/coding-plans/volcengine-coding.json#doubao-seed-2.0-code",
+      "verification": "inherited-not-reverified"
+    },
+    {
+      "accessId": "provider-volcengine-coding-001",
+      "apiModelId": "doubao-seed-2.0-pro",
+      "field": "capabilities",
+      "value": [
+        "code",
+        "reasoning",
+        "chat",
+        "long_context",
+        "vision"
+      ],
+      "reason": "preserved-access-contract",
+      "evidence": "compute/coding-plans/volcengine-coding.json#doubao-seed-2.0-pro",
+      "verification": "inherited-not-reverified"
+    },
+    {
+      "accessId": "provider-volcengine-coding-001",
+      "apiModelId": "doubao-seed-2.0-lite",
+      "field": "capabilities",
+      "value": [
+        "code",
+        "reasoning",
+        "chat",
+        "long_context",
+        "vision"
+      ],
+      "reason": "preserved-access-contract",
+      "evidence": "compute/coding-plans/volcengine-coding.json#doubao-seed-2.0-lite",
+      "verification": "inherited-not-reverified"
+    },
+    {
+      "accessId": "provider-volcengine-coding-001",
+      "apiModelId": "doubao-seed-code",
+      "field": "capabilities",
+      "value": [
+        "code",
+        "reasoning",
+        "chat",
+        "long_context"
+      ],
+      "reason": "preserved-access-contract",
+      "evidence": "compute/coding-plans/volcengine-coding.json#doubao-seed-code",
+      "verification": "inherited-not-reverified"
+    },
+    {
+      "accessId": "provider-volcengine-coding-001",
+      "apiModelId": "glm-4.7",
+      "field": "capabilities",
+      "value": [
+        "code",
+        "reasoning",
+        "chat",
+        "long_context"
+      ],
+      "reason": "preserved-access-contract",
+      "evidence": "compute/coding-plans/volcengine-coding.json#glm-4.7",
+      "verification": "inherited-not-reverified"
+    },
+    {
+      "accessId": "provider-volcengine-coding-001",
+      "apiModelId": "deepseek-v3.2",
+      "field": "capabilities",
+      "value": [
+        "code",
+        "reasoning",
+        "chat"
+      ],
+      "reason": "preserved-access-contract",
+      "evidence": "compute/coding-plans/volcengine-coding.json#deepseek-v3.2",
+      "verification": "inherited-not-reverified"
+    },
+    {
+      "accessId": "provider-volcengine-coding-001",
+      "apiModelId": "kimi-k2.5",
+      "field": "capabilities",
+      "value": [
+        "code",
+        "reasoning",
+        "chat",
+        "agent",
+        "long_context"
+      ],
+      "reason": "preserved-access-contract",
+      "evidence": "compute/coding-plans/volcengine-coding.json#kimi-k2.5",
+      "verification": "inherited-not-reverified"
+    },
+    {
+      "accessId": "provider-volcengine-coding-001",
+      "apiModelId": "glm-5.1",
+      "field": "capabilities",
+      "value": [
+        "code",
+        "reasoning",
+        "chat",
+        "long_context",
+        "agent"
+      ],
+      "reason": "preserved-access-contract",
+      "evidence": "compute/coding-plans/volcengine-coding.json#glm-5.1",
+      "verification": "inherited-not-reverified"
+    },
+    {
+      "accessId": "provider-volcengine-coding-001",
+      "apiModelId": "kimi-k2.6",
+      "field": "capabilities",
+      "value": [
+        "code",
+        "reasoning",
+        "chat",
+        "agent",
+        "long_context",
+        "vision"
+      ],
+      "reason": "preserved-access-contract",
+      "evidence": "compute/coding-plans/volcengine-coding.json#kimi-k2.6",
+      "verification": "inherited-not-reverified"
+    },
+    {
+      "accessId": "provider-volcengine-coding-001",
+      "apiModelId": "minimax-m2.5",
+      "field": "serviceType",
+      "value": [
+        "chat"
+      ],
+      "reason": "preserved-access-contract",
+      "evidence": "compute/coding-plans/volcengine-coding.json#minimax-m2.5",
+      "verification": "inherited-not-reverified"
+    },
+    {
+      "accessId": "provider-volcengine-coding-001",
+      "apiModelId": "minimax-m2.5",
+      "field": "capabilities",
+      "value": [
+        "code",
+        "reasoning",
+        "chat",
+        "agent"
+      ],
+      "reason": "preserved-access-contract",
+      "evidence": "compute/coding-plans/volcengine-coding.json#minimax-m2.5",
+      "verification": "inherited-not-reverified"
+    },
+    {
+      "accessId": "provider-volcengine-coding-001",
+      "apiModelId": "minimax-m2.7",
+      "field": "serviceType",
+      "value": [
+        "chat"
+      ],
+      "reason": "preserved-access-contract",
+      "evidence": "compute/coding-plans/volcengine-coding.json#minimax-m2.7",
+      "verification": "inherited-not-reverified"
+    },
+    {
+      "accessId": "provider-volcengine-coding-001",
+      "apiModelId": "minimax-m2.7",
+      "field": "capabilities",
+      "value": [
+        "code",
+        "reasoning",
+        "chat",
+        "agent",
+        "long_context"
+      ],
+      "reason": "preserved-access-contract",
+      "evidence": "compute/coding-plans/volcengine-coding.json#minimax-m2.7",
+      "verification": "inherited-not-reverified"
+    },
+    {
+      "accessId": "provider-zhipu-coding-001",
+      "apiModelId": "glm-5.3-flash",
+      "field": "capabilities",
+      "value": [
+        "chat",
+        "reasoning",
+        "deep_thinking",
+        "code",
+        "vision",
+        "image_understanding",
+        "video_understanding",
+        "long_context",
+        "tool_use",
+        "agent",
+        "multilingual",
+        "fast"
+      ],
+      "reason": "preserved-access-contract",
+      "evidence": "compute/coding-plans/zhipu-coding.json#glm-5.3-flash",
+      "verification": "inherited-not-reverified"
+    },
+    {
+      "accessId": "provider-zhipu-coding-001",
+      "apiModelId": "glm-5.2",
+      "field": "serviceType",
+      "value": [
+        "chat",
+        "reasoning"
+      ],
+      "reason": "preserved-access-contract",
+      "evidence": "compute/coding-plans/zhipu-coding.json#glm-5.2",
+      "verification": "inherited-not-reverified"
+    },
+    {
+      "accessId": "provider-zhipu-coding-001",
+      "apiModelId": "glm-5.2",
+      "field": "contextWindow",
+      "value": 1000000,
+      "reason": "preserved-access-contract",
+      "evidence": "compute/coding-plans/zhipu-coding.json#glm-5.2",
+      "verification": "inherited-not-reverified"
+    },
+    {
+      "accessId": "provider-zhipu-coding-001",
+      "apiModelId": "glm-5.2",
+      "field": "maxOutputTokens",
+      "value": 131072,
+      "reason": "preserved-access-contract",
+      "evidence": "compute/coding-plans/zhipu-coding.json#glm-5.2",
+      "verification": "inherited-not-reverified"
+    },
+    {
+      "accessId": "provider-zhipu-coding-001",
+      "apiModelId": "glm-5.2",
+      "field": "capabilities",
+      "value": [
+        "chat",
+        "reasoning",
+        "code",
+        "deep_thinking",
+        "long_context",
+        "tool_use",
+        "agent",
+        "math",
+        "multilingual"
+      ],
+      "reason": "preserved-access-contract",
+      "evidence": "compute/coding-plans/zhipu-coding.json#glm-5.2",
+      "verification": "inherited-not-reverified"
+    },
+    {
+      "accessId": "provider-zhipu-coding-001",
+      "apiModelId": "glm-5-turbo",
+      "field": "serviceType",
+      "value": [
+        "chat",
+        "reasoning"
+      ],
+      "reason": "preserved-access-contract",
+      "evidence": "compute/coding-plans/zhipu-coding.json#glm-5-turbo",
+      "verification": "inherited-not-reverified"
+    },
+    {
+      "accessId": "provider-zhipu-coding-001",
+      "apiModelId": "glm-5-turbo",
+      "field": "maxOutputTokens",
+      "value": 131072,
+      "reason": "preserved-access-contract",
+      "evidence": "compute/coding-plans/zhipu-coding.json#glm-5-turbo",
+      "verification": "inherited-not-reverified"
+    },
+    {
+      "accessId": "provider-zhipu-coding-001",
+      "apiModelId": "glm-5-turbo",
+      "field": "capabilities",
+      "value": [
+        "chat",
+        "reasoning",
+        "code",
+        "deep_thinking",
+        "long_context",
+        "tool_use",
+        "agent",
+        "math",
+        "multilingual",
+        "fast"
+      ],
+      "reason": "preserved-access-contract",
+      "evidence": "compute/coding-plans/zhipu-coding.json#glm-5-turbo",
+      "verification": "inherited-not-reverified"
+    },
+    {
+      "accessId": "provider-zhipu-coding-001",
+      "apiModelId": "glm-4.7",
+      "field": "serviceType",
+      "value": [
+        "chat",
+        "reasoning"
+      ],
+      "reason": "preserved-access-contract",
+      "evidence": "compute/coding-plans/zhipu-coding.json#glm-4.7",
+      "verification": "inherited-not-reverified"
+    },
+    {
+      "accessId": "provider-zhipu-coding-001",
+      "apiModelId": "glm-4.7",
+      "field": "maxOutputTokens",
+      "value": 131072,
+      "reason": "preserved-access-contract",
+      "evidence": "compute/coding-plans/zhipu-coding.json#glm-4.7",
+      "verification": "inherited-not-reverified"
+    },
+    {
+      "accessId": "provider-zhipu-coding-001",
+      "apiModelId": "glm-4.7",
+      "field": "capabilities",
+      "value": [
+        "chat",
+        "reasoning",
+        "code",
+        "deep_thinking",
+        "long_context",
+        "tool_use",
+        "agent",
+        "multilingual"
+      ],
+      "reason": "preserved-access-contract",
+      "evidence": "compute/coding-plans/zhipu-coding.json#glm-4.7",
+      "verification": "inherited-not-reverified"
+    }
+  ],
+  "publication": {
+    "state": "candidate",
+    "requiredClientVersion": null
+  }
+}

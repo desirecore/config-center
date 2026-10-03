@@ -68,3 +68,23 @@
 }
 ```
 <!-- source-metadata:end -->
+
+## compute/model-specs/openai.json：精确绑定
+
+官方规格页本轮核实窗口与输出；未扩大自动路由资格。
+
+<!-- source-details: {"config":"compute/model-specs/openai.json","id":"gpt-realtime-2.1"} -->
+```json
+{
+  "spec.contextWindow": 128000,
+  "spec.maxOutputTokens": 32000,
+  "spec.description": "官方精确型号与窗口/输出已核；独立实时协议适配与账号验收由接入面决定，不继承通用Chat合同。"
+}
+```
+<!-- source-details:end -->
+
+<!-- source-config: compute/model-specs/openai.json -->
+
+| 模型 ID | 上下文 / 输出 | 计价 | 已核字段→来源 | 来源入口 | 状态 | 数据指纹 |
+| --- | --- | --- | --- | --- | --- | --- |
+| `gpt-realtime-2.1` | 128000 / 32000 | 非计价主数据 | `id`→[realtime21-spec](../SOURCES.md#realtime21-spec)；`spec.contextWindow`→[realtime21-spec](../SOURCES.md#realtime21-spec)；`spec.maxOutputTokens`→[realtime21-spec](../SOURCES.md#realtime21-spec) | [realtime21-spec](../SOURCES.md#realtime21-spec) | partial | `fe4e41e7e4fe5ac90c1d9eb640253765b7b16964a461a706e98ce12cda178de4` |

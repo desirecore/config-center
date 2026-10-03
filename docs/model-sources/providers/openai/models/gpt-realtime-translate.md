@@ -63,3 +63,23 @@
 }
 ```
 <!-- source-metadata:end -->
+
+## compute/model-specs/openai.json：精确绑定
+
+官方规格页本轮核实窗口与输出；未扩大自动路由资格。
+
+<!-- source-details: {"config":"compute/model-specs/openai.json","id":"gpt-realtime-translate"} -->
+```json
+{
+  "spec.contextWindow": 16000,
+  "spec.maxOutputTokens": 2000,
+  "spec.description": "官方精确型号与窗口/输出已核；独立实时协议适配与账号验收由接入面决定，不继承通用Chat合同。"
+}
+```
+<!-- source-details:end -->
+
+<!-- source-config: compute/model-specs/openai.json -->
+
+| 模型 ID | 上下文 / 输出 | 计价 | 已核字段→来源 | 来源入口 | 状态 | 数据指纹 |
+| --- | --- | --- | --- | --- | --- | --- |
+| `gpt-realtime-translate` | 16000 / 2000 | 非计价主数据 | `id`→[realtimetranslate-spec](../SOURCES.md#realtimetranslate-spec)；`spec.contextWindow`→[realtimetranslate-spec](../SOURCES.md#realtimetranslate-spec)；`spec.maxOutputTokens`→[realtimetranslate-spec](../SOURCES.md#realtimetranslate-spec) | [realtimetranslate-spec](../SOURCES.md#realtimetranslate-spec) | partial | `e08efc78bf3d8f98e7a16988a3beb7f7a343c0f3e61da7bcc06914809750cd03` |

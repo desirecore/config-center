@@ -1,0 +1,1077 @@
+{
+  "id": "provider-openai-001",
+  "provider": "openai",
+  "label": "OpenAI GPT",
+  "baseUrl": "https://api.openai.com/v1",
+  "apiFormat": "openai-completions",
+  "apiKeyRef": "openai",
+  "apiKeyVerified": false,
+  "enabled": false,
+  "status": "unconfigured",
+  "priceCurrency": "USD",
+  "services": [
+    "chat",
+    "fast",
+    "embedding",
+    "tts",
+    "asr",
+    "vision",
+    "responses",
+    "image_gen",
+    "omni",
+    "realtime_voice",
+    "simultaneous_interpret",
+    "translation"
+  ],
+  "tombstones": [
+    "dall-e-3",
+    "gpt-4o-realtime",
+    "gpt-4o-realtime-preview"
+  ],
+  "models": [
+    {
+      "modelName": "gpt-6.1-sol",
+      "displayName": "GPT-6.1 Sol",
+      "serviceType": [
+        "chat",
+        "responses"
+      ],
+      "contextWindow": 1050000,
+      "maxOutputTokens": 128000,
+      "capabilities": [
+        "chat",
+        "reasoning",
+        "code",
+        "vision",
+        "ultra_long_context",
+        "tool_use",
+        "agent"
+      ],
+      "description": "GPT-6.1 Sol，面向复杂编程、电脑使用和专业工作，1.05M 上下文；工具调用使用 Responses API",
+      "inputPrice": 2,
+      "outputPrice": 10,
+      "extra": {
+        "serverSideWebSearch": {
+          "enabled": true,
+          "dialect": "openai-responses",
+          "fallbackPriority": 2,
+          "toolType": "web_search",
+          "searchRequestPriceUsd": 0.01
+        },
+        "cachedInputPrice": 0.1,
+        "reasoning": {
+          "supportedEfforts": [
+            "low",
+            "medium",
+            "high",
+            "xhigh",
+            "max"
+          ],
+          "defaultEffort": "medium"
+        },
+        "pricingNotes": "Prices are per 1M tokens. Cache writes $2.50/M. Above 272K input tokens, input and cache rates are 2x and output rates are 1.5x for the full request. Fast mode is 2x; Batch and Flex are 50% lower. Tool calling requires Responses API; none/minimal reasoning are unsupported.",
+        "responsesOnly": true
+      }
+    },
+    {
+      "modelName": "gpt-image-2.5-sunburst",
+      "displayName": "GPT Image 2.5 Sunburst",
+      "serviceType": [
+        "image_gen"
+      ],
+      "description": "图像生成与编辑模型，适合对编辑精度要求高的任务",
+      "capabilities": [
+        "image_generation",
+        "image_editing",
+        "text_rendering",
+        "vision",
+        "high_quality"
+      ],
+      "inputPrice": 5,
+      "outputPrice": 30,
+      "extra": {
+        "imageInputPrice": 8,
+        "textCachedInputPrice": 1.25,
+        "imageCachedInputPrice": 2,
+        "pricingNotes": "Text input $5/M tokens, image input $8/M tokens, image output $30/M tokens; quality supports low, medium, high, xhigh, max, auto."
+      }
+    },
+    {
+      "modelName": "gpt-image-2.5-flare",
+      "displayName": "GPT Image 2.5 Flare",
+      "serviceType": [
+        "image_gen"
+      ],
+      "description": "快速图像生成与编辑模型，适合日常高质量出图",
+      "capabilities": [
+        "image_generation",
+        "image_editing",
+        "text_rendering",
+        "vision",
+        "fast"
+      ],
+      "inputPrice": 5,
+      "outputPrice": 30,
+      "extra": {
+        "imageInputPrice": 8,
+        "textCachedInputPrice": 1.25,
+        "imageCachedInputPrice": 2,
+        "pricingNotes": "Text input $5/M tokens, image input $8/M tokens, image output $30/M tokens; quality supports low, medium, high, xhigh, max, auto."
+      }
+    },
+    {
+      "modelName": "gpt-6-sol",
+      "displayName": "GPT-6 Sol",
+      "serviceType": [
+        "chat",
+        "responses"
+      ],
+      "contextWindow": 1050000,
+      "maxOutputTokens": 128000,
+      "capabilities": [
+        "chat",
+        "reasoning",
+        "code",
+        "vision",
+        "ultra_long_context",
+        "tool_use",
+        "agent"
+      ],
+      "description": "兼顾复杂编程、智能体工作流与成本的 GPT-6 模型；1.05M 上下文",
+      "inputPrice": 2,
+      "outputPrice": 10,
+      "extra": {
+        "serverSideWebSearch": {
+          "enabled": true,
+          "dialect": "openai-responses",
+          "fallbackPriority": 2,
+          "toolType": "web_search",
+          "searchRequestPriceUsd": 0.01
+        },
+        "cachedInputPrice": 0.2,
+        "reasoning": {
+          "supportedEfforts": [
+            "none",
+            "low",
+            "medium",
+            "high",
+            "xhigh",
+            "max"
+          ],
+          "defaultEffort": "medium"
+        },
+        "pricingNotes": "Prices are per 1M tokens. Above 272K input tokens, input and cache rates are 2x and output rates are 1.5x for the full request. Chat Completions function calling requires reasoning_effort=none."
+      }
+    },
+    {
+      "modelName": "gpt-6-luna",
+      "displayName": "GPT-6 Luna",
+      "serviceType": [
+        "chat",
+        "fast",
+        "responses"
+      ],
+      "contextWindow": 1050000,
+      "maxOutputTokens": 128000,
+      "capabilities": [
+        "chat",
+        "reasoning",
+        "code",
+        "vision",
+        "ultra_long_context",
+        "tool_use",
+        "fast"
+      ],
+      "description": "面向明确任务和高吞吐场景的 GPT-6 轻量模型；1.05M 上下文",
+      "inputPrice": 0.1,
+      "outputPrice": 0.5,
+      "extra": {
+        "serverSideWebSearch": {
+          "enabled": true,
+          "dialect": "openai-responses",
+          "fallbackPriority": 3,
+          "toolType": "web_search",
+          "searchRequestPriceUsd": 0.01
+        },
+        "cachedInputPrice": 0.01,
+        "reasoning": {
+          "supportedEfforts": [
+            "none",
+            "low",
+            "medium",
+            "high",
+            "xhigh",
+            "max"
+          ],
+          "defaultEffort": "medium"
+        },
+        "pricingNotes": "Prices are per 1M tokens. Above 272K input tokens, input and cache rates are 2x and output rates are 1.5x for the full request. Chat Completions function calling requires reasoning_effort=none."
+      }
+    },
+    {
+      "modelName": "gpt-6-astra",
+      "displayName": "GPT-6 Astra",
+      "serviceType": [
+        "chat",
+        "responses"
+      ],
+      "description": "OpenAI GPT-6 Astra，面向复杂推理、编程和长程智能体任务，1.05M 上下文，128K 最大输出",
+      "contextWindow": 1050000,
+      "maxOutputTokens": 128000,
+      "capabilities": [
+        "chat",
+        "reasoning",
+        "code",
+        "vision",
+        "ultra_long_context",
+        "tool_use",
+        "agent"
+      ],
+      "inputPrice": 10,
+      "outputPrice": 50,
+      "extra": {
+        "serverSideWebSearch": {
+          "enabled": true,
+          "dialect": "openai-responses",
+          "fallbackPriority": 1,
+          "toolType": "web_search",
+          "searchRequestPriceUsd": 0.01
+        },
+        "cachedInputPrice": 1,
+        "reasoning": {
+          "supportedEfforts": [
+            "low",
+            "medium",
+            "high",
+            "xhigh",
+            "max"
+          ],
+          "defaultEffort": "medium"
+        },
+        "pricingNotes": "Prices are per 1M tokens. Cache writes cost $12.50. Above 272K input tokens, input and cache rates are 2x and output rates are 1.5x for the full request."
+      }
+    },
+    {
+      "modelName": "gpt-5.5",
+      "displayName": "GPT-5.5",
+      "serviceType": [
+        "chat",
+        "responses"
+      ],
+      "description": "OpenAI GPT-5.5 前沿模型，面向复杂推理、编码和专业工作流，1M 上下文，128K 最大输出",
+      "contextWindow": 1050000,
+      "maxOutputTokens": 128000,
+      "capabilities": [
+        "chat",
+        "reasoning",
+        "code",
+        "vision",
+        "ultra_long_context",
+        "tool_use",
+        "agent"
+      ],
+      "inputPrice": 5,
+      "outputPrice": 30,
+      "extra": {
+        "serverSideWebSearch": {
+          "enabled": true,
+          "dialect": "openai-responses",
+          "fallbackPriority": 1,
+          "toolType": "web_search",
+          "searchRequestPriceUsd": 0.01
+        },
+        "cachedInputPrice": 0.5,
+        "pricingNotes": "Prices are per 1M tokens; long-context requests may use higher-tier pricing per OpenAI pricing page.",
+        "reasoning": {
+          "supportedEfforts": [
+            "none",
+            "low",
+            "medium",
+            "high",
+            "xhigh"
+          ],
+          "defaultEffort": "medium"
+        }
+      }
+    },
+    {
+      "modelName": "gpt-5.5-pro",
+      "displayName": "GPT-5.5 Pro",
+      "serviceType": [
+        "responses"
+      ],
+      "description": "OpenAI GPT-5.5 Pro，最高能力推理模型，仅面向 Responses API",
+      "contextWindow": 1050000,
+      "maxOutputTokens": 128000,
+      "capabilities": [
+        "chat",
+        "reasoning",
+        "code",
+        "vision",
+        "ultra_long_context",
+        "tool_use",
+        "agent"
+      ],
+      "inputPrice": 30,
+      "outputPrice": 180,
+      "extra": {
+        "serverSideWebSearch": {
+          "enabled": true,
+          "dialect": "openai-responses",
+          "fallbackPriority": 2,
+          "toolType": "web_search",
+          "searchRequestPriceUsd": 0.01
+        },
+        "responsesOnly": true,
+        "pricingNotes": "No cached-input discount is listed for GPT-5.5 Pro on the official pricing page.",
+        "reasoning": {
+          "supportedEfforts": [
+            "medium",
+            "high",
+            "xhigh"
+          ],
+          "defaultEffort": "high"
+        }
+      }
+    },
+    {
+      "modelName": "gpt-5.4",
+      "displayName": "GPT-5.4",
+      "serviceType": [
+        "chat",
+        "responses"
+      ],
+      "description": "OpenAI GPT-5.4，高性价比前沿模型，1M 上下文，支持文本和图像输入",
+      "contextWindow": 1050000,
+      "maxOutputTokens": 128000,
+      "capabilities": [
+        "chat",
+        "reasoning",
+        "code",
+        "vision",
+        "ultra_long_context",
+        "tool_use"
+      ],
+      "inputPrice": 2.5,
+      "outputPrice": 15,
+      "extra": {
+        "serverSideWebSearch": {
+          "enabled": true,
+          "dialect": "openai-responses",
+          "fallbackPriority": 3,
+          "toolType": "web_search",
+          "searchRequestPriceUsd": 0.01
+        },
+        "cachedInputPrice": 0.25,
+        "pricingNotes": "Prices are per 1M tokens; long-context requests may use higher-tier pricing per OpenAI pricing page.",
+        "reasoning": {
+          "supportedEfforts": [
+            "none",
+            "low",
+            "medium",
+            "high",
+            "xhigh"
+          ]
+        }
+      }
+    },
+    {
+      "modelName": "gpt-5.4-pro",
+      "displayName": "GPT-5.4 Pro",
+      "serviceType": [
+        "responses"
+      ],
+      "description": "OpenAI GPT-5.4 Pro，专业推理与长程任务模型，仅面向 Responses API",
+      "contextWindow": 1050000,
+      "maxOutputTokens": 128000,
+      "capabilities": [
+        "chat",
+        "reasoning",
+        "code",
+        "vision",
+        "ultra_long_context",
+        "tool_use"
+      ],
+      "inputPrice": 30,
+      "outputPrice": 180,
+      "extra": {
+        "serverSideWebSearch": {
+          "enabled": true,
+          "dialect": "openai-responses",
+          "fallbackPriority": 4,
+          "toolType": "web_search",
+          "searchRequestPriceUsd": 0.01
+        },
+        "responsesOnly": true,
+        "reasoning": {
+          "supportedEfforts": [
+            "medium",
+            "high",
+            "xhigh"
+          ],
+          "defaultEffort": "medium"
+        }
+      }
+    },
+    {
+      "modelName": "gpt-5.4-mini",
+      "displayName": "GPT-5.4 Mini",
+      "serviceType": [
+        "chat",
+        "fast",
+        "responses"
+      ],
+      "description": "OpenAI GPT-5.4 Mini，低延迟高性价比模型，400K 上下文，128K 最大输出",
+      "contextWindow": 400000,
+      "maxOutputTokens": 128000,
+      "capabilities": [
+        "chat",
+        "reasoning",
+        "code",
+        "vision",
+        "long_context",
+        "tool_use",
+        "fast"
+      ],
+      "inputPrice": 0.75,
+      "outputPrice": 4.5,
+      "extra": {
+        "serverSideWebSearch": {
+          "enabled": true,
+          "dialect": "openai-responses",
+          "fallbackPriority": 5,
+          "toolType": "web_search",
+          "searchRequestPriceUsd": 0.01
+        },
+        "cachedInputPrice": 0.075,
+        "reasoning": {
+          "supportedEfforts": [
+            "none",
+            "low",
+            "medium",
+            "high",
+            "xhigh"
+          ]
+        }
+      }
+    },
+    {
+      "modelName": "gpt-5.4-nano",
+      "displayName": "GPT-5.4 Nano",
+      "serviceType": [
+        "fast",
+        "responses"
+      ],
+      "description": "OpenAI GPT-5.4 Nano，最低成本极速模型，400K 上下文，128K 最大输出",
+      "contextWindow": 400000,
+      "maxOutputTokens": 128000,
+      "capabilities": [
+        "chat",
+        "reasoning",
+        "code",
+        "fast",
+        "long_context"
+      ],
+      "inputPrice": 0.2,
+      "outputPrice": 1.25,
+      "extra": {
+        "serverSideWebSearch": {
+          "enabled": true,
+          "dialect": "openai-responses",
+          "fallbackPriority": 6,
+          "toolType": "web_search",
+          "searchRequestPriceUsd": 0.01
+        },
+        "cachedInputPrice": 0.02,
+        "reasoning": {
+          "supportedEfforts": [
+            "none",
+            "low",
+            "medium",
+            "high",
+            "xhigh"
+          ]
+        }
+      }
+    },
+    {
+      "modelName": "gpt-image-2",
+      "displayName": "GPT Image 2",
+      "serviceType": [
+        "image_gen"
+      ],
+      "description": "OpenAI GPT Image 2 图像生成和编辑模型，支持文本输入、图像输入与图像输出",
+      "capabilities": [
+        "image_generation",
+        "image_editing",
+        "text_rendering",
+        "vision"
+      ],
+      "inputPrice": 5,
+      "outputPrice": 30,
+      "extra": {
+        "imageInputPrice": 8,
+        "textCachedInputPrice": 1.25,
+        "imageCachedInputPrice": 2,
+        "snapshot": "gpt-image-2-2026-04-21",
+        "pricingNotes": "Text input is $5/M tokens, image input is $8/M tokens, image output is $30/M tokens."
+      }
+    },
+    {
+      "modelName": "gpt-realtime-2.1",
+      "displayName": "GPT Realtime 2.1",
+      "serviceType": [
+        "omni",
+        "realtime_voice"
+      ],
+      "description": "OpenAI 最新实时多模态语音模型，支持文本、图像和音频输入输出",
+      "contextWindow": 128000,
+      "maxOutputTokens": 32000,
+      "capabilities": [
+        "chat",
+        "vision",
+        "tts",
+        "asr",
+        "realtime",
+        "speech_to_speech",
+        "reasoning",
+        "tool_use"
+      ],
+      "inputPrice": 4,
+      "outputPrice": 24,
+      "extra": {
+        "textCachedInputPrice": 0.4,
+        "imageInputPrice": 5,
+        "imageCachedInputPrice": 0.5,
+        "audioInputPrice": 32,
+        "audioCachedInputPrice": 0.4,
+        "audioOutputPrice": 64
+      }
+    },
+    {
+      "modelName": "gpt-realtime-2.1-mini",
+      "displayName": "GPT Realtime 2.1 Mini",
+      "serviceType": [
+        "realtime_voice"
+      ],
+      "description": "OpenAI 低成本实时语音模型，适合实时语音交互",
+      "contextWindow": 128000,
+      "maxOutputTokens": 32000,
+      "capabilities": [
+        "chat",
+        "vision",
+        "tts",
+        "asr",
+        "realtime",
+        "speech_to_speech",
+        "fast"
+      ],
+      "inputPrice": 0.6,
+      "outputPrice": 2.4,
+      "extra": {
+        "textCachedInputPrice": 0.06,
+        "imageInputPrice": 0.8,
+        "imageCachedInputPrice": 0.08,
+        "audioInputPrice": 10,
+        "audioCachedInputPrice": 0.3,
+        "audioOutputPrice": 20
+      }
+    },
+    {
+      "modelName": "gpt-realtime-translate",
+      "displayName": "GPT Realtime Translate",
+      "serviceType": [
+        "simultaneous_interpret",
+        "translation"
+      ],
+      "description": "OpenAI 实时语音翻译模型，按分钟计费",
+      "contextWindow": 16000,
+      "maxOutputTokens": 2000,
+      "capabilities": [
+        "translation",
+        "simultaneous_interpretation",
+        "asr",
+        "realtime"
+      ],
+      "extra": {
+        "audioOutputPricePerMinute": 0.034,
+        "pricingNotes": "OpenAI lists this model at $0.034 per minute."
+      }
+    },
+    {
+      "modelName": "gpt-5.2",
+      "displayName": "GPT-5.2",
+      "serviceType": [
+        "chat"
+      ],
+      "description": "OpenAI GPT-5.2，400K 上下文，面向编码和智能体任务",
+      "contextWindow": 400000,
+      "maxOutputTokens": 128000,
+      "capabilities": [
+        "chat",
+        "reasoning",
+        "code",
+        "vision",
+        "long_context",
+        "tool_use"
+      ],
+      "inputPrice": 1.75,
+      "outputPrice": 14,
+      "extra": {}
+    },
+    {
+      "modelName": "gpt-5.2-pro",
+      "displayName": "GPT-5.2 Pro",
+      "serviceType": [
+        "chat"
+      ],
+      "description": "OpenAI GPT-5.2 Pro 专业版，最高性能",
+      "contextWindow": 400000,
+      "maxOutputTokens": 128000,
+      "capabilities": [
+        "chat",
+        "reasoning",
+        "code",
+        "vision",
+        "long_context",
+        "tool_use"
+      ],
+      "inputPrice": 21,
+      "outputPrice": 168,
+      "extra": {}
+    },
+    {
+      "modelName": "gpt-5.1",
+      "displayName": "GPT-5.1",
+      "serviceType": [
+        "chat"
+      ],
+      "description": "OpenAI GPT-5.1，400K 上下文，高性能旗舰",
+      "contextWindow": 400000,
+      "maxOutputTokens": 128000,
+      "capabilities": [
+        "chat",
+        "reasoning",
+        "code",
+        "vision",
+        "long_context",
+        "tool_use"
+      ],
+      "inputPrice": 1.25,
+      "outputPrice": 10,
+      "extra": {}
+    },
+    {
+      "modelName": "gpt-5",
+      "displayName": "GPT-5",
+      "serviceType": [
+        "chat"
+      ],
+      "description": "OpenAI GPT-5 新一代旗舰模型，统一所有模型能力",
+      "contextWindow": 400000,
+      "maxOutputTokens": 128000,
+      "capabilities": [
+        "chat",
+        "reasoning",
+        "code",
+        "vision",
+        "long_context",
+        "tool_use"
+      ],
+      "inputPrice": 1.25,
+      "outputPrice": 10,
+      "extra": {
+        "serverSideWebSearch": {
+          "enabled": true,
+          "dialect": "openai-responses",
+          "fallbackPriority": 7,
+          "toolType": "web_search",
+          "searchRequestPriceUsd": 0.01
+        }
+      }
+    },
+    {
+      "modelName": "gpt-5-pro",
+      "displayName": "GPT-5 Pro",
+      "serviceType": [
+        "chat"
+      ],
+      "description": "OpenAI GPT-5 Pro 专业版高性能推理模型",
+      "contextWindow": 400000,
+      "maxOutputTokens": 272000,
+      "capabilities": [
+        "chat",
+        "reasoning",
+        "code",
+        "vision",
+        "long_context",
+        "tool_use"
+      ],
+      "inputPrice": 15,
+      "outputPrice": 120,
+      "extra": {}
+    },
+    {
+      "modelName": "gpt-5-mini",
+      "displayName": "GPT-5-mini",
+      "serviceType": [
+        "chat"
+      ],
+      "description": "高性价比模型，适合日常对话，400K 上下文",
+      "contextWindow": 400000,
+      "maxOutputTokens": 128000,
+      "capabilities": [
+        "chat",
+        "fast",
+        "tool_use",
+        "code",
+        "vision"
+      ],
+      "inputPrice": 0.25,
+      "outputPrice": 2,
+      "extra": {}
+    },
+    {
+      "modelName": "gpt-5-nano",
+      "displayName": "GPT-5-nano",
+      "serviceType": [
+        "fast"
+      ],
+      "description": "极速响应模型，适合简单任务，400K 上下文",
+      "contextWindow": 400000,
+      "maxOutputTokens": 128000,
+      "capabilities": [
+        "chat",
+        "code",
+        "fast"
+      ],
+      "inputPrice": 0.05,
+      "outputPrice": 0.4,
+      "extra": {}
+    },
+    {
+      "modelName": "gpt-4.1",
+      "displayName": "GPT-4.1",
+      "serviceType": [
+        "chat"
+      ],
+      "description": "OpenAI GPT-4.1，支持 1M 上下文，编码和指令遵循能力大幅提升",
+      "contextWindow": 1047576,
+      "maxOutputTokens": 32768,
+      "capabilities": [
+        "chat",
+        "reasoning",
+        "code",
+        "vision",
+        "ultra_long_context",
+        "tool_use"
+      ],
+      "inputPrice": 2,
+      "outputPrice": 8,
+      "defaultTemperature": 1,
+      "defaultTopP": 1,
+      "extra": {
+        "serverSideWebSearch": {
+          "enabled": true,
+          "dialect": "openai-responses",
+          "fallbackPriority": 8,
+          "toolType": "web_search",
+          "searchRequestPriceUsd": 0.01
+        }
+      }
+    },
+    {
+      "modelName": "gpt-4.1-mini",
+      "displayName": "GPT-4.1 mini",
+      "serviceType": [
+        "chat"
+      ],
+      "description": "OpenAI GPT-4.1 mini，1M 上下文，高性价比",
+      "contextWindow": 1047576,
+      "maxOutputTokens": 32768,
+      "capabilities": [
+        "chat",
+        "code",
+        "vision",
+        "ultra_long_context",
+        "tool_use"
+      ],
+      "inputPrice": 0.4,
+      "outputPrice": 1.6,
+      "defaultTemperature": 1,
+      "defaultTopP": 1,
+      "extra": {
+        "serverSideWebSearch": {
+          "enabled": true,
+          "dialect": "openai-responses",
+          "fallbackPriority": 9,
+          "toolType": "web_search",
+          "searchRequestPriceUsd": 0.01
+        }
+      }
+    },
+    {
+      "modelName": "gpt-4.1-nano",
+      "displayName": "GPT-4.1 nano",
+      "serviceType": [
+        "fast"
+      ],
+      "description": "OpenAI GPT-4.1 nano，1M 上下文，极致性价比",
+      "contextWindow": 1047576,
+      "maxOutputTokens": 32768,
+      "capabilities": [
+        "chat",
+        "code",
+        "ultra_long_context",
+        "fast"
+      ],
+      "inputPrice": 0.1,
+      "outputPrice": 0.4,
+      "defaultTemperature": 1,
+      "defaultTopP": 1,
+      "extra": {}
+    },
+    {
+      "modelName": "gpt-4o",
+      "displayName": "GPT-4o",
+      "serviceType": [
+        "vision"
+      ],
+      "description": "多模态模型，支持图像理解",
+      "contextWindow": 128000,
+      "maxOutputTokens": 16384,
+      "capabilities": [
+        "chat",
+        "vision",
+        "image_understanding",
+        "tool_use"
+      ],
+      "inputPrice": 2.5,
+      "outputPrice": 10,
+      "defaultTemperature": 1,
+      "defaultTopP": 1,
+      "extra": {}
+    },
+    {
+      "modelName": "gpt-4o-mini",
+      "displayName": "GPT-4o mini",
+      "serviceType": [
+        "vision"
+      ],
+      "description": "OpenAI GPT-4o mini，高性价比多模态模型",
+      "contextWindow": 128000,
+      "maxOutputTokens": 16384,
+      "capabilities": [
+        "chat",
+        "code",
+        "vision",
+        "tool_use"
+      ],
+      "inputPrice": 0.15,
+      "outputPrice": 0.6,
+      "defaultTemperature": 1,
+      "defaultTopP": 1,
+      "extra": {}
+    },
+    {
+      "modelName": "text-embedding-3-small",
+      "displayName": "text-embedding-3-small",
+      "serviceType": [
+        "embedding"
+      ],
+      "description": "轻量文本向量化模型，1536 维",
+      "contextWindow": 8192,
+      "capabilities": [
+        "text_embedding",
+        "semantic_search"
+      ],
+      "inputPrice": 0.02,
+      "extra": {}
+    },
+    {
+      "modelName": "text-embedding-3-large",
+      "displayName": "text-embedding-3-large",
+      "serviceType": [
+        "embedding"
+      ],
+      "description": "高精度文本向量化模型，3072 维",
+      "contextWindow": 8192,
+      "capabilities": [
+        "text_embedding",
+        "semantic_search"
+      ],
+      "inputPrice": 0.13,
+      "extra": {}
+    },
+    {
+      "modelName": "tts-1",
+      "displayName": "TTS-1",
+      "serviceType": [
+        "tts"
+      ],
+      "description": "标准语音合成",
+      "capabilities": [
+        "tts"
+      ],
+      "inputPrice": 15,
+      "extra": {
+        "voices": [
+          "alloy",
+          "echo",
+          "fable",
+          "onyx",
+          "nova",
+          "shimmer"
+        ],
+        "supportedAudioFormats": [
+          "mp3",
+          "opus",
+          "aac",
+          "flac"
+        ]
+      }
+    },
+    {
+      "modelName": "tts-1-hd",
+      "displayName": "TTS-1-HD",
+      "serviceType": [
+        "tts"
+      ],
+      "description": "高清语音合成",
+      "capabilities": [
+        "tts"
+      ],
+      "inputPrice": 30,
+      "extra": {
+        "voices": [
+          "alloy",
+          "echo",
+          "fable",
+          "onyx",
+          "nova",
+          "shimmer"
+        ],
+        "supportedAudioFormats": [
+          "mp3",
+          "opus",
+          "aac",
+          "flac"
+        ]
+      }
+    },
+    {
+      "modelName": "whisper-1",
+      "displayName": "Whisper",
+      "serviceType": [
+        "asr"
+      ],
+      "description": "通用语音识别",
+      "capabilities": [
+        "asr",
+        "multilingual"
+      ],
+      "inputPrice": 0.006,
+      "extra": {
+        "maxAudioLength": 600,
+        "supportedInputFormats": [
+          "mp3",
+          "mp4",
+          "mpeg",
+          "mpga",
+          "m4a",
+          "wav",
+          "webm"
+        ],
+        "streamingSupported": false
+      }
+    },
+    {
+      "modelName": "o3",
+      "displayName": "o3",
+      "serviceType": [
+        "responses"
+      ],
+      "description": "OpenAI o3 推理模型，200K 上下文，支持工具调用",
+      "contextWindow": 200000,
+      "maxOutputTokens": 100000,
+      "capabilities": [
+        "reasoning",
+        "deep_thinking",
+        "code",
+        "math",
+        "science",
+        "tool_use"
+      ],
+      "inputPrice": 2,
+      "outputPrice": 8,
+      "extra": {}
+    },
+    {
+      "modelName": "o3-pro",
+      "displayName": "o3-pro",
+      "serviceType": [
+        "responses"
+      ],
+      "description": "OpenAI o3-pro 高级推理模型，200K 上下文",
+      "contextWindow": 200000,
+      "maxOutputTokens": 100000,
+      "capabilities": [
+        "reasoning",
+        "deep_thinking",
+        "code",
+        "math",
+        "science"
+      ],
+      "inputPrice": 20,
+      "outputPrice": 80,
+      "extra": {}
+    },
+    {
+      "modelName": "o3-mini",
+      "displayName": "o3-mini",
+      "serviceType": [
+        "responses"
+      ],
+      "description": "OpenAI o3-mini 推理模型，200K 上下文",
+      "contextWindow": 200000,
+      "maxOutputTokens": 100000,
+      "capabilities": [
+        "reasoning",
+        "math",
+        "code",
+        "fast"
+      ],
+      "inputPrice": 1.1,
+      "outputPrice": 4.4,
+      "extra": {}
+    },
+    {
+      "modelName": "o4-mini",
+      "displayName": "o4-mini",
+      "serviceType": [
+        "responses"
+      ],
+      "description": "OpenAI o4-mini 推理模型，200K 上下文，支持工具调用",
+      "contextWindow": 200000,
+      "maxOutputTokens": 100000,
+      "capabilities": [
+        "reasoning",
+        "math",
+        "code",
+        "tool_use",
+        "vision"
+      ],
+      "inputPrice": 1.1,
+      "outputPrice": 4.4,
+      "extra": {
+        "serverSideWebSearch": {
+          "enabled": true,
+          "dialect": "openai-responses",
+          "fallbackPriority": 10,
+          "toolType": "web_search",
+          "searchRequestPriceUsd": 0.01
+        }
+      }
+    }
+  ]
+}

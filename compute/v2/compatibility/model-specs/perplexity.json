@@ -1,0 +1,85 @@
+{
+  "description": "Perplexity Sonar 系列模型规格。参数来源：config-center compute/providers/perplexity.json。所有模型均内置实时联网搜索能力。",
+  "specs": [
+    {
+      "displayName": "Sonar Pro",
+      "family": "sonar-pro",
+      "match": {
+        "exact": [
+          "sonar-pro"
+        ]
+      },
+      "id": "sonar-pro",
+      "spec": {
+        "contextWindow": 200000,
+        "maxOutputTokens": 8192,
+        "capabilities": [
+          "chat",
+          "web_search",
+          "reasoning",
+          "citation"
+        ],
+        "serviceType": [
+          "chat"
+        ],
+        "description": "Perplexity 旗舰搜索增强模型，内置实时联网搜索和引用，200K 上下文"
+      }
+    },
+    {
+      "displayName": "Sonar Reasoning Pro",
+      "family": "sonar-reasoning",
+      "match": {
+        "exact": [
+          "sonar-reasoning-pro"
+        ],
+        "patterns": [
+          "sonar-reasoning*"
+        ]
+      },
+      "id": "sonar-reasoning-pro",
+      "spec": {
+        "contextWindow": 128000,
+        "maxOutputTokens": 8192,
+        "capabilities": [
+          "chat",
+          "web_search",
+          "reasoning",
+          "deep_thinking"
+        ],
+        "serviceType": [
+          "chat"
+        ],
+        "defaultTemperature": null,
+        "supportsReasoning": true,
+        "description": "Perplexity 深度推理模型，内置联网搜索和深度思考"
+      }
+    },
+    {
+      "displayName": "Sonar",
+      "family": "sonar",
+      "match": {
+        "exact": [
+          "sonar"
+        ],
+        "patterns": [
+          "sonar-*"
+        ]
+      },
+      "id": "sonar",
+      "spec": {
+        "contextWindow": 128000,
+        "maxOutputTokens": 4096,
+        "capabilities": [
+          "chat",
+          "web_search",
+          "citation",
+          "fast"
+        ],
+        "serviceType": [
+          "chat"
+        ],
+        "description": "Perplexity 轻量搜索模型，低成本联网搜索"
+      }
+    }
+  ]
+}

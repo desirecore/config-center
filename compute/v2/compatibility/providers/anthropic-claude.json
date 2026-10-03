@@ -1,0 +1,239 @@
+{
+  "id": "provider-anthropic-claude-plan-001",
+  "provider": "anthropic-claude",
+  "brandGroup": "anthropic",
+  "label": "Claude 订阅 (Claude Code)",
+  "baseUrl": "https://api.anthropic.com",
+  "apiFormat": "anthropic-messages",
+  "apiKeyRef": "anthropic-claude-oauth-token",
+  "apiKeyVerified": false,
+  "enabled": false,
+  "status": "unconfigured",
+  "priceCurrency": "USD",
+  "accessMode": "coding-plan",
+  "credentialSource": "claude-oauth",
+  "requiredClientVersion": "10.0.83",
+  "codingPlan": {
+    "quotas": {},
+    "usageTracking": {
+      "method": "none",
+      "consoleUrl": "https://claude.ai/settings/usage"
+    }
+  },
+  "services": [
+    "chat",
+    "reasoning"
+  ],
+  "tombstones": [
+    "claude-opus-4-8",
+    "claude-fable-5",
+    "claude-haiku-4-5",
+    "claude-haiku-4-5-20251001"
+  ],
+  "models": [
+    {
+      "modelName": "claude-opus-5-5",
+      "displayName": "Claude Opus 5.5",
+      "serviceType": [
+        "chat"
+      ],
+      "contextWindow": 1000000,
+      "maxOutputTokens": 128000,
+      "capabilities": [
+        "chat",
+        "reasoning",
+        "code",
+        "vision",
+        "tool_use",
+        "agent",
+        "long_context"
+      ],
+      "description": "Claude 订阅额度计费，长程智能体编程与知识工作模型，1M 上下文",
+      "extra": {
+        "adaptiveThinking": true,
+        "reasoning": {
+          "supportedEfforts": [
+            "low",
+            "medium",
+            "high",
+            "xhigh",
+            "max"
+          ],
+          "defaultEffort": "medium"
+        },
+        "thinkingOnly": true,
+        "thinkingRoundTrip": {
+          "enabled": true,
+          "protocol": "anthropic-messages",
+          "allowEmptySignature": false,
+          "scope": "active-tool-turn"
+        },
+        "thinkingToolTurnValidation": "accepts-thinkless"
+      },
+      "source": "preset"
+    },
+    {
+      "modelName": "claude-fable-5-1",
+      "displayName": "Claude Fable 5.1",
+      "serviceType": [
+        "chat"
+      ],
+      "description": "Claude 订阅额度计费，面向高难推理和长程智能体任务，1M 上下文，始终开启自适应思考",
+      "contextWindow": 1000000,
+      "maxOutputTokens": 128000,
+      "capabilities": [
+        "chat",
+        "reasoning",
+        "code",
+        "vision",
+        "tool_use",
+        "agent",
+        "long_context"
+      ],
+      "extra": {
+        "adaptiveThinking": true,
+        "reasoning": {
+          "supportedEfforts": [
+            "low",
+            "medium",
+            "high",
+            "xhigh",
+            "max"
+          ],
+          "defaultEffort": "high"
+        },
+        "thinkingOnly": true,
+        "thinkingRoundTrip": {
+          "enabled": true,
+          "protocol": "anthropic-messages",
+          "allowEmptySignature": false,
+          "scope": "active-tool-turn"
+        },
+        "thinkingToolTurnValidation": "accepts-thinkless"
+      },
+      "source": "preset"
+    },
+    {
+      "modelName": "claude-opus-5",
+      "displayName": "Claude Opus 5",
+      "serviceType": [
+        "chat"
+      ],
+      "description": "Claude 订阅额度计费，Opus 5 系列模型，复杂智能体编码与长程任务首选，1M 上下文",
+      "contextWindow": 1000000,
+      "maxOutputTokens": 128000,
+      "capabilities": [
+        "chat",
+        "reasoning",
+        "code",
+        "vision",
+        "tool_use",
+        "agent",
+        "long_context"
+      ],
+      "extra": {
+        "adaptiveThinking": true,
+        "reasoning": {
+          "supportedEfforts": [
+            "low",
+            "medium",
+            "high",
+            "xhigh",
+            "max"
+          ],
+          "defaultEffort": "high"
+        },
+        "thinkingRoundTrip": {
+          "enabled": true,
+          "protocol": "anthropic-messages",
+          "allowEmptySignature": false,
+          "scope": "active-tool-turn"
+        },
+        "thinkingToolTurnValidation": "accepts-thinkless"
+      },
+      "source": "preset"
+    },
+    {
+      "modelName": "claude-sonnet-5-5",
+      "displayName": "Claude Sonnet 5.5",
+      "serviceType": [
+        "chat"
+      ],
+      "description": "Claude Sonnet 5.5，速度与智能平衡，1M 上下文，默认 high effort，自适应思考",
+      "contextWindow": 1000000,
+      "maxOutputTokens": 128000,
+      "capabilities": [
+        "chat",
+        "reasoning",
+        "code",
+        "vision",
+        "tool_use",
+        "agent",
+        "long_context"
+      ],
+      "extra": {
+        "adaptiveThinking": true,
+        "reasoning": {
+          "supportedEfforts": [
+            "low",
+            "medium",
+            "high",
+            "xhigh",
+            "max"
+          ],
+          "defaultEffort": "high"
+        },
+        "thinkingRoundTrip": {
+          "enabled": true,
+          "protocol": "anthropic-messages",
+          "allowEmptySignature": false,
+          "scope": "active-tool-turn"
+        },
+        "thinkingToolTurnValidation": "accepts-thinkless",
+        "samplingParametersDeprecated": true,
+        "forcedToolChoiceUnsupported": true
+      },
+      "source": "preset"
+    },
+    {
+      "modelName": "claude-sonnet-5",
+      "displayName": "Claude Sonnet 5",
+      "serviceType": [
+        "chat"
+      ],
+      "description": "Claude 订阅额度计费，速度与智能平衡模型，支持长上下文智能体任务",
+      "contextWindow": 1000000,
+      "maxOutputTokens": 128000,
+      "capabilities": [
+        "chat",
+        "reasoning",
+        "code",
+        "vision",
+        "tool_use",
+        "agent",
+        "long_context"
+      ],
+      "extra": {
+        "adaptiveThinking": true,
+        "reasoning": {
+          "supportedEfforts": [
+            "low",
+            "medium",
+            "high",
+            "xhigh",
+            "max"
+          ],
+          "defaultEffort": "high"
+        },
+        "thinkingRoundTrip": {
+          "enabled": true,
+          "protocol": "anthropic-messages",
+          "allowEmptySignature": false,
+          "scope": "active-tool-turn"
+        },
+        "thinkingToolTurnValidation": "accepts-thinkless"
+      },
+      "source": "preset"
+    }
+  ]
+}

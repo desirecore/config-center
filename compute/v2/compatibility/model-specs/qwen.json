@@ -1,0 +1,1184 @@
+{
+  "description": "阿里通义千问 Qwen 系列模型规格。参数来源：config-center compute/providers/dashscope.json。",
+  "specs": [
+    {
+      "displayName": "Qwen3.7 Max",
+      "family": "qwen3.7-max",
+      "match": {
+        "exact": [
+          "qwen3.7-max",
+          "qwen3.7-max-2026-05-20"
+        ]
+      },
+      "id": "qwen3.7-max",
+      "spec": {
+        "contextWindow": 1000000,
+        "maxOutputTokens": 131072,
+        "capabilities": [
+          "chat",
+          "reasoning",
+          "code",
+          "multilingual",
+          "tool_use",
+          "long_context"
+        ],
+        "serviceType": [
+          "chat"
+        ],
+        "defaultTemperature": 1,
+        "supportsReasoning": true,
+        "description": "Qwen3.7 Max，纯文本模型，100 万上下文，131072 最大输出；当前版本等同 2026-05-20 快照"
+      }
+    },
+    {
+      "displayName": "Qwen3.8 Max Prime",
+      "family": "qwen3.8-max-prime",
+      "match": {
+        "exact": [
+          "qwen3.8-max-prime",
+          "qwen/qwen3.8-max-prime"
+        ]
+      },
+      "id": "qwen3.8-max-prime",
+      "spec": {
+        "contextWindow": 1000000,
+        "capabilities": [
+          "chat",
+          "reasoning",
+          "code",
+          "vision",
+          "tool_use",
+          "long_context"
+        ],
+        "serviceType": [
+          "chat"
+        ],
+        "supportsReasoning": true,
+        "description": "Qwen3.8 Max Prime；OpenRouter 官方目录已提供该 ID，不推断国内 DashScope 同名接入"
+      }
+    },
+    {
+      "displayName": "qwen-image-3.0",
+      "family": "qwen-image-3.0",
+      "match": {
+        "exact": [
+          "qwen-image-3.0"
+        ]
+      },
+      "id": "qwen-image-3.0",
+      "spec": {
+        "capabilities": [
+          "image_generation",
+          "image_editing",
+          "text_rendering"
+        ],
+        "serviceType": [
+          "image_gen"
+        ],
+        "description": "qwen-image-3.0"
+      }
+    },
+    {
+      "displayName": "qwen-image-3.0-pro",
+      "family": "qwen-image-3.0-pro",
+      "match": {
+        "exact": [
+          "qwen-image-3.0-pro"
+        ]
+      },
+      "id": "qwen-image-3.0-pro",
+      "spec": {
+        "capabilities": [
+          "image_generation",
+          "image_editing",
+          "text_rendering"
+        ],
+        "serviceType": [
+          "image_gen"
+        ],
+        "description": "qwen-image-3.0-pro"
+      }
+    },
+    {
+      "displayName": "Qwen3.7 Text Rerank",
+      "family": "qwen3.7-text-rerank",
+      "match": {
+        "exact": [
+          "qwen3.7-text-rerank"
+        ]
+      },
+      "id": "qwen3.7-text-rerank",
+      "spec": {
+        "capabilities": [
+          "rerank",
+          "multilingual"
+        ],
+        "serviceType": [
+          "rerank"
+        ],
+        "description": "Qwen3.7 Text Rerank"
+      }
+    },
+    {
+      "displayName": "qwen3.7-text-embedding-flash",
+      "family": "qwen3.7-text-embedding-flash",
+      "match": {
+        "exact": [
+          "qwen3.7-text-embedding-flash"
+        ]
+      },
+      "id": "qwen3.7-text-embedding-flash",
+      "spec": {
+        "capabilities": [
+          "text_embedding",
+          "multilingual"
+        ],
+        "serviceType": [
+          "embedding"
+        ],
+        "description": "qwen3.7-text-embedding-flash"
+      }
+    },
+    {
+      "displayName": "qwen3.7-text-embedding",
+      "family": "qwen3.7-text-embedding",
+      "match": {
+        "exact": [
+          "qwen3.7-text-embedding"
+        ]
+      },
+      "id": "qwen3.7-text-embedding",
+      "spec": {
+        "capabilities": [
+          "text_embedding",
+          "multilingual"
+        ],
+        "serviceType": [
+          "embedding"
+        ],
+        "description": "qwen3.7-text-embedding"
+      }
+    },
+    {
+      "displayName": "Qwen3.8 Omni Flash",
+      "family": "qwen3.8-omni-flash",
+      "match": {
+        "exact": [
+          "qwen3.8-omni-flash",
+          "qwen/qwen3.8-omni-flash"
+        ]
+      },
+      "id": "qwen3.8-omni-flash",
+      "spec": {
+        "capabilities": [
+          "chat",
+          "reasoning",
+          "vision",
+          "audio_understanding",
+          "video_understanding",
+          "tool_use",
+          "long_context"
+        ],
+        "serviceType": [
+          "chat",
+          "vision"
+        ],
+        "description": "Qwen3.8 Omni Flash",
+        "contextWindow": 1000000,
+        "maxOutputTokens": 131072,
+        "supportsReasoning": true
+      }
+    },
+    {
+      "displayName": "Qwen3.8 Max",
+      "family": "qwen3.8-max",
+      "match": {
+        "exact": [
+          "qwen3.8-max"
+        ]
+      },
+      "id": "qwen3.8-max",
+      "spec": {
+        "contextWindow": 1000000,
+        "maxOutputTokens": 131072,
+        "capabilities": [
+          "chat",
+          "reasoning",
+          "code",
+          "multilingual",
+          "tool_use",
+          "long_context",
+          "agent",
+          "vision",
+          "video_understanding"
+        ],
+        "serviceType": [
+          "chat"
+        ],
+        "defaultTemperature": 0.6,
+        "defaultTopP": 0.95,
+        "supportsReasoning": true,
+        "description": "通义千问 Qwen3.8 Max 稳定版，100 万上下文，支持视觉与视频理解"
+      },
+      "routing": {
+        "tier": "flagship",
+        "routingPriority": 40,
+        "eligibleForAgent": true,
+        "defaultReference": false,
+        "reasoning": {
+          "supportedModes": [
+            "auto",
+            "off",
+            "minimal",
+            "low",
+            "medium",
+            "high",
+            "xhigh"
+          ],
+          "defaultMode": "xhigh"
+        }
+      }
+    },
+    {
+      "displayName": "Qwen3.8 Flash",
+      "family": "qwen3.8-flash",
+      "match": {
+        "exact": [
+          "qwen3.8-flash"
+        ]
+      },
+      "id": "qwen3.8-flash",
+      "spec": {
+        "contextWindow": 1000000,
+        "maxOutputTokens": 131072,
+        "capabilities": [
+          "chat",
+          "reasoning",
+          "deep_thinking",
+          "code",
+          "multilingual",
+          "tool_use",
+          "long_context",
+          "agent",
+          "vision",
+          "video_understanding",
+          "fast"
+        ],
+        "serviceType": [
+          "chat",
+          "reasoning",
+          "vision"
+        ],
+        "defaultTemperature": 0.6,
+        "defaultTopP": 0.95,
+        "supportsReasoning": true,
+        "extra": {
+          "thinkingDefault": true,
+          "thinkingMaxTokens": 262144
+        },
+        "releasedAt": "2026-08-26",
+        "description": "通义千问 Qwen3.8 Flash，高性价比多模态推理模型，支持 100 万上下文及文本、图像、视频输入"
+      },
+      "routing": {
+        "tier": "lightweight",
+        "routingPriority": 40,
+        "eligibleForAgent": true,
+        "defaultReference": false,
+        "reasoning": {
+          "supportedModes": [
+            "auto",
+            "off",
+            "minimal",
+            "low",
+            "medium",
+            "high",
+            "xhigh",
+            "max"
+          ],
+          "defaultMode": "xhigh"
+        }
+      }
+    },
+    {
+      "displayName": "Qwen3.8 Max Preview",
+      "family": "qwen3.8-max-preview",
+      "match": {
+        "exact": [
+          "qwen3.8-max-preview"
+        ],
+        "patterns": [
+          "qwen3.8-max-preview*"
+        ]
+      },
+      "id": "qwen3.8-max-preview",
+      "spec": {
+        "contextWindow": 1000000,
+        "maxOutputTokens": 65536,
+        "capabilities": [
+          "chat",
+          "reasoning",
+          "code",
+          "multilingual",
+          "tool_use",
+          "long_context",
+          "agent",
+          "vision"
+        ],
+        "serviceType": [
+          "chat"
+        ],
+        "defaultTemperature": 0.6,
+        "defaultTopP": 0.95,
+        "supportsReasoning": true,
+        "description": "通义千问 Qwen3.8 Max 预览版，100 万上下文，支持视觉理解"
+      },
+      "routing": {
+        "tier": "flagship",
+        "routingPriority": 40,
+        "eligibleForAgent": true,
+        "defaultReference": false,
+        "reasoning": {
+          "supportedModes": [
+            "auto",
+            "off",
+            "minimal",
+            "low",
+            "medium",
+            "high",
+            "xhigh"
+          ],
+          "defaultMode": "high"
+        }
+      }
+    },
+    {
+      "displayName": "Qwen3.7 Plus",
+      "family": "qwen3.7",
+      "match": {
+        "exact": [
+          "qwen3.7-plus"
+        ],
+        "patterns": [
+          "qwen3.7-plus*"
+        ]
+      },
+      "id": "qwen3.7-plus",
+      "spec": {
+        "contextWindow": 1000000,
+        "maxOutputTokens": 65536,
+        "capabilities": [
+          "chat",
+          "reasoning",
+          "code",
+          "vision",
+          "multilingual",
+          "tool_use",
+          "long_context"
+        ],
+        "serviceType": [
+          "chat"
+        ],
+        "defaultTemperature": 1,
+        "supportsReasoning": true,
+        "description": "通义千问 Qwen3.7 Plus 高性价比多模态模型，100 万上下文"
+      },
+      "routing": {
+        "tier": "balanced",
+        "routingPriority": 35,
+        "eligibleForAgent": true,
+        "defaultReference": false,
+        "reasoning": {
+          "supportedModes": [
+            "auto",
+            "off",
+            "minimal",
+            "low",
+            "medium",
+            "high",
+            "xhigh"
+          ],
+          "defaultMode": "medium"
+        }
+      }
+    },
+    {
+      "displayName": "Qwen Max",
+      "family": "qwen-max",
+      "match": {
+        "patterns": [
+          "qwen-max*"
+        ]
+      },
+      "id": "qwen-max",
+      "spec": {
+        "contextWindow": 32768,
+        "maxOutputTokens": 8192,
+        "capabilities": [
+          "chat",
+          "reasoning",
+          "code",
+          "multilingual",
+          "long_context"
+        ],
+        "serviceType": [
+          "chat"
+        ],
+        "defaultTemperature": 0.7
+      }
+    },
+    {
+      "displayName": "Qwen Plus",
+      "family": "qwen-plus",
+      "match": {
+        "patterns": [
+          "qwen-plus*"
+        ]
+      },
+      "id": "qwen-plus",
+      "spec": {
+        "contextWindow": 1000000,
+        "maxOutputTokens": 32768,
+        "capabilities": [
+          "chat",
+          "reasoning",
+          "code",
+          "thinking_mode"
+        ],
+        "serviceType": [
+          "chat"
+        ],
+        "defaultTemperature": 0.7
+      }
+    },
+    {
+      "displayName": "Qwen Turbo",
+      "family": "qwen-turbo",
+      "match": {
+        "patterns": [
+          "qwen-turbo*"
+        ]
+      },
+      "id": "qwen-turbo",
+      "spec": {
+        "contextWindow": 1000000,
+        "maxOutputTokens": 16384,
+        "capabilities": [
+          "chat",
+          "code",
+          "long_context",
+          "fast"
+        ],
+        "serviceType": [
+          "chat"
+        ],
+        "defaultTemperature": 0.7
+      }
+    },
+    {
+      "displayName": "Qwen3 Max",
+      "family": "qwen3-max",
+      "id": "qwen3-max",
+      "spec": {
+        "contextWindow": 262144,
+        "maxOutputTokens": 65536,
+        "capabilities": [
+          "chat",
+          "reasoning",
+          "code",
+          "multilingual",
+          "long_context",
+          "tool_use",
+          "agent",
+          "vision"
+        ],
+        "serviceType": [
+          "chat"
+        ],
+        "defaultTemperature": 0.7,
+        "supportsReasoning": true
+      }
+    },
+    {
+      "displayName": "Qwen3.5 Plus",
+      "family": "qwen3.5",
+      "id": "qwen3.5-plus",
+      "spec": {
+        "contextWindow": 1000000,
+        "maxOutputTokens": 65536,
+        "capabilities": [
+          "chat",
+          "reasoning",
+          "code",
+          "multilingual",
+          "long_context",
+          "tool_use",
+          "agent",
+          "vision"
+        ],
+        "serviceType": [
+          "chat"
+        ],
+        "defaultTemperature": 0.6,
+        "supportsReasoning": true
+      }
+    },
+    {
+      "displayName": "Qwen3.6 Plus",
+      "family": "qwen3.6",
+      "id": "qwen3.6-plus",
+      "spec": {
+        "contextWindow": 1000000,
+        "maxOutputTokens": 65536,
+        "capabilities": [
+          "chat",
+          "reasoning",
+          "code",
+          "multilingual",
+          "long_context",
+          "tool_use",
+          "agent",
+          "vision"
+        ],
+        "serviceType": [
+          "chat",
+          "vision"
+        ],
+        "defaultTemperature": 0.6,
+        "supportsReasoning": true
+      }
+    },
+    {
+      "displayName": "Qwen3.6 Flash",
+      "family": "qwen3.6",
+      "match": {
+        "exact": [
+          "qwen3.6-flash"
+        ]
+      },
+      "id": "qwen3.6-flash",
+      "spec": {
+        "contextWindow": 1000000,
+        "maxOutputTokens": 65536,
+        "capabilities": [
+          "chat",
+          "reasoning",
+          "code",
+          "multilingual",
+          "long_context",
+          "tool_use",
+          "vision",
+          "fast"
+        ],
+        "serviceType": [
+          "chat",
+          "vision"
+        ],
+        "defaultTemperature": 0.6,
+        "supportsReasoning": true,
+        "description": "通义千问3.6 Flash，高性价比多模态模型，100万上下文"
+      }
+    },
+    {
+      "displayName": "Qwen Long",
+      "family": "qwen-long",
+      "match": {
+        "exact": [
+          "qwen-long"
+        ]
+      },
+      "id": "qwen-long",
+      "spec": {
+        "contextWindow": 10000000,
+        "maxOutputTokens": 32768,
+        "capabilities": [
+          "chat",
+          "ultra_long_context",
+          "document_processing"
+        ],
+        "serviceType": [
+          "chat"
+        ],
+        "defaultTemperature": 1,
+        "description": "通义千问 Long，支持 1000 万上下文，适合超长文档处理"
+      }
+    },
+    {
+      "displayName": "Qwen3-VL-Plus",
+      "family": "qwen3-vl",
+      "match": {
+        "exact": [
+          "qwen3-vl-plus"
+        ]
+      },
+      "id": "qwen3-vl-plus",
+      "spec": {
+        "contextWindow": 262144,
+        "maxOutputTokens": 32768,
+        "capabilities": [
+          "chat",
+          "vision",
+          "image_understanding",
+          "ocr",
+          "chart_analysis"
+        ],
+        "serviceType": [
+          "vision"
+        ],
+        "defaultTemperature": 0.7,
+        "description": "通义千问3代视觉模型Plus版，支持图像理解"
+      }
+    },
+    {
+      "displayName": "Qwen3-VL-Flash",
+      "family": "qwen3-vl",
+      "match": {
+        "exact": [
+          "qwen3-vl-flash"
+        ]
+      },
+      "id": "qwen3-vl-flash",
+      "spec": {
+        "contextWindow": 262144,
+        "maxOutputTokens": 32768,
+        "capabilities": [
+          "chat",
+          "vision",
+          "image_understanding",
+          "fast"
+        ],
+        "serviceType": [
+          "vision"
+        ],
+        "defaultTemperature": 0.7,
+        "description": "通义千问3代视觉模型Flash版，高性价比"
+      }
+    },
+    {
+      "displayName": "text-embedding-v3",
+      "family": "text-embedding-v3",
+      "match": {
+        "exact": [
+          "text-embedding-v3"
+        ]
+      },
+      "id": "text-embedding-v3",
+      "spec": {
+        "contextWindow": 8192,
+        "capabilities": [
+          "text_embedding",
+          "semantic_search",
+          "chinese_optimized"
+        ],
+        "serviceType": [
+          "embedding"
+        ],
+        "description": "阿里云文本向量化模型 v3"
+      }
+    },
+    {
+      "displayName": "text-embedding-v4",
+      "family": "text-embedding-v4",
+      "match": {
+        "exact": [
+          "text-embedding-v4"
+        ]
+      },
+      "id": "text-embedding-v4",
+      "spec": {
+        "contextWindow": 8192,
+        "capabilities": [
+          "text_embedding",
+          "semantic_search",
+          "rag"
+        ],
+        "serviceType": [
+          "embedding"
+        ],
+        "description": "阿里云百炼文本向量模型v4，支持多维度与多语种"
+      }
+    },
+    {
+      "displayName": "Qwen3-Rerank",
+      "family": "qwen3-rerank",
+      "match": {
+        "exact": [
+          "qwen3-rerank"
+        ]
+      },
+      "id": "qwen3-rerank",
+      "spec": {
+        "contextWindow": 120000,
+        "capabilities": [
+          "rerank",
+          "semantic_reranking",
+          "multilingual"
+        ],
+        "serviceType": [
+          "rerank"
+        ],
+        "description": "检索重排序，支持 100+ 语种"
+      }
+    },
+    {
+      "displayName": "CosyVoice V2",
+      "family": "cosyvoice",
+      "match": {
+        "exact": [
+          "cosyvoice-v2"
+        ]
+      },
+      "id": "cosyvoice-v2",
+      "spec": {
+        "capabilities": [
+          "tts",
+          "multilingual",
+          "chinese_optimized"
+        ],
+        "serviceType": [
+          "tts"
+        ],
+        "description": "通义语音合成，支持中英文"
+      }
+    },
+    {
+      "displayName": "Paraformer V2",
+      "family": "paraformer",
+      "match": {
+        "exact": [
+          "paraformer-v2"
+        ]
+      },
+      "id": "paraformer-v2",
+      "spec": {
+        "capabilities": [
+          "asr",
+          "chinese_optimized"
+        ],
+        "serviceType": [
+          "asr"
+        ],
+        "description": "通义语音识别"
+      }
+    },
+    {
+      "displayName": "通义万相 2.7 Pro",
+      "family": "wan2",
+      "match": {
+        "exact": [
+          "wan2.7-image-pro"
+        ]
+      },
+      "id": "wan2.7-image-pro",
+      "spec": {
+        "capabilities": [
+          "image_generation",
+          "chinese_optimized",
+          "high_quality"
+        ],
+        "serviceType": [
+          "image_gen"
+        ],
+        "description": "万相最新旗舰文生图模型，支持 4K 分辨率"
+      },
+      "routing": {
+        "tier": "flagship",
+        "routingPriority": 100,
+        "eligibleForAgent": false,
+        "defaultReference": false,
+        "reasoning": {
+          "supportedModes": [
+            "auto"
+          ],
+          "defaultMode": "auto"
+        }
+      }
+    },
+    {
+      "displayName": "通义万相 2.7",
+      "family": "wan2",
+      "match": {
+        "exact": [
+          "wan2.7-image"
+        ]
+      },
+      "id": "wan2.7-image",
+      "spec": {
+        "capabilities": [
+          "image_generation",
+          "chinese_optimized"
+        ],
+        "serviceType": [
+          "image_gen"
+        ],
+        "description": "万相最新标准文生图模型，高画质"
+      },
+      "routing": {
+        "tier": "balanced",
+        "routingPriority": 107,
+        "eligibleForAgent": false,
+        "defaultReference": false,
+        "reasoning": {
+          "supportedModes": [
+            "auto"
+          ],
+          "defaultMode": "auto"
+        }
+      }
+    },
+    {
+      "displayName": "通义万相 2.6 文生图",
+      "family": "wan2",
+      "match": {
+        "exact": [
+          "wan2.6-t2i"
+        ]
+      },
+      "id": "wan2.6-t2i",
+      "spec": {
+        "capabilities": [
+          "image_generation",
+          "chinese_optimized"
+        ],
+        "serviceType": [
+          "image_gen"
+        ],
+        "description": "万相 2.6 文生图专用模型，稳定可靠"
+      }
+    },
+    {
+      "displayName": "通义万相 2.2 Plus",
+      "family": "wan2",
+      "match": {
+        "exact": [
+          "wan2.2-t2i-plus"
+        ]
+      },
+      "id": "wan2.2-t2i-plus",
+      "spec": {
+        "capabilities": [
+          "image_generation",
+          "chinese_optimized"
+        ],
+        "serviceType": [
+          "image_gen"
+        ],
+        "description": "万相 2.2 增强版，画质与速度平衡"
+      }
+    },
+    {
+      "displayName": "通义万相 2.2 Flash",
+      "family": "wan2",
+      "match": {
+        "exact": [
+          "wan2.2-t2i-flash"
+        ]
+      },
+      "id": "wan2.2-t2i-flash",
+      "spec": {
+        "capabilities": [
+          "image_generation",
+          "chinese_optimized",
+          "fast"
+        ],
+        "serviceType": [
+          "image_gen"
+        ],
+        "description": "万相 2.2 快速版，生成速度极快"
+      }
+    },
+    {
+      "displayName": "通义万相 2.6 文生视频",
+      "family": "wan2",
+      "match": {
+        "exact": [
+          "wan2.6-t2v"
+        ]
+      },
+      "id": "wan2.6-t2v",
+      "spec": {
+        "capabilities": [
+          "video_generation",
+          "chinese_optimized"
+        ],
+        "serviceType": [
+          "video_gen"
+        ],
+        "description": "万相 2.6 文生视频模型，支持文生视频和图生视频"
+      }
+    },
+    {
+      "displayName": "CosyVoice 声音复刻",
+      "family": "cosyvoice",
+      "match": {
+        "exact": [
+          "cosyvoice-clone"
+        ]
+      },
+      "id": "cosyvoice-clone",
+      "spec": {
+        "capabilities": [
+          "voice_clone",
+          "chinese_optimized",
+          "few_shot"
+        ],
+        "serviceType": [
+          "voice_clone"
+        ],
+        "description": "通义声音复刻，少量样本即可克隆"
+      }
+    },
+    {
+      "displayName": "Qwen-Omni-Turbo",
+      "family": "qwen-omni",
+      "match": {
+        "exact": [
+          "qwen-omni-turbo"
+        ]
+      },
+      "id": "qwen-omni-turbo",
+      "spec": {
+        "contextWindow": 32768,
+        "maxOutputTokens": 2048,
+        "capabilities": [
+          "chat",
+          "vision",
+          "tts",
+          "asr",
+          "multimodal",
+          "tool_use"
+        ],
+        "serviceType": [
+          "omni"
+        ],
+        "defaultTemperature": 0.7,
+        "description": "通义全能模型，支持音视频文本多模态"
+      }
+    },
+    {
+      "displayName": "Qwen3-Max（翻译）",
+      "family": "qwen3-trans",
+      "match": {
+        "exact": [
+          "qwen3-max-trans"
+        ]
+      },
+      "id": "qwen3-max-trans",
+      "spec": {
+        "contextWindow": 131072,
+        "maxOutputTokens": 8192,
+        "capabilities": [
+          "translation",
+          "multilingual",
+          "chinese_optimized"
+        ],
+        "serviceType": [
+          "translation"
+        ],
+        "defaultTemperature": 0.65,
+        "description": "通义千问翻译，中英日韩等多语种互译"
+      }
+    },
+    {
+      "displayName": "Qwen3 Coder",
+      "family": "qwen3-coder",
+      "match": {
+        "exact": [
+          "qwen3-coder",
+          "qwen/qwen3-coder:free",
+          "qwen3-coder:free"
+        ]
+      },
+      "id": "qwen3-coder",
+      "spec": {
+        "contextWindow": 262144,
+        "maxOutputTokens": 65536,
+        "capabilities": [
+          "chat",
+          "code",
+          "long_context",
+          "agent",
+          "tool_use"
+        ],
+        "serviceType": [
+          "chat"
+        ],
+        "defaultTemperature": 0.7,
+        "description": "通义千问3 Coder 编程模型（通过 OpenRouter 提供，:free 层）"
+      }
+    },
+    {
+      "displayName": "Qwen3.5 35B-A3B",
+      "family": "qwen3.5",
+      "match": {
+        "exact": [
+          "qwen3.5-35b-a3b"
+        ]
+      },
+      "id": "qwen3.5-35b-a3b",
+      "spec": {
+        "contextWindow": 131072,
+        "maxOutputTokens": 65536,
+        "capabilities": [
+          "chat",
+          "reasoning",
+          "code",
+          "vision",
+          "tool_use"
+        ],
+        "serviceType": [
+          "chat"
+        ],
+        "defaultTemperature": 0.7,
+        "description": "Qwen3.5 35B-A3B MoE 模型（35B 总参/3B 激活），131K 上下文"
+      }
+    },
+    {
+      "displayName": "Qwen3.5 27B",
+      "family": "qwen3.5",
+      "match": {
+        "exact": [
+          "qwen3.5-27b"
+        ]
+      },
+      "id": "qwen3.5-27b",
+      "spec": {
+        "contextWindow": 131072,
+        "maxOutputTokens": 65536,
+        "capabilities": [
+          "chat",
+          "reasoning",
+          "code",
+          "vision",
+          "tool_use"
+        ],
+        "serviceType": [
+          "chat"
+        ],
+        "defaultTemperature": 0.7,
+        "description": "Qwen3.5 27B Dense 模型，131K 上下文"
+      }
+    },
+    {
+      "displayName": "Qwen3 Coder 480B (硅基)",
+      "family": "qwen3-coder",
+      "match": {
+        "exact": [
+          "qwen3-coder-480b",
+          "Qwen/Qwen3-Coder-480B-A35B-Instruct"
+        ]
+      },
+      "id": "qwen3-coder-480b",
+      "spec": {
+        "contextWindow": 262144,
+        "maxOutputTokens": 262144,
+        "capabilities": [
+          "chat",
+          "code",
+          "long_context",
+          "agent",
+          "tool_use"
+        ],
+        "serviceType": [
+          "chat"
+        ],
+        "defaultTemperature": 0.7,
+        "description": "Qwen3-Coder-480B-A35B，480B MoE（35B 激活），256K 上下文，面向 Agentic Coding"
+      }
+    },
+    {
+      "displayName": "Qwen3 235B (硅基)",
+      "family": "qwen3-235b",
+      "match": {
+        "exact": [
+          "qwen3-235b",
+          "Qwen/Qwen3-235B-A22B-Instruct-2507"
+        ]
+      },
+      "id": "qwen3-235b",
+      "spec": {
+        "contextWindow": 262144,
+        "maxOutputTokens": 262144,
+        "capabilities": [
+          "chat",
+          "code",
+          "multilingual",
+          "tool_use",
+          "agent",
+          "long_context"
+        ],
+        "serviceType": [
+          "chat"
+        ],
+        "defaultTemperature": 0.7,
+        "description": "Qwen3-235B-A22B-Instruct-2507，235B MoE 通用指令模型，262K 上下文"
+      }
+    },
+    {
+      "displayName": "千问图像 2.0 Pro",
+      "family": "qwen-image-2",
+      "match": {
+        "exact": [
+          "qwen-image-2.0-pro"
+        ]
+      },
+      "id": "qwen-image-2.0-pro",
+      "spec": {
+        "capabilities": [
+          "image_generation",
+          "chinese_optimized",
+          "high_quality"
+        ],
+        "serviceType": [
+          "image_gen"
+        ],
+        "description": "千问图像生成 2.0 Pro 旗舰版，高画质多风格"
+      }
+    },
+    {
+      "displayName": "千问图像 2.0",
+      "family": "qwen-image-2",
+      "match": {
+        "exact": [
+          "qwen-image-2.0"
+        ]
+      },
+      "id": "qwen-image-2.0",
+      "spec": {
+        "capabilities": [
+          "image_generation",
+          "chinese_optimized"
+        ],
+        "serviceType": [
+          "image_gen"
+        ],
+        "description": "千问图像生成 2.0 标准版"
+      }
+    },
+    {
+      "displayName": "qwen3-coder-plus",
+      "family": "qwen3-coder-plus",
+      "match": {
+        "exact": [
+          "qwen3-coder-plus"
+        ]
+      },
+      "id": "qwen3-coder-plus",
+      "spec": {
+        "description": "精确绑定已有接入型号，参数未核实；identity-only规格不继承旧family能力、窗口、协议或自动路由资格。"
+      }
+    },
+    {
+      "displayName": "qwen3-coder-next",
+      "family": "qwen3-coder-next",
+      "match": {
+        "exact": [
+          "qwen3-coder-next"
+        ]
+      },
+      "id": "qwen3-coder-next",
+      "spec": {
+        "description": "精确绑定已有接入型号，参数未核实；identity-only规格不继承旧family能力、窗口、协议或自动路由资格。"
+      }
+    }
+  ]
+}

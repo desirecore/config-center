@@ -1,0 +1,107 @@
+{
+  "description": "Mistral 系列模型规格。参数来源：config-center compute/providers/mistral.json。",
+  "specs": [
+    {
+      "displayName": "Mistral Medium 3.5",
+      "family": "mistral-medium-3-5",
+      "match": {
+        "exact": [
+          "mistral-medium-3-5",
+          "mistral-medium-3.5",
+          "mistral-medium-latest"
+        ]
+      },
+      "id": "mistral-medium-3.5",
+      "spec": {
+        "contextWindow": 262144,
+        "capabilities": [
+          "chat",
+          "reasoning",
+          "code",
+          "vision",
+          "tool_use"
+        ],
+        "serviceType": [
+          "chat"
+        ],
+        "defaultTemperature": 1,
+        "supportsReasoning": true,
+        "description": "Mistral Medium 3.5，官方 API ID mistral-medium-3-5，256K 上下文"
+      }
+    },
+    {
+      "displayName": "Mistral Large",
+      "family": "mistral-large-2512",
+      "match": {
+        "exact": [
+          "mistral-large-latest",
+          "mistral-large-2512"
+        ]
+      },
+      "id": "mistral-large-latest",
+      "spec": {
+        "contextWindow": 256000,
+        "capabilities": [
+          "chat",
+          "reasoning",
+          "code",
+          "vision",
+          "tool_use",
+          "long_context"
+        ],
+        "serviceType": [
+          "chat"
+        ],
+        "defaultTemperature": 0.7
+      }
+    },
+    {
+      "displayName": "Mistral Small 4",
+      "family": "mistral-small-2603",
+      "match": {
+        "exact": [
+          "mistral-small-latest",
+          "mistral-small-2603"
+        ]
+      },
+      "id": "mistral-small-latest",
+      "spec": {
+        "contextWindow": 262144,
+        "capabilities": [
+          "chat",
+          "code",
+          "vision",
+          "reasoning",
+          "fast",
+          "tool_use"
+        ],
+        "serviceType": [
+          "fast"
+        ],
+        "defaultTemperature": 0.7
+      }
+    },
+    {
+      "displayName": "Codestral",
+      "family": "codestral",
+      "match": {
+        "patterns": [
+          "codestral*"
+        ]
+      },
+      "id": "codestral-latest",
+      "spec": {
+        "contextWindow": 128000,
+        "maxOutputTokens": 32768,
+        "capabilities": [
+          "code",
+          "fill_in_the_middle"
+        ],
+        "serviceType": [
+          "chat"
+        ],
+        "defaultTemperature": 0.7
+      }
+    }
+  ]
+}

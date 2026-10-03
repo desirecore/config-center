@@ -60,3 +60,21 @@
 }
 ```
 <!-- source-metadata:end -->
+
+## compute/model-specs/qwen.json：精确绑定
+
+仅登记既有接入精确身份；官网字段证据待核，不能把本记录当作完整能力合同。
+
+<!-- source-details: {"config":"compute/model-specs/qwen.json","id":"qwen3-coder-next"} -->
+```json
+{
+  "spec.description": "精确绑定已有接入型号，参数未核实；identity-only规格不继承旧family能力、窗口、协议或自动路由资格。"
+}
+```
+<!-- source-details:end -->
+
+<!-- source-config: compute/model-specs/qwen.json -->
+
+| 模型 ID | 上下文 / 输出 | 计价 | 已核字段→来源 | 来源入口 | 状态 | 数据指纹 |
+| --- | --- | --- | --- | --- | --- | --- |
+| `qwen3-coder-next` | 未声明 / 未声明 | 非计价主数据 | `id`→[qwen-coding](../SOURCES.md#qwen-coding) | [qwen-coding](../SOURCES.md#qwen-coding) | partial | `949ea8dd99a8c45948115ff0c61db7e27a400298c62bce1382db9cf8817eb00f` |
