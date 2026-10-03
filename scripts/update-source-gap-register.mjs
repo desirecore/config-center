@@ -33,7 +33,9 @@ export function renderRegister(root = ROOT) {
     const dir = `docs/model-sources/providers/${supplier}`
     const sourceList = parseSourcePage(readFileSync(join(root, dir, 'SOURCES.md'), 'utf8')).metadata.sources
     const sources = new Map(sourceList.map(source => [source.id, source])), records = []
-    for (const name of readdirSync(join(root, dir, 'models')).sort()) {
+    const modelDir = join(root, dir, 'models')
+    // Dynamic-discovery providers have no model pages; Git does not retain empty directories.
+    for (const name of (existsSync(modelDir) ? readdirSync(modelDir) : []).sort()) {
       const modelDoc = `${dir}/models/${name}`, text = readFileSync(join(root, modelDoc), 'utf8')
       if (!text.includes('<!-- source-metadata:start -->')) continue
       for (const record of parseSourcePage(text).records) {
