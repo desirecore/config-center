@@ -1,0 +1,42 @@
+{
+  "id": "provider-xunfei-001",
+  "provider": "xunfei",
+  "label": "讯飞星火",
+  "baseUrl": "https://spark-api-open.xf-yun.com/v1",
+  "apiFormat": "openai-completions",
+  "apiKeyRef": "xunfei",
+  "apiKeyVerified": false,
+  "enabled": false,
+  "status": "unconfigured",
+  "priceCurrency": "CNY",
+  "services": [
+    "chat",
+    "reasoning"
+  ],
+  "tombstones": [
+    "spark-x"
+  ],
+  "models": [
+    {
+      "modelName": "4.0Ultra",
+      "displayName": "讯飞星火 4.0 Ultra",
+      "serviceType": [
+        "chat"
+      ],
+      "description": "讯飞星火最强通用模型，支持推理、代码和工具调用",
+      "contextWindow": 32768,
+      "maxOutputTokens": 32768,
+      "capabilities": [
+        "chat",
+        "reasoning",
+        "code",
+        "tool_use"
+      ],
+      "defaultTemperature": 1,
+      "defaultTopP": 1,
+      "extra": {
+        "pricingNote": "官方公开文档说明模型价格以控制台及实际购买页为准，未公开固定 token 单价"
+      }
+    }
+  ]
+}

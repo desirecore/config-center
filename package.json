@@ -8,7 +8,7 @@
     "node": ">=20"
   },
   "scripts": {
-    "validate": "node scripts/validate.mjs && node scripts/validate-sources.mjs && node scripts/validate-data-sources.mjs && node scripts/validate-runtime-sources.mjs && node scripts/update-source-gap-register.mjs --check",
+    "validate": "node scripts/validate.mjs && node scripts/validate-sources.mjs && node scripts/validate-data-sources.mjs && node scripts/validate-runtime-sources.mjs && node scripts/update-source-gap-register.mjs --check && node scripts/catalog-v2/compile.mjs --check",
     "test": "node --test __tests__/*.test.mjs",
     "validate:sources": "node scripts/validate-sources.mjs",
     "validate:data-sources": "node scripts/validate-data-sources.mjs",
@@ -16,7 +16,9 @@
     "runtimes:update": "node scripts/update-runtime-catalog.mjs --write",
     "validate:runtimes": "node scripts/validate-runtime-sources.mjs",
     "sources:gaps": "node scripts/update-source-gap-register.mjs",
-    "sources:gaps:check": "node scripts/update-source-gap-register.mjs --check"
+    "sources:gaps:check": "node scripts/update-source-gap-register.mjs --check",
+    "catalog:compile": "node scripts/catalog-v2/compile.mjs",
+    "catalog:check": "node scripts/catalog-v2/compile.mjs --check"
   },
   "dependencies": {
     "ajv": "^8.17.1",

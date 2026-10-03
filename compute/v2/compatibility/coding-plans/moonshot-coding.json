@@ -1,0 +1,47 @@
+{
+  "id": "provider-moonshot-coding-001",
+  "provider": "moonshot",
+  "brandGroup": "moonshot",
+  "label": "Kimi Code",
+  "baseUrl": "https://api.kimi.com/coding/v1",
+  "apiFormat": "openai-completions",
+  "apiKeyRef": "",
+  "apiKeyVerified": false,
+  "enabled": false,
+  "status": "unconfigured",
+  "accessMode": "coding-plan",
+  "services": [
+    "chat",
+    "reasoning"
+  ],
+  "codingPlan": {
+    "quotas": {},
+    "usageTracking": {
+      "method": "none",
+      "consoleUrl": "https://platform.moonshot.cn/"
+    }
+  },
+  "models": [
+    {
+      "modelName": "kimi-for-coding",
+      "displayName": "Kimi For Coding (Auto)",
+      "serviceType": [
+        "chat",
+        "reasoning"
+      ],
+      "description": "Kimi Code 稳定路由 ID，自动映射到 Kimi Code 当前模型，262K 上下文",
+      "contextWindow": 262144,
+      "maxOutputTokens": 32768,
+      "capabilities": [
+        "chat",
+        "reasoning",
+        "code",
+        "tool_use",
+        "agent",
+        "long_context",
+        "vision"
+      ],
+      "source": "preset"
+    }
+  ]
+}

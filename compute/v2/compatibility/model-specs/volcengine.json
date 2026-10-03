@@ -1,0 +1,808 @@
+{
+  "description": "火山引擎豆包系列模型规格。参数来源：config-center compute/providers/volcengine.json。包含豆包 Seed 系列对话、DeepSeek 托管版、Embedding、语音克隆、实时语音、同传和翻译服务。doubao-seed-1.6-thinking 为推理模型。",
+  "specs": [
+    {
+      "displayName": "Doubao Seed Evolving",
+      "family": "doubao-seed-evolving",
+      "match": {
+        "exact": [
+          "doubao-seed-evolving"
+        ]
+      },
+      "id": "doubao-seed-evolving",
+      "spec": {
+        "contextWindow": 1000000,
+        "capabilities": [
+          "chat",
+          "reasoning",
+          "code",
+          "vision",
+          "tool_use",
+          "agent",
+          "long_context"
+        ],
+        "serviceType": [
+          "chat",
+          "reasoning"
+        ],
+        "supportsReasoning": true,
+        "description": "Seed 系列持续迭代模型，通过固定 ID 获取最新版本，2026-09-09 更新"
+      }
+    },
+    {
+      "displayName": "豆包 Seed 2.1 Pro",
+      "family": "doubao-seed-2.1-pro",
+      "match": {
+        "exact": [
+          "doubao-seed-2.1-pro"
+        ]
+      },
+      "id": "doubao-seed-2.1-pro",
+      "spec": {
+        "serviceType": [
+          "chat",
+          "reasoning",
+          "vision"
+        ],
+        "description": "火山方舟豆包 Seed 2.1 Pro，生产级 Coding、Agent 与多模态旗舰模型",
+        "contextWindow": 256000,
+        "maxOutputTokens": 262144,
+        "capabilities": [
+          "chat",
+          "reasoning",
+          "code",
+          "vision",
+          "multilingual",
+          "long_context",
+          "tool_use",
+          "agent",
+          "deep_thinking"
+        ],
+        "supportsReasoning": true
+      }
+    },
+    {
+      "displayName": "豆包 2.0 Pro",
+      "family": "doubao-seed-2",
+      "match": {
+        "exact": [
+          "doubao-seed-2.0-pro"
+        ],
+        "patterns": [
+          "doubao-seed-2.0-pro*"
+        ]
+      },
+      "id": "doubao-seed-2.0-pro",
+      "spec": {
+        "contextWindow": 256000,
+        "maxOutputTokens": 128000,
+        "capabilities": [
+          "chat",
+          "reasoning",
+          "code",
+          "multilingual",
+          "long_context",
+          "tool_use",
+          "vision"
+        ],
+        "serviceType": [
+          "chat"
+        ],
+        "defaultTemperature": 1,
+        "description": "火山引擎豆包 Seed 2.0 旗舰模型，256K 上下文，支持复杂推理、Agent 和多模态"
+      }
+    },
+    {
+      "displayName": "豆包 2.0 Lite",
+      "family": "doubao-seed-2",
+      "match": {
+        "exact": [
+          "doubao-seed-2.0-lite"
+        ],
+        "patterns": [
+          "doubao-seed-2.0-lite*"
+        ]
+      },
+      "id": "doubao-seed-2.0-lite",
+      "spec": {
+        "contextWindow": 256000,
+        "maxOutputTokens": 32000,
+        "capabilities": [
+          "chat",
+          "reasoning",
+          "code",
+          "multilingual",
+          "long_context",
+          "tool_use",
+          "vision",
+          "audio_understanding",
+          "video_understanding"
+        ],
+        "serviceType": [
+          "chat"
+        ],
+        "defaultTemperature": 1,
+        "description": "豆包 Seed 2.0 全模态均衡模型，支持视频/图像/音频/文本统一理解"
+      }
+    },
+    {
+      "displayName": "豆包 2.0 Mini",
+      "family": "doubao-seed-2",
+      "match": {
+        "exact": [
+          "doubao-seed-2.0-mini"
+        ],
+        "patterns": [
+          "doubao-seed-2.0-mini*"
+        ]
+      },
+      "id": "doubao-seed-2.0-mini",
+      "spec": {
+        "contextWindow": 256000,
+        "maxOutputTokens": 32000,
+        "capabilities": [
+          "chat",
+          "reasoning",
+          "code",
+          "multilingual",
+          "long_context",
+          "tool_use",
+          "vision",
+          "audio_understanding",
+          "video_understanding",
+          "fast"
+        ],
+        "serviceType": [
+          "chat"
+        ],
+        "defaultTemperature": 1,
+        "description": "豆包 Seed 2.0 全模态轻量模型，低延迟高并发，支持全模态理解"
+      }
+    },
+    {
+      "displayName": "豆包 2.0 Code",
+      "family": "doubao-seed-2",
+      "match": {
+        "exact": [
+          "doubao-seed-2.0-code"
+        ]
+      },
+      "id": "doubao-seed-2.0-code",
+      "spec": {
+        "contextWindow": 256000,
+        "maxOutputTokens": 128000,
+        "capabilities": [
+          "chat",
+          "reasoning",
+          "code",
+          "long_context",
+          "tool_use",
+          "vision",
+          "deep_thinking"
+        ],
+        "serviceType": [
+          "chat"
+        ],
+        "defaultTemperature": 1,
+        "description": "豆包 Seed 2.0 编程模型，面向 Agentic Coding 场景优化"
+      }
+    },
+    {
+      "displayName": "豆包 Seed-1.8",
+      "family": "doubao-seed-1",
+      "match": {
+        "exact": [
+          "doubao-seed-1.8"
+        ],
+        "patterns": [
+          "doubao-seed-1.8*"
+        ]
+      },
+      "id": "doubao-seed-1.8",
+      "spec": {
+        "contextWindow": 256000,
+        "maxOutputTokens": 16000,
+        "capabilities": [
+          "chat",
+          "reasoning",
+          "code",
+          "multilingual",
+          "long_context",
+          "tool_use",
+          "vision"
+        ],
+        "serviceType": [
+          "chat"
+        ],
+        "defaultTemperature": 1,
+        "description": "火山引擎豆包 1.8 旗舰模型，256K 上下文，支持深度思考和多模态"
+      }
+    },
+    {
+      "displayName": "豆包 Seed-1.6",
+      "family": "doubao-seed-1",
+      "match": {
+        "exact": [
+          "doubao-seed-1.6"
+        ],
+        "patterns": [
+          "doubao-seed-1.6"
+        ]
+      },
+      "id": "doubao-seed-1.6",
+      "spec": {
+        "contextWindow": 256000,
+        "maxOutputTokens": 32000,
+        "capabilities": [
+          "chat",
+          "reasoning",
+          "code",
+          "multilingual",
+          "long_context",
+          "tool_use",
+          "vision"
+        ],
+        "serviceType": [
+          "chat"
+        ],
+        "defaultTemperature": 1,
+        "description": "火山引擎豆包 1.6 旗舰模型，256K 上下文"
+      }
+    },
+    {
+      "displayName": "豆包 Seed-1.6 思考版",
+      "family": "doubao-seed-1",
+      "match": {
+        "exact": [
+          "doubao-seed-1.6-thinking"
+        ]
+      },
+      "id": "doubao-seed-1.6-thinking",
+      "spec": {
+        "contextWindow": 256000,
+        "maxOutputTokens": 16000,
+        "capabilities": [
+          "reasoning",
+          "math",
+          "code",
+          "deep_thinking",
+          "long_context"
+        ],
+        "serviceType": [
+          "chat"
+        ],
+        "defaultTemperature": null,
+        "supportsReasoning": true,
+        "description": "火山引擎豆包 1.6 深度思考模型，256K 上下文"
+      }
+    },
+    {
+      "displayName": "豆包 Seed-1.6 Flash",
+      "family": "doubao-seed-1",
+      "match": {
+        "exact": [
+          "doubao-seed-1.6-flash"
+        ]
+      },
+      "id": "doubao-seed-1.6-flash",
+      "spec": {
+        "contextWindow": 256000,
+        "maxOutputTokens": 16000,
+        "capabilities": [
+          "chat",
+          "code",
+          "fast",
+          "long_context",
+          "vision"
+        ],
+        "serviceType": [
+          "chat"
+        ],
+        "defaultTemperature": 1,
+        "description": "火山引擎豆包 1.6 快速版，成本较前代下降 63%"
+      }
+    },
+    {
+      "displayName": "豆包 Seed-1.6 Lite",
+      "family": "doubao-seed-1",
+      "match": {
+        "exact": [
+          "doubao-seed-1.6-lite"
+        ]
+      },
+      "id": "doubao-seed-1.6-lite",
+      "spec": {
+        "contextWindow": 256000,
+        "maxOutputTokens": 32000,
+        "capabilities": [
+          "chat",
+          "code",
+          "fast"
+        ],
+        "serviceType": [
+          "chat"
+        ],
+        "defaultTemperature": 1,
+        "description": "火山引擎豆包 1.6 轻量版，极致性价比"
+      }
+    },
+    {
+      "displayName": "豆包 Seed-1.6 视觉版",
+      "family": "doubao-seed-1",
+      "match": {
+        "exact": [
+          "doubao-seed-1.6-vision"
+        ]
+      },
+      "id": "doubao-seed-1.6-vision",
+      "spec": {
+        "contextWindow": 256000,
+        "maxOutputTokens": 32000,
+        "capabilities": [
+          "chat",
+          "vision",
+          "video_understanding",
+          "gui_agent",
+          "long_context"
+        ],
+        "serviceType": [
+          "vision"
+        ],
+        "defaultTemperature": 1,
+        "description": "火山引擎豆包 1.6 视觉模型，256K 上下文，支持视频理解"
+      }
+    },
+    {
+      "displayName": "豆包 Seed-Code",
+      "family": "doubao-seed-code",
+      "match": {
+        "exact": [
+          "doubao-seed-code"
+        ]
+      },
+      "id": "doubao-seed-code",
+      "spec": {
+        "contextWindow": 256000,
+        "maxOutputTokens": 32768,
+        "capabilities": [
+          "code",
+          "reasoning",
+          "long_context",
+          "deep_thinking"
+        ],
+        "serviceType": [
+          "chat"
+        ],
+        "defaultTemperature": 1,
+        "description": "火山引擎豆包编程专用模型，256K 上下文"
+      }
+    },
+    {
+      "displayName": "DeepSeek V3.2 (火山引擎)",
+      "family": "deepseek-v3",
+      "match": {
+        "exact": [
+          "deepseek-v3.2"
+        ]
+      },
+      "id": "deepseek-v3.2",
+      "spec": {
+        "contextWindow": 128000,
+        "maxOutputTokens": 32000,
+        "capabilities": [
+          "chat",
+          "reasoning",
+          "code",
+          "multilingual"
+        ],
+        "serviceType": [
+          "chat"
+        ],
+        "defaultTemperature": 1,
+        "description": "火山引擎托管的 DeepSeek V3.2，128K 上下文"
+      }
+    },
+    {
+      "displayName": "DeepSeek R1 (火山引擎)",
+      "family": "deepseek-r1",
+      "match": {
+        "exact": [
+          "deepseek-r1"
+        ]
+      },
+      "id": "deepseek-r1",
+      "spec": {
+        "contextWindow": 128000,
+        "maxOutputTokens": 65536,
+        "capabilities": [
+          "reasoning",
+          "math",
+          "code",
+          "science",
+          "deep_thinking"
+        ],
+        "serviceType": [
+          "reasoning"
+        ],
+        "defaultTemperature": null,
+        "supportsReasoning": true,
+        "description": "火山引擎托管的 DeepSeek R1 推理模型，128K 上下文"
+      }
+    },
+    {
+      "displayName": "豆包 Embedding",
+      "family": "doubao-embedding",
+      "match": {
+        "exact": [
+          "doubao-embedding"
+        ]
+      },
+      "id": "doubao-embedding",
+      "spec": {
+        "contextWindow": 4096,
+        "capabilities": [
+          "text_embedding",
+          "semantic_search",
+          "rag",
+          "chinese_optimized"
+        ],
+        "serviceType": [
+          "embedding"
+        ],
+        "description": "火山引擎豆包标准向量模型，默认 2048 维度，可选 512/1024/2048"
+      }
+    },
+    {
+      "displayName": "豆包 Embedding Large",
+      "family": "doubao-embedding",
+      "match": {
+        "exact": [
+          "doubao-embedding-large"
+        ]
+      },
+      "id": "doubao-embedding-large",
+      "spec": {
+        "contextWindow": 4096,
+        "capabilities": [
+          "text_embedding",
+          "semantic_search",
+          "rag",
+          "chinese_optimized"
+        ],
+        "serviceType": [
+          "embedding"
+        ],
+        "description": "火山引擎豆包大号向量模型，默认 2048 维度，可选 512/1024/2048/4096"
+      }
+    },
+    {
+      "displayName": "火山声音复刻",
+      "family": "volc-tts",
+      "match": {
+        "exact": [
+          "volc-mega-tts-clone"
+        ]
+      },
+      "id": "volc-mega-tts-clone",
+      "spec": {
+        "capabilities": [
+          "voice_clone",
+          "chinese_optimized",
+          "few_shot"
+        ],
+        "serviceType": [
+          "voice_clone"
+        ],
+        "description": "火山引擎声音复刻，支持极少样本克隆"
+      }
+    },
+    {
+      "displayName": "火山实时语音",
+      "family": "volc-voice",
+      "match": {
+        "exact": [
+          "volc-realtime-voice"
+        ]
+      },
+      "id": "volc-realtime-voice",
+      "spec": {
+        "capabilities": [
+          "realtime",
+          "speech_to_speech",
+          "low_latency",
+          "chinese_optimized"
+        ],
+        "serviceType": [
+          "realtime_voice"
+        ],
+        "description": "火山引擎实时语音交互"
+      }
+    },
+    {
+      "displayName": "火山同声传译",
+      "family": "volc-interpret",
+      "match": {
+        "exact": [
+          "volc-simultaneous"
+        ]
+      },
+      "id": "volc-simultaneous",
+      "spec": {
+        "capabilities": [
+          "simultaneous_interpretation",
+          "chinese_optimized",
+          "low_latency"
+        ],
+        "serviceType": [
+          "simultaneous_interpret"
+        ],
+        "description": "火山引擎同声传译，支持中英双向"
+      }
+    },
+    {
+      "displayName": "火山翻译",
+      "family": "volc-translation",
+      "match": {
+        "exact": [
+          "volc-translation"
+        ]
+      },
+      "id": "volc-translation",
+      "spec": {
+        "capabilities": [
+          "translation",
+          "multilingual",
+          "chinese_optimized"
+        ],
+        "serviceType": [
+          "translation"
+        ],
+        "description": "火山引擎机器翻译，支持多语种互译"
+      }
+    },
+    {
+      "displayName": "Seedance 2.0",
+      "family": "doubao-seedance-2",
+      "match": {
+        "exact": [
+          "doubao-seedance-2-0-260128",
+          "doubao-seedance-2.0"
+        ],
+        "patterns": [
+          "doubao-seedance-2-0*"
+        ]
+      },
+      "id": "doubao-seedance-2.0",
+      "spec": {
+        "capabilities": [
+          "video_generation",
+          "image_to_video",
+          "text_to_video",
+          "video_editing",
+          "video_extension",
+          "audio_generation",
+          "first_last_frame"
+        ],
+        "serviceType": [
+          "video_gen"
+        ],
+        "description": "Seedance 2.0 豆包最强视频生成模型，4-15秒 2K 视频，原生同步音频，支持最多9张图片+3个视频+3个音频参考输入，~$0.14/秒"
+      },
+      "routing": {
+        "tier": "flagship",
+        "routingPriority": 120,
+        "eligibleForAgent": false,
+        "defaultReference": false,
+        "reasoning": {
+          "supportedModes": [
+            "auto"
+          ],
+          "defaultMode": "auto"
+        }
+      }
+    },
+    {
+      "displayName": "Seedance 2.0 Fast",
+      "family": "doubao-seedance-2",
+      "match": {
+        "exact": [
+          "doubao-seedance-2-0-fast-260128",
+          "doubao-seedance-2.0-fast"
+        ],
+        "patterns": [
+          "doubao-seedance-2-0-fast*"
+        ]
+      },
+      "id": "doubao-seedance-2.0-fast",
+      "spec": {
+        "capabilities": [
+          "video_generation",
+          "image_to_video",
+          "text_to_video",
+          "video_editing",
+          "video_extension",
+          "audio_generation",
+          "first_last_frame",
+          "fast"
+        ],
+        "serviceType": [
+          "video_gen"
+        ],
+        "description": "Seedance 2.0 快速版，音画同生，多模态生视频+编辑+延长"
+      },
+      "routing": {
+        "tier": "balanced",
+        "routingPriority": 119,
+        "eligibleForAgent": false,
+        "defaultReference": false,
+        "reasoning": {
+          "supportedModes": [
+            "auto"
+          ],
+          "defaultMode": "auto"
+        }
+      }
+    },
+    {
+      "displayName": "Seedance 2.0 Mini",
+      "family": "doubao-seedance-2",
+      "match": {
+        "exact": [
+          "doubao-seedance-2-0-mini-260615",
+          "doubao-seedance-2.0-mini"
+        ],
+        "patterns": [
+          "doubao-seedance-2-0-mini*"
+        ]
+      },
+      "id": "doubao-seedance-2.0-mini",
+      "spec": {
+        "capabilities": [
+          "video_generation",
+          "image_to_video",
+          "text_to_video",
+          "video_editing",
+          "video_extension",
+          "audio_generation",
+          "first_last_frame",
+          "fast",
+          "cost_effective"
+        ],
+        "serviceType": [
+          "video_gen"
+        ],
+        "description": "Seedance 2.0 轻量版，音画同生，高性价比"
+      },
+      "routing": {
+        "tier": "lightweight",
+        "routingPriority": 118,
+        "eligibleForAgent": false,
+        "defaultReference": false,
+        "reasoning": {
+          "supportedModes": [
+            "auto"
+          ],
+          "defaultMode": "auto"
+        }
+      }
+    },
+    {
+      "displayName": "Seedance 1.5 Pro",
+      "family": "doubao-seedance-1",
+      "match": {
+        "exact": [
+          "doubao-seedance-1-5-pro-251215",
+          "doubao-seedance-1.5-pro"
+        ],
+        "patterns": [
+          "doubao-seedance-1-5*"
+        ]
+      },
+      "id": "doubao-seedance-1.5-pro",
+      "spec": {
+        "capabilities": [
+          "video_generation",
+          "image_to_video",
+          "text_to_video",
+          "first_last_frame",
+          "audio_generation"
+        ],
+        "serviceType": [
+          "video_gen"
+        ],
+        "description": "Seedance 1.5 Pro 音画同生，12秒视频，多参考图输入（即将下线）"
+      }
+    },
+    {
+      "displayName": "Seedance 1.0 Pro",
+      "family": "doubao-seedance-1",
+      "match": {
+        "exact": [
+          "doubao-seedance-1-0-pro-250528",
+          "doubao-seedance-1.0-pro"
+        ],
+        "patterns": [
+          "doubao-seedance-1-0-pro*"
+        ]
+      },
+      "id": "doubao-seedance-1.0-pro",
+      "spec": {
+        "capabilities": [
+          "video_generation",
+          "image_to_video",
+          "text_to_video",
+          "first_last_frame"
+        ],
+        "serviceType": [
+          "video_gen"
+        ],
+        "description": "Seedance 1.0 Pro 文生视频/图生视频，支持首尾帧控制"
+      }
+    },
+    {
+      "displayName": "Seedance 1.0 Pro Fast",
+      "family": "doubao-seedance-1",
+      "match": {
+        "exact": [
+          "doubao-seedance-1-0-pro-fast-251015",
+          "doubao-seedance-1.0-pro-fast"
+        ],
+        "patterns": [
+          "doubao-seedance-1-0-pro-fast*"
+        ]
+      },
+      "id": "doubao-seedance-1.0-pro-fast",
+      "spec": {
+        "capabilities": [
+          "video_generation",
+          "image_to_video",
+          "text_to_video",
+          "fast"
+        ],
+        "serviceType": [
+          "video_gen"
+        ],
+        "description": "Seedance 1.0 Pro 快速版，图生视频-首帧，5秒 720P 仅需 10 秒"
+      }
+    },
+    {
+      "displayName": "Doubao Seed 2.1 Turbo",
+      "id": "doubao-seed-2.1-turbo",
+      "spec": {
+        "contextWindow": 256000,
+        "maxOutputTokens": 128000,
+        "capabilities": [
+          "chat",
+          "reasoning",
+          "code",
+          "multilingual",
+          "long_context",
+          "tool_use",
+          "vision"
+        ],
+        "serviceType": [
+          "chat"
+        ],
+        "supportsReasoning": true
+      },
+      "routing": {
+        "tier": "balanced",
+        "routingPriority": 40,
+        "eligibleForAgent": true,
+        "defaultReference": false,
+        "reasoning": {
+          "supportedModes": [
+            "auto",
+            "off",
+            "minimal",
+            "low",
+            "medium",
+            "high",
+            "xhigh"
+          ],
+          "defaultMode": "medium"
+        }
+      }
+    }
+  ]
+}

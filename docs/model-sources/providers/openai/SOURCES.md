@@ -57,6 +57,25 @@ GPT-6.1 Sol 的窗口、输出、推理档位与直连计价已再次核对。AP
 
 `extra.responsesOnly` 是为工具调用采用的保守协议收紧。官网要求工具调用走 Responses；普通无工具的 Chat Completions 仍支持，不能把此配置理解为原厂完全不支持 Chat Completions。
 
+### realtime21-spec
+
+- 入口：[realtime21-spec](https://developers.openai.com/api/docs/models/gpt-realtime-2.1.md)
+- 读取状态：`fetched`；只确认精确型号、总窗口与最大输出；不证明接入协议已验收。
+
+### realtime21mini-spec
+
+- 入口：[realtime21mini-spec](https://developers.openai.com/api/docs/models/gpt-realtime-2.1-mini.md)
+- 读取状态：`fetched`；只确认精确型号、总窗口与最大输出；不证明接入协议已验收。
+
+### realtimetranslate-spec
+
+- 入口：[realtimetranslate-spec](https://developers.openai.com/api/docs/models/gpt-realtime-translate.md)
+- 读取状态：`fetched`；只确认精确型号、总窗口与最大输出；不证明接入协议已验收。
+
+### openai-deprecations
+
+- 入口：[openai-deprecations](https://developers.openai.com/api/docs/deprecations.md)；本轮读取正文，Nano停止日2027-04-01，当前只deprecated。
+
 <!-- source-metadata:start -->
 ```json
 {
@@ -153,6 +172,46 @@ GPT-6.1 Sol 的窗口、输出、推理档位与直连计价已再次核对。AP
       "checkedAt": "2026-10-03",
       "contentSha256": "3dd20e2c95f09f3efb19c6255387a4e07d4d7c213367cca0a015e162a8f5b4e0",
       "resolvedUrl": "https://developers.openai.com/api/docs/models/gpt-5.4-nano.md"
+    },
+    {
+      "id": "realtime21-spec",
+      "url": "https://developers.openai.com/api/docs/models/gpt-realtime-2.1.md",
+      "kind": "official-doc",
+      "scope": "原厂精确模型、窗口与输出；接入协议独立验收",
+      "retrieval": "fetched",
+      "checkedAt": "2026-10-03",
+      "contentSha256": "4ab3318598ef8f29b919a3da13125b84b54c463ad71e67dee644aa6adc78a408",
+      "resolvedUrl": "https://developers.openai.com/api/docs/models/gpt-realtime-2.1.md"
+    },
+    {
+      "id": "realtime21mini-spec",
+      "url": "https://developers.openai.com/api/docs/models/gpt-realtime-2.1-mini.md",
+      "kind": "official-doc",
+      "scope": "原厂精确模型、窗口与输出；接入协议独立验收",
+      "retrieval": "fetched",
+      "checkedAt": "2026-10-03",
+      "contentSha256": "bec9dbe2d4ea92540cbc688f85a935916dbe6b0f3605405dc8ae2bc034e1094b",
+      "resolvedUrl": "https://developers.openai.com/api/docs/models/gpt-realtime-2.1-mini.md"
+    },
+    {
+      "id": "realtimetranslate-spec",
+      "url": "https://developers.openai.com/api/docs/models/gpt-realtime-translate.md",
+      "kind": "official-doc",
+      "scope": "原厂精确模型、窗口与输出；接入协议独立验收",
+      "retrieval": "fetched",
+      "checkedAt": "2026-10-03",
+      "contentSha256": "a95860e250772faa38ba78b08834abde51619679962f081c9c3b1b2f0636ab13",
+      "resolvedUrl": "https://developers.openai.com/api/docs/models/gpt-realtime-translate.md"
+    },
+    {
+      "id": "openai-deprecations",
+      "url": "https://developers.openai.com/api/docs/deprecations.md",
+      "kind": "official-doc",
+      "scope": "原厂宣布deprecated与正式停止服务日期分开；不把未来停止日当当前退役",
+      "retrieval": "fetched",
+      "checkedAt": "2026-10-03",
+      "contentSha256": "ac78c7daedd9543728f7a2c6ed453afce3bcbdcf590535fb4b65a7d2e7c43481",
+      "resolvedUrl": "https://developers.openai.com/api/docs/deprecations.md"
     }
   ]
 }

@@ -1,0 +1,125 @@
+{
+  "id": "provider-mistral-001",
+  "provider": "mistral",
+  "label": "Mistral AI",
+  "baseUrl": "https://api.mistral.ai/v1",
+  "apiFormat": "openai-completions",
+  "apiKeyRef": "mistral",
+  "apiKeyVerified": false,
+  "enabled": false,
+  "status": "unconfigured",
+  "priceCurrency": "USD",
+  "services": [
+    "chat",
+    "fast"
+  ],
+  "models": [
+    {
+      "modelName": "mistral-medium-3-5",
+      "displayName": "Mistral Medium 3.5",
+      "contextWindow": 262144,
+      "capabilities": [
+        "chat",
+        "reasoning",
+        "code",
+        "vision",
+        "tool_use"
+      ],
+      "serviceType": [
+        "chat"
+      ],
+      "defaultTemperature": 1,
+      "description": "Mistral Medium 3.5，官方 API ID mistral-medium-3-5，256K 上下文",
+      "inputPrice": 1.5,
+      "outputPrice": 7.5
+    },
+    {
+      "modelName": "mistral-medium-latest",
+      "displayName": "Mistral Medium 3.5",
+      "serviceType": [
+        "chat"
+      ],
+      "description": "Mistral 前沿多模态模型，面向 Agentic 和 Coding 场景优化，256K 上下文",
+      "contextWindow": 262144,
+      "capabilities": [
+        "chat",
+        "reasoning",
+        "code",
+        "vision",
+        "tool_use",
+        "agent",
+        "long_context"
+      ],
+      "inputPrice": 1.5,
+      "outputPrice": 7.5,
+      "defaultTemperature": 0.7,
+      "defaultTopP": 1,
+      "extra": {}
+    },
+    {
+      "modelName": "mistral-large-latest",
+      "displayName": "Mistral Large 3",
+      "serviceType": [
+        "chat"
+      ],
+      "description": "Mistral 旗舰模型，256K 上下文，支持视觉和工具调用",
+      "contextWindow": 256000,
+      "capabilities": [
+        "chat",
+        "reasoning",
+        "code",
+        "vision",
+        "tool_use",
+        "long_context"
+      ],
+      "inputPrice": 0.5,
+      "outputPrice": 1.5,
+      "defaultTemperature": 0.7,
+      "defaultTopP": 1,
+      "extra": {}
+    },
+    {
+      "modelName": "mistral-small-latest",
+      "displayName": "Mistral Small 4",
+      "serviceType": [
+        "fast"
+      ],
+      "description": "Mistral Small 4，指令、推理与编码混合模型，256K 上下文",
+      "contextWindow": 262144,
+      "capabilities": [
+        "chat",
+        "code",
+        "vision",
+        "reasoning",
+        "fast",
+        "tool_use",
+        "agent",
+        "long_context"
+      ],
+      "inputPrice": 0.15,
+      "outputPrice": 0.6,
+      "defaultTemperature": 0.7,
+      "defaultTopP": 1,
+      "extra": {}
+    },
+    {
+      "modelName": "codestral-latest",
+      "displayName": "Codestral",
+      "serviceType": [
+        "chat"
+      ],
+      "description": "Mistral 专业代码模型，支持 Fill-in-the-Middle 补全",
+      "contextWindow": 128000,
+      "maxOutputTokens": 32768,
+      "capabilities": [
+        "code",
+        "fill_in_the_middle"
+      ],
+      "inputPrice": 0.3,
+      "outputPrice": 0.9,
+      "defaultTemperature": 0.7,
+      "defaultTopP": 1,
+      "extra": {}
+    }
+  ]
+}

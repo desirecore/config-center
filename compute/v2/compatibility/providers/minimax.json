@@ -1,0 +1,728 @@
+{
+  "id": "provider-minimax-001",
+  "provider": "minimax",
+  "label": "MiniMax",
+  "baseUrl": "https://api.minimaxi.com/anthropic",
+  "apiFormat": "anthropic-messages",
+  "mediaBaseUrl": "https://api.minimaxi.com/v1",
+  "apiKeyRef": "minimax",
+  "apiKeyVerified": false,
+  "enabled": false,
+  "status": "unconfigured",
+  "priceCurrency": "CNY",
+  "services": [
+    "chat",
+    "fast",
+    "reasoning",
+    "vision",
+    "image_gen",
+    "tts",
+    "video_gen",
+    "music_gen"
+  ],
+  "tombstones": [
+    "MiniMax-Text-01"
+  ],
+  "models": [
+    {
+      "modelName": "MiniMax-M3",
+      "displayName": "MiniMax M3",
+      "serviceType": [
+        "chat",
+        "reasoning",
+        "vision"
+      ],
+      "description": "MiniMax M3，前沿多模态 Coding 与 Agent 模型，1M 上下文",
+      "contextWindow": 1000000,
+      "maxOutputTokens": 131072,
+      "capabilities": [
+        "chat",
+        "reasoning",
+        "code",
+        "tool_use",
+        "agent",
+        "vision",
+        "long_context"
+      ],
+      "inputPrice": 2.1,
+      "outputPrice": 8.4,
+      "defaultTemperature": 1,
+      "defaultTopP": 0.95,
+      "extra": {
+        "pricingTiers": [
+          {
+            "maxInputTokens": 512000,
+            "inputPrice": 2.1,
+            "outputPrice": 8.4,
+            "cacheReadPrice": 0.42
+          },
+          {
+            "maxInputTokens": 1000000,
+            "inputPrice": 4.2,
+            "outputPrice": 16.8,
+            "cacheReadPrice": 0.84
+          }
+        ],
+        "priorityPricingTiers": [
+          {
+            "maxInputTokens": 512000,
+            "inputPrice": 3.15,
+            "outputPrice": 12.6,
+            "cacheReadPrice": 0.63
+          },
+          {
+            "maxInputTokens": 1000000,
+            "inputPrice": 6.3,
+            "outputPrice": 25.2,
+            "cacheReadPrice": 1.26
+          }
+        ],
+        "pricingNotes": "MiniMax 国内开放平台按量计费永久五折价格。"
+      }
+    },
+    {
+      "modelName": "MiniMax-M2.7",
+      "displayName": "MiniMax M2.7",
+      "serviceType": [
+        "chat",
+        "reasoning"
+      ],
+      "description": "MiniMax 新一代旗舰模型，擅长复杂 Agent、软件工程与专业办公任务",
+      "contextWindow": 204800,
+      "maxOutputTokens": 131072,
+      "capabilities": [
+        "chat",
+        "reasoning",
+        "code",
+        "tool_use"
+      ],
+      "inputPrice": 2.1,
+      "outputPrice": 8.4,
+      "defaultTemperature": 1,
+      "defaultTopP": 0.95,
+      "extra": {
+        "cacheReadPrice": 0.42,
+        "cacheWritePrice": 2.625,
+        "outputSpeedTps": 60
+      }
+    },
+    {
+      "modelName": "MiniMax-M2.7-highspeed",
+      "displayName": "MiniMax M2.7 高速版",
+      "serviceType": [
+        "fast"
+      ],
+      "description": "MiniMax M2.7 极速版，效果一致，输出更快，适合低延迟场景",
+      "contextWindow": 204800,
+      "maxOutputTokens": 131072,
+      "capabilities": [
+        "chat",
+        "reasoning",
+        "code",
+        "tool_use",
+        "fast"
+      ],
+      "inputPrice": 4.2,
+      "outputPrice": 16.8,
+      "defaultTemperature": 1,
+      "defaultTopP": 0.95,
+      "extra": {
+        "cacheReadPrice": 0.42,
+        "cacheWritePrice": 2.625,
+        "outputSpeedTps": 100
+      }
+    },
+    {
+      "modelName": "MiniMax-M2.5",
+      "displayName": "MiniMax M2.5",
+      "serviceType": [
+        "chat",
+        "reasoning"
+      ],
+      "description": "MiniMax M2.5，204.8K 上下文，支持深度推理和工具调用",
+      "contextWindow": 204800,
+      "maxOutputTokens": 131072,
+      "capabilities": [
+        "chat",
+        "reasoning",
+        "code",
+        "tool_use",
+        "long_context"
+      ],
+      "inputPrice": 2.1,
+      "outputPrice": 8.4,
+      "defaultTemperature": 1,
+      "defaultTopP": 0.95,
+      "extra": {
+        "cacheReadPrice": 0.21,
+        "cacheWritePrice": 2.625,
+        "outputSpeedTps": 60
+      }
+    },
+    {
+      "modelName": "MiniMax-M2.5-highspeed",
+      "displayName": "MiniMax M2.5 高速版",
+      "serviceType": [
+        "fast"
+      ],
+      "description": "MiniMax M2.5 高速推理版本(100TPS)，适合低延迟场景",
+      "contextWindow": 204800,
+      "maxOutputTokens": 131072,
+      "capabilities": [
+        "chat",
+        "reasoning",
+        "code",
+        "tool_use",
+        "fast"
+      ],
+      "inputPrice": 4.2,
+      "outputPrice": 16.8,
+      "defaultTemperature": 1,
+      "defaultTopP": 0.95,
+      "extra": {
+        "cacheReadPrice": 0.21,
+        "cacheWritePrice": 2.625,
+        "outputSpeedTps": 100
+      }
+    },
+    {
+      "modelName": "MiniMax-M2.1",
+      "displayName": "MiniMax M2.1",
+      "serviceType": [
+        "chat"
+      ],
+      "description": "MiniMax 上一代主力模型，200K 上下文，性价比优秀",
+      "contextWindow": 204800,
+      "maxOutputTokens": 131072,
+      "capabilities": [
+        "chat",
+        "code",
+        "tool_use",
+        "reasoning"
+      ],
+      "inputPrice": 2.1,
+      "outputPrice": 8.4,
+      "defaultTemperature": 1,
+      "defaultTopP": 0.95,
+      "extra": {
+        "cacheReadPrice": 0.21,
+        "cacheWritePrice": 2.625,
+        "outputSpeedTps": 60
+      }
+    },
+    {
+      "modelName": "MiniMax-M2.1-highspeed",
+      "displayName": "MiniMax M2.1 高速版",
+      "serviceType": [
+        "fast"
+      ],
+      "description": "MiniMax M2.1 高速推理版本，适合低延迟场景",
+      "contextWindow": 204800,
+      "maxOutputTokens": 131072,
+      "capabilities": [
+        "chat",
+        "reasoning",
+        "code",
+        "tool_use",
+        "fast"
+      ],
+      "inputPrice": 4.2,
+      "outputPrice": 16.8,
+      "defaultTemperature": 1,
+      "defaultTopP": 0.95,
+      "extra": {
+        "cacheReadPrice": 0.21,
+        "cacheWritePrice": 2.625,
+        "outputSpeedTps": 100
+      }
+    },
+    {
+      "modelName": "MiniMax-M2",
+      "displayName": "MiniMax M2",
+      "serviceType": [
+        "chat"
+      ],
+      "description": "MiniMax M2，优化编码和 Agent 工作流",
+      "contextWindow": 204800,
+      "maxOutputTokens": 131072,
+      "capabilities": [
+        "chat",
+        "code",
+        "tool_use"
+      ],
+      "inputPrice": 2.1,
+      "outputPrice": 8.4,
+      "defaultTemperature": 1,
+      "defaultTopP": 0.95,
+      "extra": {
+        "legacy": true,
+        "cacheReadPrice": 0.21,
+        "cacheWritePrice": 2.625
+      }
+    },
+    {
+      "modelName": "M2-her",
+      "displayName": "MiniMax M2 Her",
+      "serviceType": [
+        "chat"
+      ],
+      "description": "MiniMax 角色扮演对话模型，专为多轮角色对话设计",
+      "contextWindow": 204800,
+      "maxOutputTokens": 131072,
+      "capabilities": [
+        "chat",
+        "roleplay"
+      ],
+      "inputPrice": 2.1,
+      "outputPrice": 8.4,
+      "defaultTemperature": 1,
+      "defaultTopP": 0.95,
+      "extra": {
+        "cacheReadPrice": 0.21,
+        "cacheWritePrice": 2.625
+      }
+    },
+    {
+      "modelName": "image-01",
+      "displayName": "MiniMax Image 01",
+      "serviceType": [
+        "image_gen"
+      ],
+      "description": "MiniMax 文生图/图生图模型，支持主题参考（角色一致性），最长 1500 字符 prompt",
+      "capabilities": [
+        "image_generation",
+        "subject_reference",
+        "chinese_optimized"
+      ],
+      "extra": {
+        "supportedAspectRatios": [
+          "1:1",
+          "16:9",
+          "9:16",
+          "4:3",
+          "3:4",
+          "3:2",
+          "2:3",
+          "21:9"
+        ],
+        "maxPromptLength": 1500,
+        "maxBatchSize": 9,
+        "responseFormats": [
+          "url",
+          "base64"
+        ],
+        "urlExpiry": "24h",
+        "pricePerImage": 0.025
+      }
+    },
+    {
+      "modelName": "image-01-live",
+      "displayName": "MiniMax Image 01 Live",
+      "serviceType": [
+        "image_gen"
+      ],
+      "description": "MiniMax 文生图模型（Live 版），支持画风控制（漫画/元气/中世纪/水彩）",
+      "capabilities": [
+        "image_generation",
+        "style_control",
+        "subject_reference",
+        "chinese_optimized"
+      ],
+      "extra": {
+        "supportedAspectRatios": [
+          "1:1",
+          "16:9",
+          "9:16",
+          "4:3",
+          "3:4",
+          "3:2",
+          "2:3"
+        ],
+        "supportedStyles": [
+          "漫画",
+          "元气",
+          "中世纪",
+          "水彩"
+        ],
+        "maxPromptLength": 1500,
+        "maxBatchSize": 9,
+        "responseFormats": [
+          "url",
+          "base64"
+        ],
+        "urlExpiry": "24h"
+      }
+    },
+    {
+      "modelName": "speech-2.8-hd",
+      "displayName": "MiniMax Speech 2.8 HD",
+      "serviceType": [
+        "tts"
+      ],
+      "description": "MiniMax 最新高清语音合成模型，支持 40+ 语言、100+ 预置音色，毫秒级延迟",
+      "capabilities": [
+        "tts",
+        "multilingual",
+        "emotion_control",
+        "voice_clone",
+        "chinese_optimized"
+      ],
+      "extra": {
+        "maxTextLength": 10000,
+        "supportedFormats": [
+          "mp3",
+          "wav",
+          "pcm",
+          "flac",
+          "aac",
+          "ogg"
+        ],
+        "pricePerMillionCharacters": 350
+      }
+    },
+    {
+      "modelName": "speech-2.8-turbo",
+      "displayName": "MiniMax Speech 2.8 Turbo",
+      "serviceType": [
+        "tts"
+      ],
+      "description": "MiniMax 快速语音合成模型，速度优先，适合实时场景",
+      "capabilities": [
+        "tts",
+        "multilingual",
+        "emotion_control",
+        "fast",
+        "chinese_optimized"
+      ],
+      "extra": {
+        "maxTextLength": 10000,
+        "supportedFormats": [
+          "mp3",
+          "wav",
+          "pcm",
+          "flac",
+          "aac",
+          "ogg"
+        ],
+        "pricePerMillionCharacters": 200
+      }
+    },
+    {
+      "modelName": "speech-2.6-hd",
+      "displayName": "MiniMax Speech 2.6 HD",
+      "serviceType": [
+        "tts"
+      ],
+      "description": "MiniMax 高清语音合成模型（2.6 版），音质优秀，生成速度快",
+      "capabilities": [
+        "tts",
+        "multilingual",
+        "emotion_control",
+        "voice_clone",
+        "chinese_optimized"
+      ],
+      "extra": {
+        "maxTextLength": 10000,
+        "supportedFormats": [
+          "mp3",
+          "wav",
+          "pcm",
+          "flac",
+          "aac",
+          "ogg"
+        ],
+        "pricePerMillionCharacters": 350
+      }
+    },
+    {
+      "modelName": "speech-2.6-turbo",
+      "displayName": "MiniMax Speech 2.6 Turbo",
+      "serviceType": [
+        "tts"
+      ],
+      "description": "MiniMax 快速语音合成模型（2.6 版），低延迟响应",
+      "capabilities": [
+        "tts",
+        "multilingual",
+        "emotion_control",
+        "fast",
+        "chinese_optimized"
+      ],
+      "extra": {
+        "maxTextLength": 10000,
+        "supportedFormats": [
+          "mp3",
+          "wav",
+          "pcm",
+          "flac",
+          "aac",
+          "ogg"
+        ],
+        "pricePerMillionCharacters": 200
+      }
+    },
+    {
+      "modelName": "speech-02-hd",
+      "displayName": "MiniMax Speech 02 HD",
+      "serviceType": [
+        "tts"
+      ],
+      "description": "MiniMax 高清语音合成模型（历史版本），韵律稳定性优秀",
+      "capabilities": [
+        "tts",
+        "multilingual",
+        "voice_clone",
+        "chinese_optimized"
+      ],
+      "extra": {
+        "maxTextLength": 10000,
+        "supportedFormats": [
+          "mp3",
+          "wav",
+          "pcm",
+          "flac",
+          "aac",
+          "ogg"
+        ],
+        "legacy": true,
+        "pricePerMillionCharacters": 350
+      }
+    },
+    {
+      "modelName": "speech-02-turbo",
+      "displayName": "MiniMax Speech 02 Turbo",
+      "serviceType": [
+        "tts"
+      ],
+      "description": "MiniMax 快速语音合成模型（历史版本），增强小语种支持",
+      "capabilities": [
+        "tts",
+        "multilingual",
+        "fast",
+        "chinese_optimized"
+      ],
+      "extra": {
+        "maxTextLength": 10000,
+        "supportedFormats": [
+          "mp3",
+          "wav",
+          "pcm",
+          "flac",
+          "aac",
+          "ogg"
+        ],
+        "legacy": true,
+        "pricePerMillionCharacters": 200
+      }
+    },
+    {
+      "modelName": "MiniMax-Hailuo-2.3",
+      "displayName": "海螺视频 2.3",
+      "serviceType": [
+        "video_gen"
+      ],
+      "description": "MiniMax 最新视频生成模型，支持文生视频和图生视频，支持 15 种运镜指令控制",
+      "capabilities": [
+        "video_generation",
+        "text_to_video",
+        "image_to_video",
+        "camera_control",
+        "chinese_optimized",
+        "high_quality"
+      ],
+      "extra": {
+        "maxVideoDuration": 10,
+        "supportedResolutions": [
+          "768p",
+          "1080p"
+        ],
+        "maxPromptLength": 2000,
+        "asyncMode": true
+      }
+    },
+    {
+      "modelName": "MiniMax-Hailuo-2.3-Fast",
+      "displayName": "海螺视频 2.3 快速版",
+      "serviceType": [
+        "video_gen"
+      ],
+      "description": "海螺视频快速版本（仅图生视频），生成速度更快",
+      "capabilities": [
+        "video_generation",
+        "image_to_video",
+        "camera_control",
+        "fast",
+        "chinese_optimized"
+      ],
+      "extra": {
+        "maxVideoDuration": 10,
+        "supportedResolutions": [
+          "768p",
+          "1080p"
+        ],
+        "asyncMode": true
+      }
+    },
+    {
+      "modelName": "T2V-01-Director",
+      "displayName": "海螺视频 Director",
+      "serviceType": [
+        "video_gen"
+      ],
+      "description": "导演级文生视频模型，精准运镜控制（历史版本）",
+      "capabilities": [
+        "video_generation",
+        "text_to_video",
+        "camera_control",
+        "chinese_optimized"
+      ],
+      "extra": {
+        "maxVideoDuration": 6,
+        "supportedResolutions": [
+          "720p"
+        ],
+        "asyncMode": true,
+        "legacy": true
+      }
+    },
+    {
+      "modelName": "MiniMax-Hailuo-02",
+      "displayName": "海螺视频 02",
+      "serviceType": [
+        "video_gen"
+      ],
+      "description": "海螺视频 02，原生 1080P 生成，指令跟随能力强（历史版本）",
+      "capabilities": [
+        "video_generation",
+        "text_to_video",
+        "image_to_video",
+        "chinese_optimized"
+      ],
+      "extra": {
+        "maxVideoDuration": 10,
+        "supportedResolutions": [
+          "512p",
+          "768p",
+          "1080p"
+        ],
+        "asyncMode": true,
+        "legacy": true
+      }
+    },
+    {
+      "modelName": "S2V-01",
+      "displayName": "海螺视频 主体参考",
+      "serviceType": [
+        "video_gen"
+      ],
+      "description": "主体参考视频生成模型，基于参考图保持角色一致性",
+      "capabilities": [
+        "video_generation",
+        "subject_reference",
+        "chinese_optimized"
+      ],
+      "extra": {
+        "asyncMode": true
+      }
+    },
+    {
+      "modelName": "music-2.6",
+      "displayName": "MiniMax Music 2.6",
+      "serviceType": [
+        "music_gen"
+      ],
+      "description": "MiniMax AI 音乐生成模型，支持音乐灵感描述和歌词输入，可生成带人声或纯音乐；音乐付费 API 自2026-08-20起仅历史付费用户可继续使用，不向新用户开放；免费音乐接口已停止服务",
+      "capabilities": [
+        "music_generation",
+        "lyrics_input",
+        "instrumental",
+        "chinese_optimized"
+      ],
+      "extra": {
+        "maxPromptLength": 2000,
+        "maxLyricsLength": 3500,
+        "outputFormats": [
+          "hex",
+          "url"
+        ],
+        "supportedLyricsStructures": [
+          "[Intro]",
+          "[Verse]",
+          "[Pre Chorus]",
+          "[Chorus]",
+          "[Interlude]",
+          "[Bridge]",
+          "[Outro]",
+          "[Hook]",
+          "[Solo]",
+          "[Inst]"
+        ],
+        "pricePerSongUpToFiveMinutes": 1
+      }
+    },
+    {
+      "modelName": "music-2.5+",
+      "displayName": "MiniMax Music 2.5+",
+      "serviceType": [
+        "music_gen"
+      ],
+      "description": "MiniMax AI 音乐生成模型（2.5+ 版），音质提升；音乐付费 API 自2026-08-20起仅历史付费用户可继续使用，不向新用户开放；免费音乐接口已停止服务",
+      "capabilities": [
+        "music_generation",
+        "lyrics_input",
+        "instrumental",
+        "chinese_optimized"
+      ],
+      "extra": {
+        "outputFormats": [
+          "hex",
+          "url"
+        ],
+        "pricePerSongUpToFiveMinutes": 1
+      }
+    },
+    {
+      "modelName": "music-2.5",
+      "displayName": "MiniMax Music 2.5",
+      "serviceType": [
+        "music_gen"
+      ],
+      "description": "MiniMax AI 音乐生成模型（2.5 版）；音乐付费 API 自2026-08-20起仅历史付费用户可继续使用，不向新用户开放；免费音乐接口已停止服务",
+      "capabilities": [
+        "music_generation",
+        "lyrics_input",
+        "instrumental",
+        "chinese_optimized"
+      ],
+      "extra": {
+        "outputFormats": [
+          "hex",
+          "url"
+        ],
+        "pricePerSongUpToFiveMinutes": 1
+      }
+    },
+    {
+      "modelName": "music-cover",
+      "displayName": "MiniMax Music Cover",
+      "serviceType": [
+        "music_gen"
+      ],
+      "description": "MiniMax AI 翻唱模型，基于参考音频生成翻唱版本，支持修改歌词；音乐付费 API 自2026-08-20起仅历史付费用户可继续使用，不向新用户开放；免费音乐接口已停止服务",
+      "capabilities": [
+        "music_generation",
+        "cover",
+        "chinese_optimized"
+      ],
+      "extra": {
+        "maxAudioDuration": 360,
+        "maxAudioSize": "50MB",
+        "supportedFormats": [
+          "mp3",
+          "wav",
+          "flac"
+        ]
+      }
+    }
+  ]
+}

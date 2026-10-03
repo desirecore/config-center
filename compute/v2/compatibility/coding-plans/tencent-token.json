@@ -1,0 +1,178 @@
+{
+  "id": "provider-tencent-token-001",
+  "provider": "tencent",
+  "brandGroup": "tencent",
+  "label": "腾讯云 Token Plan",
+  "baseUrl": "https://api.lkeap.cloud.tencent.com/plan/v3",
+  "apiFormat": "openai-completions",
+  "apiKeyRef": "",
+  "apiKeyVerified": false,
+  "enabled": false,
+  "status": "unconfigured",
+  "accessMode": "token-plan",
+  "services": [
+    "chat",
+    "reasoning"
+  ],
+  "codingPlan": {
+    "quotas": {},
+    "usageTracking": {
+      "method": "none",
+      "consoleUrl": "https://console.cloud.tencent.com/hunyuan"
+    }
+  },
+  "models": [
+    {
+      "modelName": "tc-code-latest",
+      "displayName": "Auto (自动路由)",
+      "serviceType": [
+        "chat"
+      ],
+      "description": "腾讯 Token Plan 自动路由模型，后端自动选择最优模型",
+      "capabilities": [
+        "chat",
+        "reasoning",
+        "code"
+      ],
+      "source": "preset"
+    },
+    {
+      "modelName": "hunyuan-2.0-instruct",
+      "displayName": "混元 2.0 Instruct",
+      "serviceType": [
+        "chat"
+      ],
+      "description": "腾讯混元 2.0 指令模型（Token Plan）",
+      "capabilities": [
+        "chat",
+        "reasoning",
+        "code",
+        "long_context",
+        "tool_use"
+      ],
+      "source": "preset"
+    },
+    {
+      "modelName": "hunyuan-2.0-thinking",
+      "displayName": "混元 2.0 Think",
+      "serviceType": [
+        "chat"
+      ],
+      "description": "腾讯混元 2.0 推理模型（Token Plan）",
+      "capabilities": [
+        "chat",
+        "reasoning",
+        "code",
+        "deep_thinking",
+        "long_context"
+      ],
+      "source": "preset"
+    },
+    {
+      "modelName": "hunyuan-t1",
+      "displayName": "混元 T1",
+      "serviceType": [
+        "chat"
+      ],
+      "description": "腾讯混元 T1 深度推理模型（Token Plan）",
+      "capabilities": [
+        "chat",
+        "reasoning",
+        "code",
+        "deep_thinking"
+      ],
+      "source": "preset"
+    },
+    {
+      "modelName": "hunyuan-turbos",
+      "displayName": "混元 Turbo S",
+      "serviceType": [
+        "chat"
+      ],
+      "description": "腾讯混元 Turbo S 高速模型（Token Plan）",
+      "capabilities": [
+        "chat",
+        "reasoning",
+        "code",
+        "fast"
+      ],
+      "source": "preset"
+    },
+    {
+      "modelName": "glm-5.1",
+      "displayName": "GLM-5.1",
+      "serviceType": [
+        "chat"
+      ],
+      "description": "智谱 GLM-5.1（腾讯 Token Plan 渠道）",
+      "capabilities": [
+        "chat",
+        "reasoning",
+        "code",
+        "agent"
+      ],
+      "source": "preset"
+    },
+    {
+      "modelName": "glm-5",
+      "displayName": "GLM-5",
+      "serviceType": [
+        "chat"
+      ],
+      "description": "智谱 GLM-5（腾讯 Token Plan 渠道）",
+      "capabilities": [
+        "chat",
+        "reasoning",
+        "code",
+        "agent"
+      ],
+      "source": "preset"
+    },
+    {
+      "modelName": "minimax-m2.7",
+      "displayName": "MiniMax M2.7",
+      "serviceType": [
+        "chat"
+      ],
+      "description": "MiniMax M2.7（腾讯 Token Plan 渠道）",
+      "capabilities": [
+        "chat",
+        "reasoning",
+        "code",
+        "agent"
+      ],
+      "source": "preset"
+    },
+    {
+      "modelName": "minimax-m2.5",
+      "displayName": "MiniMax M2.5",
+      "serviceType": [
+        "chat"
+      ],
+      "description": "MiniMax M2.5（腾讯 Token Plan 渠道）",
+      "capabilities": [
+        "chat",
+        "reasoning",
+        "code",
+        "agent"
+      ],
+      "source": "preset"
+    },
+    {
+      "modelName": "kimi-k2.5",
+      "displayName": "Kimi K2.5",
+      "serviceType": [
+        "chat"
+      ],
+      "description": "Kimi K2.5（腾讯 Token Plan 渠道）",
+      "capabilities": [
+        "chat",
+        "reasoning",
+        "code",
+        "agent",
+        "long_context"
+      ],
+      "source": "preset"
+    }
+  ]
+}

@@ -79,3 +79,25 @@
 }
 ```
 <!-- source-metadata:end -->
+
+## compute/model-specs/openai.json：精确绑定
+
+官方规格页本轮核实窗口与输出；未扩大自动路由资格。
+
+<!-- source-details: {"config":"compute/model-specs/openai.json","id":"gpt-5.4-nano"} -->
+```json
+{
+  "spec.contextWindow": 400000,
+  "spec.maxOutputTokens": 128000,
+  "spec.description": "GPT-5.4 Nano；官网确认400000总窗口、128000最大输出。2026-10-01宣布deprecated，停止服务日2027-04-01；当前不据此退役。独立输入上限未由本页确认。"
+}
+```
+<!-- source-details:end -->
+
+<!-- source-config: compute/model-specs/openai.json -->
+
+| 模型 ID | 上下文 / 输出 | 计价 | 已核字段→来源 | 来源入口 | 状态 | 数据指纹 |
+| --- | --- | --- | --- | --- | --- | --- |
+| `gpt-5.4-nano` | 400000 / 128000 | 非计价主数据 | `id`→[gpt-5-4-nano-api](../SOURCES.md#gpt-5-4-nano-api)；`spec.contextWindow`→[gpt-5-4-nano-api](../SOURCES.md#gpt-5-4-nano-api)；`spec.maxOutputTokens`→[gpt-5-4-nano-api](../SOURCES.md#gpt-5-4-nano-api) | [gpt-5-4-nano-api](../SOURCES.md#gpt-5-4-nano-api) | partial | `f0253fa24e58c6c0ca971fa1e53fb87d5d140e843f09cfdab303b92ecf5e0664` |
+
+生命周期独立证据：[官方退役公告](../SOURCES.md#openai-deprecations)列出的停止日为2027-04-01；2026-10-01公告deprecated，不代表2026-10-03已不可调用。

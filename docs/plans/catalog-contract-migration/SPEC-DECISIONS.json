@@ -1,0 +1,2661 @@
+{
+  "formatVersion": 1,
+  "checkedAt": "2026-10-03",
+  "baselineVersion": 127,
+  "note": "分类不是完整参数已核；unknown被明确保留，非空TODO；不凭family授权。",
+  "baselineCounts": {
+    "matchExceptions": 24,
+    "numericalDifferences": 45,
+    "staticUnmatchedSpecs": 58
+  },
+  "currentCounts": {
+    "records": 340,
+    "none": 14,
+    "family": 5,
+    "numericalDifferences": 43
+  },
+  "bindings": [
+    {
+      "file": "compute/providers/openai.json",
+      "id": "gpt-realtime-2.1",
+      "originalMatch": "none",
+      "currentMatch": "exact",
+      "currentSpec": "gpt-realtime-2.1",
+      "decision": "exact-official-facts"
+    },
+    {
+      "file": "compute/providers/openai.json",
+      "id": "gpt-realtime-2.1-mini",
+      "originalMatch": "none",
+      "currentMatch": "exact",
+      "currentSpec": "gpt-realtime-2.1-mini",
+      "decision": "exact-official-facts"
+    },
+    {
+      "file": "compute/providers/openai.json",
+      "id": "gpt-realtime-translate",
+      "originalMatch": "none",
+      "currentMatch": "exact",
+      "currentSpec": "gpt-realtime-translate",
+      "decision": "exact-official-facts"
+    },
+    {
+      "file": "compute/providers/dashscope.json",
+      "id": "qwen-mt-plus",
+      "originalMatch": "none",
+      "currentMatch": "none",
+      "currentSpec": null,
+      "decision": "access-local-no-inheritance"
+    },
+    {
+      "file": "compute/providers/volcengine.json",
+      "id": "doubao-seedream-4-0-250828",
+      "originalMatch": "none",
+      "currentMatch": "none",
+      "currentSpec": null,
+      "decision": "access-local-no-inheritance"
+    },
+    {
+      "file": "compute/providers/moonshot.json",
+      "id": "moonshot-v1-8k-vision-preview",
+      "originalMatch": "family",
+      "currentMatch": "family",
+      "currentSpec": "moonshot-v1-8k",
+      "decision": "access-local-no-inheritance"
+    },
+    {
+      "file": "compute/providers/moonshot.json",
+      "id": "moonshot-v1-32k-vision-preview",
+      "originalMatch": "family",
+      "currentMatch": "family",
+      "currentSpec": "moonshot-v1-8k",
+      "decision": "access-local-no-inheritance"
+    },
+    {
+      "file": "compute/providers/moonshot.json",
+      "id": "moonshot-v1-128k-vision-preview",
+      "originalMatch": "family",
+      "currentMatch": "family",
+      "currentSpec": "moonshot-v1-8k",
+      "decision": "access-local-no-inheritance"
+    },
+    {
+      "file": "compute/providers/zhipu.json",
+      "id": "glm-4.7-flashx",
+      "originalMatch": "family",
+      "currentMatch": "family",
+      "currentSpec": "glm-4.7",
+      "decision": "access-local-no-inheritance"
+    },
+    {
+      "file": "compute/providers/siliconflow.json",
+      "id": "BAAI/bge-m3",
+      "originalMatch": "none",
+      "currentMatch": "none",
+      "currentSpec": null,
+      "decision": "access-local-no-inheritance"
+    },
+    {
+      "file": "compute/providers/local-whisper.json",
+      "id": "whisper-large-v3",
+      "originalMatch": "family",
+      "currentMatch": "family",
+      "currentSpec": "whisper-1",
+      "decision": "access-local-no-inheritance"
+    },
+    {
+      "file": "compute/providers/ollama.json",
+      "id": "llama3.1:70b",
+      "originalMatch": "none",
+      "currentMatch": "none",
+      "currentSpec": null,
+      "decision": "access-local-no-inheritance"
+    },
+    {
+      "file": "compute/providers/xai.json",
+      "id": "grok-build-0.1",
+      "originalMatch": "none",
+      "currentMatch": "none",
+      "currentSpec": null,
+      "decision": "access-local-no-inheritance"
+    },
+    {
+      "file": "compute/providers/openrouter.json",
+      "id": "cohere/command-a-plus",
+      "originalMatch": "none",
+      "currentMatch": "none",
+      "currentSpec": null,
+      "decision": "access-local-no-inheritance"
+    },
+    {
+      "file": "compute/providers/openrouter.json",
+      "id": "openrouter/auto",
+      "originalMatch": "none",
+      "currentMatch": "none",
+      "currentSpec": null,
+      "decision": "access-local-no-inheritance"
+    },
+    {
+      "file": "compute/coding-plans/dashscope-coding.json",
+      "id": "qwen3-coder-plus",
+      "originalMatch": "family",
+      "currentMatch": "exact",
+      "currentSpec": "qwen3-coder-plus",
+      "decision": "exact-identity-only"
+    },
+    {
+      "file": "compute/coding-plans/dashscope-coding.json",
+      "id": "qwen3-coder-next",
+      "originalMatch": "family",
+      "currentMatch": "exact",
+      "currentSpec": "qwen3-coder-next",
+      "decision": "exact-identity-only"
+    },
+    {
+      "file": "compute/coding-plans/volcengine-coding.json",
+      "id": "ark-code-latest",
+      "originalMatch": "none",
+      "currentMatch": "none",
+      "currentSpec": null,
+      "decision": "access-local-no-inheritance"
+    },
+    {
+      "file": "compute/coding-plans/tencent-token.json",
+      "id": "tc-code-latest",
+      "originalMatch": "none",
+      "currentMatch": "none",
+      "currentSpec": null,
+      "decision": "access-local-no-inheritance"
+    },
+    {
+      "file": "compute/coding-plans/moonshot-coding.json",
+      "id": "kimi-for-coding",
+      "originalMatch": "none",
+      "currentMatch": "none",
+      "currentSpec": null,
+      "decision": "access-local-no-inheritance"
+    },
+    {
+      "file": "compute/coding-plans/baidu-coding.json",
+      "id": "qianfan-code-latest",
+      "originalMatch": "none",
+      "currentMatch": "none",
+      "currentSpec": null,
+      "decision": "access-local-no-inheritance"
+    },
+    {
+      "file": "compute/coding-plans/infini-coding.json",
+      "id": "deepseek-v3",
+      "originalMatch": "none",
+      "currentMatch": "none",
+      "currentSpec": null,
+      "decision": "access-local-no-inheritance"
+    },
+    {
+      "file": "compute/coding-plans/moorethread-coding.json",
+      "id": "mt-coder",
+      "originalMatch": "none",
+      "currentMatch": "none",
+      "currentSpec": null,
+      "decision": "access-local-no-inheritance"
+    },
+    {
+      "file": "compute/coding-plans/kwai-coding.json",
+      "id": "kwai-coder",
+      "originalMatch": "none",
+      "currentMatch": "none",
+      "currentSpec": null,
+      "decision": "access-local-no-inheritance"
+    }
+  ],
+  "accessExceptions": [
+    {
+      "file": "compute/providers/dashscope.json",
+      "id": "qwen-mt-plus",
+      "match": "none",
+      "spec": null,
+      "specFile": null,
+      "diff": [],
+      "classification": "unverified-access-local",
+      "effectiveBinding": null,
+      "inheritFamily": false,
+      "automaticRouting": false,
+      "decision": "retain-access-values",
+      "reason": "当前未定位足够的原厂精确型号证据；保留既有接入局部字段，不从family继承参数、能力或路由。"
+    },
+    {
+      "file": "compute/providers/volcengine.json",
+      "id": "doubao-seedream-4-0-250828",
+      "match": "none",
+      "spec": null,
+      "specFile": null,
+      "diff": [],
+      "classification": "unverified-access-local",
+      "effectiveBinding": null,
+      "inheritFamily": false,
+      "automaticRouting": false,
+      "decision": "retain-access-values",
+      "reason": "当前未定位足够的原厂精确型号证据；保留既有接入局部字段，不从family继承参数、能力或路由。"
+    },
+    {
+      "file": "compute/providers/moonshot.json",
+      "id": "moonshot-v1-8k-vision-preview",
+      "match": "family",
+      "spec": "moonshot-v1-8k",
+      "specFile": "compute/model-specs/moonshot.json",
+      "diff": [],
+      "classification": "unverified-access-local",
+      "effectiveBinding": null,
+      "inheritFamily": false,
+      "automaticRouting": false,
+      "decision": "retain-access-values",
+      "reason": "当前未定位足够的原厂精确型号证据；保留既有接入局部字段，不从family继承参数、能力或路由。"
+    },
+    {
+      "file": "compute/providers/moonshot.json",
+      "id": "moonshot-v1-32k-vision-preview",
+      "match": "family",
+      "spec": "moonshot-v1-8k",
+      "specFile": "compute/model-specs/moonshot.json",
+      "diff": [
+        {
+          "field": "contextWindow",
+          "access": 32768,
+          "spec": 8192
+        }
+      ],
+      "classification": "unverified-access-local",
+      "effectiveBinding": null,
+      "inheritFamily": false,
+      "automaticRouting": false,
+      "decision": "retain-access-values",
+      "reason": "当前未定位足够的原厂精确型号证据；保留既有接入局部字段，不从family继承参数、能力或路由。"
+    },
+    {
+      "file": "compute/providers/moonshot.json",
+      "id": "moonshot-v1-128k-vision-preview",
+      "match": "family",
+      "spec": "moonshot-v1-8k",
+      "specFile": "compute/model-specs/moonshot.json",
+      "diff": [
+        {
+          "field": "contextWindow",
+          "access": 131072,
+          "spec": 8192
+        }
+      ],
+      "classification": "unverified-access-local",
+      "effectiveBinding": null,
+      "inheritFamily": false,
+      "automaticRouting": false,
+      "decision": "retain-access-values",
+      "reason": "当前未定位足够的原厂精确型号证据；保留既有接入局部字段，不从family继承参数、能力或路由。"
+    },
+    {
+      "file": "compute/providers/zhipu.json",
+      "id": "glm-4.7-flashx",
+      "match": "family",
+      "spec": "glm-4.7",
+      "specFile": "compute/model-specs/zhipu.json",
+      "diff": [
+        {
+          "field": "maxOutputTokens",
+          "access": 131072,
+          "spec": 128000
+        }
+      ],
+      "classification": "unverified-access-local",
+      "effectiveBinding": null,
+      "inheritFamily": false,
+      "automaticRouting": false,
+      "decision": "retain-access-values",
+      "reason": "当前未定位足够的原厂精确型号证据；保留既有接入局部字段，不从family继承参数、能力或路由。"
+    },
+    {
+      "file": "compute/providers/siliconflow.json",
+      "id": "BAAI/bge-m3",
+      "match": "none",
+      "spec": null,
+      "specFile": null,
+      "diff": [],
+      "classification": "unverified-access-local",
+      "effectiveBinding": null,
+      "inheritFamily": false,
+      "automaticRouting": false,
+      "decision": "retain-access-values",
+      "reason": "当前未定位足够的原厂精确型号证据；保留既有接入局部字段，不从family继承参数、能力或路由。"
+    },
+    {
+      "file": "compute/providers/local-whisper.json",
+      "id": "whisper-large-v3",
+      "match": "family",
+      "spec": "whisper-1",
+      "specFile": "compute/model-specs/openai.json",
+      "diff": [],
+      "classification": "unverified-access-local",
+      "effectiveBinding": null,
+      "inheritFamily": false,
+      "automaticRouting": false,
+      "decision": "retain-access-values",
+      "reason": "当前未定位足够的原厂精确型号证据；保留既有接入局部字段，不从family继承参数、能力或路由。"
+    },
+    {
+      "file": "compute/providers/ollama.json",
+      "id": "llama3.1:70b",
+      "match": "none",
+      "spec": null,
+      "specFile": null,
+      "diff": [],
+      "classification": "dynamic-access-local",
+      "effectiveBinding": null,
+      "inheritFamily": false,
+      "automaticRouting": false,
+      "decision": "retain-access-values",
+      "reason": "动态/套餐别名不得永久猜绑原厂；使用接入返回实际身份，未解析时仅保留该接入局部值。"
+    },
+    {
+      "file": "compute/providers/xai.json",
+      "id": "grok-build-0.1",
+      "match": "none",
+      "spec": null,
+      "specFile": null,
+      "diff": [],
+      "classification": "unverified-access-local",
+      "effectiveBinding": null,
+      "inheritFamily": false,
+      "automaticRouting": false,
+      "decision": "retain-access-values",
+      "reason": "当前未定位足够的原厂精确型号证据；保留既有接入局部字段，不从family继承参数、能力或路由。"
+    },
+    {
+      "file": "compute/providers/openrouter.json",
+      "id": "cohere/command-a-plus",
+      "match": "none",
+      "spec": null,
+      "specFile": null,
+      "diff": [],
+      "classification": "unverified-access-local",
+      "effectiveBinding": null,
+      "inheritFamily": false,
+      "automaticRouting": false,
+      "decision": "retain-access-values",
+      "reason": "当前未定位足够的原厂精确型号证据；保留既有接入局部字段，不从family继承参数、能力或路由。"
+    },
+    {
+      "file": "compute/providers/openrouter.json",
+      "id": "openrouter/auto",
+      "match": "none",
+      "spec": null,
+      "specFile": null,
+      "diff": [],
+      "classification": "dynamic-access-local",
+      "effectiveBinding": null,
+      "inheritFamily": false,
+      "automaticRouting": false,
+      "decision": "retain-access-values",
+      "reason": "动态/套餐别名不得永久猜绑原厂；使用接入返回实际身份，未解析时仅保留该接入局部值。"
+    },
+    {
+      "file": "compute/coding-plans/volcengine-coding.json",
+      "id": "ark-code-latest",
+      "match": "none",
+      "spec": null,
+      "specFile": null,
+      "diff": [],
+      "classification": "dynamic-access-local",
+      "effectiveBinding": null,
+      "inheritFamily": false,
+      "automaticRouting": false,
+      "decision": "retain-access-values",
+      "reason": "动态/套餐别名不得永久猜绑原厂；使用接入返回实际身份，未解析时仅保留该接入局部值。"
+    },
+    {
+      "file": "compute/coding-plans/tencent-token.json",
+      "id": "tc-code-latest",
+      "match": "none",
+      "spec": null,
+      "specFile": null,
+      "diff": [],
+      "classification": "dynamic-access-local",
+      "effectiveBinding": null,
+      "inheritFamily": false,
+      "automaticRouting": false,
+      "decision": "retain-access-values",
+      "reason": "动态/套餐别名不得永久猜绑原厂；使用接入返回实际身份，未解析时仅保留该接入局部值。"
+    },
+    {
+      "file": "compute/coding-plans/moonshot-coding.json",
+      "id": "kimi-for-coding",
+      "match": "none",
+      "spec": null,
+      "specFile": null,
+      "diff": [],
+      "classification": "dynamic-access-local",
+      "effectiveBinding": null,
+      "inheritFamily": false,
+      "automaticRouting": false,
+      "decision": "retain-access-values",
+      "reason": "动态/套餐别名不得永久猜绑原厂；使用接入返回实际身份，未解析时仅保留该接入局部值。"
+    },
+    {
+      "file": "compute/coding-plans/baidu-coding.json",
+      "id": "qianfan-code-latest",
+      "match": "none",
+      "spec": null,
+      "specFile": null,
+      "diff": [],
+      "classification": "dynamic-access-local",
+      "effectiveBinding": null,
+      "inheritFamily": false,
+      "automaticRouting": false,
+      "decision": "retain-access-values",
+      "reason": "动态/套餐别名不得永久猜绑原厂；使用接入返回实际身份，未解析时仅保留该接入局部值。"
+    },
+    {
+      "file": "compute/coding-plans/infini-coding.json",
+      "id": "deepseek-v3",
+      "match": "none",
+      "spec": null,
+      "specFile": null,
+      "diff": [],
+      "classification": "unverified-access-local",
+      "effectiveBinding": null,
+      "inheritFamily": false,
+      "automaticRouting": false,
+      "decision": "retain-access-values",
+      "reason": "当前未定位足够的原厂精确型号证据；保留既有接入局部字段，不从family继承参数、能力或路由。"
+    },
+    {
+      "file": "compute/coding-plans/moorethread-coding.json",
+      "id": "mt-coder",
+      "match": "none",
+      "spec": null,
+      "specFile": null,
+      "diff": [],
+      "classification": "dynamic-access-local",
+      "effectiveBinding": null,
+      "inheritFamily": false,
+      "automaticRouting": false,
+      "decision": "retain-access-values",
+      "reason": "动态/套餐别名不得永久猜绑原厂；使用接入返回实际身份，未解析时仅保留该接入局部值。"
+    },
+    {
+      "file": "compute/coding-plans/kwai-coding.json",
+      "id": "kwai-coder",
+      "match": "none",
+      "spec": null,
+      "specFile": null,
+      "diff": [],
+      "classification": "dynamic-access-local",
+      "effectiveBinding": null,
+      "inheritFamily": false,
+      "automaticRouting": false,
+      "decision": "retain-access-values",
+      "reason": "动态/套餐别名不得永久猜绑原厂；使用接入返回实际身份，未解析时仅保留该接入局部值。"
+    }
+  ],
+  "differences": [
+    {
+      "file": "compute/providers/openai.json",
+      "id": "gpt-5.4-nano",
+      "baselineSpec": "gpt-5.4",
+      "baselineDifferences": [
+        {
+          "field": "contextWindow",
+          "provider": 400000,
+          "spec": 1050000
+        }
+      ],
+      "currentSpec": "gpt-5.4-nano",
+      "currentDifferences": [],
+      "classification": "corrected-identity",
+      "decision": "bind-independent-exact",
+      "reason": "官网400000/128000；基础GPT-5.4的1050000属于另一型号，已消除误吞。",
+      "verifiedOverride": false
+    },
+    {
+      "file": "compute/providers/openai-codex.json",
+      "id": "gpt-reserve",
+      "baselineSpec": "gpt-reserve",
+      "baselineDifferences": [
+        {
+          "field": "contextWindow",
+          "provider": 272000,
+          "spec": 1050000
+        }
+      ],
+      "currentSpec": "gpt-reserve",
+      "currentDifferences": [
+        {
+          "field": "contextWindow",
+          "access": 272000,
+          "spec": 1050000
+        }
+      ],
+      "classification": "unverified-preserved",
+      "decision": "retain-separate-values",
+      "reason": "订阅接入272000并非原厂API总窗口；暂无订阅字段证明，作为未核接入限制保留，不提升到1050000。",
+      "verifiedOverride": false
+    },
+    {
+      "file": "compute/providers/openai-codex.json",
+      "id": "gpt-5.6-sol",
+      "baselineSpec": "gpt-5.6-sol",
+      "baselineDifferences": [
+        {
+          "field": "contextWindow",
+          "provider": 272000,
+          "spec": 1050000
+        }
+      ],
+      "currentSpec": "gpt-5.6-sol",
+      "currentDifferences": [
+        {
+          "field": "contextWindow",
+          "access": 272000,
+          "spec": 1050000
+        }
+      ],
+      "classification": "unverified-preserved",
+      "decision": "retain-separate-values",
+      "reason": "订阅接入272000并非原厂API总窗口；暂无订阅字段证明，作为未核接入限制保留，不提升到1050000。",
+      "verifiedOverride": false
+    },
+    {
+      "file": "compute/providers/openai-codex.json",
+      "id": "gpt-5.6-terra",
+      "baselineSpec": "gpt-5.6-terra",
+      "baselineDifferences": [
+        {
+          "field": "contextWindow",
+          "provider": 272000,
+          "spec": 1050000
+        }
+      ],
+      "currentSpec": "gpt-5.6-terra",
+      "currentDifferences": [
+        {
+          "field": "contextWindow",
+          "access": 272000,
+          "spec": 1050000
+        }
+      ],
+      "classification": "unverified-preserved",
+      "decision": "retain-separate-values",
+      "reason": "订阅接入272000并非原厂API总窗口；暂无订阅字段证明，作为未核接入限制保留，不提升到1050000。",
+      "verifiedOverride": false
+    },
+    {
+      "file": "compute/providers/openai-codex.json",
+      "id": "gpt-5.6-luna",
+      "baselineSpec": "gpt-5.6-luna",
+      "baselineDifferences": [
+        {
+          "field": "contextWindow",
+          "provider": 272000,
+          "spec": 1050000
+        }
+      ],
+      "currentSpec": "gpt-5.6-luna",
+      "currentDifferences": [
+        {
+          "field": "contextWindow",
+          "access": 272000,
+          "spec": 1050000
+        }
+      ],
+      "classification": "unverified-preserved",
+      "decision": "retain-separate-values",
+      "reason": "订阅接入272000并非原厂API总窗口；暂无订阅字段证明，作为未核接入限制保留，不提升到1050000。",
+      "verifiedOverride": false
+    },
+    {
+      "file": "compute/providers/openai-codex.json",
+      "id": "gpt-5.5",
+      "baselineSpec": "gpt-5.5",
+      "baselineDifferences": [
+        {
+          "field": "contextWindow",
+          "provider": 272000,
+          "spec": 1050000
+        }
+      ],
+      "currentSpec": "gpt-5.5",
+      "currentDifferences": [
+        {
+          "field": "contextWindow",
+          "access": 272000,
+          "spec": 1050000
+        }
+      ],
+      "classification": "unverified-preserved",
+      "decision": "retain-separate-values",
+      "reason": "订阅接入272000并非原厂API总窗口；暂无订阅字段证明，作为未核接入限制保留，不提升到1050000。",
+      "verifiedOverride": false
+    },
+    {
+      "file": "compute/providers/openai-codex.json",
+      "id": "gpt-5.4",
+      "baselineSpec": "gpt-5.4",
+      "baselineDifferences": [
+        {
+          "field": "contextWindow",
+          "provider": 272000,
+          "spec": 1050000
+        }
+      ],
+      "currentSpec": "gpt-5.4",
+      "currentDifferences": [
+        {
+          "field": "contextWindow",
+          "access": 272000,
+          "spec": 1050000
+        }
+      ],
+      "classification": "unverified-preserved",
+      "decision": "retain-separate-values",
+      "reason": "订阅接入272000并非原厂API总窗口；暂无订阅字段证明，作为未核接入限制保留，不提升到1050000。",
+      "verifiedOverride": false
+    },
+    {
+      "file": "compute/providers/openai-codex.json",
+      "id": "gpt-5.4-mini",
+      "baselineSpec": "gpt-5.4-mini",
+      "baselineDifferences": [
+        {
+          "field": "contextWindow",
+          "provider": 272000,
+          "spec": 400000
+        }
+      ],
+      "currentSpec": "gpt-5.4-mini",
+      "currentDifferences": [
+        {
+          "field": "contextWindow",
+          "access": 272000,
+          "spec": 400000
+        }
+      ],
+      "classification": "unverified-preserved",
+      "decision": "retain-separate-values",
+      "reason": "订阅接入272000并非原厂API总窗口；暂无订阅字段证明，作为未核接入限制保留，不提升到1050000。",
+      "verifiedOverride": false
+    },
+    {
+      "file": "compute/providers/volcengine.json",
+      "id": "doubao-seed-2.1-turbo",
+      "baselineSpec": "doubao-seed-2.1-turbo",
+      "baselineDifferences": [
+        {
+          "field": "maxOutputTokens",
+          "provider": 262144,
+          "spec": 128000
+        }
+      ],
+      "currentSpec": "doubao-seed-2.1-turbo",
+      "currentDifferences": [
+        {
+          "field": "maxOutputTokens",
+          "access": 262144,
+          "spec": 128000
+        }
+      ],
+      "classification": "unverified-preserved",
+      "decision": "retain-separate-values",
+      "reason": "官方正文读取边界仍存在，输入/输出和总窗口不可混用；不把套餐262144或旧共享128000/32000判定为已核。",
+      "verifiedOverride": false
+    },
+    {
+      "file": "compute/providers/volcengine.json",
+      "id": "doubao-seed-2.0-lite",
+      "baselineSpec": "doubao-seed-2.0-lite",
+      "baselineDifferences": [
+        {
+          "field": "maxOutputTokens",
+          "provider": 128000,
+          "spec": 32000
+        }
+      ],
+      "currentSpec": "doubao-seed-2.0-lite",
+      "currentDifferences": [
+        {
+          "field": "maxOutputTokens",
+          "access": 128000,
+          "spec": 32000
+        }
+      ],
+      "classification": "unverified-preserved",
+      "decision": "retain-separate-values",
+      "reason": "官方正文读取边界仍存在，输入/输出和总窗口不可混用；不把套餐262144或旧共享128000/32000判定为已核。",
+      "verifiedOverride": false
+    },
+    {
+      "file": "compute/providers/volcengine.json",
+      "id": "doubao-seed-2.0-mini",
+      "baselineSpec": "doubao-seed-2.0-mini",
+      "baselineDifferences": [
+        {
+          "field": "maxOutputTokens",
+          "provider": 128000,
+          "spec": 32000
+        }
+      ],
+      "currentSpec": "doubao-seed-2.0-mini",
+      "currentDifferences": [
+        {
+          "field": "maxOutputTokens",
+          "access": 128000,
+          "spec": 32000
+        }
+      ],
+      "classification": "unverified-preserved",
+      "decision": "retain-separate-values",
+      "reason": "官方正文读取边界仍存在，输入/输出和总窗口不可混用；不把套餐262144或旧共享128000/32000判定为已核。",
+      "verifiedOverride": false
+    },
+    {
+      "file": "compute/providers/moonshot.json",
+      "id": "kimi-k2.7-code",
+      "baselineSpec": "kimi-k2.7-code",
+      "baselineDifferences": [
+        {
+          "field": "maxOutputTokens",
+          "provider": 32768,
+          "spec": 16384
+        }
+      ],
+      "currentSpec": "kimi-k2.7-code",
+      "currentDifferences": [
+        {
+          "field": "maxOutputTokens",
+          "access": 32768,
+          "spec": 16384
+        }
+      ],
+      "classification": "unverified-preserved",
+      "decision": "retain-separate-values",
+      "reason": "缺少精确接入字段证明；原厂与接入值均不冒充已核，不用最大值或机械min覆盖。",
+      "verifiedOverride": false
+    },
+    {
+      "file": "compute/providers/moonshot.json",
+      "id": "kimi-k2.7-code-highspeed",
+      "baselineSpec": "kimi-k2.7-code",
+      "baselineDifferences": [
+        {
+          "field": "maxOutputTokens",
+          "provider": 32768,
+          "spec": 16384
+        }
+      ],
+      "currentSpec": "kimi-k2.7-code",
+      "currentDifferences": [
+        {
+          "field": "maxOutputTokens",
+          "access": 32768,
+          "spec": 16384
+        }
+      ],
+      "classification": "unverified-preserved",
+      "decision": "retain-separate-values",
+      "reason": "缺少精确接入字段证明；原厂与接入值均不冒充已核，不用最大值或机械min覆盖。",
+      "verifiedOverride": false
+    },
+    {
+      "file": "compute/providers/moonshot.json",
+      "id": "kimi-k2.6",
+      "baselineSpec": "kimi-k2.6",
+      "baselineDifferences": [
+        {
+          "field": "maxOutputTokens",
+          "provider": 32768,
+          "spec": 16384
+        }
+      ],
+      "currentSpec": "kimi-k2.6",
+      "currentDifferences": [
+        {
+          "field": "maxOutputTokens",
+          "access": 32768,
+          "spec": 16384
+        }
+      ],
+      "classification": "unverified-preserved",
+      "decision": "retain-separate-values",
+      "reason": "缺少精确接入字段证明；原厂与接入值均不冒充已核，不用最大值或机械min覆盖。",
+      "verifiedOverride": false
+    },
+    {
+      "file": "compute/providers/moonshot.json",
+      "id": "kimi-k2.5",
+      "baselineSpec": "kimi-k2.5",
+      "baselineDifferences": [
+        {
+          "field": "contextWindow",
+          "provider": 262144,
+          "spec": 256000
+        }
+      ],
+      "currentSpec": "kimi-k2.5",
+      "currentDifferences": [
+        {
+          "field": "contextWindow",
+          "access": 262144,
+          "spec": 256000
+        }
+      ],
+      "classification": "unverified-preserved",
+      "decision": "retain-separate-values",
+      "reason": "缺少精确接入字段证明；原厂与接入值均不冒充已核，不用最大值或机械min覆盖。",
+      "verifiedOverride": false
+    },
+    {
+      "file": "compute/providers/moonshot.json",
+      "id": "moonshot-v1-32k-vision-preview",
+      "baselineSpec": "moonshot-v1-8k",
+      "baselineDifferences": [
+        {
+          "field": "contextWindow",
+          "provider": 32768,
+          "spec": 8192
+        }
+      ],
+      "currentSpec": "moonshot-v1-8k",
+      "currentDifferences": [
+        {
+          "field": "contextWindow",
+          "access": 32768,
+          "spec": 8192
+        }
+      ],
+      "classification": "family-binding-rejected",
+      "decision": "access-local-no-family",
+      "reason": "旧family错误落入8K文本型号，视觉版本窗口不能继承该规格；V2仅使用现有局部值，身份待核。",
+      "verifiedOverride": false
+    },
+    {
+      "file": "compute/providers/moonshot.json",
+      "id": "moonshot-v1-128k-vision-preview",
+      "baselineSpec": "moonshot-v1-8k",
+      "baselineDifferences": [
+        {
+          "field": "contextWindow",
+          "provider": 131072,
+          "spec": 8192
+        }
+      ],
+      "currentSpec": "moonshot-v1-8k",
+      "currentDifferences": [
+        {
+          "field": "contextWindow",
+          "access": 131072,
+          "spec": 8192
+        }
+      ],
+      "classification": "family-binding-rejected",
+      "decision": "access-local-no-family",
+      "reason": "旧family错误落入8K文本型号，视觉版本窗口不能继承该规格；V2仅使用现有局部值，身份待核。",
+      "verifiedOverride": false
+    },
+    {
+      "file": "compute/providers/zhipu.json",
+      "id": "glm-5.2",
+      "baselineSpec": "glm-5.2",
+      "baselineDifferences": [
+        {
+          "field": "contextWindow",
+          "provider": 1000000,
+          "spec": 1048576
+        },
+        {
+          "field": "maxOutputTokens",
+          "provider": 131072,
+          "spec": 32768
+        }
+      ],
+      "currentSpec": "glm-5.2",
+      "currentDifferences": [
+        {
+          "field": "contextWindow",
+          "access": 1000000,
+          "spec": 1048576
+        },
+        {
+          "field": "maxOutputTokens",
+          "access": 131072,
+          "spec": 32768
+        }
+      ],
+      "classification": "unverified-preserved",
+      "decision": "retain-separate-values",
+      "reason": "1000000/1048576、128000/131072等不能凭K/M简写推断换算；平台与原厂各值保留，精确整数待官网同页证明。",
+      "verifiedOverride": false
+    },
+    {
+      "file": "compute/providers/zhipu.json",
+      "id": "glm-5.1",
+      "baselineSpec": "glm-5.1",
+      "baselineDifferences": [
+        {
+          "field": "maxOutputTokens",
+          "provider": 131072,
+          "spec": 128000
+        }
+      ],
+      "currentSpec": "glm-5.1",
+      "currentDifferences": [
+        {
+          "field": "maxOutputTokens",
+          "access": 131072,
+          "spec": 128000
+        }
+      ],
+      "classification": "unverified-preserved",
+      "decision": "retain-separate-values",
+      "reason": "1000000/1048576、128000/131072等不能凭K/M简写推断换算；平台与原厂各值保留，精确整数待官网同页证明。",
+      "verifiedOverride": false
+    },
+    {
+      "file": "compute/providers/zhipu.json",
+      "id": "glm-5-turbo",
+      "baselineSpec": "glm-5-turbo",
+      "baselineDifferences": [
+        {
+          "field": "maxOutputTokens",
+          "provider": 131072,
+          "spec": 128000
+        }
+      ],
+      "currentSpec": "glm-5-turbo",
+      "currentDifferences": [
+        {
+          "field": "maxOutputTokens",
+          "access": 131072,
+          "spec": 128000
+        }
+      ],
+      "classification": "unverified-preserved",
+      "decision": "retain-separate-values",
+      "reason": "1000000/1048576、128000/131072等不能凭K/M简写推断换算；平台与原厂各值保留，精确整数待官网同页证明。",
+      "verifiedOverride": false
+    },
+    {
+      "file": "compute/providers/zhipu.json",
+      "id": "glm-5",
+      "baselineSpec": "glm-5",
+      "baselineDifferences": [
+        {
+          "field": "maxOutputTokens",
+          "provider": 131072,
+          "spec": 128000
+        }
+      ],
+      "currentSpec": "glm-5",
+      "currentDifferences": [
+        {
+          "field": "maxOutputTokens",
+          "access": 131072,
+          "spec": 128000
+        }
+      ],
+      "classification": "unverified-preserved",
+      "decision": "retain-separate-values",
+      "reason": "1000000/1048576、128000/131072等不能凭K/M简写推断换算；平台与原厂各值保留，精确整数待官网同页证明。",
+      "verifiedOverride": false
+    },
+    {
+      "file": "compute/providers/zhipu.json",
+      "id": "glm-4.7",
+      "baselineSpec": "glm-4.7",
+      "baselineDifferences": [
+        {
+          "field": "maxOutputTokens",
+          "provider": 131072,
+          "spec": 128000
+        }
+      ],
+      "currentSpec": "glm-4.7",
+      "currentDifferences": [
+        {
+          "field": "maxOutputTokens",
+          "access": 131072,
+          "spec": 128000
+        }
+      ],
+      "classification": "unverified-preserved",
+      "decision": "retain-separate-values",
+      "reason": "1000000/1048576、128000/131072等不能凭K/M简写推断换算；平台与原厂各值保留，精确整数待官网同页证明。",
+      "verifiedOverride": false
+    },
+    {
+      "file": "compute/providers/zhipu.json",
+      "id": "glm-4.7-flashx",
+      "baselineSpec": "glm-4.7",
+      "baselineDifferences": [
+        {
+          "field": "maxOutputTokens",
+          "provider": 131072,
+          "spec": 128000
+        }
+      ],
+      "currentSpec": "glm-4.7",
+      "currentDifferences": [
+        {
+          "field": "maxOutputTokens",
+          "access": 131072,
+          "spec": 128000
+        }
+      ],
+      "classification": "unverified-preserved",
+      "decision": "retain-separate-values",
+      "reason": "1000000/1048576、128000/131072等不能凭K/M简写推断换算；平台与原厂各值保留，精确整数待官网同页证明。",
+      "verifiedOverride": false
+    },
+    {
+      "file": "compute/providers/zhipu.json",
+      "id": "glm-5v-turbo",
+      "baselineSpec": "glm-5v-turbo",
+      "baselineDifferences": [
+        {
+          "field": "maxOutputTokens",
+          "provider": 131072,
+          "spec": 128000
+        }
+      ],
+      "currentSpec": "glm-5v-turbo",
+      "currentDifferences": [
+        {
+          "field": "maxOutputTokens",
+          "access": 131072,
+          "spec": 128000
+        }
+      ],
+      "classification": "unverified-preserved",
+      "decision": "retain-separate-values",
+      "reason": "1000000/1048576、128000/131072等不能凭K/M简写推断换算；平台与原厂各值保留，精确整数待官网同页证明。",
+      "verifiedOverride": false
+    },
+    {
+      "file": "compute/providers/zhipu.json",
+      "id": "glm-4.6",
+      "baselineSpec": "glm-4.6",
+      "baselineDifferences": [
+        {
+          "field": "maxOutputTokens",
+          "provider": 131072,
+          "spec": 128000
+        }
+      ],
+      "currentSpec": "glm-4.6",
+      "currentDifferences": [
+        {
+          "field": "maxOutputTokens",
+          "access": 131072,
+          "spec": 128000
+        }
+      ],
+      "classification": "unverified-preserved",
+      "decision": "retain-separate-values",
+      "reason": "1000000/1048576、128000/131072等不能凭K/M简写推断换算；平台与原厂各值保留，精确整数待官网同页证明。",
+      "verifiedOverride": false
+    },
+    {
+      "file": "compute/providers/minimax.json",
+      "id": "MiniMax-M3",
+      "baselineSpec": "MiniMax-M3",
+      "baselineDifferences": [
+        {
+          "field": "maxOutputTokens",
+          "provider": 131072,
+          "spec": 512000
+        }
+      ],
+      "currentSpec": "MiniMax-M3",
+      "currentDifferences": [
+        {
+          "field": "maxOutputTokens",
+          "access": 131072,
+          "spec": 512000
+        }
+      ],
+      "classification": "unverified-preserved",
+      "decision": "retain-separate-values",
+      "reason": "直连/套餐131072与共享512000缺少同一语义输出证明；保持分开、unknown覆盖，不把其解释为thinking预算或默认max_tokens。",
+      "verifiedOverride": false
+    },
+    {
+      "file": "compute/providers/xai.json",
+      "id": "grok-4.20-0309-reasoning",
+      "baselineSpec": "grok-4.20-0309-reasoning",
+      "baselineDifferences": [
+        {
+          "field": "contextWindow",
+          "provider": 1000000,
+          "spec": 2000000
+        }
+      ],
+      "currentSpec": "grok-4.20-0309-reasoning",
+      "currentDifferences": [
+        {
+          "field": "contextWindow",
+          "access": 1000000,
+          "spec": 2000000
+        }
+      ],
+      "classification": "unverified-preserved",
+      "decision": "retain-separate-values",
+      "reason": "缺少精确接入字段证明；原厂与接入值均不冒充已核，不用最大值或机械min覆盖。",
+      "verifiedOverride": false
+    },
+    {
+      "file": "compute/providers/openrouter.json",
+      "id": "minimax/minimax-m3",
+      "baselineSpec": "MiniMax-M3",
+      "baselineDifferences": [
+        {
+          "field": "contextWindow",
+          "provider": 1048576,
+          "spec": 1000000
+        }
+      ],
+      "currentSpec": "MiniMax-M3",
+      "currentDifferences": [
+        {
+          "field": "contextWindow",
+          "access": 1048576,
+          "spec": 1000000
+        }
+      ],
+      "classification": "platform-contract-preserved",
+      "decision": "retain-separate-values",
+      "reason": "本次OpenRouter官方API原样返回独立context_length和top_provider.max_completion_tokens；接入值保留，不复制到原厂规格。顶层目录窗口与top_provider路由窗口不同，二者不得合并。",
+      "verifiedOverride": true,
+      "evidence": "https://openrouter.ai/api/v1/models",
+      "officialAccessSnapshot": {
+        "context_length": 1048576,
+        "top_provider": {
+          "context_length": 524288,
+          "max_completion_tokens": 512000,
+          "is_moderated": false
+        }
+      }
+    },
+    {
+      "file": "compute/providers/openrouter.json",
+      "id": "deepseek/deepseek-v4.1-flash",
+      "baselineSpec": "deepseek-flash",
+      "baselineDifferences": [
+        {
+          "field": "contextWindow",
+          "provider": 1048576,
+          "spec": 1000000
+        },
+        {
+          "field": "maxOutputTokens",
+          "provider": 943718,
+          "spec": 384000
+        }
+      ],
+      "currentSpec": "deepseek-flash",
+      "currentDifferences": [
+        {
+          "field": "contextWindow",
+          "access": 1048576,
+          "spec": 1000000
+        },
+        {
+          "field": "maxOutputTokens",
+          "access": 943718,
+          "spec": 384000
+        }
+      ],
+      "classification": "platform-contract-preserved",
+      "decision": "retain-separate-values",
+      "reason": "本次OpenRouter官方API原样返回独立context_length和top_provider.max_completion_tokens；接入值保留，不复制到原厂规格。顶层目录窗口与top_provider路由窗口不同，二者不得合并。",
+      "verifiedOverride": true,
+      "evidence": "https://openrouter.ai/api/v1/models",
+      "officialAccessSnapshot": {
+        "context_length": 1048576,
+        "top_provider": {
+          "context_length": 1048576,
+          "max_completion_tokens": 943718,
+          "is_moderated": false
+        }
+      }
+    },
+    {
+      "file": "compute/providers/openrouter.json",
+      "id": "z-ai/glm-5.3-flash",
+      "baselineSpec": "glm-5.3-flash",
+      "baselineDifferences": [
+        {
+          "field": "maxOutputTokens",
+          "provider": 943717,
+          "spec": 131072
+        }
+      ],
+      "currentSpec": "glm-5.3-flash",
+      "currentDifferences": [
+        {
+          "field": "maxOutputTokens",
+          "access": 943717,
+          "spec": 131072
+        }
+      ],
+      "classification": "platform-contract-preserved",
+      "decision": "retain-separate-values",
+      "reason": "本次OpenRouter官方API原样返回独立context_length和top_provider.max_completion_tokens；接入值保留，不复制到原厂规格。顶层目录窗口与top_provider路由窗口不同，二者不得合并。",
+      "verifiedOverride": true,
+      "evidence": "https://openrouter.ai/api/v1/models",
+      "officialAccessSnapshot": {
+        "context_length": 1048576,
+        "top_provider": {
+          "context_length": 1048575,
+          "max_completion_tokens": 943717,
+          "is_moderated": false
+        }
+      }
+    },
+    {
+      "file": "compute/providers/openrouter.json",
+      "id": "moonshotai/kimi-k3",
+      "baselineSpec": "kimi-k3",
+      "baselineDifferences": [
+        {
+          "field": "maxOutputTokens",
+          "provider": 943718,
+          "spec": 1048576
+        }
+      ],
+      "currentSpec": "kimi-k3",
+      "currentDifferences": [
+        {
+          "field": "maxOutputTokens",
+          "access": 943718,
+          "spec": 1048576
+        }
+      ],
+      "classification": "platform-contract-preserved",
+      "decision": "retain-separate-values",
+      "reason": "本次OpenRouter官方API原样返回独立context_length和top_provider.max_completion_tokens；接入值保留，不复制到原厂规格。顶层目录窗口与top_provider路由窗口不同，二者不得合并。",
+      "verifiedOverride": true,
+      "evidence": "https://openrouter.ai/api/v1/models",
+      "officialAccessSnapshot": {
+        "context_length": 1048576,
+        "top_provider": {
+          "context_length": 1048576,
+          "max_completion_tokens": 943718,
+          "is_moderated": false
+        }
+      }
+    },
+    {
+      "file": "compute/coding-plans/zhipu-coding.json",
+      "id": "glm-5.2",
+      "baselineSpec": "glm-5.2",
+      "baselineDifferences": [
+        {
+          "field": "contextWindow",
+          "provider": 1000000,
+          "spec": 1048576
+        },
+        {
+          "field": "maxOutputTokens",
+          "provider": 131072,
+          "spec": 32768
+        }
+      ],
+      "currentSpec": "glm-5.2",
+      "currentDifferences": [
+        {
+          "field": "contextWindow",
+          "access": 1000000,
+          "spec": 1048576
+        },
+        {
+          "field": "maxOutputTokens",
+          "access": 131072,
+          "spec": 32768
+        }
+      ],
+      "classification": "unverified-preserved",
+      "decision": "retain-separate-values",
+      "reason": "1000000/1048576、128000/131072等不能凭K/M简写推断换算；平台与原厂各值保留，精确整数待官网同页证明。",
+      "verifiedOverride": false
+    },
+    {
+      "file": "compute/coding-plans/zhipu-coding.json",
+      "id": "glm-5-turbo",
+      "baselineSpec": "glm-5-turbo",
+      "baselineDifferences": [
+        {
+          "field": "maxOutputTokens",
+          "provider": 131072,
+          "spec": 128000
+        }
+      ],
+      "currentSpec": "glm-5-turbo",
+      "currentDifferences": [
+        {
+          "field": "maxOutputTokens",
+          "access": 131072,
+          "spec": 128000
+        }
+      ],
+      "classification": "unverified-preserved",
+      "decision": "retain-separate-values",
+      "reason": "1000000/1048576、128000/131072等不能凭K/M简写推断换算；平台与原厂各值保留，精确整数待官网同页证明。",
+      "verifiedOverride": false
+    },
+    {
+      "file": "compute/coding-plans/zhipu-coding.json",
+      "id": "glm-4.7",
+      "baselineSpec": "glm-4.7",
+      "baselineDifferences": [
+        {
+          "field": "maxOutputTokens",
+          "provider": 131072,
+          "spec": 128000
+        }
+      ],
+      "currentSpec": "glm-4.7",
+      "currentDifferences": [
+        {
+          "field": "maxOutputTokens",
+          "access": 131072,
+          "spec": 128000
+        }
+      ],
+      "classification": "unverified-preserved",
+      "decision": "retain-separate-values",
+      "reason": "1000000/1048576、128000/131072等不能凭K/M简写推断换算；平台与原厂各值保留，精确整数待官网同页证明。",
+      "verifiedOverride": false
+    },
+    {
+      "file": "compute/coding-plans/dashscope-coding.json",
+      "id": "qwen3-coder-plus",
+      "baselineSpec": "qwen3-coder",
+      "baselineDifferences": [
+        {
+          "field": "contextWindow",
+          "provider": 1000000,
+          "spec": 262144
+        }
+      ],
+      "currentSpec": "qwen3-coder-plus",
+      "currentDifferences": [],
+      "classification": "identity-isolated",
+      "decision": "bind-identity-only",
+      "reason": "当前Coding Plan官网正文列出该精确ID；并未证明窗口，新增无参数exact规格阻止262144家族值覆盖1000000。",
+      "verifiedOverride": false
+    },
+    {
+      "file": "compute/coding-plans/dashscope-coding.json",
+      "id": "kimi-k2.5",
+      "baselineSpec": "kimi-k2.5",
+      "baselineDifferences": [
+        {
+          "field": "contextWindow",
+          "provider": 262144,
+          "spec": 256000
+        }
+      ],
+      "currentSpec": "kimi-k2.5",
+      "currentDifferences": [
+        {
+          "field": "contextWindow",
+          "access": 262144,
+          "spec": 256000
+        }
+      ],
+      "classification": "unverified-preserved",
+      "decision": "retain-separate-values",
+      "reason": "缺少精确接入字段证明；原厂与接入值均不冒充已核，不用最大值或机械min覆盖。",
+      "verifiedOverride": false
+    },
+    {
+      "file": "compute/coding-plans/dashscope-coding.json",
+      "id": "glm-5",
+      "baselineSpec": "glm-5",
+      "baselineDifferences": [
+        {
+          "field": "contextWindow",
+          "provider": 202752,
+          "spec": 200000
+        },
+        {
+          "field": "maxOutputTokens",
+          "provider": 131072,
+          "spec": 128000
+        }
+      ],
+      "currentSpec": "glm-5",
+      "currentDifferences": [
+        {
+          "field": "contextWindow",
+          "access": 202752,
+          "spec": 200000
+        },
+        {
+          "field": "maxOutputTokens",
+          "access": 131072,
+          "spec": 128000
+        }
+      ],
+      "classification": "unverified-preserved",
+      "decision": "retain-separate-values",
+      "reason": "1000000/1048576、128000/131072等不能凭K/M简写推断换算；平台与原厂各值保留，精确整数待官网同页证明。",
+      "verifiedOverride": false
+    },
+    {
+      "file": "compute/coding-plans/dashscope-coding.json",
+      "id": "glm-4.7",
+      "baselineSpec": "glm-4.7",
+      "baselineDifferences": [
+        {
+          "field": "contextWindow",
+          "provider": 202752,
+          "spec": 200000
+        },
+        {
+          "field": "maxOutputTokens",
+          "provider": 131072,
+          "spec": 128000
+        }
+      ],
+      "currentSpec": "glm-4.7",
+      "currentDifferences": [
+        {
+          "field": "contextWindow",
+          "access": 202752,
+          "spec": 200000
+        },
+        {
+          "field": "maxOutputTokens",
+          "access": 131072,
+          "spec": 128000
+        }
+      ],
+      "classification": "unverified-preserved",
+      "decision": "retain-separate-values",
+      "reason": "1000000/1048576、128000/131072等不能凭K/M简写推断换算；平台与原厂各值保留，精确整数待官网同页证明。",
+      "verifiedOverride": false
+    },
+    {
+      "file": "compute/coding-plans/dashscope-coding.json",
+      "id": "MiniMax-M2.5",
+      "baselineSpec": "MiniMax-M2.5",
+      "baselineDifferences": [
+        {
+          "field": "contextWindow",
+          "provider": 196608,
+          "spec": 204800
+        },
+        {
+          "field": "maxOutputTokens",
+          "provider": 8192,
+          "spec": 131072
+        }
+      ],
+      "currentSpec": "MiniMax-M2.5",
+      "currentDifferences": [
+        {
+          "field": "contextWindow",
+          "access": 196608,
+          "spec": 204800
+        },
+        {
+          "field": "maxOutputTokens",
+          "access": 8192,
+          "spec": 131072
+        }
+      ],
+      "classification": "unverified-preserved",
+      "decision": "retain-separate-values",
+      "reason": "缺少精确接入字段证明；原厂与接入值均不冒充已核，不用最大值或机械min覆盖。",
+      "verifiedOverride": false
+    },
+    {
+      "file": "compute/coding-plans/dashscope-token-plan.json",
+      "id": "kimi-k2.5",
+      "baselineSpec": "kimi-k2.5",
+      "baselineDifferences": [
+        {
+          "field": "contextWindow",
+          "provider": 262144,
+          "spec": 256000
+        }
+      ],
+      "currentSpec": "kimi-k2.5",
+      "currentDifferences": [
+        {
+          "field": "contextWindow",
+          "access": 262144,
+          "spec": 256000
+        }
+      ],
+      "classification": "unverified-preserved",
+      "decision": "retain-separate-values",
+      "reason": "缺少精确接入字段证明；原厂与接入值均不冒充已核，不用最大值或机械min覆盖。",
+      "verifiedOverride": false
+    },
+    {
+      "file": "compute/coding-plans/dashscope-token-plan.json",
+      "id": "glm-5",
+      "baselineSpec": "glm-5",
+      "baselineDifferences": [
+        {
+          "field": "contextWindow",
+          "provider": 202752,
+          "spec": 200000
+        },
+        {
+          "field": "maxOutputTokens",
+          "provider": 131072,
+          "spec": 128000
+        }
+      ],
+      "currentSpec": "glm-5",
+      "currentDifferences": [
+        {
+          "field": "contextWindow",
+          "access": 202752,
+          "spec": 200000
+        },
+        {
+          "field": "maxOutputTokens",
+          "access": 131072,
+          "spec": 128000
+        }
+      ],
+      "classification": "unverified-preserved",
+      "decision": "retain-separate-values",
+      "reason": "1000000/1048576、128000/131072等不能凭K/M简写推断换算；平台与原厂各值保留，精确整数待官网同页证明。",
+      "verifiedOverride": false
+    },
+    {
+      "file": "compute/coding-plans/dashscope-token-plan.json",
+      "id": "MiniMax-M2.5",
+      "baselineSpec": "MiniMax-M2.5",
+      "baselineDifferences": [
+        {
+          "field": "contextWindow",
+          "provider": 196608,
+          "spec": 204800
+        },
+        {
+          "field": "maxOutputTokens",
+          "provider": 8192,
+          "spec": 131072
+        }
+      ],
+      "currentSpec": "MiniMax-M2.5",
+      "currentDifferences": [
+        {
+          "field": "contextWindow",
+          "access": 196608,
+          "spec": 204800
+        },
+        {
+          "field": "maxOutputTokens",
+          "access": 8192,
+          "spec": 131072
+        }
+      ],
+      "classification": "unverified-preserved",
+      "decision": "retain-separate-values",
+      "reason": "缺少精确接入字段证明；原厂与接入值均不冒充已核，不用最大值或机械min覆盖。",
+      "verifiedOverride": false
+    },
+    {
+      "file": "compute/coding-plans/dashscope-token-plan.json",
+      "id": "glm-4.7",
+      "baselineSpec": "glm-4.7",
+      "baselineDifferences": [
+        {
+          "field": "maxOutputTokens",
+          "provider": 131072,
+          "spec": 128000
+        }
+      ],
+      "currentSpec": "glm-4.7",
+      "currentDifferences": [
+        {
+          "field": "maxOutputTokens",
+          "access": 131072,
+          "spec": 128000
+        }
+      ],
+      "classification": "unverified-preserved",
+      "decision": "retain-separate-values",
+      "reason": "1000000/1048576、128000/131072等不能凭K/M简写推断换算；平台与原厂各值保留，精确整数待官网同页证明。",
+      "verifiedOverride": false
+    },
+    {
+      "file": "compute/coding-plans/volcengine-coding.json",
+      "id": "doubao-seed-2.1-turbo",
+      "baselineSpec": "doubao-seed-2.1-turbo",
+      "baselineDifferences": [
+        {
+          "field": "maxOutputTokens",
+          "provider": 262144,
+          "spec": 128000
+        }
+      ],
+      "currentSpec": "doubao-seed-2.1-turbo",
+      "currentDifferences": [
+        {
+          "field": "maxOutputTokens",
+          "access": 262144,
+          "spec": 128000
+        }
+      ],
+      "classification": "unverified-preserved",
+      "decision": "retain-separate-values",
+      "reason": "官方正文读取边界仍存在，输入/输出和总窗口不可混用；不把套餐262144或旧共享128000/32000判定为已核。",
+      "verifiedOverride": false
+    },
+    {
+      "file": "compute/coding-plans/minimax-coding.json",
+      "id": "MiniMax-M3",
+      "baselineSpec": "MiniMax-M3",
+      "baselineDifferences": [
+        {
+          "field": "maxOutputTokens",
+          "provider": 131072,
+          "spec": 512000
+        }
+      ],
+      "currentSpec": "MiniMax-M3",
+      "currentDifferences": [
+        {
+          "field": "maxOutputTokens",
+          "access": 131072,
+          "spec": 512000
+        }
+      ],
+      "classification": "unverified-preserved",
+      "decision": "retain-separate-values",
+      "reason": "直连/套餐131072与共享512000缺少同一语义输出证明；保持分开、unknown覆盖，不把其解释为thinking预算或默认max_tokens。",
+      "verifiedOverride": false
+    }
+  ],
+  "specOnly": [
+    {
+      "file": "compute/model-specs/anthropic.json",
+      "id": "claude-opus-4-8",
+      "hasRouting": false,
+      "classification": "dynamic-directory-candidate",
+      "decision": "retain-spec-without-new-access",
+      "reason": "保留用于动态目录精确匹配；静态未命中不证明退役，也不授权接入调用。",
+      "newAutomaticRouting": false
+    },
+    {
+      "file": "compute/model-specs/anthropic.json",
+      "id": "claude-opus-4-7",
+      "hasRouting": false,
+      "classification": "dynamic-directory-candidate",
+      "decision": "retain-spec-without-new-access",
+      "reason": "保留用于动态目录精确匹配；静态未命中不证明退役，也不授权接入调用。",
+      "newAutomaticRouting": false
+    },
+    {
+      "file": "compute/model-specs/anthropic.json",
+      "id": "claude-opus",
+      "hasRouting": false,
+      "classification": "family-display-fallback",
+      "decision": "retain-spec-without-new-access",
+      "reason": "家族/滚动名称仅展示或保守补缺，不能对未知型号继承高风险能力/身份。",
+      "newAutomaticRouting": false
+    },
+    {
+      "file": "compute/model-specs/anthropic.json",
+      "id": "claude-sonnet-4-6",
+      "hasRouting": false,
+      "classification": "dynamic-directory-candidate",
+      "decision": "retain-spec-without-new-access",
+      "reason": "保留用于动态目录精确匹配；静态未命中不证明退役，也不授权接入调用。",
+      "newAutomaticRouting": false
+    },
+    {
+      "file": "compute/model-specs/anthropic.json",
+      "id": "claude-sonnet-4-5",
+      "hasRouting": false,
+      "classification": "dynamic-directory-candidate",
+      "decision": "retain-spec-without-new-access",
+      "reason": "保留用于动态目录精确匹配；静态未命中不证明退役，也不授权接入调用。",
+      "newAutomaticRouting": false
+    },
+    {
+      "file": "compute/model-specs/anthropic.json",
+      "id": "claude-sonnet",
+      "hasRouting": false,
+      "classification": "family-display-fallback",
+      "decision": "retain-spec-without-new-access",
+      "reason": "家族/滚动名称仅展示或保守补缺，不能对未知型号继承高风险能力/身份。",
+      "newAutomaticRouting": false
+    },
+    {
+      "file": "compute/model-specs/openai.json",
+      "id": "dall-e-3",
+      "hasRouting": false,
+      "classification": "dynamic-directory-candidate",
+      "decision": "retain-spec-without-new-access",
+      "reason": "保留用于动态目录精确匹配；静态未命中不证明退役，也不授权接入调用。",
+      "newAutomaticRouting": false
+    },
+    {
+      "file": "compute/model-specs/openai.json",
+      "id": "gpt-4o-realtime",
+      "hasRouting": false,
+      "classification": "legacy-compatibility",
+      "decision": "retain-spec-without-new-access",
+      "reason": "旧精确别名/版本保留兼容；未取得退役日期证明，不据静态缺失删除，不能当成当前接入可用性。",
+      "newAutomaticRouting": false
+    },
+    {
+      "file": "compute/model-specs/openai.json",
+      "id": "gpt-4o-realtime-preview",
+      "hasRouting": false,
+      "classification": "legacy-compatibility",
+      "decision": "retain-spec-without-new-access",
+      "reason": "旧精确别名/版本保留兼容；未取得退役日期证明，不据静态缺失删除，不能当成当前接入可用性。",
+      "newAutomaticRouting": false
+    },
+    {
+      "file": "compute/model-specs/openai.json",
+      "id": "gpt-oss-120b",
+      "hasRouting": false,
+      "classification": "dynamic-directory-candidate",
+      "decision": "retain-spec-without-new-access",
+      "reason": "保留用于动态目录精确匹配；静态未命中不证明退役，也不授权接入调用。",
+      "newAutomaticRouting": false
+    },
+    {
+      "file": "compute/model-specs/openai.json",
+      "id": "gpt-5.6-sol-pro",
+      "hasRouting": false,
+      "classification": "dynamic-directory-candidate",
+      "decision": "retain-spec-without-new-access",
+      "reason": "保留用于动态目录精确匹配；静态未命中不证明退役，也不授权接入调用。",
+      "newAutomaticRouting": false
+    },
+    {
+      "file": "compute/model-specs/openai.json",
+      "id": "gpt-5.6-terra-pro",
+      "hasRouting": false,
+      "classification": "dynamic-directory-candidate",
+      "decision": "retain-spec-without-new-access",
+      "reason": "保留用于动态目录精确匹配；静态未命中不证明退役，也不授权接入调用。",
+      "newAutomaticRouting": false
+    },
+    {
+      "file": "compute/model-specs/openai.json",
+      "id": "gpt-5.6-luna-pro",
+      "hasRouting": false,
+      "classification": "dynamic-directory-candidate",
+      "decision": "retain-spec-without-new-access",
+      "reason": "保留用于动态目录精确匹配；静态未命中不证明退役，也不授权接入调用。",
+      "newAutomaticRouting": false
+    },
+    {
+      "file": "compute/model-specs/google.json",
+      "id": "gemini-3.5-transcribe-live",
+      "hasRouting": false,
+      "classification": "native-adapter-required",
+      "decision": "retain-spec-without-new-access",
+      "reason": "原生或媒体协议需独立适配及版本验收；保持spec-only，不新增Provider，不扩大自动路由。",
+      "newAutomaticRouting": false
+    },
+    {
+      "file": "compute/model-specs/google.json",
+      "id": "gemini-3.5-transcribe",
+      "hasRouting": false,
+      "classification": "native-adapter-required",
+      "decision": "retain-spec-without-new-access",
+      "reason": "原生或媒体协议需独立适配及版本验收；保持spec-only，不新增Provider，不扩大自动路由。",
+      "newAutomaticRouting": false
+    },
+    {
+      "file": "compute/model-specs/google.json",
+      "id": "gemini-3.8-live-extended-thinking",
+      "hasRouting": false,
+      "classification": "native-adapter-required",
+      "decision": "retain-spec-without-new-access",
+      "reason": "原生或媒体协议需独立适配及版本验收；保持spec-only，不新增Provider，不扩大自动路由。",
+      "newAutomaticRouting": false
+    },
+    {
+      "file": "compute/model-specs/google.json",
+      "id": "gemini-3.8-live",
+      "hasRouting": false,
+      "classification": "native-adapter-required",
+      "decision": "retain-spec-without-new-access",
+      "reason": "原生或媒体协议需独立适配及版本验收；保持spec-only，不新增Provider，不扩大自动路由。",
+      "newAutomaticRouting": false
+    },
+    {
+      "file": "compute/model-specs/google.json",
+      "id": "gemini-3.8-flash-lite-tts",
+      "hasRouting": false,
+      "classification": "native-adapter-required",
+      "decision": "retain-spec-without-new-access",
+      "reason": "原生或媒体协议需独立适配及版本验收；保持spec-only，不新增Provider，不扩大自动路由。",
+      "newAutomaticRouting": false
+    },
+    {
+      "file": "compute/model-specs/google.json",
+      "id": "gemini-3.8-flash-tts",
+      "hasRouting": false,
+      "classification": "native-adapter-required",
+      "decision": "retain-spec-without-new-access",
+      "reason": "原生或媒体协议需独立适配及版本验收；保持spec-only，不新增Provider，不扩大自动路由。",
+      "newAutomaticRouting": false
+    },
+    {
+      "file": "compute/model-specs/google.json",
+      "id": "gemini-3.1-flash-lite-image",
+      "hasRouting": false,
+      "classification": "dynamic-directory-candidate",
+      "decision": "retain-spec-without-new-access",
+      "reason": "保留用于动态目录精确匹配；静态未命中不证明退役，也不授权接入调用。",
+      "newAutomaticRouting": false
+    },
+    {
+      "file": "compute/model-specs/google.json",
+      "id": "gemini-3.1-flash-image",
+      "hasRouting": false,
+      "classification": "dynamic-directory-candidate",
+      "decision": "retain-spec-without-new-access",
+      "reason": "保留用于动态目录精确匹配；静态未命中不证明退役，也不授权接入调用。",
+      "newAutomaticRouting": false
+    },
+    {
+      "file": "compute/model-specs/deepseek.json",
+      "id": "deepseek-chat",
+      "hasRouting": false,
+      "classification": "legacy-compatibility",
+      "decision": "retain-spec-without-new-access",
+      "reason": "旧精确别名/版本保留兼容；未取得退役日期证明，不据静态缺失删除，不能当成当前接入可用性。",
+      "newAutomaticRouting": false
+    },
+    {
+      "file": "compute/model-specs/deepseek.json",
+      "id": "deepseek-reasoner",
+      "hasRouting": false,
+      "classification": "legacy-compatibility",
+      "decision": "retain-spec-without-new-access",
+      "reason": "旧精确别名/版本保留兼容；未取得退役日期证明，不据静态缺失删除，不能当成当前接入可用性。",
+      "newAutomaticRouting": false
+    },
+    {
+      "file": "compute/model-specs/qwen.json",
+      "id": "qwen3.8-max-preview",
+      "hasRouting": true,
+      "classification": "dynamic-directory-candidate",
+      "decision": "retain-spec-without-new-access",
+      "reason": "保留用于动态目录精确匹配；静态未命中不证明退役，也不授权接入调用。",
+      "newAutomaticRouting": false
+    },
+    {
+      "file": "compute/model-specs/qwen.json",
+      "id": "qwen-max",
+      "hasRouting": false,
+      "classification": "family-display-fallback",
+      "decision": "retain-spec-without-new-access",
+      "reason": "家族/滚动名称仅展示或保守补缺，不能对未知型号继承高风险能力/身份。",
+      "newAutomaticRouting": false
+    },
+    {
+      "file": "compute/model-specs/qwen.json",
+      "id": "qwen-plus",
+      "hasRouting": false,
+      "classification": "family-display-fallback",
+      "decision": "retain-spec-without-new-access",
+      "reason": "家族/滚动名称仅展示或保守补缺，不能对未知型号继承高风险能力/身份。",
+      "newAutomaticRouting": false
+    },
+    {
+      "file": "compute/model-specs/qwen.json",
+      "id": "qwen-turbo",
+      "hasRouting": false,
+      "classification": "family-display-fallback",
+      "decision": "retain-spec-without-new-access",
+      "reason": "家族/滚动名称仅展示或保守补缺，不能对未知型号继承高风险能力/身份。",
+      "newAutomaticRouting": false
+    },
+    {
+      "file": "compute/model-specs/qwen.json",
+      "id": "qwen3-max-trans",
+      "hasRouting": false,
+      "classification": "dynamic-directory-candidate",
+      "decision": "retain-spec-without-new-access",
+      "reason": "保留用于动态目录精确匹配；静态未命中不证明退役，也不授权接入调用。",
+      "newAutomaticRouting": false
+    },
+    {
+      "file": "compute/model-specs/qwen.json",
+      "id": "qwen3.5-35b-a3b",
+      "hasRouting": false,
+      "classification": "dynamic-directory-candidate",
+      "decision": "retain-spec-without-new-access",
+      "reason": "保留用于动态目录精确匹配；静态未命中不证明退役，也不授权接入调用。",
+      "newAutomaticRouting": false
+    },
+    {
+      "file": "compute/model-specs/qwen.json",
+      "id": "qwen3.5-27b",
+      "hasRouting": false,
+      "classification": "dynamic-directory-candidate",
+      "decision": "retain-spec-without-new-access",
+      "reason": "保留用于动态目录精确匹配；静态未命中不证明退役，也不授权接入调用。",
+      "newAutomaticRouting": false
+    },
+    {
+      "file": "compute/model-specs/moonshot.json",
+      "id": "kimi-k2-thinking",
+      "hasRouting": false,
+      "classification": "dynamic-directory-candidate",
+      "decision": "retain-spec-without-new-access",
+      "reason": "保留用于动态目录精确匹配；静态未命中不证明退役，也不授权接入调用。",
+      "newAutomaticRouting": false
+    },
+    {
+      "file": "compute/model-specs/moonshot.json",
+      "id": "kimi-k2",
+      "hasRouting": false,
+      "classification": "dynamic-directory-candidate",
+      "decision": "retain-spec-without-new-access",
+      "reason": "保留用于动态目录精确匹配；静态未命中不证明退役，也不授权接入调用。",
+      "newAutomaticRouting": false
+    },
+    {
+      "file": "compute/model-specs/zhipu.json",
+      "id": "glm-4.7-thinking",
+      "hasRouting": false,
+      "classification": "dynamic-directory-candidate",
+      "decision": "retain-spec-without-new-access",
+      "reason": "保留用于动态目录精确匹配；静态未命中不证明退役，也不授权接入调用。",
+      "newAutomaticRouting": false
+    },
+    {
+      "file": "compute/model-specs/minimax.json",
+      "id": "MiniMax-H3-Max",
+      "hasRouting": false,
+      "classification": "native-adapter-required",
+      "decision": "retain-spec-without-new-access",
+      "reason": "原生或媒体协议需独立适配及版本验收；保持spec-only，不新增Provider，不扩大自动路由。",
+      "newAutomaticRouting": false
+    },
+    {
+      "file": "compute/model-specs/minimax.json",
+      "id": "MiniMax-H3",
+      "hasRouting": false,
+      "classification": "native-adapter-required",
+      "decision": "retain-spec-without-new-access",
+      "reason": "原生或媒体协议需独立适配及版本验收；保持spec-only，不新增Provider，不扩大自动路由。",
+      "newAutomaticRouting": false
+    },
+    {
+      "file": "compute/model-specs/minimax.json",
+      "id": "MiniMax-Text-01",
+      "hasRouting": false,
+      "classification": "dynamic-directory-candidate",
+      "decision": "retain-spec-without-new-access",
+      "reason": "保留用于动态目录精确匹配；静态未命中不证明退役，也不授权接入调用。",
+      "newAutomaticRouting": false
+    },
+    {
+      "file": "compute/model-specs/xai.json",
+      "id": "grok-4.5",
+      "hasRouting": false,
+      "classification": "dynamic-directory-candidate",
+      "decision": "retain-spec-without-new-access",
+      "reason": "保留用于动态目录精确匹配；静态未命中不证明退役，也不授权接入调用。",
+      "newAutomaticRouting": false
+    },
+    {
+      "file": "compute/model-specs/xai.json",
+      "id": "grok-4-1-fast-reasoning",
+      "hasRouting": false,
+      "classification": "dynamic-directory-candidate",
+      "decision": "retain-spec-without-new-access",
+      "reason": "保留用于动态目录精确匹配；静态未命中不证明退役，也不授权接入调用。",
+      "newAutomaticRouting": false
+    },
+    {
+      "file": "compute/model-specs/xiaomi.json",
+      "id": "mimo-v2.5",
+      "hasRouting": true,
+      "classification": "dynamic-directory-candidate",
+      "decision": "retain-spec-without-new-access",
+      "reason": "保留用于动态目录精确匹配；静态未命中不证明退役，也不授权接入调用。",
+      "newAutomaticRouting": false
+    },
+    {
+      "file": "compute/model-specs/xiaomi.json",
+      "id": "mimo-v2-pro",
+      "hasRouting": false,
+      "classification": "dynamic-directory-candidate",
+      "decision": "retain-spec-without-new-access",
+      "reason": "保留用于动态目录精确匹配；静态未命中不证明退役，也不授权接入调用。",
+      "newAutomaticRouting": false
+    },
+    {
+      "file": "compute/model-specs/xiaomi.json",
+      "id": "mimo-v2-omni",
+      "hasRouting": false,
+      "classification": "dynamic-directory-candidate",
+      "decision": "retain-spec-without-new-access",
+      "reason": "保留用于动态目录精确匹配；静态未命中不证明退役，也不授权接入调用。",
+      "newAutomaticRouting": false
+    },
+    {
+      "file": "compute/model-specs/xiaomi.json",
+      "id": "mimo-v2-flash",
+      "hasRouting": false,
+      "classification": "dynamic-directory-candidate",
+      "decision": "retain-spec-without-new-access",
+      "reason": "保留用于动态目录精确匹配；静态未命中不证明退役，也不授权接入调用。",
+      "newAutomaticRouting": false
+    },
+    {
+      "file": "compute/model-specs/xiaomi.json",
+      "id": "mimo-v2-tts",
+      "hasRouting": false,
+      "classification": "native-adapter-required",
+      "decision": "retain-spec-without-new-access",
+      "reason": "原生或媒体协议需独立适配及版本验收；保持spec-only，不新增Provider，不扩大自动路由。",
+      "newAutomaticRouting": false
+    },
+    {
+      "file": "compute/model-specs/cohere.json",
+      "id": "rerank-v4.0-fast",
+      "hasRouting": false,
+      "classification": "native-adapter-required",
+      "decision": "retain-spec-without-new-access",
+      "reason": "原生或媒体协议需独立适配及版本验收；保持spec-only，不新增Provider，不扩大自动路由。",
+      "newAutomaticRouting": false
+    },
+    {
+      "file": "compute/model-specs/cohere.json",
+      "id": "rerank-v4.0-pro",
+      "hasRouting": false,
+      "classification": "native-adapter-required",
+      "decision": "retain-spec-without-new-access",
+      "reason": "原生或媒体协议需独立适配及版本验收；保持spec-only，不新增Provider，不扩大自动路由。",
+      "newAutomaticRouting": false
+    },
+    {
+      "file": "compute/model-specs/cohere.json",
+      "id": "north-mini-code-1-0",
+      "hasRouting": false,
+      "classification": "dynamic-directory-candidate",
+      "decision": "retain-spec-without-new-access",
+      "reason": "保留用于动态目录精确匹配；静态未命中不证明退役，也不授权接入调用。",
+      "newAutomaticRouting": false
+    },
+    {
+      "file": "compute/model-specs/cohere.json",
+      "id": "north-small-translate-1-0",
+      "hasRouting": false,
+      "classification": "dynamic-directory-candidate",
+      "decision": "retain-spec-without-new-access",
+      "reason": "保留用于动态目录精确匹配；静态未命中不证明退役，也不授权接入调用。",
+      "newAutomaticRouting": false
+    },
+    {
+      "file": "compute/model-specs/cohere.json",
+      "id": "rerank-v3.5",
+      "hasRouting": false,
+      "classification": "native-adapter-required",
+      "decision": "retain-spec-without-new-access",
+      "reason": "原生或媒体协议需独立适配及版本验收；保持spec-only，不新增Provider，不扩大自动路由。",
+      "newAutomaticRouting": false
+    },
+    {
+      "file": "compute/model-specs/kling.json",
+      "id": "kling-3.0-turbo",
+      "hasRouting": false,
+      "classification": "native-adapter-required",
+      "decision": "retain-spec-without-new-access",
+      "reason": "原生或媒体协议需独立适配及版本验收；保持spec-only，不新增Provider，不扩大自动路由。",
+      "newAutomaticRouting": false
+    },
+    {
+      "file": "compute/model-specs/stability.json",
+      "id": "stable-audio-3.0",
+      "hasRouting": false,
+      "classification": "native-adapter-required",
+      "decision": "retain-spec-without-new-access",
+      "reason": "原生或媒体协议需独立适配及版本验收；保持spec-only，不新增Provider，不扩大自动路由。",
+      "newAutomaticRouting": false
+    },
+    {
+      "file": "compute/model-specs/tencent.json",
+      "id": "hy3",
+      "hasRouting": false,
+      "classification": "dynamic-directory-candidate",
+      "decision": "retain-spec-without-new-access",
+      "reason": "保留用于动态目录精确匹配；静态未命中不证明退役，也不授权接入调用。",
+      "newAutomaticRouting": false
+    },
+    {
+      "file": "compute/model-specs/tencent.json",
+      "id": "hy3-preview",
+      "hasRouting": false,
+      "classification": "dynamic-directory-candidate",
+      "decision": "retain-spec-without-new-access",
+      "reason": "保留用于动态目录精确匹配；静态未命中不证明退役，也不授权接入调用。",
+      "newAutomaticRouting": false
+    },
+    {
+      "file": "compute/model-specs/volcengine.json",
+      "id": "doubao-seedance-2.0-fast",
+      "hasRouting": true,
+      "classification": "dynamic-directory-candidate",
+      "decision": "retain-spec-without-new-access",
+      "reason": "保留用于动态目录精确匹配；静态未命中不证明退役，也不授权接入调用。",
+      "newAutomaticRouting": false
+    },
+    {
+      "file": "compute/model-specs/volcengine.json",
+      "id": "doubao-seedance-2.0-mini",
+      "hasRouting": true,
+      "classification": "dynamic-directory-candidate",
+      "decision": "retain-spec-without-new-access",
+      "reason": "保留用于动态目录精确匹配；静态未命中不证明退役，也不授权接入调用。",
+      "newAutomaticRouting": false
+    },
+    {
+      "file": "compute/model-specs/volcengine.json",
+      "id": "doubao-seedance-1.5-pro",
+      "hasRouting": false,
+      "classification": "legacy-compatibility",
+      "decision": "retain-spec-without-new-access",
+      "reason": "旧精确别名/版本保留兼容；未取得退役日期证明，不据静态缺失删除，不能当成当前接入可用性。",
+      "newAutomaticRouting": false
+    },
+    {
+      "file": "compute/model-specs/volcengine.json",
+      "id": "doubao-seedance-1.0-pro",
+      "hasRouting": false,
+      "classification": "legacy-compatibility",
+      "decision": "retain-spec-without-new-access",
+      "reason": "旧精确别名/版本保留兼容；未取得退役日期证明，不据静态缺失删除，不能当成当前接入可用性。",
+      "newAutomaticRouting": false
+    },
+    {
+      "file": "compute/model-specs/volcengine.json",
+      "id": "doubao-seedance-1.0-pro-fast",
+      "hasRouting": false,
+      "classification": "legacy-compatibility",
+      "decision": "retain-spec-without-new-access",
+      "reason": "旧精确别名/版本保留兼容；未取得退役日期证明，不据静态缺失删除，不能当成当前接入可用性。",
+      "newAutomaticRouting": false
+    },
+    {
+      "file": "compute/model-specs/stealth.json",
+      "id": "ox-alpha",
+      "hasRouting": false,
+      "classification": "historical-identity",
+      "decision": "retain-spec-without-new-access",
+      "reason": "原入口已下架；历史身份映射证据不足，保留兼容记录而不重新上架或扩大路由。",
+      "newAutomaticRouting": false
+    }
+  ],
+  "verifiedLimits": [
+    {
+      "vendor": "openai",
+      "id": "gpt-5.4-nano",
+      "contextWindow": 400000,
+      "maxOutputTokens": 128000,
+      "evidence": "https://developers.openai.com/api/docs/models/gpt-5.4-nano.md",
+      "maxInputTokens": null
+    },
+    {
+      "vendor": "openai",
+      "id": "gpt-5.4-pro",
+      "contextWindow": 1050000,
+      "maxOutputTokens": 128000,
+      "evidence": "https://developers.openai.com/api/docs/models/gpt-5.4-pro.md",
+      "maxInputTokens": null
+    },
+    {
+      "vendor": "openai",
+      "id": "gpt-realtime-2.1",
+      "contextWindow": 128000,
+      "maxOutputTokens": 32000,
+      "evidence": "https://developers.openai.com/api/docs/models/gpt-realtime-2.1.md",
+      "maxInputTokens": null
+    },
+    {
+      "vendor": "openai",
+      "id": "gpt-realtime-2.1-mini",
+      "contextWindow": 128000,
+      "maxOutputTokens": 32000,
+      "evidence": "https://developers.openai.com/api/docs/models/gpt-realtime-2.1-mini.md",
+      "maxInputTokens": null
+    },
+    {
+      "vendor": "openai",
+      "id": "gpt-realtime-translate",
+      "contextWindow": 16000,
+      "maxOutputTokens": 2000,
+      "evidence": "https://developers.openai.com/api/docs/models/gpt-realtime-translate.md",
+      "maxInputTokens": null
+    }
+  ],
+  "strictExactExceptions": [
+    {
+      "file": "compute/providers/dashscope.json",
+      "providerId": "provider-dashscope-001",
+      "apiModelId": "qwen-mt-plus",
+      "kind": "access-local",
+      "bindingKind": "access-local",
+      "reason": "精确身份未证实；保留接入本地字段，禁止normalized/stripped/family制造原厂绑定。",
+      "automaticRouting": false,
+      "inheritFamily": false,
+      "effectiveBinding": null
+    },
+    {
+      "file": "compute/providers/google.json",
+      "providerId": "provider-google-001",
+      "apiModelId": "gemini-3.1-flash-lite",
+      "kind": "access-local",
+      "bindingKind": "access-local",
+      "reason": "精确身份未证实；保留接入本地字段，禁止normalized/stripped/family制造原厂绑定。",
+      "automaticRouting": false,
+      "inheritFamily": false,
+      "effectiveBinding": null
+    },
+    {
+      "file": "compute/providers/local-whisper.json",
+      "providerId": "provider-local-whisper",
+      "apiModelId": "whisper-large-v3",
+      "kind": "access-local",
+      "bindingKind": "access-local",
+      "reason": "本地开源安装与云whisper-1不是同一合同；保留本地安装识别，不继承云端接口/额度。",
+      "automaticRouting": false,
+      "inheritFamily": false,
+      "effectiveBinding": null
+    },
+    {
+      "file": "compute/providers/moonshot.json",
+      "providerId": "provider-moonshot-001",
+      "apiModelId": "kimi-k2.7-code-highspeed",
+      "kind": "access-local",
+      "bindingKind": "access-local",
+      "reason": "精确身份未证实；保留接入本地字段，禁止normalized/stripped/family制造原厂绑定。",
+      "automaticRouting": false,
+      "inheritFamily": false,
+      "effectiveBinding": null
+    },
+    {
+      "file": "compute/providers/moonshot.json",
+      "providerId": "provider-moonshot-001",
+      "apiModelId": "moonshot-v1-8k-vision-preview",
+      "kind": "access-local",
+      "bindingKind": "access-local",
+      "reason": "视觉变体不能继承文本8K family；无已证精确绑定时保留接入局部窗口和模态。",
+      "automaticRouting": false,
+      "inheritFamily": false,
+      "effectiveBinding": null
+    },
+    {
+      "file": "compute/providers/moonshot.json",
+      "providerId": "provider-moonshot-001",
+      "apiModelId": "moonshot-v1-32k-vision-preview",
+      "kind": "access-local",
+      "bindingKind": "access-local",
+      "reason": "视觉变体不能继承文本8K family；无已证精确绑定时保留接入局部窗口和模态。",
+      "automaticRouting": false,
+      "inheritFamily": false,
+      "effectiveBinding": null
+    },
+    {
+      "file": "compute/providers/moonshot.json",
+      "providerId": "provider-moonshot-001",
+      "apiModelId": "moonshot-v1-128k-vision-preview",
+      "kind": "access-local",
+      "bindingKind": "access-local",
+      "reason": "视觉变体不能继承文本8K family；无已证精确绑定时保留接入局部窗口和模态。",
+      "automaticRouting": false,
+      "inheritFamily": false,
+      "effectiveBinding": null
+    },
+    {
+      "file": "compute/providers/ollama.json",
+      "providerId": "provider-local-ollama",
+      "apiModelId": "llama3.1:70b",
+      "kind": "dynamic-alias",
+      "bindingKind": "access-local",
+      "reason": "动态目录/套餐滚动ID；必须按真实返回目录识别，不静态绑猜测原厂，未识别期间保留access-local。",
+      "automaticRouting": false,
+      "inheritFamily": false,
+      "effectiveBinding": null
+    },
+    {
+      "file": "compute/providers/openai.json",
+      "providerId": "provider-openai-001",
+      "apiModelId": "gpt-5.5-pro",
+      "kind": "access-local",
+      "bindingKind": "access-local",
+      "reason": "精确身份未证实；保留接入本地字段，禁止normalized/stripped/family制造原厂绑定。",
+      "automaticRouting": false,
+      "inheritFamily": false,
+      "effectiveBinding": null
+    },
+    {
+      "file": "compute/providers/openrouter.json",
+      "providerId": "provider-openrouter-001",
+      "apiModelId": "cohere/command-a-plus",
+      "kind": "access-local",
+      "bindingKind": "access-local",
+      "reason": "聚合平台请求ID有独立托管合同；没有该精确ID已证alias时保留接入本地数值/能力，不通过剥前缀绑定原厂。",
+      "automaticRouting": false,
+      "inheritFamily": false,
+      "effectiveBinding": null
+    },
+    {
+      "file": "compute/providers/openrouter.json",
+      "providerId": "provider-openrouter-001",
+      "apiModelId": "mistralai/mistral-medium-3-5",
+      "kind": "access-local",
+      "bindingKind": "access-local",
+      "reason": "聚合平台请求ID有独立托管合同；没有该精确ID已证alias时保留接入本地数值/能力，不通过剥前缀绑定原厂。",
+      "automaticRouting": false,
+      "inheritFamily": false,
+      "effectiveBinding": null
+    },
+    {
+      "file": "compute/providers/openrouter.json",
+      "providerId": "provider-openrouter-001",
+      "apiModelId": "google/gemini-3.8-flash",
+      "kind": "access-local",
+      "bindingKind": "access-local",
+      "reason": "聚合平台请求ID有独立托管合同；没有该精确ID已证alias时保留接入本地数值/能力，不通过剥前缀绑定原厂。",
+      "automaticRouting": false,
+      "inheritFamily": false,
+      "effectiveBinding": null
+    },
+    {
+      "file": "compute/providers/openrouter.json",
+      "providerId": "provider-openrouter-001",
+      "apiModelId": "minimax/minimax-m3",
+      "kind": "access-local",
+      "bindingKind": "access-local",
+      "reason": "聚合平台请求ID有独立托管合同；没有该精确ID已证alias时保留接入本地数值/能力，不通过剥前缀绑定原厂。",
+      "automaticRouting": false,
+      "inheritFamily": false,
+      "effectiveBinding": null
+    },
+    {
+      "file": "compute/providers/openrouter.json",
+      "providerId": "provider-openrouter-001",
+      "apiModelId": "openrouter/auto",
+      "kind": "dynamic-alias",
+      "bindingKind": "access-local",
+      "reason": "动态目录/套餐滚动ID；必须按真实返回目录识别，不静态绑猜测原厂，未识别期间保留access-local。",
+      "automaticRouting": false,
+      "inheritFamily": false,
+      "effectiveBinding": null
+    },
+    {
+      "file": "compute/providers/siliconflow.json",
+      "providerId": "provider-siliconflow-001",
+      "apiModelId": "BAAI/bge-m3",
+      "kind": "access-local",
+      "bindingKind": "access-local",
+      "reason": "聚合平台请求ID有独立托管合同；没有该精确ID已证alias时保留接入本地数值/能力，不通过剥前缀绑定原厂。",
+      "automaticRouting": false,
+      "inheritFamily": false,
+      "effectiveBinding": null
+    },
+    {
+      "file": "compute/providers/volcengine.json",
+      "providerId": "provider-volcengine-001",
+      "apiModelId": "doubao-seedream-4-0-250828",
+      "kind": "access-local",
+      "bindingKind": "access-local",
+      "reason": "精确身份未证实；保留接入本地字段，禁止normalized/stripped/family制造原厂绑定。",
+      "automaticRouting": false,
+      "inheritFamily": false,
+      "effectiveBinding": null
+    },
+    {
+      "file": "compute/providers/xai.json",
+      "providerId": "provider-xai-001",
+      "apiModelId": "grok-build-0.1",
+      "kind": "access-local",
+      "bindingKind": "access-local",
+      "reason": "精确身份未证实；保留接入本地字段，禁止normalized/stripped/family制造原厂绑定。",
+      "automaticRouting": false,
+      "inheritFamily": false,
+      "effectiveBinding": null
+    },
+    {
+      "file": "compute/providers/zhipu.json",
+      "providerId": "provider-zhipu-001",
+      "apiModelId": "glm-4.7-flashx",
+      "kind": "access-local",
+      "bindingKind": "access-local",
+      "reason": "精确身份未证实；保留接入本地字段，禁止normalized/stripped/family制造原厂绑定。",
+      "automaticRouting": false,
+      "inheritFamily": false,
+      "effectiveBinding": null
+    },
+    {
+      "file": "compute/coding-plans/baidu-coding.json",
+      "providerId": "provider-baidu-coding-001",
+      "apiModelId": "qianfan-code-latest",
+      "kind": "dynamic-alias",
+      "bindingKind": "access-local",
+      "reason": "动态目录/套餐滚动ID；必须按真实返回目录识别，不静态绑猜测原厂，未识别期间保留access-local。",
+      "automaticRouting": false,
+      "inheritFamily": false,
+      "effectiveBinding": null
+    },
+    {
+      "file": "compute/coding-plans/baidu-coding.json",
+      "providerId": "provider-baidu-coding-001",
+      "apiModelId": "minimax-m2.5",
+      "kind": "access-local",
+      "bindingKind": "access-local",
+      "reason": "精确身份未证实；保留接入本地字段，禁止normalized/stripped/family制造原厂绑定。",
+      "automaticRouting": false,
+      "inheritFamily": false,
+      "effectiveBinding": null
+    },
+    {
+      "file": "compute/coding-plans/baidu-coding.json",
+      "providerId": "provider-baidu-coding-001",
+      "apiModelId": "minimax-m2.7",
+      "kind": "access-local",
+      "bindingKind": "access-local",
+      "reason": "精确身份未证实；保留接入本地字段，禁止normalized/stripped/family制造原厂绑定。",
+      "automaticRouting": false,
+      "inheritFamily": false,
+      "effectiveBinding": null
+    },
+    {
+      "file": "compute/coding-plans/dashscope-coding.json",
+      "providerId": "provider-dashscope-coding-001",
+      "apiModelId": "qwen3-max-2026-01-23",
+      "kind": "access-local",
+      "bindingKind": "access-local",
+      "reason": "精确身份未证实；保留接入本地字段，禁止normalized/stripped/family制造原厂绑定。",
+      "automaticRouting": false,
+      "inheritFamily": false,
+      "effectiveBinding": null
+    },
+    {
+      "file": "compute/coding-plans/infini-coding.json",
+      "providerId": "provider-infini-coding-001",
+      "apiModelId": "deepseek-v3",
+      "kind": "access-local",
+      "bindingKind": "access-local",
+      "reason": "精确身份未证实；保留接入本地字段，禁止normalized/stripped/family制造原厂绑定。",
+      "automaticRouting": false,
+      "inheritFamily": false,
+      "effectiveBinding": null
+    },
+    {
+      "file": "compute/coding-plans/kwai-coding.json",
+      "providerId": "provider-kwai-coding-001",
+      "apiModelId": "kwai-coder",
+      "kind": "dynamic-alias",
+      "bindingKind": "access-local",
+      "reason": "动态目录/套餐滚动ID；必须按真实返回目录识别，不静态绑猜测原厂，未识别期间保留access-local。",
+      "automaticRouting": false,
+      "inheritFamily": false,
+      "effectiveBinding": null
+    },
+    {
+      "file": "compute/coding-plans/moonshot-coding.json",
+      "providerId": "provider-moonshot-coding-001",
+      "apiModelId": "kimi-for-coding",
+      "kind": "dynamic-alias",
+      "bindingKind": "access-local",
+      "reason": "动态目录/套餐滚动ID；必须按真实返回目录识别，不静态绑猜测原厂，未识别期间保留access-local。",
+      "automaticRouting": false,
+      "inheritFamily": false,
+      "effectiveBinding": null
+    },
+    {
+      "file": "compute/coding-plans/moorethread-coding.json",
+      "providerId": "provider-moorethread-coding-001",
+      "apiModelId": "mt-coder",
+      "kind": "dynamic-alias",
+      "bindingKind": "access-local",
+      "reason": "动态目录/套餐滚动ID；必须按真实返回目录识别，不静态绑猜测原厂，未识别期间保留access-local。",
+      "automaticRouting": false,
+      "inheritFamily": false,
+      "effectiveBinding": null
+    },
+    {
+      "file": "compute/coding-plans/tencent-token.json",
+      "providerId": "provider-tencent-token-001",
+      "apiModelId": "tc-code-latest",
+      "kind": "dynamic-alias",
+      "bindingKind": "access-local",
+      "reason": "动态目录/套餐滚动ID；必须按真实返回目录识别，不静态绑猜测原厂，未识别期间保留access-local。",
+      "automaticRouting": false,
+      "inheritFamily": false,
+      "effectiveBinding": null
+    },
+    {
+      "file": "compute/coding-plans/tencent-token.json",
+      "providerId": "provider-tencent-token-001",
+      "apiModelId": "hunyuan-2.0-instruct",
+      "kind": "access-local",
+      "bindingKind": "access-local",
+      "reason": "精确身份未证实；保留接入本地字段，禁止normalized/stripped/family制造原厂绑定。",
+      "automaticRouting": false,
+      "inheritFamily": false,
+      "effectiveBinding": null
+    },
+    {
+      "file": "compute/coding-plans/tencent-token.json",
+      "providerId": "provider-tencent-token-001",
+      "apiModelId": "hunyuan-2.0-thinking",
+      "kind": "access-local",
+      "bindingKind": "access-local",
+      "reason": "精确身份未证实；保留接入本地字段，禁止normalized/stripped/family制造原厂绑定。",
+      "automaticRouting": false,
+      "inheritFamily": false,
+      "effectiveBinding": null
+    },
+    {
+      "file": "compute/coding-plans/tencent-token.json",
+      "providerId": "provider-tencent-token-001",
+      "apiModelId": "hunyuan-t1",
+      "kind": "access-local",
+      "bindingKind": "access-local",
+      "reason": "精确身份未证实；保留接入本地字段，禁止normalized/stripped/family制造原厂绑定。",
+      "automaticRouting": false,
+      "inheritFamily": false,
+      "effectiveBinding": null
+    },
+    {
+      "file": "compute/coding-plans/tencent-token.json",
+      "providerId": "provider-tencent-token-001",
+      "apiModelId": "hunyuan-turbos",
+      "kind": "access-local",
+      "bindingKind": "access-local",
+      "reason": "精确身份未证实；保留接入本地字段，禁止normalized/stripped/family制造原厂绑定。",
+      "automaticRouting": false,
+      "inheritFamily": false,
+      "effectiveBinding": null
+    },
+    {
+      "file": "compute/coding-plans/tencent-token.json",
+      "providerId": "provider-tencent-token-001",
+      "apiModelId": "minimax-m2.7",
+      "kind": "access-local",
+      "bindingKind": "access-local",
+      "reason": "精确身份未证实；保留接入本地字段，禁止normalized/stripped/family制造原厂绑定。",
+      "automaticRouting": false,
+      "inheritFamily": false,
+      "effectiveBinding": null
+    },
+    {
+      "file": "compute/coding-plans/tencent-token.json",
+      "providerId": "provider-tencent-token-001",
+      "apiModelId": "minimax-m2.5",
+      "kind": "access-local",
+      "bindingKind": "access-local",
+      "reason": "精确身份未证实；保留接入本地字段，禁止normalized/stripped/family制造原厂绑定。",
+      "automaticRouting": false,
+      "inheritFamily": false,
+      "effectiveBinding": null
+    },
+    {
+      "file": "compute/coding-plans/volcengine-coding.json",
+      "providerId": "provider-volcengine-coding-001",
+      "apiModelId": "ark-code-latest",
+      "kind": "dynamic-alias",
+      "bindingKind": "access-local",
+      "reason": "动态目录/套餐滚动ID；必须按真实返回目录识别，不静态绑猜测原厂，未识别期间保留access-local。",
+      "automaticRouting": false,
+      "inheritFamily": false,
+      "effectiveBinding": null
+    },
+    {
+      "file": "compute/coding-plans/volcengine-coding.json",
+      "providerId": "provider-volcengine-coding-001",
+      "apiModelId": "minimax-m2.5",
+      "kind": "access-local",
+      "bindingKind": "access-local",
+      "reason": "精确身份未证实；保留接入本地字段，禁止normalized/stripped/family制造原厂绑定。",
+      "automaticRouting": false,
+      "inheritFamily": false,
+      "effectiveBinding": null
+    },
+    {
+      "file": "compute/coding-plans/volcengine-coding.json",
+      "providerId": "provider-volcengine-coding-001",
+      "apiModelId": "minimax-m2.7",
+      "kind": "access-local",
+      "bindingKind": "access-local",
+      "reason": "精确身份未证实；保留接入本地字段，禁止normalized/stripped/family制造原厂绑定。",
+      "automaticRouting": false,
+      "inheritFamily": false,
+      "effectiveBinding": null
+    }
+  ],
+  "independentInputBudgets": [
+    {
+      "file": "compute/providers/xunfei-x2.json",
+      "apiModelId": "spark-x",
+      "maxInputTokens": 65536,
+      "contextWindow": null,
+      "maxOutputTokens": 131072,
+      "evidence": "https://www.xfyun.cn/doc/spark/X1http.html",
+      "checkedAt": "2026-10-03",
+      "contentSha256": "324d06b132ff4ab16a0543157467283dc789153303cf456b44af45d1fc6f1548",
+      "unitConversion": "官网明文输入64K/输出128K；同页max_tokens最大/默认131072，128K按1024解释；64K转换为65536并明确为换算，不宣称官网明文整数。",
+      "semanticDecision": "V2将旧contextWindow65536拆为独立输入上限，总窗口unknown；V1冻结投影保留旧字段待客户端正式发布。"
+    }
+  ]
+}

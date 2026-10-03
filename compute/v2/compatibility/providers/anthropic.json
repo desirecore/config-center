@@ -1,0 +1,311 @@
+{
+  "id": "provider-anthropic-001",
+  "provider": "anthropic",
+  "label": "Anthropic Claude",
+  "baseUrl": "https://api.anthropic.com",
+  "apiFormat": "anthropic-messages",
+  "apiKeyRef": "anthropic",
+  "apiKeyVerified": false,
+  "enabled": false,
+  "status": "unconfigured",
+  "priceCurrency": "USD",
+  "services": [
+    "chat",
+    "computer_use"
+  ],
+  "tombstones": [
+    "claude-opus-4-8",
+    "claude-opus-4-7",
+    "claude-sonnet-4-6",
+    "claude-fable-5",
+    "claude-haiku-4-5",
+    "claude-haiku-4-5-20251001"
+  ],
+  "models": [
+    {
+      "modelName": "claude-opus-5-5",
+      "displayName": "Claude Opus 5.5",
+      "serviceType": [
+        "chat"
+      ],
+      "description": "Anthropic 面向长程智能体编程与知识工作的 Opus 模型，1M 上下文，始终开启自适应思考",
+      "contextWindow": 1000000,
+      "maxOutputTokens": 128000,
+      "capabilities": [
+        "chat",
+        "reasoning",
+        "code",
+        "vision",
+        "tool_use",
+        "agent",
+        "long_context"
+      ],
+      "inputPrice": 4,
+      "outputPrice": 20,
+      "extra": {
+        "thinkingRoundTrip": {
+          "enabled": true,
+          "protocol": "anthropic-messages",
+          "allowEmptySignature": false,
+          "scope": "active-tool-turn"
+        },
+        "thinkingToolTurnValidation": "accepts-thinkless",
+        "serverSideWebSearch": {
+          "enabled": true,
+          "dialect": "anthropic-messages",
+          "fallbackPriority": 2,
+          "toolType": "web_search_20260318",
+          "searchRequestPriceUsd": 0.01
+        },
+        "cachePricing": {
+          "write5m": 5,
+          "write1h": 8,
+          "read": 0.2
+        },
+        "promptCacheMinTokens": 512,
+        "adaptiveThinking": true,
+        "reasoning": {
+          "supportedEfforts": [
+            "low",
+            "medium",
+            "high",
+            "xhigh",
+            "max"
+          ],
+          "defaultEffort": "medium"
+        },
+        "samplingParametersDeprecated": true,
+        "forcedToolChoiceUnsupported": true,
+        "thinkingOnly": true,
+        "pricingNotes": "Prices are per 1M tokens. Full 1M context is billed at standard pricing."
+      }
+    },
+    {
+      "modelName": "claude-fable-5-1",
+      "displayName": "Claude Fable 5.1",
+      "serviceType": [
+        "chat"
+      ],
+      "description": "面向高难推理和长程智能体任务，1M 上下文，始终开启自适应思考",
+      "contextWindow": 1000000,
+      "maxOutputTokens": 128000,
+      "capabilities": [
+        "chat",
+        "reasoning",
+        "code",
+        "vision",
+        "tool_use",
+        "agent",
+        "long_context"
+      ],
+      "inputPrice": 10,
+      "outputPrice": 50,
+      "extra": {
+        "thinkingRoundTrip": {
+          "enabled": true,
+          "protocol": "anthropic-messages",
+          "allowEmptySignature": false,
+          "scope": "active-tool-turn"
+        },
+        "thinkingToolTurnValidation": "accepts-thinkless",
+        "serverSideWebSearch": {
+          "enabled": true,
+          "dialect": "anthropic-messages",
+          "fallbackPriority": 1,
+          "toolType": "web_search_20260318",
+          "searchRequestPriceUsd": 0.01
+        },
+        "cachePricing": {
+          "write5m": 12.5,
+          "write1h": 20,
+          "read": 0.25
+        },
+        "adaptiveThinking": true,
+        "reasoning": {
+          "supportedEfforts": [
+            "low",
+            "medium",
+            "high",
+            "xhigh",
+            "max"
+          ],
+          "defaultEffort": "high"
+        },
+        "samplingParametersDeprecated": true,
+        "forcedToolChoiceUnsupported": true,
+        "pricingNotes": "Prices are per 1M tokens. Full 1M context is billed at standard pricing.",
+        "thinkingOnly": true
+      }
+    },
+    {
+      "modelName": "claude-opus-5",
+      "displayName": "Claude Opus 5",
+      "serviceType": [
+        "chat"
+      ],
+      "description": "Anthropic Opus 5 系列模型，复杂智能体编码与长程任务能力显著强于 Opus 4.8，价格不变，1M 上下文",
+      "contextWindow": 1000000,
+      "maxOutputTokens": 128000,
+      "capabilities": [
+        "chat",
+        "reasoning",
+        "code",
+        "vision",
+        "tool_use",
+        "agent",
+        "long_context"
+      ],
+      "inputPrice": 5,
+      "outputPrice": 25,
+      "extra": {
+        "thinkingRoundTrip": {
+          "enabled": true,
+          "protocol": "anthropic-messages",
+          "allowEmptySignature": false,
+          "scope": "active-tool-turn"
+        },
+        "thinkingToolTurnValidation": "accepts-thinkless",
+        "serverSideWebSearch": {
+          "enabled": true,
+          "dialect": "anthropic-messages",
+          "fallbackPriority": 2,
+          "toolType": "web_search_20260318",
+          "searchRequestPriceUsd": 0.01
+        },
+        "cachePricing": {
+          "write5m": 6.25,
+          "write1h": 10,
+          "read": 0.5
+        },
+        "promptCacheMinTokens": 512,
+        "adaptiveThinking": true,
+        "reasoning": {
+          "supportedEfforts": [
+            "low",
+            "medium",
+            "high",
+            "xhigh",
+            "max"
+          ],
+          "defaultEffort": "high"
+        },
+        "samplingParametersDeprecated": true,
+        "pricingNotes": "Prices are per 1M tokens. Full 1M context is billed at standard pricing."
+      }
+    },
+    {
+      "modelName": "claude-sonnet-5-5",
+      "displayName": "Claude Sonnet 5.5",
+      "serviceType": [
+        "chat",
+        "computer_use"
+      ],
+      "description": "Claude Sonnet 5.5，速度与智能平衡，1M 上下文，默认 high effort，自适应思考",
+      "contextWindow": 1000000,
+      "maxOutputTokens": 128000,
+      "capabilities": [
+        "chat",
+        "reasoning",
+        "code",
+        "vision",
+        "tool_use",
+        "computer_use",
+        "agent",
+        "long_context"
+      ],
+      "inputPrice": 2,
+      "outputPrice": 10,
+      "extra": {
+        "thinkingRoundTrip": {
+          "enabled": true,
+          "protocol": "anthropic-messages",
+          "allowEmptySignature": false,
+          "scope": "active-tool-turn"
+        },
+        "thinkingToolTurnValidation": "accepts-thinkless",
+        "serverSideWebSearch": {
+          "enabled": true,
+          "dialect": "anthropic-messages",
+          "fallbackPriority": 3,
+          "toolType": "web_search_20260318",
+          "searchRequestPriceUsd": 0.01
+        },
+        "cachePricing": {
+          "write5m": 2.5,
+          "write1h": 4,
+          "read": 0.2
+        },
+        "adaptiveThinking": true,
+        "reasoning": {
+          "supportedEfforts": [
+            "low",
+            "medium",
+            "high",
+            "xhigh",
+            "max"
+          ],
+          "defaultEffort": "high"
+        },
+        "samplingParametersDeprecated": true,
+        "forcedToolChoiceUnsupported": true,
+        "promptCacheMinTokens": 512
+      }
+    },
+    {
+      "modelName": "claude-sonnet-5",
+      "displayName": "Claude Sonnet 5",
+      "serviceType": [
+        "chat",
+        "computer_use"
+      ],
+      "description": "Anthropic Sonnet 5，速度与智能平衡模型，支持电脑使用和长上下文智能体任务",
+      "contextWindow": 1000000,
+      "maxOutputTokens": 128000,
+      "capabilities": [
+        "chat",
+        "reasoning",
+        "code",
+        "vision",
+        "tool_use",
+        "computer_use",
+        "agent",
+        "long_context"
+      ],
+      "inputPrice": 2,
+      "outputPrice": 10,
+      "extra": {
+        "thinkingRoundTrip": {
+          "enabled": true,
+          "protocol": "anthropic-messages",
+          "allowEmptySignature": false,
+          "scope": "active-tool-turn"
+        },
+        "thinkingToolTurnValidation": "accepts-thinkless",
+        "serverSideWebSearch": {
+          "enabled": true,
+          "dialect": "anthropic-messages",
+          "fallbackPriority": 3,
+          "toolType": "web_search_20260318",
+          "searchRequestPriceUsd": 0.01
+        },
+        "cachePricing": {
+          "write5m": 2.5,
+          "write1h": 4,
+          "read": 0.2
+        },
+        "adaptiveThinking": true,
+        "reasoning": {
+          "supportedEfforts": [
+            "low",
+            "medium",
+            "high",
+            "xhigh",
+            "max"
+          ],
+          "defaultEffort": "high"
+        },
+        "samplingParametersDeprecated": true
+      }
+    }
+  ]
+}

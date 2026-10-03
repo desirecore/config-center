@@ -1,0 +1,180 @@
+{
+  "id": "provider-tencent-001",
+  "provider": "tencent",
+  "label": "腾讯混元",
+  "baseUrl": "https://api.hunyuan.cloud.tencent.com/v1",
+  "apiFormat": "openai-completions",
+  "apiKeyRef": "tencent",
+  "apiKeyVerified": false,
+  "enabled": false,
+  "status": "unconfigured",
+  "priceCurrency": "CNY",
+  "services": [
+    "chat",
+    "reasoning"
+  ],
+  "models": [
+    {
+      "modelName": "hunyuan-2.0-thinking-20251109",
+      "displayName": "混元 2.0 Think",
+      "serviceType": [
+        "reasoning"
+      ],
+      "description": "腾讯混元最新推理模型，128K输入/64K输出，MoE架构406B总参数",
+      "contextWindow": 196608,
+      "maxOutputTokens": 65536,
+      "capabilities": [
+        "chat",
+        "reasoning",
+        "deep_thinking",
+        "long_context"
+      ],
+      "inputPrice": 3.975,
+      "outputPrice": 15.9,
+      "defaultTemperature": 1,
+      "defaultTopP": 1,
+      "extra": {
+        "pricingTiers": [
+          {
+            "maxInputTokens": 32768,
+            "inputPrice": 3.975,
+            "outputPrice": 15.9
+          },
+          {
+            "maxInputTokens": 131072,
+            "inputPrice": 5.3,
+            "outputPrice": 21.2
+          }
+        ]
+      }
+    },
+    {
+      "modelName": "hunyuan-2.0-instruct-20251111",
+      "displayName": "混元 2.0 Instruct",
+      "serviceType": [
+        "chat"
+      ],
+      "description": "腾讯混元 2.0 指令模型，最大输入128K/最大输出16K，支持联网搜索和 Function Calling",
+      "contextWindow": 147456,
+      "maxOutputTokens": 16384,
+      "capabilities": [
+        "chat",
+        "code",
+        "long_context",
+        "tool_use"
+      ],
+      "inputPrice": 3.18,
+      "outputPrice": 7.95,
+      "defaultTemperature": 1,
+      "defaultTopP": 1,
+      "extra": {
+        "pricingTiers": [
+          {
+            "maxInputTokens": 32768,
+            "inputPrice": 3.18,
+            "outputPrice": 7.95
+          },
+          {
+            "maxInputTokens": 131072,
+            "inputPrice": 4.505,
+            "outputPrice": 11.13
+          }
+        ]
+      }
+    },
+    {
+      "modelName": "hunyuan-turbos-latest",
+      "displayName": "混元 Turbo S",
+      "serviceType": [
+        "chat"
+      ],
+      "description": "腾讯混元高速模型，32K输入/16K输出，支持推理和工具调用",
+      "contextWindow": 32768,
+      "maxOutputTokens": 16384,
+      "capabilities": [
+        "chat",
+        "reasoning",
+        "code",
+        "vision",
+        "fast",
+        "tool_use"
+      ],
+      "inputPrice": 0.8,
+      "outputPrice": 2,
+      "defaultTemperature": 1,
+      "defaultTopP": 1,
+      "extra": {}
+    },
+    {
+      "modelName": "hunyuan-t1-latest",
+      "displayName": "混元 T1",
+      "serviceType": [
+        "reasoning"
+      ],
+      "description": "腾讯混元 T1 深度推理模型，256K 上下文，专攻数学/代码/复杂推理",
+      "contextWindow": 262144,
+      "maxOutputTokens": 32768,
+      "capabilities": [
+        "chat",
+        "reasoning",
+        "deep_thinking",
+        "code",
+        "math",
+        "long_context"
+      ],
+      "inputPrice": 5,
+      "outputPrice": 20,
+      "defaultTemperature": 1,
+      "defaultTopP": 1,
+      "extra": {}
+    },
+    {
+      "modelName": "hunyuan-t1-vision",
+      "displayName": "混元 T1 Vision",
+      "serviceType": [
+        "reasoning"
+      ],
+      "description": "腾讯混元 T1 视觉推理模型，支持图片理解 + 深度推理",
+      "contextWindow": 131072,
+      "maxOutputTokens": 32768,
+      "capabilities": [
+        "chat",
+        "reasoning",
+        "deep_thinking",
+        "code",
+        "math",
+        "vision",
+        "image_understanding"
+      ],
+      "inputPrice": 5,
+      "outputPrice": 20,
+      "defaultTemperature": 1,
+      "defaultTopP": 1,
+      "extra": {}
+    },
+    {
+      "modelName": "hunyuan-turbos-vision",
+      "displayName": "混元 Turbo S Vision",
+      "serviceType": [
+        "chat"
+      ],
+      "description": "腾讯混元 Turbo S 视觉模型，支持图片理解，高速推理",
+      "contextWindow": 32768,
+      "maxOutputTokens": 16384,
+      "capabilities": [
+        "chat",
+        "reasoning",
+        "code",
+        "vision",
+        "image_understanding",
+        "fast",
+        "tool_use"
+      ],
+      "inputPrice": 0.8,
+      "outputPrice": 2,
+      "defaultTemperature": 1,
+      "defaultTopP": 1,
+      "extra": {}
+    }
+  ]
+}

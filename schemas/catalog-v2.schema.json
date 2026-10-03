@@ -1,0 +1,1742 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Versioned canonical model/access catalog",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "formatVersion",
+    "publication",
+    "specs",
+    "accesses",
+    "retirements",
+    "metadata"
+  ],
+  "properties": {
+    "formatVersion": {
+      "const": 2
+    },
+    "publication": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "state",
+        "requiredClientVersion"
+      ],
+      "properties": {
+        "state": {
+          "enum": [
+            "candidate",
+            "published",
+            "frozen"
+          ]
+        },
+        "requiredClientVersion": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "pattern": "^[0-9]+\\.[0-9]+\\.[0-9]+$"
+        }
+      }
+    },
+    "specs": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "modelRef",
+          "identity",
+          "facts",
+          "routing",
+          "lifecycle",
+          "metadata"
+        ],
+        "properties": {
+          "modelRef": {
+            "type": "string",
+            "minLength": 1
+          },
+          "identity": {
+            "type": "object",
+            "required": [
+              "vendor",
+              "canonicalModelId"
+            ],
+            "properties": {
+              "vendor": {
+                "type": "string"
+              },
+              "canonicalModelId": {
+                "type": "string"
+              }
+            },
+            "additionalProperties": false
+          },
+          "facts": {
+            "type": "object",
+            "description": "模型内在参数（不含任何价格字段）",
+            "properties": {
+              "contextWindow": {
+                "type": [
+                  "integer",
+                  "null"
+                ],
+                "minimum": 0
+              },
+              "maxOutputTokens": {
+                "type": [
+                  "integer",
+                  "null"
+                ],
+                "minimum": 0
+              },
+              "capabilities": {
+                "type": "array",
+                "description": "Exactly bound model fact; access replacement never unions capabilities.",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "serviceType": {
+                "type": [
+                  "string",
+                  "array"
+                ],
+                "items": {
+                  "type": "string"
+                },
+                "description": "服务类型，单个字符串或数组：chat、reasoning、fast、vision、embedding、image_gen、tts、asr 等。命中时优先于 tags 解析。"
+              },
+              "defaultTemperature": {
+                "type": [
+                  "number",
+                  "null"
+                ],
+                "description": "推荐默认温度（0-2）。null 表示模型不支持温度调节（如 reasoning 模型），调用方应跳过该参数。本文件为新文件，老客户端不读，故允许 null。",
+                "minimum": 0,
+                "maximum": 2
+              },
+              "defaultTopP": {
+                "type": [
+                  "number",
+                  "null"
+                ],
+                "description": "推荐默认 Top-P（0-1）。null 表示不支持调节。",
+                "minimum": 0,
+                "maximum": 1
+              },
+              "supportsReasoning": {
+                "type": "boolean",
+                "description": "是否为推理模型。用于运行时决定是否启用 reasoning 相关处理。"
+              },
+              "description": {
+                "type": "string",
+                "description": "模型简要描述（一句话特点与适用场景）。命中后可覆盖 NewAPI 原值。"
+              },
+              "constraints": {
+                "$ref": "#/definitions/constraints"
+              },
+              "maxInputTokens": {
+                "type": [
+                  "integer",
+                  "null"
+                ],
+                "minimum": 0
+              },
+              "defaultTopK": {
+                "type": [
+                  "number",
+                  "null"
+                ],
+                "minimum": 0
+              }
+            },
+            "additionalProperties": false
+          },
+          "routing": {
+            "anyOf": [
+              {
+                "type": "object",
+                "description": "智能路由策略。存在即表示该精确模型可进入路由候选；模型能力和 reasoning 合同均以本条目为准，Provider 只能为接入面收紧。",
+                "required": [
+                  "tier",
+                  "routingPriority",
+                  "eligibleForAgent",
+                  "defaultReference",
+                  "reasoning"
+                ],
+                "properties": {
+                  "tier": {
+                    "type": "string",
+                    "enum": [
+                      "flagship",
+                      "balanced",
+                      "lightweight"
+                    ],
+                    "description": "模型在智能路由中的能力量级。"
+                  },
+                  "routingPriority": {
+                    "type": "integer",
+                    "minimum": 0,
+                    "maximum": 10000,
+                    "description": "同一量级内的稳定优先级，数值越小越优先。"
+                  },
+                  "eligibleForAgent": {
+                    "type": "boolean",
+                    "description": "是否允许作为 Agent 主模型；媒体专用模型必须为 false。"
+                  },
+                  "defaultReference": {
+                    "type": "boolean",
+                    "description": "是否是默认模型的策略参考，只影响同级排序，不是强制选择。"
+                  },
+                  "reasoning": {
+                    "type": "object",
+                    "description": "模型级标准化 reasoning 合同。auto 为不发送参数，off 为显式关闭；Provider 接入面可收紧此集合，但不得扩张。",
+                    "required": [
+                      "supportedModes",
+                      "defaultMode"
+                    ],
+                    "properties": {
+                      "supportedModes": {
+                        "type": "array",
+                        "minItems": 1,
+                        "uniqueItems": true,
+                        "items": {
+                          "type": "string",
+                          "enum": [
+                            "auto",
+                            "off",
+                            "minimal",
+                            "low",
+                            "medium",
+                            "high",
+                            "xhigh",
+                            "max"
+                          ]
+                        },
+                        "description": "产品层可用的 reasoning 档位。"
+                      },
+                      "defaultMode": {
+                        "type": "string",
+                        "enum": [
+                          "auto",
+                          "off",
+                          "minimal",
+                          "low",
+                          "medium",
+                          "high",
+                          "xhigh",
+                          "max"
+                        ],
+                        "description": "没有显式请求时的策略默认档位，必须包含在 supportedModes 中。"
+                      }
+                    },
+                    "allOf": [
+                      {
+                        "if": {
+                          "properties": {
+                            "defaultMode": {
+                              "const": "auto"
+                            }
+                          }
+                        },
+                        "then": {
+                          "properties": {
+                            "supportedModes": {
+                              "contains": {
+                                "const": "auto"
+                              }
+                            }
+                          }
+                        }
+                      },
+                      {
+                        "if": {
+                          "properties": {
+                            "defaultMode": {
+                              "const": "off"
+                            }
+                          }
+                        },
+                        "then": {
+                          "properties": {
+                            "supportedModes": {
+                              "contains": {
+                                "const": "off"
+                              }
+                            }
+                          }
+                        }
+                      },
+                      {
+                        "if": {
+                          "properties": {
+                            "defaultMode": {
+                              "const": "minimal"
+                            }
+                          }
+                        },
+                        "then": {
+                          "properties": {
+                            "supportedModes": {
+                              "contains": {
+                                "const": "minimal"
+                              }
+                            }
+                          }
+                        }
+                      },
+                      {
+                        "if": {
+                          "properties": {
+                            "defaultMode": {
+                              "const": "low"
+                            }
+                          }
+                        },
+                        "then": {
+                          "properties": {
+                            "supportedModes": {
+                              "contains": {
+                                "const": "low"
+                              }
+                            }
+                          }
+                        }
+                      },
+                      {
+                        "if": {
+                          "properties": {
+                            "defaultMode": {
+                              "const": "medium"
+                            }
+                          }
+                        },
+                        "then": {
+                          "properties": {
+                            "supportedModes": {
+                              "contains": {
+                                "const": "medium"
+                              }
+                            }
+                          }
+                        }
+                      },
+                      {
+                        "if": {
+                          "properties": {
+                            "defaultMode": {
+                              "const": "high"
+                            }
+                          }
+                        },
+                        "then": {
+                          "properties": {
+                            "supportedModes": {
+                              "contains": {
+                                "const": "high"
+                              }
+                            }
+                          }
+                        }
+                      },
+                      {
+                        "if": {
+                          "properties": {
+                            "defaultMode": {
+                              "const": "xhigh"
+                            }
+                          }
+                        },
+                        "then": {
+                          "properties": {
+                            "supportedModes": {
+                              "contains": {
+                                "const": "xhigh"
+                              }
+                            }
+                          }
+                        }
+                      },
+                      {
+                        "if": {
+                          "properties": {
+                            "defaultMode": {
+                              "const": "max"
+                            }
+                          }
+                        },
+                        "then": {
+                          "properties": {
+                            "supportedModes": {
+                              "contains": {
+                                "const": "max"
+                              }
+                            }
+                          }
+                        }
+                      }
+                    ],
+                    "additionalProperties": false
+                  }
+                },
+                "additionalProperties": false
+              },
+              {
+                "type": "object",
+                "maxProperties": 0
+              }
+            ]
+          },
+          "lifecycle": {
+            "$ref": "#/definitions/lifecycle"
+          },
+          "metadata": {
+            "type": "object"
+          },
+          "requiredClientVersion": {
+            "type": "string",
+            "pattern": "^\\d+\\.\\d+\\.\\d+$"
+          },
+          "protocolProfiles": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "apiFormats": {
+                  "type": "array",
+                  "minItems": 1,
+                  "uniqueItems": true,
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "request": {
+                  "$ref": "#/definitions/request"
+                },
+                "requiredClientVersion": {
+                  "type": "string",
+                  "pattern": "^\\d+\\.\\d+\\.\\d+$"
+                }
+              },
+              "required": [
+                "apiFormats",
+                "request"
+              ],
+              "additionalProperties": false
+            }
+          }
+        }
+      }
+    },
+    "accesses": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "id",
+          "category",
+          "connection",
+          "models",
+          "metadata"
+        ],
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "category": {
+            "enum": [
+              "providers",
+              "coding-plans"
+            ]
+          },
+          "connection": {
+            "type": "object",
+            "required": [
+              "id",
+              "provider",
+              "label",
+              "baseUrl",
+              "apiKeyRef",
+              "apiKeyVerified",
+              "enabled",
+              "status",
+              "services"
+            ],
+            "properties": {
+              "id": {
+                "type": "string",
+                "description": "提供商唯一标识符（如 provider-openai-001）",
+                "minLength": 1
+              },
+              "provider": {
+                "type": "string",
+                "description": "提供商标识：openai、anthropic、deepseek、dashscope（阿里云）等",
+                "minLength": 1
+              },
+              "label": {
+                "type": "string",
+                "description": "提供商显示名称（如 OpenAI、Anthropic、阿里云 DashScope）",
+                "minLength": 1
+              },
+              "baseUrl": {
+                "type": "string",
+                "description": "API 基础 URL（如 https://api.openai.com/v1）",
+                "minLength": 1
+              },
+              "apiFormat": {
+                "type": "string",
+                "enum": [
+                  "openai-completions",
+                  "openai-responses",
+                  "anthropic-messages",
+                  "google-generative-ai",
+                  "openai-codex-responses",
+                  "kling-task-api",
+                  "stability-rest-api"
+                ]
+              },
+              "mediaBaseUrl": {
+                "type": "string",
+                "description": "媒体 API 基础 URL。当 provider 使用 Anthropic 格式（baseUrl 指向 /anthropic 端点）但其媒体 API（图片/语音/视频/音乐）仍走 OpenAI /v1 端点时使用"
+              },
+              "apiKeyRef": {
+                "type": "string",
+                "description": "密钥引用名，对应 secrets.json 中的 key；空字符串表示未配置密钥"
+              },
+              "apiKeyVerified": {
+                "type": "boolean",
+                "description": "API Key 是否已通过验证"
+              },
+              "enabled": {
+                "type": "boolean",
+                "description": "是否启用此提供商"
+              },
+              "status": {
+                "type": "string",
+                "enum": [
+                  "configured",
+                  "unconfigured",
+                  "error"
+                ],
+                "description": "提供商状态"
+              },
+              "services": {
+                "type": "array",
+                "description": "支持的服务类型列表（如 chat、reasoning、vision、embedding）",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "priceCurrency": {
+                "type": "string",
+                "enum": [
+                  "USD",
+                  "CNY"
+                ],
+                "description": "价格货币单位。models 中的 inputPrice/outputPrice 均以此货币计价"
+              },
+              "accessMode": {
+                "type": "string",
+                "enum": [
+                  "api",
+                  "coding-plan",
+                  "token-plan"
+                ],
+                "description": "接入模式：api（按量付费）、coding-plan（编程订阅套餐）或 token-plan（Token 团队版订阅）"
+              },
+              "brandGroup": {
+                "type": "string",
+                "description": "品牌分组标识，UI 按此字段排序"
+              },
+              "credentialSource": {
+                "type": "string",
+                "enum": [
+                  "codex-cli",
+                  "claude-oauth",
+                  "github-copilot"
+                ],
+                "description": "凭证托管来源。codex-cli：密钥由客户端本地 Codex CLI 凭证检测器托管（读取 ~/.codex/auth.json 自动刷新写回，fresh token 同步 secrets.json）。claude-oauth：Claude 订阅接入，由客户端 claude-auth 检测器托管——首选复用本机 Claude Code 登录（Agent SDK 自读，不写不刷新），或应用内 OAuth / setup-token 兜底；模型调用经 compat-proxy 内 claude-agent-sdk 后端履约，不直连。github-copilot：GitHub Copilot 订阅接入，由客户端 copilot-auth 检测器托管——GitHub Device Flow 登录，长期 GitHub OAuth token 存 config/copilot-oauth.json，定期交换约 30 分钟有效的 Copilot session token 写入 secrets.json；模型调用携带 Copilot 协议 headers 直连交换响应 endpoints.api 指定域名，模型列表由客户端在登录后经 /models 动态发现（可用集合随订阅档位与组织策略变化，故预设 models 为空）。需 requiredClientVersion ≥ 引入此字段的客户端版本——老客户端不识别本字段，必须先发版铺开 compute.json 韧性（容忍未知字段）再推送本数据"
+              },
+              "codingPlan": {
+                "type": "object",
+                "description": "Coding Plan / Token Plan 专属配置（仅当 accessMode = coding-plan 或 token-plan 时有效）",
+                "properties": {
+                  "planTier": {
+                    "type": "string"
+                  },
+                  "planLabel": {
+                    "type": "string"
+                  },
+                  "quotas": {
+                    "type": "object",
+                    "properties": {
+                      "per5h": {
+                        "type": "number",
+                        "minimum": 0
+                      },
+                      "perWeek": {
+                        "type": "number",
+                        "minimum": 0
+                      },
+                      "perMonth": {
+                        "type": "number",
+                        "minimum": 0
+                      },
+                      "per7d": {
+                        "type": "number",
+                        "minimum": 0
+                      }
+                    },
+                    "additionalProperties": false
+                  },
+                  "usageTracking": {
+                    "type": "object",
+                    "properties": {
+                      "method": {
+                        "type": "string",
+                        "enum": [
+                          "rest-api",
+                          "response-header",
+                          "manual",
+                          "credits",
+                          "none"
+                        ]
+                      },
+                      "endpoint": {
+                        "type": "string"
+                      },
+                      "headerKeys": {
+                        "type": "object",
+                        "properties": {
+                          "remaining": {
+                            "type": "string"
+                          },
+                          "limit": {
+                            "type": "string"
+                          },
+                          "reset": {
+                            "type": "string"
+                          }
+                        },
+                        "additionalProperties": false
+                      },
+                      "consoleUrl": {
+                        "type": "string"
+                      }
+                    },
+                    "additionalProperties": false
+                  },
+                  "modelIdOverride": {
+                    "type": "string"
+                  },
+                  "maxConcurrent": {
+                    "type": "number",
+                    "minimum": 1
+                  },
+                  "expiresAt": {
+                    "type": "string",
+                    "format": "date-time"
+                  }
+                },
+                "additionalProperties": false
+              },
+              "tokenPlan": {
+                "type": "object",
+                "description": "Token Plan 团队版专属配置（仅当 accessMode = token-plan 时有效）",
+                "properties": {
+                  "planTier": {
+                    "type": "string"
+                  },
+                  "planLabel": {
+                    "type": "string"
+                  },
+                  "quotas": {
+                    "type": "object",
+                    "properties": {
+                      "per5h": {
+                        "type": "number",
+                        "minimum": 0
+                      },
+                      "perWeek": {
+                        "type": "number",
+                        "minimum": 0
+                      },
+                      "perMonth": {
+                        "type": "number",
+                        "minimum": 0
+                      },
+                      "per7d": {
+                        "type": "number",
+                        "minimum": 0
+                      }
+                    },
+                    "additionalProperties": false
+                  },
+                  "usageTracking": {
+                    "type": "object",
+                    "properties": {
+                      "method": {
+                        "type": "string",
+                        "enum": [
+                          "rest-api",
+                          "response-header",
+                          "manual",
+                          "credits",
+                          "none"
+                        ]
+                      },
+                      "endpoint": {
+                        "type": "string"
+                      },
+                      "headerKeys": {
+                        "type": "object",
+                        "properties": {
+                          "remaining": {
+                            "type": "string"
+                          },
+                          "limit": {
+                            "type": "string"
+                          },
+                          "reset": {
+                            "type": "string"
+                          }
+                        },
+                        "additionalProperties": false
+                      },
+                      "consoleUrl": {
+                        "type": "string"
+                      }
+                    },
+                    "additionalProperties": false
+                  },
+                  "modelIdOverride": {
+                    "type": "string"
+                  },
+                  "maxConcurrent": {
+                    "type": "number",
+                    "minimum": 1
+                  },
+                  "expiresAt": {
+                    "type": "string",
+                    "format": "date-time"
+                  }
+                },
+                "additionalProperties": false
+              },
+              "tombstones": {
+                "type": "array",
+                "description": "预置显式删除的模型 modelName 白名单",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "requiredClientVersion": {
+                "type": "string",
+                "pattern": "^\\d+\\.\\d+\\.\\d+$"
+              }
+            },
+            "additionalProperties": false
+          },
+          "metadata": {
+            "type": "object"
+          },
+          "models": {
+            "type": "array",
+            "items": {
+              "$ref": "#/definitions/accessModel"
+            }
+          }
+        }
+      }
+    },
+    "retirements": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "kind": {
+            "enum": [
+              "product-access-retired",
+              "vendor-endpoint-retired"
+            ]
+          },
+          "scope": {
+            "enum": [
+              "managed-provider",
+              "endpoint"
+            ]
+          },
+          "providerId": {
+            "type": "string"
+          },
+          "origin": {
+            "type": "object",
+            "properties": {
+              "exactHost": {
+                "type": "string",
+                "pattern": "^[a-z0-9.-]+$"
+              },
+              "pathPrefix": {
+                "type": "string",
+                "pattern": "^/"
+              }
+            },
+            "required": [
+              "exactHost"
+            ],
+            "additionalProperties": false
+          },
+          "effectiveAt": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "reason": {
+            "type": "string",
+            "minLength": 1
+          },
+          "evidence": {
+            "type": "object",
+            "properties": {
+              "kind": {
+                "type": "string"
+              },
+              "url": {
+                "type": "string",
+                "format": "uri"
+              },
+              "checkedAt": {
+                "type": "string",
+                "format": "date"
+              }
+            },
+            "required": [
+              "kind",
+              "url",
+              "checkedAt"
+            ],
+            "additionalProperties": false
+          },
+          "preserveCredentials": {
+            "const": true
+          },
+          "vendorDomainShutdownConfirmed": {
+            "type": "boolean"
+          }
+        },
+        "required": [
+          "id",
+          "kind",
+          "scope",
+          "origin",
+          "effectiveAt",
+          "reason",
+          "evidence",
+          "preserveCredentials",
+          "vendorDomainShutdownConfirmed"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "metadata": {
+      "type": "object"
+    }
+  },
+  "definitions": {
+    "accessModel": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "apiModelId",
+        "modelRef",
+        "binding",
+        "overrides",
+        "request",
+        "billing",
+        "lifecycle",
+        "metadata"
+      ],
+      "properties": {
+        "apiModelId": {
+          "type": "string"
+        },
+        "modelRef": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "requiredClientVersion": {
+          "type": "string",
+          "pattern": "^[0-9]+\\.[0-9]+\\.[0-9]+$"
+        },
+        "protocol": {
+          "$ref": "#/definitions/protocol"
+        },
+        "binding": {
+          "type": "object",
+          "required": [
+            "kind",
+            "reason"
+          ],
+          "properties": {
+            "kind": {
+              "enum": [
+                "exact",
+                "dynamic",
+                "unresolved",
+                "access-local"
+              ]
+            },
+            "reason": {
+              "type": "string"
+            }
+          },
+          "additionalProperties": false
+        },
+        "overrides": {
+          "type": "object",
+          "properties": {
+            "contextWindow": {
+              "type": "object",
+              "properties": {
+                "value": {
+                  "type": [
+                    "integer",
+                    "null"
+                  ],
+                  "minimum": 0
+                },
+                "reason": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "evidence": {
+                  "type": "string"
+                },
+                "verification": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "value",
+                "reason"
+              ],
+              "additionalProperties": false
+            },
+            "maxOutputTokens": {
+              "type": "object",
+              "properties": {
+                "value": {
+                  "type": [
+                    "integer",
+                    "null"
+                  ],
+                  "minimum": 0
+                },
+                "reason": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "evidence": {
+                  "type": "string"
+                },
+                "verification": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "value",
+                "reason"
+              ],
+              "additionalProperties": false
+            },
+            "capabilities": {
+              "type": "object",
+              "properties": {
+                "value": {
+                  "type": "array",
+                  "description": "Exactly bound model fact; access replacement never unions capabilities.",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "reason": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "evidence": {
+                  "type": "string"
+                },
+                "verification": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "value",
+                "reason"
+              ],
+              "additionalProperties": false
+            },
+            "serviceType": {
+              "type": "object",
+              "properties": {
+                "value": {
+                  "type": [
+                    "string",
+                    "array"
+                  ],
+                  "items": {
+                    "type": "string"
+                  },
+                  "description": "服务类型，单个字符串或数组：chat、reasoning、fast、vision、embedding、image_gen、tts、asr 等。命中时优先于 tags 解析。"
+                },
+                "reason": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "evidence": {
+                  "type": "string"
+                },
+                "verification": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "value",
+                "reason"
+              ],
+              "additionalProperties": false
+            },
+            "defaultTemperature": {
+              "type": "object",
+              "properties": {
+                "value": {
+                  "type": [
+                    "number",
+                    "null"
+                  ],
+                  "description": "推荐默认温度（0-2）。null 表示模型不支持温度调节（如 reasoning 模型），调用方应跳过该参数。本文件为新文件，老客户端不读，故允许 null。",
+                  "minimum": 0,
+                  "maximum": 2
+                },
+                "reason": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "evidence": {
+                  "type": "string"
+                },
+                "verification": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "value",
+                "reason"
+              ],
+              "additionalProperties": false
+            },
+            "defaultTopP": {
+              "type": "object",
+              "properties": {
+                "value": {
+                  "type": [
+                    "number",
+                    "null"
+                  ],
+                  "description": "推荐默认 Top-P（0-1）。null 表示不支持调节。",
+                  "minimum": 0,
+                  "maximum": 1
+                },
+                "reason": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "evidence": {
+                  "type": "string"
+                },
+                "verification": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "value",
+                "reason"
+              ],
+              "additionalProperties": false
+            },
+            "supportsReasoning": {
+              "type": "object",
+              "properties": {
+                "value": {
+                  "type": "boolean",
+                  "description": "是否为推理模型。用于运行时决定是否启用 reasoning 相关处理。"
+                },
+                "reason": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "evidence": {
+                  "type": "string"
+                },
+                "verification": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "value",
+                "reason"
+              ],
+              "additionalProperties": false
+            },
+            "constraints": {
+              "type": "object",
+              "properties": {
+                "value": {
+                  "$ref": "#/definitions/constraints"
+                },
+                "reason": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "evidence": {
+                  "type": "string"
+                },
+                "verification": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "value",
+                "reason"
+              ],
+              "additionalProperties": false
+            },
+            "maxInputTokens": {
+              "type": "object",
+              "properties": {
+                "value": {
+                  "type": [
+                    "integer",
+                    "null"
+                  ],
+                  "minimum": 0
+                },
+                "reason": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "evidence": {
+                  "type": "string"
+                },
+                "verification": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "value",
+                "reason"
+              ],
+              "additionalProperties": false
+            },
+            "defaultTopK": {
+              "type": "object",
+              "properties": {
+                "value": {
+                  "type": [
+                    "number",
+                    "null"
+                  ],
+                  "minimum": 0
+                },
+                "reason": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "evidence": {
+                  "type": "string"
+                },
+                "verification": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "value",
+                "reason"
+              ],
+              "additionalProperties": false
+            }
+          },
+          "required": [],
+          "additionalProperties": false
+        },
+        "request": {
+          "$ref": "#/definitions/request"
+        },
+        "billing": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": [
+              "sourceKey",
+              "amount",
+              "currency",
+              "unit",
+              "verification"
+            ],
+            "properties": {
+              "sourceKey": {
+                "type": "string"
+              },
+              "amount": {
+                "$ref": "#/definitions/quoteValue"
+              },
+              "currency": {
+                "enum": [
+                  "USD",
+                  "CNY",
+                  "unknown"
+                ]
+              },
+              "unit": {
+                "enum": [
+                  "million-tokens",
+                  "compound-source-units",
+                  "annotation",
+                  "search-request",
+                  "tiered-source-unit",
+                  "generation",
+                  "image",
+                  "million-characters",
+                  "song-up-to-five-minutes",
+                  "minute",
+                  "thousand-requests",
+                  "million-token-hour",
+                  "source-unit-unresolved"
+                ]
+              },
+              "direction": {
+                "enum": [
+                  "input",
+                  "output"
+                ]
+              },
+              "verification": {
+                "type": "string"
+              }
+            },
+            "additionalProperties": false,
+            "allOf": [
+              {
+                "if": {
+                  "properties": {
+                    "unit": {
+                      "const": "annotation"
+                    }
+                  }
+                },
+                "then": {
+                  "properties": {
+                    "amount": {
+                      "type": "string"
+                    }
+                  }
+                }
+              },
+              {
+                "if": {
+                  "properties": {
+                    "unit": {
+                      "enum": [
+                        "million-tokens",
+                        "search-request",
+                        "generation",
+                        "image",
+                        "million-characters",
+                        "song-up-to-five-minutes",
+                        "minute",
+                        "million-token-hour",
+                        "source-unit-unresolved"
+                      ]
+                    }
+                  }
+                },
+                "then": {
+                  "properties": {
+                    "amount": {
+                      "type": "number"
+                    }
+                  }
+                }
+              }
+            ]
+          }
+        },
+        "lifecycle": {
+          "$ref": "#/definitions/lifecycle"
+        },
+        "metadata": {
+          "type": "object"
+        }
+      }
+    },
+    "speechVoice": {
+      "type": "object",
+      "required": [
+        "id",
+        "label"
+      ],
+      "properties": {
+        "id": {
+          "type": "string",
+          "minLength": 1,
+          "description": "传给上游语音接口的稳定音色 ID。"
+        },
+        "label": {
+          "type": "string",
+          "minLength": 1,
+          "description": "面向用户展示的音色名称。"
+        }
+      },
+      "additionalProperties": false
+    },
+    "speechModelProfile": {
+      "type": "object",
+      "required": [
+        "protocol",
+        "protocolVersion",
+        "modes"
+      ],
+      "properties": {
+        "protocol": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$",
+          "description": "稳定语音协议族，如 xiaomi-mimo-chat-asr；模型常规迭代不得改变此值。"
+        },
+        "protocolVersion": {
+          "type": "string",
+          "pattern": "^[1-9][0-9]*$",
+          "description": "协议不兼容版本号；只有请求、认证、响应或流式状态机发生不兼容变化时才递增。"
+        },
+        "modes": {
+          "type": "array",
+          "minItems": 1,
+          "uniqueItems": true,
+          "items": {
+            "type": "string",
+            "enum": [
+              "batch",
+              "streaming"
+            ]
+          },
+          "description": "模型协议支持的调用模式：batch（整段）和/或 streaming（流式）。"
+        },
+        "inputFormats": {
+          "type": "array",
+          "minItems": 1,
+          "uniqueItems": true,
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "description": "ASR 上游接受的音频格式，如 wav、mp3、webm；格式名使用适配器可识别的规范值。"
+        },
+        "outputFormats": {
+          "type": "array",
+          "minItems": 1,
+          "uniqueItems": true,
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "description": "TTS 上游可返回的音频格式，如 pcm16le、wav、mp3；运行时需与适配器和播放器能力求交集。"
+        },
+        "sampleRates": {
+          "type": "array",
+          "minItems": 1,
+          "uniqueItems": true,
+          "items": {
+            "type": "integer",
+            "minimum": 1
+          },
+          "description": "支持的采样率（Hz）；运行时不得假设固定采样率，需完成能力协商。"
+        },
+        "defaultVoice": {
+          "type": "string",
+          "minLength": 1,
+          "description": "TTS 推荐默认音色 ID；声明 voices 时必须能在 voices 中找到同 ID 条目。"
+        },
+        "voices": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "$ref": "#/definitions/speechVoice"
+          },
+          "description": "TTS 可选音色列表，统一为稳定 id 与用户可读 label。"
+        },
+        "languageHints": {
+          "type": "boolean",
+          "description": "ASR 协议是否接受语言提示参数；不是模型支持语言范围清单。"
+        }
+      },
+      "additionalProperties": false
+    },
+    "modelOrigin": {
+      "type": "object",
+      "required": [
+        "vendor",
+        "canonicalModelId"
+      ],
+      "properties": {
+        "vendor": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$",
+          "description": "规范化原厂商 ID，如 xiaomi、openai、alibaba、minimax；不得填写当前算力 Provider ID。"
+        },
+        "canonicalModelId": {
+          "type": "string",
+          "minLength": 1,
+          "description": "原厂模型的稳定识别 ID，用于适配器匹配、诊断和日志；不替代实际路由使用的 modelName/apiModelId。"
+        },
+        "family": {
+          "type": "string",
+          "minLength": 1,
+          "description": "跨小版本稳定的模型家族，如 mimo-asr；同一协议下的后续模型版本可复用该家族语义。"
+        }
+      },
+      "additionalProperties": false
+    },
+    "constraints": {
+      "type": "object",
+      "properties": {
+        "thinkingOnly": {
+          "type": "boolean"
+        },
+        "samplingParametersDeprecated": {
+          "type": "boolean"
+        },
+        "forcedToolChoiceUnsupported": {
+          "type": "boolean"
+        },
+        "dimensions": {
+          "type": "array",
+          "items": {
+            "type": "integer",
+            "minimum": 1
+          }
+        },
+        "defaultDimension": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "modelOrigin": {
+          "$ref": "#/definitions/modelOrigin"
+        },
+        "speech": {
+          "$ref": "#/definitions/speechModelProfile"
+        }
+      },
+      "required": [],
+      "additionalProperties": false
+    },
+    "lifecycle": {
+      "type": "object",
+      "properties": {
+        "status": {
+          "enum": [
+            "unknown",
+            "active",
+            "preview",
+            "deprecated",
+            "retired",
+            "historical"
+          ]
+        },
+        "retiredAt": {
+          "type": "string",
+          "format": "date"
+        },
+        "releasedAt": {
+          "type": "string",
+          "pattern": "^\\d{4}-\\d{2}(-\\d{2})?$"
+        },
+        "checkedAt": {
+          "type": "string",
+          "format": "date"
+        },
+        "evidence": {
+          "type": "string"
+        },
+        "deprecated": {
+          "type": "boolean"
+        },
+        "legacy": {
+          "type": "boolean"
+        },
+        "deprecationNotice": {
+          "type": "string"
+        },
+        "replacedBy": {
+          "type": "string"
+        },
+        "selectable": {
+          "type": "boolean",
+          "description": "Product selection policy only. false excludes picker and automatic candidates while explicit calls retain separate eligibility; deprecated cannot be relaxed by true."
+        }
+      },
+      "required": [
+        "status"
+      ],
+      "additionalProperties": false
+    },
+    "request": {
+      "type": "object",
+      "properties": {
+        "adaptiveThinking": {
+          "type": "boolean"
+        },
+        "constraints": {
+          "$ref": "#/definitions/constraints"
+        },
+        "reasoning": {
+          "type": "object",
+          "properties": {
+            "supportedEfforts": {
+              "type": "array",
+              "minItems": 1,
+              "uniqueItems": true,
+              "items": {
+                "enum": [
+                  "none",
+                  "off",
+                  "minimal",
+                  "low",
+                  "medium",
+                  "high",
+                  "xhigh",
+                  "max"
+                ]
+              }
+            },
+            "defaultEffort": {
+              "enum": [
+                "none",
+                "off",
+                "minimal",
+                "low",
+                "medium",
+                "high",
+                "xhigh",
+                "max"
+              ]
+            }
+          },
+          "required": [
+            "supportedEfforts"
+          ],
+          "additionalProperties": false
+        },
+        "serverSideWebSearch": {
+          "type": "object",
+          "properties": {
+            "enabled": {
+              "type": "boolean"
+            },
+            "dialect": {
+              "enum": [
+                "anthropic-messages",
+                "openai-responses"
+              ]
+            },
+            "fallbackPriority": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "toolType": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "enabled",
+            "dialect"
+          ],
+          "additionalProperties": false
+        },
+        "thinking": {
+          "type": "object",
+          "properties": {
+            "default": {
+              "enum": [
+                "enabled",
+                "disabled"
+              ]
+            },
+            "disableSupported": {
+              "type": "boolean"
+            },
+            "preserveReasoningContent": {
+              "type": "boolean"
+            },
+            "disabledTemperature": {
+              "type": "number"
+            },
+            "mode": {
+              "enum": [
+                "forced",
+                "adaptive",
+                "budget"
+              ]
+            }
+          },
+          "required": [],
+          "additionalProperties": false
+        },
+        "thinkingRoundTrip": {
+          "type": "object",
+          "properties": {
+            "enabled": {
+              "type": "boolean"
+            },
+            "protocol": {
+              "type": "string"
+            },
+            "allowEmptySignature": {
+              "type": "boolean"
+            },
+            "scope": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "enabled",
+            "protocol"
+          ],
+          "additionalProperties": false
+        },
+        "thinkingToolTurnValidation": {
+          "enum": [
+            "accepts-thinkless",
+            "requires-thinking"
+          ]
+        },
+        "endpointPath": {
+          "type": "string",
+          "pattern": "^/[^/\\\\\\s]\\S*$"
+        },
+        "apiFormatOverride": {
+          "type": "string",
+          "enum": [
+            "openai-completions",
+            "openai-responses",
+            "anthropic-messages",
+            "google-generative-ai",
+            "openai-codex-responses",
+            "kling-task-api",
+            "stability-rest-api"
+          ]
+        },
+        "speech": {
+          "$ref": "#/definitions/speechModelProfile"
+        },
+        "responsesOnly": {
+          "type": "boolean"
+        },
+        "preserveThinkingDefault": {
+          "type": "boolean"
+        },
+        "upstreamModelId": {
+          "type": "string",
+          "minLength": 1,
+          "description": "Exact outgoing API identity; access.apiModelId remains the stable selection identifier."
+        }
+      },
+      "required": [],
+      "additionalProperties": false
+    },
+    "protocol": {
+      "type": "object",
+      "properties": {
+        "apiFormat": {
+          "type": "string",
+          "enum": [
+            "openai-completions",
+            "openai-responses",
+            "anthropic-messages",
+            "google-generative-ai",
+            "openai-codex-responses",
+            "kling-task-api",
+            "stability-rest-api"
+          ]
+        },
+        "adapterId": {
+          "type": "string"
+        },
+        "state": {
+          "enum": [
+            "supported",
+            "unsupported",
+            "unknown"
+          ]
+        },
+        "requiredClientVersion": {
+          "type": "string",
+          "pattern": "^\\d+\\.\\d+\\.\\d+$"
+        },
+        "reason": {
+          "type": "string",
+          "minLength": 1
+        }
+      },
+      "required": [
+        "state"
+      ],
+      "additionalProperties": false,
+      "allOf": [
+        {
+          "if": {
+            "properties": {
+              "state": {
+                "const": "unsupported"
+              }
+            }
+          },
+          "then": {
+            "required": [
+              "reason"
+            ]
+          }
+        }
+      ]
+    },
+    "quoteValue": {
+      "anyOf": [
+        {
+          "type": "number"
+        },
+        {
+          "type": "string"
+        },
+        {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/quoteValue"
+          }
+        },
+        {
+          "type": "object",
+          "additionalProperties": {
+            "$ref": "#/definitions/quoteValue"
+          }
+        }
+      ]
+    }
+  }
+}

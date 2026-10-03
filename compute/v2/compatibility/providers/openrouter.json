@@ -1,0 +1,317 @@
+{
+  "id": "provider-openrouter-001",
+  "provider": "openrouter",
+  "label": "OpenRouter",
+  "baseUrl": "https://openrouter.ai/api/v1",
+  "apiFormat": "openai-completions",
+  "apiKeyRef": "openrouter",
+  "apiKeyVerified": false,
+  "enabled": false,
+  "status": "unconfigured",
+  "priceCurrency": "USD",
+  "services": [
+    "chat",
+    "reasoning",
+    "vision"
+  ],
+  "tombstones": [
+    "stealth/ox-alpha",
+    "openai/gpt-oss-120b:free",
+    "qwen/qwen3-coder:free"
+  ],
+  "models": [
+    {
+      "modelName": "cohere/command-a-plus",
+      "displayName": "Cohere: Command A+",
+      "serviceType": [
+        "chat"
+      ],
+      "contextWindow": 192000,
+      "capabilities": [
+        "chat",
+        "vision",
+        "tool_use",
+        "reasoning"
+      ],
+      "inputPrice": 0.3,
+      "outputPrice": 1.5,
+      "description": "OpenRouter 官方公共目录模型，接入参数与计价以该平台为准",
+      "maxOutputTokens": 64000
+    },
+    {
+      "modelName": "mistralai/mistral-medium-3-5",
+      "displayName": "Mistral: Mistral Medium 3.5",
+      "serviceType": [
+        "chat"
+      ],
+      "contextWindow": 262144,
+      "capabilities": [
+        "chat",
+        "vision",
+        "tool_use",
+        "reasoning"
+      ],
+      "inputPrice": 1.5,
+      "outputPrice": 7.5,
+      "description": "OpenRouter 官方公共目录模型，接入参数与计价以该平台为准",
+      "maxOutputTokens": 209715
+    },
+    {
+      "modelName": "google/gemini-3.8-flash",
+      "displayName": "Google: Gemini 3.8 Flash",
+      "serviceType": [
+        "chat"
+      ],
+      "contextWindow": 1048576,
+      "capabilities": [
+        "chat",
+        "vision",
+        "tool_use",
+        "reasoning"
+      ],
+      "inputPrice": 0.75,
+      "outputPrice": 3.75,
+      "description": "OpenRouter 官方公共目录模型，接入参数与计价以该平台为准",
+      "maxOutputTokens": 65536
+    },
+    {
+      "modelName": "minimax/minimax-m3",
+      "displayName": "MiniMax: MiniMax M3",
+      "serviceType": [
+        "chat"
+      ],
+      "contextWindow": 1048576,
+      "capabilities": [
+        "chat",
+        "vision",
+        "tool_use",
+        "reasoning"
+      ],
+      "inputPrice": 0.3,
+      "outputPrice": 1.2,
+      "description": "OpenRouter 官方公共目录模型，接入参数与计价以该平台为准",
+      "maxOutputTokens": 512000
+    },
+    {
+      "modelName": "qwen/qwen3.8-omni-flash",
+      "displayName": "Qwen: Qwen3.8 Omni Flash",
+      "serviceType": [
+        "chat"
+      ],
+      "contextWindow": 1000000,
+      "capabilities": [
+        "chat",
+        "vision",
+        "tool_use",
+        "reasoning"
+      ],
+      "inputPrice": 0.15,
+      "outputPrice": 0.47,
+      "description": "OpenRouter 官方公共目录模型，接入参数与计价以该平台为准",
+      "maxOutputTokens": 131072
+    },
+    {
+      "modelName": "qwen/qwen3.8-max-prime",
+      "displayName": "Qwen: Qwen3.8 Max Prime",
+      "serviceType": [
+        "chat"
+      ],
+      "contextWindow": 1000000,
+      "capabilities": [
+        "chat",
+        "vision",
+        "tool_use",
+        "reasoning"
+      ],
+      "inputPrice": 4,
+      "outputPrice": 12,
+      "description": "OpenRouter 官方公共目录模型，接入参数与计价以该平台为准",
+      "maxOutputTokens": 131072
+    },
+    {
+      "modelName": "deepseek/deepseek-v4.1-flash",
+      "displayName": "DeepSeek: DeepSeek V4.1 Flash",
+      "serviceType": [
+        "chat"
+      ],
+      "contextWindow": 1048576,
+      "capabilities": [
+        "chat",
+        "vision",
+        "tool_use",
+        "reasoning"
+      ],
+      "inputPrice": 0.3,
+      "outputPrice": 1.2,
+      "description": "OpenRouter 官方公共目录模型；接入参数与计价以该平台为准",
+      "extra": {
+        "pricingNotes": "USD per 1M tokens; OpenRouter access-specific pricing."
+      },
+      "maxOutputTokens": 943718
+    },
+    {
+      "modelName": "tencent/hy4-preview",
+      "displayName": "Tencent: Hy4 preview",
+      "serviceType": [
+        "chat"
+      ],
+      "contextWindow": 1048576,
+      "capabilities": [
+        "chat",
+        "tool_use",
+        "reasoning"
+      ],
+      "inputPrice": 0.834,
+      "outputPrice": 2.501,
+      "description": "OpenRouter 官方公共目录模型；接入参数与计价以该平台为准",
+      "extra": {
+        "pricingNotes": "USD per 1M tokens; OpenRouter access-specific pricing."
+      },
+      "maxOutputTokens": 64000
+    },
+    {
+      "modelName": "z-ai/glm-5.3-flash",
+      "displayName": "Z.ai: GLM 5.3 Flash",
+      "serviceType": [
+        "chat"
+      ],
+      "contextWindow": 1048576,
+      "capabilities": [
+        "chat",
+        "vision",
+        "tool_use",
+        "reasoning"
+      ],
+      "inputPrice": 0.15,
+      "outputPrice": 0.5,
+      "description": "OpenRouter 官方公共目录模型；接入参数与计价以该平台为准",
+      "extra": {
+        "pricingNotes": "USD per 1M tokens; OpenRouter access-specific pricing."
+      },
+      "maxOutputTokens": 943717
+    },
+    {
+      "modelName": "z-ai/glm-5.3",
+      "displayName": "Z.ai: GLM 5.3",
+      "serviceType": [
+        "chat"
+      ],
+      "contextWindow": 1048576,
+      "capabilities": [
+        "chat",
+        "tool_use",
+        "reasoning"
+      ],
+      "inputPrice": 1.4,
+      "outputPrice": 4.4,
+      "description": "OpenRouter 官方公共目录模型；接入参数与计价以该平台为准",
+      "extra": {
+        "pricingNotes": "USD per 1M tokens; OpenRouter access-specific pricing."
+      },
+      "maxOutputTokens": 131072
+    },
+    {
+      "modelName": "moonshotai/kimi-k3",
+      "displayName": "MoonshotAI: Kimi K3",
+      "serviceType": [
+        "chat"
+      ],
+      "contextWindow": 1048576,
+      "capabilities": [
+        "chat",
+        "vision",
+        "tool_use",
+        "reasoning"
+      ],
+      "inputPrice": 2.7,
+      "outputPrice": 13.5,
+      "description": "OpenRouter 官方公共目录模型；接入参数与计价以该平台为准",
+      "extra": {
+        "pricingNotes": "USD per 1M tokens; OpenRouter access-specific pricing."
+      },
+      "maxOutputTokens": 943718
+    },
+    {
+      "modelName": "anthropic/claude-sonnet-5.5",
+      "displayName": "Anthropic: Claude Sonnet 5.5",
+      "serviceType": [
+        "chat"
+      ],
+      "contextWindow": 1000000,
+      "capabilities": [
+        "chat",
+        "vision",
+        "tool_use",
+        "reasoning"
+      ],
+      "inputPrice": 2,
+      "outputPrice": 10,
+      "description": "OpenRouter 官方公共目录模型；接入参数与计价以该平台为准",
+      "extra": {
+        "pricingNotes": "USD per 1M tokens; OpenRouter access-specific pricing."
+      },
+      "maxOutputTokens": 128000
+    },
+    {
+      "modelName": "anthropic/claude-opus-5.5",
+      "displayName": "Anthropic: Claude Opus 5.5",
+      "serviceType": [
+        "chat"
+      ],
+      "contextWindow": 1000000,
+      "capabilities": [
+        "chat",
+        "vision",
+        "tool_use",
+        "reasoning"
+      ],
+      "inputPrice": 4,
+      "outputPrice": 20,
+      "description": "OpenRouter 官方公共目录模型；接入参数与计价以该平台为准",
+      "extra": {
+        "pricingNotes": "USD per 1M tokens; OpenRouter access-specific pricing."
+      },
+      "maxOutputTokens": 128000
+    },
+    {
+      "modelName": "openai/gpt-6.1-sol",
+      "displayName": "OpenAI: GPT-6.1 Sol",
+      "serviceType": [
+        "chat"
+      ],
+      "contextWindow": 1050000,
+      "capabilities": [
+        "chat",
+        "vision",
+        "tool_use",
+        "reasoning"
+      ],
+      "inputPrice": 2,
+      "outputPrice": 10,
+      "description": "OpenRouter 官方公共目录模型；接入参数与计价以该平台为准",
+      "extra": {
+        "pricingNotes": "USD per 1M tokens; OpenRouter access-specific pricing."
+      },
+      "maxOutputTokens": 128000
+    },
+    {
+      "modelName": "openrouter/auto",
+      "displayName": "OpenRouter Auto",
+      "serviceType": [
+        "chat"
+      ],
+      "description": "OpenRouter 自动路由，智能选择最优模型",
+      "contextWindow": 2000000,
+      "maxOutputTokens": 16384,
+      "capabilities": [
+        "chat",
+        "auto_routing"
+      ],
+      "defaultTemperature": 1,
+      "defaultTopP": 1,
+      "extra": {
+        "pricingNotes": "OpenRouter Models API 的 prompt/completion=-1 为动态路由占位值，实际价格取决于选中的模型，不代表免费。"
+      }
+    }
+  ]
+}

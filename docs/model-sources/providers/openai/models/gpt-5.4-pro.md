@@ -78,3 +78,23 @@
 }
 ```
 <!-- source-metadata:end -->
+
+## compute/model-specs/openai.json：精确绑定
+
+官方规格页本轮核实窗口与输出；未扩大自动路由资格。
+
+<!-- source-details: {"config":"compute/model-specs/openai.json","id":"gpt-5.4-pro"} -->
+```json
+{
+  "spec.contextWindow": 1050000,
+  "spec.maxOutputTokens": 128000,
+  "spec.description": "官方独立Pro规格；Responses协议限制由实际接入面执行，不沿用基础型号或其他代际family。"
+}
+```
+<!-- source-details:end -->
+
+<!-- source-config: compute/model-specs/openai.json -->
+
+| 模型 ID | 上下文 / 输出 | 计价 | 已核字段→来源 | 来源入口 | 状态 | 数据指纹 |
+| --- | --- | --- | --- | --- | --- | --- |
+| `gpt-5.4-pro` | 1050000 / 128000 | 非计价主数据 | `id`→[gpt-5-4-pro-api](../SOURCES.md#gpt-5-4-pro-api)；`spec.contextWindow`→[gpt-5-4-pro-api](../SOURCES.md#gpt-5-4-pro-api)；`spec.maxOutputTokens`→[gpt-5-4-pro-api](../SOURCES.md#gpt-5-4-pro-api) | [gpt-5-4-pro-api](../SOURCES.md#gpt-5-4-pro-api) | partial | `8782422b1170ce65415e84a43ff59f3668e49a4ece33e439676ef306a8c4cdbb` |

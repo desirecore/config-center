@@ -1,0 +1,143 @@
+{
+  "id": "provider-xai-001",
+  "provider": "xai",
+  "label": "xAI Grok",
+  "baseUrl": "https://api.x.ai/v1",
+  "apiFormat": "openai-completions",
+  "apiKeyRef": "xai",
+  "apiKeyVerified": false,
+  "enabled": false,
+  "status": "unconfigured",
+  "priceCurrency": "USD",
+  "services": [
+    "chat",
+    "reasoning"
+  ],
+  "tombstones": [
+    "grok-4-1-fast-reasoning"
+  ],
+  "models": [
+    {
+      "modelName": "grok-4.7",
+      "displayName": "Grok 4.7",
+      "serviceType": [
+        "chat",
+        "reasoning"
+      ],
+      "description": "xAI 面向编程与智能体任务的旗舰模型，500K 上下文，支持图像输入和可配置推理",
+      "contextWindow": 500000,
+      "capabilities": [
+        "chat",
+        "reasoning",
+        "code",
+        "vision",
+        "tool_use",
+        "structured_output",
+        "long_context"
+      ],
+      "inputPrice": 2,
+      "outputPrice": 6,
+      "extra": {
+        "cachedInputPrice": 0.5,
+        "reasoning": {
+          "supportedEfforts": [
+            "low",
+            "medium",
+            "high",
+            "xhigh"
+          ],
+          "defaultEffort": "high"
+        },
+        "pricingNotes": "Prices are per 1M tokens below 200K prompt tokens; above 200K, input and cache rates are 2x and output rates are 2x. No text output limit is documented."
+      }
+    },
+    {
+      "modelName": "grok-4.3",
+      "displayName": "Grok 4.3",
+      "serviceType": [
+        "chat",
+        "reasoning"
+      ],
+      "description": "xAI Grok 4.3 通用模型，1M 上下文，支持可配置推理、函数调用和结构化输出",
+      "contextWindow": 1000000,
+      "capabilities": [
+        "chat",
+        "reasoning",
+        "vision",
+        "tool_use",
+        "structured_output",
+        "long_context"
+      ],
+      "inputPrice": 1.25,
+      "outputPrice": 2.5,
+      "defaultTemperature": 1,
+      "defaultTopP": 1,
+      "extra": {
+        "cachedInputPrice": 0.2,
+        "aliases": [
+          "grok-4.3-latest",
+          "grok-latest"
+        ],
+        "reasoning": {
+          "supportedEfforts": [
+            "none",
+            "low",
+            "medium",
+            "high"
+          ],
+          "defaultEffort": "low"
+        }
+      }
+    },
+    {
+      "modelName": "grok-build-0.1",
+      "displayName": "Grok Build 0.1",
+      "serviceType": [
+        "chat"
+      ],
+      "description": "xAI 面向 agentic coding 工作流的专用代码模型",
+      "contextWindow": 256000,
+      "capabilities": [
+        "chat",
+        "code",
+        "agent",
+        "tool_use",
+        "structured_output"
+      ],
+      "inputPrice": 1,
+      "outputPrice": 2,
+      "defaultTemperature": 1,
+      "defaultTopP": 1,
+      "extra": {
+        "cachedInputPrice": 0.2
+      }
+    },
+    {
+      "modelName": "grok-4.20-0309-reasoning",
+      "displayName": "Grok 4.20 Reasoning (2026-03-09)",
+      "serviceType": [
+        "chat",
+        "reasoning"
+      ],
+      "description": "xAI Grok 4.20 固定版本推理模型，当前价格与 Grok 4.3 一致",
+      "contextWindow": 1000000,
+      "maxOutputTokens": 16384,
+      "capabilities": [
+        "chat",
+        "reasoning",
+        "vision",
+        "tool_use",
+        "structured_output",
+        "long_context"
+      ],
+      "inputPrice": 1.25,
+      "outputPrice": 2.5,
+      "defaultTemperature": 1,
+      "defaultTopP": 1,
+      "extra": {
+        "cachedInputPrice": 0.2,
+        "legacy": true
+      }
+    }
+  ]
+}

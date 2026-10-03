@@ -1,0 +1,1131 @@
+{
+  "formatVersion": 1,
+  "checkedAt": "2026-10-03",
+  "counts": {
+    "realtimeUnsupported": 3,
+    "mediaUnsupported": 21,
+    "speechUnsupported": 12,
+    "total": 36
+  },
+  "supportedDispatch": {
+    "imageGenProviderSlugs": [
+      "minimax",
+      "volcengine",
+      "newapi",
+      "desirecore-cloud"
+    ],
+    "videoGenProviderSlugs": [
+      "minimax",
+      "volcengine",
+      "dashscope",
+      "newapi",
+      "desirecore-cloud"
+    ],
+    "speechProtocols": [
+      "openai-audio-speech",
+      "dashscope-websocket-tts",
+      "xiaomi-mimo-chat-tts",
+      "openai-audio-transcriptions",
+      "xiaomi-mimo-chat-asr",
+      "dashscope-websocket-asr"
+    ]
+  },
+  "predicate": "固定现有模型具有image_gen/video_gen服务，实际execute通过Provider slug查registry而该slug未注册；或OpenAI realtime三精确型号在speech profile/registry不存在独立协议；普通ASR/TTS无显式profile且真实兼容表无命中则resolveProfile必报missing_model_profile。无fallback的调用路径已逐条检查。",
+  "apiFormatBoundary": "openai-responses/openai-completions只声明通用对话协议。Realtime WebSocket/实时翻译、原生图像/视频任务、批量ASR/TTS各有不同endpoint、请求/响应和流式状态机；同域/Bearer认证或同名apiFormat不证明模型协议适配。",
+  "decisions": [
+    {
+      "file": "compute/providers/dashscope.json",
+      "providerId": "provider-dashscope-001",
+      "provider": "dashscope",
+      "apiModelId": "qwen-image-3.0",
+      "services": [
+        "image_gen"
+      ],
+      "apiFormat": "openai-completions",
+      "protocol": {
+        "state": "unsupported",
+        "reason": "no-registered-image_gen-provider-adapter"
+      },
+      "minimumClientVersion": null,
+      "floorDecision": "没有实现/正式发布证据，不填猜测版本。候选展示保留，出站及自动路由禁止，适配验收后再解除。",
+      "confidence": "confirmed-source-dispatch",
+      "clientWorkspace": "/Users/wangyi/.codex/worktrees/catalog-contract-client/desirecore",
+      "evidence": [
+        {
+          "path": "packages/agent-service/src/media/adapters/registry.ts",
+          "sha256": "1140465675400f18de1eda59f12406c4c798db71da13c5db204a3f2970165829",
+          "assertion": "getImageAdapter/getVideoAdapter仅返回对应provider slug的映射，无通用fallback；SUPPORTED列表由该映射的Object.keys生成。"
+        },
+        {
+          "path": "packages/agent-service/src/builtin-tools/generate-image.ts",
+          "assertion": "execute实际findProvider后以found.provider.provider取getAdapter；undefined立即return失败，不进入buildSubmit/proxy。"
+        }
+      ]
+    },
+    {
+      "file": "compute/providers/dashscope.json",
+      "providerId": "provider-dashscope-001",
+      "provider": "dashscope",
+      "apiModelId": "qwen-image-3.0-pro",
+      "services": [
+        "image_gen"
+      ],
+      "apiFormat": "openai-completions",
+      "protocol": {
+        "state": "unsupported",
+        "reason": "no-registered-image_gen-provider-adapter"
+      },
+      "minimumClientVersion": null,
+      "floorDecision": "没有实现/正式发布证据，不填猜测版本。候选展示保留，出站及自动路由禁止，适配验收后再解除。",
+      "confidence": "confirmed-source-dispatch",
+      "clientWorkspace": "/Users/wangyi/.codex/worktrees/catalog-contract-client/desirecore",
+      "evidence": [
+        {
+          "path": "packages/agent-service/src/media/adapters/registry.ts",
+          "sha256": "1140465675400f18de1eda59f12406c4c798db71da13c5db204a3f2970165829",
+          "assertion": "getImageAdapter/getVideoAdapter仅返回对应provider slug的映射，无通用fallback；SUPPORTED列表由该映射的Object.keys生成。"
+        },
+        {
+          "path": "packages/agent-service/src/builtin-tools/generate-image.ts",
+          "assertion": "execute实际findProvider后以found.provider.provider取getAdapter；undefined立即return失败，不进入buildSubmit/proxy。"
+        }
+      ]
+    },
+    {
+      "file": "compute/providers/dashscope.json",
+      "providerId": "provider-dashscope-001",
+      "provider": "dashscope",
+      "apiModelId": "paraformer-v2",
+      "services": [
+        "asr"
+      ],
+      "apiFormat": "openai-completions",
+      "protocol": {
+        "state": "unsupported",
+        "reason": "missing-speech-profile-and-compatibility"
+      },
+      "minimumClientVersion": null,
+      "floorDecision": "没有实现/正式发布证据，不填猜测版本。候选展示保留，出站及自动路由禁止，适配验收后再解除。",
+      "confidence": "confirmed-source-dispatch",
+      "clientWorkspace": "/Users/wangyi/.codex/worktrees/catalog-contract-client/desirecore",
+      "evidence": [
+        {
+          "path": "packages/agent-service/src/speech/asr-adapter.ts",
+          "assertion": "recognize/synthesize通过resolveSpeechCompute解析model profile与adapter，非直接按Provider.apiFormat发送。"
+        },
+        {
+          "path": "packages/agent-service/src/speech/speech-resolver.ts",
+          "assertion": "resolveProfile仅显式modelOrigin/speech或兼容表；无profile且无兼容命中立即fail missing_model_profile。"
+        },
+        {
+          "path": "packages/speech-core/src/model-compatibility.ts",
+          "assertion": "逐精确ID匹配：tts-1/hd、whisper-1、mimo-v2.5tts/asr、cosyvoice-v2/v3前缀、fun-asr-realtime前缀；本行均未命中，无provider/local-whisper fallback。"
+        }
+      ]
+    },
+    {
+      "file": "compute/providers/dashscope.json",
+      "providerId": "provider-dashscope-001",
+      "provider": "dashscope",
+      "apiModelId": "wan2.7-image-pro",
+      "services": [
+        "image_gen"
+      ],
+      "apiFormat": "openai-completions",
+      "protocol": {
+        "state": "unsupported",
+        "reason": "no-registered-image_gen-provider-adapter"
+      },
+      "minimumClientVersion": null,
+      "floorDecision": "没有实现/正式发布证据，不填猜测版本。候选展示保留，出站及自动路由禁止，适配验收后再解除。",
+      "confidence": "confirmed-source-dispatch",
+      "clientWorkspace": "/Users/wangyi/.codex/worktrees/catalog-contract-client/desirecore",
+      "evidence": [
+        {
+          "path": "packages/agent-service/src/media/adapters/registry.ts",
+          "sha256": "1140465675400f18de1eda59f12406c4c798db71da13c5db204a3f2970165829",
+          "assertion": "getImageAdapter/getVideoAdapter仅返回对应provider slug的映射，无通用fallback；SUPPORTED列表由该映射的Object.keys生成。"
+        },
+        {
+          "path": "packages/agent-service/src/builtin-tools/generate-image.ts",
+          "assertion": "execute实际findProvider后以found.provider.provider取getAdapter；undefined立即return失败，不进入buildSubmit/proxy。"
+        }
+      ]
+    },
+    {
+      "file": "compute/providers/dashscope.json",
+      "providerId": "provider-dashscope-001",
+      "provider": "dashscope",
+      "apiModelId": "wan2.7-image",
+      "services": [
+        "image_gen"
+      ],
+      "apiFormat": "openai-completions",
+      "protocol": {
+        "state": "unsupported",
+        "reason": "no-registered-image_gen-provider-adapter"
+      },
+      "minimumClientVersion": null,
+      "floorDecision": "没有实现/正式发布证据，不填猜测版本。候选展示保留，出站及自动路由禁止，适配验收后再解除。",
+      "confidence": "confirmed-source-dispatch",
+      "clientWorkspace": "/Users/wangyi/.codex/worktrees/catalog-contract-client/desirecore",
+      "evidence": [
+        {
+          "path": "packages/agent-service/src/media/adapters/registry.ts",
+          "sha256": "1140465675400f18de1eda59f12406c4c798db71da13c5db204a3f2970165829",
+          "assertion": "getImageAdapter/getVideoAdapter仅返回对应provider slug的映射，无通用fallback；SUPPORTED列表由该映射的Object.keys生成。"
+        },
+        {
+          "path": "packages/agent-service/src/builtin-tools/generate-image.ts",
+          "assertion": "execute实际findProvider后以found.provider.provider取getAdapter；undefined立即return失败，不进入buildSubmit/proxy。"
+        }
+      ]
+    },
+    {
+      "file": "compute/providers/dashscope.json",
+      "providerId": "provider-dashscope-001",
+      "provider": "dashscope",
+      "apiModelId": "wan2.6-t2i",
+      "services": [
+        "image_gen"
+      ],
+      "apiFormat": "openai-completions",
+      "protocol": {
+        "state": "unsupported",
+        "reason": "no-registered-image_gen-provider-adapter"
+      },
+      "minimumClientVersion": null,
+      "floorDecision": "没有实现/正式发布证据，不填猜测版本。候选展示保留，出站及自动路由禁止，适配验收后再解除。",
+      "confidence": "confirmed-source-dispatch",
+      "clientWorkspace": "/Users/wangyi/.codex/worktrees/catalog-contract-client/desirecore",
+      "evidence": [
+        {
+          "path": "packages/agent-service/src/media/adapters/registry.ts",
+          "sha256": "1140465675400f18de1eda59f12406c4c798db71da13c5db204a3f2970165829",
+          "assertion": "getImageAdapter/getVideoAdapter仅返回对应provider slug的映射，无通用fallback；SUPPORTED列表由该映射的Object.keys生成。"
+        },
+        {
+          "path": "packages/agent-service/src/builtin-tools/generate-image.ts",
+          "assertion": "execute实际findProvider后以found.provider.provider取getAdapter；undefined立即return失败，不进入buildSubmit/proxy。"
+        }
+      ]
+    },
+    {
+      "file": "compute/providers/dashscope.json",
+      "providerId": "provider-dashscope-001",
+      "provider": "dashscope",
+      "apiModelId": "wan2.2-t2i-plus",
+      "services": [
+        "image_gen"
+      ],
+      "apiFormat": "openai-completions",
+      "protocol": {
+        "state": "unsupported",
+        "reason": "no-registered-image_gen-provider-adapter"
+      },
+      "minimumClientVersion": null,
+      "floorDecision": "没有实现/正式发布证据，不填猜测版本。候选展示保留，出站及自动路由禁止，适配验收后再解除。",
+      "confidence": "confirmed-source-dispatch",
+      "clientWorkspace": "/Users/wangyi/.codex/worktrees/catalog-contract-client/desirecore",
+      "evidence": [
+        {
+          "path": "packages/agent-service/src/media/adapters/registry.ts",
+          "sha256": "1140465675400f18de1eda59f12406c4c798db71da13c5db204a3f2970165829",
+          "assertion": "getImageAdapter/getVideoAdapter仅返回对应provider slug的映射，无通用fallback；SUPPORTED列表由该映射的Object.keys生成。"
+        },
+        {
+          "path": "packages/agent-service/src/builtin-tools/generate-image.ts",
+          "assertion": "execute实际findProvider后以found.provider.provider取getAdapter；undefined立即return失败，不进入buildSubmit/proxy。"
+        }
+      ]
+    },
+    {
+      "file": "compute/providers/dashscope.json",
+      "providerId": "provider-dashscope-001",
+      "provider": "dashscope",
+      "apiModelId": "wan2.2-t2i-flash",
+      "services": [
+        "image_gen"
+      ],
+      "apiFormat": "openai-completions",
+      "protocol": {
+        "state": "unsupported",
+        "reason": "no-registered-image_gen-provider-adapter"
+      },
+      "minimumClientVersion": null,
+      "floorDecision": "没有实现/正式发布证据，不填猜测版本。候选展示保留，出站及自动路由禁止，适配验收后再解除。",
+      "confidence": "confirmed-source-dispatch",
+      "clientWorkspace": "/Users/wangyi/.codex/worktrees/catalog-contract-client/desirecore",
+      "evidence": [
+        {
+          "path": "packages/agent-service/src/media/adapters/registry.ts",
+          "sha256": "1140465675400f18de1eda59f12406c4c798db71da13c5db204a3f2970165829",
+          "assertion": "getImageAdapter/getVideoAdapter仅返回对应provider slug的映射，无通用fallback；SUPPORTED列表由该映射的Object.keys生成。"
+        },
+        {
+          "path": "packages/agent-service/src/builtin-tools/generate-image.ts",
+          "assertion": "execute实际findProvider后以found.provider.provider取getAdapter；undefined立即return失败，不进入buildSubmit/proxy。"
+        }
+      ]
+    },
+    {
+      "file": "compute/providers/dashscope.json",
+      "providerId": "provider-dashscope-001",
+      "provider": "dashscope",
+      "apiModelId": "qwen-image-2.0-pro",
+      "services": [
+        "image_gen"
+      ],
+      "apiFormat": "openai-completions",
+      "protocol": {
+        "state": "unsupported",
+        "reason": "no-registered-image_gen-provider-adapter"
+      },
+      "minimumClientVersion": null,
+      "floorDecision": "没有实现/正式发布证据，不填猜测版本。候选展示保留，出站及自动路由禁止，适配验收后再解除。",
+      "confidence": "confirmed-source-dispatch",
+      "clientWorkspace": "/Users/wangyi/.codex/worktrees/catalog-contract-client/desirecore",
+      "evidence": [
+        {
+          "path": "packages/agent-service/src/media/adapters/registry.ts",
+          "sha256": "1140465675400f18de1eda59f12406c4c798db71da13c5db204a3f2970165829",
+          "assertion": "getImageAdapter/getVideoAdapter仅返回对应provider slug的映射，无通用fallback；SUPPORTED列表由该映射的Object.keys生成。"
+        },
+        {
+          "path": "packages/agent-service/src/builtin-tools/generate-image.ts",
+          "assertion": "execute实际findProvider后以found.provider.provider取getAdapter；undefined立即return失败，不进入buildSubmit/proxy。"
+        }
+      ]
+    },
+    {
+      "file": "compute/providers/dashscope.json",
+      "providerId": "provider-dashscope-001",
+      "provider": "dashscope",
+      "apiModelId": "qwen-image-2.0",
+      "services": [
+        "image_gen"
+      ],
+      "apiFormat": "openai-completions",
+      "protocol": {
+        "state": "unsupported",
+        "reason": "no-registered-image_gen-provider-adapter"
+      },
+      "minimumClientVersion": null,
+      "floorDecision": "没有实现/正式发布证据，不填猜测版本。候选展示保留，出站及自动路由禁止，适配验收后再解除。",
+      "confidence": "confirmed-source-dispatch",
+      "clientWorkspace": "/Users/wangyi/.codex/worktrees/catalog-contract-client/desirecore",
+      "evidence": [
+        {
+          "path": "packages/agent-service/src/media/adapters/registry.ts",
+          "sha256": "1140465675400f18de1eda59f12406c4c798db71da13c5db204a3f2970165829",
+          "assertion": "getImageAdapter/getVideoAdapter仅返回对应provider slug的映射，无通用fallback；SUPPORTED列表由该映射的Object.keys生成。"
+        },
+        {
+          "path": "packages/agent-service/src/builtin-tools/generate-image.ts",
+          "assertion": "execute实际findProvider后以found.provider.provider取getAdapter；undefined立即return失败，不进入buildSubmit/proxy。"
+        }
+      ]
+    },
+    {
+      "file": "compute/providers/kling.json",
+      "providerId": "provider-kling-001",
+      "provider": "kling",
+      "apiModelId": "kling-v3",
+      "services": [
+        "video_gen"
+      ],
+      "apiFormat": "kling-task-api",
+      "protocol": {
+        "state": "unsupported",
+        "reason": "no-registered-video_gen-provider-adapter"
+      },
+      "minimumClientVersion": null,
+      "floorDecision": "没有实现/正式发布证据，不填猜测版本。候选展示保留，出站及自动路由禁止，适配验收后再解除。",
+      "confidence": "confirmed-source-dispatch",
+      "clientWorkspace": "/Users/wangyi/.codex/worktrees/catalog-contract-client/desirecore",
+      "evidence": [
+        {
+          "path": "packages/agent-service/src/media/adapters/registry.ts",
+          "sha256": "1140465675400f18de1eda59f12406c4c798db71da13c5db204a3f2970165829",
+          "assertion": "getImageAdapter/getVideoAdapter仅返回对应provider slug的映射，无通用fallback；SUPPORTED列表由该映射的Object.keys生成。"
+        },
+        {
+          "path": "packages/agent-service/src/builtin-tools/generate-video.ts",
+          "assertion": "execute实际findProvider后以found.provider.provider取getAdapter；undefined立即return失败，不进入buildSubmit/proxy。"
+        }
+      ]
+    },
+    {
+      "file": "compute/providers/kling.json",
+      "providerId": "provider-kling-001",
+      "provider": "kling",
+      "apiModelId": "kling-v2-5-turbo",
+      "services": [
+        "video_gen"
+      ],
+      "apiFormat": "kling-task-api",
+      "protocol": {
+        "state": "unsupported",
+        "reason": "no-registered-video_gen-provider-adapter"
+      },
+      "minimumClientVersion": null,
+      "floorDecision": "没有实现/正式发布证据，不填猜测版本。候选展示保留，出站及自动路由禁止，适配验收后再解除。",
+      "confidence": "confirmed-source-dispatch",
+      "clientWorkspace": "/Users/wangyi/.codex/worktrees/catalog-contract-client/desirecore",
+      "evidence": [
+        {
+          "path": "packages/agent-service/src/media/adapters/registry.ts",
+          "sha256": "1140465675400f18de1eda59f12406c4c798db71da13c5db204a3f2970165829",
+          "assertion": "getImageAdapter/getVideoAdapter仅返回对应provider slug的映射，无通用fallback；SUPPORTED列表由该映射的Object.keys生成。"
+        },
+        {
+          "path": "packages/agent-service/src/builtin-tools/generate-video.ts",
+          "assertion": "execute实际findProvider后以found.provider.provider取getAdapter；undefined立即return失败，不进入buildSubmit/proxy。"
+        }
+      ]
+    },
+    {
+      "file": "compute/providers/kling.json",
+      "providerId": "provider-kling-001",
+      "provider": "kling",
+      "apiModelId": "kling-v2-5-turbo-pro",
+      "services": [
+        "video_gen"
+      ],
+      "apiFormat": "kling-task-api",
+      "protocol": {
+        "state": "unsupported",
+        "reason": "no-registered-video_gen-provider-adapter"
+      },
+      "minimumClientVersion": null,
+      "floorDecision": "没有实现/正式发布证据，不填猜测版本。候选展示保留，出站及自动路由禁止，适配验收后再解除。",
+      "confidence": "confirmed-source-dispatch",
+      "clientWorkspace": "/Users/wangyi/.codex/worktrees/catalog-contract-client/desirecore",
+      "evidence": [
+        {
+          "path": "packages/agent-service/src/media/adapters/registry.ts",
+          "sha256": "1140465675400f18de1eda59f12406c4c798db71da13c5db204a3f2970165829",
+          "assertion": "getImageAdapter/getVideoAdapter仅返回对应provider slug的映射，无通用fallback；SUPPORTED列表由该映射的Object.keys生成。"
+        },
+        {
+          "path": "packages/agent-service/src/builtin-tools/generate-video.ts",
+          "assertion": "execute实际findProvider后以found.provider.provider取getAdapter；undefined立即return失败，不进入buildSubmit/proxy。"
+        }
+      ]
+    },
+    {
+      "file": "compute/providers/kling.json",
+      "providerId": "provider-kling-001",
+      "provider": "kling",
+      "apiModelId": "kling-v2",
+      "services": [
+        "video_gen"
+      ],
+      "apiFormat": "kling-task-api",
+      "protocol": {
+        "state": "unsupported",
+        "reason": "no-registered-video_gen-provider-adapter"
+      },
+      "minimumClientVersion": null,
+      "floorDecision": "没有实现/正式发布证据，不填猜测版本。候选展示保留，出站及自动路由禁止，适配验收后再解除。",
+      "confidence": "confirmed-source-dispatch",
+      "clientWorkspace": "/Users/wangyi/.codex/worktrees/catalog-contract-client/desirecore",
+      "evidence": [
+        {
+          "path": "packages/agent-service/src/media/adapters/registry.ts",
+          "sha256": "1140465675400f18de1eda59f12406c4c798db71da13c5db204a3f2970165829",
+          "assertion": "getImageAdapter/getVideoAdapter仅返回对应provider slug的映射，无通用fallback；SUPPORTED列表由该映射的Object.keys生成。"
+        },
+        {
+          "path": "packages/agent-service/src/builtin-tools/generate-video.ts",
+          "assertion": "execute实际findProvider后以found.provider.provider取getAdapter；undefined立即return失败，不进入buildSubmit/proxy。"
+        }
+      ]
+    },
+    {
+      "file": "compute/providers/kling.json",
+      "providerId": "provider-kling-001",
+      "provider": "kling",
+      "apiModelId": "kling-v2-master",
+      "services": [
+        "video_gen"
+      ],
+      "apiFormat": "kling-task-api",
+      "protocol": {
+        "state": "unsupported",
+        "reason": "no-registered-video_gen-provider-adapter"
+      },
+      "minimumClientVersion": null,
+      "floorDecision": "没有实现/正式发布证据，不填猜测版本。候选展示保留，出站及自动路由禁止，适配验收后再解除。",
+      "confidence": "confirmed-source-dispatch",
+      "clientWorkspace": "/Users/wangyi/.codex/worktrees/catalog-contract-client/desirecore",
+      "evidence": [
+        {
+          "path": "packages/agent-service/src/media/adapters/registry.ts",
+          "sha256": "1140465675400f18de1eda59f12406c4c798db71da13c5db204a3f2970165829",
+          "assertion": "getImageAdapter/getVideoAdapter仅返回对应provider slug的映射，无通用fallback；SUPPORTED列表由该映射的Object.keys生成。"
+        },
+        {
+          "path": "packages/agent-service/src/builtin-tools/generate-video.ts",
+          "assertion": "execute实际findProvider后以found.provider.provider取getAdapter；undefined立即return失败，不进入buildSubmit/proxy。"
+        }
+      ]
+    },
+    {
+      "file": "compute/providers/local-whisper.json",
+      "providerId": "provider-local-whisper",
+      "provider": "local-whisper",
+      "apiModelId": "whisper-large-v3",
+      "services": [
+        "asr"
+      ],
+      "apiFormat": "openai-completions",
+      "protocol": {
+        "state": "unsupported",
+        "reason": "missing-speech-profile-and-compatibility"
+      },
+      "minimumClientVersion": null,
+      "floorDecision": "没有实现/正式发布证据，不填猜测版本。候选展示保留，出站及自动路由禁止，适配验收后再解除。",
+      "confidence": "confirmed-source-dispatch",
+      "clientWorkspace": "/Users/wangyi/.codex/worktrees/catalog-contract-client/desirecore",
+      "evidence": [
+        {
+          "path": "packages/agent-service/src/speech/asr-adapter.ts",
+          "assertion": "recognize/synthesize通过resolveSpeechCompute解析model profile与adapter，非直接按Provider.apiFormat发送。"
+        },
+        {
+          "path": "packages/agent-service/src/speech/speech-resolver.ts",
+          "assertion": "resolveProfile仅显式modelOrigin/speech或兼容表；无profile且无兼容命中立即fail missing_model_profile。"
+        },
+        {
+          "path": "packages/speech-core/src/model-compatibility.ts",
+          "assertion": "逐精确ID匹配：tts-1/hd、whisper-1、mimo-v2.5tts/asr、cosyvoice-v2/v3前缀、fun-asr-realtime前缀；本行均未命中，无provider/local-whisper fallback。"
+        }
+      ]
+    },
+    {
+      "file": "compute/providers/minimax.json",
+      "providerId": "provider-minimax-001",
+      "provider": "minimax",
+      "apiModelId": "speech-2.8-hd",
+      "services": [
+        "tts"
+      ],
+      "apiFormat": "anthropic-messages",
+      "protocol": {
+        "state": "unsupported",
+        "reason": "missing-speech-profile-and-compatibility"
+      },
+      "minimumClientVersion": null,
+      "floorDecision": "没有实现/正式发布证据，不填猜测版本。候选展示保留，出站及自动路由禁止，适配验收后再解除。",
+      "confidence": "confirmed-source-dispatch",
+      "clientWorkspace": "/Users/wangyi/.codex/worktrees/catalog-contract-client/desirecore",
+      "evidence": [
+        {
+          "path": "packages/agent-service/src/speech/tts-adapter.ts",
+          "assertion": "recognize/synthesize通过resolveSpeechCompute解析model profile与adapter，非直接按Provider.apiFormat发送。"
+        },
+        {
+          "path": "packages/agent-service/src/speech/speech-resolver.ts",
+          "assertion": "resolveProfile仅显式modelOrigin/speech或兼容表；无profile且无兼容命中立即fail missing_model_profile。"
+        },
+        {
+          "path": "packages/speech-core/src/model-compatibility.ts",
+          "assertion": "逐精确ID匹配：tts-1/hd、whisper-1、mimo-v2.5tts/asr、cosyvoice-v2/v3前缀、fun-asr-realtime前缀；本行均未命中，无provider/local-whisper fallback。"
+        }
+      ]
+    },
+    {
+      "file": "compute/providers/minimax.json",
+      "providerId": "provider-minimax-001",
+      "provider": "minimax",
+      "apiModelId": "speech-2.8-turbo",
+      "services": [
+        "tts"
+      ],
+      "apiFormat": "anthropic-messages",
+      "protocol": {
+        "state": "unsupported",
+        "reason": "missing-speech-profile-and-compatibility"
+      },
+      "minimumClientVersion": null,
+      "floorDecision": "没有实现/正式发布证据，不填猜测版本。候选展示保留，出站及自动路由禁止，适配验收后再解除。",
+      "confidence": "confirmed-source-dispatch",
+      "clientWorkspace": "/Users/wangyi/.codex/worktrees/catalog-contract-client/desirecore",
+      "evidence": [
+        {
+          "path": "packages/agent-service/src/speech/tts-adapter.ts",
+          "assertion": "recognize/synthesize通过resolveSpeechCompute解析model profile与adapter，非直接按Provider.apiFormat发送。"
+        },
+        {
+          "path": "packages/agent-service/src/speech/speech-resolver.ts",
+          "assertion": "resolveProfile仅显式modelOrigin/speech或兼容表；无profile且无兼容命中立即fail missing_model_profile。"
+        },
+        {
+          "path": "packages/speech-core/src/model-compatibility.ts",
+          "assertion": "逐精确ID匹配：tts-1/hd、whisper-1、mimo-v2.5tts/asr、cosyvoice-v2/v3前缀、fun-asr-realtime前缀；本行均未命中，无provider/local-whisper fallback。"
+        }
+      ]
+    },
+    {
+      "file": "compute/providers/minimax.json",
+      "providerId": "provider-minimax-001",
+      "provider": "minimax",
+      "apiModelId": "speech-2.6-hd",
+      "services": [
+        "tts"
+      ],
+      "apiFormat": "anthropic-messages",
+      "protocol": {
+        "state": "unsupported",
+        "reason": "missing-speech-profile-and-compatibility"
+      },
+      "minimumClientVersion": null,
+      "floorDecision": "没有实现/正式发布证据，不填猜测版本。候选展示保留，出站及自动路由禁止，适配验收后再解除。",
+      "confidence": "confirmed-source-dispatch",
+      "clientWorkspace": "/Users/wangyi/.codex/worktrees/catalog-contract-client/desirecore",
+      "evidence": [
+        {
+          "path": "packages/agent-service/src/speech/tts-adapter.ts",
+          "assertion": "recognize/synthesize通过resolveSpeechCompute解析model profile与adapter，非直接按Provider.apiFormat发送。"
+        },
+        {
+          "path": "packages/agent-service/src/speech/speech-resolver.ts",
+          "assertion": "resolveProfile仅显式modelOrigin/speech或兼容表；无profile且无兼容命中立即fail missing_model_profile。"
+        },
+        {
+          "path": "packages/speech-core/src/model-compatibility.ts",
+          "assertion": "逐精确ID匹配：tts-1/hd、whisper-1、mimo-v2.5tts/asr、cosyvoice-v2/v3前缀、fun-asr-realtime前缀；本行均未命中，无provider/local-whisper fallback。"
+        }
+      ]
+    },
+    {
+      "file": "compute/providers/minimax.json",
+      "providerId": "provider-minimax-001",
+      "provider": "minimax",
+      "apiModelId": "speech-2.6-turbo",
+      "services": [
+        "tts"
+      ],
+      "apiFormat": "anthropic-messages",
+      "protocol": {
+        "state": "unsupported",
+        "reason": "missing-speech-profile-and-compatibility"
+      },
+      "minimumClientVersion": null,
+      "floorDecision": "没有实现/正式发布证据，不填猜测版本。候选展示保留，出站及自动路由禁止，适配验收后再解除。",
+      "confidence": "confirmed-source-dispatch",
+      "clientWorkspace": "/Users/wangyi/.codex/worktrees/catalog-contract-client/desirecore",
+      "evidence": [
+        {
+          "path": "packages/agent-service/src/speech/tts-adapter.ts",
+          "assertion": "recognize/synthesize通过resolveSpeechCompute解析model profile与adapter，非直接按Provider.apiFormat发送。"
+        },
+        {
+          "path": "packages/agent-service/src/speech/speech-resolver.ts",
+          "assertion": "resolveProfile仅显式modelOrigin/speech或兼容表；无profile且无兼容命中立即fail missing_model_profile。"
+        },
+        {
+          "path": "packages/speech-core/src/model-compatibility.ts",
+          "assertion": "逐精确ID匹配：tts-1/hd、whisper-1、mimo-v2.5tts/asr、cosyvoice-v2/v3前缀、fun-asr-realtime前缀；本行均未命中，无provider/local-whisper fallback。"
+        }
+      ]
+    },
+    {
+      "file": "compute/providers/minimax.json",
+      "providerId": "provider-minimax-001",
+      "provider": "minimax",
+      "apiModelId": "speech-02-hd",
+      "services": [
+        "tts"
+      ],
+      "apiFormat": "anthropic-messages",
+      "protocol": {
+        "state": "unsupported",
+        "reason": "missing-speech-profile-and-compatibility"
+      },
+      "minimumClientVersion": null,
+      "floorDecision": "没有实现/正式发布证据，不填猜测版本。候选展示保留，出站及自动路由禁止，适配验收后再解除。",
+      "confidence": "confirmed-source-dispatch",
+      "clientWorkspace": "/Users/wangyi/.codex/worktrees/catalog-contract-client/desirecore",
+      "evidence": [
+        {
+          "path": "packages/agent-service/src/speech/tts-adapter.ts",
+          "assertion": "recognize/synthesize通过resolveSpeechCompute解析model profile与adapter，非直接按Provider.apiFormat发送。"
+        },
+        {
+          "path": "packages/agent-service/src/speech/speech-resolver.ts",
+          "assertion": "resolveProfile仅显式modelOrigin/speech或兼容表；无profile且无兼容命中立即fail missing_model_profile。"
+        },
+        {
+          "path": "packages/speech-core/src/model-compatibility.ts",
+          "assertion": "逐精确ID匹配：tts-1/hd、whisper-1、mimo-v2.5tts/asr、cosyvoice-v2/v3前缀、fun-asr-realtime前缀；本行均未命中，无provider/local-whisper fallback。"
+        }
+      ]
+    },
+    {
+      "file": "compute/providers/minimax.json",
+      "providerId": "provider-minimax-001",
+      "provider": "minimax",
+      "apiModelId": "speech-02-turbo",
+      "services": [
+        "tts"
+      ],
+      "apiFormat": "anthropic-messages",
+      "protocol": {
+        "state": "unsupported",
+        "reason": "missing-speech-profile-and-compatibility"
+      },
+      "minimumClientVersion": null,
+      "floorDecision": "没有实现/正式发布证据，不填猜测版本。候选展示保留，出站及自动路由禁止，适配验收后再解除。",
+      "confidence": "confirmed-source-dispatch",
+      "clientWorkspace": "/Users/wangyi/.codex/worktrees/catalog-contract-client/desirecore",
+      "evidence": [
+        {
+          "path": "packages/agent-service/src/speech/tts-adapter.ts",
+          "assertion": "recognize/synthesize通过resolveSpeechCompute解析model profile与adapter，非直接按Provider.apiFormat发送。"
+        },
+        {
+          "path": "packages/agent-service/src/speech/speech-resolver.ts",
+          "assertion": "resolveProfile仅显式modelOrigin/speech或兼容表；无profile且无兼容命中立即fail missing_model_profile。"
+        },
+        {
+          "path": "packages/speech-core/src/model-compatibility.ts",
+          "assertion": "逐精确ID匹配：tts-1/hd、whisper-1、mimo-v2.5tts/asr、cosyvoice-v2/v3前缀、fun-asr-realtime前缀；本行均未命中，无provider/local-whisper fallback。"
+        }
+      ]
+    },
+    {
+      "file": "compute/providers/openai.json",
+      "providerId": "provider-openai-001",
+      "provider": "openai",
+      "apiModelId": "gpt-image-2.5-sunburst",
+      "services": [
+        "image_gen"
+      ],
+      "apiFormat": "openai-completions",
+      "protocol": {
+        "state": "unsupported",
+        "reason": "no-registered-image_gen-provider-adapter"
+      },
+      "minimumClientVersion": null,
+      "floorDecision": "没有实现/正式发布证据，不填猜测版本。候选展示保留，出站及自动路由禁止，适配验收后再解除。",
+      "confidence": "confirmed-source-dispatch",
+      "clientWorkspace": "/Users/wangyi/.codex/worktrees/catalog-contract-client/desirecore",
+      "evidence": [
+        {
+          "path": "packages/agent-service/src/media/adapters/registry.ts",
+          "sha256": "1140465675400f18de1eda59f12406c4c798db71da13c5db204a3f2970165829",
+          "assertion": "getImageAdapter/getVideoAdapter仅返回对应provider slug的映射，无通用fallback；SUPPORTED列表由该映射的Object.keys生成。"
+        },
+        {
+          "path": "packages/agent-service/src/builtin-tools/generate-image.ts",
+          "assertion": "execute实际findProvider后以found.provider.provider取getAdapter；undefined立即return失败，不进入buildSubmit/proxy。"
+        }
+      ]
+    },
+    {
+      "file": "compute/providers/openai.json",
+      "providerId": "provider-openai-001",
+      "provider": "openai",
+      "apiModelId": "gpt-image-2.5-flare",
+      "services": [
+        "image_gen"
+      ],
+      "apiFormat": "openai-completions",
+      "protocol": {
+        "state": "unsupported",
+        "reason": "no-registered-image_gen-provider-adapter"
+      },
+      "minimumClientVersion": null,
+      "floorDecision": "没有实现/正式发布证据，不填猜测版本。候选展示保留，出站及自动路由禁止，适配验收后再解除。",
+      "confidence": "confirmed-source-dispatch",
+      "clientWorkspace": "/Users/wangyi/.codex/worktrees/catalog-contract-client/desirecore",
+      "evidence": [
+        {
+          "path": "packages/agent-service/src/media/adapters/registry.ts",
+          "sha256": "1140465675400f18de1eda59f12406c4c798db71da13c5db204a3f2970165829",
+          "assertion": "getImageAdapter/getVideoAdapter仅返回对应provider slug的映射，无通用fallback；SUPPORTED列表由该映射的Object.keys生成。"
+        },
+        {
+          "path": "packages/agent-service/src/builtin-tools/generate-image.ts",
+          "assertion": "execute实际findProvider后以found.provider.provider取getAdapter；undefined立即return失败，不进入buildSubmit/proxy。"
+        }
+      ]
+    },
+    {
+      "file": "compute/providers/openai.json",
+      "providerId": "provider-openai-001",
+      "provider": "openai",
+      "apiModelId": "gpt-image-2",
+      "services": [
+        "image_gen"
+      ],
+      "apiFormat": "openai-completions",
+      "protocol": {
+        "state": "unsupported",
+        "reason": "no-registered-image_gen-provider-adapter"
+      },
+      "minimumClientVersion": null,
+      "floorDecision": "没有实现/正式发布证据，不填猜测版本。候选展示保留，出站及自动路由禁止，适配验收后再解除。",
+      "confidence": "confirmed-source-dispatch",
+      "clientWorkspace": "/Users/wangyi/.codex/worktrees/catalog-contract-client/desirecore",
+      "evidence": [
+        {
+          "path": "packages/agent-service/src/media/adapters/registry.ts",
+          "sha256": "1140465675400f18de1eda59f12406c4c798db71da13c5db204a3f2970165829",
+          "assertion": "getImageAdapter/getVideoAdapter仅返回对应provider slug的映射，无通用fallback；SUPPORTED列表由该映射的Object.keys生成。"
+        },
+        {
+          "path": "packages/agent-service/src/builtin-tools/generate-image.ts",
+          "assertion": "execute实际findProvider后以found.provider.provider取getAdapter；undefined立即return失败，不进入buildSubmit/proxy。"
+        }
+      ]
+    },
+    {
+      "file": "compute/providers/openai.json",
+      "providerId": "provider-openai-001",
+      "provider": "openai",
+      "apiModelId": "gpt-realtime-2.1",
+      "services": [
+        "omni",
+        "realtime_voice"
+      ],
+      "apiFormat": "openai-completions",
+      "protocol": {
+        "state": "unsupported",
+        "reason": "no-model-specific-realtime-adapter"
+      },
+      "minimumClientVersion": null,
+      "floorDecision": "没有实现/正式发布证据，不填猜测版本。候选展示保留，出站及自动路由禁止，适配验收后再解除。",
+      "confidence": "confirmed-source-dispatch",
+      "clientWorkspace": "/Users/wangyi/.codex/worktrees/catalog-contract-client/desirecore",
+      "evidence": [
+        {
+          "path": "packages/speech-core/src/providers/index.ts",
+          "sha256": "f57b8fc13ac7465a5aca62610d555adbbc0078643a335568484e38f1610c0e1d",
+          "assertion": "createBuiltinSpeechAdapters只注册ASR/TTS；OpenAI均batch endpoint；无Realtime WebSocket/translation/session适配器。"
+        },
+        {
+          "path": "packages/speech-core/src/model-compatibility.ts",
+          "assertion": "兼容表OpenAI仅精确tts-1/tts-1-hd、whisper-1，Realtime3型号没有语音兼容profile。"
+        },
+        {
+          "path": "packages/agent-service/src/speech/speech-resolver.ts",
+          "assertion": "resolveProfile无显式有效speech身份时只调用兼容表；未命中fail missing_model_profile，不能以Provider.apiFormat泛化支持Realtime。"
+        }
+      ]
+    },
+    {
+      "file": "compute/providers/openai.json",
+      "providerId": "provider-openai-001",
+      "provider": "openai",
+      "apiModelId": "gpt-realtime-2.1-mini",
+      "services": [
+        "realtime_voice"
+      ],
+      "apiFormat": "openai-completions",
+      "protocol": {
+        "state": "unsupported",
+        "reason": "no-model-specific-realtime-adapter"
+      },
+      "minimumClientVersion": null,
+      "floorDecision": "没有实现/正式发布证据，不填猜测版本。候选展示保留，出站及自动路由禁止，适配验收后再解除。",
+      "confidence": "confirmed-source-dispatch",
+      "clientWorkspace": "/Users/wangyi/.codex/worktrees/catalog-contract-client/desirecore",
+      "evidence": [
+        {
+          "path": "packages/speech-core/src/providers/index.ts",
+          "sha256": "f57b8fc13ac7465a5aca62610d555adbbc0078643a335568484e38f1610c0e1d",
+          "assertion": "createBuiltinSpeechAdapters只注册ASR/TTS；OpenAI均batch endpoint；无Realtime WebSocket/translation/session适配器。"
+        },
+        {
+          "path": "packages/speech-core/src/model-compatibility.ts",
+          "assertion": "兼容表OpenAI仅精确tts-1/tts-1-hd、whisper-1，Realtime3型号没有语音兼容profile。"
+        },
+        {
+          "path": "packages/agent-service/src/speech/speech-resolver.ts",
+          "assertion": "resolveProfile无显式有效speech身份时只调用兼容表；未命中fail missing_model_profile，不能以Provider.apiFormat泛化支持Realtime。"
+        }
+      ]
+    },
+    {
+      "file": "compute/providers/openai.json",
+      "providerId": "provider-openai-001",
+      "provider": "openai",
+      "apiModelId": "gpt-realtime-translate",
+      "services": [
+        "simultaneous_interpret",
+        "translation"
+      ],
+      "apiFormat": "openai-completions",
+      "protocol": {
+        "state": "unsupported",
+        "reason": "no-model-specific-realtime-adapter"
+      },
+      "minimumClientVersion": null,
+      "floorDecision": "没有实现/正式发布证据，不填猜测版本。候选展示保留，出站及自动路由禁止，适配验收后再解除。",
+      "confidence": "confirmed-source-dispatch",
+      "clientWorkspace": "/Users/wangyi/.codex/worktrees/catalog-contract-client/desirecore",
+      "evidence": [
+        {
+          "path": "packages/speech-core/src/providers/index.ts",
+          "sha256": "f57b8fc13ac7465a5aca62610d555adbbc0078643a335568484e38f1610c0e1d",
+          "assertion": "createBuiltinSpeechAdapters只注册ASR/TTS；OpenAI均batch endpoint；无Realtime WebSocket/translation/session适配器。"
+        },
+        {
+          "path": "packages/speech-core/src/model-compatibility.ts",
+          "assertion": "兼容表OpenAI仅精确tts-1/tts-1-hd、whisper-1，Realtime3型号没有语音兼容profile。"
+        },
+        {
+          "path": "packages/agent-service/src/speech/speech-resolver.ts",
+          "assertion": "resolveProfile无显式有效speech身份时只调用兼容表；未命中fail missing_model_profile，不能以Provider.apiFormat泛化支持Realtime。"
+        }
+      ]
+    },
+    {
+      "file": "compute/providers/stability.json",
+      "providerId": "provider-stability-001",
+      "provider": "stability",
+      "apiModelId": "stable-diffusion-3.5-large",
+      "services": [
+        "image_gen"
+      ],
+      "apiFormat": "stability-rest-api",
+      "protocol": {
+        "state": "unsupported",
+        "reason": "no-registered-image_gen-provider-adapter"
+      },
+      "minimumClientVersion": null,
+      "floorDecision": "没有实现/正式发布证据，不填猜测版本。候选展示保留，出站及自动路由禁止，适配验收后再解除。",
+      "confidence": "confirmed-source-dispatch",
+      "clientWorkspace": "/Users/wangyi/.codex/worktrees/catalog-contract-client/desirecore",
+      "evidence": [
+        {
+          "path": "packages/agent-service/src/media/adapters/registry.ts",
+          "sha256": "1140465675400f18de1eda59f12406c4c798db71da13c5db204a3f2970165829",
+          "assertion": "getImageAdapter/getVideoAdapter仅返回对应provider slug的映射，无通用fallback；SUPPORTED列表由该映射的Object.keys生成。"
+        },
+        {
+          "path": "packages/agent-service/src/builtin-tools/generate-image.ts",
+          "assertion": "execute实际findProvider后以found.provider.provider取getAdapter；undefined立即return失败，不进入buildSubmit/proxy。"
+        }
+      ]
+    },
+    {
+      "file": "compute/providers/xiaomi.json",
+      "providerId": "provider-xiaomi-001",
+      "provider": "xiaomi",
+      "apiModelId": "mimo-v2.5-tts-voicedesign",
+      "services": [
+        "tts"
+      ],
+      "apiFormat": "openai-completions",
+      "protocol": {
+        "state": "unsupported",
+        "reason": "missing-speech-profile-and-compatibility"
+      },
+      "minimumClientVersion": null,
+      "floorDecision": "没有实现/正式发布证据，不填猜测版本。候选展示保留，出站及自动路由禁止，适配验收后再解除。",
+      "confidence": "confirmed-source-dispatch",
+      "clientWorkspace": "/Users/wangyi/.codex/worktrees/catalog-contract-client/desirecore",
+      "evidence": [
+        {
+          "path": "packages/agent-service/src/speech/tts-adapter.ts",
+          "assertion": "recognize/synthesize通过resolveSpeechCompute解析model profile与adapter，非直接按Provider.apiFormat发送。"
+        },
+        {
+          "path": "packages/agent-service/src/speech/speech-resolver.ts",
+          "assertion": "resolveProfile仅显式modelOrigin/speech或兼容表；无profile且无兼容命中立即fail missing_model_profile。"
+        },
+        {
+          "path": "packages/speech-core/src/model-compatibility.ts",
+          "assertion": "逐精确ID匹配：tts-1/hd、whisper-1、mimo-v2.5tts/asr、cosyvoice-v2/v3前缀、fun-asr-realtime前缀；本行均未命中，无provider/local-whisper fallback。"
+        }
+      ]
+    },
+    {
+      "file": "compute/providers/xiaomi.json",
+      "providerId": "provider-xiaomi-001",
+      "provider": "xiaomi",
+      "apiModelId": "mimo-v2.5-tts-voiceclone",
+      "services": [
+        "tts"
+      ],
+      "apiFormat": "openai-completions",
+      "protocol": {
+        "state": "unsupported",
+        "reason": "missing-speech-profile-and-compatibility"
+      },
+      "minimumClientVersion": null,
+      "floorDecision": "没有实现/正式发布证据，不填猜测版本。候选展示保留，出站及自动路由禁止，适配验收后再解除。",
+      "confidence": "confirmed-source-dispatch",
+      "clientWorkspace": "/Users/wangyi/.codex/worktrees/catalog-contract-client/desirecore",
+      "evidence": [
+        {
+          "path": "packages/agent-service/src/speech/tts-adapter.ts",
+          "assertion": "recognize/synthesize通过resolveSpeechCompute解析model profile与adapter，非直接按Provider.apiFormat发送。"
+        },
+        {
+          "path": "packages/agent-service/src/speech/speech-resolver.ts",
+          "assertion": "resolveProfile仅显式modelOrigin/speech或兼容表；无profile且无兼容命中立即fail missing_model_profile。"
+        },
+        {
+          "path": "packages/speech-core/src/model-compatibility.ts",
+          "assertion": "逐精确ID匹配：tts-1/hd、whisper-1、mimo-v2.5tts/asr、cosyvoice-v2/v3前缀、fun-asr-realtime前缀；本行均未命中，无provider/local-whisper fallback。"
+        }
+      ]
+    },
+    {
+      "file": "compute/coding-plans/dashscope-token-plan.json",
+      "providerId": "provider-dashscope-token-plan-001",
+      "provider": "dashscope",
+      "apiModelId": "wan2.7-image-pro",
+      "services": [
+        "image_gen"
+      ],
+      "apiFormat": "openai-completions",
+      "protocol": {
+        "state": "unsupported",
+        "reason": "no-registered-image_gen-provider-adapter"
+      },
+      "minimumClientVersion": null,
+      "floorDecision": "没有实现/正式发布证据，不填猜测版本。候选展示保留，出站及自动路由禁止，适配验收后再解除。",
+      "confidence": "confirmed-source-dispatch",
+      "clientWorkspace": "/Users/wangyi/.codex/worktrees/catalog-contract-client/desirecore",
+      "evidence": [
+        {
+          "path": "packages/agent-service/src/media/adapters/registry.ts",
+          "sha256": "1140465675400f18de1eda59f12406c4c798db71da13c5db204a3f2970165829",
+          "assertion": "getImageAdapter/getVideoAdapter仅返回对应provider slug的映射，无通用fallback；SUPPORTED列表由该映射的Object.keys生成。"
+        },
+        {
+          "path": "packages/agent-service/src/builtin-tools/generate-image.ts",
+          "assertion": "execute实际findProvider后以found.provider.provider取getAdapter；undefined立即return失败，不进入buildSubmit/proxy。"
+        }
+      ]
+    },
+    {
+      "file": "compute/coding-plans/dashscope-token-plan.json",
+      "providerId": "provider-dashscope-token-plan-001",
+      "provider": "dashscope",
+      "apiModelId": "wan2.7-image",
+      "services": [
+        "image_gen"
+      ],
+      "apiFormat": "openai-completions",
+      "protocol": {
+        "state": "unsupported",
+        "reason": "no-registered-image_gen-provider-adapter"
+      },
+      "minimumClientVersion": null,
+      "floorDecision": "没有实现/正式发布证据，不填猜测版本。候选展示保留，出站及自动路由禁止，适配验收后再解除。",
+      "confidence": "confirmed-source-dispatch",
+      "clientWorkspace": "/Users/wangyi/.codex/worktrees/catalog-contract-client/desirecore",
+      "evidence": [
+        {
+          "path": "packages/agent-service/src/media/adapters/registry.ts",
+          "sha256": "1140465675400f18de1eda59f12406c4c798db71da13c5db204a3f2970165829",
+          "assertion": "getImageAdapter/getVideoAdapter仅返回对应provider slug的映射，无通用fallback；SUPPORTED列表由该映射的Object.keys生成。"
+        },
+        {
+          "path": "packages/agent-service/src/builtin-tools/generate-image.ts",
+          "assertion": "execute实际findProvider后以found.provider.provider取getAdapter；undefined立即return失败，不进入buildSubmit/proxy。"
+        }
+      ]
+    },
+    {
+      "file": "compute/coding-plans/dashscope-token-plan.json",
+      "providerId": "provider-dashscope-token-plan-001",
+      "provider": "dashscope",
+      "apiModelId": "qwen-image-3.0-pro",
+      "services": [
+        "image_gen"
+      ],
+      "apiFormat": "openai-completions",
+      "protocol": {
+        "state": "unsupported",
+        "reason": "no-registered-image_gen-provider-adapter"
+      },
+      "minimumClientVersion": null,
+      "floorDecision": "没有实现/正式发布证据，不填猜测版本。候选展示保留，出站及自动路由禁止，适配验收后再解除。",
+      "confidence": "confirmed-source-dispatch",
+      "clientWorkspace": "/Users/wangyi/.codex/worktrees/catalog-contract-client/desirecore",
+      "evidence": [
+        {
+          "path": "packages/agent-service/src/media/adapters/registry.ts",
+          "sha256": "1140465675400f18de1eda59f12406c4c798db71da13c5db204a3f2970165829",
+          "assertion": "getImageAdapter/getVideoAdapter仅返回对应provider slug的映射，无通用fallback；SUPPORTED列表由该映射的Object.keys生成。"
+        },
+        {
+          "path": "packages/agent-service/src/builtin-tools/generate-image.ts",
+          "assertion": "execute实际findProvider后以found.provider.provider取getAdapter；undefined立即return失败，不进入buildSubmit/proxy。"
+        }
+      ]
+    },
+    {
+      "file": "compute/coding-plans/minimax-coding.json",
+      "providerId": "provider-minimax-coding-001",
+      "provider": "minimax",
+      "apiModelId": "speech-2.8-hd",
+      "services": [
+        "tts"
+      ],
+      "apiFormat": "anthropic-messages",
+      "protocol": {
+        "state": "unsupported",
+        "reason": "missing-speech-profile-and-compatibility"
+      },
+      "minimumClientVersion": null,
+      "floorDecision": "没有实现/正式发布证据，不填猜测版本。候选展示保留，出站及自动路由禁止，适配验收后再解除。",
+      "confidence": "confirmed-source-dispatch",
+      "clientWorkspace": "/Users/wangyi/.codex/worktrees/catalog-contract-client/desirecore",
+      "evidence": [
+        {
+          "path": "packages/agent-service/src/speech/tts-adapter.ts",
+          "assertion": "recognize/synthesize通过resolveSpeechCompute解析model profile与adapter，非直接按Provider.apiFormat发送。"
+        },
+        {
+          "path": "packages/agent-service/src/speech/speech-resolver.ts",
+          "assertion": "resolveProfile仅显式modelOrigin/speech或兼容表；无profile且无兼容命中立即fail missing_model_profile。"
+        },
+        {
+          "path": "packages/speech-core/src/model-compatibility.ts",
+          "assertion": "逐精确ID匹配：tts-1/hd、whisper-1、mimo-v2.5tts/asr、cosyvoice-v2/v3前缀、fun-asr-realtime前缀；本行均未命中，无provider/local-whisper fallback。"
+        }
+      ]
+    },
+    {
+      "file": "compute/coding-plans/minimax-coding.json",
+      "providerId": "provider-minimax-coding-001",
+      "provider": "minimax",
+      "apiModelId": "speech-2.8-turbo",
+      "services": [
+        "tts"
+      ],
+      "apiFormat": "anthropic-messages",
+      "protocol": {
+        "state": "unsupported",
+        "reason": "missing-speech-profile-and-compatibility"
+      },
+      "minimumClientVersion": null,
+      "floorDecision": "没有实现/正式发布证据，不填猜测版本。候选展示保留，出站及自动路由禁止，适配验收后再解除。",
+      "confidence": "confirmed-source-dispatch",
+      "clientWorkspace": "/Users/wangyi/.codex/worktrees/catalog-contract-client/desirecore",
+      "evidence": [
+        {
+          "path": "packages/agent-service/src/speech/tts-adapter.ts",
+          "assertion": "recognize/synthesize通过resolveSpeechCompute解析model profile与adapter，非直接按Provider.apiFormat发送。"
+        },
+        {
+          "path": "packages/agent-service/src/speech/speech-resolver.ts",
+          "assertion": "resolveProfile仅显式modelOrigin/speech或兼容表；无profile且无兼容命中立即fail missing_model_profile。"
+        },
+        {
+          "path": "packages/speech-core/src/model-compatibility.ts",
+          "assertion": "逐精确ID匹配：tts-1/hd、whisper-1、mimo-v2.5tts/asr、cosyvoice-v2/v3前缀、fun-asr-realtime前缀；本行均未命中，无provider/local-whisper fallback。"
+        }
+      ]
+    }
+  ]
+}

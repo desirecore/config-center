@@ -1,0 +1,50 @@
+{
+  "description": "Stability AI 图像生成系列模型规格。参数来源：config-center compute/providers/stability.json。无上下文窗口（图像生成模型）。",
+  "specs": [
+    {
+      "displayName": "Stable Audio 3.0",
+      "family": "stable-audio-3.0",
+      "match": {
+        "exact": [
+          "stable-audio-3.0"
+        ]
+      },
+      "id": "stable-audio-3.0",
+      "spec": {
+        "capabilities": [
+          "music_generation",
+          "audio_generation"
+        ],
+        "serviceType": [
+          "music_gen"
+        ],
+        "releasedAt": "2026-05-20",
+        "description": "Stable Audio 3.0，通过原生 /v2beta/audio/stable-audio API 提供，不使用 Stability 图像协议"
+      }
+    },
+    {
+      "displayName": "Stable Diffusion 3.5 Large",
+      "family": "stable-diffusion-3",
+      "match": {
+        "exact": [
+          "stable-diffusion-3.5-large"
+        ],
+        "patterns": [
+          "stable-diffusion-3.5*"
+        ]
+      },
+      "id": "stable-diffusion-3.5-large",
+      "spec": {
+        "capabilities": [
+          "image_generation",
+          "high_quality",
+          "controllable"
+        ],
+        "serviceType": [
+          "image_gen"
+        ],
+        "description": "Stability AI 旗舰文生图模型，支持多种分辨率和风格"
+      }
+    }
+  ]
+}

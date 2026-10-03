@@ -1,0 +1,255 @@
+{
+  "description": "Moonshot Kimi 系列模型规格。参数来源：config-center compute/providers/moonshot.json。注意 kimi-k2 存在多个子版本（k2.5/k2.6/k2-thinking），故 kimi-k2 仅用 exact 主键匹配，不用宽 pattern。",
+  "specs": [
+    {
+      "displayName": "Kimi K3",
+      "family": "kimi-k3",
+      "match": {
+        "exact": [
+          "kimi-k3",
+          "moonshotai/kimi-k3"
+        ]
+      },
+      "id": "kimi-k3",
+      "spec": {
+        "contextWindow": 1048576,
+        "maxOutputTokens": 1048576,
+        "capabilities": [
+          "chat",
+          "reasoning",
+          "code",
+          "tool_use",
+          "agent",
+          "long_context",
+          "vision",
+          "video_understanding"
+        ],
+        "serviceType": [
+          "reasoning"
+        ],
+        "supportsReasoning": true,
+        "description": "Kimi K3，1M 上下文，始终开启思考，low/high/max 三档（默认 max）；输出上限与输入共享窗口，默认 max_completion_tokens=131072",
+        "extra": {
+          "thinkingOnly": true,
+          "samplingParametersDeprecated": true
+        }
+      },
+      "routing": {
+        "tier": "flagship",
+        "routingPriority": 35,
+        "eligibleForAgent": true,
+        "defaultReference": false,
+        "reasoning": {
+          "supportedModes": [
+            "auto",
+            "low",
+            "high",
+            "max"
+          ],
+          "defaultMode": "max"
+        }
+      }
+    },
+    {
+      "displayName": "Kimi K2.7 Code",
+      "family": "kimi-k2.7",
+      "match": {
+        "exact": [
+          "kimi-k2.7-code"
+        ],
+        "patterns": [
+          "kimi-k2.7-code*"
+        ]
+      },
+      "id": "kimi-k2.7-code",
+      "spec": {
+        "contextWindow": 262144,
+        "maxOutputTokens": 16384,
+        "capabilities": [
+          "chat",
+          "code",
+          "vision",
+          "tool_use"
+        ],
+        "serviceType": [
+          "chat"
+        ],
+        "defaultTemperature": 1,
+        "supportsReasoning": true,
+        "description": "Moonshot Kimi K2.7 Code 编程专用模型"
+      },
+      "routing": {
+        "tier": "balanced",
+        "routingPriority": 50,
+        "eligibleForAgent": true,
+        "defaultReference": false,
+        "reasoning": {
+          "supportedModes": [
+            "auto"
+          ],
+          "defaultMode": "auto"
+        }
+      }
+    },
+    {
+      "displayName": "Kimi K2.6",
+      "family": "kimi-k2.6",
+      "id": "kimi-k2.6",
+      "spec": {
+        "contextWindow": 262144,
+        "maxOutputTokens": 16384,
+        "capabilities": [
+          "chat",
+          "reasoning",
+          "code",
+          "tool_use",
+          "agent",
+          "long_context",
+          "vision"
+        ],
+        "serviceType": [
+          "chat"
+        ],
+        "defaultTemperature": 1,
+        "supportsReasoning": true
+      },
+      "routing": {
+        "tier": "balanced",
+        "routingPriority": 45,
+        "eligibleForAgent": true,
+        "defaultReference": false,
+        "reasoning": {
+          "supportedModes": [
+            "auto",
+            "off",
+            "minimal",
+            "low",
+            "medium",
+            "high",
+            "xhigh"
+          ],
+          "defaultMode": "medium"
+        }
+      }
+    },
+    {
+      "displayName": "Kimi K2.5",
+      "family": "kimi-k2.5",
+      "id": "kimi-k2.5",
+      "spec": {
+        "contextWindow": 256000,
+        "maxOutputTokens": 32768,
+        "capabilities": [
+          "chat",
+          "reasoning",
+          "code",
+          "tool_use",
+          "agent",
+          "long_context",
+          "vision"
+        ],
+        "serviceType": [
+          "chat"
+        ],
+        "defaultTemperature": 1,
+        "supportsReasoning": true
+      }
+    },
+    {
+      "displayName": "Kimi K2 Thinking",
+      "family": "kimi-k2-thinking",
+      "id": "kimi-k2-thinking",
+      "spec": {
+        "contextWindow": 256000,
+        "maxOutputTokens": 16384,
+        "capabilities": [
+          "reasoning",
+          "math",
+          "code",
+          "deep_thinking",
+          "long_context"
+        ],
+        "serviceType": [
+          "reasoning"
+        ],
+        "defaultTemperature": 1,
+        "supportsReasoning": true
+      }
+    },
+    {
+      "displayName": "Kimi K2",
+      "family": "kimi-k2",
+      "id": "kimi-k2",
+      "spec": {
+        "contextWindow": 256000,
+        "maxOutputTokens": 8192,
+        "capabilities": [
+          "chat",
+          "reasoning",
+          "code",
+          "tool_use",
+          "agent",
+          "long_context"
+        ],
+        "serviceType": [
+          "chat"
+        ],
+        "defaultTemperature": 0.6,
+        "supportsReasoning": true
+      }
+    },
+    {
+      "displayName": "Moonshot v1 8K",
+      "family": "moonshot-v1",
+      "id": "moonshot-v1-8k",
+      "spec": {
+        "contextWindow": 8192,
+        "maxOutputTokens": 4096,
+        "capabilities": [
+          "chat",
+          "code"
+        ],
+        "serviceType": [
+          "chat"
+        ],
+        "defaultTemperature": 0
+      }
+    },
+    {
+      "displayName": "Moonshot v1 32K",
+      "family": "moonshot-v1",
+      "id": "moonshot-v1-32k",
+      "spec": {
+        "contextWindow": 32768,
+        "maxOutputTokens": 4096,
+        "capabilities": [
+          "chat",
+          "code",
+          "long_context"
+        ],
+        "serviceType": [
+          "chat"
+        ],
+        "defaultTemperature": 0
+      }
+    },
+    {
+      "displayName": "Moonshot v1 128K",
+      "family": "moonshot-v1",
+      "id": "moonshot-v1-128k",
+      "spec": {
+        "contextWindow": 131072,
+        "maxOutputTokens": 4096,
+        "capabilities": [
+          "chat",
+          "code",
+          "long_context"
+        ],
+        "serviceType": [
+          "chat"
+        ],
+        "defaultTemperature": 0
+      }
+    }
+  ]
+}

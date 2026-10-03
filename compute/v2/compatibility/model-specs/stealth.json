@@ -1,0 +1,46 @@
+{
+  "description": "Stealth 系列模型规格。参数来源：OpenRouter Models API。这些是厂商匿名发布的临时别名，揭晓后用 spec.extra.modelOrigin 标注真身，条目本身保留——云端算力可能仍以旧别名下发该模型。",
+  "specs": [
+    {
+      "displayName": "Ox Alpha (Historical)",
+      "family": "ox-alpha",
+      "match": {
+        "exact": [
+          "ox-alpha",
+          "stealth/ox-alpha"
+        ]
+      },
+      "id": "ox-alpha",
+      "spec": {
+        "contextWindow": 1048576,
+        "maxOutputTokens": 131072,
+        "capabilities": [
+          "chat",
+          "reasoning",
+          "deep_thinking",
+          "code",
+          "tool_use",
+          "agent",
+          "long_context",
+          "vision",
+          "image_understanding",
+          "video_understanding"
+        ],
+        "serviceType": [
+          "chat",
+          "reasoning",
+          "vision"
+        ],
+        "defaultTemperature": 1,
+        "defaultTopP": 0.95,
+        "supportsReasoning": true,
+        "description": "Ox Alpha 历史匿名模型兼容记录；当前官方目录未列出。旧记录曾关联 GLM-5.3-Flash，但本轮未取得官方身份揭示证据，不下发未证实的原厂身份映射；历史参数不代表当前可用性",
+        "extra": {
+          "thinkingDefault": true,
+          "thinkingOnly": true
+        },
+        "releasedAt": "2026-08-21"
+      }
+    }
+  ]
+}

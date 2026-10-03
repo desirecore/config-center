@@ -56,7 +56,9 @@
 
 ## 修改与来源记录规则
 
-- 数据主文件仍是 `compute/**` JSON。共享规格不包含价格；接入面推理 effort、回放能力不能混入共享规格；官网没有支持的新字段先查客户端和 frozen schema。
+- 模型目录唯一作者数据是 `catalog/v2/catalog.json`，退役注册在 `catalog/v2/retirements.json`；`compute/v2/**` 以及根 `compute/providers`、`compute/coding-plans`、`compute/model-specs` 的模型正文由 `npm run catalog:compile` 生成，禁止手工双写。索引、service-map、pricing 等非投影文件仍分别维护。共享规格不包含价格；接入面推理 effort、回放能力不能混入共享规格；官网没有支持的新字段先查客户端和 frozen schema。
+- 每次目录更新先检查 `FIELD-DECISIONS`、`SPEC-DECISIONS` 和 `ADAPTER-DECISIONS`，精确绑定或显式例外必须保留。未知事实维持 unknown；未适配协议保持禁止调用，不能用将来的版本号替代缺失适配器。生成后运行 `npm run catalog:check`，核对根 V1 投影保真及 340 条实际解析对照。
+- 候选目录 `publication.state=candidate` 不启用 V2。切换 `published` 前，必须检查正式客户端 tag、合入代码和发布产物，填写真实 `requiredClientVersion`；只完成代码合并或构建不能作为已经正式发布的证据。
 - 来源使用细分目录：`docs/model-sources/providers/<supplier>/SOURCES.md` 保存官网证据；`models/<model-id>.md` 每个模型独立记录；`access/<category>--<config-id>.md` 每个接入面独立记录；README 只保留导航。
 - 一个模型在原厂、订阅、套餐和聚合平台上的差异分段记录，不合并价格/窗口/可用性。同名不等于同一接入合同；文件名规范见维护指南。
 - 基于已有文件增量编辑，保留既有证据、日期、待核实项和历史说明。批量迁移目录只能迁移记录，不能凭迁移提高核验状态或刷新核验日期。

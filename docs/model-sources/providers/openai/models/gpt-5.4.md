@@ -140,7 +140,7 @@
 
 | 模型 ID | 上下文 / 输出 | 计价 | 已核字段→来源 | 来源入口 | 状态 | 数据指纹 |
 | --- | --- | --- | --- | --- | --- | --- |
-| `gpt-5.4` | 1050000 / 128000 | 非计价主数据 | `id`→[gpt-5-4-api](../SOURCES.md#gpt-5-4-api)；`spec.contextWindow`→[gpt-5-4-api](../SOURCES.md#gpt-5-4-api)；`spec.maxOutputTokens`→[gpt-5-4-api](../SOURCES.md#gpt-5-4-api) | [gpt-5-4-api](../SOURCES.md#gpt-5-4-api) | partial | `0d0981e9f7c721fe920d732cd24fb349a81e9ef4ffec5d1c809c9bf315e09fa5` |
+| `gpt-5.4` | 1050000 / 128000 | 非计价主数据 | `id`→[gpt-5-4-api](../SOURCES.md#gpt-5-4-api)；`spec.contextWindow`→[gpt-5-4-api](../SOURCES.md#gpt-5-4-api)；`spec.maxOutputTokens`→[gpt-5-4-api](../SOURCES.md#gpt-5-4-api) | [gpt-5-4-api](../SOURCES.md#gpt-5-4-api) | partial | `cd59f54965cdd4dd1a82ca3045c38f8d9e97e6ccc20d81ba71454dfec7cab9ac` |
 
 本轮读取该模型官方明文规格页，确认原厂直连窗口、输出、标准价格与推理合同。Pro 仅限 Responses；GPT-5.4 Pro 官方默认 medium，修正旧 high。none 在产品层映射 off，schema 不接受将 none 写成 defaultEffort，故未伪造其他显式默认档。
 

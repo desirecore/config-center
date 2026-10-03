@@ -1,0 +1,419 @@
+{
+  "description": "Anthropic Claude 系列模型规格。参数来源：config-center compute/providers/anthropic.json。",
+  "specs": [
+    {
+      "displayName": "Claude Opus 5.5",
+      "family": "claude-opus-5-5",
+      "match": {
+        "exact": [
+          "claude-opus-5-5",
+          "anthropic/claude-opus-5.5"
+        ]
+      },
+      "id": "claude-opus-5-5",
+      "spec": {
+        "contextWindow": 1000000,
+        "maxOutputTokens": 128000,
+        "capabilities": [
+          "chat",
+          "reasoning",
+          "code",
+          "vision",
+          "tool_use",
+          "long_context"
+        ],
+        "serviceType": [
+          "chat"
+        ],
+        "supportsReasoning": true,
+        "description": "Claude Opus 5.5，始终开启自适应思考，默认 medium effort",
+        "extra": {
+          "adaptiveThinking": true,
+          "thinkingOnly": true,
+          "samplingParametersDeprecated": true,
+          "forcedToolChoiceUnsupported": true
+        },
+        "releasedAt": "2026-09-22"
+      },
+      "routing": {
+        "tier": "flagship",
+        "routingPriority": 22,
+        "eligibleForAgent": true,
+        "defaultReference": false,
+        "reasoning": {
+          "supportedModes": [
+            "auto",
+            "low",
+            "medium",
+            "high",
+            "xhigh",
+            "max"
+          ],
+          "defaultMode": "medium"
+        }
+      }
+    },
+    {
+      "displayName": "Claude Fable 5.1",
+      "family": "claude-fable",
+      "match": {
+        "exact": [
+          "claude-fable-5-1"
+        ],
+        "patterns": [
+          "claude-fable-5-1*"
+        ]
+      },
+      "id": "claude-fable-5-1",
+      "spec": {
+        "contextWindow": 1000000,
+        "maxOutputTokens": 128000,
+        "capabilities": [
+          "chat",
+          "reasoning",
+          "deep_thinking",
+          "code",
+          "vision",
+          "tool_use",
+          "long_context"
+        ],
+        "serviceType": [
+          "chat"
+        ],
+        "supportsReasoning": true,
+        "description": "Claude Fable 5.1，面向高难推理和长程智能体任务，始终开启自适应思考",
+        "extra": {
+          "adaptiveThinking": true,
+          "thinkingOnly": true,
+          "samplingParametersDeprecated": true,
+          "forcedToolChoiceUnsupported": true
+        }
+      },
+      "routing": {
+        "tier": "flagship",
+        "routingPriority": 20,
+        "eligibleForAgent": true,
+        "defaultReference": false,
+        "reasoning": {
+          "supportedModes": [
+            "auto",
+            "low",
+            "medium",
+            "high",
+            "xhigh",
+            "max"
+          ],
+          "defaultMode": "high"
+        }
+      }
+    },
+    {
+      "displayName": "Claude Opus 5",
+      "family": "claude-opus-5",
+      "match": {
+        "exact": [
+          "claude-opus-5"
+        ]
+      },
+      "id": "claude-opus-5",
+      "spec": {
+        "contextWindow": 1000000,
+        "maxOutputTokens": 128000,
+        "capabilities": [
+          "chat",
+          "reasoning",
+          "code",
+          "vision",
+          "tool_use",
+          "long_context"
+        ],
+        "serviceType": [
+          "chat"
+        ],
+        "supportsReasoning": true,
+        "description": "Claude Opus 5，Anthropic Opus 系列当前旗舰；思考默认开启，effort 支持到 max",
+        "extra": {
+          "adaptiveThinking": true,
+          "samplingParametersDeprecated": true
+        }
+      },
+      "routing": {
+        "tier": "flagship",
+        "routingPriority": 25,
+        "eligibleForAgent": true,
+        "defaultReference": false,
+        "reasoning": {
+          "supportedModes": [
+            "auto",
+            "low",
+            "medium",
+            "high",
+            "xhigh",
+            "max"
+          ],
+          "defaultMode": "xhigh"
+        }
+      }
+    },
+    {
+      "displayName": "Claude Opus 4.8",
+      "family": "claude-opus-4-8",
+      "match": {
+        "patterns": [
+          "claude-opus-4-8*"
+        ]
+      },
+      "id": "claude-opus-4-8",
+      "spec": {
+        "contextWindow": 1000000,
+        "maxOutputTokens": 128000,
+        "capabilities": [
+          "chat",
+          "reasoning",
+          "code",
+          "vision",
+          "tool_use",
+          "long_context"
+        ],
+        "serviceType": [
+          "chat"
+        ],
+        "supportsReasoning": true,
+        "description": "Claude Opus 4.8，Anthropic Opus 系列最新旗舰",
+        "extra": {
+          "adaptiveThinking": true,
+          "samplingParametersDeprecated": true
+        }
+      }
+    },
+    {
+      "displayName": "Claude Opus 4.7",
+      "family": "claude-opus-4-7",
+      "match": {
+        "patterns": [
+          "claude-opus-4-7*"
+        ]
+      },
+      "id": "claude-opus-4-7",
+      "spec": {
+        "contextWindow": 1000000,
+        "maxOutputTokens": 128000,
+        "capabilities": [
+          "chat",
+          "reasoning",
+          "code",
+          "vision",
+          "tool_use"
+        ],
+        "serviceType": [
+          "chat"
+        ],
+        "defaultTemperature": null,
+        "supportsReasoning": true,
+        "description": "Anthropic 当前最强通用模型，适合复杂推理和智能体编码任务",
+        "extra": {
+          "adaptiveThinking": true,
+          "samplingParametersDeprecated": true
+        }
+      }
+    },
+    {
+      "family": "claude-opus",
+      "id": "claude-opus",
+      "spec": {
+        "contextWindow": 1000000,
+        "maxOutputTokens": 128000,
+        "capabilities": [
+          "chat",
+          "reasoning",
+          "code",
+          "vision",
+          "tool_use",
+          "long_context"
+        ],
+        "serviceType": [
+          "chat"
+        ],
+        "supportsReasoning": true
+      }
+    },
+    {
+      "displayName": "Claude Sonnet 5.5",
+      "family": "claude-sonnet-5-5",
+      "match": {
+        "exact": [
+          "claude-sonnet-5-5",
+          "anthropic/claude-sonnet-5.5"
+        ]
+      },
+      "id": "claude-sonnet-5-5",
+      "spec": {
+        "contextWindow": 1000000,
+        "maxOutputTokens": 128000,
+        "capabilities": [
+          "chat",
+          "reasoning",
+          "code",
+          "vision",
+          "tool_use",
+          "computer_use",
+          "long_context"
+        ],
+        "serviceType": [
+          "chat"
+        ],
+        "supportsReasoning": true,
+        "description": "Claude Sonnet 5.5，速度与智能平衡，默认 high effort，自适应思考",
+        "extra": {
+          "adaptiveThinking": true,
+          "samplingParametersDeprecated": true,
+          "forcedToolChoiceUnsupported": true
+        },
+        "releasedAt": "2026-09-28"
+      },
+      "routing": {
+        "tier": "balanced",
+        "routingPriority": 18,
+        "eligibleForAgent": true,
+        "defaultReference": false,
+        "reasoning": {
+          "supportedModes": [
+            "auto",
+            "low",
+            "medium",
+            "high",
+            "xhigh",
+            "max"
+          ],
+          "defaultMode": "high"
+        }
+      }
+    },
+    {
+      "displayName": "Claude Sonnet 5",
+      "family": "claude-sonnet-5",
+      "match": {
+        "patterns": [
+          "claude-sonnet-5*"
+        ]
+      },
+      "id": "claude-sonnet-5",
+      "spec": {
+        "contextWindow": 1000000,
+        "maxOutputTokens": 128000,
+        "capabilities": [
+          "chat",
+          "reasoning",
+          "code",
+          "vision",
+          "tool_use",
+          "computer_use",
+          "long_context"
+        ],
+        "serviceType": [
+          "chat"
+        ],
+        "supportsReasoning": true,
+        "description": "Claude Sonnet 5，速度与智能平衡；思考默认开启，effort 支持到 max",
+        "extra": {
+          "adaptiveThinking": true,
+          "samplingParametersDeprecated": true
+        }
+      },
+      "routing": {
+        "tier": "balanced",
+        "routingPriority": 20,
+        "eligibleForAgent": true,
+        "defaultReference": false,
+        "reasoning": {
+          "supportedModes": [
+            "auto",
+            "low",
+            "medium",
+            "high",
+            "xhigh",
+            "max"
+          ],
+          "defaultMode": "xhigh"
+        }
+      }
+    },
+    {
+      "displayName": "Claude Sonnet 4.6",
+      "family": "claude-sonnet-4-6",
+      "match": {
+        "patterns": [
+          "claude-sonnet-4-6*"
+        ]
+      },
+      "id": "claude-sonnet-4-6",
+      "spec": {
+        "contextWindow": 1000000,
+        "maxOutputTokens": 64000,
+        "capabilities": [
+          "chat",
+          "reasoning",
+          "code",
+          "vision",
+          "tool_use",
+          "computer_use"
+        ],
+        "serviceType": [
+          "chat",
+          "computer_use"
+        ],
+        "defaultTemperature": 1,
+        "supportsReasoning": true,
+        "description": "Anthropic 高智能高速度模型，适合编码、工具使用和智能体任务"
+      }
+    },
+    {
+      "displayName": "Claude Sonnet 4.5",
+      "family": "claude-sonnet-4-5",
+      "match": {
+        "patterns": [
+          "claude-sonnet-4-5*"
+        ]
+      },
+      "id": "claude-sonnet-4-5",
+      "spec": {
+        "contextWindow": 1000000,
+        "maxOutputTokens": 64000,
+        "capabilities": [
+          "chat",
+          "reasoning",
+          "code",
+          "vision",
+          "tool_use"
+        ],
+        "serviceType": [
+          "chat"
+        ],
+        "defaultTemperature": 1,
+        "supportsReasoning": true,
+        "description": "Anthropic 主力模型，长文本与代码任务表现优异"
+      }
+    },
+    {
+      "family": "claude-sonnet",
+      "id": "claude-sonnet",
+      "spec": {
+        "contextWindow": 1000000,
+        "maxOutputTokens": 128000,
+        "capabilities": [
+          "chat",
+          "reasoning",
+          "code",
+          "vision",
+          "tool_use",
+          "computer_use",
+          "long_context"
+        ],
+        "serviceType": [
+          "chat"
+        ],
+        "supportsReasoning": true
+      }
+    }
+  ]
+}

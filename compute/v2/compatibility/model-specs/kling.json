@@ -1,0 +1,133 @@
+{
+  "description": "快手可灵视频生成系列模型规格。参数来源：config-center compute/providers/kling.json。所有模型均为视频生成（video_gen），无上下文窗口概念。",
+  "specs": [
+    {
+      "displayName": "可灵 3.0 Turbo",
+      "family": "kling-3.0-turbo",
+      "match": {
+        "exact": [
+          "kling-3.0-turbo"
+        ]
+      },
+      "id": "kling-3.0-turbo",
+      "spec": {
+        "serviceType": [
+          "video_gen"
+        ],
+        "capabilities": [
+          "video_generation",
+          "image_to_video"
+        ],
+        "description": "可灵 3.0 Turbo，新版 /image-to-video/kling-3.0-turbo API，需独立协议适配"
+      }
+    },
+    {
+      "displayName": "可灵 3.0",
+      "family": "kling-v3",
+      "match": {
+        "exact": [
+          "kling-v3"
+        ]
+      },
+      "id": "kling-v3",
+      "spec": {
+        "serviceType": [
+          "video_gen"
+        ],
+        "capabilities": [
+          "video_generation",
+          "image_to_video"
+        ],
+        "description": "可灵 3.0，通过现有 /v1/videos/text2video 任务 API 的 model_name 调用"
+      }
+    },
+    {
+      "displayName": "可灵 V2.5 Turbo",
+      "family": "kling-v2-5",
+      "match": {
+        "exact": [
+          "kling-v2-5-turbo"
+        ],
+        "patterns": [
+          "kling-v2-5-turbo*"
+        ]
+      },
+      "id": "kling-v2-5-turbo",
+      "spec": {
+        "capabilities": [
+          "video_generation",
+          "chinese_optimized",
+          "high_quality",
+          "fast"
+        ],
+        "serviceType": [
+          "video_gen"
+        ],
+        "description": "可灵最新视频生成模型，高性价比"
+      }
+    },
+    {
+      "displayName": "可灵 V2.5 Turbo Pro",
+      "family": "kling-v2-5",
+      "match": {
+        "exact": [
+          "kling-v2-5-turbo-pro"
+        ]
+      },
+      "id": "kling-v2-5-turbo-pro",
+      "spec": {
+        "capabilities": [
+          "video_generation",
+          "chinese_optimized",
+          "ultra_quality"
+        ],
+        "serviceType": [
+          "video_gen"
+        ],
+        "description": "可灵高品质视频生成，支持 4K 分辨率"
+      }
+    },
+    {
+      "displayName": "可灵 V2",
+      "family": "kling-v2",
+      "match": {
+        "exact": [
+          "kling-v2"
+        ]
+      },
+      "id": "kling-v2",
+      "spec": {
+        "capabilities": [
+          "video_generation",
+          "chinese_optimized",
+          "high_quality"
+        ],
+        "serviceType": [
+          "video_gen"
+        ],
+        "description": "可灵文生视频旗舰模型"
+      }
+    },
+    {
+      "displayName": "可灵 V2 Master",
+      "family": "kling-v2",
+      "match": {
+        "exact": [
+          "kling-v2-master"
+        ]
+      },
+      "id": "kling-v2-master",
+      "spec": {
+        "capabilities": [
+          "video_generation",
+          "chinese_optimized",
+          "ultra_quality"
+        ],
+        "serviceType": [
+          "video_gen"
+        ],
+        "description": "可灵最高品质视频生成，支持 4K 分辨率"
+      }
+    }
+  ]
+}

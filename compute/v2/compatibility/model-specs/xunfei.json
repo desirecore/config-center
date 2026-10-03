@@ -1,0 +1,61 @@
+{
+  "description": "讯飞星火系列模型规格。参数来源：config-center compute/providers/xunfei.json。spark-x 为推理模型（serviceType: reasoning）。",
+  "specs": [
+    {
+      "displayName": "讯飞星火 X2",
+      "family": "spark-x",
+      "match": {
+        "exact": [
+          "spark-x"
+        ]
+      },
+      "id": "spark-x",
+      "spec": {
+        "contextWindow": 65536,
+        "maxOutputTokens": 131072,
+        "capabilities": [
+          "chat",
+          "reasoning",
+          "deep_thinking",
+          "math",
+          "code",
+          "tool_use"
+        ],
+        "serviceType": [
+          "reasoning"
+        ],
+        "defaultTemperature": 1.2,
+        "supportsReasoning": true,
+        "description": "讯飞星火 X2，/x2 接入合同：输入 65536 / 输出 131072；spark-x 同名在 /v2 上指向 X1.5，不能复用本输出限制"
+      }
+    },
+    {
+      "displayName": "讯飞星火 4.0 Ultra",
+      "family": "spark-4",
+      "match": {
+        "exact": [
+          "4.0Ultra"
+        ],
+        "patterns": [
+          "4.0Ultra*"
+        ]
+      },
+      "id": "4.0Ultra",
+      "spec": {
+        "contextWindow": 32768,
+        "maxOutputTokens": 32768,
+        "capabilities": [
+          "chat",
+          "reasoning",
+          "code",
+          "tool_use"
+        ],
+        "serviceType": [
+          "chat"
+        ],
+        "defaultTemperature": 1,
+        "description": "讯飞星火最强通用模型，支持推理、代码和工具调用"
+      }
+    }
+  ]
+}
