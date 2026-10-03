@@ -72,11 +72,10 @@
       "serviceType": [
         "chat"
       ],
-      "description": "百度 ERNIE 4.5 Turbo（千帆 Coding Plan 渠道）",
+      "description": "百度 ERNIE 4.5 Turbo（千帆 Coding Plan 渠道）；套餐当前不支持图像理解",
       "capabilities": [
         "chat",
         "code",
-        "vision",
         "fast"
       ],
       "source": "preset"
@@ -102,7 +101,7 @@
       "serviceType": [
         "chat"
       ],
-      "description": "智谱 GLM-5.1（千帆 Coding Plan 渠道），倍率 ×6",
+      "description": "智谱 GLM-5.1（千帆 Coding Plan 渠道），高峰抵扣 ×4 / 低峰 ×3；高峰时段随流量动态调整",
       "capabilities": [
         "chat",
         "reasoning",

@@ -31,7 +31,7 @@
       "scope": "github-copilot 官方入口；具体地域与接入面待该页面逐字段确认",
       "retrieval": "fetched",
       "checkedAt": "2026-10-03",
-      "contentSha256": "04fdb2b49d58e908eab50c8011142c575bafe78e184ed090c4c514a3eca78758",
+      "contentSha256": "85108143a4acd41577bbd1008ce224538fb3bd1ff77948d22008212f51ca0494",
       "resolvedUrl": "https://docs.github.com/en/copilot/reference/ai-models/supported-models"
     }
   ]

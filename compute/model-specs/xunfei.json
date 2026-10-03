@@ -3,32 +3,30 @@
   "specs": [
     {
       "id": "spark-x",
-      "displayName": "讯飞星火 X1",
+      "displayName": "讯飞星火 X2",
       "family": "spark-x",
       "match": {
         "exact": [
           "spark-x"
-        ],
-        "patterns": [
-          "spark-x*"
         ]
       },
       "spec": {
         "contextWindow": 65536,
-        "maxOutputTokens": 128000,
+        "maxOutputTokens": 131072,
         "capabilities": [
           "chat",
           "reasoning",
           "deep_thinking",
           "math",
-          "code"
+          "code",
+          "tool_use"
         ],
         "serviceType": [
           "reasoning"
         ],
         "defaultTemperature": 1.2,
         "supportsReasoning": true,
-        "description": "讯飞深度推理模型，64K 输入/128K 输出，支持思考模式与函数调用"
+        "description": "讯飞星火 X2，/x2 接入合同：输入 65536 / 输出 131072；spark-x 同名在 /v2 上指向 X1.5，不能复用本输出限制"
       }
     },
     {

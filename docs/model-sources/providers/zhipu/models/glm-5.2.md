@@ -3,7 +3,7 @@
 [供应商索引](../README.md) · [官网证据目录](../SOURCES.md)
 
 - 精确模型 ID：`glm-5.2`。
-- 核验日期：2026-10-03；本次只迁移记录，没有重新核验或提高状态。
+- 核验日期：2026-10-03；本轮增量核验下列字段；未列字段及其他接入面的状态保持独立。
 
 ## 适用接入面
 
@@ -45,7 +45,19 @@
   "defaultTopP": 0.95,
   "inputPrice": 8,
   "outputPrice": 28,
-  "extra.cacheHitPrice": 2
+  "extra.cacheHitPrice": 2,
+  "extra.reasoning": {
+    "supportedEfforts": [
+      "max",
+      "xhigh",
+      "high",
+      "medium",
+      "low",
+      "minimal",
+      "none"
+    ],
+    "defaultEffort": "max"
+  }
 }
 ```
 <!-- source-details:end -->
@@ -54,7 +66,7 @@
 
 | 模型 ID | 上下文 / 输出 | 计价 | 已核字段→来源 | 来源入口 | 状态 | 数据指纹 |
 | --- | --- | --- | --- | --- | --- | --- |
-| `glm-5.2` | 1000000 / 131072 | CNY：8 / 28 | `modelName`→[glm53](../SOURCES.md#glm53) | [glm53](../SOURCES.md#glm53) | partial | `0b8a1fd762b821b3c9a26e0cc9a7dcbd7bfef8e3899999782b17e262a99fb6ca` |
+| `glm-5.2` | 1000000 / 131072 | CNY：8 / 28 | `extra.reasoning.supportedEfforts`→[glm52-cn-api](../SOURCES.md#glm52-cn-api)；`extra.reasoning.defaultEffort`→[glm52-cn-api](../SOURCES.md#glm52-cn-api) | [glm52-cn-api](../SOURCES.md#glm52-cn-api) | partial | `df3a00f4ea03862ccff3599a8011e40243b3ffb1aff74884b71d672e8b057c0a` |
 
 ### compute/coding-plans/zhipu-coding.json
 
@@ -81,7 +93,19 @@
     "agent",
     "math",
     "multilingual"
-  ]
+  ],
+  "extra.reasoning": {
+    "supportedEfforts": [
+      "max",
+      "xhigh",
+      "high",
+      "medium",
+      "low",
+      "minimal",
+      "none"
+    ],
+    "defaultEffort": "max"
+  }
 }
 ```
 <!-- source-details:end -->
@@ -90,7 +114,7 @@
 
 | 模型 ID | 上下文 / 输出 | 计价 | 已核字段→来源 | 来源入口 | 状态 | 数据指纹 |
 | --- | --- | --- | --- | --- | --- | --- |
-| `glm-5.2` | 1000000 / 131072 | 套餐：未声明 / 未声明 | `modelName`→[glm53](../SOURCES.md#glm53) | [glm53](../SOURCES.md#glm53) | partial | `e47c693d232b87b074df1aef74935bab47099d5397abfec032c003ac3b230a82` |
+| `glm-5.2` | 1000000 / 131072 | 套餐：未声明 / 未声明 | `extra.reasoning.supportedEfforts`→[glm52-intl-api](../SOURCES.md#glm52-intl-api)；`extra.reasoning.defaultEffort`→[glm52-intl-api](../SOURCES.md#glm52-intl-api) | [glm52-intl-api](../SOURCES.md#glm52-intl-api) | partial | `bae8a97306a4ccbf5961c877d671cccd391e0bdba93c64f20dd4fb7c73696239` |
 
 ### compute/model-specs/zhipu.json
 
@@ -139,6 +163,10 @@
 | 模型 ID | 上下文 / 输出 | 计价 | 已核字段→来源 | 来源入口 | 状态 | 数据指纹 |
 | --- | --- | --- | --- | --- | --- | --- |
 | `glm-5.2` | 1048576 / 32768 | 非计价主数据 | `id`→[glm53](../SOURCES.md#glm53) | [glm53](../SOURCES.md#glm53) | partial | `0ec480a9cc2984161ac129d087c28b3c9a561d55b7b595c16d9b0ffb4a5cadf5` |
+
+官方明确默认 max：none/minimal 跳过思考，low/medium 映射 high，xhigh 映射 max。仅迁移客户端不读取的旧字段到已支持的 extra.reasoning。
+
+国际官方 API 与国内明确同一 GLM5.2 effort 映射；登记参数合同依据，套餐真实账号权限及 1m 路由仍待聚焦调用。
 
 ## 下次更新核查
 

@@ -3,7 +3,7 @@
 [供应商索引](../README.md) · [官网证据目录](../SOURCES.md)
 
 - 精确模型 ID：`kimi-k2.7-code-highspeed`。
-- 核验日期：2026-10-03；本次只迁移记录，没有重新核验或提高状态。
+- 核验日期：2026-10-03；本轮重新读取官网，逐接入面只确认下表列出的字段；其余仍待核实。
 
 ## 适用接入面
 
@@ -45,7 +45,9 @@
   "defaultTopP": 0.95,
   "inputPrice": 13,
   "outputPrice": 54,
-  "extra.cacheHitPrice": 2.6
+  "extra.cacheHitPrice": 2.6,
+  "extra.thinking.default": "enabled",
+  "extra.thinking.disableSupported": false
 }
 ```
 <!-- source-details:end -->
@@ -54,7 +56,7 @@
 
 | 模型 ID | 上下文 / 输出 | 计价 | 已核字段→来源 | 来源入口 | 状态 | 数据指纹 |
 | --- | --- | --- | --- | --- | --- | --- |
-| `kimi-k2.7-code-highspeed` | 262144 / 32768 | CNY：13 / 54 | `modelName`→[kimi-pricing](../SOURCES.md#kimi-pricing) | [kimi-pricing](../SOURCES.md#kimi-pricing) | partial | `adf6aae9b54df64dafc6759cbdba6638823b605aa0a983cd212c479872fe4cab` |
+| `kimi-k2.7-code-highspeed` | 262144 / 32768 | CNY：13 / 54 | `modelName`→[kimi-pricing](../SOURCES.md#kimi-pricing)、`contextWindow`→[kimi-pricing](../SOURCES.md#kimi-pricing)、`inputPrice`→[kimi-pricing](../SOURCES.md#kimi-pricing)、`outputPrice`→[kimi-pricing](../SOURCES.md#kimi-pricing)、`extra.cacheHitPrice`→[kimi-pricing](../SOURCES.md#kimi-pricing)、`defaultTemperature`→[kimi-k27](../SOURCES.md#kimi-k27)、`extra.thinking.default`→[kimi-k27](../SOURCES.md#kimi-k27)、`extra.thinking.disableSupported`→[kimi-k27](../SOURCES.md#kimi-k27) | [kimi-pricing](../SOURCES.md#kimi-pricing)、[kimi-k27](../SOURCES.md#kimi-k27) | partial | `adf6aae9b54df64dafc6759cbdba6638823b605aa0a983cd212c479872fe4cab` |
 
 ## 下次更新核查
 

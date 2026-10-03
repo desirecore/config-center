@@ -3,28 +3,28 @@
 [供应商索引](../README.md) · [官网证据目录](../SOURCES.md)
 
 - 精确模型 ID：`spark-x`。
-- 核验日期：2026-10-03；本次只迁移记录，没有重新核验或提高状态。
+- 核验日期：2026-10-03；本轮复核仅限下表已核字段，其余仍待核实。
 
 ## 适用接入面
 
-- [compute/providers/xunfei.json](../access/providers--xunfei.md)
+- [compute/providers/xunfei-x2.json](../access/providers--xunfei-x2.md)
 - [compute/model-specs/xunfei.json](../access/model-specs--xunfei.md)
 
 ## 字段级来源记录
 
 各接入面分开记录；价格为 inputPrice/outputPrice 快照，具体单位和限制看配置及引用官网。partial 只确认已列字段，不代表全部参数、平台可用性或账号调用已验收。
 
-### compute/providers/xunfei.json
+### compute/providers/xunfei-x2.json
 
-[查看配置](../../../../../compute/providers/xunfei.json) · [接入面说明](../access/providers--xunfei.md)
+[查看配置](../../../../../compute/providers/xunfei-x2.json) · [接入面说明](../access/providers--xunfei-x2.md)
 
 当前配置详情（不是全部官网确认值；routing 是本仓策略）：
 
-<!-- source-details: {"config":"compute/providers/xunfei.json","id":"spark-x"} -->
+<!-- source-details: {"config":"compute/providers/xunfei-x2.json","id":"spark-x"} -->
 ```json
 {
   "contextWindow": 65536,
-  "maxOutputTokens": 128000,
+  "maxOutputTokens": 131072,
   "serviceType": [
     "reasoning"
   ],
@@ -33,19 +33,21 @@
     "reasoning",
     "deep_thinking",
     "math",
-    "code"
+    "code",
+    "tool_use"
   ],
   "defaultTemperature": 1.2,
-  "defaultTopP": 0.95
+  "defaultTopP": 0.95,
+  "modelName": "spark-x"
 }
 ```
 <!-- source-details:end -->
 
-<!-- source-config: compute/providers/xunfei.json -->
+<!-- source-config: compute/providers/xunfei-x2.json -->
 
 | 模型 ID | 上下文 / 输出 | 计价 | 已核字段→来源 | 来源入口 | 状态 | 数据指纹 |
 | --- | --- | --- | --- | --- | --- | --- |
-| `spark-x` | 65536 / 128000 | CNY：未声明 / 未声明 | `modelName`→[xunfei](../SOURCES.md#xunfei) | [xunfei](../SOURCES.md#xunfei) | partial | `e86e73c51d95392d5a755647f74010d21d4b40ab7928853deecbbd39c27a5432` |
+| `spark-x` | 65536 / 131072 | CNY：未声明 / 未声明 | `modelName`→[xunfei](../SOURCES.md#xunfei), `maxOutputTokens`→[xunfei](../SOURCES.md#xunfei), `defaultTemperature`→[xunfei](../SOURCES.md#xunfei), `defaultTopP`→[xunfei](../SOURCES.md#xunfei) | [xunfei](../SOURCES.md#xunfei) | partial | `3915d411151bb2d2a39e4c79ae8ced199358eda45ad3df7de9237ff713012c84` |
 
 ### compute/model-specs/xunfei.json
 
@@ -57,7 +59,7 @@
 ```json
 {
   "spec.contextWindow": 65536,
-  "spec.maxOutputTokens": 128000,
+  "spec.maxOutputTokens": 131072,
   "spec.serviceType": [
     "reasoning"
   ],
@@ -66,10 +68,12 @@
     "reasoning",
     "deep_thinking",
     "math",
-    "code"
+    "code",
+    "tool_use"
   ],
   "spec.supportsReasoning": true,
-  "spec.defaultTemperature": 1.2
+  "spec.defaultTemperature": 1.2,
+  "id": "spark-x"
 }
 ```
 <!-- source-details:end -->
@@ -78,7 +82,11 @@
 
 | 模型 ID | 上下文 / 输出 | 计价 | 已核字段→来源 | 来源入口 | 状态 | 数据指纹 |
 | --- | --- | --- | --- | --- | --- | --- |
-| `spark-x` | 65536 / 128000 | 非计价主数据 | `id`→[xunfei](../SOURCES.md#xunfei) | [xunfei](../SOURCES.md#xunfei) | partial | `12a6e5633db6604800f759bf1a6323ccc745fd574af632d937f67b6efb08754a` |
+| `spark-x` | 65536 / 131072 | 非计价主数据 | `id`→[xunfei](../SOURCES.md#xunfei), `spec.maxOutputTokens`→[xunfei](../SOURCES.md#xunfei), `spec.defaultTemperature`→[xunfei](../SOURCES.md#xunfei) | [xunfei](../SOURCES.md#xunfei) | partial | `8706b7fa604391f173d6adaa415343ca0b846618c7ecd4e0630dd20bbc957e17` |
+
+## 输入与总窗口边界
+
+官方说明的是输入 65536、输出 131072 两个独立限制，没有声明总上下文窗口。当前 contextWindow=65536 沿用为客户端保守输入预算，不将它登记为已核总窗口；需客户端独立最大输入字段后再正确表达此合同。
 
 ## 下次更新核查
 

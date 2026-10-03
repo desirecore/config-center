@@ -100,8 +100,7 @@
         "chat",
         "reasoning",
         "code",
-        "tool_use",
-        "vision"
+        "tool_use"
       ],
       "source": "preset"
     },
@@ -119,7 +118,6 @@
         "reasoning",
         "code",
         "tool_use",
-        "vision",
         "fast"
       ],
       "source": "preset"

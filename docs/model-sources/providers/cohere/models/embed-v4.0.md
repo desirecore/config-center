@@ -3,7 +3,7 @@
 [供应商索引](../README.md) · [官网证据目录](../SOURCES.md)
 
 - 精确模型 ID：`embed-v4.0`。
-- 核验日期：2026-10-03；本次只迁移记录，没有重新核验或提高状态。
+- 核验日期：2026-10-03；本轮增量复核仅覆盖明确列出的字段，其余接入面和参数保持各自状态。
 
 ## 适用接入面
 
@@ -44,7 +44,7 @@
 
 | 模型 ID | 上下文 / 输出 | 计价 | 已核字段→来源 | 来源入口 | 状态 | 数据指纹 |
 | --- | --- | --- | --- | --- | --- | --- |
-| `embed-v4.0` | 128000 / 0 | USD：0.12 / 0 | `modelName`→[cohere-models](../SOURCES.md#cohere-models) | [cohere-models](../SOURCES.md#cohere-models) | partial | `1b14287bc87b2f32efa8a5a8eafc13c972fa2e4fd7bc3fa4c00262dfe33ecf0d` |
+| `embed-v4.0` | 128000 / 0 | USD：0.12 / 0 | `modelName`→[cohere-models](../SOURCES.md#cohere-models)；`extra.defaultDimension`→[cohere-models](../SOURCES.md#cohere-models) | [cohere-models](../SOURCES.md#cohere-models) | partial | `1b14287bc87b2f32efa8a5a8eafc13c972fa2e4fd7bc3fa4c00262dfe33ecf0d` |
 
 ### compute/model-specs/cohere.json
 
@@ -62,7 +62,14 @@
   "spec.capabilities": [
     "text_embedding",
     "multilingual"
-  ]
+  ],
+  "spec.extra.dimensions": [
+    256,
+    512,
+    1024,
+    1536
+  ],
+  "spec.extra.defaultDimension": 1536
 }
 ```
 <!-- source-details:end -->
@@ -71,7 +78,15 @@
 
 | 模型 ID | 上下文 / 输出 | 计价 | 已核字段→来源 | 来源入口 | 状态 | 数据指纹 |
 | --- | --- | --- | --- | --- | --- | --- |
-| `embed-v4.0` | 128000 / 未声明 | 非计价主数据 | `id`→[cohere-models](../SOURCES.md#cohere-models) | [cohere-models](../SOURCES.md#cohere-models) | partial | `1d31441bbfbb712efab4911ea9e1274b254356ba5432c93348666bc769d54dca` |
+| `embed-v4.0` | 128000 / 未声明 | 非计价主数据 | `id`→[cohere-models](../SOURCES.md#cohere-models)；`spec.extra.dimensions`→[cohere-models](../SOURCES.md#cohere-models)；`spec.extra.defaultDimension`→[cohere-models](../SOURCES.md#cohere-models) | [cohere-models](../SOURCES.md#cohere-models) | partial | `46794dc51487aa6af50a9bc92e9aae5e38dc9de06e8104669a28a225e6e8a0cd` |
+
+## 本轮补充核验
+
+官方型号表逐一给出原生向量维度与默认值；兼容接口不支持 dimensions 请求参数，Provider 不因此新增可选维度。128k 为简写，未提高精确窗口证明。
+
+## 本轮补充核验
+
+官方原生默认向量维度已核；兼容 API 不接受 dimensions 参数，本文不把原生多模态与可变维度等同于兼容端点。
 
 ## 下次更新核查
 

@@ -157,7 +157,11 @@
         "tool_use",
         "code"
       ],
-      "extra": {}
+      "extra": {
+        "cachedInputPrice": 0.025
+      },
+      "inputPrice": 3,
+      "outputPrice": 6
     },
     {
       "modelName": "mimo-v2.5-tts",

@@ -39,7 +39,7 @@
 
 | 模型 ID | 上下文 / 输出 | 计价 | 已核字段→来源 | 来源入口 | 状态 | 数据指纹 |
 | --- | --- | --- | --- | --- | --- | --- |
-| `music-cover` | 未声明 / 未声明 | CNY：未声明 / 未声明 | `modelName`→[minimax-models](../SOURCES.md#minimax-models) | [minimax-models](../SOURCES.md#minimax-models) | partial | `48d05ec6aa5e222cc794e61fe26ddcae25b5d80ea1664e440f96a6262dde2436` |
+| `music-cover` | 未声明 / 未声明 | CNY：未声明 / 未声明 | `modelName`→[minimax-models](../SOURCES.md#minimax-models) | [minimax-models](../SOURCES.md#minimax-models) | partial | `8d8dce1753537e6b54fa2a57e27d01c631b394d9d2eac56e654ed166b7e369b4` |
 
 ### compute/model-specs/minimax.json
 
@@ -66,7 +66,7 @@
 
 | 模型 ID | 上下文 / 输出 | 计价 | 已核字段→来源 | 来源入口 | 状态 | 数据指纹 |
 | --- | --- | --- | --- | --- | --- | --- |
-| `music-cover` | 未声明 / 未声明 | 非计价主数据 | `id`→[minimax-models](../SOURCES.md#minimax-models) | [minimax-models](../SOURCES.md#minimax-models) | partial | `3e3e893c904eb8df379f46502cd44680f5c9295ababc3ee6ce01d6b81bdf4bc6` |
+| `music-cover` | 未声明 / 未声明 | 非计价主数据 | `id`→[minimax-models](../SOURCES.md#minimax-models) | [minimax-models](../SOURCES.md#minimax-models) | partial | `e44603a346bbb131fd057c84c7b2747716da5887c268811d5599856d567db1a6` |
 
 ## 下次更新核查
 
@@ -86,3 +86,7 @@
 }
 ```
 <!-- source-metadata:end -->
+
+## 音乐 API 生命周期边界
+
+[官方模型目录](../SOURCES.md#minimax-models)公告：自2026-08-20起，付费音乐生成/歌词生成不向新用户开放，历史付费用户可继续使用；Music-3.0-free、Music-2.6-free、music-cover-free 停止服务。本记录保留历史付费型号，不以目录公告推断旧2.5系列仍适用于任何新账号；下次核查账号资格与型号可用性。

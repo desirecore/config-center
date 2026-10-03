@@ -44,7 +44,7 @@
 
 | 模型 ID | 上下文 / 输出 | 计价 | 已核字段→来源 | 来源入口 | 状态 | 数据指纹 |
 | --- | --- | --- | --- | --- | --- | --- |
-| `codestral-latest` | 128000 / 32768 | USD：0.3 / 0.9 | 待核实 | [mistral-models](../SOURCES.md#mistral-models) | pending | `397855b8de5225ea00ee1e7d78c003525a1be8c8116893637342c7a819ed3f69` |
+| `codestral-latest` | 128000 / 32768 | USD：0.3 / 0.9 | `inputPrice`→[codestral2508](../SOURCES.md#codestral2508)；`outputPrice`→[codestral2508](../SOURCES.md#codestral2508) |[mistral-models](../SOURCES.md#mistral-models)；[codestral2508](../SOURCES.md#codestral2508) | partial | `397855b8de5225ea00ee1e7d78c003525a1be8c8116893637342c7a819ed3f69` |
 
 ### compute/model-specs/mistral.json
 
@@ -74,6 +74,10 @@
 | 模型 ID | 上下文 / 输出 | 计价 | 已核字段→来源 | 来源入口 | 状态 | 数据指纹 |
 | --- | --- | --- | --- | --- | --- | --- |
 | `codestral-latest` | 128000 / 32768 | 非计价主数据 | 待核实 | [mistral-models](../SOURCES.md#mistral-models) | pending | `87bf44866d236d56f4982f922c0825c3a0c7e179e2ee90daf2d008c3b0c74af1` |
+
+## 本轮补充核验
+
+官方Codestral2508页面标准输入0.3美元/百万tokens，输出0.9美元/百万tokens，与latest配置相符；current alias解析及128k精确整数、32768输出尚未取得明文证据。
 
 ## 下次更新核查
 

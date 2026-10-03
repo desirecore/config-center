@@ -40,7 +40,7 @@
 
 | 模型 ID | 上下文 / 输出 | 计价 | 已核字段→来源 | 来源入口 | 状态 | 数据指纹 |
 | --- | --- | --- | --- | --- | --- | --- |
-| `music-2.5` | 未声明 / 未声明 | CNY：未声明 / 未声明 | 待核实 | [minimax-models](../SOURCES.md#minimax-models) | pending | `dcfdc6773cb2651b747ee1d7439508faf8d0a2ddb658063f82b59535462898c8` |
+| `music-2.5` | 未声明 / 未声明 | CNY：未声明 / 未声明 | 待核实 | [minimax-models](../SOURCES.md#minimax-models) | pending | `f18974b844a76c4a0dc30112a323d717d624d5a0e6b213d3dc49e0a6e6c3b822` |
 
 ### compute/model-specs/minimax.json
 
@@ -68,7 +68,7 @@
 
 | 模型 ID | 上下文 / 输出 | 计价 | 已核字段→来源 | 来源入口 | 状态 | 数据指纹 |
 | --- | --- | --- | --- | --- | --- | --- |
-| `music-2.5` | 未声明 / 未声明 | 非计价主数据 | 待核实 | [minimax-models](../SOURCES.md#minimax-models) | pending | `b655915659c7ed630e289f2a82eebc2986f2ff2df8e811a572e63d9dd5311378` |
+| `music-2.5` | 未声明 / 未声明 | 非计价主数据 | 待核实 | [minimax-models](../SOURCES.md#minimax-models) | pending | `a9f239a10625695efe56c9d634711db41ee983d8e98a676329bd6be930f4227f` |
 
 ## 下次更新核查
 
@@ -88,3 +88,7 @@
 }
 ```
 <!-- source-metadata:end -->
+
+## 音乐 API 生命周期边界
+
+[官方模型目录](../SOURCES.md#minimax-models)公告：自2026-08-20起，付费音乐生成/歌词生成不向新用户开放，历史付费用户可继续使用；Music-3.0-free、Music-2.6-free、music-cover-free 停止服务。本记录保留历史付费型号，不以目录公告推断旧2.5系列仍适用于任何新账号；下次核查账号资格与型号可用性。

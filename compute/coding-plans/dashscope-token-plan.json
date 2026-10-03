@@ -303,10 +303,6 @@
       "extra": {
         "supportsThinking": true,
         "thinkingDefault": true,
-        "reasoningEffort": [
-          "high",
-          "max"
-        ],
         "reasoning": {
           "supportedEfforts": [
             "high",

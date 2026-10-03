@@ -3,7 +3,7 @@
 [供应商索引](../README.md) · [官网证据目录](../SOURCES.md)
 
 - 精确模型 ID：`gpt-5.5-pro`。
-- 核验日期：2026-10-03；本次只迁移记录，没有重新核验或提高状态。
+- 核验日期：2026-10-03；本轮增量核验下列字段；未列字段及其他接入面的状态保持独立。
 
 ## 适用接入面
 
@@ -39,7 +39,15 @@
   "inputPrice": 30,
   "outputPrice": 180,
   "extra.responsesOnly": true,
-  "extra.pricingNotes": "No cached-input discount is listed for GPT-5.5 Pro on the official pricing page."
+  "extra.pricingNotes": "No cached-input discount is listed for GPT-5.5 Pro on the official pricing page.",
+  "extra.reasoning": {
+    "supportedEfforts": [
+      "medium",
+      "high",
+      "xhigh"
+    ],
+    "defaultEffort": "high"
+  }
 }
 ```
 <!-- source-details:end -->
@@ -48,7 +56,11 @@
 
 | 模型 ID | 上下文 / 输出 | 计价 | 已核字段→来源 | 来源入口 | 状态 | 数据指纹 |
 | --- | --- | --- | --- | --- | --- | --- |
-| `gpt-5.5-pro` | 1050000 / 128000 | USD：30 / 180 | 待核实 | [openai-models](../SOURCES.md#openai-models) | pending | `48f5f5800e7d35f7b74e1937521fa1fd9c8fcc50cab7f62a9407a6a95932d298` |
+| `gpt-5.5-pro` | 1050000 / 128000 | USD：30 / 180 | `modelName`→[gpt-5-5-pro-api](../SOURCES.md#gpt-5-5-pro-api)；`contextWindow`→[gpt-5-5-pro-api](../SOURCES.md#gpt-5-5-pro-api)；`maxOutputTokens`→[gpt-5-5-pro-api](../SOURCES.md#gpt-5-5-pro-api)；`inputPrice`→[gpt-5-5-pro-api](../SOURCES.md#gpt-5-5-pro-api)；`outputPrice`→[gpt-5-5-pro-api](../SOURCES.md#gpt-5-5-pro-api)；`extra.reasoning.supportedEfforts`→[gpt-5-5-pro-api](../SOURCES.md#gpt-5-5-pro-api)；`extra.responsesOnly`→[gpt-5-5-pro-api](../SOURCES.md#gpt-5-5-pro-api)；`extra.reasoning.defaultEffort`→[gpt-5-5-pro-api](../SOURCES.md#gpt-5-5-pro-api) | [gpt-5-5-pro-api](../SOURCES.md#gpt-5-5-pro-api) | partial | `d375a491a9db715c7a6d18c3da85395098beb4276cd0b998f7893926c4798ab3` |
+
+本轮读取该模型官方明文规格页，确认原厂直连窗口、输出、标准价格与推理合同。Pro 仅限 Responses；GPT-5.4 Pro 官方默认 medium，修正旧 high。none 在产品层映射 off，schema 不接受将 none 写成 defaultEffort，故未伪造其他显式默认档。
+
+共享规格只复核内在窗口和输出；Provider 推理矩阵不复制到共享规格。
 
 ## 下次更新核查
 

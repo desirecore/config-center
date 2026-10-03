@@ -3,7 +3,7 @@
 [供应商索引](../README.md) · [官网证据目录](../SOURCES.md)
 
 - 精确模型 ID：`claude-sonnet-5`。
-- 核验日期：2026-10-03；本次只迁移记录，没有重新核验或提高状态。
+- 核验日期：2026-10-03；本轮复核仅限下表已核字段，其余仍待核实。
 
 ## 适用接入面
 
@@ -46,9 +46,10 @@
       "xhigh",
       "max"
     ],
-    "defaultEffort": "xhigh"
+    "defaultEffort": "high"
   },
-  "extra.adaptiveThinking": true
+  "extra.adaptiveThinking": true,
+  "modelName": "claude-sonnet-5"
 }
 ```
 <!-- source-details:end -->
@@ -57,7 +58,7 @@
 
 | 模型 ID | 上下文 / 输出 | 计价 | 已核字段→来源 | 来源入口 | 状态 | 数据指纹 |
 | --- | --- | --- | --- | --- | --- | --- |
-| `claude-sonnet-5` | 1000000 / 128000 | USD：未声明 / 未声明 | 待核实 | [claude-models](../SOURCES.md#claude-models) | pending | `5fe127d1328fb81bb768e48a41fe1aeb5a1b84964d53ab31f4029e6332b350ef` |
+| `claude-sonnet-5` | 1000000 / 128000 | USD：未声明 / 未声明 | `modelName`→[claude-sonnet5](../SOURCES.md#claude-sonnet5) | [claude-models](../SOURCES.md#claude-models), [claude-sonnet5](../SOURCES.md#claude-sonnet5) | partial | `daaa7c192cdaa2865f9d20fb67a4ea0310fd1eeb127f1c2aa95c3e125aebf91a` |
 
 ### compute/providers/anthropic.json
 
@@ -94,7 +95,7 @@
       "xhigh",
       "max"
     ],
-    "defaultEffort": "xhigh"
+    "defaultEffort": "high"
   },
   "extra.adaptiveThinking": true,
   "extra.samplingParametersDeprecated": true,
@@ -102,7 +103,16 @@
     "write5m": 2.5,
     "write1h": 4,
     "read": 0.2
-  }
+  },
+  "modelName": "claude-sonnet-5",
+  "extra.reasoning.defaultEffort": "high",
+  "extra.reasoning.supportedEfforts": [
+    "low",
+    "medium",
+    "high",
+    "xhigh",
+    "max"
+  ]
 }
 ```
 <!-- source-details:end -->
@@ -111,7 +121,7 @@
 
 | 模型 ID | 上下文 / 输出 | 计价 | 已核字段→来源 | 来源入口 | 状态 | 数据指纹 |
 | --- | --- | --- | --- | --- | --- | --- |
-| `claude-sonnet-5` | 1000000 / 128000 | USD：2 / 10 | 待核实 | [claude-models](../SOURCES.md#claude-models) | pending | `8bd2e7fbcf50edef6b02c4d40be10a94ffbbdc9183f40d026555383b23dbe1c8` |
+| `claude-sonnet-5` | 1000000 / 128000 | USD：2 / 10 | `modelName`→[claude-sonnet5](../SOURCES.md#claude-sonnet5), `contextWindow`→[claude-sonnet5](../SOURCES.md#claude-sonnet5), `maxOutputTokens`→[claude-sonnet5](../SOURCES.md#claude-sonnet5), `inputPrice`→[claude-sonnet5](../SOURCES.md#claude-sonnet5), `outputPrice`→[claude-sonnet5](../SOURCES.md#claude-sonnet5), `extra.reasoning.defaultEffort`→[claude-sonnet5](../SOURCES.md#claude-sonnet5), `extra.reasoning.supportedEfforts`→[claude-effort](../SOURCES.md#claude-effort) | [claude-models](../SOURCES.md#claude-models), [claude-sonnet5](../SOURCES.md#claude-sonnet5), [claude-effort](../SOURCES.md#claude-effort) | partial | `59a0116abbb73302f4c23a75125a8613134f011974a92aa39f4ee34b6e1b1640` |
 
 ### compute/model-specs/anthropic.json
 
@@ -152,7 +162,8 @@
       "max"
     ],
     "defaultMode": "xhigh"
-  }
+  },
+  "id": "claude-sonnet-5"
 }
 ```
 <!-- source-details:end -->
@@ -161,7 +172,7 @@
 
 | 模型 ID | 上下文 / 输出 | 计价 | 已核字段→来源 | 来源入口 | 状态 | 数据指纹 |
 | --- | --- | --- | --- | --- | --- | --- |
-| `claude-sonnet-5` | 1000000 / 128000 | 非计价主数据 | 待核实 | [claude-models](../SOURCES.md#claude-models) | pending | `e740026b7275cd07ed37afa3044e12e6e6221a1723126aa100774ea167d53ba8` |
+| `claude-sonnet-5` | 1000000 / 128000 | 非计价主数据 | `id`→[claude-sonnet5](../SOURCES.md#claude-sonnet5), `spec.contextWindow`→[claude-sonnet5](../SOURCES.md#claude-sonnet5), `spec.maxOutputTokens`→[claude-sonnet5](../SOURCES.md#claude-sonnet5) | [claude-models](../SOURCES.md#claude-models), [claude-sonnet5](../SOURCES.md#claude-sonnet5) | partial | `e740026b7275cd07ed37afa3044e12e6e6221a1723126aa100774ea167d53ba8` |
 
 ## 下次更新核查
 

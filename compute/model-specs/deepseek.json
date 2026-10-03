@@ -280,11 +280,7 @@
         "supportsReasoning": true,
         "extra": {
           "supportsThinking": true,
-          "thinkingDefault": true,
-          "reasoningEffort": [
-            "high",
-            "max"
-          ]
+          "thinkingDefault": true
         },
         "description": "DeepSeek V4 Flash 0731 固定版本，100 万上下文"
       },

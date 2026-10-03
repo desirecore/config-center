@@ -175,9 +175,8 @@
         "thinking": {
           "default": "enabled"
         },
-        "reasoningEffort": {
-          "default": "max",
-          "supported": [
+        "reasoning": {
+          "supportedEfforts": [
             "max",
             "xhigh",
             "high",
@@ -185,7 +184,8 @@
             "low",
             "minimal",
             "none"
-          ]
+          ],
+          "defaultEffort": "max"
         }
       }
     },

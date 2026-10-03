@@ -137,15 +137,13 @@
       }
     },
     {
-      "id": "north-mini-code",
+      "id": "north-mini-code-1-0",
       "displayName": "North Mini Code",
-      "family": "north",
+      "family": "north-mini-code-1-0",
       "match": {
         "exact": [
+          "north-mini-code-1-0",
           "north-mini-code"
-        ],
-        "patterns": [
-          "north-mini-code*"
         ]
       },
       "spec": {
@@ -159,8 +157,27 @@
         "serviceType": [
           "chat"
         ],
-        "supportsReasoning": true,
-        "description": "Cohere North 系列首发编程模型"
+        "description": "Cohere North Mini Code 1.0，原厂API精确ID为north-mini-code-1-0；north-mini-code仅保留本仓历史配置匹配，不声明原厂接受该简称"
+      }
+    },
+    {
+      "id": "north-small-translate-1-0",
+      "displayName": "North Small Translate 1.0",
+      "family": "north-small-translate-1-0",
+      "match": {
+        "exact": [
+          "north-small-translate-1-0"
+        ]
+      },
+      "spec": {
+        "serviceType": [
+          "chat"
+        ],
+        "capabilities": [
+          "chat",
+          "multilingual"
+        ],
+        "description": "Cohere原厂机器翻译模型，支持50多种语言；官网窗口与输出为16k简写，本轮不猜测精确整数。只登记共享规格，原生接入与账号权限需独立验证"
       }
     },
     {
@@ -240,7 +257,16 @@
         "serviceType": [
           "embedding"
         ],
-        "description": "Cohere 最新 Embedding 模型，128K 上下文，多语言支持"
+        "description": "Cohere 最新 Embedding 模型，128K 上下文，多语言支持",
+        "extra": {
+          "dimensions": [
+            256,
+            512,
+            1024,
+            1536
+          ],
+          "defaultDimension": 1536
+        }
       }
     },
     {

@@ -3,7 +3,7 @@
 [供应商索引](../README.md) · [官网证据目录](../SOURCES.md)
 
 - 精确模型 ID：`ernie-4.5-turbo-20260402`。
-- 核验日期：2026-10-03；本次只迁移记录，没有重新核验或提高状态。
+- 核验日期：2026-10-03；本轮重新读取官网，逐接入面只确认下表列出的字段；其余仍待核实。
 
 ## 适用接入面
 
@@ -66,9 +66,9 @@
   "capabilities": [
     "chat",
     "code",
-    "vision",
     "fast"
-  ]
+  ],
+  "description": "百度 ERNIE 4.5 Turbo（千帆 Coding Plan 渠道）；套餐当前不支持图像理解"
 }
 ```
 <!-- source-details:end -->
@@ -77,7 +77,7 @@
 
 | 模型 ID | 上下文 / 输出 | 计价 | 已核字段→来源 | 来源入口 | 状态 | 数据指纹 |
 | --- | --- | --- | --- | --- | --- | --- |
-| `ernie-4.5-turbo-20260402` | 未声明 / 未声明 | 套餐：未声明 / 未声明 | `modelName`→[baidu-plan](../SOURCES.md#baidu-plan) | [baidu-plan](../SOURCES.md#baidu-plan) | partial | `ec09b5b3ba218316c6e5f71cf06ca9a11b788ac8c1d2fe0aa0a73f5e47d02007` |
+| `ernie-4.5-turbo-20260402` | 未声明 / 未声明 | 套餐：未声明 / 未声明 | `modelName`→[baidu-plan](../SOURCES.md#baidu-plan)、`description`→[baidu-plan](../SOURCES.md#baidu-plan) | [baidu-plan](../SOURCES.md#baidu-plan) | partial | `337c98aa957e3d321a455737fceb12bf03e6ed75e31b777c6b6c309323c7dcfa` |
 
 ### compute/model-specs/baidu.json
 

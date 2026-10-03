@@ -3,7 +3,7 @@
 [供应商索引](../README.md) · [官网证据目录](../SOURCES.md)
 
 - 精确模型 ID：`hy4-preview`。
-- 核验日期：2026-10-03；本次只迁移记录，没有重新核验或提高状态。
+- 核验日期：2026-10-03；本轮重新读取官网，逐接入面只确认下表列出的字段；其余仍待核实。
 
 ## 适用接入面
 
@@ -43,7 +43,7 @@
 
 | 模型 ID | 上下文 / 输出 | 计价 | 已核字段→来源 | 来源入口 | 状态 | 数据指纹 |
 | --- | --- | --- | --- | --- | --- | --- |
-| `hy4-preview` | 1048576 / 未声明 | 非计价主数据 | 待核实 | [tencent](../SOURCES.md#tencent) | pending | `7c6a182d9b613f6a53db2c3c5a3832f9da4506e933e67f92dcbf5a2c813a2d5d` |
+| `hy4-preview` | 1048576 / 未声明 | 非计价主数据 | `spec.releasedAt`→[tencent](../SOURCES.md#tencent) | [tencent](../SOURCES.md#tencent) | partial | `7c6a182d9b613f6a53db2c3c5a3832f9da4506e933e67f92dcbf5a2c813a2d5d` |
 
 ## 下次更新核查
 

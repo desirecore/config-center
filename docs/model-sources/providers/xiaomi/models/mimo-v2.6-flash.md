@@ -3,7 +3,7 @@
 [供应商索引](../README.md) · [官网证据目录](../SOURCES.md)
 
 - 精确模型 ID：`mimo-v2.6-flash`。
-- 核验日期：2026-10-03；本次只迁移记录，没有重新核验或提高状态。
+- 核验日期：2026-10-03；本轮重新读取官网，逐接入面只确认下表列出的字段；其余仍待核实。
 
 ## 适用接入面
 
@@ -54,7 +54,7 @@
 
 | 模型 ID | 上下文 / 输出 | 计价 | 已核字段→来源 | 来源入口 | 状态 | 数据指纹 |
 | --- | --- | --- | --- | --- | --- | --- |
-| `mimo-v2.6-flash` | 1000000 / 131072 | CNY：1 / 2 | `modelName`→[xiaomi](../SOURCES.md#xiaomi) | [xiaomi](../SOURCES.md#xiaomi) | partial | `971c522ca5f9646fd31131cb2ed69ff93baf966fe29004cb8d6c10bdb5c131e4` |
+| `mimo-v2.6-flash` | 1000000 / 131072 | CNY：1 / 2 | `modelName`→[xiaomi-models](../SOURCES.md#xiaomi-models)、`contextWindow`→[xiaomi-models](../SOURCES.md#xiaomi-models)、`maxOutputTokens`→[xiaomi-models](../SOURCES.md#xiaomi-models)、`inputPrice`→[xiaomi-price](../SOURCES.md#xiaomi-price)、`outputPrice`→[xiaomi-price](../SOURCES.md#xiaomi-price)、`extra.cachedInputPrice`→[xiaomi-price](../SOURCES.md#xiaomi-price) | [xiaomi-models](../SOURCES.md#xiaomi-models)、[xiaomi-price](../SOURCES.md#xiaomi-price) | partial | `971c522ca5f9646fd31131cb2ed69ff93baf966fe29004cb8d6c10bdb5c131e4` |
 
 ### compute/model-specs/xiaomi.json
 
@@ -104,7 +104,7 @@
 
 | 模型 ID | 上下文 / 输出 | 计价 | 已核字段→来源 | 来源入口 | 状态 | 数据指纹 |
 | --- | --- | --- | --- | --- | --- | --- |
-| `mimo-v2.6-flash` | 1000000 / 131072 | 非计价主数据 | `id`→[xiaomi](../SOURCES.md#xiaomi) | [xiaomi](../SOURCES.md#xiaomi) | partial | `679d23a03cbd0864aa1c2710007d78994379949cfea4bb8adbd92077a4770b97` |
+| `mimo-v2.6-flash` | 1000000 / 131072 | 非计价主数据 | `id`→[xiaomi-models](../SOURCES.md#xiaomi-models)、`spec.contextWindow`→[xiaomi-models](../SOURCES.md#xiaomi-models)、`spec.maxOutputTokens`→[xiaomi-models](../SOURCES.md#xiaomi-models) | [xiaomi-models](../SOURCES.md#xiaomi-models) | partial | `679d23a03cbd0864aa1c2710007d78994379949cfea4bb8adbd92077a4770b97` |
 
 ## 下次更新核查
 

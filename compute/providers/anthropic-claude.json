@@ -135,7 +135,7 @@
             "xhigh",
             "max"
           ],
-          "defaultEffort": "xhigh"
+          "defaultEffort": "high"
         },
         "thinkingRoundTrip": {
           "enabled": true,
@@ -217,7 +217,7 @@
             "xhigh",
             "max"
           ],
-          "defaultEffort": "xhigh"
+          "defaultEffort": "high"
         },
         "thinkingRoundTrip": {
           "enabled": true,

@@ -3,7 +3,7 @@
 [供应商索引](../README.md) · [官网证据目录](../SOURCES.md)
 
 - 精确模型 ID：`mimo-v2.5-asr`。
-- 核验日期：2026-10-03；本次只迁移记录，没有重新核验或提高状态。
+- 核验日期：2026-10-03；本轮重新读取官网，逐接入面只确认下表列出的字段；其余仍待核实。
 
 ## 适用接入面
 
@@ -40,7 +40,7 @@
 
 | 模型 ID | 上下文 / 输出 | 计价 | 已核字段→来源 | 来源入口 | 状态 | 数据指纹 |
 | --- | --- | --- | --- | --- | --- | --- |
-| `mimo-v2.5-asr` | 8192 / 2048 | CNY：未声明 / 未声明 | 待核实 | [xiaomi](../SOURCES.md#xiaomi) | pending | `b2a80d502df4232d134d9bd8a61027e2d7117ccf80f04fd3efd90a67f4d1da44` |
+| `mimo-v2.5-asr` | 8192 / 2048 | CNY：未声明 / 未声明 | `modelName`→[xiaomi-models](../SOURCES.md#xiaomi-models)、`contextWindow`→[xiaomi-models](../SOURCES.md#xiaomi-models)、`maxOutputTokens`→[xiaomi-models](../SOURCES.md#xiaomi-models) | [xiaomi-models](../SOURCES.md#xiaomi-models) | partial | `b2a80d502df4232d134d9bd8a61027e2d7117ccf80f04fd3efd90a67f4d1da44` |
 
 ### compute/model-specs/xiaomi.json
 
@@ -78,7 +78,7 @@
 
 | 模型 ID | 上下文 / 输出 | 计价 | 已核字段→来源 | 来源入口 | 状态 | 数据指纹 |
 | --- | --- | --- | --- | --- | --- | --- |
-| `mimo-v2.5-asr` | 8192 / 2048 | 非计价主数据 | 待核实 | [xiaomi](../SOURCES.md#xiaomi) | pending | `4cfb4519523407bc8baaa97d1c980885d79d65841eaec46937cacb4bdc1c0716` |
+| `mimo-v2.5-asr` | 8192 / 2048 | 非计价主数据 | `id`→[xiaomi-models](../SOURCES.md#xiaomi-models)、`spec.contextWindow`→[xiaomi-models](../SOURCES.md#xiaomi-models)、`spec.maxOutputTokens`→[xiaomi-models](../SOURCES.md#xiaomi-models) | [xiaomi-models](../SOURCES.md#xiaomi-models) | partial | `4cfb4519523407bc8baaa97d1c980885d79d65841eaec46937cacb4bdc1c0716` |
 
 ## 下次更新核查
 

@@ -3,7 +3,7 @@
 [供应商索引](../README.md) · [官网证据目录](../SOURCES.md)
 
 - 精确模型 ID：`embed-v5.0-pro`。
-- 核验日期：2026-10-03；本次只迁移记录，没有重新核验或提高状态。
+- 核验日期：2026-10-03；本轮增量复核仅覆盖明确列出的字段，其余接入面和参数保持各自状态。
 
 ## 适用接入面
 
@@ -41,7 +41,7 @@
 
 | 模型 ID | 上下文 / 输出 | 计价 | 已核字段→来源 | 来源入口 | 状态 | 数据指纹 |
 | --- | --- | --- | --- | --- | --- | --- |
-| `embed-v5.0-pro` | 128000 / 未声明 | USD：未声明 / 未声明 | `extra.defaultDimension`→[cohere-embed](../SOURCES.md#cohere-embed), `modelName`→[cohere-models](../SOURCES.md#cohere-models) | [cohere-embed](../SOURCES.md#cohere-embed), [cohere-models](../SOURCES.md#cohere-models) | partial | `c39dbf7e430873ac18f25292da6308ced9910764055d5a1558c965731d556564` |
+| `embed-v5.0-pro` | 128000 / 未声明 | USD：未声明 / 未声明 | `extra.defaultDimension`→[cohere-embed](../SOURCES.md#cohere-embed), `modelName`→[cohere-models](../SOURCES.md#cohere-models)；`extra.defaultDimension`→[cohere-models](../SOURCES.md#cohere-models) | [cohere-embed](../SOURCES.md#cohere-embed), [cohere-models](../SOURCES.md#cohere-models) | partial | `c39dbf7e430873ac18f25292da6308ced9910764055d5a1558c965731d556564` |
 
 ### compute/model-specs/cohere.json
 
@@ -79,7 +79,15 @@
 
 | 模型 ID | 上下文 / 输出 | 计价 | 已核字段→来源 | 来源入口 | 状态 | 数据指纹 |
 | --- | --- | --- | --- | --- | --- | --- |
-| `embed-v5.0-pro` | 128000 / 未声明 | 非计价主数据 | `id`→[cohere-models](../SOURCES.md#cohere-models), `spec.extra.defaultDimension`→[cohere-embed](../SOURCES.md#cohere-embed), `spec.extra.dimensions`→[cohere-embed](../SOURCES.md#cohere-embed) | [cohere-embed](../SOURCES.md#cohere-embed), [cohere-models](../SOURCES.md#cohere-models) | partial | `da0a4136e27363bcc3c73806d7c2ef3f696698f3373799b7aad4a378d3a3bc4d` |
+| `embed-v5.0-pro` | 128000 / 未声明 | 非计价主数据 | `id`→[cohere-models](../SOURCES.md#cohere-models), `spec.extra.defaultDimension`→[cohere-embed](../SOURCES.md#cohere-embed), `spec.extra.dimensions`→[cohere-embed](../SOURCES.md#cohere-embed)；`spec.extra.dimensions`→[cohere-models](../SOURCES.md#cohere-models)；`spec.extra.defaultDimension`→[cohere-models](../SOURCES.md#cohere-models) | [cohere-embed](../SOURCES.md#cohere-embed), [cohere-models](../SOURCES.md#cohere-models) | partial | `da0a4136e27363bcc3c73806d7c2ef3f696698f3373799b7aad4a378d3a3bc4d` |
+
+## 本轮补充核验
+
+官方型号表逐一给出原生向量维度与默认值；兼容接口不支持 dimensions 请求参数，Provider 不因此新增可选维度。128k 为简写，未提高精确窗口证明。
+
+## 本轮补充核验
+
+官方原生默认向量维度已核；兼容 API 不接受 dimensions 参数，本文不把原生多模态与可变维度等同于兼容端点。
 
 ## 下次更新核查
 

@@ -3,7 +3,7 @@
 [供应商索引](../README.md) · [官网证据目录](../SOURCES.md)
 
 - 精确模型 ID：`MiniMax-M2.7-highspeed`。
-- 核验日期：2026-10-03；本次只迁移记录，没有重新核验或提高状态。
+- 核验日期：2026-10-03；本轮增量复核仅覆盖明确列出的字段，其余接入面和参数保持各自状态。
 
 ## 适用接入面
 
@@ -34,8 +34,7 @@
     "reasoning",
     "code",
     "tool_use",
-    "fast",
-    "vision"
+    "fast"
   ],
   "defaultTemperature": 1,
   "defaultTopP": 0.95,
@@ -49,7 +48,7 @@
 
 | 模型 ID | 上下文 / 输出 | 计价 | 已核字段→来源 | 来源入口 | 状态 | 数据指纹 |
 | --- | --- | --- | --- | --- | --- | --- |
-| `MiniMax-M2.7-highspeed` | 204800 / 131072 | CNY：4.2 / 16.8 | `modelName`→[minimax-models](../SOURCES.md#minimax-models) | [minimax-models](../SOURCES.md#minimax-models) | partial | `860f3218d418ff71d1e23c749a49befb8182e83f37c6ac15961aabfcc071b803` |
+| `MiniMax-M2.7-highspeed` | 204800 / 131072 | CNY：4.2 / 16.8 | `modelName`→[minimax-models](../SOURCES.md#minimax-models)；`contextWindow`→[minimax-anthropic](../SOURCES.md#minimax-anthropic) |[minimax-models](../SOURCES.md#minimax-models)；[minimax-anthropic](../SOURCES.md#minimax-anthropic) | partial | `bfdaa5b51506952de485070d9246dc9443e0320ae0e443e4ffcb147b6f1db507` |
 
 ### compute/coding-plans/minimax-coding.json
 
@@ -70,7 +69,6 @@
     "reasoning",
     "code",
     "tool_use",
-    "vision",
     "fast"
   ]
 }
@@ -81,7 +79,7 @@
 
 | 模型 ID | 上下文 / 输出 | 计价 | 已核字段→来源 | 来源入口 | 状态 | 数据指纹 |
 | --- | --- | --- | --- | --- | --- | --- |
-| `MiniMax-M2.7-highspeed` | 204800 / 131072 | 套餐：未声明 / 未声明 | `modelName`→[minimax-models](../SOURCES.md#minimax-models) | [minimax-models](../SOURCES.md#minimax-models) | partial | `d8c859c1abac6ee87cbf95d5dc39e1eac497368f4597c0a0551cddfc1e891040` |
+| `MiniMax-M2.7-highspeed` | 204800 / 131072 | 套餐：未声明 / 未声明 | `modelName`→[minimax-models](../SOURCES.md#minimax-models) | [minimax-models](../SOURCES.md#minimax-models) | partial | `a065dfa7d3287e8b9fbefc0f85f3e28587119807f7038804da8cbc9e5e95e9e5` |
 
 ### compute/model-specs/minimax.json
 
@@ -102,8 +100,7 @@
     "reasoning",
     "code",
     "tool_use",
-    "fast",
-    "vision"
+    "fast"
   ],
   "spec.defaultTemperature": 1
 }
@@ -114,7 +111,15 @@
 
 | 模型 ID | 上下文 / 输出 | 计价 | 已核字段→来源 | 来源入口 | 状态 | 数据指纹 |
 | --- | --- | --- | --- | --- | --- | --- |
-| `MiniMax-M2.7-highspeed` | 204800 / 131072 | 非计价主数据 | `id`→[minimax-models](../SOURCES.md#minimax-models) | [minimax-models](../SOURCES.md#minimax-models) | partial | `2fc7956fcfa436a76559587007b751d12c1df843156e5ff53d44660545ea65ed` |
+| `MiniMax-M2.7-highspeed` | 204800 / 131072 | 非计价主数据 | `id`→[minimax-models](../SOURCES.md#minimax-models)；`spec.contextWindow`→[minimax-anthropic](../SOURCES.md#minimax-anthropic) |[minimax-models](../SOURCES.md#minimax-models)；[minimax-anthropic](../SOURCES.md#minimax-anthropic) | partial | `510ebe4c0b5e6451a57158dc1bcd48d704dc92520971c2f5d4e2b341c866b2dc` |
+
+## 本轮补充核验
+
+本轮读取官方Anthropic SDK型号表明文上下文：M3为1000000，M2.7/2.5/2.1及highspeed为204800。M2.x仅文本和工具相关块，不支持图片/视频；清理API/套餐/sharedspec中误列的vision能力。输出上限、价格、套餐账号可用性不因窗口核验提高状态。
+
+## 本轮补充核验
+
+本轮读取官方Anthropic SDK型号表明文上下文：M3为1000000，M2.7/2.5/2.1及highspeed为204800。M2.x仅文本和工具相关块，不支持图片/视频；清理API/套餐/sharedspec中误列的vision能力。输出上限、价格、套餐账号可用性不因窗口核验提高状态。
 
 ## 下次更新核查
 

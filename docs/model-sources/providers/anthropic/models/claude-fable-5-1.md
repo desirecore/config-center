@@ -3,7 +3,7 @@
 [供应商索引](../README.md) · [官网证据目录](../SOURCES.md)
 
 - 精确模型 ID：`claude-fable-5-1`。
-- 核验日期：2026-10-03；本次只迁移记录，没有重新核验或提高状态。
+- 核验日期：2026-10-03；本轮复核仅限下表已核字段，其余仍待核实。
 
 ## 适用接入面
 
@@ -49,7 +49,8 @@
     "defaultEffort": "high"
   },
   "extra.thinkingOnly": true,
-  "extra.adaptiveThinking": true
+  "extra.adaptiveThinking": true,
+  "modelName": "claude-fable-5-1"
 }
 ```
 <!-- source-details:end -->
@@ -58,7 +59,7 @@
 
 | 模型 ID | 上下文 / 输出 | 计价 | 已核字段→来源 | 来源入口 | 状态 | 数据指纹 |
 | --- | --- | --- | --- | --- | --- | --- |
-| `claude-fable-5-1` | 1000000 / 128000 | USD：未声明 / 未声明 | `modelName`→[claude-models](../SOURCES.md#claude-models) | [claude-models](../SOURCES.md#claude-models) | partial | `8676a78498c4b22fa8d9a383970c53c8a20da7a335a507290c4e5513c29d0e99` |
+| `claude-fable-5-1` | 1000000 / 128000 | USD：未声明 / 未声明 | `modelName`→[claude-fable51](../SOURCES.md#claude-fable51) | [claude-models](../SOURCES.md#claude-models), [claude-fable51](../SOURCES.md#claude-fable51) | partial | `8676a78498c4b22fa8d9a383970c53c8a20da7a335a507290c4e5513c29d0e99` |
 
 ### compute/providers/anthropic.json
 
@@ -104,7 +105,16 @@
     "write1h": 20,
     "read": 0.25
   },
-  "extra.pricingNotes": "Prices are per 1M tokens. Full 1M context is billed at standard pricing."
+  "extra.pricingNotes": "Prices are per 1M tokens. Full 1M context is billed at standard pricing.",
+  "modelName": "claude-fable-5-1",
+  "extra.reasoning.defaultEffort": "high",
+  "extra.reasoning.supportedEfforts": [
+    "low",
+    "medium",
+    "high",
+    "xhigh",
+    "max"
+  ]
 }
 ```
 <!-- source-details:end -->
@@ -113,7 +123,7 @@
 
 | 模型 ID | 上下文 / 输出 | 计价 | 已核字段→来源 | 来源入口 | 状态 | 数据指纹 |
 | --- | --- | --- | --- | --- | --- | --- |
-| `claude-fable-5-1` | 1000000 / 128000 | USD：10 / 50 | `modelName`→[claude-models](../SOURCES.md#claude-models) | [claude-models](../SOURCES.md#claude-models) | partial | `0c277612edfecf40cf814529cde3510488e8690ec2dc483d61ebd4fb354c352a` |
+| `claude-fable-5-1` | 1000000 / 128000 | USD：10 / 50 | `modelName`→[claude-fable51](../SOURCES.md#claude-fable51), `contextWindow`→[claude-fable51](../SOURCES.md#claude-fable51), `maxOutputTokens`→[claude-fable51](../SOURCES.md#claude-fable51), `inputPrice`→[claude-fable51](../SOURCES.md#claude-fable51), `outputPrice`→[claude-fable51](../SOURCES.md#claude-fable51), `extra.reasoning.defaultEffort`→[claude-fable51](../SOURCES.md#claude-fable51), `extra.reasoning.supportedEfforts`→[claude-effort](../SOURCES.md#claude-effort) | [claude-models](../SOURCES.md#claude-models), [claude-fable51](../SOURCES.md#claude-fable51), [claude-effort](../SOURCES.md#claude-effort) | partial | `0c277612edfecf40cf814529cde3510488e8690ec2dc483d61ebd4fb354c352a` |
 
 ### compute/model-specs/anthropic.json
 
@@ -156,7 +166,8 @@
       "max"
     ],
     "defaultMode": "high"
-  }
+  },
+  "id": "claude-fable-5-1"
 }
 ```
 <!-- source-details:end -->
@@ -165,7 +176,7 @@
 
 | 模型 ID | 上下文 / 输出 | 计价 | 已核字段→来源 | 来源入口 | 状态 | 数据指纹 |
 | --- | --- | --- | --- | --- | --- | --- |
-| `claude-fable-5-1` | 1000000 / 128000 | 非计价主数据 | `id`→[claude-models](../SOURCES.md#claude-models) | [claude-models](../SOURCES.md#claude-models) | partial | `fc72b0d7c506d81052e9545c27713e6a0283730973b7df96bf64755a054c0b23` |
+| `claude-fable-5-1` | 1000000 / 128000 | 非计价主数据 | `id`→[claude-fable51](../SOURCES.md#claude-fable51), `spec.contextWindow`→[claude-fable51](../SOURCES.md#claude-fable51), `spec.maxOutputTokens`→[claude-fable51](../SOURCES.md#claude-fable51) | [claude-models](../SOURCES.md#claude-models), [claude-fable51](../SOURCES.md#claude-fable51) | partial | `fc72b0d7c506d81052e9545c27713e6a0283730973b7df96bf64755a054c0b23` |
 
 ## 下次更新核查
 

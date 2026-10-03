@@ -121,6 +121,7 @@ const SUSPICIOUS_EXTRA_KEYS = {
   provider: {
     reasoningEffort: '客户端只读嵌套的 extra.reasoning.supportedEfforts，扁平写法永不生效',
     defaultReasoningEffort: '同上，应并入 extra.reasoning.defaultEffort',
+    defaultEffort: '扁平默认值不被客户端读取，应并入 extra.reasoning.defaultEffort 并核查接入面默认',
   },
   spec: {
     reasoningEffort: 'reasoning effort 是接入面能力，只能声明在 provider model 的 extra.reasoning 中',

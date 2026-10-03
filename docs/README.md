@@ -3,3 +3,9 @@
 - [模型来源分层导航](model-sources/README.md)
 - [来源维护规则](model-sources/MAINTENANCE.md)
 - [项目更新前核查清单](../AGENTS.md)
+
+- [数据维护计划](data-maintenance/PLAN.md)
+- [本轮执行结果与剩余工作](data-maintenance/RESULTS.md)
+- [客户端与账号验收依赖](data-maintenance/CLIENT-DEPENDENCIES.md)
+- [非模型来源与策略](data-sources/README.md)
+- [运行时官方来源](runtime-sources/README.md)

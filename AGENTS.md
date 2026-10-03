@@ -62,6 +62,8 @@
 - 基于已有文件增量编辑，保留既有证据、日期、待核实项和历史说明。批量迁移目录只能迁移记录，不能凭迁移提高核验状态或刷新核验日期。
 - 同步单模型参数详情、字段→官网引用、核验状态和模型指纹；平台字段变化时更新单接入面文件及平台指纹。禁止只换指纹来掩盖未重新核实的数据。
 - `partial` 只核实列出的字段，`pending` 尚缺字段级证据，`historical` 仅作历史兼容。来源目录读取失败、返回壳或需要权限时如实记录，不用第三方补数。
+- 修改共享规格时同步更新 `compute/model-specs/_index.json` 的数据批次说明；已核客户端使用该索引 mtime 失效规格缓存，仅修改单个规格文件可能不触发重读。
+- 非模型官方 API 契约与本仓定价/默认策略分别记录在 `docs/data-sources`；运行时官方目录、归档摘要及 Hatch pin 记录在 `docs/runtime-sources`。离线来源校验只验证配置与记录一致，联网刷新和安装/账号验收分别进行。
 - 数据变化时基于最新远端版本递增 `manifest.json#presetDataVersion` 并更新日期；仅文档结构/工作规范调整不改变预设数据版本。
 - 禁止将 API Key、密码、Token、私有运行时配置写入聊天、文档、日志或源码。来源链接不含凭据，官网内容只保存必要摘要/指纹与核验结论。
 
@@ -69,6 +71,8 @@
 
 ```bash
 npm run validate:sources
+npm run validate:data-sources
+npm run validate:runtimes
 npm run validate
 npm test
 git diff --check

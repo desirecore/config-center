@@ -3,7 +3,7 @@
 [供应商索引](../README.md) · [官网证据目录](../SOURCES.md)
 
 - 精确模型 ID：`claude-sonnet-5-5`。
-- 核验日期：2026-10-03；本次只迁移记录，没有重新核验或提高状态。
+- 核验日期：2026-10-03；本轮复核仅限下表已核字段，其余仍待核实。
 
 ## 适用接入面
 
@@ -50,7 +50,9 @@
   },
   "extra.adaptiveThinking": true,
   "extra.samplingParametersDeprecated": true,
-  "extra.forcedToolChoiceUnsupported": true
+  "extra.forcedToolChoiceUnsupported": true,
+  "extra.reasoning.defaultEffort": "high",
+  "modelName": "claude-sonnet-5-5"
 }
 ```
 <!-- source-details:end -->
@@ -59,7 +61,7 @@
 
 | 模型 ID | 上下文 / 输出 | 计价 | 已核字段→来源 | 来源入口 | 状态 | 数据指纹 |
 | --- | --- | --- | --- | --- | --- | --- |
-| `claude-sonnet-5-5` | 1000000 / 128000 | USD：未声明 / 未声明 | `contextWindow`→[claude-sonnet55](../SOURCES.md#claude-sonnet55), `extra.adaptiveThinking`→[claude-sonnet55](../SOURCES.md#claude-sonnet55), `extra.forcedToolChoiceUnsupported`→[claude-sonnet55](../SOURCES.md#claude-sonnet55), `extra.reasoning.defaultEffort`→[claude-sonnet55](../SOURCES.md#claude-sonnet55), `maxOutputTokens`→[claude-sonnet55](../SOURCES.md#claude-sonnet55), `modelName`→[claude-models](../SOURCES.md#claude-models) | [claude-models](../SOURCES.md#claude-models), [claude-sonnet55](../SOURCES.md#claude-sonnet55) | partial | `deaa1823c6e0e828c96669746a571641da9d5878c7e7078834d326f290534255` |
+| `claude-sonnet-5-5` | 1000000 / 128000 | USD：未声明 / 未声明 | `contextWindow`→[claude-sonnet55](../SOURCES.md#claude-sonnet55), `extra.adaptiveThinking`→[claude-sonnet55](../SOURCES.md#claude-sonnet55), `extra.forcedToolChoiceUnsupported`→[claude-sonnet55](../SOURCES.md#claude-sonnet55), `extra.reasoning.defaultEffort`→[claude-sonnet55](../SOURCES.md#claude-sonnet55), `maxOutputTokens`→[claude-sonnet55](../SOURCES.md#claude-sonnet55), `modelName`→[claude-sonnet55](../SOURCES.md#claude-sonnet55) | [claude-models](../SOURCES.md#claude-models), [claude-sonnet55](../SOURCES.md#claude-sonnet55) | partial | `deaa1823c6e0e828c96669746a571641da9d5878c7e7078834d326f290534255` |
 
 ### compute/providers/anthropic.json
 
@@ -105,7 +107,16 @@
     "write5m": 2.5,
     "write1h": 4,
     "read": 0.2
-  }
+  },
+  "extra.reasoning.defaultEffort": "high",
+  "modelName": "claude-sonnet-5-5",
+  "extra.reasoning.supportedEfforts": [
+    "low",
+    "medium",
+    "high",
+    "xhigh",
+    "max"
+  ]
 }
 ```
 <!-- source-details:end -->
@@ -114,7 +125,7 @@
 
 | 模型 ID | 上下文 / 输出 | 计价 | 已核字段→来源 | 来源入口 | 状态 | 数据指纹 |
 | --- | --- | --- | --- | --- | --- | --- |
-| `claude-sonnet-5-5` | 1000000 / 128000 | USD：2 / 10 | `contextWindow`→[claude-sonnet55](../SOURCES.md#claude-sonnet55), `extra.adaptiveThinking`→[claude-sonnet55](../SOURCES.md#claude-sonnet55), `extra.forcedToolChoiceUnsupported`→[claude-sonnet55](../SOURCES.md#claude-sonnet55), `extra.reasoning.defaultEffort`→[claude-sonnet55](../SOURCES.md#claude-sonnet55), `inputPrice`→[claude-sonnet55](../SOURCES.md#claude-sonnet55), `maxOutputTokens`→[claude-sonnet55](../SOURCES.md#claude-sonnet55), `modelName`→[claude-models](../SOURCES.md#claude-models), `outputPrice`→[claude-sonnet55](../SOURCES.md#claude-sonnet55) | [claude-models](../SOURCES.md#claude-models), [claude-sonnet55](../SOURCES.md#claude-sonnet55) | partial | `91493f5adabf726879df34330d61069199c0659e5cf5d5159508991522b847bb` |
+| `claude-sonnet-5-5` | 1000000 / 128000 | USD：2 / 10 | `contextWindow`→[claude-sonnet55](../SOURCES.md#claude-sonnet55), `extra.adaptiveThinking`→[claude-sonnet55](../SOURCES.md#claude-sonnet55), `extra.forcedToolChoiceUnsupported`→[claude-sonnet55](../SOURCES.md#claude-sonnet55), `extra.reasoning.defaultEffort`→[claude-sonnet55](../SOURCES.md#claude-sonnet55), `inputPrice`→[claude-sonnet55](../SOURCES.md#claude-sonnet55), `maxOutputTokens`→[claude-sonnet55](../SOURCES.md#claude-sonnet55), `modelName`→[claude-sonnet55](../SOURCES.md#claude-sonnet55), `outputPrice`→[claude-sonnet55](../SOURCES.md#claude-sonnet55), `extra.reasoning.supportedEfforts`→[claude-effort](../SOURCES.md#claude-effort) | [claude-models](../SOURCES.md#claude-models), [claude-sonnet55](../SOURCES.md#claude-sonnet55), [claude-effort](../SOURCES.md#claude-effort) | partial | `9f9e6e077d1cffb9a2618b56c95bc82d9e1730a627538e08fba3b032e9ba6955` |
 
 ### compute/model-specs/anthropic.json
 
@@ -157,7 +168,8 @@
       "max"
     ],
     "defaultMode": "high"
-  }
+  },
+  "id": "claude-sonnet-5-5"
 }
 ```
 <!-- source-details:end -->
@@ -166,7 +178,7 @@
 
 | 模型 ID | 上下文 / 输出 | 计价 | 已核字段→来源 | 来源入口 | 状态 | 数据指纹 |
 | --- | --- | --- | --- | --- | --- | --- |
-| `claude-sonnet-5-5` | 1000000 / 128000 | 非计价主数据 | `id`→[claude-models](../SOURCES.md#claude-models), `spec.contextWindow`→[claude-sonnet55](../SOURCES.md#claude-sonnet55), `spec.extra.adaptiveThinking`→[claude-sonnet55](../SOURCES.md#claude-sonnet55), `spec.extra.forcedToolChoiceUnsupported`→[claude-sonnet55](../SOURCES.md#claude-sonnet55), `spec.maxOutputTokens`→[claude-sonnet55](../SOURCES.md#claude-sonnet55), `spec.releasedAt`→[claude-sonnet55](../SOURCES.md#claude-sonnet55) | [claude-models](../SOURCES.md#claude-models), [claude-sonnet55](../SOURCES.md#claude-sonnet55) | partial | `721b450117510321de0f49c3b45ec80e2b35091c8d4fa38ceeb99b958deea141` |
+| `claude-sonnet-5-5` | 1000000 / 128000 | 非计价主数据 | `id`→[claude-sonnet55](../SOURCES.md#claude-sonnet55), `spec.contextWindow`→[claude-sonnet55](../SOURCES.md#claude-sonnet55), `spec.extra.adaptiveThinking`→[claude-sonnet55](../SOURCES.md#claude-sonnet55), `spec.extra.forcedToolChoiceUnsupported`→[claude-sonnet55](../SOURCES.md#claude-sonnet55), `spec.maxOutputTokens`→[claude-sonnet55](../SOURCES.md#claude-sonnet55), `spec.releasedAt`→[claude-sonnet55](../SOURCES.md#claude-sonnet55) | [claude-models](../SOURCES.md#claude-models), [claude-sonnet55](../SOURCES.md#claude-sonnet55) | partial | `721b450117510321de0f49c3b45ec80e2b35091c8d4fa38ceeb99b958deea141` |
 
 ## 下次更新核查
 

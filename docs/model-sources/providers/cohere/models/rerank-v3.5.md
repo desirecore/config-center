@@ -3,47 +3,15 @@
 [供应商索引](../README.md) · [官网证据目录](../SOURCES.md)
 
 - 精确模型 ID：`rerank-v3.5`。
-- 核验日期：2026-10-03；本次只迁移记录，没有重新核验或提高状态。
+- 核验日期：2026-10-03；本轮增量复核仅覆盖明确列出的字段，其余接入面和参数保持各自状态。
 
 ## 适用接入面
 
-- [compute/providers/cohere.json](../access/providers--cohere.md)
 - [compute/model-specs/cohere.json](../access/model-specs--cohere.md)
 
 ## 字段级来源记录
 
 各接入面分开记录；价格为 inputPrice/outputPrice 快照，具体单位和限制看配置及引用官网。partial 只确认已列字段，不代表全部参数、平台可用性或账号调用已验收。
-
-### compute/providers/cohere.json
-
-[查看配置](../../../../../compute/providers/cohere.json) · [接入面说明](../access/providers--cohere.md)
-
-当前配置详情（不是全部官网确认值；routing 是本仓策略）：
-
-<!-- source-details: {"config":"compute/providers/cohere.json","id":"rerank-v3.5"} -->
-```json
-{
-  "contextWindow": 4096,
-  "maxOutputTokens": 0,
-  "serviceType": [
-    "rerank"
-  ],
-  "capabilities": [
-    "rerank",
-    "semantic_reranking"
-  ],
-  "inputPrice": 2,
-  "outputPrice": 0,
-  "extra.pricingNotes": "Cohere Rerank is priced by search units, not input/output tokens; one search unit is one query with up to 100 documents. The token price fields are retained for schema compatibility."
-}
-```
-<!-- source-details:end -->
-
-<!-- source-config: compute/providers/cohere.json -->
-
-| 模型 ID | 上下文 / 输出 | 计价 | 已核字段→来源 | 来源入口 | 状态 | 数据指纹 |
-| --- | --- | --- | --- | --- | --- | --- |
-| `rerank-v3.5` | 4096 / 0 | USD：2 / 0 | `modelName`→[cohere-models](../SOURCES.md#cohere-models) | [cohere-models](../SOURCES.md#cohere-models) | partial | `aa55d4660b80ea3f2a34ede077aee72bc4f22d505fc5dc212439ea37ce74474a` |
 
 ### compute/model-specs/cohere.json
 
@@ -70,7 +38,15 @@
 
 | 模型 ID | 上下文 / 输出 | 计价 | 已核字段→来源 | 来源入口 | 状态 | 数据指纹 |
 | --- | --- | --- | --- | --- | --- | --- |
-| `rerank-v3.5` | 4096 / 未声明 | 非计价主数据 | `id`→[cohere-models](../SOURCES.md#cohere-models) | [cohere-models](../SOURCES.md#cohere-models) | partial | `dfb7f20fb7d49a6a6188859b78c4d5f6b58a405cb06cf8fac18d02d9a4a057d4` |
+| `rerank-v3.5` | 4096 / 未声明 | 非计价主数据 | `id`→[cohere-models](../SOURCES.md#cohere-models)；`spec.contextWindow`→[cohere-rerank](../SOURCES.md#cohere-rerank) |[cohere-models](../SOURCES.md#cohere-models)；[cohere-rerank](../SOURCES.md#cohere-rerank) | partial | `dfb7f20fb7d49a6a6188859b78c4d5f6b58a405cb06cf8fac18d02d9a4a057d4` |
+
+## 本轮补充核验
+
+官网 Rerank 页明确 context4096。移除错误单位的 token 单价；服务需要原生 /v2/rerank，当前 compatibility/v1 没有对应端点，不能把结构校验通过宣称为可调用。
+
+## 本轮补充核验
+
+官网 Rerank 页明文4096，本轮确认共享参数；接口与计价独立。
 
 ## 下次更新核查
 
@@ -90,3 +66,7 @@
 }
 ```
 <!-- source-metadata:end -->
+
+## 历史兼容接入下架
+
+2026-10-03 从 OpenAI compatibility/v1 Provider 移除 rerank-v3.5，并加入 tombstones。旧条目 inputPrice=2/outputPrice=0 把 search unit 误装入 token 价字段，已随错误接入条目移除；不宣称它是免费 token 输出。原生共享规格保留；未来应在客户端支持原生 /v2/rerank 后增加独立接入面，核验 search unit 单位与实际请求。
