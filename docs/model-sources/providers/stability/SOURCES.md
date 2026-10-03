@@ -11,6 +11,11 @@
 - 入口：[stability](https://stability.ai/news-updates)
 - 类型：`official-doc`；当前读取状态：`fetched`；地域/接入面：`stability 官方入口；具体地域与接入面待该页面逐字段确认`。
 
+### sd35-release
+
+- 入口：[sd35-release](https://stability.ai/news-updates/introducing-stable-diffusion-3-5)
+- 类型：`official-doc`；读取状态：`fetched`；适用范围：Stability原厂SD3.5发布公告；本地权重与PlatformAPI端点可用性分开核。
+
 ## 已知边界与核验说明
 
 已登记官方入口并尝试读取。表中仅标为已核字段的部分有此次核对记录；其余存量参数待逐字段复核。
@@ -28,11 +33,21 @@
       "id": "stability",
       "url": "https://stability.ai/news-updates",
       "kind": "official-doc",
-      "scope": "stability 官方入口；具体地域与接入面待该页面逐字段确认",
+      "scope": "本轮读取 stability 官方 stability 页面；按单模型记录限定字段与接入面",
       "retrieval": "fetched",
       "checkedAt": "2026-10-03",
       "contentSha256": "89d63195c184b398f48647563610a8918eefff9b65b999ace04d543f152d2cfa",
       "resolvedUrl": "https://stability.ai/news-updates"
+    },
+    {
+      "id": "sd35-release",
+      "url": "https://stability.ai/news-updates/introducing-stable-diffusion-3-5",
+      "kind": "official-doc",
+      "scope": "Stability原厂SD3.5发布公告；本地权重与PlatformAPI端点可用性分开核",
+      "retrieval": "fetched",
+      "checkedAt": "2026-10-03",
+      "contentSha256": "87614737504ac9cf47baf41287092121031b02c759e12c4d5a824bd4b86a07c6",
+      "resolvedUrl": "https://stability.ai/news-updates/introducing-stable-diffusion-3-5"
     }
   ]
 }

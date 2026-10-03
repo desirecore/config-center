@@ -31,7 +31,7 @@
       "scope": "OpenRouter 公共 Models API 快照；USD/token 换算为 USD/百万 token",
       "retrieval": "fetched",
       "checkedAt": "2026-10-03",
-      "contentSha256": "38864160760c394d4d81864581a33adbced3c582fdd8732809f90ec7e911f032",
+      "contentSha256": "17f5cbde8c7bbac639e17cabd2f90dcb82499e9b6bbff38d234ca0c7129b96c2",
       "resolvedUrl": "https://openrouter.ai/api/v1/models"
     }
   ]

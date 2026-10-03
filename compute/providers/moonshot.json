@@ -59,9 +59,12 @@
           ],
           "defaultEffort": "max"
         },
-        "pricingNotes": "国内官方价格表当前未返回模型单价；不将国际美元价格换算为国内人民币价格。",
-        "samplingParametersDeprecated": true
-      }
+        "pricingNotes": "CNY per 1M tokens: input 20, output 100, cache hit 2. Cache writes: TTL 5min 20, TTL 1h 40; recorded separately from cache-hit billing.",
+        "samplingParametersDeprecated": true,
+        "cacheHitPrice": 2
+      },
+      "inputPrice": 20,
+      "outputPrice": 100
     },
     {
       "modelName": "kimi-k2.7-code",

@@ -16,7 +16,7 @@
 以上是配置快照，不能据此宣布该端点或账号已实际验收。核查地域、套餐支持、凭据来源及协议时，对照官网证据目录并记录结论。
 
 <!-- source-config: compute/providers/cohere.json -->
-<!-- source-config-fingerprint: 90a11e2c69ccbe6ea4c3d312589acf16757abbd0b8ac5e7e4d9269dee2215124 -->
+<!-- source-config-fingerprint: 621a3f431d2357d31331b1c38cb1485c839a9abea85ad0d809bee81eea956399 -->
 
 ## 关联模型
 
@@ -26,7 +26,6 @@
 - [`command-a-03-2025`](../models/command-a-03-2025.md)
 - [`command-r7b-12-2024`](../models/command-r7b-12-2024.md)
 - [`embed-v4.0`](../models/embed-v4.0.md)
-- [`rerank-v3.5`](../models/rerank-v3.5.md)
 
 ## 更新前检查
 
@@ -44,3 +43,7 @@
 }
 ```
 <!-- source-metadata:end -->
+
+## 接入面边界
+
+本端点只有官方明确的 Chat/文本 Embed 兼容能力。2026-10-03 移除误列的原生 Rerank3.5；tombstone 使存量预设停止继续宣称可用，独立原生 Rerank 适配另行验收。

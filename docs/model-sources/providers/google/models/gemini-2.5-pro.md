@@ -3,7 +3,7 @@
 [供应商索引](../README.md) · [官网证据目录](../SOURCES.md)
 
 - 精确模型 ID：`gemini-2.5-pro`。
-- 核验日期：2026-10-03；本次只迁移记录，没有重新核验或提高状态。
+- 核验日期：2026-10-03；本轮增量复核仅覆盖明确列出的字段，其余接入面和参数保持各自状态。
 
 ## 适用接入面
 
@@ -48,7 +48,7 @@
 
 | 模型 ID | 上下文 / 输出 | 计价 | 已核字段→来源 | 来源入口 | 状态 | 数据指纹 |
 | --- | --- | --- | --- | --- | --- | --- |
-| `gemini-2.5-pro` | 1048576 / 65536 | USD：1.25 / 10 | `modelName`→[google-models](../SOURCES.md#google-models) | [google-models](../SOURCES.md#google-models) | partial | `279a602a413df050eb26dcd4bc0fba8e0959a9cbc9d5f9e4d214254e436496fe` |
+| `gemini-2.5-pro` | 1048576 / 65536 | USD：1.25 / 10 | `modelName`→[google-models](../SOURCES.md#google-models)；`maxOutputTokens`→[gemini-2-5-pro-limits](../SOURCES.md#gemini-2-5-pro-limits) |[google-models](../SOURCES.md#google-models)；[gemini-2-5-pro-limits](../SOURCES.md#gemini-2-5-pro-limits) | partial | `279a602a413df050eb26dcd4bc0fba8e0959a9cbc9d5f9e4d214254e436496fe` |
 
 ### compute/model-specs/google.json
 
@@ -82,7 +82,15 @@
 
 | 模型 ID | 上下文 / 输出 | 计价 | 已核字段→来源 | 来源入口 | 状态 | 数据指纹 |
 | --- | --- | --- | --- | --- | --- | --- |
-| `gemini-2.5-pro` | 1048576 / 65536 | 非计价主数据 | `id`→[google-models](../SOURCES.md#google-models) | [google-models](../SOURCES.md#google-models) | partial | `60befa10269058a2885f56e99514b6b7b2d22612538f3dc7e5f9e91ae14bf940` |
+| `gemini-2.5-pro` | 1048576 / 65536 | 非计价主数据 | `id`→[google-models](../SOURCES.md#google-models)；`spec.maxOutputTokens`→[gemini-2-5-pro-limits](../SOURCES.md#gemini-2-5-pro-limits) |[google-models](../SOURCES.md#google-models)；[gemini-2-5-pro-limits](../SOURCES.md#gemini-2-5-pro-limits) | partial | `60befa10269058a2885f56e99514b6b7b2d22612538f3dc7e5f9e91ae14bf940` |
+
+## 本轮补充核验
+
+实际读取该模型页：Input token limit 1048576、Output token limit 65536。仅将输出字段标为已核；contextWindow 是既有窗口配置，本轮不将 input limit 误当 input+output 总窗口证明。价格、effort、采样与账号权限仍独立待核。
+
+## 本轮补充核验
+
+实际读取该模型页：Input token limit 1048576、Output token limit 65536。仅将输出字段标为已核；contextWindow 是既有窗口配置，本轮不将 input limit 误当 input+output 总窗口证明。价格、effort、采样与账号权限仍独立待核。
 
 ## 下次更新核查
 

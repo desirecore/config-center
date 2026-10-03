@@ -3,7 +3,7 @@
 [供应商索引](../README.md) · [官网证据目录](../SOURCES.md)
 
 - 精确模型 ID：`gpt-5.4`。
-- 核验日期：2026-10-03；本次只迁移记录，没有重新核验或提高状态。
+- 核验日期：2026-10-03；本轮增量核验下列字段；未列字段及其他接入面的状态保持独立。
 
 ## 适用接入面
 
@@ -74,7 +74,16 @@
   "inputPrice": 2.5,
   "outputPrice": 15,
   "extra.cachedInputPrice": 0.25,
-  "extra.pricingNotes": "Prices are per 1M tokens; long-context requests may use higher-tier pricing per OpenAI pricing page."
+  "extra.pricingNotes": "Prices are per 1M tokens; long-context requests may use higher-tier pricing per OpenAI pricing page.",
+  "extra.reasoning": {
+    "supportedEfforts": [
+      "none",
+      "low",
+      "medium",
+      "high",
+      "xhigh"
+    ]
+  }
 }
 ```
 <!-- source-details:end -->
@@ -83,7 +92,7 @@
 
 | 模型 ID | 上下文 / 输出 | 计价 | 已核字段→来源 | 来源入口 | 状态 | 数据指纹 |
 | --- | --- | --- | --- | --- | --- | --- |
-| `gpt-5.4` | 1050000 / 128000 | USD：2.5 / 15 | 待核实 | [openai-models](../SOURCES.md#openai-models) | pending | `3b7dfb8901c12eae785d26e34e091bf06928b5523962b34ef07ad8b5ecd99048` |
+| `gpt-5.4` | 1050000 / 128000 | USD：2.5 / 15 | `modelName`→[gpt-5-4-api](../SOURCES.md#gpt-5-4-api)；`contextWindow`→[gpt-5-4-api](../SOURCES.md#gpt-5-4-api)；`maxOutputTokens`→[gpt-5-4-api](../SOURCES.md#gpt-5-4-api)；`inputPrice`→[gpt-5-4-api](../SOURCES.md#gpt-5-4-api)；`outputPrice`→[gpt-5-4-api](../SOURCES.md#gpt-5-4-api)；`extra.reasoning.supportedEfforts`→[gpt-5-4-api](../SOURCES.md#gpt-5-4-api)；`extra.cachedInputPrice`→[gpt-5-4-api](../SOURCES.md#gpt-5-4-api) | [gpt-5-4-api](../SOURCES.md#gpt-5-4-api) | partial | `1e81f5a324608c153767fb8665b13e3773dc24dc23fa45554e111ad4e45d8510` |
 
 ### compute/model-specs/openai.json
 
@@ -131,7 +140,11 @@
 
 | 模型 ID | 上下文 / 输出 | 计价 | 已核字段→来源 | 来源入口 | 状态 | 数据指纹 |
 | --- | --- | --- | --- | --- | --- | --- |
-| `gpt-5.4` | 1050000 / 128000 | 非计价主数据 | 待核实 | [openai-models](../SOURCES.md#openai-models) | pending | `0d0981e9f7c721fe920d732cd24fb349a81e9ef4ffec5d1c809c9bf315e09fa5` |
+| `gpt-5.4` | 1050000 / 128000 | 非计价主数据 | `id`→[gpt-5-4-api](../SOURCES.md#gpt-5-4-api)；`spec.contextWindow`→[gpt-5-4-api](../SOURCES.md#gpt-5-4-api)；`spec.maxOutputTokens`→[gpt-5-4-api](../SOURCES.md#gpt-5-4-api) | [gpt-5-4-api](../SOURCES.md#gpt-5-4-api) | partial | `0d0981e9f7c721fe920d732cd24fb349a81e9ef4ffec5d1c809c9bf315e09fa5` |
+
+本轮读取该模型官方明文规格页，确认原厂直连窗口、输出、标准价格与推理合同。Pro 仅限 Responses；GPT-5.4 Pro 官方默认 medium，修正旧 high。none 在产品层映射 off，schema 不接受将 none 写成 defaultEffort，故未伪造其他显式默认档。
+
+共享规格只复核内在窗口和输出；Provider 推理矩阵不复制到共享规格。
 
 ## 下次更新核查
 

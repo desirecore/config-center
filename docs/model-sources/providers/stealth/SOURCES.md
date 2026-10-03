@@ -52,3 +52,7 @@
 }
 ```
 <!-- source-metadata:end -->
+
+## 历史身份收尾
+
+本轮不再向运行时下发 Ox Alpha → GLM-5.3-Flash 的未证实 modelOrigin 身份映射，展示名恢复为 Ox Alpha (Historical)。保留 exact 别名与既有历史规格，以兼容旧配置；它们不代表当前供应商目录仍可调用，也不是新核验的正式规格。需取得原厂身份揭示正文后才能恢复映射。

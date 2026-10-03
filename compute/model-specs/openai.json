@@ -245,12 +245,12 @@
           "chat"
         ],
         "supportsReasoning": true,
-        "description": "参数暂按 GPT-5.6 Luna 配置，待官方规格确认"
+        "description": "参数暂按 GPT-5.6 Luna 配置，待官方规格确认；保留手动选择，未经官方规格核验前不参与 Agent 自动选型"
       },
       "routing": {
         "tier": "lightweight",
         "routingPriority": 10,
-        "eligibleForAgent": true,
+        "eligibleForAgent": false,
         "defaultReference": false,
         "reasoning": {
           "supportedModes": [

@@ -31,7 +31,7 @@
       "scope": "perplexity 官方入口；具体地域与接入面待该页面逐字段确认",
       "retrieval": "fetched",
       "checkedAt": "2026-10-03",
-      "contentSha256": "1b0fcd7be3f09329357b1d99b50f41833d0614f57fccdf0aa367552018923cb8",
+      "contentSha256": "ec4e1d1fcf5c9bb7f4f18450e05be0c9f2fdec218b348da140f10b03d37bc1a6",
       "resolvedUrl": "https://docs.perplexity.ai/docs/agent-api/migrate-from-sonar/overview"
     }
   ]

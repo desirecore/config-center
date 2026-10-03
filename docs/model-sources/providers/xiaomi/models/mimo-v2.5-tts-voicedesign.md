@@ -3,7 +3,7 @@
 [供应商索引](../README.md) · [官网证据目录](../SOURCES.md)
 
 - 精确模型 ID：`mimo-v2.5-tts-voicedesign`。
-- 核验日期：2026-10-03；本次只迁移记录，没有重新核验或提高状态。
+- 核验日期：2026-10-03；本轮重新读取官网，逐接入面只确认下表列出的字段；其余仍待核实。
 
 ## 适用接入面
 
@@ -38,7 +38,7 @@
 
 | 模型 ID | 上下文 / 输出 | 计价 | 已核字段→来源 | 来源入口 | 状态 | 数据指纹 |
 | --- | --- | --- | --- | --- | --- | --- |
-| `mimo-v2.5-tts-voicedesign` | 未声明 / 未声明 | CNY：未声明 / 未声明 | 待核实 | [xiaomi](../SOURCES.md#xiaomi) | pending | `e32315265f593c73fcd7704fa0a650e6c9bbc007337f4f69d98ddff014fea637` |
+| `mimo-v2.5-tts-voicedesign` | 未声明 / 未声明 | CNY：未声明 / 未声明 | `modelName`→[xiaomi-models](../SOURCES.md#xiaomi-models) | [xiaomi-models](../SOURCES.md#xiaomi-models) | partial | `e32315265f593c73fcd7704fa0a650e6c9bbc007337f4f69d98ddff014fea637` |
 
 ### compute/model-specs/xiaomi.json
 
@@ -66,7 +66,7 @@
 
 | 模型 ID | 上下文 / 输出 | 计价 | 已核字段→来源 | 来源入口 | 状态 | 数据指纹 |
 | --- | --- | --- | --- | --- | --- | --- |
-| `mimo-v2.5-tts-voicedesign` | 8192 / 未声明 | 非计价主数据 | 待核实 | [xiaomi](../SOURCES.md#xiaomi) | pending | `fb40eb73c466a68996ce72297a8f213ec0a002fedab07c48c8511fcc49c02f4b` |
+| `mimo-v2.5-tts-voicedesign` | 8192 / 未声明 | 非计价主数据 | `id`→[xiaomi-models](../SOURCES.md#xiaomi-models) | [xiaomi-models](../SOURCES.md#xiaomi-models) | partial | `fb40eb73c466a68996ce72297a8f213ec0a002fedab07c48c8511fcc49c02f4b` |
 
 ## 下次更新核查
 

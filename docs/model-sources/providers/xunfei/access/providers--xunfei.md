@@ -16,11 +16,10 @@
 以上是配置快照，不能据此宣布该端点或账号已实际验收。核查地域、套餐支持、凭据来源及协议时，对照官网证据目录并记录结论。
 
 <!-- source-config: compute/providers/xunfei.json -->
-<!-- source-config-fingerprint: d3a6cf19f2ba08c91c3637e19aec7de281c5ce375ce63c91557791cc7b759531 -->
+<!-- source-config-fingerprint: e7a7a73843f27ab120c010871d3bc851fc1b121ff9bb9809bcaf2fd1caa65afb -->
 
 ## 关联模型
 
-- [`spark-x`](../models/spark-x.md)
 - [`4.0Ultra`](../models/4.0ultra.md)
 
 ## 更新前检查

@@ -3,7 +3,7 @@
   "specs": [
     {
       "id": "ox-alpha",
-      "displayName": "GLM-5.3-Flash (Ox Alpha)",
+      "displayName": "Ox Alpha (Historical)",
       "family": "ox-alpha",
       "match": {
         "exact": [
@@ -34,15 +34,10 @@
         "defaultTemperature": 1,
         "defaultTopP": 0.95,
         "supportsReasoning": true,
-        "description": "Ox Alpha 是智谱 GLM-5.3-Flash 的匿名发布别名（2026-08-26 揭晓）。原生多模态推理模型，面向高效编码与长程 Agent 任务，100 万上下文；强制思考，无法关闭",
+        "description": "Ox Alpha 历史匿名模型兼容记录；当前官方目录未列出。旧记录曾关联 GLM-5.3-Flash，但本轮未取得官方身份揭示证据，不下发未证实的原厂身份映射；历史参数不代表当前可用性",
         "extra": {
           "thinkingDefault": true,
-          "thinkingOnly": true,
-          "modelOrigin": {
-            "vendor": "zhipu",
-            "canonicalModelId": "glm-5.3-flash",
-            "family": "glm-5.3-flash"
-          }
+          "thinkingOnly": true
         },
         "releasedAt": "2026-08-21"
       }

@@ -57,7 +57,7 @@
 
 | 模型 ID | 上下文 / 输出 | 计价 | 已核字段→来源 | 来源入口 | 状态 | 数据指纹 |
 | --- | --- | --- | --- | --- | --- | --- |
-| `deepseek-v4-flash-0731` | 1000000 / 384000 | 非计价主数据 | 待核实 | [deepseek-pricing](../SOURCES.md#deepseek-pricing) | pending | `a7e00817468dfc4f7b45e9de8fc3d9fabb4d417f1535ea36f03533855b0b0368` |
+| `deepseek-v4-flash-0731` | 1000000 / 384000 | 非计价主数据 | 待核实 | [deepseek-pricing](../SOURCES.md#deepseek-pricing) | pending | `78655b7df315439489b83557a8add0821837471cfab1177f24765323dd87f26e` |
 
 ## 下次更新核查
 
@@ -77,3 +77,7 @@
 }
 ```
 <!-- source-metadata:end -->
+
+## 本轮接入合同清理
+
+共享规格的 spec.extra.reasoningEffort 已移除：它属于具体网关可接受的请求档位，不能作为内在规格下发。保留既有 routing.reasoning 策略及其他参数，不借此提高官方核验状态。百炼套餐已有生效的 extra.reasoning high/max；只删除并列旧键，不把原厂或按量 API 的 low 档位自动套用到套餐。

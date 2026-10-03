@@ -3,7 +3,7 @@
 [供应商索引](../README.md) · [官网证据目录](../SOURCES.md)
 
 - 精确模型 ID：`claude-opus-5-5`。
-- 核验日期：2026-10-03；本次只迁移记录，没有重新核验或提高状态。
+- 核验日期：2026-10-03；本轮复核仅限下表已核字段，其余仍待核实。
 
 ## 适用接入面
 
@@ -49,7 +49,9 @@
     "defaultEffort": "medium"
   },
   "extra.thinkingOnly": true,
-  "extra.adaptiveThinking": true
+  "extra.adaptiveThinking": true,
+  "extra.reasoning.defaultEffort": "medium",
+  "modelName": "claude-opus-5-5"
 }
 ```
 <!-- source-details:end -->
@@ -58,7 +60,7 @@
 
 | 模型 ID | 上下文 / 输出 | 计价 | 已核字段→来源 | 来源入口 | 状态 | 数据指纹 |
 | --- | --- | --- | --- | --- | --- | --- |
-| `claude-opus-5-5` | 1000000 / 128000 | USD：未声明 / 未声明 | `contextWindow`→[claude-opus55](../SOURCES.md#claude-opus55), `extra.adaptiveThinking`→[claude-opus55](../SOURCES.md#claude-opus55), `extra.reasoning.defaultEffort`→[claude-opus55](../SOURCES.md#claude-opus55), `extra.thinkingOnly`→[claude-opus55](../SOURCES.md#claude-opus55), `maxOutputTokens`→[claude-opus55](../SOURCES.md#claude-opus55), `modelName`→[claude-models](../SOURCES.md#claude-models) | [claude-models](../SOURCES.md#claude-models), [claude-opus55](../SOURCES.md#claude-opus55) | partial | `0b8cbd3d1097c7d7474a32bcdab30bb2c24d433e810e9cf6ec34d0eb1c853d25` |
+| `claude-opus-5-5` | 1000000 / 128000 | USD：未声明 / 未声明 | `contextWindow`→[claude-opus55](../SOURCES.md#claude-opus55), `extra.adaptiveThinking`→[claude-opus55](../SOURCES.md#claude-opus55), `extra.reasoning.defaultEffort`→[claude-opus55](../SOURCES.md#claude-opus55), `extra.thinkingOnly`→[claude-opus55](../SOURCES.md#claude-opus55), `maxOutputTokens`→[claude-opus55](../SOURCES.md#claude-opus55), `modelName`→[claude-opus55](../SOURCES.md#claude-opus55) | [claude-models](../SOURCES.md#claude-models), [claude-opus55](../SOURCES.md#claude-opus55) | partial | `0b8cbd3d1097c7d7474a32bcdab30bb2c24d433e810e9cf6ec34d0eb1c853d25` |
 
 ### compute/providers/anthropic.json
 
@@ -104,7 +106,16 @@
     "write1h": 8,
     "read": 0.2
   },
-  "extra.pricingNotes": "Prices are per 1M tokens. Full 1M context is billed at standard pricing."
+  "extra.pricingNotes": "Prices are per 1M tokens. Full 1M context is billed at standard pricing.",
+  "extra.reasoning.defaultEffort": "medium",
+  "modelName": "claude-opus-5-5",
+  "extra.reasoning.supportedEfforts": [
+    "low",
+    "medium",
+    "high",
+    "xhigh",
+    "max"
+  ]
 }
 ```
 <!-- source-details:end -->
@@ -113,7 +124,7 @@
 
 | 模型 ID | 上下文 / 输出 | 计价 | 已核字段→来源 | 来源入口 | 状态 | 数据指纹 |
 | --- | --- | --- | --- | --- | --- | --- |
-| `claude-opus-5-5` | 1000000 / 128000 | USD：4 / 20 | `contextWindow`→[claude-opus55](../SOURCES.md#claude-opus55), `extra.adaptiveThinking`→[claude-opus55](../SOURCES.md#claude-opus55), `extra.forcedToolChoiceUnsupported`→[claude-opus55](../SOURCES.md#claude-opus55), `extra.reasoning.defaultEffort`→[claude-opus55](../SOURCES.md#claude-opus55), `extra.thinkingOnly`→[claude-opus55](../SOURCES.md#claude-opus55), `inputPrice`→[claude-opus55](../SOURCES.md#claude-opus55), `maxOutputTokens`→[claude-opus55](../SOURCES.md#claude-opus55), `modelName`→[claude-models](../SOURCES.md#claude-models), `outputPrice`→[claude-opus55](../SOURCES.md#claude-opus55) | [claude-models](../SOURCES.md#claude-models), [claude-opus55](../SOURCES.md#claude-opus55) | partial | `4104980fbc4161efe7f38cb45343ec308be4f5893d13733ebac51c0562ef1413` |
+| `claude-opus-5-5` | 1000000 / 128000 | USD：4 / 20 | `contextWindow`→[claude-opus55](../SOURCES.md#claude-opus55), `extra.adaptiveThinking`→[claude-opus55](../SOURCES.md#claude-opus55), `extra.forcedToolChoiceUnsupported`→[claude-opus55](../SOURCES.md#claude-opus55), `extra.reasoning.defaultEffort`→[claude-opus55](../SOURCES.md#claude-opus55), `extra.thinkingOnly`→[claude-opus55](../SOURCES.md#claude-opus55), `inputPrice`→[claude-opus55](../SOURCES.md#claude-opus55), `maxOutputTokens`→[claude-opus55](../SOURCES.md#claude-opus55), `modelName`→[claude-opus55](../SOURCES.md#claude-opus55), `outputPrice`→[claude-opus55](../SOURCES.md#claude-opus55), `extra.reasoning.supportedEfforts`→[claude-effort](../SOURCES.md#claude-effort) | [claude-models](../SOURCES.md#claude-models), [claude-opus55](../SOURCES.md#claude-opus55), [claude-effort](../SOURCES.md#claude-effort) | partial | `4104980fbc4161efe7f38cb45343ec308be4f5893d13733ebac51c0562ef1413` |
 
 ### compute/model-specs/anthropic.json
 
@@ -156,7 +167,8 @@
       "max"
     ],
     "defaultMode": "medium"
-  }
+  },
+  "id": "claude-opus-5-5"
 }
 ```
 <!-- source-details:end -->
@@ -165,7 +177,7 @@
 
 | 模型 ID | 上下文 / 输出 | 计价 | 已核字段→来源 | 来源入口 | 状态 | 数据指纹 |
 | --- | --- | --- | --- | --- | --- | --- |
-| `claude-opus-5-5` | 1000000 / 128000 | 非计价主数据 | `id`→[claude-models](../SOURCES.md#claude-models), `spec.contextWindow`→[claude-opus55](../SOURCES.md#claude-opus55), `spec.extra.adaptiveThinking`→[claude-opus55](../SOURCES.md#claude-opus55), `spec.extra.forcedToolChoiceUnsupported`→[claude-opus55](../SOURCES.md#claude-opus55), `spec.extra.thinkingOnly`→[claude-opus55](../SOURCES.md#claude-opus55), `spec.maxOutputTokens`→[claude-opus55](../SOURCES.md#claude-opus55), `spec.releasedAt`→[claude-opus55](../SOURCES.md#claude-opus55) | [claude-models](../SOURCES.md#claude-models), [claude-opus55](../SOURCES.md#claude-opus55) | partial | `221e150e5cd55620f88f614fc65d95620a39463bbc27b387525254d4bc9bc143` |
+| `claude-opus-5-5` | 1000000 / 128000 | 非计价主数据 | `id`→[claude-opus55](../SOURCES.md#claude-opus55), `spec.contextWindow`→[claude-opus55](../SOURCES.md#claude-opus55), `spec.extra.adaptiveThinking`→[claude-opus55](../SOURCES.md#claude-opus55), `spec.extra.forcedToolChoiceUnsupported`→[claude-opus55](../SOURCES.md#claude-opus55), `spec.extra.thinkingOnly`→[claude-opus55](../SOURCES.md#claude-opus55), `spec.maxOutputTokens`→[claude-opus55](../SOURCES.md#claude-opus55), `spec.releasedAt`→[claude-opus55](../SOURCES.md#claude-opus55) | [claude-models](../SOURCES.md#claude-models), [claude-opus55](../SOURCES.md#claude-opus55) | partial | `221e150e5cd55620f88f614fc65d95620a39463bbc27b387525254d4bc9bc143` |
 
 ## 下次更新核查
 

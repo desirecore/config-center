@@ -3,7 +3,7 @@
 [供应商索引](../README.md) · [官网证据目录](../SOURCES.md)
 
 - 精确模型 ID：`glm-5.1`。
-- 核验日期：2026-10-03；本次只迁移记录，没有重新核验或提高状态。
+- 核验日期：2026-10-03；本轮重新读取官网，逐接入面只确认下表列出的字段；其余仍待核实。
 
 ## 适用接入面
 
@@ -30,7 +30,8 @@
     "reasoning",
     "code",
     "agent"
-  ]
+  ],
+  "description": "智谱 GLM-5.1（千帆 Coding Plan 渠道），高峰抵扣 ×4 / 低峰 ×3；高峰时段随流量动态调整"
 }
 ```
 <!-- source-details:end -->
@@ -39,7 +40,7 @@
 
 | 模型 ID | 上下文 / 输出 | 计价 | 已核字段→来源 | 来源入口 | 状态 | 数据指纹 |
 | --- | --- | --- | --- | --- | --- | --- |
-| `glm-5.1` | 未声明 / 未声明 | 套餐：未声明 / 未声明 | `modelName`→[baidu-models](../SOURCES.md#baidu-models) | [baidu-models](../SOURCES.md#baidu-models) | partial | `11dd1635dc2418f5f7c9511cfdd5fa1efa3ce8655c496770a9d309f49b12f1ae` |
+| `glm-5.1` | 未声明 / 未声明 | 套餐：未声明 / 未声明 | `modelName`→[baidu-plan](../SOURCES.md#baidu-plan)、`description`→[baidu-plan](../SOURCES.md#baidu-plan) | [baidu-plan](../SOURCES.md#baidu-plan) | partial | `ff54cb27e29dab6558fbec8835341eab50ee7d2a15e7c0d80d265efb1e435591` |
 
 ## 下次更新核查
 

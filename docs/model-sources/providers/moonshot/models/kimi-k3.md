@@ -3,7 +3,7 @@
 [供应商索引](../README.md) · [官网证据目录](../SOURCES.md)
 
 - 精确模型 ID：`kimi-k3`。
-- 核验日期：2026-10-03；本次只迁移记录，没有重新核验或提高状态。
+- 核验日期：2026-10-03；本轮重新读取官网，逐接入面只确认下表列出的字段；其余仍待核实。
 
 ## 适用接入面
 
@@ -48,7 +48,10 @@
   },
   "extra.thinkingOnly": true,
   "extra.samplingParametersDeprecated": true,
-  "extra.pricingNotes": "国内官方价格表当前未返回模型单价；不将国际美元价格换算为国内人民币价格。"
+  "extra.pricingNotes": "CNY per 1M tokens: input 20, output 100, cache hit 2. Cache writes: TTL 5min 20, TTL 1h 40; recorded separately from cache-hit billing.",
+  "inputPrice": 20,
+  "outputPrice": 100,
+  "extra.cacheHitPrice": 2
 }
 ```
 <!-- source-details:end -->
@@ -57,7 +60,7 @@
 
 | 模型 ID | 上下文 / 输出 | 计价 | 已核字段→来源 | 来源入口 | 状态 | 数据指纹 |
 | --- | --- | --- | --- | --- | --- | --- |
-| `kimi-k3` | 1048576 / 1048576 | CNY：未声明 / 未声明 | `contextWindow`→[kimi-k3](../SOURCES.md#kimi-k3), `extra.reasoning.defaultEffort`→[kimi-k3](../SOURCES.md#kimi-k3), `extra.reasoning.supportedEfforts`→[kimi-k3](../SOURCES.md#kimi-k3), `extra.samplingParametersDeprecated`→[kimi-k3](../SOURCES.md#kimi-k3), `extra.thinkingOnly`→[kimi-k3](../SOURCES.md#kimi-k3), `maxOutputTokens`→[kimi-k3](../SOURCES.md#kimi-k3), `modelName`→[kimi-k3](../SOURCES.md#kimi-k3) | [kimi-k3](../SOURCES.md#kimi-k3) | partial | `60a2de0a63989f2ad0c4e3f7b54dcc1166f8a36157a221935df7e9cf78fd385f` |
+| `kimi-k3` | 1048576 / 1048576 | CNY：20 / 100 | `contextWindow`→[kimi-pricing](../SOURCES.md#kimi-pricing)、`extra.reasoning.defaultEffort`→[kimi-k3](../SOURCES.md#kimi-k3)、`extra.reasoning.supportedEfforts`→[kimi-k3](../SOURCES.md#kimi-k3)、`extra.samplingParametersDeprecated`→[kimi-k3](../SOURCES.md#kimi-k3)、`extra.thinkingOnly`→[kimi-k3](../SOURCES.md#kimi-k3)、`maxOutputTokens`→[kimi-k3](../SOURCES.md#kimi-k3)、`modelName`→[kimi-pricing](../SOURCES.md#kimi-pricing)、`inputPrice`→[kimi-pricing](../SOURCES.md#kimi-pricing)、`outputPrice`→[kimi-pricing](../SOURCES.md#kimi-pricing)、`extra.cacheHitPrice`→[kimi-pricing](../SOURCES.md#kimi-pricing)、`extra.pricingNotes`→[kimi-pricing](../SOURCES.md#kimi-pricing) | [kimi-pricing](../SOURCES.md#kimi-pricing)、[kimi-k3](../SOURCES.md#kimi-k3) | partial | `ff0ea59f00b5873742ebb33938a6669b58ebd88b81677772c1be55f577ed315c` |
 
 ### compute/model-specs/moonshot.json
 
@@ -106,7 +109,7 @@
 
 | 模型 ID | 上下文 / 输出 | 计价 | 已核字段→来源 | 来源入口 | 状态 | 数据指纹 |
 | --- | --- | --- | --- | --- | --- | --- |
-| `kimi-k3` | 1048576 / 1048576 | 非计价主数据 | `id`→[kimi-k3](../SOURCES.md#kimi-k3), `spec.contextWindow`→[kimi-k3](../SOURCES.md#kimi-k3), `spec.extra.samplingParametersDeprecated`→[kimi-k3](../SOURCES.md#kimi-k3), `spec.extra.thinkingOnly`→[kimi-k3](../SOURCES.md#kimi-k3), `spec.maxOutputTokens`→[kimi-k3](../SOURCES.md#kimi-k3) | [kimi-k3](../SOURCES.md#kimi-k3) | partial | `f947390f30eaeb54eeb5e3c20ca0f89cc2e0b11840cb3d9ab38de088fcae91fb` |
+| `kimi-k3` | 1048576 / 1048576 | 非计价主数据 | `id`→[kimi-pricing](../SOURCES.md#kimi-pricing)、`spec.contextWindow`→[kimi-pricing](../SOURCES.md#kimi-pricing)、`spec.extra.samplingParametersDeprecated`→[kimi-k3](../SOURCES.md#kimi-k3)、`spec.extra.thinkingOnly`→[kimi-k3](../SOURCES.md#kimi-k3)、`spec.maxOutputTokens`→[kimi-k3](../SOURCES.md#kimi-k3) | [kimi-pricing](../SOURCES.md#kimi-pricing)、[kimi-k3](../SOURCES.md#kimi-k3) | partial | `f947390f30eaeb54eeb5e3c20ca0f89cc2e0b11840cb3d9ab38de088fcae91fb` |
 
 ## 下次更新核查
 

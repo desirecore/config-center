@@ -3,7 +3,7 @@
 [供应商索引](../README.md) · [官网证据目录](../SOURCES.md)
 
 - 精确模型 ID：`gpt-5.4-mini`。
-- 核验日期：2026-10-03；本次只迁移记录，没有重新核验或提高状态。
+- 核验日期：2026-10-03；本轮增量核验下列字段；未列字段及其他接入面的状态保持独立。
 
 ## 适用接入面
 
@@ -75,7 +75,16 @@
   ],
   "inputPrice": 0.75,
   "outputPrice": 4.5,
-  "extra.cachedInputPrice": 0.075
+  "extra.cachedInputPrice": 0.075,
+  "extra.reasoning": {
+    "supportedEfforts": [
+      "none",
+      "low",
+      "medium",
+      "high",
+      "xhigh"
+    ]
+  }
 }
 ```
 <!-- source-details:end -->
@@ -84,7 +93,7 @@
 
 | 模型 ID | 上下文 / 输出 | 计价 | 已核字段→来源 | 来源入口 | 状态 | 数据指纹 |
 | --- | --- | --- | --- | --- | --- | --- |
-| `gpt-5.4-mini` | 400000 / 128000 | USD：0.75 / 4.5 | 待核实 | [openai-models](../SOURCES.md#openai-models) | pending | `b14b746d46d9a0e03d4998ebdb31644d3620121d265bd657e3b9447fc0349dde` |
+| `gpt-5.4-mini` | 400000 / 128000 | USD：0.75 / 4.5 | `modelName`→[gpt-5-4-mini-api](../SOURCES.md#gpt-5-4-mini-api)；`contextWindow`→[gpt-5-4-mini-api](../SOURCES.md#gpt-5-4-mini-api)；`maxOutputTokens`→[gpt-5-4-mini-api](../SOURCES.md#gpt-5-4-mini-api)；`inputPrice`→[gpt-5-4-mini-api](../SOURCES.md#gpt-5-4-mini-api)；`outputPrice`→[gpt-5-4-mini-api](../SOURCES.md#gpt-5-4-mini-api)；`extra.reasoning.supportedEfforts`→[gpt-5-4-mini-api](../SOURCES.md#gpt-5-4-mini-api)；`extra.cachedInputPrice`→[gpt-5-4-mini-api](../SOURCES.md#gpt-5-4-mini-api) | [gpt-5-4-mini-api](../SOURCES.md#gpt-5-4-mini-api) | partial | `c7a1b65adcb143f3980e74c7c506c828863cad4b381f3273c8436b9c8cf79ca3` |
 
 ### compute/model-specs/openai.json
 
@@ -132,7 +141,11 @@
 
 | 模型 ID | 上下文 / 输出 | 计价 | 已核字段→来源 | 来源入口 | 状态 | 数据指纹 |
 | --- | --- | --- | --- | --- | --- | --- |
-| `gpt-5.4-mini` | 400000 / 128000 | 非计价主数据 | 待核实 | [openai-models](../SOURCES.md#openai-models) | pending | `fea5519f807fe1a18b9ee8f79d556da357f78b8c00f2898b6ea5cf1b7fcc72d5` |
+| `gpt-5.4-mini` | 400000 / 128000 | 非计价主数据 | `id`→[gpt-5-4-mini-api](../SOURCES.md#gpt-5-4-mini-api)；`spec.contextWindow`→[gpt-5-4-mini-api](../SOURCES.md#gpt-5-4-mini-api)；`spec.maxOutputTokens`→[gpt-5-4-mini-api](../SOURCES.md#gpt-5-4-mini-api) | [gpt-5-4-mini-api](../SOURCES.md#gpt-5-4-mini-api) | partial | `fea5519f807fe1a18b9ee8f79d556da357f78b8c00f2898b6ea5cf1b7fcc72d5` |
+
+本轮读取该模型官方明文规格页，确认原厂直连窗口、输出、标准价格与推理合同。Pro 仅限 Responses；GPT-5.4 Pro 官方默认 medium，修正旧 high。none 在产品层映射 off，schema 不接受将 none 写成 defaultEffort，故未伪造其他显式默认档。
+
+共享规格只复核内在窗口和输出；Provider 推理矩阵不复制到共享规格。
 
 ## 下次更新核查
 

@@ -3,7 +3,7 @@
 [供应商索引](../README.md) · [官网证据目录](../SOURCES.md)
 
 - 精确模型 ID：`mimo-v2.6-pro-ultraspeed`。
-- 核验日期：2026-10-03；本次只迁移记录，没有重新核验或提高状态。
+- 核验日期：2026-10-03；本轮重新读取官网，逐接入面只确认下表列出的字段；其余仍待核实。
 
 ## 适用接入面
 
@@ -54,7 +54,7 @@
 
 | 模型 ID | 上下文 / 输出 | 计价 | 已核字段→来源 | 来源入口 | 状态 | 数据指纹 |
 | --- | --- | --- | --- | --- | --- | --- |
-| `mimo-v2.6-pro-ultraspeed` | 1000000 / 131072 | CNY：30 / 60 | 待核实 | [xiaomi](../SOURCES.md#xiaomi) | pending | `e4c200a382c4a42d5b7a8619875205fc0e9f9e21cffa5f99b9252ea5a94dbeff` |
+| `mimo-v2.6-pro-ultraspeed` | 1000000 / 131072 | CNY：30 / 60 | `modelName`→[xiaomi-models](../SOURCES.md#xiaomi-models)、`contextWindow`→[xiaomi-models](../SOURCES.md#xiaomi-models)、`maxOutputTokens`→[xiaomi-models](../SOURCES.md#xiaomi-models)、`inputPrice`→[xiaomi-price](../SOURCES.md#xiaomi-price)、`outputPrice`→[xiaomi-price](../SOURCES.md#xiaomi-price)、`extra.cachedInputPrice`→[xiaomi-price](../SOURCES.md#xiaomi-price) | [xiaomi-models](../SOURCES.md#xiaomi-models)、[xiaomi-price](../SOURCES.md#xiaomi-price) | partial | `e4c200a382c4a42d5b7a8619875205fc0e9f9e21cffa5f99b9252ea5a94dbeff` |
 
 ### compute/model-specs/xiaomi.json
 
@@ -94,7 +94,7 @@
 
 | 模型 ID | 上下文 / 输出 | 计价 | 已核字段→来源 | 来源入口 | 状态 | 数据指纹 |
 | --- | --- | --- | --- | --- | --- | --- |
-| `mimo-v2.6-pro-ultraspeed` | 1000000 / 131072 | 非计价主数据 | 待核实 | [xiaomi](../SOURCES.md#xiaomi) | pending | `a3d199cf35bff0b84fd9e9d31d1302c4a3cf6969c0aa5b6853c3fba0b82a4ae1` |
+| `mimo-v2.6-pro-ultraspeed` | 1000000 / 131072 | 非计价主数据 | `id`→[xiaomi-models](../SOURCES.md#xiaomi-models)、`spec.contextWindow`→[xiaomi-models](../SOURCES.md#xiaomi-models)、`spec.maxOutputTokens`→[xiaomi-models](../SOURCES.md#xiaomi-models) | [xiaomi-models](../SOURCES.md#xiaomi-models) | partial | `a3d199cf35bff0b84fd9e9d31d1302c4a3cf6969c0aa5b6853c3fba0b82a4ae1` |
 
 ## 下次更新核查
 

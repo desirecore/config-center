@@ -3,7 +3,7 @@
 [供应商索引](../README.md) · [官网证据目录](../SOURCES.md)
 
 - 精确模型 ID：`kimi-k2.6`。
-- 核验日期：2026-10-03；本次只迁移记录，没有重新核验或提高状态。
+- 核验日期：2026-10-03；本轮重新读取官网，逐接入面只确认下表列出的字段；其余仍待核实。
 
 ## 适用接入面
 
@@ -45,7 +45,9 @@
   "defaultTopP": 0.95,
   "inputPrice": 6.5,
   "outputPrice": 27,
-  "extra.cacheHitPrice": 1.1
+  "extra.cacheHitPrice": 1.1,
+  "extra.thinking.default": "enabled",
+  "extra.thinking.disabledTemperature": 0.6
 }
 ```
 <!-- source-details:end -->
@@ -54,7 +56,7 @@
 
 | 模型 ID | 上下文 / 输出 | 计价 | 已核字段→来源 | 来源入口 | 状态 | 数据指纹 |
 | --- | --- | --- | --- | --- | --- | --- |
-| `kimi-k2.6` | 262144 / 32768 | CNY：6.5 / 27 | `modelName`→[kimi-pricing](../SOURCES.md#kimi-pricing) | [kimi-pricing](../SOURCES.md#kimi-pricing) | partial | `c743a56354ad090d4160f8ac824003f17b6e3fca1f33dd905821432b996208e2` |
+| `kimi-k2.6` | 262144 / 32768 | CNY：6.5 / 27 | `modelName`→[kimi-pricing](../SOURCES.md#kimi-pricing)、`contextWindow`→[kimi-pricing](../SOURCES.md#kimi-pricing)、`inputPrice`→[kimi-pricing](../SOURCES.md#kimi-pricing)、`outputPrice`→[kimi-pricing](../SOURCES.md#kimi-pricing)、`extra.cacheHitPrice`→[kimi-pricing](../SOURCES.md#kimi-pricing)、`defaultTemperature`→[kimi-k26](../SOURCES.md#kimi-k26)、`extra.thinking.default`→[kimi-k26](../SOURCES.md#kimi-k26)、`extra.thinking.disabledTemperature`→[kimi-k26](../SOURCES.md#kimi-k26) | [kimi-pricing](../SOURCES.md#kimi-pricing)、[kimi-k26](../SOURCES.md#kimi-k26) | partial | `c743a56354ad090d4160f8ac824003f17b6e3fca1f33dd905821432b996208e2` |
 
 ### compute/model-specs/moonshot.json
 
@@ -104,7 +106,7 @@
 
 | 模型 ID | 上下文 / 输出 | 计价 | 已核字段→来源 | 来源入口 | 状态 | 数据指纹 |
 | --- | --- | --- | --- | --- | --- | --- |
-| `kimi-k2.6` | 262144 / 16384 | 非计价主数据 | `id`→[kimi-pricing](../SOURCES.md#kimi-pricing) | [kimi-pricing](../SOURCES.md#kimi-pricing) | partial | `543f66245dc007438be71326e0afa13e8a5db5177b199857db69ea33f5ebda40` |
+| `kimi-k2.6` | 262144 / 16384 | 非计价主数据 | `id`→[kimi-pricing](../SOURCES.md#kimi-pricing)、`spec.contextWindow`→[kimi-pricing](../SOURCES.md#kimi-pricing) | [kimi-pricing](../SOURCES.md#kimi-pricing) | partial | `543f66245dc007438be71326e0afa13e8a5db5177b199857db69ea33f5ebda40` |
 
 ## 下次更新核查
 

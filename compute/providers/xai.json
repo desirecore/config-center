@@ -71,16 +71,19 @@
       "defaultTopP": 1,
       "extra": {
         "cachedInputPrice": 0.2,
-        "reasoningEffort": [
-          "none",
-          "low",
-          "medium",
-          "high"
-        ],
         "aliases": [
           "grok-4.3-latest",
           "grok-latest"
-        ]
+        ],
+        "reasoning": {
+          "supportedEfforts": [
+            "none",
+            "low",
+            "medium",
+            "high"
+          ],
+          "defaultEffort": "low"
+        }
       }
     },
     {

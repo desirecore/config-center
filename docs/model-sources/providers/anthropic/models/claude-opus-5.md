@@ -3,7 +3,7 @@
 [供应商索引](../README.md) · [官网证据目录](../SOURCES.md)
 
 - 精确模型 ID：`claude-opus-5`。
-- 核验日期：2026-10-03；本次只迁移记录，没有重新核验或提高状态。
+- 核验日期：2026-10-03；本轮复核仅限下表已核字段，其余仍待核实。
 
 ## 适用接入面
 
@@ -46,9 +46,10 @@
       "xhigh",
       "max"
     ],
-    "defaultEffort": "xhigh"
+    "defaultEffort": "high"
   },
-  "extra.adaptiveThinking": true
+  "extra.adaptiveThinking": true,
+  "modelName": "claude-opus-5"
 }
 ```
 <!-- source-details:end -->
@@ -57,7 +58,7 @@
 
 | 模型 ID | 上下文 / 输出 | 计价 | 已核字段→来源 | 来源入口 | 状态 | 数据指纹 |
 | --- | --- | --- | --- | --- | --- | --- |
-| `claude-opus-5` | 1000000 / 128000 | USD：未声明 / 未声明 | 待核实 | [claude-models](../SOURCES.md#claude-models) | pending | `4bd4586e538272194f94a15442412a1600a7c1e9a34413562b774e705f9180ec` |
+| `claude-opus-5` | 1000000 / 128000 | USD：未声明 / 未声明 | `modelName`→[claude-opus5](../SOURCES.md#claude-opus5) | [claude-models](../SOURCES.md#claude-models), [claude-opus5](../SOURCES.md#claude-opus5) | partial | `ef23d88fc4278a457a6556b7f6ada39411ea55853a19e93a83f851dd832bb66f` |
 
 ### compute/providers/anthropic.json
 
@@ -92,7 +93,7 @@
       "xhigh",
       "max"
     ],
-    "defaultEffort": "xhigh"
+    "defaultEffort": "high"
   },
   "extra.adaptiveThinking": true,
   "extra.samplingParametersDeprecated": true,
@@ -101,7 +102,16 @@
     "write1h": 10,
     "read": 0.5
   },
-  "extra.pricingNotes": "Prices are per 1M tokens. Full 1M context is billed at standard pricing."
+  "extra.pricingNotes": "Prices are per 1M tokens. Full 1M context is billed at standard pricing.",
+  "modelName": "claude-opus-5",
+  "extra.reasoning.defaultEffort": "high",
+  "extra.reasoning.supportedEfforts": [
+    "low",
+    "medium",
+    "high",
+    "xhigh",
+    "max"
+  ]
 }
 ```
 <!-- source-details:end -->
@@ -110,7 +120,7 @@
 
 | 模型 ID | 上下文 / 输出 | 计价 | 已核字段→来源 | 来源入口 | 状态 | 数据指纹 |
 | --- | --- | --- | --- | --- | --- | --- |
-| `claude-opus-5` | 1000000 / 128000 | USD：5 / 25 | 待核实 | [claude-models](../SOURCES.md#claude-models) | pending | `0fd79697ff2f6a334afdb1d53631abd318cf15af2d29ad2652090b350ecc7d50` |
+| `claude-opus-5` | 1000000 / 128000 | USD：5 / 25 | `modelName`→[claude-opus5](../SOURCES.md#claude-opus5), `contextWindow`→[claude-opus5](../SOURCES.md#claude-opus5), `maxOutputTokens`→[claude-opus5](../SOURCES.md#claude-opus5), `inputPrice`→[claude-opus5](../SOURCES.md#claude-opus5), `outputPrice`→[claude-opus5](../SOURCES.md#claude-opus5), `extra.reasoning.defaultEffort`→[claude-opus5](../SOURCES.md#claude-opus5), `extra.reasoning.supportedEfforts`→[claude-effort](../SOURCES.md#claude-effort) | [claude-models](../SOURCES.md#claude-models), [claude-opus5](../SOURCES.md#claude-opus5), [claude-effort](../SOURCES.md#claude-effort) | partial | `74cfedb13361958fb1516fabc63fcd5db7a182b3711b354f327cf0e883a19a63` |
 
 ### compute/model-specs/anthropic.json
 
@@ -150,7 +160,8 @@
       "max"
     ],
     "defaultMode": "xhigh"
-  }
+  },
+  "id": "claude-opus-5"
 }
 ```
 <!-- source-details:end -->
@@ -159,7 +170,7 @@
 
 | 模型 ID | 上下文 / 输出 | 计价 | 已核字段→来源 | 来源入口 | 状态 | 数据指纹 |
 | --- | --- | --- | --- | --- | --- | --- |
-| `claude-opus-5` | 1000000 / 128000 | 非计价主数据 | 待核实 | [claude-models](../SOURCES.md#claude-models) | pending | `8e0685c775c05ce4b4682a8d41ac3ccc423c6bb714c01678a9a46518be4a3ce4` |
+| `claude-opus-5` | 1000000 / 128000 | 非计价主数据 | `id`→[claude-opus5](../SOURCES.md#claude-opus5), `spec.contextWindow`→[claude-opus5](../SOURCES.md#claude-opus5), `spec.maxOutputTokens`→[claude-opus5](../SOURCES.md#claude-opus5) | [claude-models](../SOURCES.md#claude-models), [claude-opus5](../SOURCES.md#claude-opus5) | partial | `8e0685c775c05ce4b4682a8d41ac3ccc423c6bb714c01678a9a46518be4a3ce4` |
 
 ## 下次更新核查
 

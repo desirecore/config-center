@@ -54,7 +54,7 @@
 
 | 模型 ID | 上下文 / 输出 | 计价 | 已核字段→来源 | 来源入口 | 状态 | 数据指纹 |
 | --- | --- | --- | --- | --- | --- | --- |
-| `ox-alpha` | 1048576 / 131072 | 非计价主数据 | 待核实 | [openrouter-api](../SOURCES.md#openrouter-api) | historical | `1d20e9cc8d59f956ab8fe266f8aaaf5eedf6297c3487c6fd6f85e03e7bb7b560` |
+| `ox-alpha` | 1048576 / 131072 | 非计价主数据 | 待核实 | [openrouter-api](../SOURCES.md#openrouter-api) | historical | `cc076eea8258b8eea4572086dea9e4d07b41cdc63fcbc729ceeb324dc7c6f32a` |
 
 ## 下次更新核查
 
@@ -74,3 +74,7 @@
 }
 ```
 <!-- source-metadata:end -->
+
+## 历史身份边界
+
+移除未取得本轮原厂正文证据的 modelOrigin 映射，展示名改为 Ox Alpha (Historical)。历史 exact 匹配与旧规格继续保留，状态仍为 historical；未声明当前可用性或将它自动等同于 GLM-5.3-Flash。

@@ -3,7 +3,7 @@
 [供应商索引](../README.md) · [官网证据目录](../SOURCES.md)
 
 - 精确模型 ID：`gemini-3.1-flash-lite`。
-- 核验日期：2026-10-03；本次只迁移记录，没有重新核验或提高状态。
+- 核验日期：2026-10-03；本轮增量复核仅覆盖明确列出的字段，其余接入面和参数保持各自状态。
 
 ## 适用接入面
 
@@ -52,7 +52,15 @@
 
 | 模型 ID | 上下文 / 输出 | 计价 | 已核字段→来源 | 来源入口 | 状态 | 数据指纹 |
 | --- | --- | --- | --- | --- | --- | --- |
-| `gemini-3.1-flash-lite` | 1048576 / 65536 | USD：0.25 / 1.5 | `modelName`→[google-models](../SOURCES.md#google-models) | [google-models](../SOURCES.md#google-models) | partial | `0bc291abaf42630b9129274538fa483184805ef0060a1a6edc8064aa0df059fa` |
+| `gemini-3.1-flash-lite` | 1048576 / 65536 | USD：0.25 / 1.5 | `modelName`→[google-models](../SOURCES.md#google-models)；`maxOutputTokens`→[gemini-3-1-flash-lite-limits](../SOURCES.md#gemini-3-1-flash-lite-limits) |[google-models](../SOURCES.md#google-models)；[gemini-3-1-flash-lite-limits](../SOURCES.md#gemini-3-1-flash-lite-limits) | partial | `0bc291abaf42630b9129274538fa483184805ef0060a1a6edc8064aa0df059fa` |
+
+## 本轮补充核验
+
+实际读取该模型页：Input token limit 1048576、Output token limit 65536。仅将输出字段标为已核；contextWindow 是既有窗口配置，本轮不将 input limit 误当 input+output 总窗口证明。价格、effort、采样与账号权限仍独立待核。
+
+## 本轮补充核验
+
+实际读取该模型页：Input token limit 1048576、Output token limit 65536。仅将输出字段标为已核；contextWindow 是既有窗口配置，本轮不将 input limit 误当 input+output 总窗口证明。价格、effort、采样与账号权限仍独立待核。
 
 ## 下次更新核查
 

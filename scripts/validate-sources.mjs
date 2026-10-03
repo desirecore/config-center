@@ -57,7 +57,7 @@ const get = (row, path) => path.split('.').reduce((value, key) => value?.[key], 
 const dateValid = (value) => /^\d{4}-\d{2}-\d{2}$/.test(value ?? '') && !Number.isNaN(Date.parse(value)) && new Date(value).toISOString().slice(0, 10) === value
 const configSupplier = (config) => {
   const name = config.split('/').at(-1).replace(/\.json$/, '')
-  const aliases = { 'openai-codex': 'openai', 'local-whisper': 'openai', 'anthropic-claude': 'anthropic', dashscope: 'alibaba', qwen: 'alibaba', wan: 'alibaba', happyhorse: 'alibaba', 'dashscope-coding': 'alibaba', 'dashscope-token-plan': 'alibaba', 'zhipu-embedding': 'zhipu', 'tencent-token': 'tencent', 'moorethread-coding': 'moorethread' }
+  const aliases = { 'openai-codex': 'openai', 'local-whisper': 'openai', 'anthropic-claude': 'anthropic', dashscope: 'alibaba', qwen: 'alibaba', wan: 'alibaba', happyhorse: 'alibaba', 'dashscope-coding': 'alibaba', 'dashscope-token-plan': 'alibaba', 'zhipu-embedding': 'zhipu', 'tencent-token': 'tencent', 'xunfei-x2': 'xunfei', 'moorethread-coding': 'moorethread' }
   return aliases[name] ?? name.replace(/-coding$/, '')
 }
 

@@ -3,7 +3,7 @@
 [供应商索引](../README.md) · [官网证据目录](../SOURCES.md)
 
 - 精确模型 ID：`gpt-5.4-nano`。
-- 核验日期：2026-10-03；本次只迁移记录，没有重新核验或提高状态。
+- 核验日期：2026-10-03；本轮增量核验下列字段；未列字段及其他接入面的状态保持独立。
 
 ## 适用接入面
 
@@ -37,7 +37,16 @@
   ],
   "inputPrice": 0.2,
   "outputPrice": 1.25,
-  "extra.cachedInputPrice": 0.02
+  "extra.cachedInputPrice": 0.02,
+  "extra.reasoning": {
+    "supportedEfforts": [
+      "none",
+      "low",
+      "medium",
+      "high",
+      "xhigh"
+    ]
+  }
 }
 ```
 <!-- source-details:end -->
@@ -46,7 +55,11 @@
 
 | 模型 ID | 上下文 / 输出 | 计价 | 已核字段→来源 | 来源入口 | 状态 | 数据指纹 |
 | --- | --- | --- | --- | --- | --- | --- |
-| `gpt-5.4-nano` | 400000 / 128000 | USD：0.2 / 1.25 | 待核实 | [openai-models](../SOURCES.md#openai-models) | pending | `bde978b68ce6cabc702357129947f2d078feefe42a0dc84537a3897d6dbf4d70` |
+| `gpt-5.4-nano` | 400000 / 128000 | USD：0.2 / 1.25 | `modelName`→[gpt-5-4-nano-api](../SOURCES.md#gpt-5-4-nano-api)；`contextWindow`→[gpt-5-4-nano-api](../SOURCES.md#gpt-5-4-nano-api)；`maxOutputTokens`→[gpt-5-4-nano-api](../SOURCES.md#gpt-5-4-nano-api)；`inputPrice`→[gpt-5-4-nano-api](../SOURCES.md#gpt-5-4-nano-api)；`outputPrice`→[gpt-5-4-nano-api](../SOURCES.md#gpt-5-4-nano-api)；`extra.reasoning.supportedEfforts`→[gpt-5-4-nano-api](../SOURCES.md#gpt-5-4-nano-api)；`extra.cachedInputPrice`→[gpt-5-4-nano-api](../SOURCES.md#gpt-5-4-nano-api) | [gpt-5-4-nano-api](../SOURCES.md#gpt-5-4-nano-api) | partial | `c9177352926f2671a78517659b30654fe41a14a2ebfcf435ba7854ee030bac0e` |
+
+本轮读取该模型官方明文规格页，确认原厂直连窗口、输出、标准价格与推理合同。Pro 仅限 Responses；GPT-5.4 Pro 官方默认 medium，修正旧 high。none 在产品层映射 off，schema 不接受将 none 写成 defaultEffort，故未伪造其他显式默认档。
+
+共享规格只复核内在窗口和输出；Provider 推理矩阵不复制到共享规格。
 
 ## 下次更新核查
 

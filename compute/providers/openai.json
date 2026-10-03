@@ -264,15 +264,17 @@
           "toolType": "web_search"
         },
         "cachedInputPrice": 0.5,
-        "reasoningEffort": [
-          "none",
-          "low",
-          "medium",
-          "high",
-          "xhigh"
-        ],
-        "defaultReasoningEffort": "medium",
-        "pricingNotes": "Prices are per 1M tokens; long-context requests may use higher-tier pricing per OpenAI pricing page."
+        "pricingNotes": "Prices are per 1M tokens; long-context requests may use higher-tier pricing per OpenAI pricing page.",
+        "reasoning": {
+          "supportedEfforts": [
+            "none",
+            "low",
+            "medium",
+            "high",
+            "xhigh"
+          ],
+          "defaultEffort": "medium"
+        }
       }
     },
     {
@@ -304,13 +306,15 @@
           "toolType": "web_search"
         },
         "responsesOnly": true,
-        "reasoningEffort": [
-          "medium",
-          "high",
-          "xhigh"
-        ],
-        "defaultReasoningEffort": "high",
-        "pricingNotes": "No cached-input discount is listed for GPT-5.5 Pro on the official pricing page."
+        "pricingNotes": "No cached-input discount is listed for GPT-5.5 Pro on the official pricing page.",
+        "reasoning": {
+          "supportedEfforts": [
+            "medium",
+            "high",
+            "xhigh"
+          ],
+          "defaultEffort": "high"
+        }
       }
     },
     {
@@ -342,13 +346,16 @@
           "toolType": "web_search"
         },
         "cachedInputPrice": 0.25,
-        "reasoningEffort": [
-          "none",
-          "low",
-          "medium",
-          "high"
-        ],
-        "pricingNotes": "Prices are per 1M tokens; long-context requests may use higher-tier pricing per OpenAI pricing page."
+        "pricingNotes": "Prices are per 1M tokens; long-context requests may use higher-tier pricing per OpenAI pricing page.",
+        "reasoning": {
+          "supportedEfforts": [
+            "none",
+            "low",
+            "medium",
+            "high",
+            "xhigh"
+          ]
+        }
       }
     },
     {
@@ -379,12 +386,14 @@
           "toolType": "web_search"
         },
         "responsesOnly": true,
-        "reasoningEffort": [
-          "medium",
-          "high",
-          "xhigh"
-        ],
-        "defaultReasoningEffort": "high"
+        "reasoning": {
+          "supportedEfforts": [
+            "medium",
+            "high",
+            "xhigh"
+          ],
+          "defaultEffort": "medium"
+        }
       }
     },
     {
@@ -418,12 +427,15 @@
           "toolType": "web_search"
         },
         "cachedInputPrice": 0.075,
-        "reasoningEffort": [
-          "none",
-          "low",
-          "medium",
-          "high"
-        ]
+        "reasoning": {
+          "supportedEfforts": [
+            "none",
+            "low",
+            "medium",
+            "high",
+            "xhigh"
+          ]
+        }
       }
     },
     {
@@ -454,11 +466,15 @@
           "toolType": "web_search"
         },
         "cachedInputPrice": 0.02,
-        "reasoningEffort": [
-          "none",
-          "low",
-          "medium"
-        ]
+        "reasoning": {
+          "supportedEfforts": [
+            "none",
+            "low",
+            "medium",
+            "high",
+            "xhigh"
+          ]
+        }
       }
     },
     {

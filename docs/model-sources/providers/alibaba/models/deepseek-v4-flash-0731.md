@@ -51,7 +51,7 @@
 
 | 模型 ID | 上下文 / 输出 | 计价 | 已核字段→来源 | 来源入口 | 状态 | 数据指纹 |
 | --- | --- | --- | --- | --- | --- | --- |
-| `deepseek-v4-flash-0731` | 1000000 / 384000 | 套餐：未声明 / 未声明 | `modelName`→[qwen-pricing](../SOURCES.md#qwen-pricing) | [qwen-pricing](../SOURCES.md#qwen-pricing) | partial | `668722afd2a91f31c52d3d0684b357171b00ef0f7f59c8bef4b9fa83736f51d4` |
+| `deepseek-v4-flash-0731` | 1000000 / 384000 | 套餐：未声明 / 未声明 | `modelName`→[qwen-pricing](../SOURCES.md#qwen-pricing) | [qwen-pricing](../SOURCES.md#qwen-pricing) | partial | `19a26fe374a6f1dd642fb7caa9eff0a6675558e4ba28a0af67f602551bdbd566` |
 
 ## 下次更新核查
 

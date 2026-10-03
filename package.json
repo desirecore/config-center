@@ -8,9 +8,13 @@
     "node": ">=20"
   },
   "scripts": {
-    "validate": "node scripts/validate.mjs && node scripts/validate-sources.mjs",
+    "validate": "node scripts/validate.mjs && node scripts/validate-sources.mjs && node scripts/validate-data-sources.mjs && node scripts/validate-runtime-sources.mjs",
     "test": "node --test __tests__/*.test.mjs",
-    "validate:sources": "node scripts/validate-sources.mjs"
+    "validate:sources": "node scripts/validate-sources.mjs",
+    "validate:data-sources": "node scripts/validate-data-sources.mjs",
+    "runtimes:check": "node scripts/update-runtime-catalog.mjs",
+    "runtimes:update": "node scripts/update-runtime-catalog.mjs --write",
+    "validate:runtimes": "node scripts/validate-runtime-sources.mjs"
   },
   "dependencies": {
     "ajv": "^8.17.1",

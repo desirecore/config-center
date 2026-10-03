@@ -83,7 +83,7 @@
   "spec.supportsReasoning": true,
   "routing.tier": "lightweight",
   "routing.routingPriority": 10,
-  "routing.eligibleForAgent": true,
+  "routing.eligibleForAgent": false,
   "routing.reasoning": {
     "supportedModes": [
       "auto",
@@ -104,7 +104,7 @@
 
 | 模型 ID | 上下文 / 输出 | 计价 | 已核字段→来源 | 来源入口 | 状态 | 数据指纹 |
 | --- | --- | --- | --- | --- | --- | --- |
-| `gpt-reserve` | 1050000 / 128000 | 非计价主数据 | 待核实 | [openai-models](../SOURCES.md#openai-models) | pending | `b07665e638e562cf09ec384af9299b4fe3389a1cecea833b1f01e7806797078e` |
+| `gpt-reserve` | 1050000 / 128000 | 非计价主数据 | 待核实 | [openai-models](../SOURCES.md#openai-models) | pending | `5798fa677d14df133dc99ed0d8624da2f1e750125e0358ed6d004767d0f4c065` |
 
 ## 下次更新核查
 
@@ -124,3 +124,7 @@
 }
 ```
 <!-- source-metadata:end -->
+
+## 临时规格的路由边界
+
+官方模型页与检索未取得 GPT-Reserve 规格证据。沿用先前显式要求的手动配置，不删除模型；shared spec 的 eligibleForAgent 改为 false，限制自动选型。上下文与能力仍是既有假定值，状态维持 pending；需要原厂正式规格与订阅合同分别核实后才能解开门控。

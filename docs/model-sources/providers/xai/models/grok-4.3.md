@@ -3,7 +3,7 @@
 [供应商索引](../README.md) · [官网证据目录](../SOURCES.md)
 
 - 精确模型 ID：`grok-4.3`。
-- 核验日期：2026-10-03；本次只迁移记录，没有重新核验或提高状态。
+- 核验日期：2026-10-03；本轮增量核验下列字段；未列字段及其他接入面的状态保持独立。
 
 ## 适用接入面
 
@@ -39,7 +39,16 @@
   "defaultTopP": 1,
   "inputPrice": 1.25,
   "outputPrice": 2.5,
-  "extra.cachedInputPrice": 0.2
+  "extra.cachedInputPrice": 0.2,
+  "extra.reasoning": {
+    "supportedEfforts": [
+      "none",
+      "low",
+      "medium",
+      "high"
+    ],
+    "defaultEffort": "low"
+  }
 }
 ```
 <!-- source-details:end -->
@@ -48,7 +57,9 @@
 
 | 模型 ID | 上下文 / 输出 | 计价 | 已核字段→来源 | 来源入口 | 状态 | 数据指纹 |
 | --- | --- | --- | --- | --- | --- | --- |
-| `grok-4.3` | 1000000 / 未声明 | USD：1.25 / 2.5 | 待核实 | [xai](../SOURCES.md#xai) | pending | `bd07b22c70b23607ba3a86737f6ae7b54ea1ca53949ddbb693724bfad1d627d9` |
+| `grok-4.3` | 1000000 / 未声明 | USD：1.25 / 2.5 | `modelName`→[grok43-model](../SOURCES.md#grok43-model)；`contextWindow`→[grok43-model](../SOURCES.md#grok43-model)；`inputPrice`→[grok43-model](../SOURCES.md#grok43-model)；`outputPrice`→[grok43-model](../SOURCES.md#grok43-model)；`extra.cachedInputPrice`→[grok43-model](../SOURCES.md#grok43-model)；`extra.reasoning.supportedEfforts`→[grok43-model](../SOURCES.md#grok43-model)；`extra.reasoning.defaultEffort`→[grok43-model](../SOURCES.md#grok43-model) | [grok43-model](../SOURCES.md#grok43-model) | partial | `cd5e64db1ae28c111960f2e47fe82fdefceb06079261396a214ad89578a02ee1` |
+
+官方同页 Capabilities 列 none/low/medium/high，Details 额外列 xhigh，存在口径差异；保留四个无争议档位，默认 low。不能据此扩张 xhigh。
 
 ## 下次更新核查
 

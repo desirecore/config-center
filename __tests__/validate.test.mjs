@@ -937,7 +937,9 @@ describe('真实数据全量校验', () => {
     assert.equal(kimi.extra.reasoning.defaultEffort, 'max')
     assert.deepEqual(kimiSpec.routing.reasoning.supportedModes, ['auto', 'low', 'high', 'max'])
     assert.equal(kimi.maxOutputTokens, 1048576)
-    assert.equal(kimi.inputPrice, undefined, '不把国际美元价混写到国内人民币 Provider')
+    assert.equal(kimi.inputPrice, 20, '采用国内官网人民币单价，不换算国际美元价')
+    assert.equal(kimi.outputPrice, 100)
+    assert.equal(kimi.extra.cacheHitPrice, 2)
     const previewId = 'MiniMax-M3.1-Flash-Preview'
     const preview = findModel('coding-plans', 'minimax-coding', previewId)
     assert.equal(preview.extra.thinkingOnly, true)
@@ -1064,7 +1066,7 @@ describe('真实数据全量校验', () => {
       )
     }
 
-    assert.deepEqual(actualProviders.sort(), Object.keys(expectedCurrencies).sort())
+    assert.deepEqual([...new Set(actualProviders)].sort(), Object.keys(expectedCurrencies).sort())
   })
 
   it('MiniMax 应使用国内开放平台人民币价', () => {

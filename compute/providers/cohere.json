@@ -93,7 +93,7 @@
         "long_context"
       ],
       "inputPrice": 2.5,
-      "outputPrice": 10.0,
+      "outputPrice": 10,
       "defaultTemperature": 0.3,
       "defaultTopP": 0.75,
       "extra": {
@@ -143,25 +143,9 @@
         "defaultDimension": 1536,
         "pricingNotes": "Embedding models are priced by embedded tokens; price is per 1M tokens. Compatibility API 不接受 dimensions 参数；返回默认维度，多维度选择需原生 Embed API。"
       }
-    },
-    {
-      "modelName": "rerank-v3.5",
-      "displayName": "Rerank V3.5",
-      "serviceType": [
-        "rerank"
-      ],
-      "description": "Cohere 语义重排序模型，用于检索结果精排，默认单文档截断 4096 token",
-      "contextWindow": 4096,
-      "maxOutputTokens": 0,
-      "capabilities": [
-        "rerank",
-        "semantic_reranking"
-      ],
-      "inputPrice": 2.0,
-      "outputPrice": 0,
-      "extra": {
-        "pricingNotes": "Cohere Rerank is priced by search units, not input/output tokens; one search unit is one query with up to 100 documents. The token price fields are retained for schema compatibility."
-      }
     }
+  ],
+  "tombstones": [
+    "rerank-v3.5"
   ]
 }

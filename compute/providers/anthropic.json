@@ -179,9 +179,8 @@
             "xhigh",
             "max"
           ],
-          "defaultEffort": "xhigh"
+          "defaultEffort": "high"
         },
-        "defaultEffort": "xhigh",
         "samplingParametersDeprecated": true,
         "pricingNotes": "Prices are per 1M tokens. Full 1M context is billed at standard pricing."
       }
@@ -239,7 +238,6 @@
           ],
           "defaultEffort": "high"
         },
-        "defaultEffort": "xhigh",
         "samplingParametersDeprecated": true,
         "forcedToolChoiceUnsupported": true,
         "promptCacheMinTokens": 512
@@ -296,9 +294,8 @@
             "xhigh",
             "max"
           ],
-          "defaultEffort": "xhigh"
+          "defaultEffort": "high"
         },
-        "defaultEffort": "xhigh",
         "samplingParametersDeprecated": true
       }
     }

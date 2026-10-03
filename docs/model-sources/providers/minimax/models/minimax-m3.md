@@ -3,7 +3,7 @@
 [供应商索引](../README.md) · [官网证据目录](../SOURCES.md)
 
 - 精确模型 ID：`MiniMax-M3`。
-- 核验日期：2026-10-03；本次只迁移记录，没有重新核验或提高状态。
+- 核验日期：2026-10-03；本轮增量复核仅覆盖明确列出的字段，其余接入面和参数保持各自状态。
 
 ## 适用接入面
 
@@ -67,7 +67,7 @@
 
 | 模型 ID | 上下文 / 输出 | 计价 | 已核字段→来源 | 来源入口 | 状态 | 数据指纹 |
 | --- | --- | --- | --- | --- | --- | --- |
-| `MiniMax-M3` | 1000000 / 131072 | CNY：2.1 / 8.4 | `modelName`→[minimax-models](../SOURCES.md#minimax-models) | [minimax-models](../SOURCES.md#minimax-models) | partial | `3d69bfddacd9274c5ff25807ae276e83226841074ded1abcf8a8aab476d083b4` |
+| `MiniMax-M3` | 1000000 / 131072 | CNY：2.1 / 8.4 | `modelName`→[minimax-models](../SOURCES.md#minimax-models)；`contextWindow`→[minimax-anthropic](../SOURCES.md#minimax-anthropic) |[minimax-models](../SOURCES.md#minimax-models)；[minimax-anthropic](../SOURCES.md#minimax-anthropic) | partial | `3d69bfddacd9274c5ff25807ae276e83226841074ded1abcf8a8aab476d083b4` |
 
 ### compute/coding-plans/minimax-coding.json
 
@@ -112,7 +112,7 @@
 <!-- source-details: {"config":"compute/model-specs/minimax.json","id":"MiniMax-M3"} -->
 ```json
 {
-  "spec.contextWindow": 1048576,
+  "spec.contextWindow": 1000000,
   "spec.maxOutputTokens": 512000,
   "spec.serviceType": [
     "chat"
@@ -151,7 +151,15 @@
 
 | 模型 ID | 上下文 / 输出 | 计价 | 已核字段→来源 | 来源入口 | 状态 | 数据指纹 |
 | --- | --- | --- | --- | --- | --- | --- |
-| `MiniMax-M3` | 1048576 / 512000 | 非计价主数据 | `id`→[minimax-models](../SOURCES.md#minimax-models) | [minimax-models](../SOURCES.md#minimax-models) | partial | `3d4e178769d146dfd89122bf684ed199052fee140ce3b3af094f8844540e266b` |
+| `MiniMax-M3` | 1000000 / 512000 | 非计价主数据 | `id`→[minimax-models](../SOURCES.md#minimax-models)；`spec.contextWindow`→[minimax-anthropic](../SOURCES.md#minimax-anthropic) |[minimax-models](../SOURCES.md#minimax-models)；[minimax-anthropic](../SOURCES.md#minimax-anthropic) | partial | `bf94606e9d791d6d27a626bde458ebed9330fe08085a9bde1d513667e837ffbc` |
+
+## 本轮补充核验
+
+本轮读取官方Anthropic SDK型号表明文上下文：M3为1000000，M2.7/2.5/2.1及highspeed为204800。M2.x仅文本和工具相关块，不支持图片/视频；清理API/套餐/sharedspec中误列的vision能力。输出上限、价格、套餐账号可用性不因窗口核验提高状态。
+
+## 本轮补充核验
+
+本轮读取官方Anthropic SDK型号表明文上下文：M3为1000000，M2.7/2.5/2.1及highspeed为204800。M2.x仅文本和工具相关块，不支持图片/视频；清理API/套餐/sharedspec中误列的vision能力。输出上限、价格、套餐账号可用性不因窗口核验提高状态。
 
 ## 下次更新核查
 

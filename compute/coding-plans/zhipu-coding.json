@@ -130,9 +130,8 @@
       ],
       "extra": {
         "codingPlanLongContextModelId": "glm-5.2[1m]",
-        "reasoningEffort": {
-          "default": "max",
-          "supported": [
+        "reasoning": {
+          "supportedEfforts": [
             "max",
             "xhigh",
             "high",
@@ -140,7 +139,8 @@
             "low",
             "minimal",
             "none"
-          ]
+          ],
+          "defaultEffort": "max"
         }
       },
       "source": "preset"
