@@ -1,0 +1,37 @@
+# xunfei：官网与来源缺口单列
+
+[总目录](../README.md) · [官方入口与读取状态](../../model-sources/providers/xunfei/SOURCES.md) · [核查原因和后续计划](../../model-sources/providers/xunfei/AUDIT.md)
+
+本表从现有字段证明生成，不重新访问官网、不刷新核验日期、不改变模型数据。每个接入面单独计数。
+
+## 未登记官方入口（0 条）
+
+无该类记录。
+
+## 未取得可读官网证据（0 条）
+
+无该类记录。
+
+## 入口有读取记录，但本条模型无字段证明（2 条）
+
+| 模型 | 接入面 | 未登记证明的关键字段 | 官网入口/读取结果 |
+| --- | --- | --- | --- |
+| [`4.0Ultra`](../../model-sources/providers/xunfei/models/4.0ultra.md) | [`compute/providers/xunfei.json`](../../../compute/providers/xunfei.json) | `contextWindow`、`defaultTemperature`、`defaultTopP`、`maxOutputTokens`、`modelName` | [xunfei](../../model-sources/providers/xunfei/SOURCES.md#xunfei)：fetched |
+| [`4.0Ultra`](../../model-sources/providers/xunfei/models/4.0ultra.md) | [`compute/model-specs/xunfei.json`](../../../compute/model-specs/xunfei.json) | `id`、`spec.contextWindow`、`spec.defaultTemperature`、`spec.maxOutputTokens` | [xunfei](../../model-sources/providers/xunfei/SOURCES.md#xunfei)：fetched |
+
+## 仅确认 ID，参数来源未登记（0 条）
+
+无该类记录。
+
+## 已有部分参数证明，仍需区分未证明字段（2 条）
+
+| 模型 | 接入面 | 未登记证明的关键字段 | 官网入口/读取结果 |
+| --- | --- | --- | --- |
+| [`spark-x`](../../model-sources/providers/xunfei/models/spark-x.md) | [`compute/providers/xunfei-x2.json`](../../../compute/providers/xunfei-x2.json) | `contextWindow` | [xunfei](../../model-sources/providers/xunfei/SOURCES.md#xunfei)：fetched |
+| [`spark-x`](../../model-sources/providers/xunfei/models/spark-x.md) | [`compute/model-specs/xunfei.json`](../../../compute/model-specs/xunfei.json) | `spec.contextWindow`、`spec.supportsReasoning` | [xunfei](../../model-sources/providers/xunfei/SOURCES.md#xunfei)：fetched |
+
+## 历史身份/参数不证明当前可用性（0 条）
+
+无该类记录。
+
+说明：缺少字段引用表示本仓尚未登记官方证明，不等于已证明数据错误。关键字段列表包括身份、数值限制、采样、价格与部分推理合同；不是全部 API 参数清单。routing、优先级、产品能力标签和预设启用状态不按供应商事实判错。保守兼容预算、未公开价格和历史参数的详细边界见原单模型文件。
