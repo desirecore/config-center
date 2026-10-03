@@ -1,0 +1,40 @@
+# OpenRouter：官网证据目录
+
+[供应商索引](README.md)
+
+核验日期：2026-10-03。这里只登记可复用的官网证据与适用边界，具体模型与接入面分别记录。
+
+## 官网证据
+
+### openrouter-api
+
+- 入口：[openrouter-api](https://openrouter.ai/api/v1/models)
+- 类型：`official-api`；当前读取状态：`fetched`；地域/接入面：`OpenRouter 公共 Models API 快照；USD/token 换算为 USD/百万 token`。
+
+## 已知边界与核验说明
+
+只使用平台自己的 Models API 解释该接入面的 ID、窗口和 token 价格。API 的价格单位是 USD/token，配置乘以 1000000；-1 表示动态路由占位，不代表免费。当前目录缺少 stealth/ox-alpha、openai/gpt-oss-120b:free、qwen/qwen3-coder:free，已从该 Provider 移除并添加 tombstones。缺少于目录只证明此次未列出，不推断原厂模型退役。
+
+状态 `partial` 仅表示列出的字段已核实；不能推断整条配置、价格、账号权限或真实模型调用都已验收。`pending` 没有已核字段；`historical` 只作历史兼容参考。路由 tier/priority、产品标签和默认选择属于本仓策略，不伪装成官网数据。
+
+<!-- source-metadata:start -->
+```json
+{
+  "formatVersion": 1,
+  "supplier": "openrouter",
+  "checkedAt": "2026-10-03",
+  "sources": [
+    {
+      "id": "openrouter-api",
+      "url": "https://openrouter.ai/api/v1/models",
+      "kind": "official-api",
+      "scope": "OpenRouter 公共 Models API 快照；USD/token 换算为 USD/百万 token",
+      "retrieval": "fetched",
+      "checkedAt": "2026-10-03",
+      "contentSha256": "38864160760c394d4d81864581a33adbced3c582fdd8732809f90ec7e911f032",
+      "resolvedUrl": "https://openrouter.ai/api/v1/models"
+    }
+  ]
+}
+```
+<!-- source-metadata:end -->

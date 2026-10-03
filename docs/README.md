@@ -1,3 +1,5 @@
 # 配置中心文档
 
-- [模型数据来源与维护规则](model-sources/README.md)：官网证据、配置映射、字段级核验状态及更新流程。
+- [模型来源分层导航](model-sources/README.md)
+- [来源维护规则](model-sources/MAINTENANCE.md)
+- [项目更新前核查清单](../AGENTS.md)
