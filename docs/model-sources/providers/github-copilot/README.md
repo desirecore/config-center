@@ -9,4 +9,3 @@
 - [compute/providers/github-copilot.json](access/providers--github-copilot.md)
 
 ## 模型
-
