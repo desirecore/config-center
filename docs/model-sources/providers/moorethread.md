@@ -25,7 +25,10 @@
 
 ### compute/coding-plans/moorethread-coding.json
 
+接入面配置快照：`openai-completions`；端点：`https://api.mthreads.com/v1`；币种：`套餐`。这些平台字段不是整条官网验收结论，核验边界见上文。
+
 <!-- source-config: compute/coding-plans/moorethread-coding.json -->
+<!-- source-config-fingerprint: 783a999beca4dcf732e910bda6a7410453ff8fac5b24fbc15e2b5935d35b22bb -->
 
 | 模型 ID | 上下文 / 输出 | 计价 | 已核字段→来源 | 来源入口 | 状态 | 数据指纹 |
 | --- | --- | --- | --- | --- | --- | --- |

@@ -21,6 +21,7 @@
 ## 当前配置与字段级核验
 
 <!-- source-config: compute/providers/provider.json -->
+<!-- source-config-fingerprint: 替换为非凭据平台元数据 SHA-256 -->
 
 | 模型 ID | 上下文 / 输出 | 计价 | 已核字段→来源 | 来源入口 | 状态 | 数据指纹 |
 | --- | --- | --- | --- | --- | --- | --- |

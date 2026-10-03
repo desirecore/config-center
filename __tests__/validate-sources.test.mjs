@@ -3,7 +3,7 @@ import assert from 'node:assert/strict'
 import { mkdtempSync, mkdirSync, writeFileSync, rmSync } from 'node:fs'
 import { tmpdir } from 'node:os'
 import { join } from 'node:path'
-import { modelFingerprint, sourceUrlError, validateSources } from '../scripts/validate-sources.mjs'
+import { modelFingerprint, configFingerprint, sourceUrlError, validateSources } from '../scripts/validate-sources.mjs'
 
 function fixture(callback) {
   const root = mkdtempSync(join(tmpdir(), 'model-sources-'))
@@ -19,7 +19,7 @@ function fixture(callback) {
   writeFileSync(dataPath, JSON.stringify(provider))
   const source = { id: 'official', url: 'https://developers.openai.com/api/docs/models', kind: 'official-doc', scope: 'OpenAI 测试接入', retrieval: 'fetched', checkedAt: '2026-10-03' }
   const metadata = { formatVersion: 1, supplier: 'openai', checkedAt: '2026-10-03', sources: [source] }
-  const page = (status = 'partial', src = metadata) => `# OpenAI\n\n### official\n\n<!-- source-config: compute/providers/openai.json -->\n\n| \`gpt-test\` | 1000 / 未声明 | USD：未声明 / 未声明 | \`contextWindow\`→[official](#official) | [official](#official) | ${status} | \`${modelFingerprint(model)}\` |\n\n<!-- source-metadata:start -->\n\`\`\`json\n${JSON.stringify(src)}\n\`\`\`\n<!-- source-metadata:end -->\n`
+  const page = (status = 'partial', src = metadata) => `# OpenAI\n\n### official\n\n<!-- source-config: compute/providers/openai.json -->\n<!-- source-config-fingerprint: ${configFingerprint(provider)} -->\n\n| \`gpt-test\` | 1000 / 未声明 | USD：未声明 / 未声明 | \`contextWindow\`→[official](#official) | [official](#official) | ${status} | \`${modelFingerprint(model)}\` |\n\n<!-- source-metadata:start -->\n\`\`\`json\n${JSON.stringify(src)}\n\`\`\`\n<!-- source-metadata:end -->\n`
   writeFileSync(docPath, page())
   try { callback({ root, model, provider, dataPath, docPath, page, metadata }) }
   finally { rmSync(root, { recursive: true, force: true }) }
@@ -57,3 +57,10 @@ test('拒绝第三方、社区、伪官方仓库和带凭据的来源 URL', () =
   assert.ok(sourceUrlError('volcengine', 'https://www.volcengine.com/article/123'))
   assert.ok(sourceUrlError('openai', 'https://developers.openai.com/docs?api_key=secret'))
 })
+
+test('端点变化也必须复核来源，即使模型参数完全未变', () => fixture(({ root, provider, dataPath }) => {
+  assert.equal(validateSources(root).errors.length, 0)
+  provider.baseUrl = 'https://api.openai.com/v1'
+  writeFileSync(dataPath, JSON.stringify(provider))
+  assert.ok(validateSources(root).errors.some((message) => message.includes('平台元数据来源记录过期')))
+}))

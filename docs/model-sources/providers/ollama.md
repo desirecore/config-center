@@ -25,7 +25,10 @@
 
 ### compute/providers/ollama.json
 
+接入面配置快照：`openai-completions`；端点：`http://localhost:11434/v1`；币种：`USD`。这些平台字段不是整条官网验收结论，核验边界见上文。
+
 <!-- source-config: compute/providers/ollama.json -->
+<!-- source-config-fingerprint: efe53cdea1b4c410bf786ba9ffecc44617235b728bf6ded78c2097e01bf2dc77 -->
 
 | 模型 ID | 上下文 / 输出 | 计价 | 已核字段→来源 | 来源入口 | 状态 | 数据指纹 |
 | --- | --- | --- | --- | --- | --- | --- |

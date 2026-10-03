@@ -25,7 +25,10 @@
 
 ### compute/providers/siliconflow.json
 
+接入面配置快照：`openai-completions`；端点：`https://api.siliconflow.cn/v1`；币种：`CNY`。这些平台字段不是整条官网验收结论，核验边界见上文。
+
 <!-- source-config: compute/providers/siliconflow.json -->
+<!-- source-config-fingerprint: ca5a1f931ce95c420fdb0704dbfcc4ac9936ceec2844c8767c3934acc5aa096f -->
 
 | 模型 ID | 上下文 / 输出 | 计价 | 已核字段→来源 | 来源入口 | 状态 | 数据指纹 |
 | --- | --- | --- | --- | --- | --- | --- |

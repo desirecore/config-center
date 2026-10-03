@@ -26,7 +26,10 @@
 
 ### compute/providers/stability.json
 
+接入面配置快照：`stability-rest-api`；端点：`https://api.stability.ai/v2beta`；币种：`USD`。这些平台字段不是整条官网验收结论，核验边界见上文。
+
 <!-- source-config: compute/providers/stability.json -->
+<!-- source-config-fingerprint: aa7e3342c599d645bab1e9281cd42980eac33ba04223de6b58538d6c52ec7745 -->
 
 | 模型 ID | 上下文 / 输出 | 计价 | 已核字段→来源 | 来源入口 | 状态 | 数据指纹 |
 | --- | --- | --- | --- | --- | --- | --- |
@@ -35,6 +38,7 @@
 ### compute/model-specs/stability.json
 
 <!-- source-config: compute/model-specs/stability.json -->
+<!-- source-config-fingerprint: acfdd44992c5fecae5ac33d5b9a0cc1ff186f0ce835b0e88e4ac31ad2f959482 -->
 
 | 模型 ID | 上下文 / 输出 | 计价 | 已核字段→来源 | 来源入口 | 状态 | 数据指纹 |
 | --- | --- | --- | --- | --- | --- | --- |

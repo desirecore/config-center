@@ -26,7 +26,10 @@
 
 ### compute/providers/kling.json
 
+接入面配置快照：`kling-task-api`；端点：`https://api.klingai.com/v1`；币种：`CNY`。这些平台字段不是整条官网验收结论，核验边界见上文。
+
 <!-- source-config: compute/providers/kling.json -->
+<!-- source-config-fingerprint: 724a2269ba664381282a3d8c7cde80f513230d727a63158474b30202168fc66c -->
 
 | 模型 ID | 上下文 / 输出 | 计价 | 已核字段→来源 | 来源入口 | 状态 | 数据指纹 |
 | --- | --- | --- | --- | --- | --- | --- |
@@ -39,6 +42,7 @@
 ### compute/model-specs/kling.json
 
 <!-- source-config: compute/model-specs/kling.json -->
+<!-- source-config-fingerprint: 020e15818cf36fbd41fa1f00b4694fb76e036d540b10241a1429f32b7e81f73a -->
 
 | 模型 ID | 上下文 / 输出 | 计价 | 已核字段→来源 | 来源入口 | 状态 | 数据指纹 |
 | --- | --- | --- | --- | --- | --- | --- |

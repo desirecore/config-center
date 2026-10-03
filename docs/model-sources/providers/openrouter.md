@@ -25,7 +25,10 @@
 
 ### compute/providers/openrouter.json
 
+接入面配置快照：`openai-completions`；端点：`https://openrouter.ai/api/v1`；币种：`USD`。这些平台字段不是整条官网验收结论，核验边界见上文。
+
 <!-- source-config: compute/providers/openrouter.json -->
+<!-- source-config-fingerprint: 4028561e796be1b55138b049ab344a07c16e66e75104513276dab4f05342fda7 -->
 
 | 模型 ID | 上下文 / 输出 | 计价 | 已核字段→来源 | 来源入口 | 状态 | 数据指纹 |
 | --- | --- | --- | --- | --- | --- | --- |

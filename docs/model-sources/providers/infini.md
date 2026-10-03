@@ -25,7 +25,10 @@
 
 ### compute/coding-plans/infini-coding.json
 
+接入面配置快照：`openai-completions`；端点：`https://cloud.infini-ai.com/maas/coding/v1`；币种：`套餐`。这些平台字段不是整条官网验收结论，核验边界见上文。
+
 <!-- source-config: compute/coding-plans/infini-coding.json -->
+<!-- source-config-fingerprint: 5c1abccdb7f899389849a26fa1998c88bb2d9310ab170002a87d8a25f6ce53cb -->
 
 | 模型 ID | 上下文 / 输出 | 计价 | 已核字段→来源 | 来源入口 | 状态 | 数据指纹 |
 | --- | --- | --- | --- | --- | --- | --- |

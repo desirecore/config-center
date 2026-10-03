@@ -31,7 +31,10 @@ K3 国内端点和 low/high/max（默认 max）、始终思考、固定采样参
 
 ### compute/providers/moonshot.json
 
+接入面配置快照：`openai-completions`；端点：`https://api.moonshot.cn/v1`；币种：`CNY`。这些平台字段不是整条官网验收结论，核验边界见上文。
+
 <!-- source-config: compute/providers/moonshot.json -->
+<!-- source-config-fingerprint: 4f9bc01560572949497a23b270586cbdaa4d7686be62ca81d32986001505af52 -->
 
 | 模型 ID | 上下文 / 输出 | 计价 | 已核字段→来源 | 来源入口 | 状态 | 数据指纹 |
 | --- | --- | --- | --- | --- | --- | --- |
@@ -49,7 +52,10 @@ K3 国内端点和 low/high/max（默认 max）、始终思考、固定采样参
 
 ### compute/coding-plans/moonshot-coding.json
 
+接入面配置快照：`openai-completions`；端点：`https://api.kimi.com/coding/v1`；币种：`套餐`。这些平台字段不是整条官网验收结论，核验边界见上文。
+
 <!-- source-config: compute/coding-plans/moonshot-coding.json -->
+<!-- source-config-fingerprint: 922fec7b442401697bd8c9bf35a4e9408768ad12a099e347b7bd012a7f80b161 -->
 
 | 模型 ID | 上下文 / 输出 | 计价 | 已核字段→来源 | 来源入口 | 状态 | 数据指纹 |
 | --- | --- | --- | --- | --- | --- | --- |
@@ -58,6 +64,7 @@ K3 国内端点和 low/high/max（默认 max）、始终思考、固定采样参
 ### compute/model-specs/moonshot.json
 
 <!-- source-config: compute/model-specs/moonshot.json -->
+<!-- source-config-fingerprint: 1bba7934e22adda4648af0911d35e18be4c87ee2f19e9aa908bf01c30bf8ece0 -->
 
 | 模型 ID | 上下文 / 输出 | 计价 | 已核字段→来源 | 来源入口 | 状态 | 数据指纹 |
 | --- | --- | --- | --- | --- | --- | --- |

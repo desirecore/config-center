@@ -38,7 +38,10 @@ Embedding 2 的最大输入 8192 和推荐维度 768/1536/3072 已再次核对�
 
 ### compute/providers/google.json
 
+接入面配置快照：`google-generative-ai`；端点：`https://generativelanguage.googleapis.com/v1beta`；币种：`USD`。这些平台字段不是整条官网验收结论，核验边界见上文。
+
 <!-- source-config: compute/providers/google.json -->
+<!-- source-config-fingerprint: 8bb31962eb527147305e75f9e7f07349a354a90cac8196365d22c7932fd2d93b -->
 
 | 模型 ID | 上下文 / 输出 | 计价 | 已核字段→来源 | 来源入口 | 状态 | 数据指纹 |
 | --- | --- | --- | --- | --- | --- | --- |
@@ -57,6 +60,7 @@ Embedding 2 的最大输入 8192 和推荐维度 768/1536/3072 已再次核对�
 ### compute/model-specs/google.json
 
 <!-- source-config: compute/model-specs/google.json -->
+<!-- source-config-fingerprint: a3f84b38bef347808a425fb1c191273696638b8265f55ffa244154ba65edbb99 -->
 
 | 模型 ID | 上下文 / 输出 | 计价 | 已核字段→来源 | 来源入口 | 状态 | 数据指纹 |
 | --- | --- | --- | --- | --- | --- | --- |

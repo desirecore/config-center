@@ -38,7 +38,10 @@ GPT-6.1 Sol 的窗口、输出、推理档位与直连计价已再次核对。AP
 
 ### compute/providers/local-whisper.json
 
+接入面配置快照：`openai-completions`；端点：`http://localhost:8080`；币种：`USD`。这些平台字段不是整条官网验收结论，核验边界见上文。
+
 <!-- source-config: compute/providers/local-whisper.json -->
+<!-- source-config-fingerprint: 7b2535ee0b2a16f379a493b743f487ff20277259fa1bec37d58a40a9ab92535f -->
 
 | 模型 ID | 上下文 / 输出 | 计价 | 已核字段→来源 | 来源入口 | 状态 | 数据指纹 |
 | --- | --- | --- | --- | --- | --- | --- |
@@ -46,7 +49,10 @@ GPT-6.1 Sol 的窗口、输出、推理档位与直连计价已再次核对。AP
 
 ### compute/providers/openai-codex.json
 
+接入面配置快照：`openai-codex-responses`；端点：`https://chatgpt.com/backend-api`；币种：`USD`。这些平台字段不是整条官网验收结论，核验边界见上文。
+
 <!-- source-config: compute/providers/openai-codex.json -->
+<!-- source-config-fingerprint: e9be93466eef34a6ad0c41421b15bb7e59476a7b74594a262187ba8114912484 -->
 
 | 模型 ID | 上下文 / 输出 | 计价 | 已核字段→来源 | 来源入口 | 状态 | 数据指纹 |
 | --- | --- | --- | --- | --- | --- | --- |
@@ -65,7 +71,10 @@ GPT-6.1 Sol 的窗口、输出、推理档位与直连计价已再次核对。AP
 
 ### compute/providers/openai.json
 
+接入面配置快照：`openai-completions`；端点：`https://api.openai.com/v1`；币种：`USD`。这些平台字段不是整条官网验收结论，核验边界见上文。
+
 <!-- source-config: compute/providers/openai.json -->
+<!-- source-config-fingerprint: 76effc95007445f14e914faa73da171dfce0fad8c2ba4ef88bfed67a5271d588 -->
 
 | 模型 ID | 上下文 / 输出 | 计价 | 已核字段→来源 | 来源入口 | 状态 | 数据指纹 |
 | --- | --- | --- | --- | --- | --- | --- |
@@ -110,6 +119,7 @@ GPT-6.1 Sol 的窗口、输出、推理档位与直连计价已再次核对。AP
 ### compute/model-specs/openai.json
 
 <!-- source-config: compute/model-specs/openai.json -->
+<!-- source-config-fingerprint: 518cc94b2423661556b4b4bd53a68aaf967c51a1c610a1fa8cef7ecb3822abc3 -->
 
 | 模型 ID | 上下文 / 输出 | 计价 | 已核字段→来源 | 来源入口 | 状态 | 数据指纹 |
 | --- | --- | --- | --- | --- | --- | --- |

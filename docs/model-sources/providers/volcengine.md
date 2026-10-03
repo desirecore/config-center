@@ -39,7 +39,10 @@
 
 ### compute/providers/volcengine.json
 
+接入面配置快照：`openai-completions`；端点：`https://ark.cn-beijing.volces.com/api/v3`；币种：`CNY`。这些平台字段不是整条官网验收结论，核验边界见上文。
+
 <!-- source-config: compute/providers/volcengine.json -->
+<!-- source-config-fingerprint: 39994a8a21672ddaf8da1a02ea806b9281be0b7b2c8c02c70e24c565a4e68257 -->
 
 | 模型 ID | 上下文 / 输出 | 计价 | 已核字段→来源 | 来源入口 | 状态 | 数据指纹 |
 | --- | --- | --- | --- | --- | --- | --- |
@@ -70,7 +73,10 @@
 
 ### compute/coding-plans/volcengine-coding.json
 
+接入面配置快照：`openai-completions`；端点：`https://ark.cn-beijing.volces.com/api/coding/v3`；币种：`套餐`。这些平台字段不是整条官网验收结论，核验边界见上文。
+
 <!-- source-config: compute/coding-plans/volcengine-coding.json -->
+<!-- source-config-fingerprint: a4f722bb969f33a4a2e85298583b157ab884634e9d1a05bd4c61a93899319162 -->
 
 | 模型 ID | 上下文 / 输出 | 计价 | 已核字段→来源 | 来源入口 | 状态 | 数据指纹 |
 | --- | --- | --- | --- | --- | --- | --- |
@@ -92,6 +98,7 @@
 ### compute/model-specs/volcengine.json
 
 <!-- source-config: compute/model-specs/volcengine.json -->
+<!-- source-config-fingerprint: 55cc9d28b5af742857ebe757debb6522da634d994396dea3e2d38a90f665d81c -->
 
 | 模型 ID | 上下文 / 输出 | 计价 | 已核字段→来源 | 来源入口 | 状态 | 数据指纹 |
 | --- | --- | --- | --- | --- | --- | --- |

@@ -40,7 +40,10 @@
 
 ### compute/providers/zhipu-embedding.json
 
+接入面配置快照：`openai-completions`；端点：`https://open.bigmodel.cn/api/paas/v4`；币种：`CNY`。这些平台字段不是整条官网验收结论，核验边界见上文。
+
 <!-- source-config: compute/providers/zhipu-embedding.json -->
+<!-- source-config-fingerprint: d0f26d59bd09806744d873d2f958870136e5c77b792d3d756cf2653aeae2c7e9 -->
 
 | 模型 ID | 上下文 / 输出 | 计价 | 已核字段→来源 | 来源入口 | 状态 | 数据指纹 |
 | --- | --- | --- | --- | --- | --- | --- |
@@ -48,7 +51,10 @@
 
 ### compute/providers/zhipu.json
 
+接入面配置快照：`anthropic-messages`；端点：`https://open.bigmodel.cn/api/anthropic`；币种：`CNY`。这些平台字段不是整条官网验收结论，核验边界见上文。
+
 <!-- source-config: compute/providers/zhipu.json -->
+<!-- source-config-fingerprint: aa075cfecf5cbf9b45a071d440262bf38b521e05480cbdf7f67ba4e46d974e67 -->
 
 | 模型 ID | 上下文 / 输出 | 计价 | 已核字段→来源 | 来源入口 | 状态 | 数据指纹 |
 | --- | --- | --- | --- | --- | --- | --- |
@@ -67,7 +73,10 @@
 
 ### compute/coding-plans/zhipu-coding.json
 
+接入面配置快照：`anthropic-messages`；端点：`https://api.z.ai/api/anthropic`；币种：`套餐`。这些平台字段不是整条官网验收结论，核验边界见上文。
+
 <!-- source-config: compute/coding-plans/zhipu-coding.json -->
+<!-- source-config-fingerprint: 216545d9735d82aa449095af877d4bb8a714615e74771238553b32765dce2201 -->
 
 | 模型 ID | 上下文 / 输出 | 计价 | 已核字段→来源 | 来源入口 | 状态 | 数据指纹 |
 | --- | --- | --- | --- | --- | --- | --- |
@@ -80,6 +89,7 @@
 ### compute/model-specs/zhipu.json
 
 <!-- source-config: compute/model-specs/zhipu.json -->
+<!-- source-config-fingerprint: 4c31c8aa9fc2bb31b2aa8f5ddd43e305953b746fc79e89119dc2f66572613bab -->
 
 | 模型 ID | 上下文 / 输出 | 计价 | 已核字段→来源 | 来源入口 | 状态 | 数据指纹 |
 | --- | --- | --- | --- | --- | --- | --- |

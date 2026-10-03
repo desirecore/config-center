@@ -25,7 +25,10 @@
 
 ### compute/coding-plans/kwai-coding.json
 
+接入面配置快照：`openai-completions`；端点：`https://wanqing.streamlakeapi.com/api/gateway/coding/v1`；币种：`套餐`。这些平台字段不是整条官网验收结论，核验边界见上文。
+
 <!-- source-config: compute/coding-plans/kwai-coding.json -->
+<!-- source-config-fingerprint: b08f6832b4b0c9a5473ca822c1f665b9463a1e150034060df89ac06aac847d9d -->
 
 | 模型 ID | 上下文 / 输出 | 计价 | 已核字段→来源 | 来源入口 | 状态 | 数据指纹 |
 | --- | --- | --- | --- | --- | --- | --- |

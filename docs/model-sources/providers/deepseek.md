@@ -32,7 +32,10 @@
 
 ### compute/providers/deepseek.json
 
+接入面配置快照：`openai-completions`；端点：`https://api.deepseek.com`；币种：`CNY`。这些平台字段不是整条官网验收结论，核验边界见上文。
+
 <!-- source-config: compute/providers/deepseek.json -->
+<!-- source-config-fingerprint: a2aed3a448e8daa4f1c6e71da7a1e850d91f6f2a8de84be9394df5bd4a44bceb -->
 
 | 模型 ID | 上下文 / 输出 | 计价 | 已核字段→来源 | 来源入口 | 状态 | 数据指纹 |
 | --- | --- | --- | --- | --- | --- | --- |
@@ -44,6 +47,7 @@
 ### compute/model-specs/deepseek.json
 
 <!-- source-config: compute/model-specs/deepseek.json -->
+<!-- source-config-fingerprint: e5285f8e1cdfb8c46a0597f53b438e8b9dbaa3551dc9e8c1ef94e8f72d97bbf9 -->
 
 | 模型 ID | 上下文 / 输出 | 计价 | 已核字段→来源 | 来源入口 | 状态 | 数据指纹 |
 | --- | --- | --- | --- | --- | --- | --- |

@@ -30,6 +30,7 @@
 ### compute/model-specs/stealth.json
 
 <!-- source-config: compute/model-specs/stealth.json -->
+<!-- source-config-fingerprint: 6598d8a86005f10e6d88c60c5b5dd09357539b051b2297adbe8b7849423d1998 -->
 
 | 模型 ID | 上下文 / 输出 | 计价 | 已核字段→来源 | 来源入口 | 状态 | 数据指纹 |
 | --- | --- | --- | --- | --- | --- | --- |

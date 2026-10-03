@@ -25,7 +25,10 @@
 
 ### compute/providers/github-copilot.json
 
+接入面配置快照：`openai-completions`；端点：`https://api.githubcopilot.com`；币种：`USD`。这些平台字段不是整条官网验收结论，核验边界见上文。
+
 <!-- source-config: compute/providers/github-copilot.json -->
+<!-- source-config-fingerprint: 21e9b600e5b9065e4786ac070b100243279ac6dbecf73558fd27283faff4c8ce -->
 
 | 模型 ID | 上下文 / 输出 | 计价 | 已核字段→来源 | 来源入口 | 状态 | 数据指纹 |
 | --- | --- | --- | --- | --- | --- | --- |

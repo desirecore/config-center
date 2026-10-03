@@ -26,7 +26,10 @@
 
 ### compute/providers/xiaomi.json
 
+接入面配置快照：`openai-completions`；端点：`https://api.xiaomimimo.com/v1`；币种：`CNY`。这些平台字段不是整条官网验收结论，核验边界见上文。
+
 <!-- source-config: compute/providers/xiaomi.json -->
+<!-- source-config-fingerprint: 0da21c8140becb6f59e5beed5bd93d8a8957846129eb6c2044a3f25c30738686 -->
 
 | 模型 ID | 上下文 / 输出 | 计价 | 已核字段→来源 | 来源入口 | 状态 | 数据指纹 |
 | --- | --- | --- | --- | --- | --- | --- |
@@ -44,6 +47,7 @@
 ### compute/model-specs/xiaomi.json
 
 <!-- source-config: compute/model-specs/xiaomi.json -->
+<!-- source-config-fingerprint: cc09131bc3808b8d35d2a227ea3c7373d446a3f7da8190fcd8694032bce96095 -->
 
 | 模型 ID | 上下文 / 输出 | 计价 | 已核字段→来源 | 来源入口 | 状态 | 数据指纹 |
 | --- | --- | --- | --- | --- | --- | --- |

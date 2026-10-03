@@ -38,7 +38,10 @@
 
 ### compute/providers/mistral.json
 
+接入面配置快照：`openai-completions`；端点：`https://api.mistral.ai/v1`；币种：`USD`。这些平台字段不是整条官网验收结论，核验边界见上文。
+
 <!-- source-config: compute/providers/mistral.json -->
+<!-- source-config-fingerprint: 3ac1dc9699af3a662e59037cb08de245e9f2f87c305c7df345445d4e3754b07a -->
 
 | 模型 ID | 上下文 / 输出 | 计价 | 已核字段→来源 | 来源入口 | 状态 | 数据指纹 |
 | --- | --- | --- | --- | --- | --- | --- |
@@ -51,6 +54,7 @@
 ### compute/model-specs/mistral.json
 
 <!-- source-config: compute/model-specs/mistral.json -->
+<!-- source-config-fingerprint: dd3e220598eb003c25de67c79708540a4ffda7fc7ba367af7ca9ea5fbbcc68b3 -->
 
 | 模型 ID | 上下文 / 输出 | 计价 | 已核字段→来源 | 来源入口 | 状态 | 数据指纹 |
 | --- | --- | --- | --- | --- | --- | --- |

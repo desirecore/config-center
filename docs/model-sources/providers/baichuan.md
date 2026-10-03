@@ -26,7 +26,10 @@
 
 ### compute/providers/baichuan.json
 
+接入面配置快照：`openai-completions`；端点：`https://api.baichuan-ai.com/v1`；币种：`CNY`。这些平台字段不是整条官网验收结论，核验边界见上文。
+
 <!-- source-config: compute/providers/baichuan.json -->
+<!-- source-config-fingerprint: 99031f2bd57df78204a63535fdcd3fd7718770c3ea940c2d34cd51c1832f4a41 -->
 
 | 模型 ID | 上下文 / 输出 | 计价 | 已核字段→来源 | 来源入口 | 状态 | 数据指纹 |
 | --- | --- | --- | --- | --- | --- | --- |
@@ -38,6 +41,7 @@
 ### compute/model-specs/baichuan.json
 
 <!-- source-config: compute/model-specs/baichuan.json -->
+<!-- source-config-fingerprint: 0aebb6601b46c9ab5f8fefe52aa28ccf3f67d53f2ede7274d1d8e10ffc936f0b -->
 
 | 模型 ID | 上下文 / 输出 | 计价 | 已核字段→来源 | 来源入口 | 状态 | 数据指纹 |
 | --- | --- | --- | --- | --- | --- | --- |

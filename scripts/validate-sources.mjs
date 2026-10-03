@@ -52,6 +52,7 @@ const stable = (value) => {
   return value
 }
 export const modelFingerprint = (row) => createHash('sha256').update(JSON.stringify(stable(row))).digest('hex')
+export const configFingerprint = (data) => modelFingerprint(Object.fromEntries(['id', 'provider', 'brandGroup', 'label', 'baseUrl', 'mediaBaseUrl', 'apiFormat', 'priceCurrency', 'services', 'accessMode', 'credentialSource', 'requiredClientVersion', 'tombstones', 'description', 'codingPlan'].filter((key) => key in data).map((key) => [key, data[key]])))
 const get = (row, path) => path.split('.').reduce((value, key) => value?.[key], row)
 const dateValid = (value) => /^\d{4}-\d{2}-\d{2}$/.test(value ?? '') && !Number.isNaN(Date.parse(value)) && new Date(value).toISOString().slice(0, 10) === value
 const configSupplier = (config) => {
@@ -65,10 +66,13 @@ export function parseSourcePage(text) {
   if (!match) throw new Error('缺少 source-metadata JSON 块')
   const metadata = JSON.parse(match[1])
   const records = []
+  const configFingerprints = new Map()
   let config = null
   for (const line of text.split('\n')) {
     const marker = line.match(/^<!-- source-config: (compute\/[\w/-]+\.json) -->$/)
     if (marker) { config = marker[1]; continue }
+    const topFingerprint = line.match(/^<!-- source-config-fingerprint: ([a-f0-9]{64}) -->$/)
+    if (config && topFingerprint) configFingerprints.set(config, topFingerprint[1])
     if (!config || !/^\| `/.test(line)) continue
     const cells = line.split('|').slice(1, -1).map((s) => s.trim())
     if (cells.length !== 7) throw new Error('来源表必须有 7 列')
@@ -78,16 +82,17 @@ export function parseSourcePage(text) {
     const sources = [...cells[4].matchAll(/\[([\w-]+)\]\(#([\w-]+)\)/g)].map((m) => ({ source: m[1], anchor: m[2] }))
     records.push({ config, id, fingerprint, fieldSources, sources, status: cells[5], limits: cells[1], pricing: cells[2] })
   }
-  return { metadata, records }
+  return { metadata, records, configFingerprints }
 }
 
 export function validateSources(root = ROOT) {
-  const errors = [], inventory = new Map(), documented = new Set()
+  const errors = [], inventory = new Map(), documented = new Set(), configurations = new Map(), checkedConfigs = new Set()
   for (const [folder, key, idKey] of [['providers', 'models', 'modelName'], ['coding-plans', 'models', 'modelName'], ['model-specs', 'specs', 'id']]) {
     const index = JSON.parse(readFileSync(join(root, 'compute', folder, '_index.json'), 'utf8'))
     for (const name of index.order) {
       const config = `compute/${folder}/${name}.json`
       const data = JSON.parse(readFileSync(join(root, config), 'utf8'))
+      configurations.set(config, data)
       for (const row of data[key]) {
         const address = `${config}#${row[idKey]}`
         if (inventory.has(address)) errors.push(`${address}: 配置中存在重复 ID`)
@@ -103,7 +108,13 @@ export function validateSources(root = ROOT) {
     let page
     const text = readFileSync(join(dir, file), 'utf8')
     try { page = parseSourcePage(text) } catch (e) { errors.push(`${file}: ${e.message}`); continue }
-    const { metadata, records } = page
+    const { metadata, records, configFingerprints } = page
+    for (const [config, fingerprint] of configFingerprints) {
+      if (!configurations.has(config)) errors.push(`${file}: 无对应配置 ${config}`)
+      else if (configFingerprint(configurations.get(config)) !== fingerprint) errors.push(`${config}: 端点/协议/平台元数据来源记录过期`)
+      if (checkedConfigs.has(config)) errors.push(`${config}: 平台元数据来源记录重复`)
+      checkedConfigs.add(config)
+    }
     if (metadata.formatVersion !== 1 || !OFFICIAL_HOSTS[metadata.supplier]) errors.push(`${file}: 未知格式版本或供应商`)
     if (!dateValid(metadata.checkedAt)) errors.push(`${file}: 无效核验日期`)
     if (!Array.isArray(metadata.sources) || metadata.sources.length === 0) errors.push(`${file}: 缺少官网来源元数据`)
@@ -152,6 +163,7 @@ export function validateSources(root = ROOT) {
     }
   }
   for (const key of inventory.keys()) if (!documented.has(key)) errors.push(`${key}: 缺少 Markdown 来源记录`)
+  for (const config of configurations.keys()) if (!checkedConfigs.has(config)) errors.push(`${config}: 缺少端点/协议/平台元数据来源指纹`)
   return { errors, pages, models: inventory.size, partial, pending, historical }
 }
 
@@ -161,6 +173,7 @@ if (process.argv[1] && resolve(process.argv[1]) === fileURLToPath(import.meta.ur
       const dir = join(ROOT, 'compute', folder)
       for (const f of readdirSync(dir).filter((f) => f.endsWith('.json') && f !== '_index.json')) {
         const d = JSON.parse(readFileSync(join(dir, f), 'utf8'))
+        console.log(`${relative(ROOT, join(dir, f))}#@config ${configFingerprint(d)}`)
         for (const row of d.models ?? d.specs ?? []) console.log(`${relative(ROOT, join(dir, f))}#${row.modelName ?? row.id} ${modelFingerprint(row)}`)
       }
     }

@@ -42,7 +42,10 @@
 
 ### compute/providers/cohere.json
 
+接入面配置快照：`openai-completions`；端点：`https://api.cohere.ai/compatibility/v1`；币种：`USD`。这些平台字段不是整条官网验收结论，核验边界见上文。
+
 <!-- source-config: compute/providers/cohere.json -->
+<!-- source-config-fingerprint: 90a11e2c69ccbe6ea4c3d312589acf16757abbd0b8ac5e7e4d9269dee2215124 -->
 
 | 模型 ID | 上下文 / 输出 | 计价 | 已核字段→来源 | 来源入口 | 状态 | 数据指纹 |
 | --- | --- | --- | --- | --- | --- | --- |
@@ -57,6 +60,7 @@
 ### compute/model-specs/cohere.json
 
 <!-- source-config: compute/model-specs/cohere.json -->
+<!-- source-config-fingerprint: 29565d0355fe4e5371821e02d8502a72e3ff58ca961ab79ef8c41a732d19a4b8 -->
 
 | 模型 ID | 上下文 / 输出 | 计价 | 已核字段→来源 | 来源入口 | 状态 | 数据指纹 |
 | --- | --- | --- | --- | --- | --- | --- |

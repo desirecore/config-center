@@ -54,7 +54,10 @@ Qwen3.7 Max 官网给出 1000000 上下文、131072 最大输出和北京 12/36 
 
 ### compute/providers/dashscope.json
 
+接入面配置快照：`openai-completions`；端点：`https://dashscope.aliyuncs.com/compatible-mode/v1`；币种：`CNY`。这些平台字段不是整条官网验收结论，核验边界见上文。
+
 <!-- source-config: compute/providers/dashscope.json -->
+<!-- source-config-fingerprint: 797eda38b6c888337dd6531be55395e2f0ef4f9abcf442b2d0fd53c74fd3f5b8 -->
 
 | 模型 ID | 上下文 / 输出 | 计价 | 已核字段→来源 | 来源入口 | 状态 | 数据指纹 |
 | --- | --- | --- | --- | --- | --- | --- |
@@ -96,7 +99,10 @@ Qwen3.7 Max 官网给出 1000000 上下文、131072 最大输出和北京 12/36 
 
 ### compute/coding-plans/dashscope-coding.json
 
+接入面配置快照：`openai-completions`；端点：`https://coding.dashscope.aliyuncs.com/v1`；币种：`套餐`。这些平台字段不是整条官网验收结论，核验边界见上文。
+
 <!-- source-config: compute/coding-plans/dashscope-coding.json -->
+<!-- source-config-fingerprint: b61da7cd6059c8fb0c92352a6c21d6f25e0a3dba202be1ca4d41d1633c8d0d29 -->
 
 | 模型 ID | 上下文 / 输出 | 计价 | 已核字段→来源 | 来源入口 | 状态 | 数据指纹 |
 | --- | --- | --- | --- | --- | --- | --- |
@@ -113,7 +119,10 @@ Qwen3.7 Max 官网给出 1000000 上下文、131072 最大输出和北京 12/36 
 
 ### compute/coding-plans/dashscope-token-plan.json
 
+接入面配置快照：`openai-completions`；端点：`https://token-plan.cn-beijing.maas.aliyuncs.com/compatible-mode/v1`；币种：`套餐`。这些平台字段不是整条官网验收结论，核验边界见上文。
+
 <!-- source-config: compute/coding-plans/dashscope-token-plan.json -->
+<!-- source-config-fingerprint: 5379eb428a6fcb3efc34aad315cd9ff2ea66c5817de3bcb1caca17c4945b57f7 -->
 
 | 模型 ID | 上下文 / 输出 | 计价 | 已核字段→来源 | 来源入口 | 状态 | 数据指纹 |
 | --- | --- | --- | --- | --- | --- | --- |
@@ -143,6 +152,7 @@ Qwen3.7 Max 官网给出 1000000 上下文、131072 最大输出和北京 12/36 
 ### compute/model-specs/happyhorse.json
 
 <!-- source-config: compute/model-specs/happyhorse.json -->
+<!-- source-config-fingerprint: cab7fbeb5b11aac15213aa43ed0953d49378fdccc7785423352a10528bfe3fe4 -->
 
 | 模型 ID | 上下文 / 输出 | 计价 | 已核字段→来源 | 来源入口 | 状态 | 数据指纹 |
 | --- | --- | --- | --- | --- | --- | --- |
@@ -156,6 +166,7 @@ Qwen3.7 Max 官网给出 1000000 上下文、131072 最大输出和北京 12/36 
 ### compute/model-specs/qwen.json
 
 <!-- source-config: compute/model-specs/qwen.json -->
+<!-- source-config-fingerprint: 8ccc11d46eed822276c30ad2df322bd037fcdef13cf2b804f42421a55b419fe4 -->
 
 | 模型 ID | 上下文 / 输出 | 计价 | 已核字段→来源 | 来源入口 | 状态 | 数据指纹 |
 | --- | --- | --- | --- | --- | --- | --- |
@@ -206,6 +217,7 @@ Qwen3.7 Max 官网给出 1000000 上下文、131072 最大输出和北京 12/36 
 ### compute/model-specs/wan.json
 
 <!-- source-config: compute/model-specs/wan.json -->
+<!-- source-config-fingerprint: e7cfc4042c240e01b19720210ec7fac93acfd693700903a87bcab97f1bb426c9 -->
 
 | 模型 ID | 上下文 / 输出 | 计价 | 已核字段→来源 | 来源入口 | 状态 | 数据指纹 |
 | --- | --- | --- | --- | --- | --- | --- |

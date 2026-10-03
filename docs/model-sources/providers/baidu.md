@@ -31,7 +31,10 @@
 
 ### compute/providers/baidu.json
 
+接入面配置快照：`openai-completions`；端点：`https://qianfan.baidubce.com/v2`；币种：`CNY`。这些平台字段不是整条官网验收结论，核验边界见上文。
+
 <!-- source-config: compute/providers/baidu.json -->
+<!-- source-config-fingerprint: b72869de848e1fe3dfebd68468e2c1305501298a6343b9a7ee28267c859ebd78 -->
 
 | 模型 ID | 上下文 / 输出 | 计价 | 已核字段→来源 | 来源入口 | 状态 | 数据指纹 |
 | --- | --- | --- | --- | --- | --- | --- |
@@ -43,7 +46,10 @@
 
 ### compute/coding-plans/baidu-coding.json
 
+接入面配置快照：`openai-completions`；端点：`https://qianfan.baidubce.com/v2/coding`；币种：`套餐`。这些平台字段不是整条官网验收结论，核验边界见上文。
+
 <!-- source-config: compute/coding-plans/baidu-coding.json -->
+<!-- source-config-fingerprint: dc80d509281427dd0a4e54d579a19f8221a505ec91d5958b47068c37583c6087 -->
 
 | 模型 ID | 上下文 / 输出 | 计价 | 已核字段→来源 | 来源入口 | 状态 | 数据指纹 |
 | --- | --- | --- | --- | --- | --- | --- |
@@ -61,6 +67,7 @@
 ### compute/model-specs/baidu.json
 
 <!-- source-config: compute/model-specs/baidu.json -->
+<!-- source-config-fingerprint: c10395683f30ac2d661e3e85e99ca2d46f72ff602639d1ff91e4ad5f7afb70e6 -->
 
 | 模型 ID | 上下文 / 输出 | 计价 | 已核字段→来源 | 来源入口 | 状态 | 数据指纹 |
 | --- | --- | --- | --- | --- | --- | --- |

@@ -26,7 +26,10 @@
 
 ### compute/providers/xunfei.json
 
+接入面配置快照：`openai-completions`；端点：`https://spark-api-open.xf-yun.com/v1`；币种：`CNY`。这些平台字段不是整条官网验收结论，核验边界见上文。
+
 <!-- source-config: compute/providers/xunfei.json -->
+<!-- source-config-fingerprint: d3a6cf19f2ba08c91c3637e19aec7de281c5ce375ce63c91557791cc7b759531 -->
 
 | 模型 ID | 上下文 / 输出 | 计价 | 已核字段→来源 | 来源入口 | 状态 | 数据指纹 |
 | --- | --- | --- | --- | --- | --- | --- |
@@ -36,6 +39,7 @@
 ### compute/model-specs/xunfei.json
 
 <!-- source-config: compute/model-specs/xunfei.json -->
+<!-- source-config-fingerprint: f394c05c83d9cc3aa04530ca464f1ec93109aea075915638d5a9ec4721acb98a -->
 
 | 模型 ID | 上下文 / 输出 | 计价 | 已核字段→来源 | 来源入口 | 状态 | 数据指纹 |
 | --- | --- | --- | --- | --- | --- | --- |

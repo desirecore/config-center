@@ -39,7 +39,10 @@ M3.1 Flash Preview 仅在 M Plan/Code 开放，需 adaptive thinking，none/disa
 
 ### compute/providers/minimax.json
 
+接入面配置快照：`anthropic-messages`；端点：`https://api.minimaxi.com/anthropic`；币种：`CNY`。这些平台字段不是整条官网验收结论，核验边界见上文。
+
 <!-- source-config: compute/providers/minimax.json -->
+<!-- source-config-fingerprint: f9c36c5055d91ecafe0cae2be175a95b025727c1e2f5a937c75e0865a04cc8bd -->
 
 | 模型 ID | 上下文 / 输出 | 计价 | 已核字段→来源 | 来源入口 | 状态 | 数据指纹 |
 | --- | --- | --- | --- | --- | --- | --- |
@@ -72,7 +75,10 @@ M3.1 Flash Preview 仅在 M Plan/Code 开放，需 adaptive thinking，none/disa
 
 ### compute/coding-plans/minimax-coding.json
 
+接入面配置快照：`anthropic-messages`；端点：`https://api.minimaxi.com/anthropic`；币种：`套餐`。这些平台字段不是整条官网验收结论，核验边界见上文。
+
 <!-- source-config: compute/coding-plans/minimax-coding.json -->
+<!-- source-config-fingerprint: c46280c1b60448947a4e0b1bea1607dbe26b245edae0d6697663f818d67e5f93 -->
 
 | 模型 ID | 上下文 / 输出 | 计价 | 已核字段→来源 | 来源入口 | 状态 | 数据指纹 |
 | --- | --- | --- | --- | --- | --- | --- |
@@ -91,6 +97,7 @@ M3.1 Flash Preview 仅在 M Plan/Code 开放，需 adaptive thinking，none/disa
 ### compute/model-specs/minimax.json
 
 <!-- source-config: compute/model-specs/minimax.json -->
+<!-- source-config-fingerprint: b0689e03103d84a7e1500bb217a8725b9f7a22c49eee523ba0681f45144fb7da -->
 
 | 模型 ID | 上下文 / 输出 | 计价 | 已核字段→来源 | 来源入口 | 状态 | 数据指纹 |
 | --- | --- | --- | --- | --- | --- | --- |

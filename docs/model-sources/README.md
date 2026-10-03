@@ -62,6 +62,7 @@
 - [TEMPLATE.md](TEMPLATE.md)：新增供应商时复制这个格式；来源 ID 使用稳定的英文短名。
 - 每个 `source-config` 段落对应一个 canonical JSON 文件；每一行对应一条 `models[].modelName` 或 `specs[].id`。
 - “已核字段→来源”使用完整字段路径，必须指向成功读取的官网来源。未列出的字段仍未核实。ID 的核对要求完整标识符匹配，不能以 gpt-5.5 出现来证明 gpt-5；ID 出现也不证明该端点可调用。
+- `source-config-fingerprint` 记录端点、协议、币种和平台非凭据字段，防止只改平台而遗漏来源复核。API Key 等凭据不写进来源记录。
 - 行尾 SHA-256 是当前完整模型对象的指纹，用于发现配置已变而文档未复核。指纹不是官方签名，也不证明字段正确。
 
 ## 更新流程
@@ -70,7 +71,7 @@
 2. 将官网内容与现有 JSON 逐字段比较；发现差异时先记录含义、单位、限时/地域条件，再改配置。
 3. 同步 Provider、共享规格、套餐名单及相关回归。删除某接入面不再列出的预置型号时添加该接入面的 tombstones；历史兼容规格是否保留单独判断。
 4. 基于现有 Markdown 增量编辑受影响行和核验说明；不要整页重建或删除既有来源历史。更新实际核实的字段、日期和状态。
-5. 运行 `node scripts/validate-sources.mjs --fingerprints`，将对应模型的新指纹写入文档，确认参数表与 JSON 一致。
+5. 运行 `node scripts/validate-sources.mjs --fingerprints`，将对应模型的新指纹写入文档；平台字段改变时同步 `#@config` 指纹，确认参数表与 JSON 一致。
 6. 数据变化时递增 `manifest.json#presetDataVersion` 并更新日期；纯文档修订不需要假装发布数据更新。
 7. 执行 `npm run validate`、`npm test` 和 `git diff --check`。必要时在已授权账号进行聚焦实测，并记录结果与限制。
 

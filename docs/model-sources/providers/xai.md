@@ -26,7 +26,10 @@
 
 ### compute/providers/xai.json
 
+接入面配置快照：`openai-completions`；端点：`https://api.x.ai/v1`；币种：`USD`。这些平台字段不是整条官网验收结论，核验边界见上文。
+
 <!-- source-config: compute/providers/xai.json -->
+<!-- source-config-fingerprint: 0201d4cd147c510c9bd8540ad292b29d4afffc67e42566f4bf0aee3a1f8f77a2 -->
 
 | 模型 ID | 上下文 / 输出 | 计价 | 已核字段→来源 | 来源入口 | 状态 | 数据指纹 |
 | --- | --- | --- | --- | --- | --- | --- |
@@ -38,6 +41,7 @@
 ### compute/model-specs/xai.json
 
 <!-- source-config: compute/model-specs/xai.json -->
+<!-- source-config-fingerprint: ab649074aabf20358bd272f5701af07c36aa7cd7e029f54b1e287f2926234628 -->
 
 | 模型 ID | 上下文 / 输出 | 计价 | 已核字段→来源 | 来源入口 | 状态 | 数据指纹 |
 | --- | --- | --- | --- | --- | --- | --- |

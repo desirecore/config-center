@@ -26,7 +26,10 @@
 
 ### compute/providers/perplexity.json
 
+接入面配置快照：`openai-completions`；端点：`https://api.perplexity.ai`；币种：`USD`。这些平台字段不是整条官网验收结论，核验边界见上文。
+
 <!-- source-config: compute/providers/perplexity.json -->
+<!-- source-config-fingerprint: 2e86809aa786094beabf698af599985f4ffcd34fec8f78c33c29ae9968081397 -->
 
 | 模型 ID | 上下文 / 输出 | 计价 | 已核字段→来源 | 来源入口 | 状态 | 数据指纹 |
 | --- | --- | --- | --- | --- | --- | --- |
@@ -37,6 +40,7 @@
 ### compute/model-specs/perplexity.json
 
 <!-- source-config: compute/model-specs/perplexity.json -->
+<!-- source-config-fingerprint: ff9eac633ae62936752669aef03f3f08e161d61fe0957c88ef987ea40693e78b -->
 
 | 模型 ID | 上下文 / 输出 | 计价 | 已核字段→来源 | 来源入口 | 状态 | 数据指纹 |
 | --- | --- | --- | --- | --- | --- | --- |

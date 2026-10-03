@@ -35,7 +35,10 @@ Opus 5.5 和 Sonnet 5.5 的窗口、输出、默认 effort、强制工具选择�
 
 ### compute/providers/anthropic-claude.json
 
+接入面配置快照：`anthropic-messages`；端点：`https://api.anthropic.com`；币种：`USD`。这些平台字段不是整条官网验收结论，核验边界见上文。
+
 <!-- source-config: compute/providers/anthropic-claude.json -->
+<!-- source-config-fingerprint: 9e31624db1bc71c15ce7b841fba444c1aae51c25cf21d7df8f9bfee373aa0771 -->
 
 | 模型 ID | 上下文 / 输出 | 计价 | 已核字段→来源 | 来源入口 | 状态 | 数据指纹 |
 | --- | --- | --- | --- | --- | --- | --- |
@@ -47,7 +50,10 @@ Opus 5.5 和 Sonnet 5.5 的窗口、输出、默认 effort、强制工具选择�
 
 ### compute/providers/anthropic.json
 
+接入面配置快照：`anthropic-messages`；端点：`https://api.anthropic.com`；币种：`USD`。这些平台字段不是整条官网验收结论，核验边界见上文。
+
 <!-- source-config: compute/providers/anthropic.json -->
+<!-- source-config-fingerprint: a77ec38ea8875bb5fcb38c4ca4ac9d14181844d84159648e6198ceb147f13552 -->
 
 | 模型 ID | 上下文 / 输出 | 计价 | 已核字段→来源 | 来源入口 | 状态 | 数据指纹 |
 | --- | --- | --- | --- | --- | --- | --- |
@@ -60,6 +66,7 @@ Opus 5.5 和 Sonnet 5.5 的窗口、输出、默认 effort、强制工具选择�
 ### compute/model-specs/anthropic.json
 
 <!-- source-config: compute/model-specs/anthropic.json -->
+<!-- source-config-fingerprint: 69ece3972c4deae2aa4fc74c2df2601b61793351b935c9d6a7c1b29262d0ede5 -->
 
 | 模型 ID | 上下文 / 输出 | 计价 | 已核字段→来源 | 来源入口 | 状态 | 数据指纹 |
 | --- | --- | --- | --- | --- | --- | --- |

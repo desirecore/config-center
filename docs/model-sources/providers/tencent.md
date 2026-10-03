@@ -27,7 +27,10 @@
 
 ### compute/providers/tencent.json
 
+接入面配置快照：`openai-completions`；端点：`https://api.hunyuan.cloud.tencent.com/v1`；币种：`CNY`。这些平台字段不是整条官网验收结论，核验边界见上文。
+
 <!-- source-config: compute/providers/tencent.json -->
+<!-- source-config-fingerprint: d4792fa81dfb99080a2903c9da371eaabebd9d13bf32b98cad47734520ae9fb0 -->
 
 | 模型 ID | 上下文 / 输出 | 计价 | 已核字段→来源 | 来源入口 | 状态 | 数据指纹 |
 | --- | --- | --- | --- | --- | --- | --- |
@@ -40,7 +43,10 @@
 
 ### compute/coding-plans/tencent-token.json
 
+接入面配置快照：`openai-completions`；端点：`https://api.lkeap.cloud.tencent.com/plan/v3`；币种：`套餐`。这些平台字段不是整条官网验收结论，核验边界见上文。
+
 <!-- source-config: compute/coding-plans/tencent-token.json -->
+<!-- source-config-fingerprint: 6516f8be7a3126929f849b4cb85ae7888f95a6a3455228a3d53fff0eb76427cf -->
 
 | 模型 ID | 上下文 / 输出 | 计价 | 已核字段→来源 | 来源入口 | 状态 | 数据指纹 |
 | --- | --- | --- | --- | --- | --- | --- |
@@ -58,6 +64,7 @@
 ### compute/model-specs/tencent.json
 
 <!-- source-config: compute/model-specs/tencent.json -->
+<!-- source-config-fingerprint: 828f52845e79e88bba640731749cf8af9e4cdb90d90148dc9db20b2401ee23dc -->
 
 | 模型 ID | 上下文 / 输出 | 计价 | 已核字段→来源 | 来源入口 | 状态 | 数据指纹 |
 | --- | --- | --- | --- | --- | --- | --- |
