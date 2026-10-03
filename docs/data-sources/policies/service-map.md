@@ -2,7 +2,9 @@
 
 默认映射属于本仓产品策略，最新型号不自动替换旧默认。所有本地 providerId/modelName 必须实际存在；云端动态目录例外逐项记录。引用校验不代表新模型质量、成本、延迟或协议实测。
 
-当前保留 GPT-5.4 Mini/Nano、Sonnet 5、MiMo V2.5 等默认。下一次调整前对所选接入做质量、成本、延迟、工具/多模态和失败回退比较，登记选择理由与测量日期；没有客户端实测证据时不改变默认。新增型号、退役、端点迁移后触发复查。逐模型官方事实继续使用 ../../model-sources/README.md 的分供应商来源。
+当前保留 GPT-5.4 Mini/Nano、Sonnet 5 等默认；summary 于 2026-10-03 由 MiMo V2.5 调整为 MiMo V2.6 Flash。下一次调整前对所选接入做质量、成本、延迟、工具/多模态和失败回退比较，登记选择理由与测量日期；没有客户端实测证据时不改变默认。新增型号、退役、端点迁移后触发复查。逐模型官方事实继续使用 ../../model-sources/README.md 的分供应商来源。
+
+调整记录（2026-10-03，summary）：`desirecore-cloud/mimo-v2.5` 已不在云端动态目录中（2026-09-30 客户端云端同步后模型列表不再包含该型号），客户端钉选落空后回退主查询模型，后台话题分析/摘要常被推理模型拖到超时。改指同系后继 `mimo-v2.6-flash`（model-specs/xiaomi.json：balanced 档，思考模式支持 off，可供辅助调用关闭思考）。本次为产品决策替换已下架型号，尚未做专门的质量、成本、延迟对比；后续以客户端审计中 callPurpose=matter-analysis / conversation-summary 的成功率与耗时复查。
 
 <!-- data-source:start -->
 ```json
@@ -95,7 +97,7 @@
       "providerId": "provider-minimax-001"
     },
     "summary": {
-      "modelName": "mimo-v2.5",
+      "modelName": "mimo-v2.6-flash",
       "providerId": "desirecore-cloud"
     }
   }
