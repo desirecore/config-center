@@ -76,7 +76,7 @@
     "providerId": "provider-minimax-001"
   },
   "summary": {
-    "modelName": "qwen3.8-flash",
+    "modelName": "mimo-v2.6-flash",
     "providerId": "desirecore-cloud"
   }
 }
