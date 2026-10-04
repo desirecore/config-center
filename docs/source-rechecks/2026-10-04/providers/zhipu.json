@@ -1,0 +1,1543 @@
+{
+  "supplier": "zhipu",
+  "checkedAt": "2026-10-04",
+  "sources": [
+    {
+      "id": "glm53",
+      "url": "https://docs.bigmodel.cn/cn/guide/models/text/glm-5.3.md",
+      "finalUrl": "https://docs.bigmodel.cn/cn/guide/models/text/glm-5.3.md",
+      "publisher": "zhipu",
+      "kind": "official-docs",
+      "scope": "只适用于页面明确的原厂/地域/接入，套餐和聚合合同独立",
+      "contentSha256": "2ae550297e839b51498db0f487d9ba5cb0c44f996236546d0eb2e07ce43ef8d8",
+      "retrieval": "readable",
+      "summary": "实际读取16063字符，可见正文13370字符；需逐精确ID定位，HTTP成功不代表字段已证。",
+      "digestKind": "sha256-utf8-decoded-response-body",
+      "retrievalMethod": "urllib.request HTTPS response read; bytes decoded as UTF-8 with replacement, SHA-256 over decoded text re-encoded as UTF-8 before visible-text extraction; full HTML/Markdown/JSON body, not a raw-byte digest or vendor signature"
+    },
+    {
+      "id": "glm53-flash",
+      "url": "https://docs.bigmodel.cn/cn/guide/models/vlm/glm-5.3-flash.md",
+      "finalUrl": "https://docs.bigmodel.cn/cn/guide/models/vlm/glm-5.3-flash.md",
+      "publisher": "zhipu",
+      "kind": "official-docs",
+      "scope": "只适用于页面明确的原厂/地域/接入，套餐和聚合合同独立",
+      "contentSha256": "d9e2d56363f9e04e18c5bb60756edffaf565d2ccb28c420552da2ead3eecef9c",
+      "retrieval": "readable",
+      "summary": "实际读取10927字符，可见正文10652字符；需逐精确ID定位，HTTP成功不代表字段已证。",
+      "digestKind": "sha256-utf8-decoded-response-body",
+      "retrievalMethod": "urllib.request HTTPS response read; bytes decoded as UTF-8 with replacement, SHA-256 over decoded text re-encoded as UTF-8 before visible-text extraction; full HTML/Markdown/JSON body, not a raw-byte digest or vendor signature"
+    },
+    {
+      "id": "glm-pricing",
+      "url": "https://docs.bigmodel.cn/cn/guide/start/pricing.md",
+      "finalUrl": "https://docs.bigmodel.cn/cn/guide/start/pricing.md",
+      "publisher": "zhipu",
+      "kind": "official-docs",
+      "scope": "只适用于页面明确的原厂/地域/接入，套餐和聚合合同独立",
+      "contentSha256": "7224d9566404ed86a97dbfb41cf1703f1f31a25d2b4e91953018ceb5be638d0b",
+      "retrieval": "readable",
+      "summary": "实际读取10948字符，可见正文10758字符；需逐精确ID定位，HTTP成功不代表字段已证。",
+      "digestKind": "sha256-utf8-decoded-response-body",
+      "retrievalMethod": "urllib.request HTTPS response read; bytes decoded as UTF-8 with replacement, SHA-256 over decoded text re-encoded as UTF-8 before visible-text extraction; full HTML/Markdown/JSON body, not a raw-byte digest or vendor signature"
+    },
+    {
+      "id": "glm-plan",
+      "url": "https://docs.bigmodel.cn/cn/coding-plan/latest-model.md",
+      "finalUrl": "https://docs.bigmodel.cn/cn/coding-plan/latest-model.md",
+      "publisher": "zhipu",
+      "kind": "official-docs",
+      "scope": "只适用于页面明确的原厂/地域/接入，套餐和聚合合同独立",
+      "contentSha256": "d5c5eb7ef0ddf5a89128018fffb1d96a7e4a6745c8c16dc53c5c4453e59891fc",
+      "retrieval": "readable",
+      "summary": "实际读取3985字符，可见正文3778字符；需逐精确ID定位，HTTP成功不代表字段已证。",
+      "digestKind": "sha256-utf8-decoded-response-body",
+      "retrievalMethod": "urllib.request HTTPS response read; bytes decoded as UTF-8 with replacement, SHA-256 over decoded text re-encoded as UTF-8 before visible-text extraction; full HTML/Markdown/JSON body, not a raw-byte digest or vendor signature"
+    },
+    {
+      "id": "glm52-cn-api",
+      "url": "https://docs.bigmodel.cn/api-reference/%E6%A8%A1%E5%9E%8B-api/%E5%AF%B9%E8%AF%9D%E8%A1%A5%E5%85%A8.md",
+      "finalUrl": "https://docs.bigmodel.cn/api-reference/%E6%A8%A1%E5%9E%8B-api/%E5%AF%B9%E8%AF%9D%E8%A1%A5%E5%85%A8.md",
+      "publisher": "zhipu",
+      "kind": "official-docs",
+      "scope": "只适用于页面明确的原厂/地域/接入，套餐和聚合合同独立",
+      "contentSha256": "9844803948f2c1fd80562d9c617b7cb9bc0ddbac66e97db7a3d65279c9753a8a",
+      "retrieval": "readable",
+      "summary": "实际读取55055字符，可见正文33426字符；需逐精确ID定位，HTTP成功不代表字段已证。",
+      "digestKind": "sha256-utf8-decoded-response-body",
+      "retrievalMethod": "urllib.request HTTPS response read; bytes decoded as UTF-8 with replacement, SHA-256 over decoded text re-encoded as UTF-8 before visible-text extraction; full HTML/Markdown/JSON body, not a raw-byte digest or vendor signature"
+    },
+    {
+      "id": "glm52-intl-api",
+      "url": "https://docs.z.ai/api-reference/llm/chat-completion.md",
+      "finalUrl": "https://docs.z.ai/api-reference/llm/chat-completion.md",
+      "publisher": "zhipu",
+      "kind": "official-docs",
+      "scope": "只适用于页面明确的原厂/地域/接入，套餐和聚合合同独立",
+      "contentSha256": "b05ada5d25382772edafd1b12dd2ead1da430a8817b5b748f2fb8dee2d7a6c10",
+      "retrieval": "readable",
+      "summary": "实际读取44272字符，可见正文28820字符；需逐精确ID定位，HTTP成功不代表字段已证。",
+      "digestKind": "sha256-utf8-decoded-response-body",
+      "retrievalMethod": "urllib.request HTTPS response read; bytes decoded as UTF-8 with replacement, SHA-256 over decoded text re-encoded as UTF-8 before visible-text extraction; full HTML/Markdown/JSON body, not a raw-byte digest or vendor signature"
+    },
+    {
+      "id": "glm47",
+      "url": "https://docs.bigmodel.cn/cn/guide/models/text/glm-4.7.md",
+      "finalUrl": "https://docs.bigmodel.cn/cn/guide/models/text/glm-4.7.md",
+      "publisher": "zhipu",
+      "kind": "official-docs",
+      "scope": "只适用于页面明确的原厂/地域/接入，套餐和聚合合同独立",
+      "contentSha256": "25ce7e68aa5afe76ee9d768f2556ff0a9577020244f8edc42a599eec181e41ba",
+      "retrieval": "readable",
+      "summary": "实际读取24564字符，可见正文20869字符；需逐精确ID定位，HTTP成功不代表字段已证。",
+      "digestKind": "sha256-utf8-decoded-response-body",
+      "retrievalMethod": "urllib.request HTTPS response read; bytes decoded as UTF-8 with replacement, SHA-256 over decoded text re-encoded as UTF-8 before visible-text extraction; full HTML/Markdown/JSON body, not a raw-byte digest or vendor signature"
+    },
+    {
+      "id": "glm52",
+      "url": "https://docs.bigmodel.cn/cn/guide/models/text/glm-5.2.md",
+      "finalUrl": "https://docs.bigmodel.cn/cn/guide/models/text/glm-5.2.md",
+      "publisher": "zhipu",
+      "kind": "official-docs",
+      "scope": "只适用于页面明确的原厂/地域/接入，套餐和聚合合同独立",
+      "contentSha256": "ad435d6334a6c221a7004ada5cb6a0c936968c445b1648f7158623ed1f2967d1",
+      "retrieval": "readable",
+      "summary": "实际读取21559字符，可见正文18552字符；需逐精确ID定位，HTTP成功不代表字段已证。",
+      "digestKind": "sha256-utf8-decoded-response-body",
+      "retrievalMethod": "urllib.request HTTPS response read; bytes decoded as UTF-8 with replacement, SHA-256 over decoded text re-encoded as UTF-8 before visible-text extraction; full HTML/Markdown/JSON body, not a raw-byte digest or vendor signature"
+    }
+  ],
+  "findings": [
+    {
+      "recordKey": "compute/providers/zhipu-embedding.json#embedding-3",
+      "modelId": "embedding-3",
+      "config": "compute/providers/zhipu-embedding.json",
+      "sourceDoc": "docs/model-sources/providers/zhipu/models/embedding-3.md",
+      "outcome": "still-unresolved",
+      "sourceIds": [
+        "glm53",
+        "glm53-flash",
+        "glm-pricing",
+        "glm-plan",
+        "glm52-cn-api",
+        "glm52-intl-api",
+        "glm47",
+        "glm52"
+      ],
+      "fieldEvidence": [],
+      "remainingFields": [
+        "contextWindow",
+        "inputPrice",
+        "capabilities",
+        "serviceType",
+        "access.maxInputTokens",
+        "access.protocol-readiness"
+      ],
+      "nextAction": "人工逐字段复核本次候选；只将matches且精确接入适用的字段迁入原来源文档，differs先审单位/阶梯/产品默认；缺项需精确模型页、官方版本卡或授权目录，不猜填。",
+      "notes": [
+        "本轮未在可读页面定位完整精确型号合同；缺失不判定停服。"
+      ],
+      "originalStatus": "partial",
+      "originalGap": "idOnly"
+    },
+    {
+      "recordKey": "compute/model-specs/zhipu.json#embedding-3",
+      "modelId": "embedding-3",
+      "config": "compute/model-specs/zhipu.json",
+      "sourceDoc": "docs/model-sources/providers/zhipu/models/embedding-3.md",
+      "outcome": "still-unresolved",
+      "sourceIds": [
+        "glm53",
+        "glm53-flash",
+        "glm-pricing",
+        "glm-plan",
+        "glm52-cn-api",
+        "glm52-intl-api",
+        "glm47",
+        "glm52"
+      ],
+      "fieldEvidence": [],
+      "remainingFields": [
+        "spec.contextWindow",
+        "spec.capabilities",
+        "spec.serviceType"
+      ],
+      "nextAction": "人工逐字段复核本次候选；只将matches且精确接入适用的字段迁入原来源文档，differs先审单位/阶梯/产品默认；缺项需精确模型页、官方版本卡或授权目录，不猜填。",
+      "notes": [
+        "本轮未在可读页面定位完整精确型号合同；缺失不判定停服。"
+      ],
+      "originalStatus": "partial",
+      "originalGap": "idOnly"
+    },
+    {
+      "recordKey": "compute/providers/zhipu.json#glm-4.6",
+      "modelId": "glm-4.6",
+      "config": "compute/providers/zhipu.json",
+      "sourceDoc": "docs/model-sources/providers/zhipu/models/glm-4.6.md",
+      "outcome": "official-identity-only",
+      "sourceIds": [
+        "glm52-cn-api"
+      ],
+      "fieldEvidence": [
+        {
+          "field": "modelName",
+          "currentValue": "glm-4.6",
+          "supportedValue": "glm-4.6",
+          "sourceId": "glm52-cn-api",
+          "assessment": "matches",
+          "explanation": "本轮正文定位精确标识；只确认该标识在其来源合同出现，不证明其他字段或不同套餐可用性。"
+        }
+      ],
+      "remainingFields": [
+        "contextWindow",
+        "defaultTemperature",
+        "defaultTopP",
+        "extra.cacheHitPrice",
+        "inputPrice",
+        "maxOutputTokens",
+        "outputPrice",
+        "capabilities",
+        "serviceType",
+        "access.maxInputTokens",
+        "access.protocol-readiness"
+      ],
+      "nextAction": "人工逐字段复核本次候选；只将matches且精确接入适用的字段迁入原来源文档，differs先审单位/阶梯/产品默认；缺项需精确模型页、官方版本卡或授权目录，不猜填。",
+      "notes": [
+        "本轮未在可读页面定位完整精确型号合同；缺失不判定停服。"
+      ],
+      "originalStatus": "partial",
+      "originalGap": "idOnly"
+    },
+    {
+      "recordKey": "compute/model-specs/zhipu.json#glm-4.6",
+      "modelId": "glm-4.6",
+      "config": "compute/model-specs/zhipu.json",
+      "sourceDoc": "docs/model-sources/providers/zhipu/models/glm-4.6.md",
+      "outcome": "official-identity-only",
+      "sourceIds": [
+        "glm52-cn-api"
+      ],
+      "fieldEvidence": [
+        {
+          "field": "id",
+          "currentValue": "glm-4.6",
+          "supportedValue": "glm-4.6",
+          "sourceId": "glm52-cn-api",
+          "assessment": "matches",
+          "explanation": "本轮正文定位精确标识；只确认该标识在其来源合同出现，不证明其他字段或不同套餐可用性。"
+        }
+      ],
+      "remainingFields": [
+        "spec.contextWindow",
+        "spec.defaultTemperature",
+        "spec.maxOutputTokens",
+        "spec.supportsReasoning",
+        "spec.capabilities",
+        "spec.serviceType"
+      ],
+      "nextAction": "人工逐字段复核本次候选；只将matches且精确接入适用的字段迁入原来源文档，differs先审单位/阶梯/产品默认；缺项需精确模型页、官方版本卡或授权目录，不猜填。",
+      "notes": [
+        "本轮未在可读页面定位完整精确型号合同；缺失不判定停服。"
+      ],
+      "originalStatus": "partial",
+      "originalGap": "idOnly"
+    },
+    {
+      "recordKey": "compute/providers/zhipu.json#glm-4.6v",
+      "modelId": "glm-4.6v",
+      "config": "compute/providers/zhipu.json",
+      "sourceDoc": "docs/model-sources/providers/zhipu/models/glm-4.6v.md",
+      "outcome": "official-identity-only",
+      "sourceIds": [
+        "glm52-cn-api"
+      ],
+      "fieldEvidence": [
+        {
+          "field": "modelName",
+          "currentValue": "glm-4.6v",
+          "supportedValue": "glm-4.6v",
+          "sourceId": "glm52-cn-api",
+          "assessment": "matches",
+          "explanation": "本轮正文定位精确标识；只确认该标识在其来源合同出现，不证明其他字段或不同套餐可用性。"
+        }
+      ],
+      "remainingFields": [
+        "contextWindow",
+        "defaultTemperature",
+        "defaultTopP",
+        "extra.cacheHitPrice",
+        "extra.cacheStoragePrice",
+        "extra.pricingTiers",
+        "inputPrice",
+        "maxOutputTokens",
+        "outputPrice",
+        "capabilities",
+        "serviceType",
+        "access.maxInputTokens",
+        "access.protocol-readiness"
+      ],
+      "nextAction": "人工逐字段复核本次候选；只将matches且精确接入适用的字段迁入原来源文档，differs先审单位/阶梯/产品默认；缺项需精确模型页、官方版本卡或授权目录，不猜填。",
+      "notes": [
+        "本轮未在可读页面定位完整精确型号合同；缺失不判定停服。"
+      ],
+      "originalStatus": "partial",
+      "originalGap": "idOnly"
+    },
+    {
+      "recordKey": "compute/model-specs/zhipu.json#glm-4.6v",
+      "modelId": "glm-4.6v",
+      "config": "compute/model-specs/zhipu.json",
+      "sourceDoc": "docs/model-sources/providers/zhipu/models/glm-4.6v.md",
+      "outcome": "official-identity-only",
+      "sourceIds": [
+        "glm52-cn-api"
+      ],
+      "fieldEvidence": [
+        {
+          "field": "id",
+          "currentValue": "glm-4.6v",
+          "supportedValue": "glm-4.6v",
+          "sourceId": "glm52-cn-api",
+          "assessment": "matches",
+          "explanation": "本轮正文定位精确标识；只确认该标识在其来源合同出现，不证明其他字段或不同套餐可用性。"
+        }
+      ],
+      "remainingFields": [
+        "spec.contextWindow",
+        "spec.defaultTemperature",
+        "spec.maxOutputTokens",
+        "spec.capabilities",
+        "spec.serviceType"
+      ],
+      "nextAction": "人工逐字段复核本次候选；只将matches且精确接入适用的字段迁入原来源文档，differs先审单位/阶梯/产品默认；缺项需精确模型页、官方版本卡或授权目录，不猜填。",
+      "notes": [
+        "本轮未在可读页面定位完整精确型号合同；缺失不判定停服。"
+      ],
+      "originalStatus": "partial",
+      "originalGap": "idOnly"
+    },
+    {
+      "recordKey": "compute/providers/zhipu.json#glm-4.7-flashx",
+      "modelId": "glm-4.7-flashx",
+      "config": "compute/providers/zhipu.json",
+      "sourceDoc": "docs/model-sources/providers/zhipu/models/glm-4.7-flashx.md",
+      "outcome": "official-fields-found",
+      "sourceIds": [
+        "glm52-cn-api",
+        "glm-pricing"
+      ],
+      "fieldEvidence": [
+        {
+          "field": "modelName",
+          "currentValue": "glm-4.7-flashx",
+          "supportedValue": "glm-4.7-flashx",
+          "sourceId": "glm52-cn-api",
+          "assessment": "matches",
+          "explanation": "本轮正文定位精确标识；只确认该标识在其来源合同出现，不证明其他字段或不同套餐可用性。"
+        },
+        {
+          "field": "inputPrice",
+          "currentValue": 0.5,
+          "supportedValue": 0.5,
+          "sourceId": "glm-pricing",
+          "assessment": "matches",
+          "explanation": "国内CNY/百万token；表格精确展示名/API ID需分别核验，价格不用推广到套餐。"
+        },
+        {
+          "field": "outputPrice",
+          "currentValue": 3,
+          "supportedValue": 3,
+          "sourceId": "glm-pricing",
+          "assessment": "matches",
+          "explanation": "国内CNY/百万token；表格精确展示名/API ID需分别核验，价格不用推广到套餐。"
+        },
+        {
+          "field": "extra.cacheHitPrice",
+          "currentValue": 0.1,
+          "supportedValue": 0.1,
+          "sourceId": "glm-pricing",
+          "assessment": "matches",
+          "explanation": "国内CNY/百万token；表格精确展示名/API ID需分别核验，价格不用推广到套餐。"
+        }
+      ],
+      "remainingFields": [
+        "contextWindow",
+        "defaultTemperature",
+        "defaultTopP",
+        "extra.cacheStoragePrice",
+        "maxOutputTokens",
+        "capabilities",
+        "serviceType",
+        "access.maxInputTokens",
+        "access.protocol-readiness"
+      ],
+      "nextAction": "人工逐字段复核本次候选；只将matches且精确接入适用的字段迁入原来源文档，differs先审单位/阶梯/产品默认；缺项需精确模型页、官方版本卡或授权目录，不猜填。",
+      "notes": [
+        "本轮未在可读页面定位完整精确型号合同；缺失不判定停服。"
+      ],
+      "originalStatus": "partial",
+      "originalGap": "idOnly"
+    },
+    {
+      "recordKey": "compute/model-specs/zhipu.json#glm-4.7-thinking",
+      "modelId": "glm-4.7-thinking",
+      "config": "compute/model-specs/zhipu.json",
+      "sourceDoc": "docs/model-sources/providers/zhipu/models/glm-4.7-thinking.md",
+      "outcome": "still-unresolved",
+      "sourceIds": [
+        "glm53",
+        "glm53-flash",
+        "glm-pricing",
+        "glm-plan",
+        "glm52-cn-api",
+        "glm52-intl-api",
+        "glm47",
+        "glm52"
+      ],
+      "fieldEvidence": [],
+      "remainingFields": [
+        "id",
+        "spec.contextWindow",
+        "spec.defaultTemperature",
+        "spec.maxOutputTokens",
+        "spec.supportsReasoning",
+        "spec.capabilities",
+        "spec.serviceType"
+      ],
+      "nextAction": "人工逐字段复核本次候选；只将matches且精确接入适用的字段迁入原来源文档，differs先审单位/阶梯/产品默认；缺项需精确模型页、官方版本卡或授权目录，不猜填。",
+      "notes": [
+        "本轮未在可读页面定位完整精确型号合同；缺失不判定停服。"
+      ],
+      "originalStatus": "pending",
+      "originalGap": "pending"
+    },
+    {
+      "recordKey": "compute/providers/zhipu.json#glm-4.7",
+      "modelId": "glm-4.7",
+      "config": "compute/providers/zhipu.json",
+      "sourceDoc": "docs/model-sources/providers/zhipu/models/glm-4.7.md",
+      "outcome": "official-identity-only",
+      "sourceIds": [
+        "glm52-cn-api",
+        "glm47",
+        "glm-pricing"
+      ],
+      "fieldEvidence": [
+        {
+          "field": "modelName",
+          "currentValue": "glm-4.7",
+          "supportedValue": "glm-4.7",
+          "sourceId": "glm52-cn-api",
+          "assessment": "matches",
+          "explanation": "本轮正文定位精确标识；只确认该标识在其来源合同出现，不证明其他字段或不同套餐可用性。"
+        },
+        {
+          "field": "maxOutputTokens",
+          "currentValue": 131072,
+          "supportedValue": "128K",
+          "sourceId": "glm47",
+          "assessment": "not-comparable",
+          "explanation": "模型页预算为K简写；不能凭当前128000或131072认定已核整数。"
+        }
+      ],
+      "remainingFields": [
+        "contextWindow",
+        "defaultTemperature",
+        "defaultTopP",
+        "extra.cacheHitPrice",
+        "extra.cacheStoragePrice",
+        "extra.pricingTiers",
+        "inputPrice",
+        "maxOutputTokens",
+        "outputPrice",
+        "capabilities",
+        "serviceType",
+        "access.maxInputTokens",
+        "access.protocol-readiness"
+      ],
+      "nextAction": "人工逐字段复核本次候选；只将matches且精确接入适用的字段迁入原来源文档，differs先审单位/阶梯/产品默认；缺项需精确模型页、官方版本卡或授权目录，不猜填。",
+      "notes": [
+        "当前价签按输入长度、GLM4.7另按输出长度分档；单标量价不代表全部请求，需逐阶梯阈值和缓存单价核对。"
+      ],
+      "originalStatus": "partial",
+      "originalGap": "idOnly"
+    },
+    {
+      "recordKey": "compute/coding-plans/zhipu-coding.json#glm-4.7",
+      "modelId": "glm-4.7",
+      "config": "compute/coding-plans/zhipu-coding.json",
+      "sourceDoc": "docs/model-sources/providers/zhipu/models/glm-4.7.md",
+      "outcome": "official-identity-only",
+      "sourceIds": [
+        "glm52-cn-api",
+        "glm47",
+        "glm-pricing",
+        "glm-plan"
+      ],
+      "fieldEvidence": [
+        {
+          "field": "modelName",
+          "currentValue": "glm-4.7",
+          "supportedValue": "glm-4.7",
+          "sourceId": "glm52-cn-api",
+          "assessment": "matches",
+          "explanation": "本轮正文定位精确标识；只确认该标识在其来源合同出现，不证明其他字段或不同套餐可用性。"
+        },
+        {
+          "field": "maxOutputTokens",
+          "currentValue": 131072,
+          "supportedValue": "128K",
+          "sourceId": "glm47",
+          "assessment": "not-comparable",
+          "explanation": "模型页预算为K简写；不能凭当前128000或131072认定已核整数。"
+        }
+      ],
+      "remainingFields": [
+        "contextWindow",
+        "maxOutputTokens",
+        "capabilities",
+        "serviceType",
+        "access.maxInputTokens",
+        "access.protocol-readiness"
+      ],
+      "nextAction": "人工逐字段复核本次候选；只将matches且精确接入适用的字段迁入原来源文档，differs先审单位/阶梯/产品默认；缺项需精确模型页、官方版本卡或授权目录，不猜填。",
+      "notes": [
+        "当前价签按输入长度、GLM4.7另按输出长度分档；单标量价不代表全部请求，需逐阶梯阈值和缓存单价核对。",
+        "Coding Plan可用型号与原厂API价签独立；本轮只用套餐文档核开放面，不能把API窗口/价签覆盖套餐。"
+      ],
+      "originalStatus": "partial",
+      "originalGap": "idOnly"
+    },
+    {
+      "recordKey": "compute/model-specs/zhipu.json#glm-4.7",
+      "modelId": "glm-4.7",
+      "config": "compute/model-specs/zhipu.json",
+      "sourceDoc": "docs/model-sources/providers/zhipu/models/glm-4.7.md",
+      "outcome": "official-identity-only",
+      "sourceIds": [
+        "glm52-cn-api",
+        "glm47",
+        "glm-pricing"
+      ],
+      "fieldEvidence": [
+        {
+          "field": "id",
+          "currentValue": "glm-4.7",
+          "supportedValue": "glm-4.7",
+          "sourceId": "glm52-cn-api",
+          "assessment": "matches",
+          "explanation": "本轮正文定位精确标识；只确认该标识在其来源合同出现，不证明其他字段或不同套餐可用性。"
+        },
+        {
+          "field": "spec.maxOutputTokens",
+          "currentValue": 128000,
+          "supportedValue": "128K",
+          "sourceId": "glm47",
+          "assessment": "not-comparable",
+          "explanation": "模型页预算为K简写；不能凭当前128000或131072认定已核整数。"
+        }
+      ],
+      "remainingFields": [
+        "spec.contextWindow",
+        "spec.defaultTemperature",
+        "spec.maxOutputTokens",
+        "spec.supportsReasoning",
+        "spec.capabilities",
+        "spec.serviceType"
+      ],
+      "nextAction": "人工逐字段复核本次候选；只将matches且精确接入适用的字段迁入原来源文档，differs先审单位/阶梯/产品默认；缺项需精确模型页、官方版本卡或授权目录，不猜填。",
+      "notes": [
+        "当前价签按输入长度、GLM4.7另按输出长度分档；单标量价不代表全部请求，需逐阶梯阈值和缓存单价核对。"
+      ],
+      "originalStatus": "partial",
+      "originalGap": "idOnly"
+    },
+    {
+      "recordKey": "compute/providers/zhipu.json#glm-5-turbo",
+      "modelId": "glm-5-turbo",
+      "config": "compute/providers/zhipu.json",
+      "sourceDoc": "docs/model-sources/providers/zhipu/models/glm-5-turbo.md",
+      "outcome": "official-identity-only",
+      "sourceIds": [
+        "glm52-cn-api",
+        "glm-pricing"
+      ],
+      "fieldEvidence": [
+        {
+          "field": "modelName",
+          "currentValue": "glm-5-turbo",
+          "supportedValue": "glm-5-turbo",
+          "sourceId": "glm52-cn-api",
+          "assessment": "matches",
+          "explanation": "本轮正文定位精确标识；只确认该标识在其来源合同出现，不证明其他字段或不同套餐可用性。"
+        }
+      ],
+      "remainingFields": [
+        "contextWindow",
+        "defaultTemperature",
+        "defaultTopP",
+        "extra.cacheHitPrice",
+        "extra.cacheStoragePrice",
+        "extra.pricingTiers",
+        "inputPrice",
+        "maxOutputTokens",
+        "outputPrice",
+        "capabilities",
+        "serviceType",
+        "access.maxInputTokens",
+        "access.protocol-readiness"
+      ],
+      "nextAction": "人工逐字段复核本次候选；只将matches且精确接入适用的字段迁入原来源文档，differs先审单位/阶梯/产品默认；缺项需精确模型页、官方版本卡或授权目录，不猜填。",
+      "notes": [
+        "当前价签按输入长度、GLM4.7另按输出长度分档；单标量价不代表全部请求，需逐阶梯阈值和缓存单价核对。"
+      ],
+      "originalStatus": "partial",
+      "originalGap": "idOnly"
+    },
+    {
+      "recordKey": "compute/coding-plans/zhipu-coding.json#glm-5-turbo",
+      "modelId": "glm-5-turbo",
+      "config": "compute/coding-plans/zhipu-coding.json",
+      "sourceDoc": "docs/model-sources/providers/zhipu/models/glm-5-turbo.md",
+      "outcome": "official-identity-only",
+      "sourceIds": [
+        "glm52-cn-api",
+        "glm-pricing",
+        "glm-plan"
+      ],
+      "fieldEvidence": [
+        {
+          "field": "modelName",
+          "currentValue": "glm-5-turbo",
+          "supportedValue": "glm-5-turbo",
+          "sourceId": "glm52-cn-api",
+          "assessment": "matches",
+          "explanation": "本轮正文定位精确标识；只确认该标识在其来源合同出现，不证明其他字段或不同套餐可用性。"
+        }
+      ],
+      "remainingFields": [
+        "contextWindow",
+        "maxOutputTokens",
+        "capabilities",
+        "serviceType",
+        "access.maxInputTokens",
+        "access.protocol-readiness"
+      ],
+      "nextAction": "人工逐字段复核本次候选；只将matches且精确接入适用的字段迁入原来源文档，differs先审单位/阶梯/产品默认；缺项需精确模型页、官方版本卡或授权目录，不猜填。",
+      "notes": [
+        "当前价签按输入长度、GLM4.7另按输出长度分档；单标量价不代表全部请求，需逐阶梯阈值和缓存单价核对。",
+        "Coding Plan可用型号与原厂API价签独立；本轮只用套餐文档核开放面，不能把API窗口/价签覆盖套餐。"
+      ],
+      "originalStatus": "partial",
+      "originalGap": "idOnly"
+    },
+    {
+      "recordKey": "compute/model-specs/zhipu.json#glm-5-turbo",
+      "modelId": "glm-5-turbo",
+      "config": "compute/model-specs/zhipu.json",
+      "sourceDoc": "docs/model-sources/providers/zhipu/models/glm-5-turbo.md",
+      "outcome": "official-identity-only",
+      "sourceIds": [
+        "glm52-cn-api",
+        "glm-pricing"
+      ],
+      "fieldEvidence": [
+        {
+          "field": "id",
+          "currentValue": "glm-5-turbo",
+          "supportedValue": "glm-5-turbo",
+          "sourceId": "glm52-cn-api",
+          "assessment": "matches",
+          "explanation": "本轮正文定位精确标识；只确认该标识在其来源合同出现，不证明其他字段或不同套餐可用性。"
+        }
+      ],
+      "remainingFields": [
+        "spec.contextWindow",
+        "spec.defaultTemperature",
+        "spec.maxOutputTokens",
+        "spec.supportsReasoning",
+        "spec.capabilities",
+        "spec.serviceType"
+      ],
+      "nextAction": "人工逐字段复核本次候选；只将matches且精确接入适用的字段迁入原来源文档，differs先审单位/阶梯/产品默认；缺项需精确模型页、官方版本卡或授权目录，不猜填。",
+      "notes": [
+        "当前价签按输入长度、GLM4.7另按输出长度分档；单标量价不代表全部请求，需逐阶梯阈值和缓存单价核对。"
+      ],
+      "originalStatus": "partial",
+      "originalGap": "idOnly"
+    },
+    {
+      "recordKey": "compute/providers/zhipu.json#glm-5.1",
+      "modelId": "glm-5.1",
+      "config": "compute/providers/zhipu.json",
+      "sourceDoc": "docs/model-sources/providers/zhipu/models/glm-5.1.md",
+      "outcome": "official-identity-only",
+      "sourceIds": [
+        "glm52-cn-api",
+        "glm-pricing"
+      ],
+      "fieldEvidence": [
+        {
+          "field": "modelName",
+          "currentValue": "glm-5.1",
+          "supportedValue": "glm-5.1",
+          "sourceId": "glm52-cn-api",
+          "assessment": "matches",
+          "explanation": "本轮正文定位精确标识；只确认该标识在其来源合同出现，不证明其他字段或不同套餐可用性。"
+        }
+      ],
+      "remainingFields": [
+        "contextWindow",
+        "defaultTemperature",
+        "defaultTopP",
+        "extra.cacheHitPrice",
+        "extra.cacheStoragePrice",
+        "extra.pricingTiers",
+        "inputPrice",
+        "maxOutputTokens",
+        "outputPrice",
+        "capabilities",
+        "serviceType",
+        "access.maxInputTokens",
+        "access.protocol-readiness"
+      ],
+      "nextAction": "人工逐字段复核本次候选；只将matches且精确接入适用的字段迁入原来源文档，differs先审单位/阶梯/产品默认；缺项需精确模型页、官方版本卡或授权目录，不猜填。",
+      "notes": [
+        "当前价签按输入长度、GLM4.7另按输出长度分档；单标量价不代表全部请求，需逐阶梯阈值和缓存单价核对。"
+      ],
+      "originalStatus": "partial",
+      "originalGap": "idOnly"
+    },
+    {
+      "recordKey": "compute/model-specs/zhipu.json#glm-5.1",
+      "modelId": "glm-5.1",
+      "config": "compute/model-specs/zhipu.json",
+      "sourceDoc": "docs/model-sources/providers/zhipu/models/glm-5.1.md",
+      "outcome": "official-identity-only",
+      "sourceIds": [
+        "glm52-cn-api",
+        "glm-pricing"
+      ],
+      "fieldEvidence": [
+        {
+          "field": "id",
+          "currentValue": "glm-5.1",
+          "supportedValue": "glm-5.1",
+          "sourceId": "glm52-cn-api",
+          "assessment": "matches",
+          "explanation": "本轮正文定位精确标识；只确认该标识在其来源合同出现，不证明其他字段或不同套餐可用性。"
+        }
+      ],
+      "remainingFields": [
+        "spec.contextWindow",
+        "spec.defaultTemperature",
+        "spec.maxOutputTokens",
+        "spec.supportsReasoning",
+        "spec.capabilities",
+        "spec.serviceType"
+      ],
+      "nextAction": "人工逐字段复核本次候选；只将matches且精确接入适用的字段迁入原来源文档，differs先审单位/阶梯/产品默认；缺项需精确模型页、官方版本卡或授权目录，不猜填。",
+      "notes": [
+        "当前价签按输入长度、GLM4.7另按输出长度分档；单标量价不代表全部请求，需逐阶梯阈值和缓存单价核对。"
+      ],
+      "originalStatus": "partial",
+      "originalGap": "idOnly"
+    },
+    {
+      "recordKey": "compute/providers/zhipu.json#glm-5.2",
+      "modelId": "glm-5.2",
+      "config": "compute/providers/zhipu.json",
+      "sourceDoc": "docs/model-sources/providers/zhipu/models/glm-5.2.md",
+      "outcome": "official-fields-found",
+      "sourceIds": [
+        "glm52-cn-api",
+        "glm-pricing"
+      ],
+      "fieldEvidence": [
+        {
+          "field": "modelName",
+          "currentValue": "glm-5.2",
+          "supportedValue": "glm-5.2",
+          "sourceId": "glm52-cn-api",
+          "assessment": "matches",
+          "explanation": "本轮正文定位精确标识；只确认该标识在其来源合同出现，不证明其他字段或不同套餐可用性。"
+        },
+        {
+          "field": "contextWindow",
+          "currentValue": 1000000,
+          "supportedValue": "1M",
+          "sourceId": "glm-pricing",
+          "assessment": "not-comparable",
+          "explanation": "原厂价签1M简写，未由本次同页证实1000000/1048576换算。"
+        },
+        {
+          "field": "inputPrice",
+          "currentValue": 8,
+          "supportedValue": 8,
+          "sourceId": "glm-pricing",
+          "assessment": "matches",
+          "explanation": "国内CNY/百万token；表格精确展示名/API ID需分别核验，价格不用推广到套餐。"
+        },
+        {
+          "field": "outputPrice",
+          "currentValue": 28,
+          "supportedValue": 28,
+          "sourceId": "glm-pricing",
+          "assessment": "matches",
+          "explanation": "国内CNY/百万token；表格精确展示名/API ID需分别核验，价格不用推广到套餐。"
+        },
+        {
+          "field": "extra.cacheHitPrice",
+          "currentValue": 2,
+          "supportedValue": 2,
+          "sourceId": "glm-pricing",
+          "assessment": "matches",
+          "explanation": "国内CNY/百万token；表格精确展示名/API ID需分别核验，价格不用推广到套餐。"
+        }
+      ],
+      "remainingFields": [
+        "contextWindow",
+        "defaultTemperature",
+        "defaultTopP",
+        "extra.cacheStoragePrice",
+        "maxOutputTokens",
+        "capabilities",
+        "serviceType",
+        "access.maxInputTokens",
+        "access.protocol-readiness"
+      ],
+      "nextAction": "人工逐字段复核本次候选；只将matches且精确接入适用的字段迁入原来源文档，differs先审单位/阶梯/产品默认；缺项需精确模型页、官方版本卡或授权目录，不猜填。",
+      "notes": [
+        "本轮未在可读页面定位完整精确型号合同；缺失不判定停服。"
+      ],
+      "originalStatus": "partial",
+      "originalGap": "partial"
+    },
+    {
+      "recordKey": "compute/coding-plans/zhipu-coding.json#glm-5.2",
+      "modelId": "glm-5.2",
+      "config": "compute/coding-plans/zhipu-coding.json",
+      "sourceDoc": "docs/model-sources/providers/zhipu/models/glm-5.2.md",
+      "outcome": "official-identity-only",
+      "sourceIds": [
+        "glm52-cn-api",
+        "glm-pricing",
+        "glm-plan"
+      ],
+      "fieldEvidence": [
+        {
+          "field": "modelName",
+          "currentValue": "glm-5.2",
+          "supportedValue": "glm-5.2",
+          "sourceId": "glm52-cn-api",
+          "assessment": "matches",
+          "explanation": "本轮正文定位精确标识；只确认该标识在其来源合同出现，不证明其他字段或不同套餐可用性。"
+        },
+        {
+          "field": "contextWindow",
+          "currentValue": 1000000,
+          "supportedValue": "1M",
+          "sourceId": "glm-pricing",
+          "assessment": "not-comparable",
+          "explanation": "原厂价签1M简写，未由本次同页证实1000000/1048576换算。"
+        }
+      ],
+      "remainingFields": [
+        "contextWindow",
+        "maxOutputTokens",
+        "capabilities",
+        "serviceType",
+        "access.maxInputTokens",
+        "access.protocol-readiness"
+      ],
+      "nextAction": "人工逐字段复核本次候选；只将matches且精确接入适用的字段迁入原来源文档，differs先审单位/阶梯/产品默认；缺项需精确模型页、官方版本卡或授权目录，不猜填。",
+      "notes": [
+        "Coding Plan可用型号与原厂API价签独立；本轮只用套餐文档核开放面，不能把API窗口/价签覆盖套餐。"
+      ],
+      "originalStatus": "partial",
+      "originalGap": "partial"
+    },
+    {
+      "recordKey": "compute/model-specs/zhipu.json#glm-5.2",
+      "modelId": "glm-5.2",
+      "config": "compute/model-specs/zhipu.json",
+      "sourceDoc": "docs/model-sources/providers/zhipu/models/glm-5.2.md",
+      "outcome": "official-identity-only",
+      "sourceIds": [
+        "glm52-cn-api",
+        "glm-pricing"
+      ],
+      "fieldEvidence": [
+        {
+          "field": "id",
+          "currentValue": "glm-5.2",
+          "supportedValue": "glm-5.2",
+          "sourceId": "glm52-cn-api",
+          "assessment": "matches",
+          "explanation": "本轮正文定位精确标识；只确认该标识在其来源合同出现，不证明其他字段或不同套餐可用性。"
+        },
+        {
+          "field": "spec.contextWindow",
+          "currentValue": 1048576,
+          "supportedValue": "1M",
+          "sourceId": "glm-pricing",
+          "assessment": "not-comparable",
+          "explanation": "原厂价签1M简写，未由本次同页证实1000000/1048576换算。"
+        }
+      ],
+      "remainingFields": [
+        "spec.contextWindow",
+        "spec.maxOutputTokens",
+        "spec.supportsReasoning",
+        "spec.capabilities",
+        "spec.serviceType"
+      ],
+      "nextAction": "人工逐字段复核本次候选；只将matches且精确接入适用的字段迁入原来源文档，differs先审单位/阶梯/产品默认；缺项需精确模型页、官方版本卡或授权目录，不猜填。",
+      "notes": [
+        "本轮未在可读页面定位完整精确型号合同；缺失不判定停服。"
+      ],
+      "originalStatus": "partial",
+      "originalGap": "idOnly"
+    },
+    {
+      "recordKey": "compute/providers/zhipu.json#glm-5.3-flash",
+      "modelId": "glm-5.3-flash",
+      "config": "compute/providers/zhipu.json",
+      "sourceDoc": "docs/model-sources/providers/zhipu/models/glm-5.3-flash.md",
+      "outcome": "official-fields-found",
+      "sourceIds": [
+        "glm53-flash",
+        "glm-pricing"
+      ],
+      "fieldEvidence": [
+        {
+          "field": "modelName",
+          "currentValue": "glm-5.3-flash",
+          "supportedValue": "glm-5.3-flash",
+          "sourceId": "glm53-flash",
+          "assessment": "matches",
+          "explanation": "本轮正文定位精确标识；只确认该标识在其来源合同出现，不证明其他字段或不同套餐可用性。"
+        },
+        {
+          "field": "contextWindow",
+          "currentValue": 1048576,
+          "supportedValue": "1M",
+          "sourceId": "glm-pricing",
+          "assessment": "not-comparable",
+          "explanation": "原厂价签1M简写，未由本次同页证实1000000/1048576换算。"
+        },
+        {
+          "field": "inputPrice",
+          "currentValue": 0.8,
+          "supportedValue": 0.8,
+          "sourceId": "glm-pricing",
+          "assessment": "matches",
+          "explanation": "国内CNY/百万token；表格精确展示名/API ID需分别核验，价格不用推广到套餐。"
+        },
+        {
+          "field": "outputPrice",
+          "currentValue": 2.8,
+          "supportedValue": 2.8,
+          "sourceId": "glm-pricing",
+          "assessment": "matches",
+          "explanation": "国内CNY/百万token；表格精确展示名/API ID需分别核验，价格不用推广到套餐。"
+        },
+        {
+          "field": "extra.cacheHitPrice",
+          "currentValue": 0.23,
+          "supportedValue": 0.23,
+          "sourceId": "glm-pricing",
+          "assessment": "matches",
+          "explanation": "国内CNY/百万token；表格精确展示名/API ID需分别核验，价格不用推广到套餐。"
+        }
+      ],
+      "remainingFields": [
+        "contextWindow",
+        "defaultTemperature",
+        "defaultTopP",
+        "maxOutputTokens",
+        "capabilities",
+        "serviceType",
+        "access.maxInputTokens",
+        "access.protocol-readiness"
+      ],
+      "nextAction": "人工逐字段复核本次候选；只将matches且精确接入适用的字段迁入原来源文档，differs先审单位/阶梯/产品默认；缺项需精确模型页、官方版本卡或授权目录，不猜填。",
+      "notes": [
+        "本轮未在可读页面定位完整精确型号合同；缺失不判定停服。"
+      ],
+      "originalStatus": "partial",
+      "originalGap": "partial"
+    },
+    {
+      "recordKey": "compute/coding-plans/zhipu-coding.json#glm-5.3-flash",
+      "modelId": "glm-5.3-flash",
+      "config": "compute/coding-plans/zhipu-coding.json",
+      "sourceDoc": "docs/model-sources/providers/zhipu/models/glm-5.3-flash.md",
+      "outcome": "official-identity-only",
+      "sourceIds": [
+        "glm53-flash",
+        "glm-pricing",
+        "glm-plan"
+      ],
+      "fieldEvidence": [
+        {
+          "field": "modelName",
+          "currentValue": "glm-5.3-flash",
+          "supportedValue": "glm-5.3-flash",
+          "sourceId": "glm53-flash",
+          "assessment": "matches",
+          "explanation": "本轮正文定位精确标识；只确认该标识在其来源合同出现，不证明其他字段或不同套餐可用性。"
+        },
+        {
+          "field": "contextWindow",
+          "currentValue": 1048576,
+          "supportedValue": "1M",
+          "sourceId": "glm-pricing",
+          "assessment": "not-comparable",
+          "explanation": "原厂价签1M简写，未由本次同页证实1000000/1048576换算。"
+        }
+      ],
+      "remainingFields": [
+        "contextWindow",
+        "defaultTemperature",
+        "defaultTopP",
+        "maxOutputTokens",
+        "capabilities",
+        "serviceType",
+        "access.maxInputTokens",
+        "access.protocol-readiness"
+      ],
+      "nextAction": "人工逐字段复核本次候选；只将matches且精确接入适用的字段迁入原来源文档，differs先审单位/阶梯/产品默认；缺项需精确模型页、官方版本卡或授权目录，不猜填。",
+      "notes": [
+        "Coding Plan可用型号与原厂API价签独立；本轮只用套餐文档核开放面，不能把API窗口/价签覆盖套餐。"
+      ],
+      "originalStatus": "partial",
+      "originalGap": "partial"
+    },
+    {
+      "recordKey": "compute/model-specs/zhipu.json#glm-5.3-flash",
+      "modelId": "glm-5.3-flash",
+      "config": "compute/model-specs/zhipu.json",
+      "sourceDoc": "docs/model-sources/providers/zhipu/models/glm-5.3-flash.md",
+      "outcome": "official-identity-only",
+      "sourceIds": [
+        "glm53-flash",
+        "glm-pricing"
+      ],
+      "fieldEvidence": [
+        {
+          "field": "id",
+          "currentValue": "glm-5.3-flash",
+          "supportedValue": "glm-5.3-flash",
+          "sourceId": "glm53-flash",
+          "assessment": "matches",
+          "explanation": "本轮正文定位精确标识；只确认该标识在其来源合同出现，不证明其他字段或不同套餐可用性。"
+        },
+        {
+          "field": "spec.contextWindow",
+          "currentValue": 1048576,
+          "supportedValue": "1M",
+          "sourceId": "glm-pricing",
+          "assessment": "not-comparable",
+          "explanation": "原厂价签1M简写，未由本次同页证实1000000/1048576换算。"
+        }
+      ],
+      "remainingFields": [
+        "spec.contextWindow",
+        "spec.defaultTemperature",
+        "spec.defaultTopP",
+        "spec.maxOutputTokens",
+        "spec.supportsReasoning",
+        "spec.capabilities",
+        "spec.serviceType"
+      ],
+      "nextAction": "人工逐字段复核本次候选；只将matches且精确接入适用的字段迁入原来源文档，differs先审单位/阶梯/产品默认；缺项需精确模型页、官方版本卡或授权目录，不猜填。",
+      "notes": [
+        "本轮未在可读页面定位完整精确型号合同；缺失不判定停服。"
+      ],
+      "originalStatus": "partial",
+      "originalGap": "partial"
+    },
+    {
+      "recordKey": "compute/providers/zhipu.json#glm-5.3-flashx",
+      "modelId": "glm-5.3-flashx",
+      "config": "compute/providers/zhipu.json",
+      "sourceDoc": "docs/model-sources/providers/zhipu/models/glm-5.3-flashx.md",
+      "outcome": "official-fields-found",
+      "sourceIds": [
+        "glm53-flash",
+        "glm-pricing"
+      ],
+      "fieldEvidence": [
+        {
+          "field": "modelName",
+          "currentValue": "glm-5.3-flashx",
+          "supportedValue": "glm-5.3-flashx",
+          "sourceId": "glm53-flash",
+          "assessment": "matches",
+          "explanation": "本轮正文定位精确标识；只确认该标识在其来源合同出现，不证明其他字段或不同套餐可用性。"
+        },
+        {
+          "field": "contextWindow",
+          "currentValue": 1000000,
+          "supportedValue": "1M",
+          "sourceId": "glm-pricing",
+          "assessment": "not-comparable",
+          "explanation": "原厂价签1M简写，未由本次同页证实1000000/1048576换算。"
+        },
+        {
+          "field": "inputPrice",
+          "currentValue": 2,
+          "supportedValue": 2,
+          "sourceId": "glm-pricing",
+          "assessment": "matches",
+          "explanation": "国内CNY/百万token；表格精确展示名/API ID需分别核验，价格不用推广到套餐。"
+        },
+        {
+          "field": "outputPrice",
+          "currentValue": 7,
+          "supportedValue": 7,
+          "sourceId": "glm-pricing",
+          "assessment": "matches",
+          "explanation": "国内CNY/百万token；表格精确展示名/API ID需分别核验，价格不用推广到套餐。"
+        },
+        {
+          "field": "extra.cacheHitPrice",
+          "currentValue": 0.57,
+          "supportedValue": 0.57,
+          "sourceId": "glm-pricing",
+          "assessment": "matches",
+          "explanation": "国内CNY/百万token；表格精确展示名/API ID需分别核验，价格不用推广到套餐。"
+        }
+      ],
+      "remainingFields": [
+        "contextWindow",
+        "maxOutputTokens",
+        "capabilities",
+        "serviceType",
+        "access.maxInputTokens",
+        "access.protocol-readiness"
+      ],
+      "nextAction": "人工逐字段复核本次候选；只将matches且精确接入适用的字段迁入原来源文档，differs先审单位/阶梯/产品默认；缺项需精确模型页、官方版本卡或授权目录，不猜填。",
+      "notes": [
+        "本轮未在可读页面定位完整精确型号合同；缺失不判定停服。"
+      ],
+      "originalStatus": "partial",
+      "originalGap": "partial"
+    },
+    {
+      "recordKey": "compute/model-specs/zhipu.json#glm-5.3-flashx",
+      "modelId": "glm-5.3-flashx",
+      "config": "compute/model-specs/zhipu.json",
+      "sourceDoc": "docs/model-sources/providers/zhipu/models/glm-5.3-flashx.md",
+      "outcome": "official-identity-only",
+      "sourceIds": [
+        "glm53-flash",
+        "glm-pricing"
+      ],
+      "fieldEvidence": [
+        {
+          "field": "id",
+          "currentValue": "glm-5.3-flashx",
+          "supportedValue": "glm-5.3-flashx",
+          "sourceId": "glm53-flash",
+          "assessment": "matches",
+          "explanation": "本轮正文定位精确标识；只确认该标识在其来源合同出现，不证明其他字段或不同套餐可用性。"
+        },
+        {
+          "field": "spec.contextWindow",
+          "currentValue": 1000000,
+          "supportedValue": "1M",
+          "sourceId": "glm-pricing",
+          "assessment": "not-comparable",
+          "explanation": "原厂价签1M简写，未由本次同页证实1000000/1048576换算。"
+        }
+      ],
+      "remainingFields": [
+        "spec.contextWindow",
+        "spec.maxOutputTokens",
+        "spec.supportsReasoning",
+        "spec.capabilities",
+        "spec.serviceType"
+      ],
+      "nextAction": "人工逐字段复核本次候选；只将matches且精确接入适用的字段迁入原来源文档，differs先审单位/阶梯/产品默认；缺项需精确模型页、官方版本卡或授权目录，不猜填。",
+      "notes": [
+        "本轮未在可读页面定位完整精确型号合同；缺失不判定停服。"
+      ],
+      "originalStatus": "partial",
+      "originalGap": "partial"
+    },
+    {
+      "recordKey": "compute/providers/zhipu.json#glm-5.3",
+      "modelId": "glm-5.3",
+      "config": "compute/providers/zhipu.json",
+      "sourceDoc": "docs/model-sources/providers/zhipu/models/glm-5.3.md",
+      "outcome": "official-fields-found",
+      "sourceIds": [
+        "glm53",
+        "glm-pricing"
+      ],
+      "fieldEvidence": [
+        {
+          "field": "modelName",
+          "currentValue": "glm-5.3",
+          "supportedValue": "glm-5.3",
+          "sourceId": "glm53",
+          "assessment": "matches",
+          "explanation": "本轮正文定位精确标识；只确认该标识在其来源合同出现，不证明其他字段或不同套餐可用性。"
+        },
+        {
+          "field": "contextWindow",
+          "currentValue": 1048576,
+          "supportedValue": "1M",
+          "sourceId": "glm-pricing",
+          "assessment": "not-comparable",
+          "explanation": "原厂价签1M简写，未由本次同页证实1000000/1048576换算。"
+        },
+        {
+          "field": "maxOutputTokens",
+          "currentValue": 131072,
+          "supportedValue": "128K",
+          "sourceId": "glm53",
+          "assessment": "not-comparable",
+          "explanation": "模型页最大128K简写；精确整数仍需另证。"
+        },
+        {
+          "field": "extra.thinkingOnly",
+          "currentValue": true,
+          "supportedValue": true,
+          "sourceId": "glm53",
+          "assessment": "matches",
+          "explanation": "模型页明确始终启用思考，不能关闭。"
+        },
+        {
+          "field": "inputPrice",
+          "currentValue": 8,
+          "supportedValue": 8,
+          "sourceId": "glm-pricing",
+          "assessment": "matches",
+          "explanation": "国内CNY/百万token；表格精确展示名/API ID需分别核验，价格不用推广到套餐。"
+        },
+        {
+          "field": "outputPrice",
+          "currentValue": 28,
+          "supportedValue": 28,
+          "sourceId": "glm-pricing",
+          "assessment": "matches",
+          "explanation": "国内CNY/百万token；表格精确展示名/API ID需分别核验，价格不用推广到套餐。"
+        },
+        {
+          "field": "extra.cacheHitPrice",
+          "currentValue": 2,
+          "supportedValue": 2,
+          "sourceId": "glm-pricing",
+          "assessment": "matches",
+          "explanation": "国内CNY/百万token；表格精确展示名/API ID需分别核验，价格不用推广到套餐。"
+        }
+      ],
+      "remainingFields": [
+        "contextWindow",
+        "defaultTemperature",
+        "defaultTopP",
+        "maxOutputTokens",
+        "capabilities",
+        "serviceType",
+        "access.maxInputTokens",
+        "access.protocol-readiness"
+      ],
+      "nextAction": "人工逐字段复核本次候选；只将matches且精确接入适用的字段迁入原来源文档，differs先审单位/阶梯/产品默认；缺项需精确模型页、官方版本卡或授权目录，不猜填。",
+      "notes": [
+        "本轮未在可读页面定位完整精确型号合同；缺失不判定停服。"
+      ],
+      "originalStatus": "partial",
+      "originalGap": "partial"
+    },
+    {
+      "recordKey": "compute/coding-plans/zhipu-coding.json#glm-5.3",
+      "modelId": "glm-5.3",
+      "config": "compute/coding-plans/zhipu-coding.json",
+      "sourceDoc": "docs/model-sources/providers/zhipu/models/glm-5.3.md",
+      "outcome": "official-fields-found",
+      "sourceIds": [
+        "glm53",
+        "glm-pricing",
+        "glm-plan"
+      ],
+      "fieldEvidence": [
+        {
+          "field": "modelName",
+          "currentValue": "glm-5.3",
+          "supportedValue": "glm-5.3",
+          "sourceId": "glm53",
+          "assessment": "matches",
+          "explanation": "本轮正文定位精确标识；只确认该标识在其来源合同出现，不证明其他字段或不同套餐可用性。"
+        },
+        {
+          "field": "contextWindow",
+          "currentValue": 1048576,
+          "supportedValue": "1M",
+          "sourceId": "glm-pricing",
+          "assessment": "not-comparable",
+          "explanation": "原厂价签1M简写，未由本次同页证实1000000/1048576换算。"
+        },
+        {
+          "field": "maxOutputTokens",
+          "currentValue": 131072,
+          "supportedValue": "128K",
+          "sourceId": "glm53",
+          "assessment": "not-comparable",
+          "explanation": "模型页最大128K简写；精确整数仍需另证。"
+        },
+        {
+          "field": "extra.thinkingOnly",
+          "currentValue": true,
+          "supportedValue": true,
+          "sourceId": "glm53",
+          "assessment": "matches",
+          "explanation": "模型页明确始终启用思考，不能关闭。"
+        }
+      ],
+      "remainingFields": [
+        "contextWindow",
+        "defaultTemperature",
+        "defaultTopP",
+        "maxOutputTokens",
+        "capabilities",
+        "serviceType",
+        "access.maxInputTokens",
+        "access.protocol-readiness"
+      ],
+      "nextAction": "人工逐字段复核本次候选；只将matches且精确接入适用的字段迁入原来源文档，differs先审单位/阶梯/产品默认；缺项需精确模型页、官方版本卡或授权目录，不猜填。",
+      "notes": [
+        "Coding Plan可用型号与原厂API价签独立；本轮只用套餐文档核开放面，不能把API窗口/价签覆盖套餐。"
+      ],
+      "originalStatus": "partial",
+      "originalGap": "partial"
+    },
+    {
+      "recordKey": "compute/model-specs/zhipu.json#glm-5.3",
+      "modelId": "glm-5.3",
+      "config": "compute/model-specs/zhipu.json",
+      "sourceDoc": "docs/model-sources/providers/zhipu/models/glm-5.3.md",
+      "outcome": "official-fields-found",
+      "sourceIds": [
+        "glm53",
+        "glm-pricing"
+      ],
+      "fieldEvidence": [
+        {
+          "field": "id",
+          "currentValue": "glm-5.3",
+          "supportedValue": "glm-5.3",
+          "sourceId": "glm53",
+          "assessment": "matches",
+          "explanation": "本轮正文定位精确标识；只确认该标识在其来源合同出现，不证明其他字段或不同套餐可用性。"
+        },
+        {
+          "field": "spec.contextWindow",
+          "currentValue": 1048576,
+          "supportedValue": "1M",
+          "sourceId": "glm-pricing",
+          "assessment": "not-comparable",
+          "explanation": "原厂价签1M简写，未由本次同页证实1000000/1048576换算。"
+        },
+        {
+          "field": "spec.maxOutputTokens",
+          "currentValue": 131072,
+          "supportedValue": "128K",
+          "sourceId": "glm53",
+          "assessment": "not-comparable",
+          "explanation": "模型页最大128K简写；精确整数仍需另证。"
+        },
+        {
+          "field": "spec.extra.thinkingOnly",
+          "currentValue": true,
+          "supportedValue": true,
+          "sourceId": "glm53",
+          "assessment": "matches",
+          "explanation": "模型页明确始终启用思考，不能关闭。"
+        }
+      ],
+      "remainingFields": [
+        "spec.contextWindow",
+        "spec.defaultTemperature",
+        "spec.defaultTopP",
+        "spec.maxOutputTokens",
+        "spec.supportsReasoning",
+        "spec.capabilities",
+        "spec.serviceType"
+      ],
+      "nextAction": "人工逐字段复核本次候选；只将matches且精确接入适用的字段迁入原来源文档，differs先审单位/阶梯/产品默认；缺项需精确模型页、官方版本卡或授权目录，不猜填。",
+      "notes": [
+        "本轮未在可读页面定位完整精确型号合同；缺失不判定停服。"
+      ],
+      "originalStatus": "partial",
+      "originalGap": "partial"
+    },
+    {
+      "recordKey": "compute/providers/zhipu.json#glm-5",
+      "modelId": "glm-5",
+      "config": "compute/providers/zhipu.json",
+      "sourceDoc": "docs/model-sources/providers/zhipu/models/glm-5.md",
+      "outcome": "official-identity-only",
+      "sourceIds": [
+        "glm52-cn-api",
+        "glm-pricing"
+      ],
+      "fieldEvidence": [
+        {
+          "field": "modelName",
+          "currentValue": "glm-5",
+          "supportedValue": "glm-5",
+          "sourceId": "glm52-cn-api",
+          "assessment": "matches",
+          "explanation": "本轮正文定位精确标识；只确认该标识在其来源合同出现，不证明其他字段或不同套餐可用性。"
+        }
+      ],
+      "remainingFields": [
+        "contextWindow",
+        "defaultTemperature",
+        "defaultTopP",
+        "extra.cacheHitPrice",
+        "extra.cacheStoragePrice",
+        "extra.pricingTiers",
+        "inputPrice",
+        "maxOutputTokens",
+        "outputPrice",
+        "capabilities",
+        "serviceType",
+        "access.maxInputTokens",
+        "access.protocol-readiness"
+      ],
+      "nextAction": "人工逐字段复核本次候选；只将matches且精确接入适用的字段迁入原来源文档，differs先审单位/阶梯/产品默认；缺项需精确模型页、官方版本卡或授权目录，不猜填。",
+      "notes": [
+        "当前价签按输入长度、GLM4.7另按输出长度分档；单标量价不代表全部请求，需逐阶梯阈值和缓存单价核对。"
+      ],
+      "originalStatus": "pending",
+      "originalGap": "pending"
+    },
+    {
+      "recordKey": "compute/model-specs/zhipu.json#glm-5",
+      "modelId": "glm-5",
+      "config": "compute/model-specs/zhipu.json",
+      "sourceDoc": "docs/model-sources/providers/zhipu/models/glm-5.md",
+      "outcome": "official-identity-only",
+      "sourceIds": [
+        "glm52-cn-api",
+        "glm-pricing"
+      ],
+      "fieldEvidence": [
+        {
+          "field": "id",
+          "currentValue": "glm-5",
+          "supportedValue": "glm-5",
+          "sourceId": "glm52-cn-api",
+          "assessment": "matches",
+          "explanation": "本轮正文定位精确标识；只确认该标识在其来源合同出现，不证明其他字段或不同套餐可用性。"
+        }
+      ],
+      "remainingFields": [
+        "spec.contextWindow",
+        "spec.defaultTemperature",
+        "spec.maxOutputTokens",
+        "spec.supportsReasoning",
+        "spec.capabilities",
+        "spec.serviceType"
+      ],
+      "nextAction": "人工逐字段复核本次候选；只将matches且精确接入适用的字段迁入原来源文档，differs先审单位/阶梯/产品默认；缺项需精确模型页、官方版本卡或授权目录，不猜填。",
+      "notes": [
+        "当前价签按输入长度、GLM4.7另按输出长度分档；单标量价不代表全部请求，需逐阶梯阈值和缓存单价核对。"
+      ],
+      "originalStatus": "pending",
+      "originalGap": "pending"
+    },
+    {
+      "recordKey": "compute/providers/zhipu.json#glm-5v-turbo",
+      "modelId": "glm-5v-turbo",
+      "config": "compute/providers/zhipu.json",
+      "sourceDoc": "docs/model-sources/providers/zhipu/models/glm-5v-turbo.md",
+      "outcome": "official-identity-only",
+      "sourceIds": [
+        "glm52-cn-api",
+        "glm-pricing"
+      ],
+      "fieldEvidence": [
+        {
+          "field": "modelName",
+          "currentValue": "glm-5v-turbo",
+          "supportedValue": "glm-5v-turbo",
+          "sourceId": "glm52-cn-api",
+          "assessment": "matches",
+          "explanation": "本轮正文定位精确标识；只确认该标识在其来源合同出现，不证明其他字段或不同套餐可用性。"
+        }
+      ],
+      "remainingFields": [
+        "contextWindow",
+        "defaultTemperature",
+        "defaultTopP",
+        "extra.cacheHitPrice",
+        "extra.cacheStoragePrice",
+        "extra.pricingTiers",
+        "inputPrice",
+        "maxOutputTokens",
+        "outputPrice",
+        "capabilities",
+        "serviceType",
+        "access.maxInputTokens",
+        "access.protocol-readiness"
+      ],
+      "nextAction": "人工逐字段复核本次候选；只将matches且精确接入适用的字段迁入原来源文档，differs先审单位/阶梯/产品默认；缺项需精确模型页、官方版本卡或授权目录，不猜填。",
+      "notes": [
+        "当前价签按输入长度、GLM4.7另按输出长度分档；单标量价不代表全部请求，需逐阶梯阈值和缓存单价核对。"
+      ],
+      "originalStatus": "partial",
+      "originalGap": "idOnly"
+    },
+    {
+      "recordKey": "compute/model-specs/zhipu.json#glm-5v-turbo",
+      "modelId": "glm-5v-turbo",
+      "config": "compute/model-specs/zhipu.json",
+      "sourceDoc": "docs/model-sources/providers/zhipu/models/glm-5v-turbo.md",
+      "outcome": "official-identity-only",
+      "sourceIds": [
+        "glm52-cn-api",
+        "glm-pricing"
+      ],
+      "fieldEvidence": [
+        {
+          "field": "id",
+          "currentValue": "glm-5v-turbo",
+          "supportedValue": "glm-5v-turbo",
+          "sourceId": "glm52-cn-api",
+          "assessment": "matches",
+          "explanation": "本轮正文定位精确标识；只确认该标识在其来源合同出现，不证明其他字段或不同套餐可用性。"
+        }
+      ],
+      "remainingFields": [
+        "spec.contextWindow",
+        "spec.defaultTemperature",
+        "spec.maxOutputTokens",
+        "spec.supportsReasoning",
+        "spec.capabilities",
+        "spec.serviceType"
+      ],
+      "nextAction": "人工逐字段复核本次候选；只将matches且精确接入适用的字段迁入原来源文档，differs先审单位/阶梯/产品默认；缺项需精确模型页、官方版本卡或授权目录，不猜填。",
+      "notes": [
+        "当前价签按输入长度、GLM4.7另按输出长度分档；单标量价不代表全部请求，需逐阶梯阈值和缓存单价核对。"
+      ],
+      "originalStatus": "partial",
+      "originalGap": "idOnly"
+    }
+  ],
+  "coverage": {
+    "records": 31,
+    "sourceAttempts": 8,
+    "readableSources": 8,
+    "outcomes": {
+      "still-unresolved": 3,
+      "official-identity-only": 21,
+      "official-fields-found": 7
+    }
+  },
+  "boundary": "本轮只保存核查候选，未更改canonical、既有来源核验状态、指纹或manifest；可读正文和ID存在不是全参数/账号验收。"
+}

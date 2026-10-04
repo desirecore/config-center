@@ -1,0 +1,2119 @@
+{
+  "supplier": "volcengine",
+  "checkedAt": "2026-10-04",
+  "sources": [
+    {
+      "id": "volc-static-model-list",
+      "url": "https://docs.volcengine.com/docs/ark/model-list?lang=zh",
+      "finalUrl": "https://docs.volcengine.com/docs/ark/model-list?lang=zh",
+      "publisher": "volcengine",
+      "kind": "official-docs",
+      "retrieval": "blocked",
+      "summary": "web timeout；HTTP只返回启用JavaScript页面壳。",
+      "scope": "公共目录静态抓取",
+      "retrievalMethod": "web-or-http-failed"
+    },
+    {
+      "id": "volc-rendered-model-list",
+      "url": "https://docs.volcengine.com/docs/ark/model-list?lang=zh",
+      "finalUrl": "https://docs.volcengine.com/docs/ark/model-list?lang=zh",
+      "publisher": "volcengine",
+      "kind": "official-docs",
+      "retrieval": "readable",
+      "summary": "实际Edge渲染DOM表格，更新时间2026-09-28；小写k换算没有在可见正文找到明确说明，保原文不猜整数。",
+      "scope": "火山方舟后付费API目录，按精确日期wire ID；非套餐",
+      "retrievalMethod": "rendered-browser-dom"
+    },
+    {
+      "id": "volc-rendered-coding",
+      "url": "https://docs.volcengine.com/docs/ark/coding-plan-personal-plan-overview?lang=zh",
+      "finalUrl": "https://docs.volcengine.com/docs/ark/coding-plan-personal-plan-overview?lang=zh",
+      "publisher": "volcengine",
+      "kind": "official-docs",
+      "retrieval": "readable",
+      "summary": "Edge实际读取，更新时间2026-09-29；套餐Pro和Turbo限制不同于后付费日期型号；按个人编程工具订阅合同。",
+      "scope": "Coding Plan个人版，北京兼容端点",
+      "retrievalMethod": "rendered-browser-dom"
+    },
+    {
+      "id": "volc-rendered-coding-retirements",
+      "url": "https://docs.volcengine.com/docs/ark/coding-plan-personal-model-deprecation?lang=zh",
+      "finalUrl": "https://docs.volcengine.com/docs/ark/coding-plan-personal-model-deprecation?lang=zh",
+      "publisher": "volcengine",
+      "kind": "official-docs",
+      "retrieval": "readable",
+      "summary": "Edge读取2026-09-23公告正文与已下线表；不适用于后付费API或整个供应商域名。",
+      "scope": "仅Coding Plan型号退役与新用户限制",
+      "retrievalMethod": "rendered-browser-dom"
+    },
+    {
+      "id": "volc-openviking",
+      "url": "https://raw.githubusercontent.com/volcengine/OpenViking/main/docs/zh/guides/02-volcengine-purchase-guide.md",
+      "finalUrl": "https://raw.githubusercontent.com/volcengine/OpenViking/main/docs/zh/guides/02-volcengine-purchase-guide.md",
+      "publisher": "volcengine",
+      "kind": "official-repository",
+      "retrieval": "readable",
+      "summary": "官方仓库实际读取，提供日期ID样例与北京区域端点；不从示例声明最大模型容量。",
+      "scope": "官方OpenViking部署示例，不是所有原厂规格",
+      "contentSha256": "b4ef48ef75624722583f2941488b7b4a2c31dc74e02030de2529ba966912c650",
+      "retrievalMethod": "http-body-htmlparser",
+      "contentDigestKind": "htmlparser-visible-text-not-raw-http-bytes"
+    },
+    {
+      "id": "seed21-origin",
+      "url": "https://seed.bytedance.com/zh/blog/seed2-1-officially-released-advancing-ai-productivity",
+      "finalUrl": "https://seed.bytedance.com/zh/blog/seed2-1-officially-released-advancing-ai-productivity",
+      "publisher": "volcengine",
+      "kind": "official-docs",
+      "retrieval": "readable",
+      "summary": "原厂正文确认Pro/Turbo产品在火山上线，无精确token/价格数字。",
+      "scope": "Seed2.1原厂产品发布，不是精确日期API合同",
+      "contentSha256": "5122cb5d2cec54a96ad85cd5f4efd4c57227ac2f9c13225b9bd1408e0399a9a5",
+      "retrievalMethod": "http-body-htmlparser",
+      "contentDigestKind": "htmlparser-visible-text-not-raw-http-bytes"
+    }
+  ],
+  "findings": [
+    {
+      "recordKey": "compute/coding-plans/volcengine-coding.json#ark-code-latest",
+      "modelId": "ark-code-latest",
+      "config": "compute/coding-plans/volcengine-coding.json",
+      "sourceDoc": "docs/model-sources/providers/volcengine/models/ark-code-latest.md",
+      "outcome": "official-identity-only",
+      "sourceIds": [
+        "volc-rendered-coding"
+      ],
+      "fieldEvidence": [
+        {
+          "field": "modelName",
+          "currentValue": "ark-code-latest",
+          "supportedValue": "ark-code-latest",
+          "sourceId": "volc-rendered-coding",
+          "assessment": "matches",
+          "explanation": "正文明确允许ark-code-latest在控制台切换底层型号，不能固定到猜测原厂。"
+        }
+      ],
+      "remainingFields": [
+        "capabilities"
+      ],
+      "nextAction": "按精确型号和本接入面继续核对；候选证据不自动应用。",
+      "notes": [
+        "HTTP/搜索正文壳已单列；本条证明仅使用实际浏览器正文/官方仓库，不采用搜索摘要容量。"
+      ]
+    },
+    {
+      "recordKey": "compute/providers/volcengine.json#deepseek-r1",
+      "modelId": "deepseek-r1",
+      "config": "compute/providers/volcengine.json",
+      "sourceDoc": "docs/model-sources/providers/volcengine/models/deepseek-r1.md",
+      "outcome": "official-access-only",
+      "sourceIds": [
+        "volc-openviking"
+      ],
+      "fieldEvidence": [
+        {
+          "field": "baseUrl",
+          "currentValue": null,
+          "supportedValue": "https://ark.cn-beijing.volces.com/api/v3",
+          "sourceId": "volc-openviking",
+          "assessment": "not-comparable",
+          "explanation": "官方仓库北京端点证据，只确认接入入口，不确认本型号可调用。"
+        }
+      ],
+      "remainingFields": [
+        "contextWindow",
+        "inputPrice",
+        "maxOutputTokens",
+        "modelName",
+        "outputPrice",
+        "capabilities"
+      ],
+      "nextAction": "按精确型号和本接入面继续核对；候选证据不自动应用。",
+      "notes": [
+        "HTTP/搜索正文壳已单列；本条证明仅使用实际浏览器正文/官方仓库，不采用搜索摘要容量。",
+        "official-access-only只说明找到官方接入/产品入口，不计本条精确模型身份或容量已核。"
+      ]
+    },
+    {
+      "recordKey": "compute/model-specs/volcengine.json#deepseek-r1",
+      "modelId": "deepseek-r1",
+      "config": "compute/model-specs/volcengine.json",
+      "sourceDoc": "docs/model-sources/providers/volcengine/models/deepseek-r1.md",
+      "outcome": "still-unresolved",
+      "sourceIds": [],
+      "fieldEvidence": [],
+      "remainingFields": [
+        "id",
+        "spec.contextWindow",
+        "spec.defaultTemperature",
+        "spec.maxOutputTokens",
+        "spec.supportsReasoning",
+        "spec.capabilities"
+      ],
+      "nextAction": "按精确型号和本接入面继续核对；候选证据不自动应用。",
+      "notes": [
+        "渲染官网目录已读，但本条精确ID、旧别名或其他产品协议没有逐字支持；没有因文档可读就宣布本型号已核。",
+        "HTTP/搜索正文壳已单列；本条证明仅使用实际浏览器正文/官方仓库，不采用搜索摘要容量。"
+      ]
+    },
+    {
+      "recordKey": "compute/providers/volcengine.json#deepseek-v3.2",
+      "modelId": "deepseek-v3.2",
+      "config": "compute/providers/volcengine.json",
+      "sourceDoc": "docs/model-sources/providers/volcengine/models/deepseek-v3.2.md",
+      "outcome": "official-access-only",
+      "sourceIds": [
+        "volc-openviking"
+      ],
+      "fieldEvidence": [
+        {
+          "field": "baseUrl",
+          "currentValue": null,
+          "supportedValue": "https://ark.cn-beijing.volces.com/api/v3",
+          "sourceId": "volc-openviking",
+          "assessment": "not-comparable",
+          "explanation": "官方仓库北京端点证据，只确认接入入口，不确认本型号可调用。"
+        }
+      ],
+      "remainingFields": [
+        "contextWindow",
+        "defaultTemperature",
+        "defaultTopP",
+        "inputPrice",
+        "maxOutputTokens",
+        "modelName",
+        "outputPrice",
+        "capabilities"
+      ],
+      "nextAction": "按精确型号和本接入面继续核对；候选证据不自动应用。",
+      "notes": [
+        "HTTP/搜索正文壳已单列；本条证明仅使用实际浏览器正文/官方仓库，不采用搜索摘要容量。",
+        "official-access-only只说明找到官方接入/产品入口，不计本条精确模型身份或容量已核。"
+      ]
+    },
+    {
+      "recordKey": "compute/coding-plans/volcengine-coding.json#deepseek-v3.2",
+      "modelId": "deepseek-v3.2",
+      "config": "compute/coding-plans/volcengine-coding.json",
+      "sourceDoc": "docs/model-sources/providers/volcengine/models/deepseek-v3.2.md",
+      "outcome": "official-conflict",
+      "sourceIds": [
+        "volc-rendered-coding-retirements"
+      ],
+      "fieldEvidence": [
+        {
+          "field": "access.lifecycle",
+          "currentValue": null,
+          "supportedValue": {
+            "status": "retired",
+            "dateAsPrinted": "06.30",
+            "scope": "Coding Plan"
+          },
+          "sourceId": "volc-rendered-coding-retirements",
+          "assessment": "differs",
+          "explanation": "已下线表逐字列本ID及月日；不外推原厂/后付费API退休。"
+        }
+      ],
+      "remainingFields": [
+        "modelName",
+        "capabilities"
+      ],
+      "nextAction": "核实年份/确切时刻并按Coding Plan限定停用或迁移；保留API/原厂规格独立审计。",
+      "notes": [
+        "HTTP/搜索正文壳已单列；本条证明仅使用实际浏览器正文/官方仓库，不采用搜索摘要容量。"
+      ]
+    },
+    {
+      "recordKey": "compute/model-specs/volcengine.json#deepseek-v3.2",
+      "modelId": "deepseek-v3.2",
+      "config": "compute/model-specs/volcengine.json",
+      "sourceDoc": "docs/model-sources/providers/volcengine/models/deepseek-v3.2.md",
+      "outcome": "still-unresolved",
+      "sourceIds": [],
+      "fieldEvidence": [],
+      "remainingFields": [
+        "id",
+        "spec.contextWindow",
+        "spec.defaultTemperature",
+        "spec.maxOutputTokens",
+        "spec.capabilities"
+      ],
+      "nextAction": "按精确型号和本接入面继续核对；候选证据不自动应用。",
+      "notes": [
+        "渲染官网目录已读，但本条精确ID、旧别名或其他产品协议没有逐字支持；没有因文档可读就宣布本型号已核。",
+        "HTTP/搜索正文壳已单列；本条证明仅使用实际浏览器正文/官方仓库，不采用搜索摘要容量。"
+      ]
+    },
+    {
+      "recordKey": "compute/providers/volcengine.json#doubao-embedding-large",
+      "modelId": "doubao-embedding-large",
+      "config": "compute/providers/volcengine.json",
+      "sourceDoc": "docs/model-sources/providers/volcengine/models/doubao-embedding-large.md",
+      "outcome": "official-access-only",
+      "sourceIds": [
+        "volc-openviking"
+      ],
+      "fieldEvidence": [
+        {
+          "field": "baseUrl",
+          "currentValue": null,
+          "supportedValue": "https://ark.cn-beijing.volces.com/api/v3",
+          "sourceId": "volc-openviking",
+          "assessment": "not-comparable",
+          "explanation": "官方仓库北京端点证据，只确认接入入口，不确认本型号可调用。"
+        }
+      ],
+      "remainingFields": [
+        "contextWindow",
+        "inputPrice",
+        "modelName",
+        "capabilities"
+      ],
+      "nextAction": "按精确型号和本接入面继续核对；候选证据不自动应用。",
+      "notes": [
+        "HTTP/搜索正文壳已单列；本条证明仅使用实际浏览器正文/官方仓库，不采用搜索摘要容量。",
+        "official-access-only只说明找到官方接入/产品入口，不计本条精确模型身份或容量已核。"
+      ]
+    },
+    {
+      "recordKey": "compute/model-specs/volcengine.json#doubao-embedding-large",
+      "modelId": "doubao-embedding-large",
+      "config": "compute/model-specs/volcengine.json",
+      "sourceDoc": "docs/model-sources/providers/volcengine/models/doubao-embedding-large.md",
+      "outcome": "still-unresolved",
+      "sourceIds": [],
+      "fieldEvidence": [],
+      "remainingFields": [
+        "id",
+        "spec.contextWindow",
+        "spec.capabilities"
+      ],
+      "nextAction": "按精确型号和本接入面继续核对；候选证据不自动应用。",
+      "notes": [
+        "渲染官网目录已读，但本条精确ID、旧别名或其他产品协议没有逐字支持；没有因文档可读就宣布本型号已核。",
+        "HTTP/搜索正文壳已单列；本条证明仅使用实际浏览器正文/官方仓库，不采用搜索摘要容量。"
+      ]
+    },
+    {
+      "recordKey": "compute/providers/volcengine.json#doubao-embedding",
+      "modelId": "doubao-embedding",
+      "config": "compute/providers/volcengine.json",
+      "sourceDoc": "docs/model-sources/providers/volcengine/models/doubao-embedding.md",
+      "outcome": "official-access-only",
+      "sourceIds": [
+        "volc-openviking"
+      ],
+      "fieldEvidence": [
+        {
+          "field": "baseUrl",
+          "currentValue": null,
+          "supportedValue": "https://ark.cn-beijing.volces.com/api/v3",
+          "sourceId": "volc-openviking",
+          "assessment": "not-comparable",
+          "explanation": "官方仓库北京端点证据，只确认接入入口，不确认本型号可调用。"
+        }
+      ],
+      "remainingFields": [
+        "contextWindow",
+        "inputPrice",
+        "modelName",
+        "capabilities"
+      ],
+      "nextAction": "按精确型号和本接入面继续核对；候选证据不自动应用。",
+      "notes": [
+        "HTTP/搜索正文壳已单列；本条证明仅使用实际浏览器正文/官方仓库，不采用搜索摘要容量。",
+        "official-access-only只说明找到官方接入/产品入口，不计本条精确模型身份或容量已核。"
+      ]
+    },
+    {
+      "recordKey": "compute/model-specs/volcengine.json#doubao-embedding",
+      "modelId": "doubao-embedding",
+      "config": "compute/model-specs/volcengine.json",
+      "sourceDoc": "docs/model-sources/providers/volcengine/models/doubao-embedding.md",
+      "outcome": "still-unresolved",
+      "sourceIds": [],
+      "fieldEvidence": [],
+      "remainingFields": [
+        "id",
+        "spec.contextWindow",
+        "spec.capabilities"
+      ],
+      "nextAction": "按精确型号和本接入面继续核对；候选证据不自动应用。",
+      "notes": [
+        "渲染官网目录已读，但本条精确ID、旧别名或其他产品协议没有逐字支持；没有因文档可读就宣布本型号已核。",
+        "HTTP/搜索正文壳已单列；本条证明仅使用实际浏览器正文/官方仓库，不采用搜索摘要容量。"
+      ]
+    },
+    {
+      "recordKey": "compute/providers/volcengine.json#doubao-seed-1.6-flash",
+      "modelId": "doubao-seed-1.6-flash",
+      "config": "compute/providers/volcengine.json",
+      "sourceDoc": "docs/model-sources/providers/volcengine/models/doubao-seed-1.6-flash.md",
+      "outcome": "official-access-only",
+      "sourceIds": [
+        "volc-openviking"
+      ],
+      "fieldEvidence": [
+        {
+          "field": "baseUrl",
+          "currentValue": null,
+          "supportedValue": "https://ark.cn-beijing.volces.com/api/v3",
+          "sourceId": "volc-openviking",
+          "assessment": "not-comparable",
+          "explanation": "官方仓库北京端点证据，只确认接入入口，不确认本型号可调用。"
+        }
+      ],
+      "remainingFields": [
+        "contextWindow",
+        "defaultTemperature",
+        "defaultTopP",
+        "inputPrice",
+        "maxOutputTokens",
+        "modelName",
+        "outputPrice",
+        "capabilities",
+        "extra.deprecated",
+        "extra.deprecationNotice",
+        "extra.replacedBy"
+      ],
+      "nextAction": "按精确型号和本接入面继续核对；候选证据不自动应用。",
+      "notes": [
+        "HTTP/搜索正文壳已单列；本条证明仅使用实际浏览器正文/官方仓库，不采用搜索摘要容量。",
+        "official-access-only只说明找到官方接入/产品入口，不计本条精确模型身份或容量已核。"
+      ]
+    },
+    {
+      "recordKey": "compute/model-specs/volcengine.json#doubao-seed-1.6-flash",
+      "modelId": "doubao-seed-1.6-flash",
+      "config": "compute/model-specs/volcengine.json",
+      "sourceDoc": "docs/model-sources/providers/volcengine/models/doubao-seed-1.6-flash.md",
+      "outcome": "still-unresolved",
+      "sourceIds": [],
+      "fieldEvidence": [],
+      "remainingFields": [
+        "id",
+        "spec.contextWindow",
+        "spec.defaultTemperature",
+        "spec.maxOutputTokens",
+        "spec.capabilities"
+      ],
+      "nextAction": "按精确型号和本接入面继续核对；候选证据不自动应用。",
+      "notes": [
+        "渲染官网目录已读，但本条精确ID、旧别名或其他产品协议没有逐字支持；没有因文档可读就宣布本型号已核。",
+        "HTTP/搜索正文壳已单列；本条证明仅使用实际浏览器正文/官方仓库，不采用搜索摘要容量。"
+      ]
+    },
+    {
+      "recordKey": "compute/providers/volcengine.json#doubao-seed-1.6-lite",
+      "modelId": "doubao-seed-1.6-lite",
+      "config": "compute/providers/volcengine.json",
+      "sourceDoc": "docs/model-sources/providers/volcengine/models/doubao-seed-1.6-lite.md",
+      "outcome": "official-access-only",
+      "sourceIds": [
+        "volc-openviking"
+      ],
+      "fieldEvidence": [
+        {
+          "field": "baseUrl",
+          "currentValue": null,
+          "supportedValue": "https://ark.cn-beijing.volces.com/api/v3",
+          "sourceId": "volc-openviking",
+          "assessment": "not-comparable",
+          "explanation": "官方仓库北京端点证据，只确认接入入口，不确认本型号可调用。"
+        }
+      ],
+      "remainingFields": [
+        "contextWindow",
+        "defaultTemperature",
+        "defaultTopP",
+        "extra.pricingTiers",
+        "inputPrice",
+        "maxOutputTokens",
+        "modelName",
+        "outputPrice",
+        "capabilities",
+        "extra.deprecated",
+        "extra.deprecationNotice",
+        "extra.replacedBy"
+      ],
+      "nextAction": "按精确型号和本接入面继续核对；候选证据不自动应用。",
+      "notes": [
+        "HTTP/搜索正文壳已单列；本条证明仅使用实际浏览器正文/官方仓库，不采用搜索摘要容量。",
+        "official-access-only只说明找到官方接入/产品入口，不计本条精确模型身份或容量已核。"
+      ]
+    },
+    {
+      "recordKey": "compute/model-specs/volcengine.json#doubao-seed-1.6-lite",
+      "modelId": "doubao-seed-1.6-lite",
+      "config": "compute/model-specs/volcengine.json",
+      "sourceDoc": "docs/model-sources/providers/volcengine/models/doubao-seed-1.6-lite.md",
+      "outcome": "still-unresolved",
+      "sourceIds": [],
+      "fieldEvidence": [],
+      "remainingFields": [
+        "id",
+        "spec.contextWindow",
+        "spec.defaultTemperature",
+        "spec.maxOutputTokens",
+        "spec.capabilities"
+      ],
+      "nextAction": "按精确型号和本接入面继续核对；候选证据不自动应用。",
+      "notes": [
+        "渲染官网目录已读，但本条精确ID、旧别名或其他产品协议没有逐字支持；没有因文档可读就宣布本型号已核。",
+        "HTTP/搜索正文壳已单列；本条证明仅使用实际浏览器正文/官方仓库，不采用搜索摘要容量。"
+      ]
+    },
+    {
+      "recordKey": "compute/providers/volcengine.json#doubao-seed-1.6-thinking",
+      "modelId": "doubao-seed-1.6-thinking",
+      "config": "compute/providers/volcengine.json",
+      "sourceDoc": "docs/model-sources/providers/volcengine/models/doubao-seed-1.6-thinking.md",
+      "outcome": "official-access-only",
+      "sourceIds": [
+        "volc-openviking"
+      ],
+      "fieldEvidence": [
+        {
+          "field": "baseUrl",
+          "currentValue": null,
+          "supportedValue": "https://ark.cn-beijing.volces.com/api/v3",
+          "sourceId": "volc-openviking",
+          "assessment": "not-comparable",
+          "explanation": "官方仓库北京端点证据，只确认接入入口，不确认本型号可调用。"
+        }
+      ],
+      "remainingFields": [
+        "contextWindow",
+        "defaultTemperature",
+        "defaultTopP",
+        "inputPrice",
+        "maxOutputTokens",
+        "modelName",
+        "outputPrice",
+        "capabilities",
+        "extra.deprecated",
+        "extra.deprecationNotice",
+        "extra.replacedBy"
+      ],
+      "nextAction": "按精确型号和本接入面继续核对；候选证据不自动应用。",
+      "notes": [
+        "HTTP/搜索正文壳已单列；本条证明仅使用实际浏览器正文/官方仓库，不采用搜索摘要容量。",
+        "official-access-only只说明找到官方接入/产品入口，不计本条精确模型身份或容量已核。"
+      ]
+    },
+    {
+      "recordKey": "compute/model-specs/volcengine.json#doubao-seed-1.6-thinking",
+      "modelId": "doubao-seed-1.6-thinking",
+      "config": "compute/model-specs/volcengine.json",
+      "sourceDoc": "docs/model-sources/providers/volcengine/models/doubao-seed-1.6-thinking.md",
+      "outcome": "still-unresolved",
+      "sourceIds": [],
+      "fieldEvidence": [],
+      "remainingFields": [
+        "id",
+        "spec.contextWindow",
+        "spec.defaultTemperature",
+        "spec.maxOutputTokens",
+        "spec.supportsReasoning",
+        "spec.capabilities"
+      ],
+      "nextAction": "按精确型号和本接入面继续核对；候选证据不自动应用。",
+      "notes": [
+        "渲染官网目录已读，但本条精确ID、旧别名或其他产品协议没有逐字支持；没有因文档可读就宣布本型号已核。",
+        "HTTP/搜索正文壳已单列；本条证明仅使用实际浏览器正文/官方仓库，不采用搜索摘要容量。"
+      ]
+    },
+    {
+      "recordKey": "compute/providers/volcengine.json#doubao-seed-1.6-vision",
+      "modelId": "doubao-seed-1.6-vision",
+      "config": "compute/providers/volcengine.json",
+      "sourceDoc": "docs/model-sources/providers/volcengine/models/doubao-seed-1.6-vision.md",
+      "outcome": "official-access-only",
+      "sourceIds": [
+        "volc-openviking"
+      ],
+      "fieldEvidence": [
+        {
+          "field": "baseUrl",
+          "currentValue": null,
+          "supportedValue": "https://ark.cn-beijing.volces.com/api/v3",
+          "sourceId": "volc-openviking",
+          "assessment": "not-comparable",
+          "explanation": "官方仓库北京端点证据，只确认接入入口，不确认本型号可调用。"
+        }
+      ],
+      "remainingFields": [
+        "contextWindow",
+        "defaultTemperature",
+        "defaultTopP",
+        "inputPrice",
+        "maxOutputTokens",
+        "modelName",
+        "outputPrice",
+        "capabilities",
+        "extra.deprecated",
+        "extra.deprecationNotice",
+        "extra.replacedBy"
+      ],
+      "nextAction": "按精确型号和本接入面继续核对；候选证据不自动应用。",
+      "notes": [
+        "HTTP/搜索正文壳已单列；本条证明仅使用实际浏览器正文/官方仓库，不采用搜索摘要容量。",
+        "official-access-only只说明找到官方接入/产品入口，不计本条精确模型身份或容量已核。"
+      ]
+    },
+    {
+      "recordKey": "compute/model-specs/volcengine.json#doubao-seed-1.6-vision",
+      "modelId": "doubao-seed-1.6-vision",
+      "config": "compute/model-specs/volcengine.json",
+      "sourceDoc": "docs/model-sources/providers/volcengine/models/doubao-seed-1.6-vision.md",
+      "outcome": "still-unresolved",
+      "sourceIds": [],
+      "fieldEvidence": [],
+      "remainingFields": [
+        "id",
+        "spec.contextWindow",
+        "spec.defaultTemperature",
+        "spec.maxOutputTokens",
+        "spec.capabilities"
+      ],
+      "nextAction": "按精确型号和本接入面继续核对；候选证据不自动应用。",
+      "notes": [
+        "渲染官网目录已读，但本条精确ID、旧别名或其他产品协议没有逐字支持；没有因文档可读就宣布本型号已核。",
+        "HTTP/搜索正文壳已单列；本条证明仅使用实际浏览器正文/官方仓库，不采用搜索摘要容量。"
+      ]
+    },
+    {
+      "recordKey": "compute/providers/volcengine.json#doubao-seed-1.6",
+      "modelId": "doubao-seed-1.6",
+      "config": "compute/providers/volcengine.json",
+      "sourceDoc": "docs/model-sources/providers/volcengine/models/doubao-seed-1.6.md",
+      "outcome": "official-access-only",
+      "sourceIds": [
+        "volc-openviking"
+      ],
+      "fieldEvidence": [
+        {
+          "field": "baseUrl",
+          "currentValue": null,
+          "supportedValue": "https://ark.cn-beijing.volces.com/api/v3",
+          "sourceId": "volc-openviking",
+          "assessment": "not-comparable",
+          "explanation": "官方仓库北京端点证据，只确认接入入口，不确认本型号可调用。"
+        }
+      ],
+      "remainingFields": [
+        "contextWindow",
+        "defaultTemperature",
+        "defaultTopP",
+        "extra.pricingTiers",
+        "inputPrice",
+        "maxOutputTokens",
+        "modelName",
+        "outputPrice",
+        "capabilities",
+        "extra.deprecated",
+        "extra.deprecationNotice",
+        "extra.replacedBy"
+      ],
+      "nextAction": "按精确型号和本接入面继续核对；候选证据不自动应用。",
+      "notes": [
+        "HTTP/搜索正文壳已单列；本条证明仅使用实际浏览器正文/官方仓库，不采用搜索摘要容量。",
+        "official-access-only只说明找到官方接入/产品入口，不计本条精确模型身份或容量已核。"
+      ]
+    },
+    {
+      "recordKey": "compute/model-specs/volcengine.json#doubao-seed-1.6",
+      "modelId": "doubao-seed-1.6",
+      "config": "compute/model-specs/volcengine.json",
+      "sourceDoc": "docs/model-sources/providers/volcengine/models/doubao-seed-1.6.md",
+      "outcome": "still-unresolved",
+      "sourceIds": [],
+      "fieldEvidence": [],
+      "remainingFields": [
+        "id",
+        "spec.contextWindow",
+        "spec.defaultTemperature",
+        "spec.maxOutputTokens",
+        "spec.capabilities"
+      ],
+      "nextAction": "按精确型号和本接入面继续核对；候选证据不自动应用。",
+      "notes": [
+        "渲染官网目录已读，但本条精确ID、旧别名或其他产品协议没有逐字支持；没有因文档可读就宣布本型号已核。",
+        "HTTP/搜索正文壳已单列；本条证明仅使用实际浏览器正文/官方仓库，不采用搜索摘要容量。"
+      ]
+    },
+    {
+      "recordKey": "compute/providers/volcengine.json#doubao-seed-1.8",
+      "modelId": "doubao-seed-1.8",
+      "config": "compute/providers/volcengine.json",
+      "sourceDoc": "docs/model-sources/providers/volcengine/models/doubao-seed-1.8.md",
+      "outcome": "official-access-only",
+      "sourceIds": [
+        "volc-openviking"
+      ],
+      "fieldEvidence": [
+        {
+          "field": "baseUrl",
+          "currentValue": null,
+          "supportedValue": "https://ark.cn-beijing.volces.com/api/v3",
+          "sourceId": "volc-openviking",
+          "assessment": "not-comparable",
+          "explanation": "官方仓库北京端点证据，只确认接入入口，不确认本型号可调用。"
+        }
+      ],
+      "remainingFields": [
+        "contextWindow",
+        "defaultTemperature",
+        "defaultTopP",
+        "extra.pricingTiers",
+        "inputPrice",
+        "maxOutputTokens",
+        "modelName",
+        "outputPrice",
+        "capabilities",
+        "extra.deprecated",
+        "extra.deprecationNotice",
+        "extra.replacedBy"
+      ],
+      "nextAction": "按精确型号和本接入面继续核对；候选证据不自动应用。",
+      "notes": [
+        "HTTP/搜索正文壳已单列；本条证明仅使用实际浏览器正文/官方仓库，不采用搜索摘要容量。",
+        "official-access-only只说明找到官方接入/产品入口，不计本条精确模型身份或容量已核。"
+      ]
+    },
+    {
+      "recordKey": "compute/model-specs/volcengine.json#doubao-seed-1.8",
+      "modelId": "doubao-seed-1.8",
+      "config": "compute/model-specs/volcengine.json",
+      "sourceDoc": "docs/model-sources/providers/volcengine/models/doubao-seed-1.8.md",
+      "outcome": "still-unresolved",
+      "sourceIds": [],
+      "fieldEvidence": [],
+      "remainingFields": [
+        "id",
+        "spec.contextWindow",
+        "spec.defaultTemperature",
+        "spec.maxOutputTokens",
+        "spec.capabilities"
+      ],
+      "nextAction": "按精确型号和本接入面继续核对；候选证据不自动应用。",
+      "notes": [
+        "渲染官网目录已读，但本条精确ID、旧别名或其他产品协议没有逐字支持；没有因文档可读就宣布本型号已核。",
+        "HTTP/搜索正文壳已单列；本条证明仅使用实际浏览器正文/官方仓库，不采用搜索摘要容量。"
+      ]
+    },
+    {
+      "recordKey": "compute/providers/volcengine.json#doubao-seed-2.0-code",
+      "modelId": "doubao-seed-2.0-code",
+      "config": "compute/providers/volcengine.json",
+      "sourceDoc": "docs/model-sources/providers/volcengine/models/doubao-seed-2.0-code.md",
+      "outcome": "official-access-only",
+      "sourceIds": [
+        "volc-openviking"
+      ],
+      "fieldEvidence": [
+        {
+          "field": "baseUrl",
+          "currentValue": null,
+          "supportedValue": "https://ark.cn-beijing.volces.com/api/v3",
+          "sourceId": "volc-openviking",
+          "assessment": "not-comparable",
+          "explanation": "官方仓库北京端点证据，只确认接入入口，不确认本型号可调用。"
+        }
+      ],
+      "remainingFields": [
+        "contextWindow",
+        "defaultTemperature",
+        "defaultTopP",
+        "extra.pricingTiers",
+        "inputPrice",
+        "maxOutputTokens",
+        "modelName",
+        "outputPrice",
+        "capabilities"
+      ],
+      "nextAction": "按精确型号和本接入面继续核对；候选证据不自动应用。",
+      "notes": [
+        "HTTP/搜索正文壳已单列；本条证明仅使用实际浏览器正文/官方仓库，不采用搜索摘要容量。",
+        "official-access-only只说明找到官方接入/产品入口，不计本条精确模型身份或容量已核。"
+      ]
+    },
+    {
+      "recordKey": "compute/coding-plans/volcengine-coding.json#doubao-seed-2.0-code",
+      "modelId": "doubao-seed-2.0-code",
+      "config": "compute/coding-plans/volcengine-coding.json",
+      "sourceDoc": "docs/model-sources/providers/volcengine/models/doubao-seed-2.0-code.md",
+      "outcome": "official-conflict",
+      "sourceIds": [
+        "volc-rendered-coding-retirements"
+      ],
+      "fieldEvidence": [
+        {
+          "field": "access.lifecycle",
+          "currentValue": null,
+          "supportedValue": {
+            "status": "retired",
+            "dateAsPrinted": "08.08",
+            "scope": "Coding Plan"
+          },
+          "sourceId": "volc-rendered-coding-retirements",
+          "assessment": "differs",
+          "explanation": "已下线表逐字列本ID及月日；不外推原厂/后付费API退休。"
+        }
+      ],
+      "remainingFields": [
+        "modelName",
+        "capabilities"
+      ],
+      "nextAction": "核实年份/确切时刻并按Coding Plan限定停用或迁移；保留API/原厂规格独立审计。",
+      "notes": [
+        "HTTP/搜索正文壳已单列；本条证明仅使用实际浏览器正文/官方仓库，不采用搜索摘要容量。"
+      ]
+    },
+    {
+      "recordKey": "compute/model-specs/volcengine.json#doubao-seed-2.0-code",
+      "modelId": "doubao-seed-2.0-code",
+      "config": "compute/model-specs/volcengine.json",
+      "sourceDoc": "docs/model-sources/providers/volcengine/models/doubao-seed-2.0-code.md",
+      "outcome": "still-unresolved",
+      "sourceIds": [],
+      "fieldEvidence": [],
+      "remainingFields": [
+        "id",
+        "spec.contextWindow",
+        "spec.defaultTemperature",
+        "spec.maxOutputTokens",
+        "spec.capabilities"
+      ],
+      "nextAction": "按精确型号和本接入面继续核对；候选证据不自动应用。",
+      "notes": [
+        "渲染官网目录已读，但本条精确ID、旧别名或其他产品协议没有逐字支持；没有因文档可读就宣布本型号已核。",
+        "HTTP/搜索正文壳已单列；本条证明仅使用实际浏览器正文/官方仓库，不采用搜索摘要容量。"
+      ]
+    },
+    {
+      "recordKey": "compute/providers/volcengine.json#doubao-seed-2.0-lite",
+      "modelId": "doubao-seed-2.0-lite",
+      "config": "compute/providers/volcengine.json",
+      "sourceDoc": "docs/model-sources/providers/volcengine/models/doubao-seed-2.0-lite.md",
+      "outcome": "official-access-only",
+      "sourceIds": [
+        "volc-openviking"
+      ],
+      "fieldEvidence": [
+        {
+          "field": "baseUrl",
+          "currentValue": null,
+          "supportedValue": "https://ark.cn-beijing.volces.com/api/v3",
+          "sourceId": "volc-openviking",
+          "assessment": "not-comparable",
+          "explanation": "官方仓库北京端点证据，只确认接入入口，不确认本型号可调用。"
+        }
+      ],
+      "remainingFields": [
+        "contextWindow",
+        "defaultTemperature",
+        "defaultTopP",
+        "extra.pricingTiers",
+        "inputPrice",
+        "maxOutputTokens",
+        "modelName",
+        "outputPrice",
+        "capabilities"
+      ],
+      "nextAction": "按精确型号和本接入面继续核对；候选证据不自动应用。",
+      "notes": [
+        "官网是带日期和连字符ID；本条点分无日期调用名未取得别名证明。官方新日期型号的参数不得直接套用。",
+        "HTTP/搜索正文壳已单列；本条证明仅使用实际浏览器正文/官方仓库，不采用搜索摘要容量。",
+        "official-access-only只说明找到官方接入/产品入口，不计本条精确模型身份或容量已核。"
+      ]
+    },
+    {
+      "recordKey": "compute/coding-plans/volcengine-coding.json#doubao-seed-2.0-lite",
+      "modelId": "doubao-seed-2.0-lite",
+      "config": "compute/coding-plans/volcengine-coding.json",
+      "sourceDoc": "docs/model-sources/providers/volcengine/models/doubao-seed-2.0-lite.md",
+      "outcome": "official-conflict",
+      "sourceIds": [
+        "volc-rendered-coding-retirements"
+      ],
+      "fieldEvidence": [
+        {
+          "field": "access.lifecycle",
+          "currentValue": null,
+          "supportedValue": {
+            "newUsersBlockedAt": "2026-09-23T10:00:00+08:00",
+            "retiredAt": "2026-10-09T14:00:00+08:00"
+          },
+          "sourceId": "volc-rendered-coding-retirements",
+          "assessment": "differs",
+          "explanation": "两条型号共享公告日期；当前10/4尚未全量停服，但新用户已有门控。"
+        }
+      ],
+      "remainingFields": [
+        "modelName",
+        "capabilities"
+      ],
+      "nextAction": "按精确型号和本接入面继续核对；候选证据不自动应用。",
+      "notes": [
+        "HTTP/搜索正文壳已单列；本条证明仅使用实际浏览器正文/官方仓库，不采用搜索摘要容量。",
+        "10月4日不等于公告10月9日；未来停服记录不用于宣称当前对所有旧用户已停服。"
+      ]
+    },
+    {
+      "recordKey": "compute/model-specs/volcengine.json#doubao-seed-2.0-lite",
+      "modelId": "doubao-seed-2.0-lite",
+      "config": "compute/model-specs/volcengine.json",
+      "sourceDoc": "docs/model-sources/providers/volcengine/models/doubao-seed-2.0-lite.md",
+      "outcome": "still-unresolved",
+      "sourceIds": [],
+      "fieldEvidence": [],
+      "remainingFields": [
+        "id",
+        "spec.contextWindow",
+        "spec.defaultTemperature",
+        "spec.maxOutputTokens",
+        "spec.capabilities"
+      ],
+      "nextAction": "按精确型号和本接入面继续核对；候选证据不自动应用。",
+      "notes": [
+        "官网是带日期和连字符ID；本条点分无日期调用名未取得别名证明。官方新日期型号的参数不得直接套用。",
+        "渲染官网目录已读，但本条精确ID、旧别名或其他产品协议没有逐字支持；没有因文档可读就宣布本型号已核。",
+        "HTTP/搜索正文壳已单列；本条证明仅使用实际浏览器正文/官方仓库，不采用搜索摘要容量。"
+      ]
+    },
+    {
+      "recordKey": "compute/providers/volcengine.json#doubao-seed-2.0-mini",
+      "modelId": "doubao-seed-2.0-mini",
+      "config": "compute/providers/volcengine.json",
+      "sourceDoc": "docs/model-sources/providers/volcengine/models/doubao-seed-2.0-mini.md",
+      "outcome": "official-access-only",
+      "sourceIds": [
+        "volc-openviking"
+      ],
+      "fieldEvidence": [
+        {
+          "field": "baseUrl",
+          "currentValue": null,
+          "supportedValue": "https://ark.cn-beijing.volces.com/api/v3",
+          "sourceId": "volc-openviking",
+          "assessment": "not-comparable",
+          "explanation": "官方仓库北京端点证据，只确认接入入口，不确认本型号可调用。"
+        }
+      ],
+      "remainingFields": [
+        "contextWindow",
+        "defaultTemperature",
+        "defaultTopP",
+        "extra.pricingTiers",
+        "inputPrice",
+        "maxOutputTokens",
+        "modelName",
+        "outputPrice",
+        "capabilities"
+      ],
+      "nextAction": "按精确型号和本接入面继续核对；候选证据不自动应用。",
+      "notes": [
+        "官网是带日期和连字符ID；本条点分无日期调用名未取得别名证明。官方新日期型号的参数不得直接套用。",
+        "HTTP/搜索正文壳已单列；本条证明仅使用实际浏览器正文/官方仓库，不采用搜索摘要容量。",
+        "official-access-only只说明找到官方接入/产品入口，不计本条精确模型身份或容量已核。"
+      ]
+    },
+    {
+      "recordKey": "compute/model-specs/volcengine.json#doubao-seed-2.0-mini",
+      "modelId": "doubao-seed-2.0-mini",
+      "config": "compute/model-specs/volcengine.json",
+      "sourceDoc": "docs/model-sources/providers/volcengine/models/doubao-seed-2.0-mini.md",
+      "outcome": "still-unresolved",
+      "sourceIds": [],
+      "fieldEvidence": [],
+      "remainingFields": [
+        "id",
+        "spec.contextWindow",
+        "spec.defaultTemperature",
+        "spec.maxOutputTokens",
+        "spec.capabilities"
+      ],
+      "nextAction": "按精确型号和本接入面继续核对；候选证据不自动应用。",
+      "notes": [
+        "官网是带日期和连字符ID；本条点分无日期调用名未取得别名证明。官方新日期型号的参数不得直接套用。",
+        "渲染官网目录已读，但本条精确ID、旧别名或其他产品协议没有逐字支持；没有因文档可读就宣布本型号已核。",
+        "HTTP/搜索正文壳已单列；本条证明仅使用实际浏览器正文/官方仓库，不采用搜索摘要容量。"
+      ]
+    },
+    {
+      "recordKey": "compute/providers/volcengine.json#doubao-seed-2.0-pro",
+      "modelId": "doubao-seed-2.0-pro",
+      "config": "compute/providers/volcengine.json",
+      "sourceDoc": "docs/model-sources/providers/volcengine/models/doubao-seed-2.0-pro.md",
+      "outcome": "official-access-only",
+      "sourceIds": [
+        "volc-openviking"
+      ],
+      "fieldEvidence": [
+        {
+          "field": "baseUrl",
+          "currentValue": null,
+          "supportedValue": "https://ark.cn-beijing.volces.com/api/v3",
+          "sourceId": "volc-openviking",
+          "assessment": "not-comparable",
+          "explanation": "官方仓库北京端点证据，只确认接入入口，不确认本型号可调用。"
+        }
+      ],
+      "remainingFields": [
+        "contextWindow",
+        "defaultTemperature",
+        "defaultTopP",
+        "extra.pricingTiers",
+        "inputPrice",
+        "maxOutputTokens",
+        "modelName",
+        "outputPrice",
+        "capabilities"
+      ],
+      "nextAction": "按精确型号和本接入面继续核对；候选证据不自动应用。",
+      "notes": [
+        "HTTP/搜索正文壳已单列；本条证明仅使用实际浏览器正文/官方仓库，不采用搜索摘要容量。",
+        "official-access-only只说明找到官方接入/产品入口，不计本条精确模型身份或容量已核。"
+      ]
+    },
+    {
+      "recordKey": "compute/coding-plans/volcengine-coding.json#doubao-seed-2.0-pro",
+      "modelId": "doubao-seed-2.0-pro",
+      "config": "compute/coding-plans/volcengine-coding.json",
+      "sourceDoc": "docs/model-sources/providers/volcengine/models/doubao-seed-2.0-pro.md",
+      "outcome": "official-conflict",
+      "sourceIds": [
+        "volc-rendered-coding-retirements"
+      ],
+      "fieldEvidence": [
+        {
+          "field": "access.lifecycle",
+          "currentValue": null,
+          "supportedValue": {
+            "status": "retired",
+            "dateAsPrinted": "08.08",
+            "scope": "Coding Plan"
+          },
+          "sourceId": "volc-rendered-coding-retirements",
+          "assessment": "differs",
+          "explanation": "已下线表逐字列本ID及月日；不外推原厂/后付费API退休。"
+        }
+      ],
+      "remainingFields": [
+        "modelName",
+        "capabilities"
+      ],
+      "nextAction": "核实年份/确切时刻并按Coding Plan限定停用或迁移；保留API/原厂规格独立审计。",
+      "notes": [
+        "HTTP/搜索正文壳已单列；本条证明仅使用实际浏览器正文/官方仓库，不采用搜索摘要容量。"
+      ]
+    },
+    {
+      "recordKey": "compute/model-specs/volcengine.json#doubao-seed-2.0-pro",
+      "modelId": "doubao-seed-2.0-pro",
+      "config": "compute/model-specs/volcengine.json",
+      "sourceDoc": "docs/model-sources/providers/volcengine/models/doubao-seed-2.0-pro.md",
+      "outcome": "still-unresolved",
+      "sourceIds": [],
+      "fieldEvidence": [],
+      "remainingFields": [
+        "id",
+        "spec.contextWindow",
+        "spec.defaultTemperature",
+        "spec.maxOutputTokens",
+        "spec.capabilities"
+      ],
+      "nextAction": "按精确型号和本接入面继续核对；候选证据不自动应用。",
+      "notes": [
+        "渲染官网目录已读，但本条精确ID、旧别名或其他产品协议没有逐字支持；没有因文档可读就宣布本型号已核。",
+        "HTTP/搜索正文壳已单列；本条证明仅使用实际浏览器正文/官方仓库，不采用搜索摘要容量。"
+      ]
+    },
+    {
+      "recordKey": "compute/providers/volcengine.json#doubao-seed-2.1-pro",
+      "modelId": "doubao-seed-2.1-pro",
+      "config": "compute/providers/volcengine.json",
+      "sourceDoc": "docs/model-sources/providers/volcengine/models/doubao-seed-2.1-pro.md",
+      "outcome": "official-identity-only",
+      "sourceIds": [
+        "volc-rendered-model-list",
+        "volc-openviking"
+      ],
+      "fieldEvidence": [
+        {
+          "field": "apiModelId",
+          "currentValue": "doubao-seed-2-1-pro-260628",
+          "supportedValue": "doubao-seed-2-1-pro-260628",
+          "sourceId": "volc-rendered-model-list",
+          "assessment": "matches",
+          "explanation": "官网当前目录逐字出现实际wire ID；显示别名不代替实参。"
+        },
+        {
+          "field": "contextWindow",
+          "currentValue": 256000,
+          "supportedValue": "256k",
+          "sourceId": "volc-rendered-model-list",
+          "assessment": "not-comparable",
+          "explanation": "官方原文token数量；k是否1000/1024本次未确认，保候选原值不机械换算。"
+        },
+        {
+          "field": "maxInputTokens",
+          "currentValue": null,
+          "supportedValue": "256k",
+          "sourceId": "volc-rendered-model-list",
+          "assessment": "not-comparable",
+          "explanation": "官方原文token数量；k是否1000/1024本次未确认，保候选原值不机械换算。"
+        },
+        {
+          "field": "maxOutputTokens",
+          "currentValue": 262144,
+          "supportedValue": "256k",
+          "sourceId": "volc-rendered-model-list",
+          "assessment": "not-comparable",
+          "explanation": "官方原文token数量；k是否1000/1024本次未确认，保候选原值不机械换算。"
+        },
+        {
+          "field": "baseUrl",
+          "currentValue": null,
+          "supportedValue": "https://ark.cn-beijing.volces.com/api/v3",
+          "sourceId": "volc-openviking",
+          "assessment": "not-comparable",
+          "explanation": "官方仓库北京端点证据，只确认接入入口，不确认本型号可调用。"
+        }
+      ],
+      "remainingFields": [
+        "contextWindow",
+        "defaultTemperature",
+        "defaultTopP",
+        "extra.cacheHitPrice",
+        "extra.cacheStoragePricePerMillionTokenHour",
+        "inputPrice",
+        "maxOutputTokens",
+        "modelName",
+        "outputPrice",
+        "capabilities",
+        "extra.supportsResponsesApi",
+        "extra.supportsChatApi"
+      ],
+      "nextAction": "按精确型号和本接入面继续核对；候选证据不自动应用。",
+      "notes": [
+        "HTTP/搜索正文壳已单列；本条证明仅使用实际浏览器正文/官方仓库，不采用搜索摘要容量。"
+      ]
+    },
+    {
+      "recordKey": "compute/coding-plans/volcengine-coding.json#doubao-seed-2.1-pro",
+      "modelId": "doubao-seed-2.1-pro",
+      "config": "compute/coding-plans/volcengine-coding.json",
+      "sourceDoc": "docs/model-sources/providers/volcengine/models/doubao-seed-2.1-pro.md",
+      "outcome": "official-conflict",
+      "sourceIds": [
+        "volc-rendered-coding"
+      ],
+      "fieldEvidence": [
+        {
+          "field": "contextWindow",
+          "currentValue": 256000,
+          "supportedValue": "1024k",
+          "sourceId": "volc-rendered-coding",
+          "assessment": "differs",
+          "explanation": "套餐同名Pro升级后的官方原文；当前256000不匹配该数量级，不借API260628参数替代。"
+        },
+        {
+          "field": "maxOutputTokens",
+          "currentValue": 262144,
+          "supportedValue": "256k",
+          "sourceId": "volc-rendered-coding",
+          "assessment": "not-comparable",
+          "explanation": "k换算未确认，保留官网写法。"
+        }
+      ],
+      "remainingFields": [
+        "maxOutputTokens",
+        "modelName",
+        "capabilities"
+      ],
+      "nextAction": "按精确型号和本接入面继续核对；候选证据不自动应用。",
+      "notes": [
+        "HTTP/搜索正文壳已单列；本条证明仅使用实际浏览器正文/官方仓库，不采用搜索摘要容量。"
+      ]
+    },
+    {
+      "recordKey": "compute/model-specs/volcengine.json#doubao-seed-2.1-pro",
+      "modelId": "doubao-seed-2.1-pro",
+      "config": "compute/model-specs/volcengine.json",
+      "sourceDoc": "docs/model-sources/providers/volcengine/models/doubao-seed-2.1-pro.md",
+      "outcome": "still-unresolved",
+      "sourceIds": [],
+      "fieldEvidence": [],
+      "remainingFields": [
+        "id",
+        "spec.contextWindow",
+        "spec.maxOutputTokens",
+        "spec.supportsReasoning",
+        "spec.capabilities"
+      ],
+      "nextAction": "按精确型号和本接入面继续核对；候选证据不自动应用。",
+      "notes": [
+        "渲染官网目录已读，但本条精确ID、旧别名或其他产品协议没有逐字支持；没有因文档可读就宣布本型号已核。",
+        "HTTP/搜索正文壳已单列；本条证明仅使用实际浏览器正文/官方仓库，不采用搜索摘要容量。"
+      ]
+    },
+    {
+      "recordKey": "compute/providers/volcengine.json#doubao-seed-2.1-turbo",
+      "modelId": "doubao-seed-2.1-turbo",
+      "config": "compute/providers/volcengine.json",
+      "sourceDoc": "docs/model-sources/providers/volcengine/models/doubao-seed-2.1-turbo.md",
+      "outcome": "official-identity-only",
+      "sourceIds": [
+        "volc-rendered-model-list",
+        "volc-openviking"
+      ],
+      "fieldEvidence": [
+        {
+          "field": "apiModelId",
+          "currentValue": "doubao-seed-2-1-turbo-260628",
+          "supportedValue": "doubao-seed-2-1-turbo-260628",
+          "sourceId": "volc-rendered-model-list",
+          "assessment": "matches",
+          "explanation": "官网当前目录逐字出现实际wire ID；显示别名不代替实参。"
+        },
+        {
+          "field": "contextWindow",
+          "currentValue": 256000,
+          "supportedValue": "256k",
+          "sourceId": "volc-rendered-model-list",
+          "assessment": "not-comparable",
+          "explanation": "官方原文token数量；k是否1000/1024本次未确认，保候选原值不机械换算。"
+        },
+        {
+          "field": "maxInputTokens",
+          "currentValue": null,
+          "supportedValue": "256k",
+          "sourceId": "volc-rendered-model-list",
+          "assessment": "not-comparable",
+          "explanation": "官方原文token数量；k是否1000/1024本次未确认，保候选原值不机械换算。"
+        },
+        {
+          "field": "maxOutputTokens",
+          "currentValue": 262144,
+          "supportedValue": "256k",
+          "sourceId": "volc-rendered-model-list",
+          "assessment": "not-comparable",
+          "explanation": "官方原文token数量；k是否1000/1024本次未确认，保候选原值不机械换算。"
+        },
+        {
+          "field": "baseUrl",
+          "currentValue": null,
+          "supportedValue": "https://ark.cn-beijing.volces.com/api/v3",
+          "sourceId": "volc-openviking",
+          "assessment": "not-comparable",
+          "explanation": "官方仓库北京端点证据，只确认接入入口，不确认本型号可调用。"
+        }
+      ],
+      "remainingFields": [
+        "contextWindow",
+        "defaultTemperature",
+        "defaultTopP",
+        "extra.cacheHitPrice",
+        "extra.cacheStoragePricePerMillionTokenHour",
+        "inputPrice",
+        "maxOutputTokens",
+        "modelName",
+        "outputPrice",
+        "capabilities",
+        "extra.supportsResponsesApi",
+        "extra.supportsChatApi"
+      ],
+      "nextAction": "按精确型号和本接入面继续核对；候选证据不自动应用。",
+      "notes": [
+        "HTTP/搜索正文壳已单列；本条证明仅使用实际浏览器正文/官方仓库，不采用搜索摘要容量。"
+      ]
+    },
+    {
+      "recordKey": "compute/coding-plans/volcengine-coding.json#doubao-seed-2.1-turbo",
+      "modelId": "doubao-seed-2.1-turbo",
+      "config": "compute/coding-plans/volcengine-coding.json",
+      "sourceDoc": "docs/model-sources/providers/volcengine/models/doubao-seed-2.1-turbo.md",
+      "outcome": "official-conflict",
+      "sourceIds": [
+        "volc-rendered-coding-retirements",
+        "volc-rendered-coding"
+      ],
+      "fieldEvidence": [
+        {
+          "field": "access.lifecycle",
+          "currentValue": null,
+          "supportedValue": {
+            "newUsersBlockedAt": "2026-09-23T10:00:00+08:00",
+            "retiredAt": "2026-10-09T14:00:00+08:00"
+          },
+          "sourceId": "volc-rendered-coding-retirements",
+          "assessment": "differs",
+          "explanation": "两条型号共享公告日期；当前10/4尚未全量停服，但新用户已有门控。"
+        },
+        {
+          "field": "maxOutputTokens",
+          "currentValue": 262144,
+          "supportedValue": "64k",
+          "sourceId": "volc-rendered-coding",
+          "assessment": "not-comparable",
+          "explanation": "套餐Turbo输出64k，独立于后付费Turbo日期ID的256k。"
+        }
+      ],
+      "remainingFields": [
+        "contextWindow",
+        "maxOutputTokens",
+        "modelName",
+        "capabilities"
+      ],
+      "nextAction": "按精确型号和本接入面继续核对；候选证据不自动应用。",
+      "notes": [
+        "HTTP/搜索正文壳已单列；本条证明仅使用实际浏览器正文/官方仓库，不采用搜索摘要容量。",
+        "10月4日不等于公告10月9日；未来停服记录不用于宣称当前对所有旧用户已停服。"
+      ]
+    },
+    {
+      "recordKey": "compute/model-specs/volcengine.json#doubao-seed-2.1-turbo",
+      "modelId": "doubao-seed-2.1-turbo",
+      "config": "compute/model-specs/volcengine.json",
+      "sourceDoc": "docs/model-sources/providers/volcengine/models/doubao-seed-2.1-turbo.md",
+      "outcome": "still-unresolved",
+      "sourceIds": [],
+      "fieldEvidence": [],
+      "remainingFields": [
+        "id",
+        "spec.contextWindow",
+        "spec.maxOutputTokens",
+        "spec.supportsReasoning",
+        "spec.capabilities"
+      ],
+      "nextAction": "按精确型号和本接入面继续核对；候选证据不自动应用。",
+      "notes": [
+        "渲染官网目录已读，但本条精确ID、旧别名或其他产品协议没有逐字支持；没有因文档可读就宣布本型号已核。",
+        "HTTP/搜索正文壳已单列；本条证明仅使用实际浏览器正文/官方仓库，不采用搜索摘要容量。"
+      ]
+    },
+    {
+      "recordKey": "compute/providers/volcengine.json#doubao-seed-code",
+      "modelId": "doubao-seed-code",
+      "config": "compute/providers/volcengine.json",
+      "sourceDoc": "docs/model-sources/providers/volcengine/models/doubao-seed-code.md",
+      "outcome": "official-access-only",
+      "sourceIds": [
+        "volc-openviking"
+      ],
+      "fieldEvidence": [
+        {
+          "field": "baseUrl",
+          "currentValue": null,
+          "supportedValue": "https://ark.cn-beijing.volces.com/api/v3",
+          "sourceId": "volc-openviking",
+          "assessment": "not-comparable",
+          "explanation": "官方仓库北京端点证据，只确认接入入口，不确认本型号可调用。"
+        }
+      ],
+      "remainingFields": [
+        "contextWindow",
+        "defaultTemperature",
+        "defaultTopP",
+        "inputPrice",
+        "maxOutputTokens",
+        "modelName",
+        "outputPrice",
+        "capabilities"
+      ],
+      "nextAction": "按精确型号和本接入面继续核对；候选证据不自动应用。",
+      "notes": [
+        "HTTP/搜索正文壳已单列；本条证明仅使用实际浏览器正文/官方仓库，不采用搜索摘要容量。",
+        "official-access-only只说明找到官方接入/产品入口，不计本条精确模型身份或容量已核。"
+      ]
+    },
+    {
+      "recordKey": "compute/coding-plans/volcengine-coding.json#doubao-seed-code",
+      "modelId": "doubao-seed-code",
+      "config": "compute/coding-plans/volcengine-coding.json",
+      "sourceDoc": "docs/model-sources/providers/volcengine/models/doubao-seed-code.md",
+      "outcome": "official-conflict",
+      "sourceIds": [
+        "volc-rendered-coding-retirements"
+      ],
+      "fieldEvidence": [
+        {
+          "field": "access.lifecycle",
+          "currentValue": null,
+          "supportedValue": {
+            "status": "retired",
+            "dateAsPrinted": "08.05",
+            "scope": "Coding Plan"
+          },
+          "sourceId": "volc-rendered-coding-retirements",
+          "assessment": "differs",
+          "explanation": "已下线表逐字列本ID及月日；不外推原厂/后付费API退休。"
+        }
+      ],
+      "remainingFields": [
+        "modelName",
+        "capabilities"
+      ],
+      "nextAction": "核实年份/确切时刻并按Coding Plan限定停用或迁移；保留API/原厂规格独立审计。",
+      "notes": [
+        "HTTP/搜索正文壳已单列；本条证明仅使用实际浏览器正文/官方仓库，不采用搜索摘要容量。"
+      ]
+    },
+    {
+      "recordKey": "compute/model-specs/volcengine.json#doubao-seed-code",
+      "modelId": "doubao-seed-code",
+      "config": "compute/model-specs/volcengine.json",
+      "sourceDoc": "docs/model-sources/providers/volcengine/models/doubao-seed-code.md",
+      "outcome": "still-unresolved",
+      "sourceIds": [],
+      "fieldEvidence": [],
+      "remainingFields": [
+        "id",
+        "spec.contextWindow",
+        "spec.defaultTemperature",
+        "spec.maxOutputTokens",
+        "spec.capabilities"
+      ],
+      "nextAction": "按精确型号和本接入面继续核对；候选证据不自动应用。",
+      "notes": [
+        "渲染官网目录已读，但本条精确ID、旧别名或其他产品协议没有逐字支持；没有因文档可读就宣布本型号已核。",
+        "HTTP/搜索正文壳已单列；本条证明仅使用实际浏览器正文/官方仓库，不采用搜索摘要容量。"
+      ]
+    },
+    {
+      "recordKey": "compute/providers/volcengine.json#doubao-seed-evolving",
+      "modelId": "doubao-seed-evolving",
+      "config": "compute/providers/volcengine.json",
+      "sourceDoc": "docs/model-sources/providers/volcengine/models/doubao-seed-evolving.md",
+      "outcome": "official-identity-only",
+      "sourceIds": [
+        "volc-rendered-model-list",
+        "volc-openviking"
+      ],
+      "fieldEvidence": [
+        {
+          "field": "modelName",
+          "currentValue": "doubao-seed-evolving",
+          "supportedValue": "doubao-seed-evolving",
+          "sourceId": "volc-rendered-model-list",
+          "assessment": "matches",
+          "explanation": "官网当前目录逐字出现实际wire ID；显示别名不代替实参。"
+        },
+        {
+          "field": "contextWindow",
+          "currentValue": 1000000,
+          "supportedValue": "1024k",
+          "sourceId": "volc-rendered-model-list",
+          "assessment": "not-comparable",
+          "explanation": "官方原文token数量；k是否1000/1024本次未确认，保候选原值不机械换算。"
+        },
+        {
+          "field": "maxInputTokens",
+          "currentValue": null,
+          "supportedValue": "1024k",
+          "sourceId": "volc-rendered-model-list",
+          "assessment": "not-comparable",
+          "explanation": "官方原文token数量；k是否1000/1024本次未确认，保候选原值不机械换算。"
+        },
+        {
+          "field": "maxOutputTokens",
+          "currentValue": null,
+          "supportedValue": "256k",
+          "sourceId": "volc-rendered-model-list",
+          "assessment": "not-comparable",
+          "explanation": "官方原文token数量；k是否1000/1024本次未确认，保候选原值不机械换算。"
+        },
+        {
+          "field": "baseUrl",
+          "currentValue": null,
+          "supportedValue": "https://ark.cn-beijing.volces.com/api/v3",
+          "sourceId": "volc-openviking",
+          "assessment": "not-comparable",
+          "explanation": "官方仓库北京端点证据，只确认接入入口，不确认本型号可调用。"
+        }
+      ],
+      "remainingFields": [
+        "contextWindow",
+        "capabilities"
+      ],
+      "nextAction": "按精确型号和本接入面继续核对；候选证据不自动应用。",
+      "notes": [
+        "HTTP/搜索正文壳已单列；本条证明仅使用实际浏览器正文/官方仓库，不采用搜索摘要容量。"
+      ]
+    },
+    {
+      "recordKey": "compute/model-specs/volcengine.json#doubao-seed-evolving",
+      "modelId": "doubao-seed-evolving",
+      "config": "compute/model-specs/volcengine.json",
+      "sourceDoc": "docs/model-sources/providers/volcengine/models/doubao-seed-evolving.md",
+      "outcome": "official-identity-only",
+      "sourceIds": [
+        "volc-rendered-model-list"
+      ],
+      "fieldEvidence": [
+        {
+          "field": "id",
+          "currentValue": "doubao-seed-evolving",
+          "supportedValue": "doubao-seed-evolving",
+          "sourceId": "volc-rendered-model-list",
+          "assessment": "matches",
+          "explanation": "官网当前目录逐字出现实际wire ID；显示别名不代替实参。"
+        },
+        {
+          "field": "spec.contextWindow",
+          "currentValue": 1000000,
+          "supportedValue": "1024k",
+          "sourceId": "volc-rendered-model-list",
+          "assessment": "not-comparable",
+          "explanation": "官方原文token数量；k是否1000/1024本次未确认，保候选原值不机械换算。"
+        },
+        {
+          "field": "spec.maxInputTokens",
+          "currentValue": null,
+          "supportedValue": "1024k",
+          "sourceId": "volc-rendered-model-list",
+          "assessment": "not-comparable",
+          "explanation": "官方原文token数量；k是否1000/1024本次未确认，保候选原值不机械换算。"
+        },
+        {
+          "field": "spec.maxOutputTokens",
+          "currentValue": null,
+          "supportedValue": "256k",
+          "sourceId": "volc-rendered-model-list",
+          "assessment": "not-comparable",
+          "explanation": "官方原文token数量；k是否1000/1024本次未确认，保候选原值不机械换算。"
+        }
+      ],
+      "remainingFields": [
+        "spec.contextWindow",
+        "spec.supportsReasoning",
+        "spec.capabilities"
+      ],
+      "nextAction": "按精确型号和本接入面继续核对；候选证据不自动应用。",
+      "notes": [
+        "HTTP/搜索正文壳已单列；本条证明仅使用实际浏览器正文/官方仓库，不采用搜索摘要容量。"
+      ]
+    },
+    {
+      "recordKey": "compute/model-specs/volcengine.json#doubao-seedance-1.0-pro-fast",
+      "modelId": "doubao-seedance-1.0-pro-fast",
+      "config": "compute/model-specs/volcengine.json",
+      "sourceDoc": "docs/model-sources/providers/volcengine/models/doubao-seedance-1.0-pro-fast.md",
+      "outcome": "still-unresolved",
+      "sourceIds": [],
+      "fieldEvidence": [],
+      "remainingFields": [
+        "id",
+        "spec.capabilities"
+      ],
+      "nextAction": "按精确型号和本接入面继续核对；候选证据不自动应用。",
+      "notes": [
+        "渲染官网目录已读，但本条精确ID、旧别名或其他产品协议没有逐字支持；没有因文档可读就宣布本型号已核。",
+        "HTTP/搜索正文壳已单列；本条证明仅使用实际浏览器正文/官方仓库，不采用搜索摘要容量。"
+      ]
+    },
+    {
+      "recordKey": "compute/model-specs/volcengine.json#doubao-seedance-1.0-pro",
+      "modelId": "doubao-seedance-1.0-pro",
+      "config": "compute/model-specs/volcengine.json",
+      "sourceDoc": "docs/model-sources/providers/volcengine/models/doubao-seedance-1.0-pro.md",
+      "outcome": "official-identity-only",
+      "sourceIds": [
+        "volc-rendered-model-list"
+      ],
+      "fieldEvidence": [
+        {
+          "field": "match.exact",
+          "currentValue": [
+            "doubao-seedance-1-0-pro-250528",
+            "doubao-seedance-1.0-pro"
+          ],
+          "supportedValue": "doubao-seedance-1-0-pro-250528",
+          "sourceId": "volc-rendered-model-list",
+          "assessment": "not-comparable",
+          "explanation": "已有exact映射命中官网日期型号，目录标即将下线但没有本文停服时刻。"
+        }
+      ],
+      "remainingFields": [
+        "id",
+        "spec.capabilities"
+      ],
+      "nextAction": "按精确型号和本接入面继续核对；候选证据不自动应用。",
+      "notes": [
+        "HTTP/搜索正文壳已单列；本条证明仅使用实际浏览器正文/官方仓库，不采用搜索摘要容量。"
+      ]
+    },
+    {
+      "recordKey": "compute/model-specs/volcengine.json#doubao-seedance-1.5-pro",
+      "modelId": "doubao-seedance-1.5-pro",
+      "config": "compute/model-specs/volcengine.json",
+      "sourceDoc": "docs/model-sources/providers/volcengine/models/doubao-seedance-1.5-pro.md",
+      "outcome": "still-unresolved",
+      "sourceIds": [],
+      "fieldEvidence": [],
+      "remainingFields": [
+        "id",
+        "spec.capabilities"
+      ],
+      "nextAction": "按精确型号和本接入面继续核对；候选证据不自动应用。",
+      "notes": [
+        "渲染官网目录已读，但本条精确ID、旧别名或其他产品协议没有逐字支持；没有因文档可读就宣布本型号已核。",
+        "HTTP/搜索正文壳已单列；本条证明仅使用实际浏览器正文/官方仓库，不采用搜索摘要容量。"
+      ]
+    },
+    {
+      "recordKey": "compute/providers/volcengine.json#doubao-seedance-2-0-260128",
+      "modelId": "doubao-seedance-2-0-260128",
+      "config": "compute/providers/volcengine.json",
+      "sourceDoc": "docs/model-sources/providers/volcengine/models/doubao-seedance-2-0-260128.md",
+      "outcome": "official-conflict",
+      "sourceIds": [
+        "volc-rendered-model-list",
+        "volc-openviking"
+      ],
+      "fieldEvidence": [
+        {
+          "field": "modelName",
+          "currentValue": "doubao-seedance-2-0-260128",
+          "supportedValue": "doubao-seedance-2-0-260128",
+          "sourceId": "volc-rendered-model-list",
+          "assessment": "matches",
+          "explanation": "官网精确日期ID；不并到无日期2.0别名。"
+        },
+        {
+          "field": "extra.maxVideoDuration",
+          "currentValue": 15,
+          "supportedValue": 15,
+          "sourceId": "volc-rendered-model-list",
+          "assessment": "matches",
+          "explanation": "视频目录时长4~15秒。"
+        },
+        {
+          "field": "extra.supportedResolutions",
+          "currentValue": [
+            "720p",
+            "1080p"
+          ],
+          "supportedValue": [
+            "480p",
+            "720p",
+            "1080p",
+            "4k"
+          ],
+          "sourceId": "volc-rendered-model-list",
+          "assessment": "differs",
+          "explanation": "官网目录含4k且位深不同，客户端旧列表缺480p/4k；能否启用需原生协议验收。"
+        },
+        {
+          "field": "baseUrl",
+          "currentValue": null,
+          "supportedValue": "https://ark.cn-beijing.volces.com/api/v3",
+          "sourceId": "volc-openviking",
+          "assessment": "not-comparable",
+          "explanation": "官方仓库北京端点证据，只确认接入入口，不确认本型号可调用。"
+        }
+      ],
+      "remainingFields": [
+        "capabilities",
+        "extra.endpoint",
+        "extra.maxReferenceImages",
+        "extra.asyncMode"
+      ],
+      "nextAction": "按精确型号和本接入面继续核对；候选证据不自动应用。",
+      "notes": [
+        "HTTP/搜索正文壳已单列；本条证明仅使用实际浏览器正文/官方仓库，不采用搜索摘要容量。"
+      ]
+    },
+    {
+      "recordKey": "compute/model-specs/volcengine.json#doubao-seedance-2.0-fast",
+      "modelId": "doubao-seedance-2.0-fast",
+      "config": "compute/model-specs/volcengine.json",
+      "sourceDoc": "docs/model-sources/providers/volcengine/models/doubao-seedance-2.0-fast.md",
+      "outcome": "still-unresolved",
+      "sourceIds": [],
+      "fieldEvidence": [],
+      "remainingFields": [
+        "id",
+        "spec.capabilities"
+      ],
+      "nextAction": "按精确型号和本接入面继续核对；候选证据不自动应用。",
+      "notes": [
+        "渲染官网目录已读，但本条精确ID、旧别名或其他产品协议没有逐字支持；没有因文档可读就宣布本型号已核。",
+        "HTTP/搜索正文壳已单列；本条证明仅使用实际浏览器正文/官方仓库，不采用搜索摘要容量。"
+      ]
+    },
+    {
+      "recordKey": "compute/model-specs/volcengine.json#doubao-seedance-2.0-mini",
+      "modelId": "doubao-seedance-2.0-mini",
+      "config": "compute/model-specs/volcengine.json",
+      "sourceDoc": "docs/model-sources/providers/volcengine/models/doubao-seedance-2.0-mini.md",
+      "outcome": "still-unresolved",
+      "sourceIds": [],
+      "fieldEvidence": [],
+      "remainingFields": [
+        "id",
+        "spec.capabilities"
+      ],
+      "nextAction": "按精确型号和本接入面继续核对；候选证据不自动应用。",
+      "notes": [
+        "渲染官网目录已读，但本条精确ID、旧别名或其他产品协议没有逐字支持；没有因文档可读就宣布本型号已核。",
+        "HTTP/搜索正文壳已单列；本条证明仅使用实际浏览器正文/官方仓库，不采用搜索摘要容量。"
+      ]
+    },
+    {
+      "recordKey": "compute/model-specs/volcengine.json#doubao-seedance-2.0",
+      "modelId": "doubao-seedance-2.0",
+      "config": "compute/model-specs/volcengine.json",
+      "sourceDoc": "docs/model-sources/providers/volcengine/models/doubao-seedance-2.0.md",
+      "outcome": "still-unresolved",
+      "sourceIds": [],
+      "fieldEvidence": [],
+      "remainingFields": [
+        "id",
+        "spec.capabilities"
+      ],
+      "nextAction": "按精确型号和本接入面继续核对；候选证据不自动应用。",
+      "notes": [
+        "渲染官网目录已读，但本条精确ID、旧别名或其他产品协议没有逐字支持；没有因文档可读就宣布本型号已核。",
+        "HTTP/搜索正文壳已单列；本条证明仅使用实际浏览器正文/官方仓库，不采用搜索摘要容量。"
+      ]
+    },
+    {
+      "recordKey": "compute/providers/volcengine.json#doubao-seedream-4-0-250828",
+      "modelId": "doubao-seedream-4-0-250828",
+      "config": "compute/providers/volcengine.json",
+      "sourceDoc": "docs/model-sources/providers/volcengine/models/doubao-seedream-4-0-250828.md",
+      "outcome": "official-identity-only",
+      "sourceIds": [
+        "volc-rendered-model-list",
+        "volc-openviking"
+      ],
+      "fieldEvidence": [
+        {
+          "field": "modelName",
+          "currentValue": "doubao-seedream-4-0-250828",
+          "supportedValue": "doubao-seedream-4-0-250828",
+          "sourceId": "volc-rendered-model-list",
+          "assessment": "matches",
+          "explanation": "精确ID存在，当前目录标即将下线，不能称已停服。"
+        },
+        {
+          "field": "baseUrl",
+          "currentValue": null,
+          "supportedValue": "https://ark.cn-beijing.volces.com/api/v3",
+          "sourceId": "volc-openviking",
+          "assessment": "not-comparable",
+          "explanation": "官方仓库北京端点证据，只确认接入入口，不确认本型号可调用。"
+        }
+      ],
+      "remainingFields": [
+        "capabilities",
+        "extra.endpoint",
+        "extra.supportedSizes",
+        "extra.maxFusionImages"
+      ],
+      "nextAction": "按精确型号和本接入面继续核对；候选证据不自动应用。",
+      "notes": [
+        "HTTP/搜索正文壳已单列；本条证明仅使用实际浏览器正文/官方仓库，不采用搜索摘要容量。"
+      ]
+    },
+    {
+      "recordKey": "compute/coding-plans/volcengine-coding.json#glm-4.7",
+      "modelId": "glm-4.7",
+      "config": "compute/coding-plans/volcengine-coding.json",
+      "sourceDoc": "docs/model-sources/providers/volcengine/models/glm-4.7.md",
+      "outcome": "official-conflict",
+      "sourceIds": [
+        "volc-rendered-coding-retirements"
+      ],
+      "fieldEvidence": [
+        {
+          "field": "access.lifecycle",
+          "currentValue": null,
+          "supportedValue": {
+            "status": "retired",
+            "dateAsPrinted": "06.08",
+            "scope": "Coding Plan"
+          },
+          "sourceId": "volc-rendered-coding-retirements",
+          "assessment": "differs",
+          "explanation": "已下线表逐字列本ID及月日；不外推原厂/后付费API退休。"
+        }
+      ],
+      "remainingFields": [
+        "modelName",
+        "capabilities"
+      ],
+      "nextAction": "核实年份/确切时刻并按Coding Plan限定停用或迁移；保留API/原厂规格独立审计。",
+      "notes": [
+        "HTTP/搜索正文壳已单列；本条证明仅使用实际浏览器正文/官方仓库，不采用搜索摘要容量。"
+      ]
+    },
+    {
+      "recordKey": "compute/coding-plans/volcengine-coding.json#glm-5.1",
+      "modelId": "glm-5.1",
+      "config": "compute/coding-plans/volcengine-coding.json",
+      "sourceDoc": "docs/model-sources/providers/volcengine/models/glm-5.1.md",
+      "outcome": "official-conflict",
+      "sourceIds": [
+        "volc-rendered-coding-retirements"
+      ],
+      "fieldEvidence": [
+        {
+          "field": "access.lifecycle",
+          "currentValue": null,
+          "supportedValue": {
+            "status": "retired",
+            "dateAsPrinted": "06.30",
+            "scope": "Coding Plan"
+          },
+          "sourceId": "volc-rendered-coding-retirements",
+          "assessment": "differs",
+          "explanation": "已下线表逐字列本ID及月日；不外推原厂/后付费API退休。"
+        }
+      ],
+      "remainingFields": [
+        "modelName",
+        "capabilities"
+      ],
+      "nextAction": "核实年份/确切时刻并按Coding Plan限定停用或迁移；保留API/原厂规格独立审计。",
+      "notes": [
+        "HTTP/搜索正文壳已单列；本条证明仅使用实际浏览器正文/官方仓库，不采用搜索摘要容量。"
+      ]
+    },
+    {
+      "recordKey": "compute/coding-plans/volcengine-coding.json#kimi-k2.5",
+      "modelId": "kimi-k2.5",
+      "config": "compute/coding-plans/volcengine-coding.json",
+      "sourceDoc": "docs/model-sources/providers/volcengine/models/kimi-k2.5.md",
+      "outcome": "official-conflict",
+      "sourceIds": [
+        "volc-rendered-coding-retirements"
+      ],
+      "fieldEvidence": [
+        {
+          "field": "access.lifecycle",
+          "currentValue": null,
+          "supportedValue": {
+            "status": "retired",
+            "dateAsPrinted": "06.08",
+            "scope": "Coding Plan"
+          },
+          "sourceId": "volc-rendered-coding-retirements",
+          "assessment": "differs",
+          "explanation": "已下线表逐字列本ID及月日；不外推原厂/后付费API退休。"
+        }
+      ],
+      "remainingFields": [
+        "modelName",
+        "capabilities"
+      ],
+      "nextAction": "核实年份/确切时刻并按Coding Plan限定停用或迁移；保留API/原厂规格独立审计。",
+      "notes": [
+        "HTTP/搜索正文壳已单列；本条证明仅使用实际浏览器正文/官方仓库，不采用搜索摘要容量。"
+      ]
+    },
+    {
+      "recordKey": "compute/coding-plans/volcengine-coding.json#kimi-k2.6",
+      "modelId": "kimi-k2.6",
+      "config": "compute/coding-plans/volcengine-coding.json",
+      "sourceDoc": "docs/model-sources/providers/volcengine/models/kimi-k2.6.md",
+      "outcome": "official-conflict",
+      "sourceIds": [
+        "volc-rendered-coding-retirements"
+      ],
+      "fieldEvidence": [
+        {
+          "field": "access.lifecycle",
+          "currentValue": null,
+          "supportedValue": {
+            "status": "retired",
+            "dateAsPrinted": "08.18",
+            "scope": "Coding Plan"
+          },
+          "sourceId": "volc-rendered-coding-retirements",
+          "assessment": "differs",
+          "explanation": "已下线表逐字列本ID及月日；不外推原厂/后付费API退休。"
+        }
+      ],
+      "remainingFields": [
+        "modelName",
+        "capabilities"
+      ],
+      "nextAction": "核实年份/确切时刻并按Coding Plan限定停用或迁移；保留API/原厂规格独立审计。",
+      "notes": [
+        "HTTP/搜索正文壳已单列；本条证明仅使用实际浏览器正文/官方仓库，不采用搜索摘要容量。"
+      ]
+    },
+    {
+      "recordKey": "compute/coding-plans/volcengine-coding.json#minimax-m2.5",
+      "modelId": "minimax-m2.5",
+      "config": "compute/coding-plans/volcengine-coding.json",
+      "sourceDoc": "docs/model-sources/providers/volcengine/models/minimax-m2.5.md",
+      "outcome": "official-conflict",
+      "sourceIds": [
+        "volc-rendered-coding-retirements"
+      ],
+      "fieldEvidence": [
+        {
+          "field": "access.lifecycle",
+          "currentValue": null,
+          "supportedValue": {
+            "status": "retired",
+            "dateAsPrinted": "06.08",
+            "scope": "Coding Plan"
+          },
+          "sourceId": "volc-rendered-coding-retirements",
+          "assessment": "differs",
+          "explanation": "已下线表逐字列本ID及月日；不外推原厂/后付费API退休。"
+        }
+      ],
+      "remainingFields": [
+        "modelName",
+        "capabilities"
+      ],
+      "nextAction": "核实年份/确切时刻并按Coding Plan限定停用或迁移；保留API/原厂规格独立审计。",
+      "notes": [
+        "HTTP/搜索正文壳已单列；本条证明仅使用实际浏览器正文/官方仓库，不采用搜索摘要容量。"
+      ]
+    },
+    {
+      "recordKey": "compute/coding-plans/volcengine-coding.json#minimax-m2.7",
+      "modelId": "minimax-m2.7",
+      "config": "compute/coding-plans/volcengine-coding.json",
+      "sourceDoc": "docs/model-sources/providers/volcengine/models/minimax-m2.7.md",
+      "outcome": "official-conflict",
+      "sourceIds": [
+        "volc-rendered-coding-retirements"
+      ],
+      "fieldEvidence": [
+        {
+          "field": "access.lifecycle",
+          "currentValue": null,
+          "supportedValue": {
+            "status": "retired",
+            "dateAsPrinted": "08.18",
+            "scope": "Coding Plan"
+          },
+          "sourceId": "volc-rendered-coding-retirements",
+          "assessment": "differs",
+          "explanation": "已下线表逐字列本ID及月日；不外推原厂/后付费API退休。"
+        }
+      ],
+      "remainingFields": [
+        "modelName",
+        "capabilities"
+      ],
+      "nextAction": "核实年份/确切时刻并按Coding Plan限定停用或迁移；保留API/原厂规格独立审计。",
+      "notes": [
+        "HTTP/搜索正文壳已单列；本条证明仅使用实际浏览器正文/官方仓库，不采用搜索摘要容量。"
+      ]
+    },
+    {
+      "recordKey": "compute/providers/volcengine.json#volc-mega-tts-clone",
+      "modelId": "volc-mega-tts-clone",
+      "config": "compute/providers/volcengine.json",
+      "sourceDoc": "docs/model-sources/providers/volcengine/models/volc-mega-tts-clone.md",
+      "outcome": "official-access-only",
+      "sourceIds": [
+        "volc-openviking"
+      ],
+      "fieldEvidence": [
+        {
+          "field": "baseUrl",
+          "currentValue": null,
+          "supportedValue": "https://ark.cn-beijing.volces.com/api/v3",
+          "sourceId": "volc-openviking",
+          "assessment": "not-comparable",
+          "explanation": "官方仓库北京端点证据，只确认接入入口，不确认本型号可调用。"
+        }
+      ],
+      "remainingFields": [
+        "modelName",
+        "capabilities",
+        "extra.maxCloneSamples",
+        "extra.minCloneDuration"
+      ],
+      "nextAction": "按精确型号和本接入面继续核对；候选证据不自动应用。",
+      "notes": [
+        "HTTP/搜索正文壳已单列；本条证明仅使用实际浏览器正文/官方仓库，不采用搜索摘要容量。",
+        "official-access-only只说明找到官方接入/产品入口，不计本条精确模型身份或容量已核。"
+      ]
+    },
+    {
+      "recordKey": "compute/model-specs/volcengine.json#volc-mega-tts-clone",
+      "modelId": "volc-mega-tts-clone",
+      "config": "compute/model-specs/volcengine.json",
+      "sourceDoc": "docs/model-sources/providers/volcengine/models/volc-mega-tts-clone.md",
+      "outcome": "still-unresolved",
+      "sourceIds": [],
+      "fieldEvidence": [],
+      "remainingFields": [
+        "id",
+        "spec.capabilities"
+      ],
+      "nextAction": "按精确型号和本接入面继续核对；候选证据不自动应用。",
+      "notes": [
+        "渲染官网目录已读，但本条精确ID、旧别名或其他产品协议没有逐字支持；没有因文档可读就宣布本型号已核。",
+        "HTTP/搜索正文壳已单列；本条证明仅使用实际浏览器正文/官方仓库，不采用搜索摘要容量。"
+      ]
+    },
+    {
+      "recordKey": "compute/providers/volcengine.json#volc-realtime-voice",
+      "modelId": "volc-realtime-voice",
+      "config": "compute/providers/volcengine.json",
+      "sourceDoc": "docs/model-sources/providers/volcengine/models/volc-realtime-voice.md",
+      "outcome": "official-access-only",
+      "sourceIds": [
+        "volc-openviking"
+      ],
+      "fieldEvidence": [
+        {
+          "field": "baseUrl",
+          "currentValue": null,
+          "supportedValue": "https://ark.cn-beijing.volces.com/api/v3",
+          "sourceId": "volc-openviking",
+          "assessment": "not-comparable",
+          "explanation": "官方仓库北京端点证据，只确认接入入口，不确认本型号可调用。"
+        }
+      ],
+      "remainingFields": [
+        "modelName",
+        "capabilities",
+        "extra.supportedModes",
+        "extra.latencyMs"
+      ],
+      "nextAction": "按精确型号和本接入面继续核对；候选证据不自动应用。",
+      "notes": [
+        "HTTP/搜索正文壳已单列；本条证明仅使用实际浏览器正文/官方仓库，不采用搜索摘要容量。",
+        "official-access-only只说明找到官方接入/产品入口，不计本条精确模型身份或容量已核。"
+      ]
+    },
+    {
+      "recordKey": "compute/model-specs/volcengine.json#volc-realtime-voice",
+      "modelId": "volc-realtime-voice",
+      "config": "compute/model-specs/volcengine.json",
+      "sourceDoc": "docs/model-sources/providers/volcengine/models/volc-realtime-voice.md",
+      "outcome": "still-unresolved",
+      "sourceIds": [],
+      "fieldEvidence": [],
+      "remainingFields": [
+        "id",
+        "spec.capabilities"
+      ],
+      "nextAction": "按精确型号和本接入面继续核对；候选证据不自动应用。",
+      "notes": [
+        "渲染官网目录已读，但本条精确ID、旧别名或其他产品协议没有逐字支持；没有因文档可读就宣布本型号已核。",
+        "HTTP/搜索正文壳已单列；本条证明仅使用实际浏览器正文/官方仓库，不采用搜索摘要容量。"
+      ]
+    },
+    {
+      "recordKey": "compute/providers/volcengine.json#volc-simultaneous",
+      "modelId": "volc-simultaneous",
+      "config": "compute/providers/volcengine.json",
+      "sourceDoc": "docs/model-sources/providers/volcengine/models/volc-simultaneous.md",
+      "outcome": "official-access-only",
+      "sourceIds": [
+        "volc-openviking"
+      ],
+      "fieldEvidence": [
+        {
+          "field": "baseUrl",
+          "currentValue": null,
+          "supportedValue": "https://ark.cn-beijing.volces.com/api/v3",
+          "sourceId": "volc-openviking",
+          "assessment": "not-comparable",
+          "explanation": "官方仓库北京端点证据，只确认接入入口，不确认本型号可调用。"
+        }
+      ],
+      "remainingFields": [
+        "modelName",
+        "capabilities",
+        "extra.streamingSupported"
+      ],
+      "nextAction": "按精确型号和本接入面继续核对；候选证据不自动应用。",
+      "notes": [
+        "HTTP/搜索正文壳已单列；本条证明仅使用实际浏览器正文/官方仓库，不采用搜索摘要容量。",
+        "official-access-only只说明找到官方接入/产品入口，不计本条精确模型身份或容量已核。"
+      ]
+    },
+    {
+      "recordKey": "compute/model-specs/volcengine.json#volc-simultaneous",
+      "modelId": "volc-simultaneous",
+      "config": "compute/model-specs/volcengine.json",
+      "sourceDoc": "docs/model-sources/providers/volcengine/models/volc-simultaneous.md",
+      "outcome": "still-unresolved",
+      "sourceIds": [],
+      "fieldEvidence": [],
+      "remainingFields": [
+        "id",
+        "spec.capabilities"
+      ],
+      "nextAction": "按精确型号和本接入面继续核对；候选证据不自动应用。",
+      "notes": [
+        "渲染官网目录已读，但本条精确ID、旧别名或其他产品协议没有逐字支持；没有因文档可读就宣布本型号已核。",
+        "HTTP/搜索正文壳已单列；本条证明仅使用实际浏览器正文/官方仓库，不采用搜索摘要容量。"
+      ]
+    },
+    {
+      "recordKey": "compute/providers/volcengine.json#volc-translation",
+      "modelId": "volc-translation",
+      "config": "compute/providers/volcengine.json",
+      "sourceDoc": "docs/model-sources/providers/volcengine/models/volc-translation.md",
+      "outcome": "official-access-only",
+      "sourceIds": [
+        "volc-openviking"
+      ],
+      "fieldEvidence": [
+        {
+          "field": "baseUrl",
+          "currentValue": null,
+          "supportedValue": "https://ark.cn-beijing.volces.com/api/v3",
+          "sourceId": "volc-openviking",
+          "assessment": "not-comparable",
+          "explanation": "官方仓库北京端点证据，只确认接入入口，不确认本型号可调用。"
+        }
+      ],
+      "remainingFields": [
+        "modelName",
+        "capabilities"
+      ],
+      "nextAction": "按精确型号和本接入面继续核对；候选证据不自动应用。",
+      "notes": [
+        "HTTP/搜索正文壳已单列；本条证明仅使用实际浏览器正文/官方仓库，不采用搜索摘要容量。",
+        "official-access-only只说明找到官方接入/产品入口，不计本条精确模型身份或容量已核。"
+      ]
+    },
+    {
+      "recordKey": "compute/model-specs/volcengine.json#volc-translation",
+      "modelId": "volc-translation",
+      "config": "compute/model-specs/volcengine.json",
+      "sourceDoc": "docs/model-sources/providers/volcengine/models/volc-translation.md",
+      "outcome": "still-unresolved",
+      "sourceIds": [],
+      "fieldEvidence": [],
+      "remainingFields": [
+        "id",
+        "spec.capabilities"
+      ],
+      "nextAction": "按精确型号和本接入面继续核对；候选证据不自动应用。",
+      "notes": [
+        "渲染官网目录已读，但本条精确ID、旧别名或其他产品协议没有逐字支持；没有因文档可读就宣布本型号已核。",
+        "HTTP/搜索正文壳已单列；本条证明仅使用实际浏览器正文/官方仓库，不采用搜索摘要容量。"
+      ]
+    }
+  ],
+  "coverage": {
+    "records": 66,
+    "outcomes": {
+      "official-identity-only": 7,
+      "official-access-only": 19,
+      "still-unresolved": 26,
+      "official-conflict": 14
+    },
+    "unchangedConfig": true,
+    "accountCallsPerformed": false
+  }
+}

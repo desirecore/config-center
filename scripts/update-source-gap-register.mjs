@@ -73,6 +73,9 @@ export function renderRegister(root = ROOT) {
   index += `\n总计 ${sum} 条：前四类需要补证；partial 类逐条列出已有数据中尚未登记证明的关键字段，不能全部当作数据已核；historical 另列。\n\n`
   index += '| 供应商清单 | 未登记入口 | 入口不可读 | 无字段证明 | 仅 ID | 参数部分已核 | 历史 |\n| --- | --- | --- | --- | --- | --- | --- |\n'
   for (const { supplier, counts } of supplierStats) index += `| [${supplier}](providers/${supplier}.md) | ${Object.keys(titles).map(key => counts[key]).join(' | ')} |\n`
+  const recheckRoot = join(root, 'docs/source-rechecks');
+  const latestRecheck = existsSync(recheckRoot) ? readdirSync(recheckRoot).filter(date => /^\d{4}-\d{2}-\d{2}$/.test(date) && existsSync(join(recheckRoot, date, 'README.md'))).sort().at(-1) : undefined;
+  if (latestRecheck) index += `\n最新实际重检候选与统一复核说明见 [${latestRecheck} 来源重检](../source-rechecks/${latestRecheck}/README.md)。本目录计数仍依据原已登记字段证明，候选未自动提高原核验状态。\n`;
   index += '\n另外单列：[型号/身份专属证据缺口](identities.md)、[非模型 API 证据不足](api-contracts.md)、[本仓策略历史依据缺失](policy-origins.md)。供应商记录详见上述细分文件，不在总目录堆全部模型。\n\n更新来源登记后运行 `npm run sources:gaps` 重新生成本目录及供应商清单；`npm run sources:gaps:check` 检查是否过期。生成器不会增加已核字段、改来源状态或写入主数据。\n'
   pages.set('docs/source-gaps/README.md', index)
   return { pages, counts: total }

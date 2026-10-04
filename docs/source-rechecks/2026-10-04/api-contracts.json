@@ -1,0 +1,823 @@
+{
+  "checkedAt": "2026-10-04",
+  "sources": [
+    {
+      "id": "brave-reference",
+      "url": "https://api-dashboard.search.brave.com/api-reference/web/search/get",
+      "finalUrl": "https://api-dashboard.search.brave.com/api-reference/web/search/get",
+      "publisher": "Brave",
+      "kind": "official-docs",
+      "retrieval": "readable",
+      "summary": "GET与鉴权、查询参数和web.results结构已读取。",
+      "scope": "Brave Web Search GET；不证明账号额度、套餐或本仓变量插值。"
+    },
+    {
+      "id": "brave-main",
+      "url": "https://brave.com/search/api/",
+      "finalUrl": "https://brave.com/search/api/",
+      "publisher": "Brave",
+      "kind": "official-docs",
+      "retrieval": "readable",
+      "summary": "官网GET示例含Accept和gzip请求头。",
+      "scope": "官方请求示例。"
+    },
+    {
+      "id": "serper-main",
+      "url": "https://serper.dev/",
+      "finalUrl": "https://serper.dev/",
+      "publisher": "Serper",
+      "kind": "official-docs",
+      "retrieval": "readable",
+      "summary": "官网Search示例明确organic及title/link/snippet。页面没有证明请求endpoint/header。",
+      "scope": "公开搜索响应示例，不能证明所有选项或收费调用。"
+    },
+    {
+      "id": "serper-sdk",
+      "url": "https://github.com/langchain-ai/langchain-community/blob/main/libs/community/langchain_community/utilities/google_serper.py",
+      "finalUrl": "https://github.com/langchain-ai/langchain-community/blob/main/libs/community/langchain_community/utilities/google_serper.py",
+      "publisher": "LangChain",
+      "kind": "trusted-secondary",
+      "retrieval": "readable",
+      "summary": "维护者SDK以POST调用google.serper.dev，使用X-API-KEY，并用query params发送q/num。",
+      "scope": "可信实现旁证；非Serper发布者合同；不证明JSON bodyTemplate或当前账号可用性。",
+      "contentSha256": "fc0c2a956a98da95f1117460da78a61f2ccceba7acb8d8febf4f87d33882f49f"
+    },
+    {
+      "id": "serper-reference",
+      "url": "https://reference.langchain.com/python/langchain-community/utilities/google_serper/GoogleSerperAPIWrapper",
+      "finalUrl": "https://reference.langchain.com/python/langchain-community/utilities/google_serper/GoogleSerperAPIWrapper",
+      "publisher": "LangChain",
+      "kind": "trusted-secondary",
+      "retrieval": "blocked",
+      "summary": "搜索发现入口，但本轮正文读取Internal Error。",
+      "scope": "不作为字段证明。"
+    },
+    {
+      "id": "doubao-original",
+      "url": "https://www.volcengine.com/docs/85508/1650263",
+      "finalUrl": "https://www.volcengine.com/docs/85508/1650263",
+      "publisher": "火山引擎",
+      "kind": "official-docs",
+      "retrieval": "blocked",
+      "summary": "原入口重定向后工具无法读取正文。",
+      "scope": "不能拿另一签名或地域的Fusion API替代feedcoopapi合同。"
+    },
+    {
+      "id": "doubao-current",
+      "url": "https://docs.volcengine.com/docs/NetworkedQAAgent/FusionInformationSearchAPI?lang=zh",
+      "finalUrl": "https://docs.volcengine.com/docs/NetworkedQAAgent/FusionInformationSearchAPI?lang=zh",
+      "publisher": "火山引擎",
+      "kind": "official-docs",
+      "retrieval": "blocked",
+      "summary": "本轮正文读取Internal Error；也试过.md入口，未取得可读正文。",
+      "scope": "endpoint/Bearer/Result映射仍待证明。"
+    },
+    {
+      "id": "doubao-global-rendered",
+      "url": "https://docs.volcengine.com/docs/Networkedsearch/doubao-search-global-edition?lang=zh",
+      "finalUrl": "https://docs.volcengine.com/docs/Networkedsearch/doubao-search-global-edition?lang=zh",
+      "publisher": "火山引擎",
+      "kind": "official-docs",
+      "retrieval": "readable",
+      "summary": "SubAgent实际浏览器渲染读取Global独立页：POST/global_search、Bearer、Query/SearchType/DocCount/MaxSnippetLength及Result.Documents。",
+      "scope": "仅Global按量后付费；不证明Custom、订阅或TOP网关。",
+      "retrievalMethod": "rendered-browser-dom"
+    },
+    {
+      "id": "tavily-reference",
+      "url": "https://docs.tavily.com/documentation/api-reference/endpoint/search",
+      "finalUrl": "https://docs.tavily.com/documentation/api-reference/endpoint/search",
+      "publisher": "Tavily",
+      "kind": "official-docs",
+      "retrieval": "readable",
+      "summary": "官方cURL与响应示例已读取，POST/Bearer/query/max_results/basic/results明确。",
+      "scope": "原生Tavily API，不证明客户端变量转换或账号资格。"
+    },
+    {
+      "id": "openai-vision",
+      "url": "https://developers.openai.com/api/docs/guides/images-vision",
+      "finalUrl": "https://developers.openai.com/api/docs/guides/images-vision",
+      "publisher": "OpenAI",
+      "kind": "official-docs",
+      "retrieval": "readable",
+      "summary": "原platform域名跳转官方developers域名；Chat Completions示例含image_url和choices[0].message.content。",
+      "scope": "原生Chat Completions视觉合同，不能覆盖Responses-only型号和任意兼容网关。"
+    },
+    {
+      "id": "anthropic-vision",
+      "url": "https://platform.claude.com/docs/en/build-with-claude/vision",
+      "finalUrl": "https://platform.claude.com/docs/en/build-with-claude/vision",
+      "publisher": "Anthropic",
+      "kind": "official-docs",
+      "retrieval": "readable",
+      "summary": "旧docs域名跳转官方platform域名；实际读取image/source/base64/media_type/data示例。",
+      "scope": "仅原生视觉请求形状；1024不是厂商最大或默认输出限制。"
+    }
+  ],
+  "findings": [
+    {
+      "recordKind": "api-contract",
+      "recordKey": "api-providers/web-search/brave.json#api-contract",
+      "supplier": "brave",
+      "modelId": "brave",
+      "config": "api-providers/web-search/brave.json",
+      "sourceDoc": "docs/data-sources/api-providers/brave.md",
+      "originalStatus": "pending",
+      "originalGap": "api-pending",
+      "current": {
+        "endpoint": "https://api.search.brave.com/res/v1/web/search",
+        "method": "GET",
+        "auth": {
+          "type": "header",
+          "headerName": "X-Subscription-Token",
+          "apiKeyRef": "brave"
+        },
+        "request": {
+          "headers": {
+            "Accept": "application/json",
+            "Accept-Encoding": "gzip"
+          },
+          "queryParams": {
+            "q": "${query}",
+            "count": "${maxResults}"
+          }
+        },
+        "response": {
+          "resultsPath": "web.results",
+          "item": {
+            "titlePath": "title",
+            "urlPath": "url",
+            "snippetPath": "description",
+            "pageAgePath": "page_age"
+          }
+        }
+      },
+      "knownFieldEvidence": [],
+      "outcome": "official-fields-found",
+      "sourceIds": [
+        "brave-reference",
+        "brave-main"
+      ],
+      "fieldEvidence": [
+        {
+          "field": "endpoint",
+          "currentValue": "https://api.search.brave.com/res/v1/web/search",
+          "supportedValue": "https://api.search.brave.com/res/v1/web/search",
+          "sourceId": "brave-reference",
+          "assessment": "matches",
+          "explanation": "已读官方原生示例，限此字段和上述接入范围。"
+        },
+        {
+          "field": "method",
+          "currentValue": "GET",
+          "supportedValue": "GET",
+          "sourceId": "brave-reference",
+          "assessment": "matches",
+          "explanation": "已读官方原生示例，限此字段和上述接入范围。"
+        },
+        {
+          "field": "auth.type",
+          "currentValue": "header",
+          "supportedValue": "header",
+          "sourceId": "brave-reference",
+          "assessment": "matches",
+          "explanation": "已读官方原生示例，限此字段和上述接入范围。"
+        },
+        {
+          "field": "auth.headerName",
+          "currentValue": "X-Subscription-Token",
+          "supportedValue": "X-Subscription-Token",
+          "sourceId": "brave-reference",
+          "assessment": "matches",
+          "explanation": "已读官方原生示例，限此字段和上述接入范围。"
+        },
+        {
+          "field": "request.headers.Accept",
+          "currentValue": "application/json",
+          "supportedValue": "application/json",
+          "sourceId": "brave-main",
+          "assessment": "matches",
+          "explanation": "已读官方原生示例，限此字段和上述接入范围。"
+        },
+        {
+          "field": "request.headers.Accept-Encoding",
+          "currentValue": "gzip",
+          "supportedValue": "gzip",
+          "sourceId": "brave-main",
+          "assessment": "matches",
+          "explanation": "已读官方原生示例，限此字段和上述接入范围。"
+        },
+        {
+          "field": "response.resultsPath",
+          "currentValue": "web.results",
+          "supportedValue": "web.results",
+          "sourceId": "brave-reference",
+          "assessment": "matches",
+          "explanation": "已读官方原生示例，限此字段和上述接入范围。"
+        },
+        {
+          "field": "response.item.titlePath",
+          "currentValue": "title",
+          "supportedValue": "title",
+          "sourceId": "brave-reference",
+          "assessment": "matches",
+          "explanation": "已读官方原生示例，限此字段和上述接入范围。"
+        },
+        {
+          "field": "response.item.urlPath",
+          "currentValue": "url",
+          "supportedValue": "url",
+          "sourceId": "brave-reference",
+          "assessment": "matches",
+          "explanation": "已读官方原生示例，限此字段和上述接入范围。"
+        },
+        {
+          "field": "response.item.snippetPath",
+          "currentValue": "description",
+          "supportedValue": "description",
+          "sourceId": "brave-reference",
+          "assessment": "matches",
+          "explanation": "已读官方原生示例，限此字段和上述接入范围。"
+        },
+        {
+          "field": "response.item.pageAgePath",
+          "currentValue": "page_age",
+          "supportedValue": "page_age",
+          "sourceId": "brave-reference",
+          "assessment": "matches",
+          "explanation": "已读官方原生示例，限此字段和上述接入范围。"
+        }
+      ],
+      "remainingFields": [
+        "request.queryParams.q:客户端变量插值",
+        "request.queryParams.count:整数转换和最大20",
+        "账号资格及配额"
+      ],
+      "nextAction": "复核字段证据的来源身份和适用接口；未证明项继续保留，不把示例或SDK代码当账号调用验收。",
+      "notes": []
+    },
+    {
+      "recordKind": "api-contract",
+      "recordKey": "api-providers/web-search/serper.json#api-contract",
+      "supplier": "serper",
+      "modelId": "serper",
+      "config": "api-providers/web-search/serper.json",
+      "sourceDoc": "docs/data-sources/api-providers/serper.md",
+      "originalStatus": "pending",
+      "originalGap": "api-pending",
+      "current": {
+        "endpoint": "https://google.serper.dev/search",
+        "method": "POST",
+        "auth": {
+          "type": "header",
+          "headerName": "X-API-KEY",
+          "apiKeyRef": "serper"
+        },
+        "request": {
+          "bodyTemplate": {
+            "q": "${query}",
+            "num": "${maxResults}"
+          }
+        },
+        "response": {
+          "resultsPath": "organic",
+          "item": {
+            "titlePath": "title",
+            "urlPath": "link",
+            "snippetPath": "snippet"
+          }
+        }
+      },
+      "knownFieldEvidence": [],
+      "outcome": "official-fields-found",
+      "sourceIds": [
+        "serper-main",
+        "serper-sdk",
+        "serper-reference"
+      ],
+      "fieldEvidence": [
+        {
+          "field": "response.resultsPath",
+          "currentValue": "organic",
+          "supportedValue": "organic",
+          "sourceId": "serper-main",
+          "assessment": "matches",
+          "explanation": "已读官方原生示例，限此字段和上述接入范围。"
+        },
+        {
+          "field": "response.item.titlePath",
+          "currentValue": "title",
+          "supportedValue": "title",
+          "sourceId": "serper-main",
+          "assessment": "matches",
+          "explanation": "已读官方原生示例，限此字段和上述接入范围。"
+        },
+        {
+          "field": "response.item.urlPath",
+          "currentValue": "link",
+          "supportedValue": "link",
+          "sourceId": "serper-main",
+          "assessment": "matches",
+          "explanation": "已读官方原生示例，限此字段和上述接入范围。"
+        },
+        {
+          "field": "response.item.snippetPath",
+          "currentValue": "snippet",
+          "supportedValue": "snippet",
+          "sourceId": "serper-main",
+          "assessment": "matches",
+          "explanation": "已读官方原生示例，限此字段和上述接入范围。"
+        },
+        {
+          "field": "endpoint",
+          "currentValue": "https://google.serper.dev/search",
+          "supportedValue": "https://google.serper.dev/search",
+          "sourceId": "serper-sdk",
+          "assessment": "matches",
+          "explanation": "仅可信SDK旁证，不是Serper官方合同；不可由此升级官方状态。"
+        },
+        {
+          "field": "method",
+          "currentValue": "POST",
+          "supportedValue": "POST",
+          "sourceId": "serper-sdk",
+          "assessment": "matches",
+          "explanation": "仅可信SDK旁证，不是Serper官方合同；不可由此升级官方状态。"
+        },
+        {
+          "field": "auth.headerName",
+          "currentValue": "X-API-KEY",
+          "supportedValue": "X-API-KEY",
+          "sourceId": "serper-sdk",
+          "assessment": "matches",
+          "explanation": "仅可信SDK旁证，不是Serper官方合同；不可由此升级官方状态。"
+        }
+      ],
+      "remainingFields": [
+        "request.bodyTemplate:官方JSON正文合同未取得，SDK示例使用params",
+        "request.bodyTemplate.num:类型/上限",
+        "账号及额度"
+      ],
+      "nextAction": "复核字段证据的来源身份和适用接口；未证明项继续保留，不把示例或SDK代码当账号调用验收。",
+      "notes": [
+        "官网仅证明响应形状，SDK可旁证endpoint/POST/header；SDK发query params，不能证明当前JSON正文。"
+      ]
+    },
+    {
+      "recordKind": "api-contract",
+      "recordKey": "api-providers/web-search/tavily.json#api-contract",
+      "supplier": "tavily",
+      "modelId": "tavily",
+      "config": "api-providers/web-search/tavily.json",
+      "sourceDoc": "docs/data-sources/api-providers/tavily.md",
+      "originalStatus": "partial",
+      "originalGap": "api-partial",
+      "current": {
+        "endpoint": "https://api.tavily.com/search",
+        "method": "POST",
+        "auth": {
+          "type": "bearer",
+          "apiKeyRef": "tavily"
+        },
+        "request": {
+          "bodyTemplate": {
+            "query": "${query}",
+            "max_results": "${maxResults}",
+            "search_depth": "basic"
+          }
+        },
+        "response": {
+          "resultsPath": "results",
+          "item": {
+            "titlePath": "title",
+            "urlPath": "url",
+            "snippetPath": "content"
+          }
+        }
+      },
+      "knownFieldEvidence": [
+        {
+          "field": "endpoint"
+        },
+        {
+          "field": "method"
+        },
+        {
+          "field": "auth.type"
+        },
+        {
+          "field": "request.bodyTemplate.search_depth"
+        },
+        {
+          "field": "response.resultsPath"
+        },
+        {
+          "field": "response.item.titlePath"
+        },
+        {
+          "field": "response.item.urlPath"
+        },
+        {
+          "field": "response.item.snippetPath"
+        }
+      ],
+      "outcome": "official-fields-found",
+      "sourceIds": [
+        "tavily-reference"
+      ],
+      "fieldEvidence": [
+        {
+          "field": "endpoint",
+          "currentValue": "https://api.tavily.com/search",
+          "supportedValue": "https://api.tavily.com/search",
+          "sourceId": "tavily-reference",
+          "assessment": "matches",
+          "explanation": "已读官方原生示例，限此字段和上述接入范围。"
+        },
+        {
+          "field": "method",
+          "currentValue": "POST",
+          "supportedValue": "POST",
+          "sourceId": "tavily-reference",
+          "assessment": "matches",
+          "explanation": "已读官方原生示例，限此字段和上述接入范围。"
+        },
+        {
+          "field": "auth.type",
+          "currentValue": "bearer",
+          "supportedValue": "bearer",
+          "sourceId": "tavily-reference",
+          "assessment": "matches",
+          "explanation": "已读官方原生示例，限此字段和上述接入范围。"
+        },
+        {
+          "field": "request.bodyTemplate.search_depth",
+          "currentValue": "basic",
+          "supportedValue": "basic",
+          "sourceId": "tavily-reference",
+          "assessment": "matches",
+          "explanation": "已读官方原生示例，限此字段和上述接入范围。"
+        },
+        {
+          "field": "response.resultsPath",
+          "currentValue": "results",
+          "supportedValue": "results",
+          "sourceId": "tavily-reference",
+          "assessment": "matches",
+          "explanation": "已读官方原生示例，限此字段和上述接入范围。"
+        },
+        {
+          "field": "response.item.titlePath",
+          "currentValue": "title",
+          "supportedValue": "title",
+          "sourceId": "tavily-reference",
+          "assessment": "matches",
+          "explanation": "已读官方原生示例，限此字段和上述接入范围。"
+        },
+        {
+          "field": "response.item.urlPath",
+          "currentValue": "url",
+          "supportedValue": "url",
+          "sourceId": "tavily-reference",
+          "assessment": "matches",
+          "explanation": "已读官方原生示例，限此字段和上述接入范围。"
+        },
+        {
+          "field": "response.item.snippetPath",
+          "currentValue": "content",
+          "supportedValue": "content",
+          "sourceId": "tavily-reference",
+          "assessment": "matches",
+          "explanation": "已读官方原生示例，限此字段和上述接入范围。"
+        }
+      ],
+      "remainingFields": [
+        "request.bodyTemplate.query:变量插值",
+        "request.bodyTemplate.max_results:整数转换",
+        "账号及额度"
+      ],
+      "nextAction": "复核字段证据的来源身份和适用接口；未证明项继续保留，不把示例或SDK代码当账号调用验收。",
+      "notes": []
+    },
+    {
+      "recordKind": "api-contract",
+      "recordKey": "api-providers/web-search/doubao-search-global.json#api-contract",
+      "supplier": "doubao-search-global",
+      "modelId": "doubao-search-global",
+      "config": "api-providers/web-search/doubao-search-global.json",
+      "sourceDoc": "docs/data-sources/api-providers/doubao-search-global.md",
+      "originalStatus": "pending",
+      "originalGap": "api-pending",
+      "current": {
+        "endpoint": "https://open.feedcoopapi.com/search_api/global_search",
+        "method": "POST",
+        "auth": {
+          "type": "bearer",
+          "apiKeyRef": "doubao-search-global"
+        },
+        "request": {
+          "bodyTemplate": {
+            "Query": "${query}",
+            "SearchType": "web",
+            "DocCount": "${maxResults}",
+            "MaxSnippetLength": 500
+          }
+        },
+        "response": {
+          "resultsPath": "Result.Documents",
+          "item": {
+            "titlePath": "Title",
+            "urlPath": "Url",
+            "snippetPath": "Snippet.0.Text",
+            "pageAgePath": "DocumentInfo.PublishTime"
+          },
+          "successCondition": {
+            "path": "Result.ErrorCode",
+            "equals": 0
+          }
+        }
+      },
+      "knownFieldEvidence": [],
+      "outcome": "official-fields-found",
+      "sourceIds": [
+        "doubao-original",
+        "doubao-current",
+        "doubao-global-rendered"
+      ],
+      "fieldEvidence": [
+        {
+          "field": "endpoint",
+          "currentValue": "https://open.feedcoopapi.com/search_api/global_search",
+          "supportedValue": "https://open.feedcoopapi.com/search_api/global_search",
+          "sourceId": "doubao-global-rendered",
+          "assessment": "matches",
+          "explanation": "已读官方原生示例，限此字段和上述接入范围。"
+        },
+        {
+          "field": "method",
+          "currentValue": "POST",
+          "supportedValue": "POST",
+          "sourceId": "doubao-global-rendered",
+          "assessment": "matches",
+          "explanation": "已读官方原生示例，限此字段和上述接入范围。"
+        },
+        {
+          "field": "auth.type",
+          "currentValue": "bearer",
+          "supportedValue": "bearer",
+          "sourceId": "doubao-global-rendered",
+          "assessment": "matches",
+          "explanation": "已读官方原生示例，限此字段和上述接入范围。"
+        },
+        {
+          "field": "request.bodyTemplate.SearchType",
+          "currentValue": "web",
+          "supportedValue": "web",
+          "sourceId": "doubao-global-rendered",
+          "assessment": "matches",
+          "explanation": "已读官方原生示例，限此字段和上述接入范围。"
+        },
+        {
+          "field": "request.bodyTemplate.MaxSnippetLength",
+          "currentValue": 500,
+          "supportedValue": 500,
+          "sourceId": "doubao-global-rendered",
+          "assessment": "matches",
+          "explanation": "官网web默认500 tokens，不是500字符；最大3000，建议不超过1000。"
+        },
+        {
+          "field": "response.resultsPath",
+          "currentValue": "Result.Documents",
+          "supportedValue": "Result.Documents",
+          "sourceId": "doubao-global-rendered",
+          "assessment": "matches",
+          "explanation": "已读官方原生示例，限此字段和上述接入范围。"
+        },
+        {
+          "field": "response.item.titlePath",
+          "currentValue": "Title",
+          "supportedValue": "Title",
+          "sourceId": "doubao-global-rendered",
+          "assessment": "matches",
+          "explanation": "已读官方原生示例，限此字段和上述接入范围。"
+        },
+        {
+          "field": "response.item.urlPath",
+          "currentValue": "Url",
+          "supportedValue": "Url",
+          "sourceId": "doubao-global-rendered",
+          "assessment": "matches",
+          "explanation": "已读官方原生示例，限此字段和上述接入范围。"
+        },
+        {
+          "field": "response.item.pageAgePath",
+          "currentValue": "DocumentInfo.PublishTime",
+          "supportedValue": "DocumentInfo.PublishTime",
+          "sourceId": "doubao-global-rendered",
+          "assessment": "matches",
+          "explanation": "官方DocumentInfo.PublishTime为非必填String，样例空字符串；只证明路径，不保证有时间。"
+        },
+        {
+          "field": "response.item.snippetPath",
+          "currentValue": "Snippet.0.Text",
+          "supportedValue": {
+            "array": "Snippet",
+            "discriminator": "Type",
+            "textField": "Text"
+          },
+          "sourceId": "doubao-global-rendered",
+          "assessment": "not-comparable",
+          "explanation": "官方数组混合text/image类型，不保证首项text。需按Type选择；不是可直接复制到本仓路径字段的表达式。"
+        },
+        {
+          "field": "response.successCondition.equals",
+          "currentValue": 0,
+          "supportedValue": 0,
+          "sourceId": "doubao-global-rendered",
+          "assessment": "not-comparable",
+          "explanation": "官方成功示例ErrorCode为0，仅字段定义错误码；示例不能证明完整错误判定规则。"
+        }
+      ],
+      "remainingFields": [
+        "Query必填1~100字符与客户端插值",
+        "DocCount web默认10最多20及整数转换",
+        "Snippet.0.Text不保证首项为text，需按Type选择",
+        "ErrorCode=0仅官方成功示例，完整错误规则待核",
+        "DocumentInfo.PublishTime非必填且样例空值",
+        "MaxSnippetLength单位tokens默认500/最大3000"
+      ],
+      "nextAction": "复核字段证据的来源身份和适用接口；未证明项继续保留，不把示例或SDK代码当账号调用验收。",
+      "notes": []
+    },
+    {
+      "recordKind": "api-contract",
+      "recordKey": "api-providers/image-understanding/configured-vision-openai.json#api-contract",
+      "supplier": "configured-vision-openai",
+      "modelId": "configured-vision-openai",
+      "config": "api-providers/image-understanding/configured-vision-openai.json",
+      "sourceDoc": "docs/data-sources/api-providers/configured-vision-openai.md",
+      "originalStatus": "partial",
+      "originalGap": "api-partial",
+      "current": {
+        "endpoint": "${baseUrl}/chat/completions",
+        "method": "POST",
+        "auth": {
+          "type": "bearer"
+        },
+        "request": {
+          "imageMode": "url",
+          "bodyTemplate": {
+            "model": "${model}",
+            "messages": [
+              {
+                "role": "user",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "${prompt}"
+                  },
+                  {
+                    "type": "image_url",
+                    "image_url": {
+                      "url": "${imageUrl}"
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        "response": {
+          "textPath": "choices.0.message.content"
+        }
+      },
+      "knownFieldEvidence": [
+        {
+          "field": "request.bodyTemplate.messages.0.content.1.type"
+        },
+        {
+          "field": "response.textPath"
+        }
+      ],
+      "outcome": "official-fields-found",
+      "sourceIds": [
+        "openai-vision"
+      ],
+      "fieldEvidence": [
+        {
+          "field": "request.bodyTemplate.messages.0.content.1.type",
+          "currentValue": "image_url",
+          "supportedValue": "image_url",
+          "sourceId": "openai-vision",
+          "assessment": "matches",
+          "explanation": "已读官方原生示例，限此字段和上述接入范围。"
+        },
+        {
+          "field": "response.textPath",
+          "currentValue": "choices.0.message.content",
+          "supportedValue": "choices.0.message.content",
+          "sourceId": "openai-vision",
+          "assessment": "matches",
+          "explanation": "已读官方原生示例，限此字段和上述接入范围。"
+        }
+      ],
+      "remainingFields": [
+        "动态baseUrl和实际型号",
+        "Responses-only适配",
+        "Bearer/网关认证",
+        "客户端变量插值及输入输出预算"
+      ],
+      "nextAction": "复核字段证据的来源身份和适用接口；未证明项继续保留，不把示例或SDK代码当账号调用验收。",
+      "notes": []
+    },
+    {
+      "recordKind": "api-contract",
+      "recordKey": "api-providers/image-understanding/configured-vision-anthropic.json#api-contract",
+      "supplier": "configured-vision-anthropic",
+      "modelId": "configured-vision-anthropic",
+      "config": "api-providers/image-understanding/configured-vision-anthropic.json",
+      "sourceDoc": "docs/data-sources/api-providers/configured-vision-anthropic.md",
+      "originalStatus": "partial",
+      "originalGap": "api-partial",
+      "current": {
+        "endpoint": "${baseUrl}/messages",
+        "method": "POST",
+        "auth": {
+          "type": "header",
+          "headerName": "x-api-key"
+        },
+        "request": {
+          "imageMode": "base64",
+          "headers": {
+            "anthropic-version": "2023-06-01"
+          },
+          "bodyTemplate": {
+            "model": "${model}",
+            "max_tokens": 1024,
+            "messages": [
+              {
+                "role": "user",
+                "content": [
+                  {
+                    "type": "image",
+                    "source": {
+                      "type": "base64",
+                      "media_type": "${imageMime}",
+                      "data": "${imageBase64}"
+                    }
+                  },
+                  {
+                    "type": "text",
+                    "text": "${prompt}"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        "response": {
+          "textPath": "content.0.text"
+        }
+      },
+      "knownFieldEvidence": [
+        {
+          "field": "request.bodyTemplate.messages.0.content.0.type"
+        },
+        {
+          "field": "request.bodyTemplate.messages.0.content.0.source.type"
+        }
+      ],
+      "outcome": "official-fields-found",
+      "sourceIds": [
+        "anthropic-vision"
+      ],
+      "fieldEvidence": [
+        {
+          "field": "request.bodyTemplate.messages.0.content.0.type",
+          "currentValue": "image",
+          "supportedValue": "image",
+          "sourceId": "anthropic-vision",
+          "assessment": "matches",
+          "explanation": "已读官方原生示例，限此字段和上述接入范围。"
+        },
+        {
+          "field": "request.bodyTemplate.messages.0.content.0.source.type",
+          "currentValue": "base64",
+          "supportedValue": "base64",
+          "sourceId": "anthropic-vision",
+          "assessment": "matches",
+          "explanation": "已读官方原生示例，限此字段和上述接入范围。"
+        }
+      ],
+      "remainingFields": [
+        "动态baseUrl和实际型号",
+        "auth/anthropic-version",
+        "response.textPath",
+        "客户端变量插值",
+        "max_tokens=1024为产品预算非厂商上限"
+      ],
+      "nextAction": "复核字段证据的来源身份和适用接口；未证明项继续保留，不把示例或SDK代码当账号调用验收。",
+      "notes": []
+    }
+  ]
+}

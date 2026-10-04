@@ -1,0 +1,700 @@
+{
+  "supplier": "xai",
+  "checkedAt": "2026-10-04",
+  "sources": [
+    {
+      "id": "xai-2b950d5a745e",
+      "url": "https://docs.x.ai/developers/release-notes",
+      "finalUrl": "https://docs.x.ai/developers/release-notes",
+      "publisher": "xAI",
+      "kind": "official-docs",
+      "retrieval": "readable",
+      "summary": "正文已读取；仅用于下方逐字段列明的证据，读取成功不代表全规格核实。",
+      "scope": "该官网文档明确列出的模型/API；不扩展到其他接入面。"
+    },
+    {
+      "id": "xai-e5cb19c82793",
+      "url": "https://docs.x.ai/developers/models/grok-4.3",
+      "finalUrl": "https://docs.x.ai/developers/models/grok-4.3",
+      "publisher": "xAI",
+      "kind": "official-docs",
+      "retrieval": "readable",
+      "summary": "正文已读取；仅用于下方逐字段列明的证据，读取成功不代表全规格核实。",
+      "scope": "该官网文档明确列出的模型/API；不扩展到其他接入面。"
+    },
+    {
+      "id": "xai-d14fea025626",
+      "url": "https://docs.x.ai/developers/models/grok-4.7",
+      "finalUrl": "https://docs.x.ai/developers/models/grok-4.7",
+      "publisher": "xAI",
+      "kind": "official-docs",
+      "retrieval": "readable",
+      "summary": "正文已读取；仅用于下方逐字段列明的证据，读取成功不代表全规格核实。",
+      "scope": "该官网文档明确列出的模型/API；不扩展到其他接入面。"
+    },
+    {
+      "id": "xai-3a49ad558f18",
+      "url": "https://docs.x.ai/developers/grok-4-7",
+      "finalUrl": "https://docs.x.ai/developers/grok-4-7",
+      "publisher": "xAI",
+      "kind": "official-docs",
+      "retrieval": "readable",
+      "summary": "正文已读取；仅用于下方逐字段列明的证据，读取成功不代表全规格核实。",
+      "scope": "该官网文档明确列出的模型/API；不扩展到其他接入面。"
+    },
+    {
+      "id": "xai-80640d2f1b4e",
+      "url": "https://docs.x.ai/developers/models/grok-4.5",
+      "finalUrl": "https://docs.x.ai/developers/models/grok-4.5",
+      "publisher": "xAI",
+      "kind": "official-docs",
+      "retrieval": "readable",
+      "summary": "正文已读取；仅用于下方逐字段列明的证据，读取成功不代表全规格核实。",
+      "scope": "该官网文档明确列出的模型/API；不扩展到其他接入面。"
+    },
+    {
+      "id": "xai-01af808259ff",
+      "url": "https://docs.x.ai/developers/models/grok-4-1-fast-reasoning",
+      "finalUrl": "https://docs.x.ai/developers/models",
+      "publisher": "xAI",
+      "kind": "official-docs",
+      "retrieval": "readable",
+      "summary": "正文已读取；仅用于下方逐字段列明的证据，读取成功不代表全规格核实。",
+      "scope": "该官网文档明确列出的模型/API；不扩展到其他接入面。"
+    },
+    {
+      "id": "xai-8b07c23a42f9",
+      "url": "https://docs.x.ai/developers/models/grok-4.20-0309-reasoning",
+      "finalUrl": "https://docs.x.ai/developers/models/grok-4.20-0309-reasoning",
+      "publisher": "xAI",
+      "kind": "official-docs",
+      "retrieval": "readable",
+      "summary": "正文已读取；仅用于下方逐字段列明的证据，读取成功不代表全规格核实。",
+      "scope": "该官网文档明确列出的模型/API；不扩展到其他接入面。"
+    },
+    {
+      "id": "xai-dedf56167aa3",
+      "url": "https://docs.x.ai/developers/pricing",
+      "finalUrl": "https://docs.x.ai/developers/pricing",
+      "publisher": "xAI",
+      "kind": "official-docs",
+      "retrieval": "readable",
+      "summary": "正文已读取；仅用于下方逐字段列明的证据，读取成功不代表全规格核实。",
+      "scope": "该官网文档明确列出的模型/API；不扩展到其他接入面。"
+    }
+  ],
+  "findings": [
+    {
+      "recordKey": "compute/model-specs/xai.json#grok-4-1-fast-reasoning",
+      "modelId": "grok-4-1-fast-reasoning",
+      "config": "compute/model-specs/xai.json",
+      "sourceDoc": "docs/model-sources/providers/xai/models/grok-4-1-fast-reasoning.md",
+      "outcome": "still-unresolved",
+      "sourceIds": [
+        "xai-2b950d5a745e",
+        "xai-01af808259ff"
+      ],
+      "fieldEvidence": [],
+      "remainingFields": [
+        "id",
+        "spec.contextWindow",
+        "spec.defaultTemperature",
+        "spec.maxOutputTokens",
+        "spec.supportsReasoning"
+      ],
+      "nextAction": "逐字段审查上表候选；只有同一接入合同且语义/单位一致的证据才用于后续canonical更新。 剩余字段需精确型号页/官方API schema或已授权账号目录核查，不推导默认值。",
+      "notes": [
+        "官方精确型号页跳转模型总目录，未取得旧型号独立规格；旧2M/16384/defaulttemperature不得据当前4.3代替。"
+      ]
+    },
+    {
+      "recordKey": "compute/model-specs/xai.json#grok-4-3",
+      "modelId": "grok-4-3",
+      "config": "compute/model-specs/xai.json",
+      "sourceDoc": "docs/model-sources/providers/xai/models/grok-4-3.md",
+      "outcome": "official-fields-found",
+      "sourceIds": [
+        "xai-e5cb19c82793",
+        "xai-2b950d5a745e"
+      ],
+      "fieldEvidence": [
+        {
+          "field": "id",
+          "currentValue": "grok-4-3",
+          "supportedValue": "grok-4.3",
+          "sourceId": "xai-e5cb19c82793",
+          "assessment": "not-comparable",
+          "explanation": "官方API ID；共享内部id可能不同。 本仓spec内部ID非必然wireID，请核match.exact。"
+        },
+        {
+          "field": "spec.contextWindow",
+          "currentValue": 1000000,
+          "supportedValue": 1000000,
+          "sourceId": "xai-e5cb19c82793",
+          "assessment": "matches",
+          "explanation": "原厂正文精确整数。"
+        },
+        {
+          "field": "accessReference.inputPrice",
+          "currentValue": null,
+          "supportedValue": 1.25,
+          "sourceId": "xai-e5cb19c82793",
+          "assessment": "not-comparable",
+          "explanation": "USD / 1Mtokens标准短上下文；>=200k的阶梯另算。 仅原厂接入计价参考，共享ModelSpec禁止写入价格。"
+        },
+        {
+          "field": "accessReference.outputPrice",
+          "currentValue": null,
+          "supportedValue": 2.5,
+          "sourceId": "xai-e5cb19c82793",
+          "assessment": "not-comparable",
+          "explanation": "USD / 1Mtokens标准短上下文；>=200k的阶梯另算。 仅原厂接入计价参考，共享ModelSpec禁止写入价格。"
+        },
+        {
+          "field": "accessReference.extra.cachedInputPrice",
+          "currentValue": null,
+          "supportedValue": 0.2,
+          "sourceId": "xai-e5cb19c82793",
+          "assessment": "not-comparable",
+          "explanation": "USD / 1Mtokens标准短上下文；>=200k的阶梯另算。 仅原厂接入计价参考，共享ModelSpec禁止写入价格。"
+        },
+        {
+          "field": "spec.supportsReasoning",
+          "currentValue": true,
+          "supportedValue": true,
+          "sourceId": "xai-e5cb19c82793",
+          "assessment": "matches",
+          "explanation": "官方该型号能力表支持reasoning。"
+        }
+      ],
+      "remainingFields": [
+        "id"
+      ],
+      "nextAction": "逐字段审查上表候选；只有同一接入合同且语义/单位一致的证据才用于后续canonical更新。 剩余字段需精确型号页/官方API schema或已授权账号目录核查，不推导默认值。",
+      "notes": []
+    },
+    {
+      "recordKey": "compute/providers/xai.json#grok-4.20-0309-reasoning",
+      "modelId": "grok-4.20-0309-reasoning",
+      "config": "compute/providers/xai.json",
+      "sourceDoc": "docs/model-sources/providers/xai/models/grok-4.20-0309-reasoning.md",
+      "outcome": "official-fields-found",
+      "sourceIds": [
+        "xai-8b07c23a42f9",
+        "xai-2b950d5a745e"
+      ],
+      "fieldEvidence": [
+        {
+          "field": "modelName",
+          "currentValue": "grok-4.20-0309-reasoning",
+          "supportedValue": "grok-4.20-0309-reasoning",
+          "sourceId": "xai-8b07c23a42f9",
+          "assessment": "matches",
+          "explanation": "官方API ID；共享内部id可能不同。"
+        },
+        {
+          "field": "contextWindow",
+          "currentValue": 1000000,
+          "supportedValue": 1000000,
+          "sourceId": "xai-8b07c23a42f9",
+          "assessment": "matches",
+          "explanation": "原厂正文精确整数。"
+        },
+        {
+          "field": "inputPrice",
+          "currentValue": 1.25,
+          "supportedValue": 1.25,
+          "sourceId": "xai-8b07c23a42f9",
+          "assessment": "matches",
+          "explanation": "USD / 1Mtokens标准短上下文；>=200k的阶梯另算。"
+        },
+        {
+          "field": "outputPrice",
+          "currentValue": 2.5,
+          "supportedValue": 2.5,
+          "sourceId": "xai-8b07c23a42f9",
+          "assessment": "matches",
+          "explanation": "USD / 1Mtokens标准短上下文；>=200k的阶梯另算。"
+        },
+        {
+          "field": "extra.cachedInputPrice",
+          "currentValue": 0.2,
+          "supportedValue": 0.2,
+          "sourceId": "xai-8b07c23a42f9",
+          "assessment": "matches",
+          "explanation": "USD / 1Mtokens标准短上下文；>=200k的阶梯另算。"
+        },
+        {
+          "field": "supportsReasoning",
+          "currentValue": null,
+          "supportedValue": true,
+          "sourceId": "xai-8b07c23a42f9",
+          "assessment": "differs",
+          "explanation": "官方该型号能力表支持reasoning。"
+        }
+      ],
+      "remainingFields": [
+        "defaultTemperature",
+        "defaultTopP",
+        "maxOutputTokens"
+      ],
+      "nextAction": "逐字段审查上表候选；只有同一接入合同且语义/单位一致的证据才用于后续canonical更新。 剩余字段需精确型号页/官方API schema或已授权账号目录核查，不推导默认值。",
+      "notes": []
+    },
+    {
+      "recordKey": "compute/model-specs/xai.json#grok-4.20-0309-reasoning",
+      "modelId": "grok-4.20-0309-reasoning",
+      "config": "compute/model-specs/xai.json",
+      "sourceDoc": "docs/model-sources/providers/xai/models/grok-4.20-0309-reasoning.md",
+      "outcome": "official-conflict",
+      "sourceIds": [
+        "xai-8b07c23a42f9",
+        "xai-2b950d5a745e"
+      ],
+      "fieldEvidence": [
+        {
+          "field": "id",
+          "currentValue": "grok-4.20-0309-reasoning",
+          "supportedValue": "grok-4.20-0309-reasoning",
+          "sourceId": "xai-8b07c23a42f9",
+          "assessment": "matches",
+          "explanation": "官方API ID；共享内部id可能不同。"
+        },
+        {
+          "field": "spec.contextWindow",
+          "currentValue": 2000000,
+          "supportedValue": 1000000,
+          "sourceId": "xai-8b07c23a42f9",
+          "assessment": "differs",
+          "explanation": "原厂正文精确整数。"
+        },
+        {
+          "field": "accessReference.inputPrice",
+          "currentValue": null,
+          "supportedValue": 1.25,
+          "sourceId": "xai-8b07c23a42f9",
+          "assessment": "not-comparable",
+          "explanation": "USD / 1Mtokens标准短上下文；>=200k的阶梯另算。 仅原厂接入计价参考，共享ModelSpec禁止写入价格。"
+        },
+        {
+          "field": "accessReference.outputPrice",
+          "currentValue": null,
+          "supportedValue": 2.5,
+          "sourceId": "xai-8b07c23a42f9",
+          "assessment": "not-comparable",
+          "explanation": "USD / 1Mtokens标准短上下文；>=200k的阶梯另算。 仅原厂接入计价参考，共享ModelSpec禁止写入价格。"
+        },
+        {
+          "field": "accessReference.extra.cachedInputPrice",
+          "currentValue": null,
+          "supportedValue": 0.2,
+          "sourceId": "xai-8b07c23a42f9",
+          "assessment": "not-comparable",
+          "explanation": "USD / 1Mtokens标准短上下文；>=200k的阶梯另算。 仅原厂接入计价参考，共享ModelSpec禁止写入价格。"
+        },
+        {
+          "field": "spec.supportsReasoning",
+          "currentValue": true,
+          "supportedValue": true,
+          "sourceId": "xai-8b07c23a42f9",
+          "assessment": "matches",
+          "explanation": "官方该型号能力表支持reasoning。"
+        }
+      ],
+      "remainingFields": [
+        "spec.defaultTemperature",
+        "spec.maxOutputTokens"
+      ],
+      "nextAction": "逐字段审查上表候选；只有同一接入合同且语义/单位一致的证据才用于后续canonical更新。 剩余字段需精确型号页/官方API schema或已授权账号目录核查，不推导默认值。",
+      "notes": []
+    },
+    {
+      "recordKey": "compute/providers/xai.json#grok-4.3",
+      "modelId": "grok-4.3",
+      "config": "compute/providers/xai.json",
+      "sourceDoc": "docs/model-sources/providers/xai/models/grok-4.3.md",
+      "outcome": "official-fields-found",
+      "sourceIds": [
+        "xai-e5cb19c82793"
+      ],
+      "fieldEvidence": [
+        {
+          "field": "modelName",
+          "currentValue": "grok-4.3",
+          "supportedValue": "grok-4.3",
+          "sourceId": "xai-e5cb19c82793",
+          "assessment": "matches",
+          "explanation": "官方API ID；共享内部id可能不同。"
+        },
+        {
+          "field": "contextWindow",
+          "currentValue": 1000000,
+          "supportedValue": 1000000,
+          "sourceId": "xai-e5cb19c82793",
+          "assessment": "matches",
+          "explanation": "原厂正文精确整数。"
+        },
+        {
+          "field": "inputPrice",
+          "currentValue": 1.25,
+          "supportedValue": 1.25,
+          "sourceId": "xai-e5cb19c82793",
+          "assessment": "matches",
+          "explanation": "USD / 1Mtokens标准短上下文；>=200k的阶梯另算。"
+        },
+        {
+          "field": "outputPrice",
+          "currentValue": 2.5,
+          "supportedValue": 2.5,
+          "sourceId": "xai-e5cb19c82793",
+          "assessment": "matches",
+          "explanation": "USD / 1Mtokens标准短上下文；>=200k的阶梯另算。"
+        },
+        {
+          "field": "extra.cachedInputPrice",
+          "currentValue": 0.2,
+          "supportedValue": 0.2,
+          "sourceId": "xai-e5cb19c82793",
+          "assessment": "matches",
+          "explanation": "USD / 1Mtokens标准短上下文；>=200k的阶梯另算。"
+        },
+        {
+          "field": "supportsReasoning",
+          "currentValue": null,
+          "supportedValue": true,
+          "sourceId": "xai-e5cb19c82793",
+          "assessment": "differs",
+          "explanation": "官方该型号能力表支持reasoning。"
+        }
+      ],
+      "remainingFields": [
+        "defaultTemperature",
+        "defaultTopP"
+      ],
+      "nextAction": "逐字段审查上表候选；只有同一接入合同且语义/单位一致的证据才用于后续canonical更新。 剩余字段需精确型号页/官方API schema或已授权账号目录核查，不推导默认值。",
+      "notes": []
+    },
+    {
+      "recordKey": "compute/model-specs/xai.json#grok-4.5",
+      "modelId": "grok-4.5",
+      "config": "compute/model-specs/xai.json",
+      "sourceDoc": "docs/model-sources/providers/xai/models/grok-4.5.md",
+      "outcome": "official-fields-found",
+      "sourceIds": [
+        "xai-80640d2f1b4e",
+        "xai-2b950d5a745e"
+      ],
+      "fieldEvidence": [
+        {
+          "field": "id",
+          "currentValue": "grok-4.5",
+          "supportedValue": "grok-4.5",
+          "sourceId": "xai-80640d2f1b4e",
+          "assessment": "matches",
+          "explanation": "官方API ID；共享内部id可能不同。"
+        },
+        {
+          "field": "spec.contextWindow",
+          "currentValue": 500000,
+          "supportedValue": 500000,
+          "sourceId": "xai-80640d2f1b4e",
+          "assessment": "matches",
+          "explanation": "原厂正文精确整数。"
+        },
+        {
+          "field": "accessReference.inputPrice",
+          "currentValue": null,
+          "supportedValue": 2.0,
+          "sourceId": "xai-80640d2f1b4e",
+          "assessment": "not-comparable",
+          "explanation": "USD / 1Mtokens标准短上下文；>=200k的阶梯另算。 仅原厂接入计价参考，共享ModelSpec禁止写入价格。"
+        },
+        {
+          "field": "accessReference.outputPrice",
+          "currentValue": null,
+          "supportedValue": 6.0,
+          "sourceId": "xai-80640d2f1b4e",
+          "assessment": "not-comparable",
+          "explanation": "USD / 1Mtokens标准短上下文；>=200k的阶梯另算。 仅原厂接入计价参考，共享ModelSpec禁止写入价格。"
+        },
+        {
+          "field": "accessReference.extra.cachedInputPrice",
+          "currentValue": null,
+          "supportedValue": 0.3,
+          "sourceId": "xai-80640d2f1b4e",
+          "assessment": "not-comparable",
+          "explanation": "USD / 1Mtokens标准短上下文；>=200k的阶梯另算。 仅原厂接入计价参考，共享ModelSpec禁止写入价格。"
+        },
+        {
+          "field": "spec.supportsReasoning",
+          "currentValue": true,
+          "supportedValue": true,
+          "sourceId": "xai-80640d2f1b4e",
+          "assessment": "matches",
+          "explanation": "官方该型号能力表支持reasoning。"
+        }
+      ],
+      "remainingFields": [
+        "spec.extra.thinkingOnly",
+        "spec.maxOutputTokens"
+      ],
+      "nextAction": "逐字段审查上表候选；只有同一接入合同且语义/单位一致的证据才用于后续canonical更新。 剩余字段需精确型号页/官方API schema或已授权账号目录核查，不推导默认值。",
+      "notes": [
+        "官方发布页说明No text output limit；本仓450000上限没有该整数证据，应区分本仓安全策略和原厂硬cap。"
+      ]
+    },
+    {
+      "recordKey": "compute/providers/xai.json#grok-4.7",
+      "modelId": "grok-4.7",
+      "config": "compute/providers/xai.json",
+      "sourceDoc": "docs/model-sources/providers/xai/models/grok-4.7.md",
+      "outcome": "official-fields-found",
+      "sourceIds": [
+        "xai-d14fea025626",
+        "xai-3a49ad558f18",
+        "xai-2b950d5a745e"
+      ],
+      "fieldEvidence": [
+        {
+          "field": "modelName",
+          "currentValue": "grok-4.7",
+          "supportedValue": "grok-4.7",
+          "sourceId": "xai-d14fea025626",
+          "assessment": "matches",
+          "explanation": "官方API ID；共享内部id可能不同。"
+        },
+        {
+          "field": "contextWindow",
+          "currentValue": 500000,
+          "supportedValue": 500000,
+          "sourceId": "xai-d14fea025626",
+          "assessment": "matches",
+          "explanation": "原厂正文精确整数。"
+        },
+        {
+          "field": "inputPrice",
+          "currentValue": 2,
+          "supportedValue": 2.0,
+          "sourceId": "xai-d14fea025626",
+          "assessment": "matches",
+          "explanation": "USD / 1Mtokens标准短上下文；>=200k的阶梯另算。"
+        },
+        {
+          "field": "outputPrice",
+          "currentValue": 6,
+          "supportedValue": 6.0,
+          "sourceId": "xai-d14fea025626",
+          "assessment": "matches",
+          "explanation": "USD / 1Mtokens标准短上下文；>=200k的阶梯另算。"
+        },
+        {
+          "field": "extra.cachedInputPrice",
+          "currentValue": 0.5,
+          "supportedValue": 0.5,
+          "sourceId": "xai-d14fea025626",
+          "assessment": "matches",
+          "explanation": "USD / 1Mtokens标准短上下文；>=200k的阶梯另算。"
+        },
+        {
+          "field": "supportsReasoning",
+          "currentValue": null,
+          "supportedValue": true,
+          "sourceId": "xai-d14fea025626",
+          "assessment": "differs",
+          "explanation": "官方该型号能力表支持reasoning。"
+        },
+        {
+          "field": "extra.reasoning.supportedEfforts",
+          "currentValue": [
+            "low",
+            "medium",
+            "high",
+            "xhigh"
+          ],
+          "supportedValue": [
+            "low",
+            "medium",
+            "high",
+            "xhigh"
+          ],
+          "sourceId": "xai-3a49ad558f18",
+          "assessment": "matches",
+          "explanation": "该精确型号/平台字段的官方正文证据；未核其他参数。"
+        },
+        {
+          "field": "extra.reasoning.defaultEffort",
+          "currentValue": "high",
+          "supportedValue": "high",
+          "sourceId": "xai-3a49ad558f18",
+          "assessment": "matches",
+          "explanation": "该精确型号/平台字段的官方正文证据；未核其他参数。"
+        },
+        {
+          "field": "maxOutputTokens",
+          "currentValue": null,
+          "supportedValue": "no-text-output-limit",
+          "sourceId": "xai-3a49ad558f18",
+          "assessment": "not-comparable",
+          "explanation": "官方明确无textoutputlimit，不制造新整数。"
+        }
+      ],
+      "remainingFields": [],
+      "nextAction": "逐字段审查上表候选；只有同一接入合同且语义/单位一致的证据才用于后续canonical更新。",
+      "notes": []
+    },
+    {
+      "recordKey": "compute/model-specs/xai.json#grok-4.7",
+      "modelId": "grok-4.7",
+      "config": "compute/model-specs/xai.json",
+      "sourceDoc": "docs/model-sources/providers/xai/models/grok-4.7.md",
+      "outcome": "official-fields-found",
+      "sourceIds": [
+        "xai-d14fea025626",
+        "xai-3a49ad558f18",
+        "xai-2b950d5a745e"
+      ],
+      "fieldEvidence": [
+        {
+          "field": "id",
+          "currentValue": "grok-4.7",
+          "supportedValue": "grok-4.7",
+          "sourceId": "xai-d14fea025626",
+          "assessment": "matches",
+          "explanation": "官方API ID；共享内部id可能不同。"
+        },
+        {
+          "field": "spec.contextWindow",
+          "currentValue": 500000,
+          "supportedValue": 500000,
+          "sourceId": "xai-d14fea025626",
+          "assessment": "matches",
+          "explanation": "原厂正文精确整数。"
+        },
+        {
+          "field": "accessReference.inputPrice",
+          "currentValue": null,
+          "supportedValue": 2.0,
+          "sourceId": "xai-d14fea025626",
+          "assessment": "not-comparable",
+          "explanation": "USD / 1Mtokens标准短上下文；>=200k的阶梯另算。 仅原厂接入计价参考，共享ModelSpec禁止写入价格。"
+        },
+        {
+          "field": "accessReference.outputPrice",
+          "currentValue": null,
+          "supportedValue": 6.0,
+          "sourceId": "xai-d14fea025626",
+          "assessment": "not-comparable",
+          "explanation": "USD / 1Mtokens标准短上下文；>=200k的阶梯另算。 仅原厂接入计价参考，共享ModelSpec禁止写入价格。"
+        },
+        {
+          "field": "accessReference.extra.cachedInputPrice",
+          "currentValue": null,
+          "supportedValue": 0.5,
+          "sourceId": "xai-d14fea025626",
+          "assessment": "not-comparable",
+          "explanation": "USD / 1Mtokens标准短上下文；>=200k的阶梯另算。 仅原厂接入计价参考，共享ModelSpec禁止写入价格。"
+        },
+        {
+          "field": "spec.supportsReasoning",
+          "currentValue": true,
+          "supportedValue": true,
+          "sourceId": "xai-d14fea025626",
+          "assessment": "matches",
+          "explanation": "官方该型号能力表支持reasoning。"
+        },
+        {
+          "field": "spec.extra.reasoning.supportedEfforts",
+          "currentValue": null,
+          "supportedValue": [
+            "low",
+            "medium",
+            "high",
+            "xhigh"
+          ],
+          "sourceId": "xai-3a49ad558f18",
+          "assessment": "differs",
+          "explanation": "该精确型号/平台字段的官方正文证据；未核其他参数。"
+        },
+        {
+          "field": "spec.extra.reasoning.defaultEffort",
+          "currentValue": null,
+          "supportedValue": "high",
+          "sourceId": "xai-3a49ad558f18",
+          "assessment": "differs",
+          "explanation": "该精确型号/平台字段的官方正文证据；未核其他参数。"
+        },
+        {
+          "field": "spec.maxOutputTokens",
+          "currentValue": null,
+          "supportedValue": "no-text-output-limit",
+          "sourceId": "xai-3a49ad558f18",
+          "assessment": "not-comparable",
+          "explanation": "官方明确无textoutputlimit，不制造新整数。"
+        }
+      ],
+      "remainingFields": [],
+      "nextAction": "逐字段审查上表候选；只有同一接入合同且语义/单位一致的证据才用于后续canonical更新。",
+      "notes": []
+    },
+    {
+      "recordKey": "compute/providers/xai.json#grok-build-0.1",
+      "modelId": "grok-build-0.1",
+      "config": "compute/providers/xai.json",
+      "sourceDoc": "docs/model-sources/providers/xai/models/grok-build-0.1.md",
+      "outcome": "official-fields-found",
+      "sourceIds": [
+        "xai-dedf56167aa3",
+        "xai-2b950d5a745e"
+      ],
+      "fieldEvidence": [
+        {
+          "field": "modelName",
+          "currentValue": "grok-build-0.1",
+          "supportedValue": "grok-build-0.1",
+          "sourceId": "xai-dedf56167aa3",
+          "assessment": "matches",
+          "explanation": "该精确型号/平台字段的官方正文证据；未核其他参数。"
+        },
+        {
+          "field": "contextWindow",
+          "currentValue": 256000,
+          "supportedValue": "256k",
+          "sourceId": "xai-dedf56167aa3",
+          "assessment": "not-comparable",
+          "explanation": "官网pricing表仅缩写，不证明精确256000/262144。"
+        },
+        {
+          "field": "inputPrice",
+          "currentValue": 1,
+          "supportedValue": 1,
+          "sourceId": "xai-dedf56167aa3",
+          "assessment": "matches",
+          "explanation": "该精确ID pricing行USD/1M，>=200k分别2/0.4/4。"
+        },
+        {
+          "field": "outputPrice",
+          "currentValue": 2,
+          "supportedValue": 2,
+          "sourceId": "xai-dedf56167aa3",
+          "assessment": "matches",
+          "explanation": "该精确ID pricing行USD/1M，>=200k分别2/0.4/4。"
+        },
+        {
+          "field": "extra.cachedInputPrice",
+          "currentValue": 0.2,
+          "supportedValue": 0.2,
+          "sourceId": "xai-dedf56167aa3",
+          "assessment": "matches",
+          "explanation": "该精确ID pricing行USD/1M，>=200k分别2/0.4/4。"
+        }
+      ],
+      "remainingFields": [
+        "contextWindow",
+        "defaultTemperature",
+        "defaultTopP"
+      ],
+      "nextAction": "逐字段审查上表候选；只有同一接入合同且语义/单位一致的证据才用于后续canonical更新。 剩余字段需精确型号页/官方API schema或已授权账号目录核查，不推导默认值。",
+      "notes": []
+    }
+  ]
+}

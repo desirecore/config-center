@@ -1,0 +1,3060 @@
+{
+  "supplier": "minimax",
+  "checkedAt": "2026-10-04",
+  "sources": [
+    {
+      "id": "minimax-models",
+      "url": "https://platform.minimax.cn/docs/guides/models-intro.md",
+      "finalUrl": "https://platform.minimax.cn/docs/guides/models-intro.md",
+      "publisher": "MiniMax official documentation",
+      "kind": "official-docs",
+      "scope": "只适用于页面明确的原厂/地域/接入，套餐和聚合合同独立",
+      "contentSha256": "79aec16c3b99d3871ab75de58087b3d1baa40dd79a33b639ef3bc1c079859a46",
+      "retrieval": "readable",
+      "summary": "实际读取4030字符，可见正文3541字符；需逐精确ID定位，HTTP成功不代表字段已证。",
+      "digestKind": "sha256-utf8-decoded-response-body",
+      "retrievalMethod": "urllib.request HTTPS response read; bytes decoded as UTF-8 with replacement, SHA-256 over decoded text re-encoded as UTF-8 before visible-text extraction; full HTML/Markdown/JSON body, not a raw-byte digest or vendor signature"
+    },
+    {
+      "id": "minimax-anthropic",
+      "url": "https://platform.minimax.cn/docs/api-reference/text-anthropic-api.md",
+      "finalUrl": "https://platform.minimax.cn/docs/api-reference/text-anthropic-api.md",
+      "publisher": "MiniMax official documentation",
+      "kind": "official-docs",
+      "scope": "只适用于页面明确的原厂/地域/接入，套餐和聚合合同独立",
+      "contentSha256": "6daf89aa6798bc504662acdeb6ed2a269fae35f94f1fa14559335c87c4ce7142",
+      "retrieval": "readable",
+      "summary": "实际读取9001字符，可见正文8389字符；需逐精确ID定位，HTTP成功不代表字段已证。",
+      "digestKind": "sha256-utf8-decoded-response-body",
+      "retrievalMethod": "urllib.request HTTPS response read; bytes decoded as UTF-8 with replacement, SHA-256 over decoded text re-encoded as UTF-8 before visible-text extraction; full HTML/Markdown/JSON body, not a raw-byte digest or vendor signature"
+    },
+    {
+      "id": "minimax-video",
+      "url": "https://platform.minimax.cn/docs/api-reference/video-generation-v2-create.md",
+      "finalUrl": "https://platform.minimax.cn/docs/api-reference/video-generation-v2-create.md",
+      "publisher": "MiniMax official documentation",
+      "kind": "official-docs",
+      "scope": "只适用于页面明确的原厂/地域/接入，套餐和聚合合同独立",
+      "contentSha256": "4dbb502b654cc136930a55285108aa18fec0702db40397431f7058deccb793a5",
+      "retrieval": "readable",
+      "summary": "实际读取17124字符，可见正文11521字符；需逐精确ID定位，HTTP成功不代表字段已证。",
+      "digestKind": "sha256-utf8-decoded-response-body",
+      "retrievalMethod": "urllib.request HTTPS response read; bytes decoded as UTF-8 with replacement, SHA-256 over decoded text re-encoded as UTF-8 before visible-text extraction; full HTML/Markdown/JSON body, not a raw-byte digest or vendor signature"
+    },
+    {
+      "id": "minimax-hailuo",
+      "url": "https://platform.minimax.cn/docs/api-reference/video-generation-t2v.md",
+      "finalUrl": "https://platform.minimax.cn/docs/api-reference/video-generation-t2v.md",
+      "publisher": "MiniMax official documentation",
+      "kind": "official-docs",
+      "scope": "只适用于页面明确的原厂/地域/接入，套餐和聚合合同独立",
+      "contentSha256": "cf0a461b04259a227db2ea3ca31ec62086775736afce5cb6e8d0d42c5c8b74fa",
+      "retrieval": "readable",
+      "summary": "实际读取6673字符，可见正文5154字符；需逐精确ID定位，HTTP成功不代表字段已证。",
+      "digestKind": "sha256-utf8-decoded-response-body",
+      "retrievalMethod": "urllib.request HTTPS response read; bytes decoded as UTF-8 with replacement, SHA-256 over decoded text re-encoded as UTF-8 before visible-text extraction; full HTML/Markdown/JSON body, not a raw-byte digest or vendor signature"
+    },
+    {
+      "id": "minimax-pricing",
+      "url": "https://platform.minimax.cn/docs/guides/pricing-paygo.md",
+      "finalUrl": "https://platform.minimax.cn/docs/guides/pricing-paygo.md",
+      "publisher": "MiniMax official documentation",
+      "kind": "official-docs",
+      "scope": "只适用于页面明确的原厂/地域/接入，套餐和聚合合同独立",
+      "contentSha256": "953f59ba8f1cb569579f9801d2b0e02e883d597d2dfbd870f216083c37fcc2b3",
+      "retrieval": "readable",
+      "summary": "实际读取8680字符，可见正文8507字符；需逐精确ID定位，HTTP成功不代表字段已证。",
+      "digestKind": "sha256-utf8-decoded-response-body",
+      "retrievalMethod": "urllib.request HTTPS response read; bytes decoded as UTF-8 with replacement, SHA-256 over decoded text re-encoded as UTF-8 before visible-text extraction; full HTML/Markdown/JSON body, not a raw-byte digest or vendor signature"
+    },
+    {
+      "id": "minimax-llms",
+      "url": "https://platform.minimax.cn/docs/llms.txt",
+      "finalUrl": "https://platform.minimax.cn/docs/llms.txt",
+      "publisher": "MiniMax official documentation",
+      "kind": "official-docs",
+      "scope": "只适用于页面明确的原厂/地域/接入，套餐和聚合合同独立",
+      "contentSha256": "8167a4314054db910783341756a229a3578c247dcd603847f978e448970f5451",
+      "retrieval": "readable",
+      "summary": "实际读取20164字符，可见正文20157字符；需逐精确ID定位，HTTP成功不代表字段已证。",
+      "digestKind": "sha256-utf8-decoded-response-body",
+      "retrievalMethod": "urllib.request HTTPS response read; bytes decoded as UTF-8 with replacement, SHA-256 over decoded text re-encoded as UTF-8 before visible-text extraction; full HTML/Markdown/JSON body, not a raw-byte digest or vendor signature"
+    },
+    {
+      "id": "minimax-speech-api",
+      "url": "https://platform.minimax.cn/docs/api-reference/speech-t2a-http.md",
+      "finalUrl": "https://platform.minimax.cn/docs/api-reference/speech-t2a-http.md",
+      "publisher": "MiniMax official documentation",
+      "kind": "official-docs",
+      "scope": "只适用于页面明确的原厂/地域/接入，套餐和聚合合同独立",
+      "contentSha256": "e543e900f6f1f824aa8c2494fd28f630c1d8eead202ebe6c5aebf4422b70813e",
+      "retrieval": "readable",
+      "summary": "实际读取24023字符，可见正文15383字符；需逐精确ID定位，HTTP成功不代表字段已证。",
+      "digestKind": "sha256-utf8-decoded-response-body",
+      "retrievalMethod": "urllib.request HTTPS response read; bytes decoded as UTF-8 with replacement, SHA-256 over decoded text re-encoded as UTF-8 before visible-text extraction; full HTML/Markdown/JSON body, not a raw-byte digest or vendor signature"
+    },
+    {
+      "id": "minimax-image-api",
+      "url": "https://platform.minimax.cn/docs/api-reference/image-generation-t2i.md",
+      "finalUrl": "https://platform.minimax.cn/docs/api-reference/image-generation-t2i.md",
+      "publisher": "MiniMax official documentation",
+      "kind": "official-docs",
+      "scope": "只适用于页面明确的原厂/地域/接入，套餐和聚合合同独立",
+      "contentSha256": "fad48a956b6a21d25898116ec55826ae02fa0d145f0468eb5821947a5defab26",
+      "retrieval": "readable",
+      "summary": "实际读取6509字符，可见正文4559字符；需逐精确ID定位，HTTP成功不代表字段已证。",
+      "digestKind": "sha256-utf8-decoded-response-body",
+      "retrievalMethod": "urllib.request HTTPS response read; bytes decoded as UTF-8 with replacement, SHA-256 over decoded text re-encoded as UTF-8 before visible-text extraction; full HTML/Markdown/JSON body, not a raw-byte digest or vendor signature"
+    },
+    {
+      "id": "minimax-music-api",
+      "url": "https://platform.minimax.cn/docs/api-reference/music-generation.md",
+      "finalUrl": "https://platform.minimax.cn/docs/api-reference/music-generation.md",
+      "publisher": "MiniMax official documentation",
+      "kind": "official-docs",
+      "scope": "只适用于页面明确的原厂/地域/接入，套餐和聚合合同独立",
+      "contentSha256": "9b7c4433b54f25e43bb542883080fb2375e6a92e4cd12963eb2bc47bbaed9502",
+      "retrieval": "readable",
+      "summary": "实际读取8740字符，可见正文6378字符；需逐精确ID定位，HTTP成功不代表字段已证。",
+      "digestKind": "sha256-utf8-decoded-response-body",
+      "retrievalMethod": "urllib.request HTTPS response read; bytes decoded as UTF-8 with replacement, SHA-256 over decoded text re-encoded as UTF-8 before visible-text extraction; full HTML/Markdown/JSON body, not a raw-byte digest or vendor signature"
+    },
+    {
+      "id": "minimax-plan-doc",
+      "url": "https://platform.minimax.cn/docs/guides/pricing-token-plan.md",
+      "finalUrl": "https://platform.minimax.cn/docs/guides/pricing-token-plan.md",
+      "publisher": "MiniMax official documentation",
+      "kind": "official-docs",
+      "scope": "只适用于页面明确的原厂/地域/接入，套餐和聚合合同独立",
+      "contentSha256": "5492366b07d8529b8cfd255db47f2398993ce748be104b29672dec44e79ed218",
+      "retrieval": "readable",
+      "summary": "实际读取1338字符，可见正文1322字符；需逐精确ID定位，HTTP成功不代表字段已证。",
+      "digestKind": "sha256-utf8-decoded-response-body",
+      "retrievalMethod": "urllib.request HTTPS response read; bytes decoded as UTF-8 with replacement, SHA-256 over decoded text re-encoded as UTF-8 before visible-text extraction; full HTML/Markdown/JSON body, not a raw-byte digest or vendor signature"
+    },
+    {
+      "id": "minimax-paygo-usd",
+      "url": "https://platform.minimax.io/docs/guides/pricing-paygo.md",
+      "finalUrl": "https://platform.minimax.io/docs/guides/pricing-paygo.md",
+      "publisher": "MiniMax official documentation",
+      "kind": "official-docs",
+      "scope": "只适用于页面明确的原厂/地域/接入，套餐和聚合合同独立",
+      "contentSha256": "f51660c6905bb0559e3b5e58b54d4263eda77df3dee04e6165ce8d73d3211f7d",
+      "retrieval": "readable",
+      "summary": "实际读取11660字符，可见正文11494字符；需逐精确ID定位，HTTP成功不代表字段已证。",
+      "digestKind": "sha256-utf8-decoded-response-body",
+      "retrievalMethod": "urllib.request HTTPS response read; bytes decoded as UTF-8 with replacement, SHA-256 over decoded text re-encoded as UTF-8 before visible-text extraction; full HTML/Markdown/JSON body, not a raw-byte digest or vendor signature"
+    }
+  ],
+  "findings": [
+    {
+      "recordKey": "compute/providers/minimax.json#image-01-live",
+      "modelId": "image-01-live",
+      "config": "compute/providers/minimax.json",
+      "sourceDoc": "docs/model-sources/providers/minimax/models/image-01-live.md",
+      "outcome": "official-identity-only",
+      "sourceIds": [
+        "minimax-models"
+      ],
+      "fieldEvidence": [
+        {
+          "field": "modelName",
+          "currentValue": "image-01-live",
+          "supportedValue": "image-01-live",
+          "sourceId": "minimax-models",
+          "assessment": "matches",
+          "explanation": "本轮正文定位精确标识；只确认该标识在其来源合同出现，不证明其他字段或不同套餐可用性。"
+        }
+      ],
+      "remainingFields": [
+        "capabilities",
+        "serviceType",
+        "access.maxInputTokens",
+        "access.protocol-readiness"
+      ],
+      "nextAction": "人工逐字段复核本次候选；只将matches且精确接入适用的字段迁入原来源文档，differs先审单位/阶梯/产品默认；缺项需精确模型页、官方版本卡或授权目录，不猜填。",
+      "notes": [
+        "本轮未在可读页面定位完整精确型号合同；缺失不判定停服。"
+      ],
+      "originalStatus": "partial",
+      "originalGap": "idOnly"
+    },
+    {
+      "recordKey": "compute/coding-plans/minimax-coding.json#image-01-live",
+      "modelId": "image-01-live",
+      "config": "compute/coding-plans/minimax-coding.json",
+      "sourceDoc": "docs/model-sources/providers/minimax/models/image-01-live.md",
+      "outcome": "official-identity-only",
+      "sourceIds": [
+        "minimax-models",
+        "minimax-plan-doc"
+      ],
+      "fieldEvidence": [
+        {
+          "field": "modelName",
+          "currentValue": "image-01-live",
+          "supportedValue": "image-01-live",
+          "sourceId": "minimax-models",
+          "assessment": "matches",
+          "explanation": "本轮正文定位精确标识；只确认该标识在其来源合同出现，不证明其他字段或不同套餐可用性。"
+        }
+      ],
+      "remainingFields": [
+        "capabilities",
+        "serviceType",
+        "access.maxInputTokens",
+        "access.protocol-readiness"
+      ],
+      "nextAction": "人工逐字段复核本次候选；只将matches且精确接入适用的字段迁入原来源文档，differs先审单位/阶梯/产品默认；缺项需精确模型页、官方版本卡或授权目录，不猜填。",
+      "notes": [
+        "MPlan文档仅明确全系M3/M2.7/图像/语音共享额度及少数不支持；没有逐型号上下文/最大输出或旧全部媒体白名单，不能从直连表确认套餐参数。"
+      ],
+      "originalStatus": "partial",
+      "originalGap": "idOnly"
+    },
+    {
+      "recordKey": "compute/model-specs/minimax.json#image-01-live",
+      "modelId": "image-01-live",
+      "config": "compute/model-specs/minimax.json",
+      "sourceDoc": "docs/model-sources/providers/minimax/models/image-01-live.md",
+      "outcome": "official-identity-only",
+      "sourceIds": [
+        "minimax-models"
+      ],
+      "fieldEvidence": [
+        {
+          "field": "id",
+          "currentValue": "image-01-live",
+          "supportedValue": "image-01-live",
+          "sourceId": "minimax-models",
+          "assessment": "matches",
+          "explanation": "本轮正文定位精确标识；只确认该标识在其来源合同出现，不证明其他字段或不同套餐可用性。"
+        }
+      ],
+      "remainingFields": [
+        "spec.capabilities",
+        "spec.serviceType"
+      ],
+      "nextAction": "人工逐字段复核本次候选；只将matches且精确接入适用的字段迁入原来源文档，differs先审单位/阶梯/产品默认；缺项需精确模型页、官方版本卡或授权目录，不猜填。",
+      "notes": [
+        "本轮未在可读页面定位完整精确型号合同；缺失不判定停服。"
+      ],
+      "originalStatus": "partial",
+      "originalGap": "idOnly"
+    },
+    {
+      "recordKey": "compute/providers/minimax.json#image-01",
+      "modelId": "image-01",
+      "config": "compute/providers/minimax.json",
+      "sourceDoc": "docs/model-sources/providers/minimax/models/image-01.md",
+      "outcome": "official-fields-found",
+      "sourceIds": [
+        "minimax-models",
+        "minimax-pricing"
+      ],
+      "fieldEvidence": [
+        {
+          "field": "modelName",
+          "currentValue": "image-01",
+          "supportedValue": "image-01",
+          "sourceId": "minimax-models",
+          "assessment": "matches",
+          "explanation": "本轮正文定位精确标识；只确认该标识在其来源合同出现，不证明其他字段或不同套餐可用性。"
+        },
+        {
+          "field": "extra.pricePerImage",
+          "currentValue": 0.025,
+          "supportedValue": 0.025,
+          "sourceId": "minimax-pricing",
+          "assessment": "matches",
+          "explanation": "国内按张计价；不能沿用海外USD0.0035或把该价自动推广image-01-live。"
+        }
+      ],
+      "remainingFields": [
+        "capabilities",
+        "serviceType",
+        "access.maxInputTokens",
+        "access.protocol-readiness"
+      ],
+      "nextAction": "人工逐字段复核本次候选；只将matches且精确接入适用的字段迁入原来源文档，differs先审单位/阶梯/产品默认；缺项需精确模型页、官方版本卡或授权目录，不猜填。",
+      "notes": [
+        "本轮未在可读页面定位完整精确型号合同；缺失不判定停服。"
+      ],
+      "originalStatus": "partial",
+      "originalGap": "idOnly"
+    },
+    {
+      "recordKey": "compute/coding-plans/minimax-coding.json#image-01",
+      "modelId": "image-01",
+      "config": "compute/coding-plans/minimax-coding.json",
+      "sourceDoc": "docs/model-sources/providers/minimax/models/image-01.md",
+      "outcome": "official-identity-only",
+      "sourceIds": [
+        "minimax-models",
+        "minimax-plan-doc"
+      ],
+      "fieldEvidence": [
+        {
+          "field": "modelName",
+          "currentValue": "image-01",
+          "supportedValue": "image-01",
+          "sourceId": "minimax-models",
+          "assessment": "matches",
+          "explanation": "本轮正文定位精确标识；只确认该标识在其来源合同出现，不证明其他字段或不同套餐可用性。"
+        }
+      ],
+      "remainingFields": [
+        "capabilities",
+        "serviceType",
+        "access.maxInputTokens",
+        "access.protocol-readiness"
+      ],
+      "nextAction": "人工逐字段复核本次候选；只将matches且精确接入适用的字段迁入原来源文档，differs先审单位/阶梯/产品默认；缺项需精确模型页、官方版本卡或授权目录，不猜填。",
+      "notes": [
+        "MPlan文档仅明确全系M3/M2.7/图像/语音共享额度及少数不支持；没有逐型号上下文/最大输出或旧全部媒体白名单，不能从直连表确认套餐参数。"
+      ],
+      "originalStatus": "partial",
+      "originalGap": "idOnly"
+    },
+    {
+      "recordKey": "compute/model-specs/minimax.json#image-01",
+      "modelId": "image-01",
+      "config": "compute/model-specs/minimax.json",
+      "sourceDoc": "docs/model-sources/providers/minimax/models/image-01.md",
+      "outcome": "official-identity-only",
+      "sourceIds": [
+        "minimax-models"
+      ],
+      "fieldEvidence": [
+        {
+          "field": "id",
+          "currentValue": "image-01",
+          "supportedValue": "image-01",
+          "sourceId": "minimax-models",
+          "assessment": "matches",
+          "explanation": "本轮正文定位精确标识；只确认该标识在其来源合同出现，不证明其他字段或不同套餐可用性。"
+        }
+      ],
+      "remainingFields": [
+        "spec.capabilities",
+        "spec.serviceType"
+      ],
+      "nextAction": "人工逐字段复核本次候选；只将matches且精确接入适用的字段迁入原来源文档，differs先审单位/阶梯/产品默认；缺项需精确模型页、官方版本卡或授权目录，不猜填。",
+      "notes": [
+        "本轮未在可读页面定位完整精确型号合同；缺失不判定停服。"
+      ],
+      "originalStatus": "partial",
+      "originalGap": "idOnly"
+    },
+    {
+      "recordKey": "compute/providers/minimax.json#M2-her",
+      "modelId": "M2-her",
+      "config": "compute/providers/minimax.json",
+      "sourceDoc": "docs/model-sources/providers/minimax/models/m2-her.md",
+      "outcome": "still-unresolved",
+      "sourceIds": [
+        "minimax-models",
+        "minimax-anthropic",
+        "minimax-video",
+        "minimax-hailuo",
+        "minimax-pricing",
+        "minimax-llms",
+        "minimax-speech-api",
+        "minimax-image-api",
+        "minimax-music-api",
+        "minimax-plan-doc",
+        "minimax-paygo-usd"
+      ],
+      "fieldEvidence": [],
+      "remainingFields": [
+        "contextWindow",
+        "defaultTemperature",
+        "defaultTopP",
+        "extra.cacheReadPrice",
+        "extra.cacheWritePrice",
+        "inputPrice",
+        "maxOutputTokens",
+        "modelName",
+        "outputPrice",
+        "capabilities",
+        "serviceType",
+        "access.maxInputTokens",
+        "access.protocol-readiness"
+      ],
+      "nextAction": "人工逐字段复核本次候选；只将matches且精确接入适用的字段迁入原来源文档，differs先审单位/阶梯/产品默认；缺项需精确模型页、官方版本卡或授权目录，不猜填。",
+      "notes": [
+        "本轮未在可读页面定位完整精确型号合同；缺失不判定停服。"
+      ],
+      "originalStatus": "pending",
+      "originalGap": "pending"
+    },
+    {
+      "recordKey": "compute/model-specs/minimax.json#M2-her",
+      "modelId": "M2-her",
+      "config": "compute/model-specs/minimax.json",
+      "sourceDoc": "docs/model-sources/providers/minimax/models/m2-her.md",
+      "outcome": "still-unresolved",
+      "sourceIds": [
+        "minimax-models",
+        "minimax-anthropic",
+        "minimax-video",
+        "minimax-hailuo",
+        "minimax-pricing",
+        "minimax-llms",
+        "minimax-speech-api",
+        "minimax-image-api",
+        "minimax-music-api",
+        "minimax-plan-doc",
+        "minimax-paygo-usd"
+      ],
+      "fieldEvidence": [],
+      "remainingFields": [
+        "id",
+        "spec.contextWindow",
+        "spec.defaultTemperature",
+        "spec.maxOutputTokens",
+        "spec.capabilities",
+        "spec.serviceType"
+      ],
+      "nextAction": "人工逐字段复核本次候选；只将matches且精确接入适用的字段迁入原来源文档，differs先审单位/阶梯/产品默认；缺项需精确模型页、官方版本卡或授权目录，不猜填。",
+      "notes": [
+        "本轮未在可读页面定位完整精确型号合同；缺失不判定停服。"
+      ],
+      "originalStatus": "pending",
+      "originalGap": "pending"
+    },
+    {
+      "recordKey": "compute/model-specs/minimax.json#MiniMax-H3-Max",
+      "modelId": "MiniMax-H3-Max",
+      "config": "compute/model-specs/minimax.json",
+      "sourceDoc": "docs/model-sources/providers/minimax/models/minimax-h3-max.md",
+      "outcome": "official-identity-only",
+      "sourceIds": [
+        "minimax-video"
+      ],
+      "fieldEvidence": [
+        {
+          "field": "id",
+          "currentValue": "MiniMax-H3-Max",
+          "supportedValue": "MiniMax-H3-Max",
+          "sourceId": "minimax-video",
+          "assessment": "matches",
+          "explanation": "本轮正文定位精确标识；只确认该标识在其来源合同出现，不证明其他字段或不同套餐可用性。"
+        }
+      ],
+      "remainingFields": [
+        "spec.capabilities",
+        "spec.serviceType"
+      ],
+      "nextAction": "人工逐字段复核本次候选；只将matches且精确接入适用的字段迁入原来源文档，differs先审单位/阶梯/产品默认；缺项需精确模型页、官方版本卡或授权目录，不猜填。",
+      "notes": [
+        "本轮未在可读页面定位完整精确型号合同；缺失不判定停服。"
+      ],
+      "originalStatus": "partial",
+      "originalGap": "idOnly"
+    },
+    {
+      "recordKey": "compute/model-specs/minimax.json#MiniMax-H3",
+      "modelId": "MiniMax-H3",
+      "config": "compute/model-specs/minimax.json",
+      "sourceDoc": "docs/model-sources/providers/minimax/models/minimax-h3.md",
+      "outcome": "official-identity-only",
+      "sourceIds": [
+        "minimax-video"
+      ],
+      "fieldEvidence": [
+        {
+          "field": "id",
+          "currentValue": "MiniMax-H3",
+          "supportedValue": "MiniMax-H3",
+          "sourceId": "minimax-video",
+          "assessment": "matches",
+          "explanation": "本轮正文定位精确标识；只确认该标识在其来源合同出现，不证明其他字段或不同套餐可用性。"
+        }
+      ],
+      "remainingFields": [
+        "spec.capabilities",
+        "spec.serviceType"
+      ],
+      "nextAction": "人工逐字段复核本次候选；只将matches且精确接入适用的字段迁入原来源文档，differs先审单位/阶梯/产品默认；缺项需精确模型页、官方版本卡或授权目录，不猜填。",
+      "notes": [
+        "本轮未在可读页面定位完整精确型号合同；缺失不判定停服。"
+      ],
+      "originalStatus": "partial",
+      "originalGap": "idOnly"
+    },
+    {
+      "recordKey": "compute/providers/minimax.json#MiniMax-Hailuo-02",
+      "modelId": "MiniMax-Hailuo-02",
+      "config": "compute/providers/minimax.json",
+      "sourceDoc": "docs/model-sources/providers/minimax/models/minimax-hailuo-02.md",
+      "outcome": "official-identity-only",
+      "sourceIds": [
+        "minimax-hailuo"
+      ],
+      "fieldEvidence": [
+        {
+          "field": "modelName",
+          "currentValue": "MiniMax-Hailuo-02",
+          "supportedValue": "MiniMax-Hailuo-02",
+          "sourceId": "minimax-hailuo",
+          "assessment": "matches",
+          "explanation": "本轮正文定位精确标识；只确认该标识在其来源合同出现，不证明其他字段或不同套餐可用性。"
+        }
+      ],
+      "remainingFields": [
+        "capabilities",
+        "serviceType",
+        "access.maxInputTokens",
+        "access.protocol-readiness"
+      ],
+      "nextAction": "人工逐字段复核本次候选；只将matches且精确接入适用的字段迁入原来源文档，differs先审单位/阶梯/产品默认；缺项需精确模型页、官方版本卡或授权目录，不猜填。",
+      "notes": [
+        "本轮未在可读页面定位完整精确型号合同；缺失不判定停服。"
+      ],
+      "originalStatus": "partial",
+      "originalGap": "idOnly"
+    },
+    {
+      "recordKey": "compute/model-specs/minimax.json#MiniMax-Hailuo-02",
+      "modelId": "MiniMax-Hailuo-02",
+      "config": "compute/model-specs/minimax.json",
+      "sourceDoc": "docs/model-sources/providers/minimax/models/minimax-hailuo-02.md",
+      "outcome": "official-identity-only",
+      "sourceIds": [
+        "minimax-hailuo"
+      ],
+      "fieldEvidence": [
+        {
+          "field": "id",
+          "currentValue": "MiniMax-Hailuo-02",
+          "supportedValue": "MiniMax-Hailuo-02",
+          "sourceId": "minimax-hailuo",
+          "assessment": "matches",
+          "explanation": "本轮正文定位精确标识；只确认该标识在其来源合同出现，不证明其他字段或不同套餐可用性。"
+        }
+      ],
+      "remainingFields": [
+        "spec.capabilities",
+        "spec.serviceType"
+      ],
+      "nextAction": "人工逐字段复核本次候选；只将matches且精确接入适用的字段迁入原来源文档，differs先审单位/阶梯/产品默认；缺项需精确模型页、官方版本卡或授权目录，不猜填。",
+      "notes": [
+        "本轮未在可读页面定位完整精确型号合同；缺失不判定停服。"
+      ],
+      "originalStatus": "partial",
+      "originalGap": "idOnly"
+    },
+    {
+      "recordKey": "compute/providers/minimax.json#MiniMax-Hailuo-2.3-Fast",
+      "modelId": "MiniMax-Hailuo-2.3-Fast",
+      "config": "compute/providers/minimax.json",
+      "sourceDoc": "docs/model-sources/providers/minimax/models/minimax-hailuo-2.3-fast.md",
+      "outcome": "official-identity-only",
+      "sourceIds": [
+        "minimax-pricing"
+      ],
+      "fieldEvidence": [
+        {
+          "field": "modelName",
+          "currentValue": "MiniMax-Hailuo-2.3-Fast",
+          "supportedValue": "MiniMax-Hailuo-2.3-Fast",
+          "sourceId": "minimax-pricing",
+          "assessment": "matches",
+          "explanation": "本轮正文定位精确标识；只确认该标识在其来源合同出现，不证明其他字段或不同套餐可用性。"
+        }
+      ],
+      "remainingFields": [
+        "capabilities",
+        "serviceType",
+        "access.maxInputTokens",
+        "access.protocol-readiness"
+      ],
+      "nextAction": "人工逐字段复核本次候选；只将matches且精确接入适用的字段迁入原来源文档，differs先审单位/阶梯/产品默认；缺项需精确模型页、官方版本卡或授权目录，不猜填。",
+      "notes": [
+        "本轮未在可读页面定位完整精确型号合同；缺失不判定停服。"
+      ],
+      "originalStatus": "pending",
+      "originalGap": "pending"
+    },
+    {
+      "recordKey": "compute/coding-plans/minimax-coding.json#MiniMax-Hailuo-2.3-Fast",
+      "modelId": "MiniMax-Hailuo-2.3-Fast",
+      "config": "compute/coding-plans/minimax-coding.json",
+      "sourceDoc": "docs/model-sources/providers/minimax/models/minimax-hailuo-2.3-fast.md",
+      "outcome": "official-identity-only",
+      "sourceIds": [
+        "minimax-pricing",
+        "minimax-plan-doc"
+      ],
+      "fieldEvidence": [
+        {
+          "field": "modelName",
+          "currentValue": "MiniMax-Hailuo-2.3-Fast",
+          "supportedValue": "MiniMax-Hailuo-2.3-Fast",
+          "sourceId": "minimax-pricing",
+          "assessment": "matches",
+          "explanation": "本轮正文定位精确标识；只确认该标识在其来源合同出现，不证明其他字段或不同套餐可用性。"
+        }
+      ],
+      "remainingFields": [
+        "capabilities",
+        "serviceType",
+        "access.maxInputTokens",
+        "access.protocol-readiness"
+      ],
+      "nextAction": "人工逐字段复核本次候选；只将matches且精确接入适用的字段迁入原来源文档，differs先审单位/阶梯/产品默认；缺项需精确模型页、官方版本卡或授权目录，不猜填。",
+      "notes": [
+        "MPlan文档仅明确全系M3/M2.7/图像/语音共享额度及少数不支持；没有逐型号上下文/最大输出或旧全部媒体白名单，不能从直连表确认套餐参数。"
+      ],
+      "originalStatus": "pending",
+      "originalGap": "pending"
+    },
+    {
+      "recordKey": "compute/model-specs/minimax.json#MiniMax-Hailuo-2.3-Fast",
+      "modelId": "MiniMax-Hailuo-2.3-Fast",
+      "config": "compute/model-specs/minimax.json",
+      "sourceDoc": "docs/model-sources/providers/minimax/models/minimax-hailuo-2.3-fast.md",
+      "outcome": "official-identity-only",
+      "sourceIds": [
+        "minimax-pricing"
+      ],
+      "fieldEvidence": [
+        {
+          "field": "id",
+          "currentValue": "MiniMax-Hailuo-2.3-Fast",
+          "supportedValue": "MiniMax-Hailuo-2.3-Fast",
+          "sourceId": "minimax-pricing",
+          "assessment": "matches",
+          "explanation": "本轮正文定位精确标识；只确认该标识在其来源合同出现，不证明其他字段或不同套餐可用性。"
+        }
+      ],
+      "remainingFields": [
+        "spec.capabilities",
+        "spec.serviceType"
+      ],
+      "nextAction": "人工逐字段复核本次候选；只将matches且精确接入适用的字段迁入原来源文档，differs先审单位/阶梯/产品默认；缺项需精确模型页、官方版本卡或授权目录，不猜填。",
+      "notes": [
+        "本轮未在可读页面定位完整精确型号合同；缺失不判定停服。"
+      ],
+      "originalStatus": "pending",
+      "originalGap": "pending"
+    },
+    {
+      "recordKey": "compute/providers/minimax.json#MiniMax-Hailuo-2.3",
+      "modelId": "MiniMax-Hailuo-2.3",
+      "config": "compute/providers/minimax.json",
+      "sourceDoc": "docs/model-sources/providers/minimax/models/minimax-hailuo-2.3.md",
+      "outcome": "official-identity-only",
+      "sourceIds": [
+        "minimax-hailuo"
+      ],
+      "fieldEvidence": [
+        {
+          "field": "modelName",
+          "currentValue": "MiniMax-Hailuo-2.3",
+          "supportedValue": "MiniMax-Hailuo-2.3",
+          "sourceId": "minimax-hailuo",
+          "assessment": "matches",
+          "explanation": "本轮正文定位精确标识；只确认该标识在其来源合同出现，不证明其他字段或不同套餐可用性。"
+        }
+      ],
+      "remainingFields": [
+        "capabilities",
+        "serviceType",
+        "access.maxInputTokens",
+        "access.protocol-readiness"
+      ],
+      "nextAction": "人工逐字段复核本次候选；只将matches且精确接入适用的字段迁入原来源文档，differs先审单位/阶梯/产品默认；缺项需精确模型页、官方版本卡或授权目录，不猜填。",
+      "notes": [
+        "本轮未在可读页面定位完整精确型号合同；缺失不判定停服。"
+      ],
+      "originalStatus": "partial",
+      "originalGap": "idOnly"
+    },
+    {
+      "recordKey": "compute/coding-plans/minimax-coding.json#MiniMax-Hailuo-2.3",
+      "modelId": "MiniMax-Hailuo-2.3",
+      "config": "compute/coding-plans/minimax-coding.json",
+      "sourceDoc": "docs/model-sources/providers/minimax/models/minimax-hailuo-2.3.md",
+      "outcome": "official-identity-only",
+      "sourceIds": [
+        "minimax-hailuo",
+        "minimax-plan-doc"
+      ],
+      "fieldEvidence": [
+        {
+          "field": "modelName",
+          "currentValue": "MiniMax-Hailuo-2.3",
+          "supportedValue": "MiniMax-Hailuo-2.3",
+          "sourceId": "minimax-hailuo",
+          "assessment": "matches",
+          "explanation": "本轮正文定位精确标识；只确认该标识在其来源合同出现，不证明其他字段或不同套餐可用性。"
+        }
+      ],
+      "remainingFields": [
+        "capabilities",
+        "serviceType",
+        "access.maxInputTokens",
+        "access.protocol-readiness"
+      ],
+      "nextAction": "人工逐字段复核本次候选；只将matches且精确接入适用的字段迁入原来源文档，differs先审单位/阶梯/产品默认；缺项需精确模型页、官方版本卡或授权目录，不猜填。",
+      "notes": [
+        "MPlan文档仅明确全系M3/M2.7/图像/语音共享额度及少数不支持；没有逐型号上下文/最大输出或旧全部媒体白名单，不能从直连表确认套餐参数。"
+      ],
+      "originalStatus": "partial",
+      "originalGap": "idOnly"
+    },
+    {
+      "recordKey": "compute/model-specs/minimax.json#MiniMax-Hailuo-2.3",
+      "modelId": "MiniMax-Hailuo-2.3",
+      "config": "compute/model-specs/minimax.json",
+      "sourceDoc": "docs/model-sources/providers/minimax/models/minimax-hailuo-2.3.md",
+      "outcome": "official-identity-only",
+      "sourceIds": [
+        "minimax-hailuo"
+      ],
+      "fieldEvidence": [
+        {
+          "field": "id",
+          "currentValue": "MiniMax-Hailuo-2.3",
+          "supportedValue": "MiniMax-Hailuo-2.3",
+          "sourceId": "minimax-hailuo",
+          "assessment": "matches",
+          "explanation": "本轮正文定位精确标识；只确认该标识在其来源合同出现，不证明其他字段或不同套餐可用性。"
+        }
+      ],
+      "remainingFields": [
+        "spec.capabilities",
+        "spec.serviceType"
+      ],
+      "nextAction": "人工逐字段复核本次候选；只将matches且精确接入适用的字段迁入原来源文档，differs先审单位/阶梯/产品默认；缺项需精确模型页、官方版本卡或授权目录，不猜填。",
+      "notes": [
+        "本轮未在可读页面定位完整精确型号合同；缺失不判定停服。"
+      ],
+      "originalStatus": "partial",
+      "originalGap": "idOnly"
+    },
+    {
+      "recordKey": "compute/providers/minimax.json#MiniMax-M2.1-highspeed",
+      "modelId": "MiniMax-M2.1-highspeed",
+      "config": "compute/providers/minimax.json",
+      "sourceDoc": "docs/model-sources/providers/minimax/models/minimax-m2.1-highspeed.md",
+      "outcome": "official-fields-found",
+      "sourceIds": [
+        "minimax-models",
+        "minimax-anthropic",
+        "minimax-pricing"
+      ],
+      "fieldEvidence": [
+        {
+          "field": "modelName",
+          "currentValue": "MiniMax-M2.1-highspeed",
+          "supportedValue": "MiniMax-M2.1-highspeed",
+          "sourceId": "minimax-models",
+          "assessment": "matches",
+          "explanation": "本轮正文定位精确标识；只确认该标识在其来源合同出现，不证明其他字段或不同套餐可用性。"
+        },
+        {
+          "field": "contextWindow",
+          "currentValue": 204800,
+          "supportedValue": 204800,
+          "sourceId": "minimax-anthropic",
+          "assessment": "matches",
+          "explanation": "官方Anthropic兼容模型表明文整数；其他协议/套餐仍需自身限制证明。"
+        },
+        {
+          "field": "inputPrice",
+          "currentValue": 4.2,
+          "supportedValue": 4.2,
+          "sourceId": "minimax-pricing",
+          "assessment": "matches",
+          "explanation": "国内CNY/百万token价签；M3此标量仅≤512k输入的标准层，跨阈值/priority需独立阶梯，不当统一价。"
+        },
+        {
+          "field": "outputPrice",
+          "currentValue": 16.8,
+          "supportedValue": 16.8,
+          "sourceId": "minimax-pricing",
+          "assessment": "matches",
+          "explanation": "国内CNY/百万token价签；M3此标量仅≤512k输入的标准层，跨阈值/priority需独立阶梯，不当统一价。"
+        },
+        {
+          "field": "extra.cacheReadPrice",
+          "currentValue": 0.21,
+          "supportedValue": 0.21,
+          "sourceId": "minimax-pricing",
+          "assessment": "matches",
+          "explanation": "国内CNY/百万token价签；M3此标量仅≤512k输入的标准层，跨阈值/priority需独立阶梯，不当统一价。"
+        },
+        {
+          "field": "extra.cacheWritePrice",
+          "currentValue": 2.625,
+          "supportedValue": 2.625,
+          "sourceId": "minimax-pricing",
+          "assessment": "matches",
+          "explanation": "国内CNY/百万token价签；M3此标量仅≤512k输入的标准层，跨阈值/priority需独立阶梯，不当统一价。"
+        },
+        {
+          "field": "defaultTopP",
+          "currentValue": 0.95,
+          "supportedValue": 0.9,
+          "sourceId": "minimax-anthropic",
+          "assessment": "not-comparable",
+          "explanation": "该页明确API top_p默认（M3=.95/M2.x=.9）；本仓defaultTopP可能产品默认/其他协议，不能自动覆盖。"
+        }
+      ],
+      "remainingFields": [
+        "defaultTemperature",
+        "defaultTopP",
+        "maxOutputTokens",
+        "capabilities",
+        "serviceType",
+        "access.maxInputTokens",
+        "access.protocol-readiness"
+      ],
+      "nextAction": "人工逐字段复核本次候选；只将matches且精确接入适用的字段迁入原来源文档，differs先审单位/阶梯/产品默认；缺项需精确模型页、官方版本卡或授权目录，不猜填。",
+      "notes": [
+        "该Anthropic参数页仅说明max_tokens含思考token并支持设置，未给精确最大输出整数；保留maxOutputTokens缺口，不把示例4096/2048当上限。temperature=1是推荐值而非已证默认。"
+      ],
+      "originalStatus": "partial",
+      "originalGap": "partial"
+    },
+    {
+      "recordKey": "compute/model-specs/minimax.json#MiniMax-M2.1-highspeed",
+      "modelId": "MiniMax-M2.1-highspeed",
+      "config": "compute/model-specs/minimax.json",
+      "sourceDoc": "docs/model-sources/providers/minimax/models/minimax-m2.1-highspeed.md",
+      "outcome": "official-fields-found",
+      "sourceIds": [
+        "minimax-models",
+        "minimax-anthropic"
+      ],
+      "fieldEvidence": [
+        {
+          "field": "id",
+          "currentValue": "MiniMax-M2.1-highspeed",
+          "supportedValue": "MiniMax-M2.1-highspeed",
+          "sourceId": "minimax-models",
+          "assessment": "matches",
+          "explanation": "本轮正文定位精确标识；只确认该标识在其来源合同出现，不证明其他字段或不同套餐可用性。"
+        },
+        {
+          "field": "spec.contextWindow",
+          "currentValue": 204800,
+          "supportedValue": 204800,
+          "sourceId": "minimax-anthropic",
+          "assessment": "matches",
+          "explanation": "官方Anthropic兼容模型表明文整数；其他协议/套餐仍需自身限制证明。"
+        },
+        {
+          "field": "spec.defaultTopP",
+          "currentValue": null,
+          "supportedValue": 0.9,
+          "sourceId": "minimax-anthropic",
+          "assessment": "not-comparable",
+          "explanation": "该页明确API top_p默认（M3=.95/M2.x=.9）；本仓defaultTopP可能产品默认/其他协议，不能自动覆盖。"
+        }
+      ],
+      "remainingFields": [
+        "spec.defaultTemperature",
+        "spec.maxOutputTokens",
+        "spec.capabilities",
+        "spec.serviceType"
+      ],
+      "nextAction": "人工逐字段复核本次候选；只将matches且精确接入适用的字段迁入原来源文档，differs先审单位/阶梯/产品默认；缺项需精确模型页、官方版本卡或授权目录，不猜填。",
+      "notes": [
+        "该Anthropic参数页仅说明max_tokens含思考token并支持设置，未给精确最大输出整数；保留maxOutputTokens缺口，不把示例4096/2048当上限。temperature=1是推荐值而非已证默认。"
+      ],
+      "originalStatus": "partial",
+      "originalGap": "partial"
+    },
+    {
+      "recordKey": "compute/providers/minimax.json#MiniMax-M2.1",
+      "modelId": "MiniMax-M2.1",
+      "config": "compute/providers/minimax.json",
+      "sourceDoc": "docs/model-sources/providers/minimax/models/minimax-m2.1.md",
+      "outcome": "official-fields-found",
+      "sourceIds": [
+        "minimax-models",
+        "minimax-anthropic",
+        "minimax-pricing"
+      ],
+      "fieldEvidence": [
+        {
+          "field": "modelName",
+          "currentValue": "MiniMax-M2.1",
+          "supportedValue": "MiniMax-M2.1",
+          "sourceId": "minimax-models",
+          "assessment": "matches",
+          "explanation": "本轮正文定位精确标识；只确认该标识在其来源合同出现，不证明其他字段或不同套餐可用性。"
+        },
+        {
+          "field": "contextWindow",
+          "currentValue": 204800,
+          "supportedValue": 204800,
+          "sourceId": "minimax-anthropic",
+          "assessment": "matches",
+          "explanation": "官方Anthropic兼容模型表明文整数；其他协议/套餐仍需自身限制证明。"
+        },
+        {
+          "field": "inputPrice",
+          "currentValue": 2.1,
+          "supportedValue": 2.1,
+          "sourceId": "minimax-pricing",
+          "assessment": "matches",
+          "explanation": "国内CNY/百万token价签；M3此标量仅≤512k输入的标准层，跨阈值/priority需独立阶梯，不当统一价。"
+        },
+        {
+          "field": "outputPrice",
+          "currentValue": 8.4,
+          "supportedValue": 8.4,
+          "sourceId": "minimax-pricing",
+          "assessment": "matches",
+          "explanation": "国内CNY/百万token价签；M3此标量仅≤512k输入的标准层，跨阈值/priority需独立阶梯，不当统一价。"
+        },
+        {
+          "field": "extra.cacheReadPrice",
+          "currentValue": 0.21,
+          "supportedValue": 0.21,
+          "sourceId": "minimax-pricing",
+          "assessment": "matches",
+          "explanation": "国内CNY/百万token价签；M3此标量仅≤512k输入的标准层，跨阈值/priority需独立阶梯，不当统一价。"
+        },
+        {
+          "field": "extra.cacheWritePrice",
+          "currentValue": 2.625,
+          "supportedValue": 2.625,
+          "sourceId": "minimax-pricing",
+          "assessment": "matches",
+          "explanation": "国内CNY/百万token价签；M3此标量仅≤512k输入的标准层，跨阈值/priority需独立阶梯，不当统一价。"
+        },
+        {
+          "field": "defaultTopP",
+          "currentValue": 0.95,
+          "supportedValue": 0.9,
+          "sourceId": "minimax-anthropic",
+          "assessment": "not-comparable",
+          "explanation": "该页明确API top_p默认（M3=.95/M2.x=.9）；本仓defaultTopP可能产品默认/其他协议，不能自动覆盖。"
+        }
+      ],
+      "remainingFields": [
+        "defaultTemperature",
+        "defaultTopP",
+        "maxOutputTokens",
+        "capabilities",
+        "serviceType",
+        "access.maxInputTokens",
+        "access.protocol-readiness"
+      ],
+      "nextAction": "人工逐字段复核本次候选；只将matches且精确接入适用的字段迁入原来源文档，differs先审单位/阶梯/产品默认；缺项需精确模型页、官方版本卡或授权目录，不猜填。",
+      "notes": [
+        "该Anthropic参数页仅说明max_tokens含思考token并支持设置，未给精确最大输出整数；保留maxOutputTokens缺口，不把示例4096/2048当上限。temperature=1是推荐值而非已证默认。"
+      ],
+      "originalStatus": "partial",
+      "originalGap": "partial"
+    },
+    {
+      "recordKey": "compute/model-specs/minimax.json#MiniMax-M2.1",
+      "modelId": "MiniMax-M2.1",
+      "config": "compute/model-specs/minimax.json",
+      "sourceDoc": "docs/model-sources/providers/minimax/models/minimax-m2.1.md",
+      "outcome": "official-fields-found",
+      "sourceIds": [
+        "minimax-models",
+        "minimax-anthropic"
+      ],
+      "fieldEvidence": [
+        {
+          "field": "id",
+          "currentValue": "MiniMax-M2.1",
+          "supportedValue": "MiniMax-M2.1",
+          "sourceId": "minimax-models",
+          "assessment": "matches",
+          "explanation": "本轮正文定位精确标识；只确认该标识在其来源合同出现，不证明其他字段或不同套餐可用性。"
+        },
+        {
+          "field": "spec.contextWindow",
+          "currentValue": 204800,
+          "supportedValue": 204800,
+          "sourceId": "minimax-anthropic",
+          "assessment": "matches",
+          "explanation": "官方Anthropic兼容模型表明文整数；其他协议/套餐仍需自身限制证明。"
+        },
+        {
+          "field": "spec.defaultTopP",
+          "currentValue": null,
+          "supportedValue": 0.9,
+          "sourceId": "minimax-anthropic",
+          "assessment": "not-comparable",
+          "explanation": "该页明确API top_p默认（M3=.95/M2.x=.9）；本仓defaultTopP可能产品默认/其他协议，不能自动覆盖。"
+        }
+      ],
+      "remainingFields": [
+        "spec.defaultTemperature",
+        "spec.maxOutputTokens",
+        "spec.capabilities",
+        "spec.serviceType"
+      ],
+      "nextAction": "人工逐字段复核本次候选；只将matches且精确接入适用的字段迁入原来源文档，differs先审单位/阶梯/产品默认；缺项需精确模型页、官方版本卡或授权目录，不猜填。",
+      "notes": [
+        "该Anthropic参数页仅说明max_tokens含思考token并支持设置，未给精确最大输出整数；保留maxOutputTokens缺口，不把示例4096/2048当上限。temperature=1是推荐值而非已证默认。"
+      ],
+      "originalStatus": "partial",
+      "originalGap": "partial"
+    },
+    {
+      "recordKey": "compute/providers/minimax.json#MiniMax-M2.5-highspeed",
+      "modelId": "MiniMax-M2.5-highspeed",
+      "config": "compute/providers/minimax.json",
+      "sourceDoc": "docs/model-sources/providers/minimax/models/minimax-m2.5-highspeed.md",
+      "outcome": "official-fields-found",
+      "sourceIds": [
+        "minimax-models",
+        "minimax-anthropic",
+        "minimax-pricing"
+      ],
+      "fieldEvidence": [
+        {
+          "field": "modelName",
+          "currentValue": "MiniMax-M2.5-highspeed",
+          "supportedValue": "MiniMax-M2.5-highspeed",
+          "sourceId": "minimax-models",
+          "assessment": "matches",
+          "explanation": "本轮正文定位精确标识；只确认该标识在其来源合同出现，不证明其他字段或不同套餐可用性。"
+        },
+        {
+          "field": "contextWindow",
+          "currentValue": 204800,
+          "supportedValue": 204800,
+          "sourceId": "minimax-anthropic",
+          "assessment": "matches",
+          "explanation": "官方Anthropic兼容模型表明文整数；其他协议/套餐仍需自身限制证明。"
+        },
+        {
+          "field": "inputPrice",
+          "currentValue": 4.2,
+          "supportedValue": 4.2,
+          "sourceId": "minimax-pricing",
+          "assessment": "matches",
+          "explanation": "国内CNY/百万token价签；M3此标量仅≤512k输入的标准层，跨阈值/priority需独立阶梯，不当统一价。"
+        },
+        {
+          "field": "outputPrice",
+          "currentValue": 16.8,
+          "supportedValue": 16.8,
+          "sourceId": "minimax-pricing",
+          "assessment": "matches",
+          "explanation": "国内CNY/百万token价签；M3此标量仅≤512k输入的标准层，跨阈值/priority需独立阶梯，不当统一价。"
+        },
+        {
+          "field": "extra.cacheReadPrice",
+          "currentValue": 0.21,
+          "supportedValue": 0.21,
+          "sourceId": "minimax-pricing",
+          "assessment": "matches",
+          "explanation": "国内CNY/百万token价签；M3此标量仅≤512k输入的标准层，跨阈值/priority需独立阶梯，不当统一价。"
+        },
+        {
+          "field": "extra.cacheWritePrice",
+          "currentValue": 2.625,
+          "supportedValue": 2.625,
+          "sourceId": "minimax-pricing",
+          "assessment": "matches",
+          "explanation": "国内CNY/百万token价签；M3此标量仅≤512k输入的标准层，跨阈值/priority需独立阶梯，不当统一价。"
+        },
+        {
+          "field": "defaultTopP",
+          "currentValue": 0.95,
+          "supportedValue": 0.9,
+          "sourceId": "minimax-anthropic",
+          "assessment": "not-comparable",
+          "explanation": "该页明确API top_p默认（M3=.95/M2.x=.9）；本仓defaultTopP可能产品默认/其他协议，不能自动覆盖。"
+        }
+      ],
+      "remainingFields": [
+        "defaultTemperature",
+        "defaultTopP",
+        "maxOutputTokens",
+        "capabilities",
+        "serviceType",
+        "access.maxInputTokens",
+        "access.protocol-readiness"
+      ],
+      "nextAction": "人工逐字段复核本次候选；只将matches且精确接入适用的字段迁入原来源文档，differs先审单位/阶梯/产品默认；缺项需精确模型页、官方版本卡或授权目录，不猜填。",
+      "notes": [
+        "该Anthropic参数页仅说明max_tokens含思考token并支持设置，未给精确最大输出整数；保留maxOutputTokens缺口，不把示例4096/2048当上限。temperature=1是推荐值而非已证默认。"
+      ],
+      "originalStatus": "partial",
+      "originalGap": "partial"
+    },
+    {
+      "recordKey": "compute/model-specs/minimax.json#MiniMax-M2.5-highspeed",
+      "modelId": "MiniMax-M2.5-highspeed",
+      "config": "compute/model-specs/minimax.json",
+      "sourceDoc": "docs/model-sources/providers/minimax/models/minimax-m2.5-highspeed.md",
+      "outcome": "official-fields-found",
+      "sourceIds": [
+        "minimax-models",
+        "minimax-anthropic"
+      ],
+      "fieldEvidence": [
+        {
+          "field": "id",
+          "currentValue": "MiniMax-M2.5-highspeed",
+          "supportedValue": "MiniMax-M2.5-highspeed",
+          "sourceId": "minimax-models",
+          "assessment": "matches",
+          "explanation": "本轮正文定位精确标识；只确认该标识在其来源合同出现，不证明其他字段或不同套餐可用性。"
+        },
+        {
+          "field": "spec.contextWindow",
+          "currentValue": 204800,
+          "supportedValue": 204800,
+          "sourceId": "minimax-anthropic",
+          "assessment": "matches",
+          "explanation": "官方Anthropic兼容模型表明文整数；其他协议/套餐仍需自身限制证明。"
+        },
+        {
+          "field": "spec.defaultTopP",
+          "currentValue": null,
+          "supportedValue": 0.9,
+          "sourceId": "minimax-anthropic",
+          "assessment": "not-comparable",
+          "explanation": "该页明确API top_p默认（M3=.95/M2.x=.9）；本仓defaultTopP可能产品默认/其他协议，不能自动覆盖。"
+        }
+      ],
+      "remainingFields": [
+        "spec.defaultTemperature",
+        "spec.maxOutputTokens",
+        "spec.capabilities",
+        "spec.serviceType"
+      ],
+      "nextAction": "人工逐字段复核本次候选；只将matches且精确接入适用的字段迁入原来源文档，differs先审单位/阶梯/产品默认；缺项需精确模型页、官方版本卡或授权目录，不猜填。",
+      "notes": [
+        "该Anthropic参数页仅说明max_tokens含思考token并支持设置，未给精确最大输出整数；保留maxOutputTokens缺口，不把示例4096/2048当上限。temperature=1是推荐值而非已证默认。"
+      ],
+      "originalStatus": "partial",
+      "originalGap": "partial"
+    },
+    {
+      "recordKey": "compute/providers/minimax.json#MiniMax-M2.5",
+      "modelId": "MiniMax-M2.5",
+      "config": "compute/providers/minimax.json",
+      "sourceDoc": "docs/model-sources/providers/minimax/models/minimax-m2.5.md",
+      "outcome": "official-fields-found",
+      "sourceIds": [
+        "minimax-models",
+        "minimax-anthropic",
+        "minimax-pricing"
+      ],
+      "fieldEvidence": [
+        {
+          "field": "modelName",
+          "currentValue": "MiniMax-M2.5",
+          "supportedValue": "MiniMax-M2.5",
+          "sourceId": "minimax-models",
+          "assessment": "matches",
+          "explanation": "本轮正文定位精确标识；只确认该标识在其来源合同出现，不证明其他字段或不同套餐可用性。"
+        },
+        {
+          "field": "contextWindow",
+          "currentValue": 204800,
+          "supportedValue": 204800,
+          "sourceId": "minimax-anthropic",
+          "assessment": "matches",
+          "explanation": "官方Anthropic兼容模型表明文整数；其他协议/套餐仍需自身限制证明。"
+        },
+        {
+          "field": "inputPrice",
+          "currentValue": 2.1,
+          "supportedValue": 2.1,
+          "sourceId": "minimax-pricing",
+          "assessment": "matches",
+          "explanation": "国内CNY/百万token价签；M3此标量仅≤512k输入的标准层，跨阈值/priority需独立阶梯，不当统一价。"
+        },
+        {
+          "field": "outputPrice",
+          "currentValue": 8.4,
+          "supportedValue": 8.4,
+          "sourceId": "minimax-pricing",
+          "assessment": "matches",
+          "explanation": "国内CNY/百万token价签；M3此标量仅≤512k输入的标准层，跨阈值/priority需独立阶梯，不当统一价。"
+        },
+        {
+          "field": "extra.cacheReadPrice",
+          "currentValue": 0.21,
+          "supportedValue": 0.21,
+          "sourceId": "minimax-pricing",
+          "assessment": "matches",
+          "explanation": "国内CNY/百万token价签；M3此标量仅≤512k输入的标准层，跨阈值/priority需独立阶梯，不当统一价。"
+        },
+        {
+          "field": "extra.cacheWritePrice",
+          "currentValue": 2.625,
+          "supportedValue": 2.625,
+          "sourceId": "minimax-pricing",
+          "assessment": "matches",
+          "explanation": "国内CNY/百万token价签；M3此标量仅≤512k输入的标准层，跨阈值/priority需独立阶梯，不当统一价。"
+        },
+        {
+          "field": "defaultTopP",
+          "currentValue": 0.95,
+          "supportedValue": 0.9,
+          "sourceId": "minimax-anthropic",
+          "assessment": "not-comparable",
+          "explanation": "该页明确API top_p默认（M3=.95/M2.x=.9）；本仓defaultTopP可能产品默认/其他协议，不能自动覆盖。"
+        }
+      ],
+      "remainingFields": [
+        "defaultTemperature",
+        "defaultTopP",
+        "maxOutputTokens",
+        "capabilities",
+        "serviceType",
+        "access.maxInputTokens",
+        "access.protocol-readiness"
+      ],
+      "nextAction": "人工逐字段复核本次候选；只将matches且精确接入适用的字段迁入原来源文档，differs先审单位/阶梯/产品默认；缺项需精确模型页、官方版本卡或授权目录，不猜填。",
+      "notes": [
+        "该Anthropic参数页仅说明max_tokens含思考token并支持设置，未给精确最大输出整数；保留maxOutputTokens缺口，不把示例4096/2048当上限。temperature=1是推荐值而非已证默认。"
+      ],
+      "originalStatus": "partial",
+      "originalGap": "partial"
+    },
+    {
+      "recordKey": "compute/model-specs/minimax.json#MiniMax-M2.5",
+      "modelId": "MiniMax-M2.5",
+      "config": "compute/model-specs/minimax.json",
+      "sourceDoc": "docs/model-sources/providers/minimax/models/minimax-m2.5.md",
+      "outcome": "official-fields-found",
+      "sourceIds": [
+        "minimax-models",
+        "minimax-anthropic"
+      ],
+      "fieldEvidence": [
+        {
+          "field": "id",
+          "currentValue": "MiniMax-M2.5",
+          "supportedValue": "MiniMax-M2.5",
+          "sourceId": "minimax-models",
+          "assessment": "matches",
+          "explanation": "本轮正文定位精确标识；只确认该标识在其来源合同出现，不证明其他字段或不同套餐可用性。"
+        },
+        {
+          "field": "spec.contextWindow",
+          "currentValue": 204800,
+          "supportedValue": 204800,
+          "sourceId": "minimax-anthropic",
+          "assessment": "matches",
+          "explanation": "官方Anthropic兼容模型表明文整数；其他协议/套餐仍需自身限制证明。"
+        },
+        {
+          "field": "spec.defaultTopP",
+          "currentValue": null,
+          "supportedValue": 0.9,
+          "sourceId": "minimax-anthropic",
+          "assessment": "not-comparable",
+          "explanation": "该页明确API top_p默认（M3=.95/M2.x=.9）；本仓defaultTopP可能产品默认/其他协议，不能自动覆盖。"
+        }
+      ],
+      "remainingFields": [
+        "spec.defaultTemperature",
+        "spec.maxOutputTokens",
+        "spec.supportsReasoning",
+        "spec.capabilities",
+        "spec.serviceType"
+      ],
+      "nextAction": "人工逐字段复核本次候选；只将matches且精确接入适用的字段迁入原来源文档，differs先审单位/阶梯/产品默认；缺项需精确模型页、官方版本卡或授权目录，不猜填。",
+      "notes": [
+        "该Anthropic参数页仅说明max_tokens含思考token并支持设置，未给精确最大输出整数；保留maxOutputTokens缺口，不把示例4096/2048当上限。temperature=1是推荐值而非已证默认。"
+      ],
+      "originalStatus": "partial",
+      "originalGap": "partial"
+    },
+    {
+      "recordKey": "compute/providers/minimax.json#MiniMax-M2.7-highspeed",
+      "modelId": "MiniMax-M2.7-highspeed",
+      "config": "compute/providers/minimax.json",
+      "sourceDoc": "docs/model-sources/providers/minimax/models/minimax-m2.7-highspeed.md",
+      "outcome": "official-fields-found",
+      "sourceIds": [
+        "minimax-models",
+        "minimax-anthropic",
+        "minimax-pricing"
+      ],
+      "fieldEvidence": [
+        {
+          "field": "modelName",
+          "currentValue": "MiniMax-M2.7-highspeed",
+          "supportedValue": "MiniMax-M2.7-highspeed",
+          "sourceId": "minimax-models",
+          "assessment": "matches",
+          "explanation": "本轮正文定位精确标识；只确认该标识在其来源合同出现，不证明其他字段或不同套餐可用性。"
+        },
+        {
+          "field": "contextWindow",
+          "currentValue": 204800,
+          "supportedValue": 204800,
+          "sourceId": "minimax-anthropic",
+          "assessment": "matches",
+          "explanation": "官方Anthropic兼容模型表明文整数；其他协议/套餐仍需自身限制证明。"
+        },
+        {
+          "field": "inputPrice",
+          "currentValue": 4.2,
+          "supportedValue": 4.2,
+          "sourceId": "minimax-pricing",
+          "assessment": "matches",
+          "explanation": "国内CNY/百万token价签；M3此标量仅≤512k输入的标准层，跨阈值/priority需独立阶梯，不当统一价。"
+        },
+        {
+          "field": "outputPrice",
+          "currentValue": 16.8,
+          "supportedValue": 16.8,
+          "sourceId": "minimax-pricing",
+          "assessment": "matches",
+          "explanation": "国内CNY/百万token价签；M3此标量仅≤512k输入的标准层，跨阈值/priority需独立阶梯，不当统一价。"
+        },
+        {
+          "field": "extra.cacheReadPrice",
+          "currentValue": 0.42,
+          "supportedValue": 0.42,
+          "sourceId": "minimax-pricing",
+          "assessment": "matches",
+          "explanation": "国内CNY/百万token价签；M3此标量仅≤512k输入的标准层，跨阈值/priority需独立阶梯，不当统一价。"
+        },
+        {
+          "field": "extra.cacheWritePrice",
+          "currentValue": 2.625,
+          "supportedValue": 2.625,
+          "sourceId": "minimax-pricing",
+          "assessment": "matches",
+          "explanation": "国内CNY/百万token价签；M3此标量仅≤512k输入的标准层，跨阈值/priority需独立阶梯，不当统一价。"
+        },
+        {
+          "field": "defaultTopP",
+          "currentValue": 0.95,
+          "supportedValue": 0.9,
+          "sourceId": "minimax-anthropic",
+          "assessment": "not-comparable",
+          "explanation": "该页明确API top_p默认（M3=.95/M2.x=.9）；本仓defaultTopP可能产品默认/其他协议，不能自动覆盖。"
+        }
+      ],
+      "remainingFields": [
+        "defaultTemperature",
+        "defaultTopP",
+        "maxOutputTokens",
+        "capabilities",
+        "serviceType",
+        "access.maxInputTokens",
+        "access.protocol-readiness"
+      ],
+      "nextAction": "人工逐字段复核本次候选；只将matches且精确接入适用的字段迁入原来源文档，differs先审单位/阶梯/产品默认；缺项需精确模型页、官方版本卡或授权目录，不猜填。",
+      "notes": [
+        "该Anthropic参数页仅说明max_tokens含思考token并支持设置，未给精确最大输出整数；保留maxOutputTokens缺口，不把示例4096/2048当上限。temperature=1是推荐值而非已证默认。"
+      ],
+      "originalStatus": "partial",
+      "originalGap": "partial"
+    },
+    {
+      "recordKey": "compute/coding-plans/minimax-coding.json#MiniMax-M2.7-highspeed",
+      "modelId": "MiniMax-M2.7-highspeed",
+      "config": "compute/coding-plans/minimax-coding.json",
+      "sourceDoc": "docs/model-sources/providers/minimax/models/minimax-m2.7-highspeed.md",
+      "outcome": "official-fields-found",
+      "sourceIds": [
+        "minimax-models",
+        "minimax-anthropic",
+        "minimax-plan-doc"
+      ],
+      "fieldEvidence": [
+        {
+          "field": "modelName",
+          "currentValue": "MiniMax-M2.7-highspeed",
+          "supportedValue": "MiniMax-M2.7-highspeed",
+          "sourceId": "minimax-models",
+          "assessment": "matches",
+          "explanation": "本轮正文定位精确标识；只确认该标识在其来源合同出现，不证明其他字段或不同套餐可用性。"
+        },
+        {
+          "field": "contextWindow",
+          "currentValue": 204800,
+          "supportedValue": 204800,
+          "sourceId": "minimax-anthropic",
+          "assessment": "matches",
+          "explanation": "官方Anthropic兼容模型表明文整数；其他协议/套餐仍需自身限制证明。"
+        },
+        {
+          "field": "defaultTopP",
+          "currentValue": null,
+          "supportedValue": 0.9,
+          "sourceId": "minimax-anthropic",
+          "assessment": "not-comparable",
+          "explanation": "该页明确API top_p默认（M3=.95/M2.x=.9）；本仓defaultTopP可能产品默认/其他协议，不能自动覆盖。"
+        }
+      ],
+      "remainingFields": [
+        "maxOutputTokens",
+        "capabilities",
+        "serviceType",
+        "access.maxInputTokens",
+        "access.protocol-readiness"
+      ],
+      "nextAction": "人工逐字段复核本次候选；只将matches且精确接入适用的字段迁入原来源文档，differs先审单位/阶梯/产品默认；缺项需精确模型页、官方版本卡或授权目录，不猜填。",
+      "notes": [
+        "该Anthropic参数页仅说明max_tokens含思考token并支持设置，未给精确最大输出整数；保留maxOutputTokens缺口，不把示例4096/2048当上限。temperature=1是推荐值而非已证默认。",
+        "MPlan文档仅明确全系M3/M2.7/图像/语音共享额度及少数不支持；没有逐型号上下文/最大输出或旧全部媒体白名单，不能从直连表确认套餐参数。"
+      ],
+      "originalStatus": "partial",
+      "originalGap": "idOnly"
+    },
+    {
+      "recordKey": "compute/model-specs/minimax.json#MiniMax-M2.7-highspeed",
+      "modelId": "MiniMax-M2.7-highspeed",
+      "config": "compute/model-specs/minimax.json",
+      "sourceDoc": "docs/model-sources/providers/minimax/models/minimax-m2.7-highspeed.md",
+      "outcome": "official-fields-found",
+      "sourceIds": [
+        "minimax-models",
+        "minimax-anthropic"
+      ],
+      "fieldEvidence": [
+        {
+          "field": "id",
+          "currentValue": "MiniMax-M2.7-highspeed",
+          "supportedValue": "MiniMax-M2.7-highspeed",
+          "sourceId": "minimax-models",
+          "assessment": "matches",
+          "explanation": "本轮正文定位精确标识；只确认该标识在其来源合同出现，不证明其他字段或不同套餐可用性。"
+        },
+        {
+          "field": "spec.contextWindow",
+          "currentValue": 204800,
+          "supportedValue": 204800,
+          "sourceId": "minimax-anthropic",
+          "assessment": "matches",
+          "explanation": "官方Anthropic兼容模型表明文整数；其他协议/套餐仍需自身限制证明。"
+        },
+        {
+          "field": "spec.defaultTopP",
+          "currentValue": null,
+          "supportedValue": 0.9,
+          "sourceId": "minimax-anthropic",
+          "assessment": "not-comparable",
+          "explanation": "该页明确API top_p默认（M3=.95/M2.x=.9）；本仓defaultTopP可能产品默认/其他协议，不能自动覆盖。"
+        }
+      ],
+      "remainingFields": [
+        "spec.defaultTemperature",
+        "spec.maxOutputTokens",
+        "spec.capabilities",
+        "spec.serviceType"
+      ],
+      "nextAction": "人工逐字段复核本次候选；只将matches且精确接入适用的字段迁入原来源文档，differs先审单位/阶梯/产品默认；缺项需精确模型页、官方版本卡或授权目录，不猜填。",
+      "notes": [
+        "该Anthropic参数页仅说明max_tokens含思考token并支持设置，未给精确最大输出整数；保留maxOutputTokens缺口，不把示例4096/2048当上限。temperature=1是推荐值而非已证默认。"
+      ],
+      "originalStatus": "partial",
+      "originalGap": "partial"
+    },
+    {
+      "recordKey": "compute/providers/minimax.json#MiniMax-M2.7",
+      "modelId": "MiniMax-M2.7",
+      "config": "compute/providers/minimax.json",
+      "sourceDoc": "docs/model-sources/providers/minimax/models/minimax-m2.7.md",
+      "outcome": "official-fields-found",
+      "sourceIds": [
+        "minimax-models",
+        "minimax-anthropic",
+        "minimax-pricing"
+      ],
+      "fieldEvidence": [
+        {
+          "field": "modelName",
+          "currentValue": "MiniMax-M2.7",
+          "supportedValue": "MiniMax-M2.7",
+          "sourceId": "minimax-models",
+          "assessment": "matches",
+          "explanation": "本轮正文定位精确标识；只确认该标识在其来源合同出现，不证明其他字段或不同套餐可用性。"
+        },
+        {
+          "field": "contextWindow",
+          "currentValue": 204800,
+          "supportedValue": 204800,
+          "sourceId": "minimax-anthropic",
+          "assessment": "matches",
+          "explanation": "官方Anthropic兼容模型表明文整数；其他协议/套餐仍需自身限制证明。"
+        },
+        {
+          "field": "inputPrice",
+          "currentValue": 2.1,
+          "supportedValue": 2.1,
+          "sourceId": "minimax-pricing",
+          "assessment": "matches",
+          "explanation": "国内CNY/百万token价签；M3此标量仅≤512k输入的标准层，跨阈值/priority需独立阶梯，不当统一价。"
+        },
+        {
+          "field": "outputPrice",
+          "currentValue": 8.4,
+          "supportedValue": 8.4,
+          "sourceId": "minimax-pricing",
+          "assessment": "matches",
+          "explanation": "国内CNY/百万token价签；M3此标量仅≤512k输入的标准层，跨阈值/priority需独立阶梯，不当统一价。"
+        },
+        {
+          "field": "extra.cacheReadPrice",
+          "currentValue": 0.42,
+          "supportedValue": 0.42,
+          "sourceId": "minimax-pricing",
+          "assessment": "matches",
+          "explanation": "国内CNY/百万token价签；M3此标量仅≤512k输入的标准层，跨阈值/priority需独立阶梯，不当统一价。"
+        },
+        {
+          "field": "extra.cacheWritePrice",
+          "currentValue": 2.625,
+          "supportedValue": 2.625,
+          "sourceId": "minimax-pricing",
+          "assessment": "matches",
+          "explanation": "国内CNY/百万token价签；M3此标量仅≤512k输入的标准层，跨阈值/priority需独立阶梯，不当统一价。"
+        },
+        {
+          "field": "defaultTopP",
+          "currentValue": 0.95,
+          "supportedValue": 0.9,
+          "sourceId": "minimax-anthropic",
+          "assessment": "not-comparable",
+          "explanation": "该页明确API top_p默认（M3=.95/M2.x=.9）；本仓defaultTopP可能产品默认/其他协议，不能自动覆盖。"
+        }
+      ],
+      "remainingFields": [
+        "defaultTemperature",
+        "defaultTopP",
+        "maxOutputTokens",
+        "capabilities",
+        "serviceType",
+        "access.maxInputTokens",
+        "access.protocol-readiness"
+      ],
+      "nextAction": "人工逐字段复核本次候选；只将matches且精确接入适用的字段迁入原来源文档，differs先审单位/阶梯/产品默认；缺项需精确模型页、官方版本卡或授权目录，不猜填。",
+      "notes": [
+        "该Anthropic参数页仅说明max_tokens含思考token并支持设置，未给精确最大输出整数；保留maxOutputTokens缺口，不把示例4096/2048当上限。temperature=1是推荐值而非已证默认。"
+      ],
+      "originalStatus": "partial",
+      "originalGap": "partial"
+    },
+    {
+      "recordKey": "compute/coding-plans/minimax-coding.json#MiniMax-M2.7",
+      "modelId": "MiniMax-M2.7",
+      "config": "compute/coding-plans/minimax-coding.json",
+      "sourceDoc": "docs/model-sources/providers/minimax/models/minimax-m2.7.md",
+      "outcome": "official-fields-found",
+      "sourceIds": [
+        "minimax-models",
+        "minimax-anthropic",
+        "minimax-plan-doc"
+      ],
+      "fieldEvidence": [
+        {
+          "field": "modelName",
+          "currentValue": "MiniMax-M2.7",
+          "supportedValue": "MiniMax-M2.7",
+          "sourceId": "minimax-models",
+          "assessment": "matches",
+          "explanation": "本轮正文定位精确标识；只确认该标识在其来源合同出现，不证明其他字段或不同套餐可用性。"
+        },
+        {
+          "field": "contextWindow",
+          "currentValue": 204800,
+          "supportedValue": 204800,
+          "sourceId": "minimax-anthropic",
+          "assessment": "matches",
+          "explanation": "官方Anthropic兼容模型表明文整数；其他协议/套餐仍需自身限制证明。"
+        },
+        {
+          "field": "defaultTopP",
+          "currentValue": null,
+          "supportedValue": 0.9,
+          "sourceId": "minimax-anthropic",
+          "assessment": "not-comparable",
+          "explanation": "该页明确API top_p默认（M3=.95/M2.x=.9）；本仓defaultTopP可能产品默认/其他协议，不能自动覆盖。"
+        }
+      ],
+      "remainingFields": [
+        "maxOutputTokens",
+        "capabilities",
+        "serviceType",
+        "access.maxInputTokens",
+        "access.protocol-readiness"
+      ],
+      "nextAction": "人工逐字段复核本次候选；只将matches且精确接入适用的字段迁入原来源文档，differs先审单位/阶梯/产品默认；缺项需精确模型页、官方版本卡或授权目录，不猜填。",
+      "notes": [
+        "该Anthropic参数页仅说明max_tokens含思考token并支持设置，未给精确最大输出整数；保留maxOutputTokens缺口，不把示例4096/2048当上限。temperature=1是推荐值而非已证默认。",
+        "MPlan文档仅明确全系M3/M2.7/图像/语音共享额度及少数不支持；没有逐型号上下文/最大输出或旧全部媒体白名单，不能从直连表确认套餐参数。"
+      ],
+      "originalStatus": "partial",
+      "originalGap": "idOnly"
+    },
+    {
+      "recordKey": "compute/model-specs/minimax.json#MiniMax-M2.7",
+      "modelId": "MiniMax-M2.7",
+      "config": "compute/model-specs/minimax.json",
+      "sourceDoc": "docs/model-sources/providers/minimax/models/minimax-m2.7.md",
+      "outcome": "official-fields-found",
+      "sourceIds": [
+        "minimax-models",
+        "minimax-anthropic"
+      ],
+      "fieldEvidence": [
+        {
+          "field": "id",
+          "currentValue": "MiniMax-M2.7",
+          "supportedValue": "MiniMax-M2.7",
+          "sourceId": "minimax-models",
+          "assessment": "matches",
+          "explanation": "本轮正文定位精确标识；只确认该标识在其来源合同出现，不证明其他字段或不同套餐可用性。"
+        },
+        {
+          "field": "spec.contextWindow",
+          "currentValue": 204800,
+          "supportedValue": 204800,
+          "sourceId": "minimax-anthropic",
+          "assessment": "matches",
+          "explanation": "官方Anthropic兼容模型表明文整数；其他协议/套餐仍需自身限制证明。"
+        },
+        {
+          "field": "spec.defaultTopP",
+          "currentValue": null,
+          "supportedValue": 0.9,
+          "sourceId": "minimax-anthropic",
+          "assessment": "not-comparable",
+          "explanation": "该页明确API top_p默认（M3=.95/M2.x=.9）；本仓defaultTopP可能产品默认/其他协议，不能自动覆盖。"
+        }
+      ],
+      "remainingFields": [
+        "spec.defaultTemperature",
+        "spec.maxOutputTokens",
+        "spec.supportsReasoning",
+        "spec.capabilities",
+        "spec.serviceType"
+      ],
+      "nextAction": "人工逐字段复核本次候选；只将matches且精确接入适用的字段迁入原来源文档，differs先审单位/阶梯/产品默认；缺项需精确模型页、官方版本卡或授权目录，不猜填。",
+      "notes": [
+        "该Anthropic参数页仅说明max_tokens含思考token并支持设置，未给精确最大输出整数；保留maxOutputTokens缺口，不把示例4096/2048当上限。temperature=1是推荐值而非已证默认。"
+      ],
+      "originalStatus": "partial",
+      "originalGap": "partial"
+    },
+    {
+      "recordKey": "compute/providers/minimax.json#MiniMax-M2",
+      "modelId": "MiniMax-M2",
+      "config": "compute/providers/minimax.json",
+      "sourceDoc": "docs/model-sources/providers/minimax/models/minimax-m2.md",
+      "outcome": "official-fields-found",
+      "sourceIds": [
+        "minimax-models",
+        "minimax-anthropic",
+        "minimax-pricing"
+      ],
+      "fieldEvidence": [
+        {
+          "field": "modelName",
+          "currentValue": "MiniMax-M2",
+          "supportedValue": "MiniMax-M2",
+          "sourceId": "minimax-models",
+          "assessment": "matches",
+          "explanation": "本轮正文定位精确标识；只确认该标识在其来源合同出现，不证明其他字段或不同套餐可用性。"
+        },
+        {
+          "field": "contextWindow",
+          "currentValue": 204800,
+          "supportedValue": 204800,
+          "sourceId": "minimax-anthropic",
+          "assessment": "matches",
+          "explanation": "官方Anthropic兼容模型表明文整数；其他协议/套餐仍需自身限制证明。"
+        },
+        {
+          "field": "inputPrice",
+          "currentValue": 2.1,
+          "supportedValue": 2.1,
+          "sourceId": "minimax-pricing",
+          "assessment": "matches",
+          "explanation": "国内CNY/百万token价签；M3此标量仅≤512k输入的标准层，跨阈值/priority需独立阶梯，不当统一价。"
+        },
+        {
+          "field": "outputPrice",
+          "currentValue": 8.4,
+          "supportedValue": 8.4,
+          "sourceId": "minimax-pricing",
+          "assessment": "matches",
+          "explanation": "国内CNY/百万token价签；M3此标量仅≤512k输入的标准层，跨阈值/priority需独立阶梯，不当统一价。"
+        },
+        {
+          "field": "extra.cacheReadPrice",
+          "currentValue": 0.21,
+          "supportedValue": 0.21,
+          "sourceId": "minimax-pricing",
+          "assessment": "matches",
+          "explanation": "国内CNY/百万token价签；M3此标量仅≤512k输入的标准层，跨阈值/priority需独立阶梯，不当统一价。"
+        },
+        {
+          "field": "extra.cacheWritePrice",
+          "currentValue": 2.625,
+          "supportedValue": 2.625,
+          "sourceId": "minimax-pricing",
+          "assessment": "matches",
+          "explanation": "国内CNY/百万token价签；M3此标量仅≤512k输入的标准层，跨阈值/priority需独立阶梯，不当统一价。"
+        },
+        {
+          "field": "defaultTopP",
+          "currentValue": 0.95,
+          "supportedValue": 0.9,
+          "sourceId": "minimax-anthropic",
+          "assessment": "not-comparable",
+          "explanation": "该页明确API top_p默认（M3=.95/M2.x=.9）；本仓defaultTopP可能产品默认/其他协议，不能自动覆盖。"
+        }
+      ],
+      "remainingFields": [
+        "defaultTemperature",
+        "defaultTopP",
+        "maxOutputTokens",
+        "capabilities",
+        "serviceType",
+        "access.maxInputTokens",
+        "access.protocol-readiness"
+      ],
+      "nextAction": "人工逐字段复核本次候选；只将matches且精确接入适用的字段迁入原来源文档，differs先审单位/阶梯/产品默认；缺项需精确模型页、官方版本卡或授权目录，不猜填。",
+      "notes": [
+        "该Anthropic参数页仅说明max_tokens含思考token并支持设置，未给精确最大输出整数；保留maxOutputTokens缺口，不把示例4096/2048当上限。temperature=1是推荐值而非已证默认。"
+      ],
+      "originalStatus": "partial",
+      "originalGap": "idOnly"
+    },
+    {
+      "recordKey": "compute/model-specs/minimax.json#MiniMax-M2",
+      "modelId": "MiniMax-M2",
+      "config": "compute/model-specs/minimax.json",
+      "sourceDoc": "docs/model-sources/providers/minimax/models/minimax-m2.md",
+      "outcome": "official-fields-found",
+      "sourceIds": [
+        "minimax-models",
+        "minimax-anthropic"
+      ],
+      "fieldEvidence": [
+        {
+          "field": "id",
+          "currentValue": "MiniMax-M2",
+          "supportedValue": "MiniMax-M2",
+          "sourceId": "minimax-models",
+          "assessment": "matches",
+          "explanation": "本轮正文定位精确标识；只确认该标识在其来源合同出现，不证明其他字段或不同套餐可用性。"
+        },
+        {
+          "field": "spec.contextWindow",
+          "currentValue": 204800,
+          "supportedValue": 204800,
+          "sourceId": "minimax-anthropic",
+          "assessment": "matches",
+          "explanation": "官方Anthropic兼容模型表明文整数；其他协议/套餐仍需自身限制证明。"
+        },
+        {
+          "field": "spec.defaultTopP",
+          "currentValue": null,
+          "supportedValue": 0.9,
+          "sourceId": "minimax-anthropic",
+          "assessment": "not-comparable",
+          "explanation": "该页明确API top_p默认（M3=.95/M2.x=.9）；本仓defaultTopP可能产品默认/其他协议，不能自动覆盖。"
+        }
+      ],
+      "remainingFields": [
+        "spec.defaultTemperature",
+        "spec.maxOutputTokens",
+        "spec.capabilities",
+        "spec.serviceType"
+      ],
+      "nextAction": "人工逐字段复核本次候选；只将matches且精确接入适用的字段迁入原来源文档，differs先审单位/阶梯/产品默认；缺项需精确模型页、官方版本卡或授权目录，不猜填。",
+      "notes": [
+        "该Anthropic参数页仅说明max_tokens含思考token并支持设置，未给精确最大输出整数；保留maxOutputTokens缺口，不把示例4096/2048当上限。temperature=1是推荐值而非已证默认。"
+      ],
+      "originalStatus": "partial",
+      "originalGap": "idOnly"
+    },
+    {
+      "recordKey": "compute/coding-plans/minimax-coding.json#MiniMax-M3.1-Flash-Preview",
+      "modelId": "MiniMax-M3.1-Flash-Preview",
+      "config": "compute/coding-plans/minimax-coding.json",
+      "sourceDoc": "docs/model-sources/providers/minimax/models/minimax-m3.1-flash-preview.md",
+      "outcome": "official-fields-found",
+      "sourceIds": [
+        "minimax-models",
+        "minimax-anthropic",
+        "minimax-plan-doc"
+      ],
+      "fieldEvidence": [
+        {
+          "field": "modelName",
+          "currentValue": "MiniMax-M3.1-Flash-Preview",
+          "supportedValue": "MiniMax-M3.1-Flash-Preview",
+          "sourceId": "minimax-models",
+          "assessment": "matches",
+          "explanation": "本轮正文定位精确标识；只确认该标识在其来源合同出现，不证明其他字段或不同套餐可用性。"
+        },
+        {
+          "field": "contextWindow",
+          "currentValue": 1000000,
+          "supportedValue": 1000000,
+          "sourceId": "minimax-anthropic",
+          "assessment": "matches",
+          "explanation": "官方Anthropic兼容模型表明文整数；其他协议/套餐仍需自身限制证明。"
+        },
+        {
+          "field": "defaultTopP",
+          "currentValue": null,
+          "supportedValue": 0.95,
+          "sourceId": "minimax-anthropic",
+          "assessment": "not-comparable",
+          "explanation": "该页明确API top_p默认（M3=.95/M2.x=.9）；本仓defaultTopP可能产品默认/其他协议，不能自动覆盖。"
+        }
+      ],
+      "remainingFields": [
+        "capabilities",
+        "serviceType",
+        "access.maxInputTokens",
+        "access.protocol-readiness"
+      ],
+      "nextAction": "人工逐字段复核本次候选；只将matches且精确接入适用的字段迁入原来源文档，differs先审单位/阶梯/产品默认；缺项需精确模型页、官方版本卡或授权目录，不猜填。",
+      "notes": [
+        "该Anthropic参数页仅说明max_tokens含思考token并支持设置，未给精确最大输出整数；保留maxOutputTokens缺口，不把示例4096/2048当上限。temperature=1是推荐值而非已证默认。",
+        "MPlan文档仅明确全系M3/M2.7/图像/语音共享额度及少数不支持；没有逐型号上下文/最大输出或旧全部媒体白名单，不能从直连表确认套餐参数。"
+      ],
+      "originalStatus": "partial",
+      "originalGap": "partial"
+    },
+    {
+      "recordKey": "compute/model-specs/minimax.json#MiniMax-M3.1-Flash-Preview",
+      "modelId": "MiniMax-M3.1-Flash-Preview",
+      "config": "compute/model-specs/minimax.json",
+      "sourceDoc": "docs/model-sources/providers/minimax/models/minimax-m3.1-flash-preview.md",
+      "outcome": "official-fields-found",
+      "sourceIds": [
+        "minimax-models",
+        "minimax-anthropic"
+      ],
+      "fieldEvidence": [
+        {
+          "field": "id",
+          "currentValue": "MiniMax-M3.1-Flash-Preview",
+          "supportedValue": "MiniMax-M3.1-Flash-Preview",
+          "sourceId": "minimax-models",
+          "assessment": "matches",
+          "explanation": "本轮正文定位精确标识；只确认该标识在其来源合同出现，不证明其他字段或不同套餐可用性。"
+        },
+        {
+          "field": "spec.contextWindow",
+          "currentValue": 1000000,
+          "supportedValue": 1000000,
+          "sourceId": "minimax-anthropic",
+          "assessment": "matches",
+          "explanation": "官方Anthropic兼容模型表明文整数；其他协议/套餐仍需自身限制证明。"
+        },
+        {
+          "field": "spec.defaultTopP",
+          "currentValue": null,
+          "supportedValue": 0.95,
+          "sourceId": "minimax-anthropic",
+          "assessment": "not-comparable",
+          "explanation": "该页明确API top_p默认（M3=.95/M2.x=.9）；本仓defaultTopP可能产品默认/其他协议，不能自动覆盖。"
+        }
+      ],
+      "remainingFields": [
+        "spec.supportsReasoning",
+        "spec.capabilities",
+        "spec.serviceType"
+      ],
+      "nextAction": "人工逐字段复核本次候选；只将matches且精确接入适用的字段迁入原来源文档，differs先审单位/阶梯/产品默认；缺项需精确模型页、官方版本卡或授权目录，不猜填。",
+      "notes": [
+        "该Anthropic参数页仅说明max_tokens含思考token并支持设置，未给精确最大输出整数；保留maxOutputTokens缺口，不把示例4096/2048当上限。temperature=1是推荐值而非已证默认。"
+      ],
+      "originalStatus": "partial",
+      "originalGap": "partial"
+    },
+    {
+      "recordKey": "compute/providers/minimax.json#MiniMax-M3",
+      "modelId": "MiniMax-M3",
+      "config": "compute/providers/minimax.json",
+      "sourceDoc": "docs/model-sources/providers/minimax/models/minimax-m3.md",
+      "outcome": "official-fields-found",
+      "sourceIds": [
+        "minimax-models",
+        "minimax-anthropic",
+        "minimax-pricing"
+      ],
+      "fieldEvidence": [
+        {
+          "field": "modelName",
+          "currentValue": "MiniMax-M3",
+          "supportedValue": "MiniMax-M3",
+          "sourceId": "minimax-models",
+          "assessment": "matches",
+          "explanation": "本轮正文定位精确标识；只确认该标识在其来源合同出现，不证明其他字段或不同套餐可用性。"
+        },
+        {
+          "field": "contextWindow",
+          "currentValue": 1000000,
+          "supportedValue": 1000000,
+          "sourceId": "minimax-anthropic",
+          "assessment": "matches",
+          "explanation": "官方Anthropic兼容模型表明文整数；其他协议/套餐仍需自身限制证明。"
+        },
+        {
+          "field": "inputPrice",
+          "currentValue": 2.1,
+          "supportedValue": 2.1,
+          "sourceId": "minimax-pricing",
+          "assessment": "matches",
+          "explanation": "国内CNY/百万token价签；M3此标量仅≤512k输入的标准层，跨阈值/priority需独立阶梯，不当统一价。"
+        },
+        {
+          "field": "outputPrice",
+          "currentValue": 8.4,
+          "supportedValue": 8.4,
+          "sourceId": "minimax-pricing",
+          "assessment": "matches",
+          "explanation": "国内CNY/百万token价签；M3此标量仅≤512k输入的标准层，跨阈值/priority需独立阶梯，不当统一价。"
+        },
+        {
+          "field": "extra.cacheReadPrice",
+          "currentValue": null,
+          "supportedValue": 0.42,
+          "sourceId": "minimax-pricing",
+          "assessment": "not-comparable",
+          "explanation": "国内CNY/百万token价签；M3此标量仅≤512k输入的标准层，跨阈值/priority需独立阶梯，不当统一价。"
+        },
+        {
+          "field": "defaultTopP",
+          "currentValue": 0.95,
+          "supportedValue": 0.95,
+          "sourceId": "minimax-anthropic",
+          "assessment": "not-comparable",
+          "explanation": "该页明确API top_p默认（M3=.95/M2.x=.9）；本仓defaultTopP可能产品默认/其他协议，不能自动覆盖。"
+        }
+      ],
+      "remainingFields": [
+        "defaultTemperature",
+        "defaultTopP",
+        "extra.pricingTiers",
+        "extra.priorityPricingTiers",
+        "maxOutputTokens",
+        "capabilities",
+        "serviceType",
+        "access.maxInputTokens",
+        "access.protocol-readiness"
+      ],
+      "nextAction": "人工逐字段复核本次候选；只将matches且精确接入适用的字段迁入原来源文档，differs先审单位/阶梯/产品默认；缺项需精确模型页、官方版本卡或授权目录，不猜填。",
+      "notes": [
+        "该Anthropic参数页仅说明max_tokens含思考token并支持设置，未给精确最大输出整数；保留maxOutputTokens缺口，不把示例4096/2048当上限。temperature=1是推荐值而非已证默认。"
+      ],
+      "originalStatus": "partial",
+      "originalGap": "partial"
+    },
+    {
+      "recordKey": "compute/coding-plans/minimax-coding.json#MiniMax-M3",
+      "modelId": "MiniMax-M3",
+      "config": "compute/coding-plans/minimax-coding.json",
+      "sourceDoc": "docs/model-sources/providers/minimax/models/minimax-m3.md",
+      "outcome": "official-fields-found",
+      "sourceIds": [
+        "minimax-models",
+        "minimax-anthropic",
+        "minimax-plan-doc"
+      ],
+      "fieldEvidence": [
+        {
+          "field": "modelName",
+          "currentValue": "MiniMax-M3",
+          "supportedValue": "MiniMax-M3",
+          "sourceId": "minimax-models",
+          "assessment": "matches",
+          "explanation": "本轮正文定位精确标识；只确认该标识在其来源合同出现，不证明其他字段或不同套餐可用性。"
+        },
+        {
+          "field": "contextWindow",
+          "currentValue": 1000000,
+          "supportedValue": 1000000,
+          "sourceId": "minimax-anthropic",
+          "assessment": "matches",
+          "explanation": "官方Anthropic兼容模型表明文整数；其他协议/套餐仍需自身限制证明。"
+        },
+        {
+          "field": "defaultTopP",
+          "currentValue": null,
+          "supportedValue": 0.95,
+          "sourceId": "minimax-anthropic",
+          "assessment": "not-comparable",
+          "explanation": "该页明确API top_p默认（M3=.95/M2.x=.9）；本仓defaultTopP可能产品默认/其他协议，不能自动覆盖。"
+        }
+      ],
+      "remainingFields": [
+        "maxOutputTokens",
+        "capabilities",
+        "serviceType",
+        "access.maxInputTokens",
+        "access.protocol-readiness"
+      ],
+      "nextAction": "人工逐字段复核本次候选；只将matches且精确接入适用的字段迁入原来源文档，differs先审单位/阶梯/产品默认；缺项需精确模型页、官方版本卡或授权目录，不猜填。",
+      "notes": [
+        "该Anthropic参数页仅说明max_tokens含思考token并支持设置，未给精确最大输出整数；保留maxOutputTokens缺口，不把示例4096/2048当上限。temperature=1是推荐值而非已证默认。",
+        "MPlan文档仅明确全系M3/M2.7/图像/语音共享额度及少数不支持；没有逐型号上下文/最大输出或旧全部媒体白名单，不能从直连表确认套餐参数。"
+      ],
+      "originalStatus": "partial",
+      "originalGap": "idOnly"
+    },
+    {
+      "recordKey": "compute/model-specs/minimax.json#MiniMax-M3",
+      "modelId": "MiniMax-M3",
+      "config": "compute/model-specs/minimax.json",
+      "sourceDoc": "docs/model-sources/providers/minimax/models/minimax-m3.md",
+      "outcome": "official-fields-found",
+      "sourceIds": [
+        "minimax-models",
+        "minimax-anthropic"
+      ],
+      "fieldEvidence": [
+        {
+          "field": "id",
+          "currentValue": "MiniMax-M3",
+          "supportedValue": "MiniMax-M3",
+          "sourceId": "minimax-models",
+          "assessment": "matches",
+          "explanation": "本轮正文定位精确标识；只确认该标识在其来源合同出现，不证明其他字段或不同套餐可用性。"
+        },
+        {
+          "field": "spec.contextWindow",
+          "currentValue": 1000000,
+          "supportedValue": 1000000,
+          "sourceId": "minimax-anthropic",
+          "assessment": "matches",
+          "explanation": "官方Anthropic兼容模型表明文整数；其他协议/套餐仍需自身限制证明。"
+        },
+        {
+          "field": "spec.defaultTopP",
+          "currentValue": null,
+          "supportedValue": 0.95,
+          "sourceId": "minimax-anthropic",
+          "assessment": "not-comparable",
+          "explanation": "该页明确API top_p默认（M3=.95/M2.x=.9）；本仓defaultTopP可能产品默认/其他协议，不能自动覆盖。"
+        }
+      ],
+      "remainingFields": [
+        "spec.defaultTemperature",
+        "spec.maxOutputTokens",
+        "spec.supportsReasoning",
+        "spec.capabilities",
+        "spec.serviceType"
+      ],
+      "nextAction": "人工逐字段复核本次候选；只将matches且精确接入适用的字段迁入原来源文档，differs先审单位/阶梯/产品默认；缺项需精确模型页、官方版本卡或授权目录，不猜填。",
+      "notes": [
+        "该Anthropic参数页仅说明max_tokens含思考token并支持设置，未给精确最大输出整数；保留maxOutputTokens缺口，不把示例4096/2048当上限。temperature=1是推荐值而非已证默认。"
+      ],
+      "originalStatus": "partial",
+      "originalGap": "partial"
+    },
+    {
+      "recordKey": "compute/model-specs/minimax.json#MiniMax-Text-01",
+      "modelId": "MiniMax-Text-01",
+      "config": "compute/model-specs/minimax.json",
+      "sourceDoc": "docs/model-sources/providers/minimax/models/minimax-text-01.md",
+      "outcome": "still-unresolved",
+      "sourceIds": [
+        "minimax-models",
+        "minimax-anthropic",
+        "minimax-video",
+        "minimax-hailuo",
+        "minimax-pricing",
+        "minimax-llms",
+        "minimax-speech-api",
+        "minimax-image-api",
+        "minimax-music-api",
+        "minimax-plan-doc",
+        "minimax-paygo-usd"
+      ],
+      "fieldEvidence": [],
+      "remainingFields": [
+        "id",
+        "spec.contextWindow",
+        "spec.defaultTemperature",
+        "spec.maxOutputTokens",
+        "spec.capabilities",
+        "spec.serviceType"
+      ],
+      "nextAction": "人工逐字段复核本次候选；只将matches且精确接入适用的字段迁入原来源文档，differs先审单位/阶梯/产品默认；缺项需精确模型页、官方版本卡或授权目录，不猜填。",
+      "notes": [
+        "本轮未在可读页面定位完整精确型号合同；缺失不判定停服。"
+      ],
+      "originalStatus": "pending",
+      "originalGap": "pending"
+    },
+    {
+      "recordKey": "compute/providers/minimax.json#music-2.5+",
+      "modelId": "music-2.5+",
+      "config": "compute/providers/minimax.json",
+      "sourceDoc": "docs/model-sources/providers/minimax/models/music-2.5--da64d60f.md",
+      "outcome": "still-unresolved",
+      "sourceIds": [
+        "minimax-models",
+        "minimax-plan-doc"
+      ],
+      "fieldEvidence": [
+        {
+          "field": "accessAvailability",
+          "currentValue": "历史型号保留",
+          "supportedValue": "paid仅历史付费用户；free已停止；套餐音乐未获证明",
+          "sourceId": "minimax-models",
+          "assessment": "not-comparable",
+          "explanation": "生命周期/账号合同证据，不能转换成普通模型参数。"
+        }
+      ],
+      "remainingFields": [
+        "extra.pricePerSongUpToFiveMinutes",
+        "modelName",
+        "capabilities",
+        "serviceType",
+        "access.maxInputTokens",
+        "access.protocol-readiness"
+      ],
+      "nextAction": "人工逐字段复核本次候选；只将matches且精确接入适用的字段迁入原来源文档，differs先审单位/阶梯/产品默认；缺项需精确模型页、官方版本卡或授权目录，不猜填。",
+      "notes": [
+        "官方通知2026-08-20后付费音乐API不向新用户开放，历史付费用户可继续；免费音乐API停止服务。记录需区分账号资格和原厂型号，不据此全量删除paid型号。MPlan覆盖文本/图片/语音，并未证明music属于套餐。"
+      ],
+      "originalStatus": "pending",
+      "originalGap": "pending"
+    },
+    {
+      "recordKey": "compute/model-specs/minimax.json#music-2.5+",
+      "modelId": "music-2.5+",
+      "config": "compute/model-specs/minimax.json",
+      "sourceDoc": "docs/model-sources/providers/minimax/models/music-2.5--da64d60f.md",
+      "outcome": "still-unresolved",
+      "sourceIds": [
+        "minimax-models",
+        "minimax-plan-doc"
+      ],
+      "fieldEvidence": [
+        {
+          "field": "accessAvailability",
+          "currentValue": "历史型号保留",
+          "supportedValue": "paid仅历史付费用户；free已停止；套餐音乐未获证明",
+          "sourceId": "minimax-models",
+          "assessment": "not-comparable",
+          "explanation": "生命周期/账号合同证据，不能转换成普通模型参数。"
+        }
+      ],
+      "remainingFields": [
+        "id",
+        "spec.capabilities",
+        "spec.serviceType"
+      ],
+      "nextAction": "人工逐字段复核本次候选；只将matches且精确接入适用的字段迁入原来源文档，differs先审单位/阶梯/产品默认；缺项需精确模型页、官方版本卡或授权目录，不猜填。",
+      "notes": [
+        "官方通知2026-08-20后付费音乐API不向新用户开放，历史付费用户可继续；免费音乐API停止服务。记录需区分账号资格和原厂型号，不据此全量删除paid型号。MPlan覆盖文本/图片/语音，并未证明music属于套餐。"
+      ],
+      "originalStatus": "pending",
+      "originalGap": "pending"
+    },
+    {
+      "recordKey": "compute/providers/minimax.json#music-2.5",
+      "modelId": "music-2.5",
+      "config": "compute/providers/minimax.json",
+      "sourceDoc": "docs/model-sources/providers/minimax/models/music-2.5.md",
+      "outcome": "still-unresolved",
+      "sourceIds": [
+        "minimax-models",
+        "minimax-plan-doc"
+      ],
+      "fieldEvidence": [
+        {
+          "field": "accessAvailability",
+          "currentValue": "历史型号保留",
+          "supportedValue": "paid仅历史付费用户；free已停止；套餐音乐未获证明",
+          "sourceId": "minimax-models",
+          "assessment": "not-comparable",
+          "explanation": "生命周期/账号合同证据，不能转换成普通模型参数。"
+        }
+      ],
+      "remainingFields": [
+        "extra.pricePerSongUpToFiveMinutes",
+        "modelName",
+        "capabilities",
+        "serviceType",
+        "access.maxInputTokens",
+        "access.protocol-readiness"
+      ],
+      "nextAction": "人工逐字段复核本次候选；只将matches且精确接入适用的字段迁入原来源文档，differs先审单位/阶梯/产品默认；缺项需精确模型页、官方版本卡或授权目录，不猜填。",
+      "notes": [
+        "官方通知2026-08-20后付费音乐API不向新用户开放，历史付费用户可继续；免费音乐API停止服务。记录需区分账号资格和原厂型号，不据此全量删除paid型号。MPlan覆盖文本/图片/语音，并未证明music属于套餐。"
+      ],
+      "originalStatus": "pending",
+      "originalGap": "pending"
+    },
+    {
+      "recordKey": "compute/model-specs/minimax.json#music-2.5",
+      "modelId": "music-2.5",
+      "config": "compute/model-specs/minimax.json",
+      "sourceDoc": "docs/model-sources/providers/minimax/models/music-2.5.md",
+      "outcome": "still-unresolved",
+      "sourceIds": [
+        "minimax-models",
+        "minimax-plan-doc"
+      ],
+      "fieldEvidence": [
+        {
+          "field": "accessAvailability",
+          "currentValue": "历史型号保留",
+          "supportedValue": "paid仅历史付费用户；free已停止；套餐音乐未获证明",
+          "sourceId": "minimax-models",
+          "assessment": "not-comparable",
+          "explanation": "生命周期/账号合同证据，不能转换成普通模型参数。"
+        }
+      ],
+      "remainingFields": [
+        "id",
+        "spec.capabilities",
+        "spec.serviceType"
+      ],
+      "nextAction": "人工逐字段复核本次候选；只将matches且精确接入适用的字段迁入原来源文档，differs先审单位/阶梯/产品默认；缺项需精确模型页、官方版本卡或授权目录，不猜填。",
+      "notes": [
+        "官方通知2026-08-20后付费音乐API不向新用户开放，历史付费用户可继续；免费音乐API停止服务。记录需区分账号资格和原厂型号，不据此全量删除paid型号。MPlan覆盖文本/图片/语音，并未证明music属于套餐。"
+      ],
+      "originalStatus": "pending",
+      "originalGap": "pending"
+    },
+    {
+      "recordKey": "compute/providers/minimax.json#music-2.6",
+      "modelId": "music-2.6",
+      "config": "compute/providers/minimax.json",
+      "sourceDoc": "docs/model-sources/providers/minimax/models/music-2.6.md",
+      "outcome": "official-identity-only",
+      "sourceIds": [
+        "minimax-models",
+        "minimax-plan-doc"
+      ],
+      "fieldEvidence": [
+        {
+          "field": "modelName",
+          "currentValue": "music-2.6",
+          "supportedValue": "music-2.6",
+          "sourceId": "minimax-models",
+          "assessment": "matches",
+          "explanation": "本轮正文定位精确标识；只确认该标识在其来源合同出现，不证明其他字段或不同套餐可用性。"
+        },
+        {
+          "field": "accessAvailability",
+          "currentValue": "历史型号保留",
+          "supportedValue": "paid仅历史付费用户；free已停止；套餐音乐未获证明",
+          "sourceId": "minimax-models",
+          "assessment": "not-comparable",
+          "explanation": "生命周期/账号合同证据，不能转换成普通模型参数。"
+        }
+      ],
+      "remainingFields": [
+        "extra.pricePerSongUpToFiveMinutes",
+        "capabilities",
+        "serviceType",
+        "access.maxInputTokens",
+        "access.protocol-readiness"
+      ],
+      "nextAction": "人工逐字段复核本次候选；只将matches且精确接入适用的字段迁入原来源文档，differs先审单位/阶梯/产品默认；缺项需精确模型页、官方版本卡或授权目录，不猜填。",
+      "notes": [
+        "官方通知2026-08-20后付费音乐API不向新用户开放，历史付费用户可继续；免费音乐API停止服务。记录需区分账号资格和原厂型号，不据此全量删除paid型号。MPlan覆盖文本/图片/语音，并未证明music属于套餐。"
+      ],
+      "originalStatus": "partial",
+      "originalGap": "idOnly"
+    },
+    {
+      "recordKey": "compute/coding-plans/minimax-coding.json#music-2.6",
+      "modelId": "music-2.6",
+      "config": "compute/coding-plans/minimax-coding.json",
+      "sourceDoc": "docs/model-sources/providers/minimax/models/music-2.6.md",
+      "outcome": "official-identity-only",
+      "sourceIds": [
+        "minimax-models",
+        "minimax-plan-doc"
+      ],
+      "fieldEvidence": [
+        {
+          "field": "modelName",
+          "currentValue": "music-2.6",
+          "supportedValue": "music-2.6",
+          "sourceId": "minimax-models",
+          "assessment": "matches",
+          "explanation": "本轮正文定位精确标识；只确认该标识在其来源合同出现，不证明其他字段或不同套餐可用性。"
+        },
+        {
+          "field": "accessAvailability",
+          "currentValue": "套餐列出",
+          "supportedValue": "paid仅历史付费用户；free已停止；套餐音乐未获证明",
+          "sourceId": "minimax-models",
+          "assessment": "not-comparable",
+          "explanation": "生命周期/账号合同证据，不能转换成普通模型参数。"
+        }
+      ],
+      "remainingFields": [
+        "capabilities",
+        "serviceType",
+        "access.maxInputTokens",
+        "access.protocol-readiness"
+      ],
+      "nextAction": "人工逐字段复核本次候选；只将matches且精确接入适用的字段迁入原来源文档，differs先审单位/阶梯/产品默认；缺项需精确模型页、官方版本卡或授权目录，不猜填。",
+      "notes": [
+        "官方通知2026-08-20后付费音乐API不向新用户开放，历史付费用户可继续；免费音乐API停止服务。记录需区分账号资格和原厂型号，不据此全量删除paid型号。MPlan覆盖文本/图片/语音，并未证明music属于套餐。",
+        "MPlan文档仅明确全系M3/M2.7/图像/语音共享额度及少数不支持；没有逐型号上下文/最大输出或旧全部媒体白名单，不能从直连表确认套餐参数。"
+      ],
+      "originalStatus": "partial",
+      "originalGap": "idOnly"
+    },
+    {
+      "recordKey": "compute/model-specs/minimax.json#music-2.6",
+      "modelId": "music-2.6",
+      "config": "compute/model-specs/minimax.json",
+      "sourceDoc": "docs/model-sources/providers/minimax/models/music-2.6.md",
+      "outcome": "official-identity-only",
+      "sourceIds": [
+        "minimax-models",
+        "minimax-plan-doc"
+      ],
+      "fieldEvidence": [
+        {
+          "field": "id",
+          "currentValue": "music-2.6",
+          "supportedValue": "music-2.6",
+          "sourceId": "minimax-models",
+          "assessment": "matches",
+          "explanation": "本轮正文定位精确标识；只确认该标识在其来源合同出现，不证明其他字段或不同套餐可用性。"
+        },
+        {
+          "field": "accessAvailability",
+          "currentValue": "历史型号保留",
+          "supportedValue": "paid仅历史付费用户；free已停止；套餐音乐未获证明",
+          "sourceId": "minimax-models",
+          "assessment": "not-comparable",
+          "explanation": "生命周期/账号合同证据，不能转换成普通模型参数。"
+        }
+      ],
+      "remainingFields": [
+        "spec.capabilities",
+        "spec.serviceType"
+      ],
+      "nextAction": "人工逐字段复核本次候选；只将matches且精确接入适用的字段迁入原来源文档，differs先审单位/阶梯/产品默认；缺项需精确模型页、官方版本卡或授权目录，不猜填。",
+      "notes": [
+        "官方通知2026-08-20后付费音乐API不向新用户开放，历史付费用户可继续；免费音乐API停止服务。记录需区分账号资格和原厂型号，不据此全量删除paid型号。MPlan覆盖文本/图片/语音，并未证明music属于套餐。"
+      ],
+      "originalStatus": "partial",
+      "originalGap": "idOnly"
+    },
+    {
+      "recordKey": "compute/providers/minimax.json#music-cover",
+      "modelId": "music-cover",
+      "config": "compute/providers/minimax.json",
+      "sourceDoc": "docs/model-sources/providers/minimax/models/music-cover.md",
+      "outcome": "official-identity-only",
+      "sourceIds": [
+        "minimax-models",
+        "minimax-plan-doc"
+      ],
+      "fieldEvidence": [
+        {
+          "field": "modelName",
+          "currentValue": "music-cover",
+          "supportedValue": "music-cover",
+          "sourceId": "minimax-models",
+          "assessment": "matches",
+          "explanation": "本轮正文定位精确标识；只确认该标识在其来源合同出现，不证明其他字段或不同套餐可用性。"
+        },
+        {
+          "field": "accessAvailability",
+          "currentValue": "历史型号保留",
+          "supportedValue": "paid仅历史付费用户；free已停止；套餐音乐未获证明",
+          "sourceId": "minimax-models",
+          "assessment": "not-comparable",
+          "explanation": "生命周期/账号合同证据，不能转换成普通模型参数。"
+        }
+      ],
+      "remainingFields": [
+        "capabilities",
+        "serviceType",
+        "access.maxInputTokens",
+        "access.protocol-readiness"
+      ],
+      "nextAction": "人工逐字段复核本次候选；只将matches且精确接入适用的字段迁入原来源文档，differs先审单位/阶梯/产品默认；缺项需精确模型页、官方版本卡或授权目录，不猜填。",
+      "notes": [
+        "官方通知2026-08-20后付费音乐API不向新用户开放，历史付费用户可继续；免费音乐API停止服务。记录需区分账号资格和原厂型号，不据此全量删除paid型号。MPlan覆盖文本/图片/语音，并未证明music属于套餐。"
+      ],
+      "originalStatus": "partial",
+      "originalGap": "idOnly"
+    },
+    {
+      "recordKey": "compute/model-specs/minimax.json#music-cover",
+      "modelId": "music-cover",
+      "config": "compute/model-specs/minimax.json",
+      "sourceDoc": "docs/model-sources/providers/minimax/models/music-cover.md",
+      "outcome": "official-identity-only",
+      "sourceIds": [
+        "minimax-models",
+        "minimax-plan-doc"
+      ],
+      "fieldEvidence": [
+        {
+          "field": "id",
+          "currentValue": "music-cover",
+          "supportedValue": "music-cover",
+          "sourceId": "minimax-models",
+          "assessment": "matches",
+          "explanation": "本轮正文定位精确标识；只确认该标识在其来源合同出现，不证明其他字段或不同套餐可用性。"
+        },
+        {
+          "field": "accessAvailability",
+          "currentValue": "历史型号保留",
+          "supportedValue": "paid仅历史付费用户；free已停止；套餐音乐未获证明",
+          "sourceId": "minimax-models",
+          "assessment": "not-comparable",
+          "explanation": "生命周期/账号合同证据，不能转换成普通模型参数。"
+        }
+      ],
+      "remainingFields": [
+        "spec.capabilities",
+        "spec.serviceType"
+      ],
+      "nextAction": "人工逐字段复核本次候选；只将matches且精确接入适用的字段迁入原来源文档，differs先审单位/阶梯/产品默认；缺项需精确模型页、官方版本卡或授权目录，不猜填。",
+      "notes": [
+        "官方通知2026-08-20后付费音乐API不向新用户开放，历史付费用户可继续；免费音乐API停止服务。记录需区分账号资格和原厂型号，不据此全量删除paid型号。MPlan覆盖文本/图片/语音，并未证明music属于套餐。"
+      ],
+      "originalStatus": "partial",
+      "originalGap": "idOnly"
+    },
+    {
+      "recordKey": "compute/providers/minimax.json#S2V-01",
+      "modelId": "S2V-01",
+      "config": "compute/providers/minimax.json",
+      "sourceDoc": "docs/model-sources/providers/minimax/models/s2v-01.md",
+      "outcome": "still-unresolved",
+      "sourceIds": [
+        "minimax-models",
+        "minimax-anthropic",
+        "minimax-video",
+        "minimax-hailuo",
+        "minimax-pricing",
+        "minimax-llms",
+        "minimax-speech-api",
+        "minimax-image-api",
+        "minimax-music-api",
+        "minimax-plan-doc",
+        "minimax-paygo-usd"
+      ],
+      "fieldEvidence": [],
+      "remainingFields": [
+        "modelName",
+        "capabilities",
+        "serviceType",
+        "access.maxInputTokens",
+        "access.protocol-readiness"
+      ],
+      "nextAction": "人工逐字段复核本次候选；只将matches且精确接入适用的字段迁入原来源文档，differs先审单位/阶梯/产品默认；缺项需精确模型页、官方版本卡或授权目录，不猜填。",
+      "notes": [
+        "本轮未在可读页面定位完整精确型号合同；缺失不判定停服。"
+      ],
+      "originalStatus": "pending",
+      "originalGap": "pending"
+    },
+    {
+      "recordKey": "compute/model-specs/minimax.json#S2V-01",
+      "modelId": "S2V-01",
+      "config": "compute/model-specs/minimax.json",
+      "sourceDoc": "docs/model-sources/providers/minimax/models/s2v-01.md",
+      "outcome": "still-unresolved",
+      "sourceIds": [
+        "minimax-models",
+        "minimax-anthropic",
+        "minimax-video",
+        "minimax-hailuo",
+        "minimax-pricing",
+        "minimax-llms",
+        "minimax-speech-api",
+        "minimax-image-api",
+        "minimax-music-api",
+        "minimax-plan-doc",
+        "minimax-paygo-usd"
+      ],
+      "fieldEvidence": [],
+      "remainingFields": [
+        "id",
+        "spec.capabilities",
+        "spec.serviceType"
+      ],
+      "nextAction": "人工逐字段复核本次候选；只将matches且精确接入适用的字段迁入原来源文档，differs先审单位/阶梯/产品默认；缺项需精确模型页、官方版本卡或授权目录，不猜填。",
+      "notes": [
+        "本轮未在可读页面定位完整精确型号合同；缺失不判定停服。"
+      ],
+      "originalStatus": "pending",
+      "originalGap": "pending"
+    },
+    {
+      "recordKey": "compute/providers/minimax.json#speech-02-hd",
+      "modelId": "speech-02-hd",
+      "config": "compute/providers/minimax.json",
+      "sourceDoc": "docs/model-sources/providers/minimax/models/speech-02-hd.md",
+      "outcome": "official-fields-found",
+      "sourceIds": [
+        "minimax-pricing"
+      ],
+      "fieldEvidence": [
+        {
+          "field": "modelName",
+          "currentValue": "speech-02-hd",
+          "supportedValue": "speech-02-hd",
+          "sourceId": "minimax-pricing",
+          "assessment": "matches",
+          "explanation": "本轮正文定位精确标识；只确认该标识在其来源合同出现，不证明其他字段或不同套餐可用性。"
+        },
+        {
+          "field": "extra.pricePerMillionCharacters",
+          "currentValue": 350,
+          "supportedValue": 350,
+          "sourceId": "minimax-pricing",
+          "assessment": "matches",
+          "explanation": "国内3.50或2.00元/万字符→每百万字符乘100，字符定义与token不同；不使用国际100/60美元价。"
+        }
+      ],
+      "remainingFields": [
+        "capabilities",
+        "serviceType",
+        "access.maxInputTokens",
+        "access.protocol-readiness"
+      ],
+      "nextAction": "人工逐字段复核本次候选；只将matches且精确接入适用的字段迁入原来源文档，differs先审单位/阶梯/产品默认；缺项需精确模型页、官方版本卡或授权目录，不猜填。",
+      "notes": [
+        "本轮未在可读页面定位完整精确型号合同；缺失不判定停服。"
+      ],
+      "originalStatus": "partial",
+      "originalGap": "idOnly"
+    },
+    {
+      "recordKey": "compute/model-specs/minimax.json#speech-02-hd",
+      "modelId": "speech-02-hd",
+      "config": "compute/model-specs/minimax.json",
+      "sourceDoc": "docs/model-sources/providers/minimax/models/speech-02-hd.md",
+      "outcome": "official-identity-only",
+      "sourceIds": [
+        "minimax-pricing"
+      ],
+      "fieldEvidence": [
+        {
+          "field": "id",
+          "currentValue": "speech-02-hd",
+          "supportedValue": "speech-02-hd",
+          "sourceId": "minimax-pricing",
+          "assessment": "matches",
+          "explanation": "本轮正文定位精确标识；只确认该标识在其来源合同出现，不证明其他字段或不同套餐可用性。"
+        }
+      ],
+      "remainingFields": [
+        "spec.capabilities",
+        "spec.serviceType"
+      ],
+      "nextAction": "人工逐字段复核本次候选；只将matches且精确接入适用的字段迁入原来源文档，differs先审单位/阶梯/产品默认；缺项需精确模型页、官方版本卡或授权目录，不猜填。",
+      "notes": [
+        "本轮未在可读页面定位完整精确型号合同；缺失不判定停服。"
+      ],
+      "originalStatus": "partial",
+      "originalGap": "idOnly"
+    },
+    {
+      "recordKey": "compute/providers/minimax.json#speech-02-turbo",
+      "modelId": "speech-02-turbo",
+      "config": "compute/providers/minimax.json",
+      "sourceDoc": "docs/model-sources/providers/minimax/models/speech-02-turbo.md",
+      "outcome": "official-fields-found",
+      "sourceIds": [
+        "minimax-pricing"
+      ],
+      "fieldEvidence": [
+        {
+          "field": "modelName",
+          "currentValue": "speech-02-turbo",
+          "supportedValue": "speech-02-turbo",
+          "sourceId": "minimax-pricing",
+          "assessment": "matches",
+          "explanation": "本轮正文定位精确标识；只确认该标识在其来源合同出现，不证明其他字段或不同套餐可用性。"
+        },
+        {
+          "field": "extra.pricePerMillionCharacters",
+          "currentValue": 200,
+          "supportedValue": 200,
+          "sourceId": "minimax-pricing",
+          "assessment": "matches",
+          "explanation": "国内3.50或2.00元/万字符→每百万字符乘100，字符定义与token不同；不使用国际100/60美元价。"
+        }
+      ],
+      "remainingFields": [
+        "capabilities",
+        "serviceType",
+        "access.maxInputTokens",
+        "access.protocol-readiness"
+      ],
+      "nextAction": "人工逐字段复核本次候选；只将matches且精确接入适用的字段迁入原来源文档，differs先审单位/阶梯/产品默认；缺项需精确模型页、官方版本卡或授权目录，不猜填。",
+      "notes": [
+        "本轮未在可读页面定位完整精确型号合同；缺失不判定停服。"
+      ],
+      "originalStatus": "partial",
+      "originalGap": "idOnly"
+    },
+    {
+      "recordKey": "compute/model-specs/minimax.json#speech-02-turbo",
+      "modelId": "speech-02-turbo",
+      "config": "compute/model-specs/minimax.json",
+      "sourceDoc": "docs/model-sources/providers/minimax/models/speech-02-turbo.md",
+      "outcome": "official-identity-only",
+      "sourceIds": [
+        "minimax-pricing"
+      ],
+      "fieldEvidence": [
+        {
+          "field": "id",
+          "currentValue": "speech-02-turbo",
+          "supportedValue": "speech-02-turbo",
+          "sourceId": "minimax-pricing",
+          "assessment": "matches",
+          "explanation": "本轮正文定位精确标识；只确认该标识在其来源合同出现，不证明其他字段或不同套餐可用性。"
+        }
+      ],
+      "remainingFields": [
+        "spec.capabilities",
+        "spec.serviceType"
+      ],
+      "nextAction": "人工逐字段复核本次候选；只将matches且精确接入适用的字段迁入原来源文档，differs先审单位/阶梯/产品默认；缺项需精确模型页、官方版本卡或授权目录，不猜填。",
+      "notes": [
+        "本轮未在可读页面定位完整精确型号合同；缺失不判定停服。"
+      ],
+      "originalStatus": "partial",
+      "originalGap": "idOnly"
+    },
+    {
+      "recordKey": "compute/providers/minimax.json#speech-2.6-hd",
+      "modelId": "speech-2.6-hd",
+      "config": "compute/providers/minimax.json",
+      "sourceDoc": "docs/model-sources/providers/minimax/models/speech-2.6-hd.md",
+      "outcome": "official-fields-found",
+      "sourceIds": [
+        "minimax-pricing"
+      ],
+      "fieldEvidence": [
+        {
+          "field": "modelName",
+          "currentValue": "speech-2.6-hd",
+          "supportedValue": "speech-2.6-hd",
+          "sourceId": "minimax-pricing",
+          "assessment": "matches",
+          "explanation": "本轮正文定位精确标识；只确认该标识在其来源合同出现，不证明其他字段或不同套餐可用性。"
+        },
+        {
+          "field": "extra.pricePerMillionCharacters",
+          "currentValue": 350,
+          "supportedValue": 350,
+          "sourceId": "minimax-pricing",
+          "assessment": "matches",
+          "explanation": "国内3.50或2.00元/万字符→每百万字符乘100，字符定义与token不同；不使用国际100/60美元价。"
+        }
+      ],
+      "remainingFields": [
+        "capabilities",
+        "serviceType",
+        "access.maxInputTokens",
+        "access.protocol-readiness"
+      ],
+      "nextAction": "人工逐字段复核本次候选；只将matches且精确接入适用的字段迁入原来源文档，differs先审单位/阶梯/产品默认；缺项需精确模型页、官方版本卡或授权目录，不猜填。",
+      "notes": [
+        "本轮未在可读页面定位完整精确型号合同；缺失不判定停服。"
+      ],
+      "originalStatus": "partial",
+      "originalGap": "idOnly"
+    },
+    {
+      "recordKey": "compute/model-specs/minimax.json#speech-2.6-hd",
+      "modelId": "speech-2.6-hd",
+      "config": "compute/model-specs/minimax.json",
+      "sourceDoc": "docs/model-sources/providers/minimax/models/speech-2.6-hd.md",
+      "outcome": "official-identity-only",
+      "sourceIds": [
+        "minimax-pricing"
+      ],
+      "fieldEvidence": [
+        {
+          "field": "id",
+          "currentValue": "speech-2.6-hd",
+          "supportedValue": "speech-2.6-hd",
+          "sourceId": "minimax-pricing",
+          "assessment": "matches",
+          "explanation": "本轮正文定位精确标识；只确认该标识在其来源合同出现，不证明其他字段或不同套餐可用性。"
+        }
+      ],
+      "remainingFields": [
+        "spec.capabilities",
+        "spec.serviceType"
+      ],
+      "nextAction": "人工逐字段复核本次候选；只将matches且精确接入适用的字段迁入原来源文档，differs先审单位/阶梯/产品默认；缺项需精确模型页、官方版本卡或授权目录，不猜填。",
+      "notes": [
+        "本轮未在可读页面定位完整精确型号合同；缺失不判定停服。"
+      ],
+      "originalStatus": "partial",
+      "originalGap": "idOnly"
+    },
+    {
+      "recordKey": "compute/providers/minimax.json#speech-2.6-turbo",
+      "modelId": "speech-2.6-turbo",
+      "config": "compute/providers/minimax.json",
+      "sourceDoc": "docs/model-sources/providers/minimax/models/speech-2.6-turbo.md",
+      "outcome": "official-fields-found",
+      "sourceIds": [
+        "minimax-pricing"
+      ],
+      "fieldEvidence": [
+        {
+          "field": "modelName",
+          "currentValue": "speech-2.6-turbo",
+          "supportedValue": "speech-2.6-turbo",
+          "sourceId": "minimax-pricing",
+          "assessment": "matches",
+          "explanation": "本轮正文定位精确标识；只确认该标识在其来源合同出现，不证明其他字段或不同套餐可用性。"
+        },
+        {
+          "field": "extra.pricePerMillionCharacters",
+          "currentValue": 200,
+          "supportedValue": 200,
+          "sourceId": "minimax-pricing",
+          "assessment": "matches",
+          "explanation": "国内3.50或2.00元/万字符→每百万字符乘100，字符定义与token不同；不使用国际100/60美元价。"
+        }
+      ],
+      "remainingFields": [
+        "capabilities",
+        "serviceType",
+        "access.maxInputTokens",
+        "access.protocol-readiness"
+      ],
+      "nextAction": "人工逐字段复核本次候选；只将matches且精确接入适用的字段迁入原来源文档，differs先审单位/阶梯/产品默认；缺项需精确模型页、官方版本卡或授权目录，不猜填。",
+      "notes": [
+        "本轮未在可读页面定位完整精确型号合同；缺失不判定停服。"
+      ],
+      "originalStatus": "partial",
+      "originalGap": "idOnly"
+    },
+    {
+      "recordKey": "compute/model-specs/minimax.json#speech-2.6-turbo",
+      "modelId": "speech-2.6-turbo",
+      "config": "compute/model-specs/minimax.json",
+      "sourceDoc": "docs/model-sources/providers/minimax/models/speech-2.6-turbo.md",
+      "outcome": "official-identity-only",
+      "sourceIds": [
+        "minimax-pricing"
+      ],
+      "fieldEvidence": [
+        {
+          "field": "id",
+          "currentValue": "speech-2.6-turbo",
+          "supportedValue": "speech-2.6-turbo",
+          "sourceId": "minimax-pricing",
+          "assessment": "matches",
+          "explanation": "本轮正文定位精确标识；只确认该标识在其来源合同出现，不证明其他字段或不同套餐可用性。"
+        }
+      ],
+      "remainingFields": [
+        "spec.capabilities",
+        "spec.serviceType"
+      ],
+      "nextAction": "人工逐字段复核本次候选；只将matches且精确接入适用的字段迁入原来源文档，differs先审单位/阶梯/产品默认；缺项需精确模型页、官方版本卡或授权目录，不猜填。",
+      "notes": [
+        "本轮未在可读页面定位完整精确型号合同；缺失不判定停服。"
+      ],
+      "originalStatus": "partial",
+      "originalGap": "idOnly"
+    },
+    {
+      "recordKey": "compute/providers/minimax.json#speech-2.8-hd",
+      "modelId": "speech-2.8-hd",
+      "config": "compute/providers/minimax.json",
+      "sourceDoc": "docs/model-sources/providers/minimax/models/speech-2.8-hd.md",
+      "outcome": "official-fields-found",
+      "sourceIds": [
+        "minimax-pricing"
+      ],
+      "fieldEvidence": [
+        {
+          "field": "modelName",
+          "currentValue": "speech-2.8-hd",
+          "supportedValue": "speech-2.8-hd",
+          "sourceId": "minimax-pricing",
+          "assessment": "matches",
+          "explanation": "本轮正文定位精确标识；只确认该标识在其来源合同出现，不证明其他字段或不同套餐可用性。"
+        },
+        {
+          "field": "extra.pricePerMillionCharacters",
+          "currentValue": 350,
+          "supportedValue": 350,
+          "sourceId": "minimax-pricing",
+          "assessment": "matches",
+          "explanation": "国内3.50或2.00元/万字符→每百万字符乘100，字符定义与token不同；不使用国际100/60美元价。"
+        }
+      ],
+      "remainingFields": [
+        "capabilities",
+        "serviceType",
+        "access.maxInputTokens",
+        "access.protocol-readiness"
+      ],
+      "nextAction": "人工逐字段复核本次候选；只将matches且精确接入适用的字段迁入原来源文档，differs先审单位/阶梯/产品默认；缺项需精确模型页、官方版本卡或授权目录，不猜填。",
+      "notes": [
+        "本轮未在可读页面定位完整精确型号合同；缺失不判定停服。"
+      ],
+      "originalStatus": "partial",
+      "originalGap": "idOnly"
+    },
+    {
+      "recordKey": "compute/coding-plans/minimax-coding.json#speech-2.8-hd",
+      "modelId": "speech-2.8-hd",
+      "config": "compute/coding-plans/minimax-coding.json",
+      "sourceDoc": "docs/model-sources/providers/minimax/models/speech-2.8-hd.md",
+      "outcome": "official-identity-only",
+      "sourceIds": [
+        "minimax-pricing",
+        "minimax-plan-doc"
+      ],
+      "fieldEvidence": [
+        {
+          "field": "modelName",
+          "currentValue": "speech-2.8-hd",
+          "supportedValue": "speech-2.8-hd",
+          "sourceId": "minimax-pricing",
+          "assessment": "matches",
+          "explanation": "本轮正文定位精确标识；只确认该标识在其来源合同出现，不证明其他字段或不同套餐可用性。"
+        }
+      ],
+      "remainingFields": [
+        "capabilities",
+        "serviceType",
+        "access.maxInputTokens",
+        "access.protocol-readiness"
+      ],
+      "nextAction": "人工逐字段复核本次候选；只将matches且精确接入适用的字段迁入原来源文档，differs先审单位/阶梯/产品默认；缺项需精确模型页、官方版本卡或授权目录，不猜填。",
+      "notes": [
+        "MPlan文档仅明确全系M3/M2.7/图像/语音共享额度及少数不支持；没有逐型号上下文/最大输出或旧全部媒体白名单，不能从直连表确认套餐参数。"
+      ],
+      "originalStatus": "partial",
+      "originalGap": "idOnly"
+    },
+    {
+      "recordKey": "compute/model-specs/minimax.json#speech-2.8-hd",
+      "modelId": "speech-2.8-hd",
+      "config": "compute/model-specs/minimax.json",
+      "sourceDoc": "docs/model-sources/providers/minimax/models/speech-2.8-hd.md",
+      "outcome": "official-identity-only",
+      "sourceIds": [
+        "minimax-pricing"
+      ],
+      "fieldEvidence": [
+        {
+          "field": "id",
+          "currentValue": "speech-2.8-hd",
+          "supportedValue": "speech-2.8-hd",
+          "sourceId": "minimax-pricing",
+          "assessment": "matches",
+          "explanation": "本轮正文定位精确标识；只确认该标识在其来源合同出现，不证明其他字段或不同套餐可用性。"
+        }
+      ],
+      "remainingFields": [
+        "spec.capabilities",
+        "spec.serviceType"
+      ],
+      "nextAction": "人工逐字段复核本次候选；只将matches且精确接入适用的字段迁入原来源文档，differs先审单位/阶梯/产品默认；缺项需精确模型页、官方版本卡或授权目录，不猜填。",
+      "notes": [
+        "本轮未在可读页面定位完整精确型号合同；缺失不判定停服。"
+      ],
+      "originalStatus": "partial",
+      "originalGap": "idOnly"
+    },
+    {
+      "recordKey": "compute/providers/minimax.json#speech-2.8-turbo",
+      "modelId": "speech-2.8-turbo",
+      "config": "compute/providers/minimax.json",
+      "sourceDoc": "docs/model-sources/providers/minimax/models/speech-2.8-turbo.md",
+      "outcome": "official-fields-found",
+      "sourceIds": [
+        "minimax-pricing"
+      ],
+      "fieldEvidence": [
+        {
+          "field": "modelName",
+          "currentValue": "speech-2.8-turbo",
+          "supportedValue": "speech-2.8-turbo",
+          "sourceId": "minimax-pricing",
+          "assessment": "matches",
+          "explanation": "本轮正文定位精确标识；只确认该标识在其来源合同出现，不证明其他字段或不同套餐可用性。"
+        },
+        {
+          "field": "extra.pricePerMillionCharacters",
+          "currentValue": 200,
+          "supportedValue": 200,
+          "sourceId": "minimax-pricing",
+          "assessment": "matches",
+          "explanation": "国内3.50或2.00元/万字符→每百万字符乘100，字符定义与token不同；不使用国际100/60美元价。"
+        }
+      ],
+      "remainingFields": [
+        "capabilities",
+        "serviceType",
+        "access.maxInputTokens",
+        "access.protocol-readiness"
+      ],
+      "nextAction": "人工逐字段复核本次候选；只将matches且精确接入适用的字段迁入原来源文档，differs先审单位/阶梯/产品默认；缺项需精确模型页、官方版本卡或授权目录，不猜填。",
+      "notes": [
+        "本轮未在可读页面定位完整精确型号合同；缺失不判定停服。"
+      ],
+      "originalStatus": "partial",
+      "originalGap": "idOnly"
+    },
+    {
+      "recordKey": "compute/coding-plans/minimax-coding.json#speech-2.8-turbo",
+      "modelId": "speech-2.8-turbo",
+      "config": "compute/coding-plans/minimax-coding.json",
+      "sourceDoc": "docs/model-sources/providers/minimax/models/speech-2.8-turbo.md",
+      "outcome": "official-identity-only",
+      "sourceIds": [
+        "minimax-pricing",
+        "minimax-plan-doc"
+      ],
+      "fieldEvidence": [
+        {
+          "field": "modelName",
+          "currentValue": "speech-2.8-turbo",
+          "supportedValue": "speech-2.8-turbo",
+          "sourceId": "minimax-pricing",
+          "assessment": "matches",
+          "explanation": "本轮正文定位精确标识；只确认该标识在其来源合同出现，不证明其他字段或不同套餐可用性。"
+        }
+      ],
+      "remainingFields": [
+        "capabilities",
+        "serviceType",
+        "access.maxInputTokens",
+        "access.protocol-readiness"
+      ],
+      "nextAction": "人工逐字段复核本次候选；只将matches且精确接入适用的字段迁入原来源文档，differs先审单位/阶梯/产品默认；缺项需精确模型页、官方版本卡或授权目录，不猜填。",
+      "notes": [
+        "MPlan文档仅明确全系M3/M2.7/图像/语音共享额度及少数不支持；没有逐型号上下文/最大输出或旧全部媒体白名单，不能从直连表确认套餐参数。"
+      ],
+      "originalStatus": "partial",
+      "originalGap": "idOnly"
+    },
+    {
+      "recordKey": "compute/model-specs/minimax.json#speech-2.8-turbo",
+      "modelId": "speech-2.8-turbo",
+      "config": "compute/model-specs/minimax.json",
+      "sourceDoc": "docs/model-sources/providers/minimax/models/speech-2.8-turbo.md",
+      "outcome": "official-identity-only",
+      "sourceIds": [
+        "minimax-pricing"
+      ],
+      "fieldEvidence": [
+        {
+          "field": "id",
+          "currentValue": "speech-2.8-turbo",
+          "supportedValue": "speech-2.8-turbo",
+          "sourceId": "minimax-pricing",
+          "assessment": "matches",
+          "explanation": "本轮正文定位精确标识；只确认该标识在其来源合同出现，不证明其他字段或不同套餐可用性。"
+        }
+      ],
+      "remainingFields": [
+        "spec.capabilities",
+        "spec.serviceType"
+      ],
+      "nextAction": "人工逐字段复核本次候选；只将matches且精确接入适用的字段迁入原来源文档，differs先审单位/阶梯/产品默认；缺项需精确模型页、官方版本卡或授权目录，不猜填。",
+      "notes": [
+        "本轮未在可读页面定位完整精确型号合同；缺失不判定停服。"
+      ],
+      "originalStatus": "partial",
+      "originalGap": "idOnly"
+    },
+    {
+      "recordKey": "compute/providers/minimax.json#T2V-01-Director",
+      "modelId": "T2V-01-Director",
+      "config": "compute/providers/minimax.json",
+      "sourceDoc": "docs/model-sources/providers/minimax/models/t2v-01-director.md",
+      "outcome": "official-identity-only",
+      "sourceIds": [
+        "minimax-hailuo"
+      ],
+      "fieldEvidence": [
+        {
+          "field": "modelName",
+          "currentValue": "T2V-01-Director",
+          "supportedValue": "T2V-01-Director",
+          "sourceId": "minimax-hailuo",
+          "assessment": "matches",
+          "explanation": "本轮正文定位精确标识；只确认该标识在其来源合同出现，不证明其他字段或不同套餐可用性。"
+        }
+      ],
+      "remainingFields": [
+        "capabilities",
+        "serviceType",
+        "access.maxInputTokens",
+        "access.protocol-readiness"
+      ],
+      "nextAction": "人工逐字段复核本次候选；只将matches且精确接入适用的字段迁入原来源文档，differs先审单位/阶梯/产品默认；缺项需精确模型页、官方版本卡或授权目录，不猜填。",
+      "notes": [
+        "本轮未在可读页面定位完整精确型号合同；缺失不判定停服。"
+      ],
+      "originalStatus": "partial",
+      "originalGap": "idOnly"
+    },
+    {
+      "recordKey": "compute/model-specs/minimax.json#T2V-01-Director",
+      "modelId": "T2V-01-Director",
+      "config": "compute/model-specs/minimax.json",
+      "sourceDoc": "docs/model-sources/providers/minimax/models/t2v-01-director.md",
+      "outcome": "official-identity-only",
+      "sourceIds": [
+        "minimax-hailuo"
+      ],
+      "fieldEvidence": [
+        {
+          "field": "id",
+          "currentValue": "T2V-01-Director",
+          "supportedValue": "T2V-01-Director",
+          "sourceId": "minimax-hailuo",
+          "assessment": "matches",
+          "explanation": "本轮正文定位精确标识；只确认该标识在其来源合同出现，不证明其他字段或不同套餐可用性。"
+        }
+      ],
+      "remainingFields": [
+        "spec.capabilities",
+        "spec.serviceType"
+      ],
+      "nextAction": "人工逐字段复核本次候选；只将matches且精确接入适用的字段迁入原来源文档，differs先审单位/阶梯/产品默认；缺项需精确模型页、官方版本卡或授权目录，不猜填。",
+      "notes": [
+        "本轮未在可读页面定位完整精确型号合同；缺失不判定停服。"
+      ],
+      "originalStatus": "partial",
+      "originalGap": "idOnly"
+    }
+  ],
+  "coverage": {
+    "records": 67,
+    "sourceAttempts": 11,
+    "readableSources": 11,
+    "outcomes": {
+      "official-identity-only": 30,
+      "official-fields-found": 28,
+      "still-unresolved": 9
+    }
+  },
+  "boundary": "本轮只保存核查候选，未更改canonical、既有来源核验状态、指纹或manifest；可读正文和ID存在不是全参数/账号验收。"
+}

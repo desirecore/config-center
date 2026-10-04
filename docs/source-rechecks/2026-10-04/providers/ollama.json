@@ -1,0 +1,87 @@
+{
+  "supplier": "ollama",
+  "checkedAt": "2026-10-04",
+  "sources": [
+    {
+      "id": "ollama-14866557b877",
+      "url": "https://ollama.com/blog",
+      "finalUrl": "https://ollama.com/blog",
+      "publisher": "Ollama / Meta",
+      "kind": "official-docs",
+      "retrieval": "readable",
+      "summary": "正文已读取；仅用于下方逐字段列明的证据，读取成功不代表全规格核实。",
+      "scope": "该官网文档明确列出的模型/API；不扩展到其他接入面。"
+    },
+    {
+      "id": "ollama-e125d24f450e",
+      "url": "https://ollama.com/library/llama3.1:70b",
+      "finalUrl": "https://ollama.com/library/llama3.1:70b",
+      "publisher": "Ollama / Meta",
+      "kind": "official-docs",
+      "retrieval": "readable",
+      "summary": "正文已读取；仅用于下方逐字段列明的证据，读取成功不代表全规格核实。",
+      "scope": "该官网文档明确列出的模型/API；不扩展到其他接入面。"
+    },
+    {
+      "id": "ollama-3c2fd0f2f6f3",
+      "url": "https://raw.githubusercontent.com/meta-llama/llama-models/main/models/llama3_1/MODEL_CARD.md",
+      "finalUrl": "https://raw.githubusercontent.com/meta-llama/llama-models/main/models/llama3_1/MODEL_CARD.md",
+      "publisher": "Ollama / Meta",
+      "kind": "official-repository",
+      "retrieval": "readable",
+      "summary": "正文已读取；仅用于下方逐字段列明的证据，读取成功不代表全规格核实。",
+      "scope": "该官网文档明确列出的模型/API；不扩展到其他接入面。"
+    },
+    {
+      "id": "ollama-80aadbbb2a16",
+      "url": "https://docs.ollama.com/context-length",
+      "finalUrl": "https://docs.ollama.com/context-length",
+      "publisher": "Ollama / Meta",
+      "kind": "official-docs",
+      "retrieval": "readable",
+      "summary": "正文已读取；仅用于下方逐字段列明的证据，读取成功不代表全规格核实。",
+      "scope": "该官网文档明确列出的模型/API；不扩展到其他接入面。"
+    }
+  ],
+  "findings": [
+    {
+      "recordKey": "compute/providers/ollama.json#llama3.1:70b",
+      "modelId": "llama3.1:70b",
+      "config": "compute/providers/ollama.json",
+      "sourceDoc": "docs/model-sources/providers/ollama/models/llama3.1--70b.md",
+      "outcome": "official-identity-only",
+      "sourceIds": [
+        "ollama-e125d24f450e",
+        "ollama-14866557b877"
+      ],
+      "fieldEvidence": [
+        {
+          "field": "modelName",
+          "currentValue": "llama3.1:70b",
+          "supportedValue": "llama3.1:70b",
+          "sourceId": "ollama-e125d24f450e",
+          "assessment": "matches",
+          "explanation": "官方精确tag，43GB/digest711a9e8463af；不代表本机已安装。"
+        },
+        {
+          "field": "contextWindow",
+          "currentValue": 131072,
+          "supportedValue": "128K",
+          "sourceId": "ollama-e125d24f450e",
+          "assessment": "not-comparable",
+          "explanation": "目录声明模型能力，未证明本机实际num_ctx；仅官方缩写，不能直接宣称有效131072。"
+        }
+      ],
+      "remainingFields": [
+        "contextWindow",
+        "defaultTemperature",
+        "defaultTopP",
+        "maxOutputTokens"
+      ],
+      "nextAction": "逐字段审查上表候选；只有同一接入合同且语义/单位一致的证据才用于后续canonical更新。 剩余字段需精确型号页/官方API schema或已授权账号目录核查，不推导默认值。",
+      "notes": [
+        "需分别核模型最大window、运行时num_ctx、num_predict和硬件显存；未执行安装/私有API或推理实测。8192maxOutput、0.8temperature、0.9topP保留未证明。"
+      ]
+    }
+  ]
+}

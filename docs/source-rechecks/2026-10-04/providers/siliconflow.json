@@ -1,0 +1,229 @@
+{
+  "supplier": "siliconflow",
+  "checkedAt": "2026-10-04",
+  "sources": [
+    {
+      "id": "siliconflow",
+      "url": "https://www.siliconflow.cn/models",
+      "finalUrl": "https://www.siliconflow.cn/models",
+      "publisher": "siliconflow",
+      "kind": "official-docs",
+      "scope": "硅基国内公开产品目录；动态价签/托管参数需精确型号页或授权API响应",
+      "contentSha256": "7c32060db7affc52620d045539708b3ff689bc3e7bb5434949f98de5fea2068b",
+      "retrieval": "readable",
+      "summary": "实际读取472688字符，可见正文9556字符；需逐精确ID定位，HTTP成功不代表字段已证。",
+      "digestKind": "sha256-utf8-decoded-response-body",
+      "retrievalMethod": "urllib.request HTTPS response read; bytes decoded as UTF-8 with replacement, SHA-256 over decoded text re-encoded as UTF-8 before visible-text extraction; full HTML/Markdown/JSON body, not a raw-byte digest or vendor signature"
+    },
+    {
+      "id": "siliconflow-models",
+      "url": "https://docs.siliconflow.cn/cn/userguide/models",
+      "finalUrl": "https://docs.siliconflow.cn/cn/userguide/models",
+      "publisher": "siliconflow",
+      "kind": "official-docs",
+      "scope": "只适用于页面明确的原厂/地域/接入，套餐和聚合合同独立",
+      "retrieval": "not-found",
+      "summary": "HTTP Error 404: Not Found",
+      "digestKind": "not-recorded",
+      "retrievalMethod": "urllib.request HTTPS attempt failed before a usable response body was saved; error recorded, no content digest"
+    },
+    {
+      "id": "siliconflow-model-directory",
+      "url": "https://api.siliconflow.cn/v1/models",
+      "finalUrl": "https://api.siliconflow.cn/v1/models",
+      "publisher": "siliconflow",
+      "kind": "official-platform",
+      "scope": "只适用于页面明确的原厂/地域/接入，套餐和聚合合同独立",
+      "retrieval": "blocked",
+      "summary": "HTTP Error 401: Unauthorized",
+      "digestKind": "not-recorded",
+      "retrievalMethod": "urllib.request HTTPS attempt failed before a usable response body was saved; error recorded, no content digest"
+    },
+    {
+      "id": "qwen-coder-card",
+      "url": "https://huggingface.co/Qwen/Qwen3-Coder-480B-A35B-Instruct/raw/main/README.md",
+      "finalUrl": "https://huggingface.co/Qwen/Qwen3-Coder-480B-A35B-Instruct/raw/main/README.md",
+      "publisher": "Qwen official organization",
+      "kind": "official-model-card",
+      "scope": "原厂开放权重模型卡；不证明硅基流动国内平台提供此精确托管型号、价格或输出上限",
+      "contentSha256": "435afee9137a46ceb1e510fb8d2cef921d69ca1f5f7d5a1d9252ba22ebe21149",
+      "retrieval": "readable",
+      "summary": "实际读取5500字符，可见正文5098字符；需逐精确ID定位，HTTP成功不代表字段已证。",
+      "digestKind": "sha256-utf8-decoded-response-body",
+      "retrievalMethod": "urllib.request HTTPS response read; bytes decoded as UTF-8 with replacement, SHA-256 over decoded text re-encoded as UTF-8 before visible-text extraction; full HTML/Markdown/JSON body, not a raw-byte digest or vendor signature"
+    },
+    {
+      "id": "qwen-instruct-card",
+      "url": "https://huggingface.co/Qwen/Qwen3-235B-A22B-Instruct-2507/raw/main/README.md",
+      "finalUrl": "https://huggingface.co/Qwen/Qwen3-235B-A22B-Instruct-2507/raw/main/README.md",
+      "publisher": "Qwen official organization",
+      "kind": "official-model-card",
+      "scope": "原厂开放权重模型卡；不证明硅基流动国内平台提供此精确托管型号、价格或输出上限",
+      "contentSha256": "af233f6e013228859d81a2088521781d4e6a06c5960ab3b7ceee6466f550b5f6",
+      "retrieval": "readable",
+      "summary": "实际读取16211字符，可见正文15687字符；需逐精确ID定位，HTTP成功不代表字段已证。",
+      "digestKind": "sha256-utf8-decoded-response-body",
+      "retrievalMethod": "urllib.request HTTPS response read; bytes decoded as UTF-8 with replacement, SHA-256 over decoded text re-encoded as UTF-8 before visible-text extraction; full HTML/Markdown/JSON body, not a raw-byte digest or vendor signature"
+    },
+    {
+      "id": "bge-card",
+      "url": "https://huggingface.co/BAAI/bge-m3/raw/main/README.md",
+      "finalUrl": "https://huggingface.co/BAAI/bge-m3/raw/main/README.md",
+      "publisher": "BAAI official organization",
+      "kind": "official-model-card",
+      "scope": "原厂开放权重模型卡；不证明硅基流动国内平台提供此精确托管型号、价格或输出上限",
+      "contentSha256": "0b81ccf9134e5874d620a86e6905062ea999e779c34eb1a7e65eaeb7fe00e450",
+      "retrieval": "readable",
+      "summary": "实际读取15822字符，可见正文15244字符；需逐精确ID定位，HTTP成功不代表字段已证。",
+      "digestKind": "sha256-utf8-decoded-response-body",
+      "retrievalMethod": "urllib.request HTTPS response read; bytes decoded as UTF-8 with replacement, SHA-256 over decoded text re-encoded as UTF-8 before visible-text extraction; full HTML/Markdown/JSON body, not a raw-byte digest or vendor signature"
+    }
+  ],
+  "findings": [
+    {
+      "recordKey": "compute/providers/siliconflow.json#BAAI/bge-m3",
+      "modelId": "BAAI/bge-m3",
+      "config": "compute/providers/siliconflow.json",
+      "sourceDoc": "docs/model-sources/providers/siliconflow/models/baai--bge-m3.md",
+      "outcome": "official-identity-only",
+      "sourceIds": [
+        "bge-card"
+      ],
+      "fieldEvidence": [
+        {
+          "field": "modelName",
+          "currentValue": "BAAI/bge-m3",
+          "supportedValue": "BAAI/bge-m3",
+          "sourceId": "bge-card",
+          "assessment": "matches",
+          "explanation": "本轮正文定位精确标识；只确认该标识在其来源合同出现，不证明其他字段或不同套餐可用性。"
+        },
+        {
+          "field": "contextWindow",
+          "currentValue": 8192,
+          "supportedValue": 8192,
+          "sourceId": "bge-card",
+          "assessment": "not-comparable",
+          "explanation": "官方BAAI模型卡原厂序列长度8192，不证明硅基实际托管输入上限或免费计价。"
+        }
+      ],
+      "remainingFields": [
+        "contextWindow",
+        "inputPrice",
+        "maxOutputTokens",
+        "outputPrice",
+        "capabilities",
+        "serviceType",
+        "access.maxInputTokens",
+        "access.protocol-readiness"
+      ],
+      "nextAction": "人工逐字段复核本次候选；只将matches且精确接入适用的字段迁入原来源文档，differs先审单位/阶梯/产品默认；缺项需精确模型页、官方版本卡或授权目录，不猜填。",
+      "notes": [
+        "国内公共models API返回401，本轮未使用凭据；原厂模型卡不能证明该平台当前白名单、maxOutputTokens或价格，0价/免费描述仍需平台独立证明。"
+      ],
+      "originalStatus": "pending",
+      "originalGap": "pending"
+    },
+    {
+      "recordKey": "compute/providers/siliconflow.json#Qwen/Qwen3-235B-A22B-Instruct-2507",
+      "modelId": "Qwen/Qwen3-235B-A22B-Instruct-2507",
+      "config": "compute/providers/siliconflow.json",
+      "sourceDoc": "docs/model-sources/providers/siliconflow/models/qwen--qwen3-235b-a22b-instruct-2507.md",
+      "outcome": "official-identity-only",
+      "sourceIds": [
+        "qwen-instruct-card"
+      ],
+      "fieldEvidence": [
+        {
+          "field": "modelName",
+          "currentValue": "Qwen/Qwen3-235B-A22B-Instruct-2507",
+          "supportedValue": "Qwen/Qwen3-235B-A22B-Instruct-2507",
+          "sourceId": "qwen-instruct-card",
+          "assessment": "matches",
+          "explanation": "本轮正文定位精确标识；只确认该标识在其来源合同出现，不证明其他字段或不同套餐可用性。"
+        },
+        {
+          "field": "contextWindow",
+          "currentValue": 262144,
+          "supportedValue": 262144,
+          "sourceId": "qwen-instruct-card",
+          "assessment": "not-comparable",
+          "explanation": "官方Qwen开放模型卡支持262144原生上下文/外推另论；不证明硅基该区域托管上限。"
+        }
+      ],
+      "remainingFields": [
+        "contextWindow",
+        "defaultTemperature",
+        "defaultTopP",
+        "inputPrice",
+        "maxOutputTokens",
+        "outputPrice",
+        "capabilities",
+        "serviceType",
+        "access.maxInputTokens",
+        "access.protocol-readiness"
+      ],
+      "nextAction": "人工逐字段复核本次候选；只将matches且精确接入适用的字段迁入原来源文档，differs先审单位/阶梯/产品默认；缺项需精确模型页、官方版本卡或授权目录，不猜填。",
+      "notes": [
+        "国内公共models API返回401，本轮未使用凭据；原厂模型卡不能证明该平台当前白名单、maxOutputTokens或价格，0价/免费描述仍需平台独立证明。"
+      ],
+      "originalStatus": "pending",
+      "originalGap": "pending"
+    },
+    {
+      "recordKey": "compute/providers/siliconflow.json#Qwen/Qwen3-Coder-480B-A35B-Instruct",
+      "modelId": "Qwen/Qwen3-Coder-480B-A35B-Instruct",
+      "config": "compute/providers/siliconflow.json",
+      "sourceDoc": "docs/model-sources/providers/siliconflow/models/qwen--qwen3-coder-480b-a35b-instruct.md",
+      "outcome": "official-identity-only",
+      "sourceIds": [
+        "qwen-coder-card"
+      ],
+      "fieldEvidence": [
+        {
+          "field": "modelName",
+          "currentValue": "Qwen/Qwen3-Coder-480B-A35B-Instruct",
+          "supportedValue": "Qwen/Qwen3-Coder-480B-A35B-Instruct",
+          "sourceId": "qwen-coder-card",
+          "assessment": "matches",
+          "explanation": "本轮正文定位精确标识；只确认该标识在其来源合同出现，不证明其他字段或不同套餐可用性。"
+        },
+        {
+          "field": "contextWindow",
+          "currentValue": 262144,
+          "supportedValue": 262144,
+          "sourceId": "qwen-coder-card",
+          "assessment": "not-comparable",
+          "explanation": "官方Qwen开放模型卡支持262144原生上下文/外推另论；不证明硅基该区域托管上限。"
+        }
+      ],
+      "remainingFields": [
+        "contextWindow",
+        "defaultTemperature",
+        "defaultTopP",
+        "inputPrice",
+        "maxOutputTokens",
+        "outputPrice",
+        "capabilities",
+        "serviceType",
+        "access.maxInputTokens",
+        "access.protocol-readiness"
+      ],
+      "nextAction": "人工逐字段复核本次候选；只将matches且精确接入适用的字段迁入原来源文档，differs先审单位/阶梯/产品默认；缺项需精确模型页、官方版本卡或授权目录，不猜填。",
+      "notes": [
+        "国内公共models API返回401，本轮未使用凭据；原厂模型卡不能证明该平台当前白名单、maxOutputTokens或价格，0价/免费描述仍需平台独立证明。"
+      ],
+      "originalStatus": "pending",
+      "originalGap": "pending"
+    }
+  ],
+  "coverage": {
+    "records": 3,
+    "sourceAttempts": 6,
+    "readableSources": 4,
+    "outcomes": {
+      "official-identity-only": 3
+    }
+  },
+  "boundary": "本轮只保存核查候选，未更改canonical、既有来源核验状态、指纹或manifest；可读正文和ID存在不是全参数/账号验收。"
+}

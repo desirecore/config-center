@@ -1,0 +1,27 @@
+{
+  "supplier": "github-copilot",
+  "checkedAt": "2026-10-04",
+  "sources": [
+    {
+      "id": "github-copilot-d8d988cfa30a",
+      "url": "https://docs.github.com/en/copilot/reference/ai-models/supported-models",
+      "finalUrl": "https://docs.github.com/en/copilot/reference/ai-models/supported-models",
+      "publisher": "GitHub",
+      "kind": "official-docs",
+      "retrieval": "readable",
+      "summary": "正文已读取；仅用于下方逐字段列明的证据，读取成功不代表全规格核实。",
+      "scope": "该官网文档明确列出的模型/API；不扩展到其他接入面。"
+    },
+    {
+      "id": "github-copilot-fb6294869e5b",
+      "url": "https://api.githubcopilot.com/models",
+      "finalUrl": "https://api.githubcopilot.com/models",
+      "publisher": "GitHub",
+      "kind": "official-platform",
+      "retrieval": "blocked",
+      "summary": "HTTP Error 400: Bad Request",
+      "scope": "该官网文档明确列出的模型/API；不扩展到其他接入面。"
+    }
+  ],
+  "findings": []
+}

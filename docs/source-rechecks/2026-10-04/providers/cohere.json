@@ -1,0 +1,966 @@
+{
+  "supplier": "cohere",
+  "checkedAt": "2026-10-04",
+  "sources": [
+    {
+      "id": "cohere-05dde603ef44",
+      "url": "https://docs.cohere.com/docs/models.md",
+      "finalUrl": "https://docs.cohere.com/docs/models.md",
+      "publisher": "Cohere",
+      "kind": "official-docs",
+      "retrieval": "readable",
+      "summary": "正文已读取；仅用于下方逐字段列明的证据，读取成功不代表全规格核实。",
+      "scope": "该官网文档明确列出的模型/API；不扩展到其他接入面。"
+    },
+    {
+      "id": "cohere-b3bd7438e587",
+      "url": "https://docs.cohere.com/docs/compatibility-api.md",
+      "finalUrl": "https://docs.cohere.com/docs/compatibility-api.md",
+      "publisher": "Cohere",
+      "kind": "official-docs",
+      "retrieval": "readable",
+      "summary": "正文已读取；仅用于下方逐字段列明的证据，读取成功不代表全规格核实。",
+      "scope": "该官网文档明确列出的模型/API；不扩展到其他接入面。"
+    },
+    {
+      "id": "cohere-cb1c60dfc1c6",
+      "url": "https://docs.cohere.com/v2/docs/cohere-embed.md",
+      "finalUrl": "https://docs.cohere.com/v2/docs/cohere-embed.md",
+      "publisher": "Cohere",
+      "kind": "official-docs",
+      "retrieval": "readable",
+      "summary": "正文已读取；仅用于下方逐字段列明的证据，读取成功不代表全规格核实。",
+      "scope": "该官网文档明确列出的模型/API；不扩展到其他接入面。"
+    },
+    {
+      "id": "cohere-fe3cdf196fc2",
+      "url": "https://docs.cohere.com/docs/north-small-translate-1.0.md",
+      "finalUrl": "https://docs.cohere.com/docs/north-small-translate-1.0.md",
+      "publisher": "Cohere",
+      "kind": "official-docs",
+      "retrieval": "readable",
+      "summary": "正文已读取；仅用于下方逐字段列明的证据，读取成功不代表全规格核实。",
+      "scope": "该官网文档明确列出的模型/API；不扩展到其他接入面。"
+    },
+    {
+      "id": "cohere-0d6afcf8433d",
+      "url": "https://docs.cohere.com/docs/rerank.md",
+      "finalUrl": "https://docs.cohere.com/docs/rerank.md",
+      "publisher": "Cohere",
+      "kind": "official-docs",
+      "retrieval": "readable",
+      "summary": "正文已读取；仅用于下方逐字段列明的证据，读取成功不代表全规格核实。",
+      "scope": "该官网文档明确列出的模型/API；不扩展到其他接入面。"
+    },
+    {
+      "id": "cohere-21a445174ccb",
+      "url": "https://docs.cohere.com/docs/cohere-embed.md",
+      "finalUrl": "https://docs.cohere.com/docs/cohere-embed.md",
+      "publisher": "Cohere",
+      "kind": "official-docs",
+      "retrieval": "readable",
+      "summary": "正文已读取；仅用于下方逐字段列明的证据，读取成功不代表全规格核实。",
+      "scope": "该官网文档明确列出的模型/API；不扩展到其他接入面。"
+    },
+    {
+      "id": "cohere-785cc08149a8",
+      "url": "https://docs.cohere.com/docs/command-a-plus.md",
+      "finalUrl": "https://docs.cohere.com/docs/command-a-plus.md",
+      "publisher": "Cohere",
+      "kind": "official-docs",
+      "retrieval": "readable",
+      "summary": "正文已读取；仅用于下方逐字段列明的证据，读取成功不代表全规格核实。",
+      "scope": "该官网文档明确列出的模型/API；不扩展到其他接入面。"
+    },
+    {
+      "id": "cohere-2d31cad6ee58",
+      "url": "https://docs.cohere.com/docs/reranking-best-practices.md",
+      "finalUrl": "https://docs.cohere.com/docs/reranking-best-practices.md",
+      "publisher": "Cohere",
+      "kind": "official-docs",
+      "retrieval": "readable",
+      "summary": "正文已读取；仅用于下方逐字段列明的证据，读取成功不代表全规格核实。",
+      "scope": "该官网文档明确列出的模型/API；不扩展到其他接入面。"
+    },
+    {
+      "id": "cohere-eef2aa13c7d2",
+      "url": "https://docs.cohere.com/docs/north-mini-code.md",
+      "finalUrl": "https://docs.cohere.com/docs/north-mini-code.md",
+      "publisher": "Cohere",
+      "kind": "official-docs",
+      "retrieval": "readable",
+      "summary": "正文已读取；仅用于下方逐字段列明的证据，读取成功不代表全规格核实。",
+      "scope": "该官网文档明确列出的模型/API；不扩展到其他接入面。"
+    },
+    {
+      "id": "cohere-329932ba87b3",
+      "url": "https://docs.cohere.com/docs/north-small-translate.md",
+      "finalUrl": "https://docs.cohere.com/docs/north-small-translate.md",
+      "publisher": "Cohere",
+      "kind": "official-docs",
+      "retrieval": "readable",
+      "summary": "正文已读取；仅用于下方逐字段列明的证据，读取成功不代表全规格核实。",
+      "scope": "该官网文档明确列出的模型/API；不扩展到其他接入面。"
+    },
+    {
+      "id": "cohere-5525ce584d64",
+      "url": "https://docs.cohere.com/docs/north-mini-code-1.0.md",
+      "finalUrl": "https://docs.cohere.com/docs/north-mini-code-1.0.md",
+      "publisher": "Cohere",
+      "kind": "official-docs",
+      "retrieval": "readable",
+      "summary": "正文已读取；仅用于下方逐字段列明的证据，读取成功不代表全规格核实。",
+      "scope": "该官网文档明确列出的模型/API；不扩展到其他接入面。"
+    },
+    {
+      "id": "cohere-4b5fc50d9047",
+      "url": "https://docs.cohere.com/docs/command-a-plus",
+      "finalUrl": "https://docs.cohere.com/docs/command-a-plus",
+      "publisher": "Cohere",
+      "kind": "official-docs",
+      "retrieval": "readable",
+      "summary": "正文已读取；仅用于下方逐字段列明的证据，读取成功不代表全规格核实。",
+      "scope": "该官网文档明确列出的模型/API；不扩展到其他接入面。"
+    },
+    {
+      "id": "cohere-f398394e39e5",
+      "url": "https://docs.cohere.com/docs/command-a",
+      "finalUrl": "https://docs.cohere.com/docs/command-a",
+      "publisher": "Cohere",
+      "kind": "official-docs",
+      "retrieval": "readable",
+      "summary": "正文已读取；仅用于下方逐字段列明的证据，读取成功不代表全规格核实。",
+      "scope": "该官网文档明确列出的模型/API；不扩展到其他接入面。"
+    },
+    {
+      "id": "cohere-c384bab60227",
+      "url": "https://docs.cohere.com/docs/command-r7b",
+      "finalUrl": "https://docs.cohere.com/docs/command-r7b",
+      "publisher": "Cohere",
+      "kind": "official-docs",
+      "retrieval": "readable",
+      "summary": "正文已读取；仅用于下方逐字段列明的证据，读取成功不代表全规格核实。",
+      "scope": "该官网文档明确列出的模型/API；不扩展到其他接入面。"
+    }
+  ],
+  "findings": [
+    {
+      "recordKey": "compute/providers/cohere.json#command-a-03-2025",
+      "modelId": "command-a-03-2025",
+      "config": "compute/providers/cohere.json",
+      "sourceDoc": "docs/model-sources/providers/cohere/models/command-a-03-2025.md",
+      "outcome": "official-fields-found",
+      "sourceIds": [
+        "cohere-05dde603ef44",
+        "cohere-f398394e39e5"
+      ],
+      "fieldEvidence": [
+        {
+          "field": "modelName",
+          "currentValue": "command-a-03-2025",
+          "supportedValue": "command-a-03-2025",
+          "sourceId": "cohere-05dde603ef44",
+          "assessment": "matches",
+          "explanation": "原厂模型表明确精确ID。"
+        },
+        {
+          "field": "contextWindow",
+          "currentValue": 256000,
+          "supportedValue": 256000,
+          "sourceId": "cohere-f398394e39e5",
+          "assessment": "matches",
+          "explanation": "官方精确型号页整数，原厂Chat服务；兼容请求参数/账号能力仍需独立复核。"
+        },
+        {
+          "field": "maxOutputTokens",
+          "currentValue": 8000,
+          "supportedValue": 8000,
+          "sourceId": "cohere-f398394e39e5",
+          "assessment": "matches",
+          "explanation": "官方精确型号页整数，原厂Chat服务；兼容请求参数/账号能力仍需独立复核。"
+        }
+      ],
+      "remainingFields": [
+        "defaultTemperature",
+        "defaultTopP",
+        "inputPrice",
+        "outputPrice"
+      ],
+      "nextAction": "逐字段审查上表候选；只有同一接入合同且语义/单位一致的证据才用于后续canonical更新。 剩余字段需精确型号页/官方API schema或已授权账号目录核查，不推导默认值。",
+      "notes": []
+    },
+    {
+      "recordKey": "compute/model-specs/cohere.json#command-a-03-2025",
+      "modelId": "command-a-03-2025",
+      "config": "compute/model-specs/cohere.json",
+      "sourceDoc": "docs/model-sources/providers/cohere/models/command-a-03-2025.md",
+      "outcome": "official-fields-found",
+      "sourceIds": [
+        "cohere-05dde603ef44",
+        "cohere-f398394e39e5"
+      ],
+      "fieldEvidence": [
+        {
+          "field": "id",
+          "currentValue": "command-a-03-2025",
+          "supportedValue": "command-a-03-2025",
+          "sourceId": "cohere-05dde603ef44",
+          "assessment": "matches",
+          "explanation": "原厂模型表明确精确ID。"
+        },
+        {
+          "field": "spec.contextWindow",
+          "currentValue": 256000,
+          "supportedValue": 256000,
+          "sourceId": "cohere-f398394e39e5",
+          "assessment": "matches",
+          "explanation": "官方精确型号页整数，原厂Chat服务；兼容请求参数/账号能力仍需独立复核。"
+        },
+        {
+          "field": "spec.maxOutputTokens",
+          "currentValue": 8000,
+          "supportedValue": 8000,
+          "sourceId": "cohere-f398394e39e5",
+          "assessment": "matches",
+          "explanation": "官方精确型号页整数，原厂Chat服务；兼容请求参数/账号能力仍需独立复核。"
+        }
+      ],
+      "remainingFields": [
+        "spec.defaultTemperature"
+      ],
+      "nextAction": "逐字段审查上表候选；只有同一接入合同且语义/单位一致的证据才用于后续canonical更新。 剩余字段需精确型号页/官方API schema或已授权账号目录核查，不推导默认值。",
+      "notes": []
+    },
+    {
+      "recordKey": "compute/providers/cohere.json#command-a-plus-05-2026",
+      "modelId": "command-a-plus-05-2026",
+      "config": "compute/providers/cohere.json",
+      "sourceDoc": "docs/model-sources/providers/cohere/models/command-a-plus-05-2026.md",
+      "outcome": "official-fields-found",
+      "sourceIds": [
+        "cohere-05dde603ef44",
+        "cohere-4b5fc50d9047",
+        "cohere-b3bd7438e587"
+      ],
+      "fieldEvidence": [
+        {
+          "field": "modelName",
+          "currentValue": "command-a-plus-05-2026",
+          "supportedValue": "command-a-plus-05-2026",
+          "sourceId": "cohere-05dde603ef44",
+          "assessment": "matches",
+          "explanation": "原厂模型表明确精确ID。"
+        },
+        {
+          "field": "contextWindow",
+          "currentValue": 128000,
+          "supportedValue": 128000,
+          "sourceId": "cohere-4b5fc50d9047",
+          "assessment": "matches",
+          "explanation": "官方精确型号页整数，原厂Chat服务；兼容请求参数/账号能力仍需独立复核。"
+        },
+        {
+          "field": "maxOutputTokens",
+          "currentValue": 64000,
+          "supportedValue": 64000,
+          "sourceId": "cohere-4b5fc50d9047",
+          "assessment": "matches",
+          "explanation": "官方精确型号页整数，原厂Chat服务；兼容请求参数/账号能力仍需独立复核。"
+        },
+        {
+          "field": "supportsReasoning",
+          "currentValue": null,
+          "supportedValue": true,
+          "sourceId": "cohere-4b5fc50d9047",
+          "assessment": "differs",
+          "explanation": "精确型号能力表Reasoning，不扩展为兼容effort全档。"
+        }
+      ],
+      "remainingFields": [],
+      "nextAction": "逐字段审查上表候选；只有同一接入合同且语义/单位一致的证据才用于后续canonical更新。",
+      "notes": [
+        "原厂型号页有128000上下文/64000输出；OpenRouter192000是另一接入合同。生产ModelVault合同计价与限额不能直接套公共平台价格。"
+      ]
+    },
+    {
+      "recordKey": "compute/model-specs/cohere.json#command-a-plus-05-2026",
+      "modelId": "command-a-plus-05-2026",
+      "config": "compute/model-specs/cohere.json",
+      "sourceDoc": "docs/model-sources/providers/cohere/models/command-a-plus-05-2026.md",
+      "outcome": "official-fields-found",
+      "sourceIds": [
+        "cohere-05dde603ef44",
+        "cohere-4b5fc50d9047"
+      ],
+      "fieldEvidence": [
+        {
+          "field": "id",
+          "currentValue": "command-a-plus-05-2026",
+          "supportedValue": "command-a-plus-05-2026",
+          "sourceId": "cohere-05dde603ef44",
+          "assessment": "matches",
+          "explanation": "原厂模型表明确精确ID。"
+        },
+        {
+          "field": "spec.contextWindow",
+          "currentValue": 128000,
+          "supportedValue": 128000,
+          "sourceId": "cohere-4b5fc50d9047",
+          "assessment": "matches",
+          "explanation": "官方精确型号页整数，原厂Chat服务；兼容请求参数/账号能力仍需独立复核。"
+        },
+        {
+          "field": "spec.maxOutputTokens",
+          "currentValue": 64000,
+          "supportedValue": 64000,
+          "sourceId": "cohere-4b5fc50d9047",
+          "assessment": "matches",
+          "explanation": "官方精确型号页整数，原厂Chat服务；兼容请求参数/账号能力仍需独立复核。"
+        },
+        {
+          "field": "spec.supportsReasoning",
+          "currentValue": true,
+          "supportedValue": true,
+          "sourceId": "cohere-4b5fc50d9047",
+          "assessment": "matches",
+          "explanation": "精确型号能力表Reasoning，不扩展为兼容effort全档。"
+        }
+      ],
+      "remainingFields": [],
+      "nextAction": "逐字段审查上表候选；只有同一接入合同且语义/单位一致的证据才用于后续canonical更新。",
+      "notes": [
+        "原厂型号页有128000上下文/64000输出；OpenRouter192000是另一接入合同。生产ModelVault合同计价与限额不能直接套公共平台价格。"
+      ]
+    },
+    {
+      "recordKey": "compute/providers/cohere.json#command-r7b-12-2024",
+      "modelId": "command-r7b-12-2024",
+      "config": "compute/providers/cohere.json",
+      "sourceDoc": "docs/model-sources/providers/cohere/models/command-r7b-12-2024.md",
+      "outcome": "official-fields-found",
+      "sourceIds": [
+        "cohere-05dde603ef44",
+        "cohere-c384bab60227"
+      ],
+      "fieldEvidence": [
+        {
+          "field": "modelName",
+          "currentValue": "command-r7b-12-2024",
+          "supportedValue": "command-r7b-12-2024",
+          "sourceId": "cohere-05dde603ef44",
+          "assessment": "matches",
+          "explanation": "原厂模型表明确精确ID。"
+        },
+        {
+          "field": "contextWindow",
+          "currentValue": 128000,
+          "supportedValue": 128000,
+          "sourceId": "cohere-c384bab60227",
+          "assessment": "matches",
+          "explanation": "官方精确型号页整数，原厂Chat服务；兼容请求参数/账号能力仍需独立复核。"
+        },
+        {
+          "field": "maxOutputTokens",
+          "currentValue": 4000,
+          "supportedValue": 4000,
+          "sourceId": "cohere-c384bab60227",
+          "assessment": "matches",
+          "explanation": "官方精确型号页整数，原厂Chat服务；兼容请求参数/账号能力仍需独立复核。"
+        }
+      ],
+      "remainingFields": [
+        "defaultTemperature",
+        "defaultTopP",
+        "inputPrice",
+        "outputPrice"
+      ],
+      "nextAction": "逐字段审查上表候选；只有同一接入合同且语义/单位一致的证据才用于后续canonical更新。 剩余字段需精确型号页/官方API schema或已授权账号目录核查，不推导默认值。",
+      "notes": []
+    },
+    {
+      "recordKey": "compute/model-specs/cohere.json#command-r7b-12-2024",
+      "modelId": "command-r7b-12-2024",
+      "config": "compute/model-specs/cohere.json",
+      "sourceDoc": "docs/model-sources/providers/cohere/models/command-r7b-12-2024.md",
+      "outcome": "official-fields-found",
+      "sourceIds": [
+        "cohere-05dde603ef44",
+        "cohere-c384bab60227"
+      ],
+      "fieldEvidence": [
+        {
+          "field": "id",
+          "currentValue": "command-r7b-12-2024",
+          "supportedValue": "command-r7b-12-2024",
+          "sourceId": "cohere-05dde603ef44",
+          "assessment": "matches",
+          "explanation": "原厂模型表明确精确ID。"
+        },
+        {
+          "field": "spec.contextWindow",
+          "currentValue": 128000,
+          "supportedValue": 128000,
+          "sourceId": "cohere-c384bab60227",
+          "assessment": "matches",
+          "explanation": "官方精确型号页整数，原厂Chat服务；兼容请求参数/账号能力仍需独立复核。"
+        },
+        {
+          "field": "spec.maxOutputTokens",
+          "currentValue": 4000,
+          "supportedValue": 4000,
+          "sourceId": "cohere-c384bab60227",
+          "assessment": "matches",
+          "explanation": "官方精确型号页整数，原厂Chat服务；兼容请求参数/账号能力仍需独立复核。"
+        }
+      ],
+      "remainingFields": [
+        "spec.defaultTemperature"
+      ],
+      "nextAction": "逐字段审查上表候选；只有同一接入合同且语义/单位一致的证据才用于后续canonical更新。 剩余字段需精确型号页/官方API schema或已授权账号目录核查，不推导默认值。",
+      "notes": []
+    },
+    {
+      "recordKey": "compute/providers/cohere.json#embed-v4.0",
+      "modelId": "embed-v4.0",
+      "config": "compute/providers/cohere.json",
+      "sourceDoc": "docs/model-sources/providers/cohere/models/embed-v4.0.md",
+      "outcome": "official-fields-found",
+      "sourceIds": [
+        "cohere-05dde603ef44",
+        "cohere-cb1c60dfc1c6"
+      ],
+      "fieldEvidence": [
+        {
+          "field": "modelName",
+          "currentValue": "embed-v4.0",
+          "supportedValue": "embed-v4.0",
+          "sourceId": "cohere-05dde603ef44",
+          "assessment": "matches",
+          "explanation": "原厂模型表明确精确ID。"
+        },
+        {
+          "field": "extra.embeddingDimensions",
+          "currentValue": null,
+          "supportedValue": 1536,
+          "sourceId": "cohere-cb1c60dfc1c6",
+          "assessment": "differs",
+          "explanation": "原厂默认宽度；其他原生支持宽度:[256, 512, 1024, 1536]；OpenAI兼容dimensions参数不受支持，不能据原生扩权。"
+        },
+        {
+          "field": "contextWindow",
+          "currentValue": 128000,
+          "supportedValue": "128k",
+          "sourceId": "cohere-cb1c60dfc1c6",
+          "assessment": "not-comparable",
+          "explanation": "官网Max Tokens(Context Length)；仅保留官方缩写，未用131072替代。"
+        },
+        {
+          "field": "inputModalities",
+          "currentValue": null,
+          "supportedValue": [
+            "text",
+            "image",
+            "mixed text/images"
+          ],
+          "sourceId": "cohere-cb1c60dfc1c6",
+          "assessment": "differs",
+          "explanation": "原生Embed能力，不自动证明兼容路由支持imageinput。"
+        }
+      ],
+      "remainingFields": [
+        "contextWindow",
+        "inputPrice",
+        "maxOutputTokens",
+        "outputPrice"
+      ],
+      "nextAction": "逐字段审查上表候选；只有同一接入合同且语义/单位一致的证据才用于后续canonical更新。 剩余字段需精确型号页/官方API schema或已授权账号目录核查，不推导默认值。",
+      "notes": []
+    },
+    {
+      "recordKey": "compute/model-specs/cohere.json#embed-v4.0",
+      "modelId": "embed-v4.0",
+      "config": "compute/model-specs/cohere.json",
+      "sourceDoc": "docs/model-sources/providers/cohere/models/embed-v4.0.md",
+      "outcome": "official-fields-found",
+      "sourceIds": [
+        "cohere-05dde603ef44",
+        "cohere-cb1c60dfc1c6"
+      ],
+      "fieldEvidence": [
+        {
+          "field": "id",
+          "currentValue": "embed-v4.0",
+          "supportedValue": "embed-v4.0",
+          "sourceId": "cohere-05dde603ef44",
+          "assessment": "matches",
+          "explanation": "原厂模型表明确精确ID。"
+        },
+        {
+          "field": "spec.extra.embeddingDimensions",
+          "currentValue": null,
+          "supportedValue": 1536,
+          "sourceId": "cohere-cb1c60dfc1c6",
+          "assessment": "differs",
+          "explanation": "原厂默认宽度；其他原生支持宽度:[256, 512, 1024, 1536]；OpenAI兼容dimensions参数不受支持，不能据原生扩权。"
+        },
+        {
+          "field": "spec.contextWindow",
+          "currentValue": 128000,
+          "supportedValue": "128k",
+          "sourceId": "cohere-cb1c60dfc1c6",
+          "assessment": "not-comparable",
+          "explanation": "官网Max Tokens(Context Length)；仅保留官方缩写，未用131072替代。"
+        },
+        {
+          "field": "spec.inputModalities",
+          "currentValue": null,
+          "supportedValue": [
+            "text",
+            "image",
+            "mixed text/images"
+          ],
+          "sourceId": "cohere-cb1c60dfc1c6",
+          "assessment": "differs",
+          "explanation": "原生Embed能力，不自动证明兼容路由支持imageinput。"
+        }
+      ],
+      "remainingFields": [
+        "spec.contextWindow"
+      ],
+      "nextAction": "逐字段审查上表候选；只有同一接入合同且语义/单位一致的证据才用于后续canonical更新。 剩余字段需精确型号页/官方API schema或已授权账号目录核查，不推导默认值。",
+      "notes": []
+    },
+    {
+      "recordKey": "compute/providers/cohere.json#embed-v5.0-fast",
+      "modelId": "embed-v5.0-fast",
+      "config": "compute/providers/cohere.json",
+      "sourceDoc": "docs/model-sources/providers/cohere/models/embed-v5.0-fast.md",
+      "outcome": "official-fields-found",
+      "sourceIds": [
+        "cohere-05dde603ef44",
+        "cohere-cb1c60dfc1c6"
+      ],
+      "fieldEvidence": [
+        {
+          "field": "modelName",
+          "currentValue": "embed-v5.0-fast",
+          "supportedValue": "embed-v5.0-fast",
+          "sourceId": "cohere-05dde603ef44",
+          "assessment": "matches",
+          "explanation": "原厂模型表明确精确ID。"
+        },
+        {
+          "field": "extra.embeddingDimensions",
+          "currentValue": null,
+          "supportedValue": 2048,
+          "sourceId": "cohere-cb1c60dfc1c6",
+          "assessment": "differs",
+          "explanation": "原厂默认宽度；其他原生支持宽度:[256, 512, 768, 1024, 1536, 2048]；OpenAI兼容dimensions参数不受支持，不能据原生扩权。"
+        },
+        {
+          "field": "contextWindow",
+          "currentValue": 128000,
+          "supportedValue": "128k",
+          "sourceId": "cohere-cb1c60dfc1c6",
+          "assessment": "not-comparable",
+          "explanation": "官网Max Tokens(Context Length)；仅保留官方缩写，未用131072替代。"
+        },
+        {
+          "field": "inputModalities",
+          "currentValue": null,
+          "supportedValue": [
+            "text",
+            "image",
+            "mixed text/images"
+          ],
+          "sourceId": "cohere-cb1c60dfc1c6",
+          "assessment": "differs",
+          "explanation": "原生Embed能力，不自动证明兼容路由支持imageinput。"
+        }
+      ],
+      "remainingFields": [
+        "contextWindow"
+      ],
+      "nextAction": "逐字段审查上表候选；只有同一接入合同且语义/单位一致的证据才用于后续canonical更新。 剩余字段需精确型号页/官方API schema或已授权账号目录核查，不推导默认值。",
+      "notes": []
+    },
+    {
+      "recordKey": "compute/model-specs/cohere.json#embed-v5.0-fast",
+      "modelId": "embed-v5.0-fast",
+      "config": "compute/model-specs/cohere.json",
+      "sourceDoc": "docs/model-sources/providers/cohere/models/embed-v5.0-fast.md",
+      "outcome": "official-fields-found",
+      "sourceIds": [
+        "cohere-05dde603ef44",
+        "cohere-cb1c60dfc1c6"
+      ],
+      "fieldEvidence": [
+        {
+          "field": "id",
+          "currentValue": "embed-v5.0-fast",
+          "supportedValue": "embed-v5.0-fast",
+          "sourceId": "cohere-05dde603ef44",
+          "assessment": "matches",
+          "explanation": "原厂模型表明确精确ID。"
+        },
+        {
+          "field": "spec.extra.embeddingDimensions",
+          "currentValue": null,
+          "supportedValue": 2048,
+          "sourceId": "cohere-cb1c60dfc1c6",
+          "assessment": "differs",
+          "explanation": "原厂默认宽度；其他原生支持宽度:[256, 512, 768, 1024, 1536, 2048]；OpenAI兼容dimensions参数不受支持，不能据原生扩权。"
+        },
+        {
+          "field": "spec.contextWindow",
+          "currentValue": 128000,
+          "supportedValue": "128k",
+          "sourceId": "cohere-cb1c60dfc1c6",
+          "assessment": "not-comparable",
+          "explanation": "官网Max Tokens(Context Length)；仅保留官方缩写，未用131072替代。"
+        },
+        {
+          "field": "spec.inputModalities",
+          "currentValue": null,
+          "supportedValue": [
+            "text",
+            "image",
+            "mixed text/images"
+          ],
+          "sourceId": "cohere-cb1c60dfc1c6",
+          "assessment": "differs",
+          "explanation": "原生Embed能力，不自动证明兼容路由支持imageinput。"
+        }
+      ],
+      "remainingFields": [
+        "spec.contextWindow"
+      ],
+      "nextAction": "逐字段审查上表候选；只有同一接入合同且语义/单位一致的证据才用于后续canonical更新。 剩余字段需精确型号页/官方API schema或已授权账号目录核查，不推导默认值。",
+      "notes": []
+    },
+    {
+      "recordKey": "compute/providers/cohere.json#embed-v5.0-pro",
+      "modelId": "embed-v5.0-pro",
+      "config": "compute/providers/cohere.json",
+      "sourceDoc": "docs/model-sources/providers/cohere/models/embed-v5.0-pro.md",
+      "outcome": "official-fields-found",
+      "sourceIds": [
+        "cohere-05dde603ef44",
+        "cohere-cb1c60dfc1c6"
+      ],
+      "fieldEvidence": [
+        {
+          "field": "modelName",
+          "currentValue": "embed-v5.0-pro",
+          "supportedValue": "embed-v5.0-pro",
+          "sourceId": "cohere-05dde603ef44",
+          "assessment": "matches",
+          "explanation": "原厂模型表明确精确ID。"
+        },
+        {
+          "field": "extra.embeddingDimensions",
+          "currentValue": null,
+          "supportedValue": 2048,
+          "sourceId": "cohere-cb1c60dfc1c6",
+          "assessment": "differs",
+          "explanation": "原厂默认宽度；其他原生支持宽度:[256, 512, 768, 1024, 1536, 2048]；OpenAI兼容dimensions参数不受支持，不能据原生扩权。"
+        },
+        {
+          "field": "contextWindow",
+          "currentValue": 128000,
+          "supportedValue": "128k",
+          "sourceId": "cohere-cb1c60dfc1c6",
+          "assessment": "not-comparable",
+          "explanation": "官网Max Tokens(Context Length)；仅保留官方缩写，未用131072替代。"
+        },
+        {
+          "field": "inputModalities",
+          "currentValue": null,
+          "supportedValue": [
+            "text",
+            "image",
+            "mixed text/images"
+          ],
+          "sourceId": "cohere-cb1c60dfc1c6",
+          "assessment": "differs",
+          "explanation": "原生Embed能力，不自动证明兼容路由支持imageinput。"
+        }
+      ],
+      "remainingFields": [
+        "contextWindow"
+      ],
+      "nextAction": "逐字段审查上表候选；只有同一接入合同且语义/单位一致的证据才用于后续canonical更新。 剩余字段需精确型号页/官方API schema或已授权账号目录核查，不推导默认值。",
+      "notes": []
+    },
+    {
+      "recordKey": "compute/model-specs/cohere.json#embed-v5.0-pro",
+      "modelId": "embed-v5.0-pro",
+      "config": "compute/model-specs/cohere.json",
+      "sourceDoc": "docs/model-sources/providers/cohere/models/embed-v5.0-pro.md",
+      "outcome": "official-fields-found",
+      "sourceIds": [
+        "cohere-05dde603ef44",
+        "cohere-cb1c60dfc1c6"
+      ],
+      "fieldEvidence": [
+        {
+          "field": "id",
+          "currentValue": "embed-v5.0-pro",
+          "supportedValue": "embed-v5.0-pro",
+          "sourceId": "cohere-05dde603ef44",
+          "assessment": "matches",
+          "explanation": "原厂模型表明确精确ID。"
+        },
+        {
+          "field": "spec.extra.embeddingDimensions",
+          "currentValue": null,
+          "supportedValue": 2048,
+          "sourceId": "cohere-cb1c60dfc1c6",
+          "assessment": "differs",
+          "explanation": "原厂默认宽度；其他原生支持宽度:[256, 512, 768, 1024, 1536, 2048]；OpenAI兼容dimensions参数不受支持，不能据原生扩权。"
+        },
+        {
+          "field": "spec.contextWindow",
+          "currentValue": 128000,
+          "supportedValue": "128k",
+          "sourceId": "cohere-cb1c60dfc1c6",
+          "assessment": "not-comparable",
+          "explanation": "官网Max Tokens(Context Length)；仅保留官方缩写，未用131072替代。"
+        },
+        {
+          "field": "spec.inputModalities",
+          "currentValue": null,
+          "supportedValue": [
+            "text",
+            "image",
+            "mixed text/images"
+          ],
+          "sourceId": "cohere-cb1c60dfc1c6",
+          "assessment": "differs",
+          "explanation": "原生Embed能力，不自动证明兼容路由支持imageinput。"
+        }
+      ],
+      "remainingFields": [
+        "spec.contextWindow"
+      ],
+      "nextAction": "逐字段审查上表候选；只有同一接入合同且语义/单位一致的证据才用于后续canonical更新。 剩余字段需精确型号页/官方API schema或已授权账号目录核查，不推导默认值。",
+      "notes": []
+    },
+    {
+      "recordKey": "compute/model-specs/cohere.json#north-mini-code-1-0",
+      "modelId": "north-mini-code-1-0",
+      "config": "compute/model-specs/cohere.json",
+      "sourceDoc": "docs/model-sources/providers/cohere/models/north-mini-code-1-0.md",
+      "outcome": "official-identity-only",
+      "sourceIds": [
+        "cohere-05dde603ef44"
+      ],
+      "fieldEvidence": [
+        {
+          "field": "id",
+          "currentValue": "north-mini-code-1-0",
+          "supportedValue": "north-mini-code-1-0",
+          "sourceId": "cohere-05dde603ef44",
+          "assessment": "matches",
+          "explanation": "原厂模型表明确精确ID。"
+        },
+        {
+          "field": "spec.contextWindow",
+          "currentValue": 256000,
+          "supportedValue": "256k",
+          "sourceId": "cohere-05dde603ef44",
+          "assessment": "not-comparable",
+          "explanation": "官方缩写；精确整数待型号明文证据，不能机械按1024展开。"
+        },
+        {
+          "field": "spec.maxOutputTokens",
+          "currentValue": 64000,
+          "supportedValue": "64k",
+          "sourceId": "cohere-05dde603ef44",
+          "assessment": "not-comparable",
+          "explanation": "模型总表最大输出；仅缩写。与现值不同仅形成待确认差异，不证明某兼容接入接受同值。"
+        }
+      ],
+      "remainingFields": [
+        "spec.contextWindow",
+        "spec.maxOutputTokens"
+      ],
+      "nextAction": "逐字段审查上表候选；只有同一接入合同且语义/单位一致的证据才用于后续canonical更新。 剩余字段需精确型号页/官方API schema或已授权账号目录核查，不推导默认值。",
+      "notes": [
+        "官方原生Chat/ModelVault可用；免费至rate limits并不等于无限免费或原厂固定token价。"
+      ]
+    },
+    {
+      "recordKey": "compute/model-specs/cohere.json#north-small-translate-1-0",
+      "modelId": "north-small-translate-1-0",
+      "config": "compute/model-specs/cohere.json",
+      "sourceDoc": "docs/model-sources/providers/cohere/models/north-small-translate-1-0.md",
+      "outcome": "official-identity-only",
+      "sourceIds": [
+        "cohere-05dde603ef44",
+        "cohere-fe3cdf196fc2"
+      ],
+      "fieldEvidence": [
+        {
+          "field": "id",
+          "currentValue": "north-small-translate-1-0",
+          "supportedValue": "north-small-translate-1-0",
+          "sourceId": "cohere-05dde603ef44",
+          "assessment": "matches",
+          "explanation": "原厂模型表明确精确ID。"
+        },
+        {
+          "field": "spec.contextWindow",
+          "currentValue": null,
+          "supportedValue": "16k",
+          "sourceId": "cohere-05dde603ef44",
+          "assessment": "not-comparable",
+          "explanation": "官方缩写；精确整数待型号明文证据，不能机械按1024展开。"
+        },
+        {
+          "field": "spec.maxOutputTokens",
+          "currentValue": null,
+          "supportedValue": "16k",
+          "sourceId": "cohere-05dde603ef44",
+          "assessment": "not-comparable",
+          "explanation": "模型总表最大输出；仅缩写。与现值不同仅形成待确认差异，不证明某兼容接入接受同值。"
+        }
+      ],
+      "remainingFields": [],
+      "nextAction": "逐字段审查上表候选；只有同一接入合同且语义/单位一致的证据才用于后续canonical更新。",
+      "notes": [
+        "官方原生Chat/ModelVault可用；免费至rate limits并不等于无限免费或原厂固定token价。"
+      ]
+    },
+    {
+      "recordKey": "compute/model-specs/cohere.json#rerank-v3.5",
+      "modelId": "rerank-v3.5",
+      "config": "compute/model-specs/cohere.json",
+      "sourceDoc": "docs/model-sources/providers/cohere/models/rerank-v3.5.md",
+      "outcome": "official-fields-found",
+      "sourceIds": [
+        "cohere-05dde603ef44",
+        "cohere-2d31cad6ee58",
+        "cohere-0d6afcf8433d"
+      ],
+      "fieldEvidence": [
+        {
+          "field": "id",
+          "currentValue": "rerank-v3.5",
+          "supportedValue": "rerank-v3.5",
+          "sourceId": "cohere-05dde603ef44",
+          "assessment": "matches",
+          "explanation": "原厂模型表明确精确ID。"
+        },
+        {
+          "field": "spec.contextWindow",
+          "currentValue": 4096,
+          "supportedValue": 4096,
+          "sourceId": "cohere-2d31cad6ee58",
+          "assessment": "matches",
+          "explanation": "官方精确最大query+document合计；不是Chat历史窗口，compat无rerank端点。"
+        },
+        {
+          "field": "spec.maxInputTokens",
+          "currentValue": null,
+          "supportedValue": {
+            "queryAndDocument": 4096,
+            "query": 2048
+          },
+          "sourceId": "cohere-2d31cad6ee58",
+          "assessment": "not-comparable",
+          "explanation": "rerank每query/documentscope明确，不是批量sum Chat预算。"
+        }
+      ],
+      "remainingFields": [],
+      "nextAction": "逐字段审查上表候选；只有同一接入合同且语义/单位一致的证据才用于后续canonical更新。",
+      "notes": []
+    },
+    {
+      "recordKey": "compute/model-specs/cohere.json#rerank-v4.0-fast",
+      "modelId": "rerank-v4.0-fast",
+      "config": "compute/model-specs/cohere.json",
+      "sourceDoc": "docs/model-sources/providers/cohere/models/rerank-v4.0-fast.md",
+      "outcome": "official-fields-found",
+      "sourceIds": [
+        "cohere-05dde603ef44",
+        "cohere-2d31cad6ee58"
+      ],
+      "fieldEvidence": [
+        {
+          "field": "id",
+          "currentValue": "rerank-v4.0-fast",
+          "supportedValue": "rerank-v4.0-fast",
+          "sourceId": "cohere-05dde603ef44",
+          "assessment": "matches",
+          "explanation": "原厂模型表明确精确ID。"
+        },
+        {
+          "field": "spec.contextWindow",
+          "currentValue": null,
+          "supportedValue": 32768,
+          "sourceId": "cohere-2d31cad6ee58",
+          "assessment": "differs",
+          "explanation": "官方精确最大query+document合计；不是Chat历史窗口，compat无rerank端点。"
+        },
+        {
+          "field": "spec.maxInputTokens",
+          "currentValue": null,
+          "supportedValue": {
+            "queryAndDocument": 32768,
+            "query": 16384
+          },
+          "sourceId": "cohere-2d31cad6ee58",
+          "assessment": "not-comparable",
+          "explanation": "rerank每query/documentscope明确，不是批量sum Chat预算。"
+        }
+      ],
+      "remainingFields": [],
+      "nextAction": "逐字段审查上表候选；只有同一接入合同且语义/单位一致的证据才用于后续canonical更新。",
+      "notes": []
+    },
+    {
+      "recordKey": "compute/model-specs/cohere.json#rerank-v4.0-pro",
+      "modelId": "rerank-v4.0-pro",
+      "config": "compute/model-specs/cohere.json",
+      "sourceDoc": "docs/model-sources/providers/cohere/models/rerank-v4.0-pro.md",
+      "outcome": "official-fields-found",
+      "sourceIds": [
+        "cohere-05dde603ef44",
+        "cohere-2d31cad6ee58"
+      ],
+      "fieldEvidence": [
+        {
+          "field": "id",
+          "currentValue": "rerank-v4.0-pro",
+          "supportedValue": "rerank-v4.0-pro",
+          "sourceId": "cohere-05dde603ef44",
+          "assessment": "matches",
+          "explanation": "原厂模型表明确精确ID。"
+        },
+        {
+          "field": "spec.contextWindow",
+          "currentValue": null,
+          "supportedValue": 32768,
+          "sourceId": "cohere-2d31cad6ee58",
+          "assessment": "differs",
+          "explanation": "官方精确最大query+document合计；不是Chat历史窗口，compat无rerank端点。"
+        },
+        {
+          "field": "spec.maxInputTokens",
+          "currentValue": null,
+          "supportedValue": {
+            "queryAndDocument": 32768,
+            "query": 16384
+          },
+          "sourceId": "cohere-2d31cad6ee58",
+          "assessment": "not-comparable",
+          "explanation": "rerank每query/documentscope明确，不是批量sum Chat预算。"
+        }
+      ],
+      "remainingFields": [],
+      "nextAction": "逐字段审查上表候选；只有同一接入合同且语义/单位一致的证据才用于后续canonical更新。",
+      "notes": []
+    }
+  ]
+}

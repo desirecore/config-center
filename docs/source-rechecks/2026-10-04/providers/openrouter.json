@@ -1,0 +1,1315 @@
+{
+  "supplier": "openrouter",
+  "checkedAt": "2026-10-04",
+  "sources": [
+    {
+      "id": "openrouter-051e0609abb5",
+      "url": "https://openrouter.ai/api/v1/models",
+      "finalUrl": "https://openrouter.ai/api/v1/models",
+      "publisher": "OpenRouter",
+      "kind": "official-platform",
+      "retrieval": "readable",
+      "summary": "正文已读取；仅用于下方逐字段列明的证据，读取成功不代表全规格核实。",
+      "scope": "该官网文档明确列出的模型/API；不扩展到其他接入面。"
+    }
+  ],
+  "findings": [
+    {
+      "recordKey": "compute/providers/openrouter.json#anthropic/claude-opus-5.5",
+      "modelId": "anthropic/claude-opus-5.5",
+      "config": "compute/providers/openrouter.json",
+      "sourceDoc": "docs/model-sources/providers/openrouter/models/anthropic--claude-opus-5.5.md",
+      "outcome": "official-fields-found",
+      "sourceIds": [
+        "openrouter-051e0609abb5"
+      ],
+      "fieldEvidence": [
+        {
+          "field": "modelName",
+          "currentValue": "anthropic/claude-opus-5.5",
+          "supportedValue": "anthropic/claude-opus-5.5",
+          "sourceId": "openrouter-051e0609abb5",
+          "assessment": "matches",
+          "explanation": "公共目录精确id，不证明账号有权或指定后端可用。"
+        },
+        {
+          "field": "contextWindow",
+          "currentValue": 1000000,
+          "supportedValue": 1000000,
+          "sourceId": "openrouter-051e0609abb5",
+          "assessment": "matches",
+          "explanation": "该平台目录context_length；不反推原厂合同。"
+        },
+        {
+          "field": "maxOutputTokens",
+          "currentValue": 128000,
+          "supportedValue": 128000,
+          "sourceId": "openrouter-051e0609abb5",
+          "assessment": "matches",
+          "explanation": "top_provider当前max_completion_tokens，可随后端变化。"
+        },
+        {
+          "field": "inputPrice",
+          "currentValue": 4,
+          "supportedValue": 4.0,
+          "sourceId": "openrouter-051e0609abb5",
+          "assessment": "matches",
+          "explanation": "OpenRouter USD/token×1,000,000；不得套用原厂价格。"
+        },
+        {
+          "field": "outputPrice",
+          "currentValue": 20,
+          "supportedValue": 20.0,
+          "sourceId": "openrouter-051e0609abb5",
+          "assessment": "matches",
+          "explanation": "OpenRouter USD/token×1,000,000；不得套用原厂价格。"
+        },
+        {
+          "field": "extra.cachedInputPrice",
+          "currentValue": null,
+          "supportedValue": 0.2,
+          "sourceId": "openrouter-051e0609abb5",
+          "assessment": "differs",
+          "explanation": "OpenRouter USD/token×1,000,000；不得套用原厂价格。"
+        },
+        {
+          "field": "supportedParameters",
+          "currentValue": null,
+          "supportedValue": [
+            "include_reasoning",
+            "max_completion_tokens",
+            "max_tokens",
+            "reasoning",
+            "reasoning_effort",
+            "response_format",
+            "stop",
+            "structured_outputs",
+            "temperature",
+            "tool_choice",
+            "tools",
+            "verbosity"
+          ],
+          "sourceId": "openrouter-051e0609abb5",
+          "assessment": "differs",
+          "explanation": "平台目录声明支持参数，不同后端/账号仍需验收。"
+        }
+      ],
+      "remainingFields": [],
+      "nextAction": "逐字段审查上表候选；只有同一接入合同且语义/单位一致的证据才用于后续canonical更新。",
+      "notes": []
+    },
+    {
+      "recordKey": "compute/providers/openrouter.json#anthropic/claude-sonnet-5.5",
+      "modelId": "anthropic/claude-sonnet-5.5",
+      "config": "compute/providers/openrouter.json",
+      "sourceDoc": "docs/model-sources/providers/openrouter/models/anthropic--claude-sonnet-5.5.md",
+      "outcome": "official-fields-found",
+      "sourceIds": [
+        "openrouter-051e0609abb5"
+      ],
+      "fieldEvidence": [
+        {
+          "field": "modelName",
+          "currentValue": "anthropic/claude-sonnet-5.5",
+          "supportedValue": "anthropic/claude-sonnet-5.5",
+          "sourceId": "openrouter-051e0609abb5",
+          "assessment": "matches",
+          "explanation": "公共目录精确id，不证明账号有权或指定后端可用。"
+        },
+        {
+          "field": "contextWindow",
+          "currentValue": 1000000,
+          "supportedValue": 1000000,
+          "sourceId": "openrouter-051e0609abb5",
+          "assessment": "matches",
+          "explanation": "该平台目录context_length；不反推原厂合同。"
+        },
+        {
+          "field": "maxOutputTokens",
+          "currentValue": 128000,
+          "supportedValue": 128000,
+          "sourceId": "openrouter-051e0609abb5",
+          "assessment": "matches",
+          "explanation": "top_provider当前max_completion_tokens，可随后端变化。"
+        },
+        {
+          "field": "inputPrice",
+          "currentValue": 2,
+          "supportedValue": 2.0,
+          "sourceId": "openrouter-051e0609abb5",
+          "assessment": "matches",
+          "explanation": "OpenRouter USD/token×1,000,000；不得套用原厂价格。"
+        },
+        {
+          "field": "outputPrice",
+          "currentValue": 10,
+          "supportedValue": 10.0,
+          "sourceId": "openrouter-051e0609abb5",
+          "assessment": "matches",
+          "explanation": "OpenRouter USD/token×1,000,000；不得套用原厂价格。"
+        },
+        {
+          "field": "extra.cachedInputPrice",
+          "currentValue": null,
+          "supportedValue": 0.2,
+          "sourceId": "openrouter-051e0609abb5",
+          "assessment": "differs",
+          "explanation": "OpenRouter USD/token×1,000,000；不得套用原厂价格。"
+        },
+        {
+          "field": "supportedParameters",
+          "currentValue": null,
+          "supportedValue": [
+            "include_reasoning",
+            "max_completion_tokens",
+            "max_tokens",
+            "reasoning",
+            "reasoning_effort",
+            "response_format",
+            "stop",
+            "structured_outputs",
+            "temperature",
+            "tool_choice",
+            "tools",
+            "verbosity"
+          ],
+          "sourceId": "openrouter-051e0609abb5",
+          "assessment": "differs",
+          "explanation": "平台目录声明支持参数，不同后端/账号仍需验收。"
+        }
+      ],
+      "remainingFields": [],
+      "nextAction": "逐字段审查上表候选；只有同一接入合同且语义/单位一致的证据才用于后续canonical更新。",
+      "notes": []
+    },
+    {
+      "recordKey": "compute/providers/openrouter.json#cohere/command-a-plus",
+      "modelId": "cohere/command-a-plus",
+      "config": "compute/providers/openrouter.json",
+      "sourceDoc": "docs/model-sources/providers/openrouter/models/cohere--command-a-plus.md",
+      "outcome": "official-fields-found",
+      "sourceIds": [
+        "openrouter-051e0609abb5"
+      ],
+      "fieldEvidence": [
+        {
+          "field": "modelName",
+          "currentValue": "cohere/command-a-plus",
+          "supportedValue": "cohere/command-a-plus",
+          "sourceId": "openrouter-051e0609abb5",
+          "assessment": "matches",
+          "explanation": "公共目录精确id，不证明账号有权或指定后端可用。"
+        },
+        {
+          "field": "contextWindow",
+          "currentValue": 192000,
+          "supportedValue": 192000,
+          "sourceId": "openrouter-051e0609abb5",
+          "assessment": "matches",
+          "explanation": "该平台目录context_length；不反推原厂合同。"
+        },
+        {
+          "field": "maxOutputTokens",
+          "currentValue": 64000,
+          "supportedValue": 64000,
+          "sourceId": "openrouter-051e0609abb5",
+          "assessment": "matches",
+          "explanation": "top_provider当前max_completion_tokens，可随后端变化。"
+        },
+        {
+          "field": "inputPrice",
+          "currentValue": 0.3,
+          "supportedValue": 0.3,
+          "sourceId": "openrouter-051e0609abb5",
+          "assessment": "matches",
+          "explanation": "OpenRouter USD/token×1,000,000；不得套用原厂价格。"
+        },
+        {
+          "field": "outputPrice",
+          "currentValue": 1.5,
+          "supportedValue": 1.5,
+          "sourceId": "openrouter-051e0609abb5",
+          "assessment": "matches",
+          "explanation": "OpenRouter USD/token×1,000,000；不得套用原厂价格。"
+        },
+        {
+          "field": "extra.cachedInputPrice",
+          "currentValue": null,
+          "supportedValue": 0.15,
+          "sourceId": "openrouter-051e0609abb5",
+          "assessment": "differs",
+          "explanation": "OpenRouter USD/token×1,000,000；不得套用原厂价格。"
+        },
+        {
+          "field": "supportedParameters",
+          "currentValue": null,
+          "supportedValue": [
+            "frequency_penalty",
+            "include_reasoning",
+            "max_tokens",
+            "presence_penalty",
+            "reasoning",
+            "response_format",
+            "seed",
+            "stop",
+            "structured_outputs",
+            "temperature",
+            "tools",
+            "top_k",
+            "top_p"
+          ],
+          "sourceId": "openrouter-051e0609abb5",
+          "assessment": "differs",
+          "explanation": "平台目录声明支持参数，不同后端/账号仍需验收。"
+        }
+      ],
+      "remainingFields": [],
+      "nextAction": "逐字段审查上表候选；只有同一接入合同且语义/单位一致的证据才用于后续canonical更新。",
+      "notes": []
+    },
+    {
+      "recordKey": "compute/providers/openrouter.json#deepseek/deepseek-v4.1-flash",
+      "modelId": "deepseek/deepseek-v4.1-flash",
+      "config": "compute/providers/openrouter.json",
+      "sourceDoc": "docs/model-sources/providers/openrouter/models/deepseek--deepseek-v4.1-flash.md",
+      "outcome": "official-conflict",
+      "sourceIds": [
+        "openrouter-051e0609abb5"
+      ],
+      "fieldEvidence": [
+        {
+          "field": "modelName",
+          "currentValue": "deepseek/deepseek-v4.1-flash",
+          "supportedValue": "deepseek/deepseek-v4.1-flash",
+          "sourceId": "openrouter-051e0609abb5",
+          "assessment": "matches",
+          "explanation": "公共目录精确id，不证明账号有权或指定后端可用。"
+        },
+        {
+          "field": "contextWindow",
+          "currentValue": 1048576,
+          "supportedValue": 1048576,
+          "sourceId": "openrouter-051e0609abb5",
+          "assessment": "matches",
+          "explanation": "该平台目录context_length；不反推原厂合同。"
+        },
+        {
+          "field": "maxOutputTokens",
+          "currentValue": 943718,
+          "supportedValue": 943718,
+          "sourceId": "openrouter-051e0609abb5",
+          "assessment": "matches",
+          "explanation": "top_provider当前max_completion_tokens，可随后端变化。"
+        },
+        {
+          "field": "inputPrice",
+          "currentValue": 0.3,
+          "supportedValue": 0.003,
+          "sourceId": "openrouter-051e0609abb5",
+          "assessment": "differs",
+          "explanation": "OpenRouter USD/token×1,000,000；不得套用原厂价格。"
+        },
+        {
+          "field": "outputPrice",
+          "currentValue": 1.2,
+          "supportedValue": 2.4,
+          "sourceId": "openrouter-051e0609abb5",
+          "assessment": "differs",
+          "explanation": "OpenRouter USD/token×1,000,000；不得套用原厂价格。"
+        },
+        {
+          "field": "extra.cachedInputPrice",
+          "currentValue": null,
+          "supportedValue": 0.003,
+          "sourceId": "openrouter-051e0609abb5",
+          "assessment": "differs",
+          "explanation": "OpenRouter USD/token×1,000,000；不得套用原厂价格。"
+        },
+        {
+          "field": "supportedParameters",
+          "currentValue": null,
+          "supportedValue": [
+            "frequency_penalty",
+            "include_reasoning",
+            "logit_bias",
+            "logprobs",
+            "max_tokens",
+            "min_p",
+            "presence_penalty",
+            "reasoning",
+            "reasoning_effort",
+            "repetition_penalty",
+            "response_format",
+            "seed",
+            "stop",
+            "structured_outputs",
+            "temperature",
+            "tool_choice",
+            "tools",
+            "top_k",
+            "top_logprobs",
+            "top_p"
+          ],
+          "sourceId": "openrouter-051e0609abb5",
+          "assessment": "differs",
+          "explanation": "平台目录声明支持参数，不同后端/账号仍需验收。"
+        }
+      ],
+      "remainingFields": [],
+      "nextAction": "逐字段审查上表候选；只有同一接入合同且语义/单位一致的证据才用于后续canonical更新。",
+      "notes": []
+    },
+    {
+      "recordKey": "compute/providers/openrouter.json#google/gemini-3.8-flash",
+      "modelId": "google/gemini-3.8-flash",
+      "config": "compute/providers/openrouter.json",
+      "sourceDoc": "docs/model-sources/providers/openrouter/models/google--gemini-3.8-flash.md",
+      "outcome": "official-fields-found",
+      "sourceIds": [
+        "openrouter-051e0609abb5"
+      ],
+      "fieldEvidence": [
+        {
+          "field": "modelName",
+          "currentValue": "google/gemini-3.8-flash",
+          "supportedValue": "google/gemini-3.8-flash",
+          "sourceId": "openrouter-051e0609abb5",
+          "assessment": "matches",
+          "explanation": "公共目录精确id，不证明账号有权或指定后端可用。"
+        },
+        {
+          "field": "contextWindow",
+          "currentValue": 1048576,
+          "supportedValue": 1048576,
+          "sourceId": "openrouter-051e0609abb5",
+          "assessment": "matches",
+          "explanation": "该平台目录context_length；不反推原厂合同。"
+        },
+        {
+          "field": "maxOutputTokens",
+          "currentValue": 65536,
+          "supportedValue": 65536,
+          "sourceId": "openrouter-051e0609abb5",
+          "assessment": "matches",
+          "explanation": "top_provider当前max_completion_tokens，可随后端变化。"
+        },
+        {
+          "field": "inputPrice",
+          "currentValue": 0.75,
+          "supportedValue": 0.75,
+          "sourceId": "openrouter-051e0609abb5",
+          "assessment": "matches",
+          "explanation": "OpenRouter USD/token×1,000,000；不得套用原厂价格。"
+        },
+        {
+          "field": "outputPrice",
+          "currentValue": 3.75,
+          "supportedValue": 3.75,
+          "sourceId": "openrouter-051e0609abb5",
+          "assessment": "matches",
+          "explanation": "OpenRouter USD/token×1,000,000；不得套用原厂价格。"
+        },
+        {
+          "field": "extra.cachedInputPrice",
+          "currentValue": null,
+          "supportedValue": 0.075,
+          "sourceId": "openrouter-051e0609abb5",
+          "assessment": "differs",
+          "explanation": "OpenRouter USD/token×1,000,000；不得套用原厂价格。"
+        },
+        {
+          "field": "supportedParameters",
+          "currentValue": null,
+          "supportedValue": [
+            "include_reasoning",
+            "max_tokens",
+            "reasoning",
+            "reasoning_effort",
+            "response_format",
+            "seed",
+            "stop",
+            "structured_outputs",
+            "temperature",
+            "tool_choice",
+            "tools",
+            "top_p"
+          ],
+          "sourceId": "openrouter-051e0609abb5",
+          "assessment": "differs",
+          "explanation": "平台目录声明支持参数，不同后端/账号仍需验收。"
+        }
+      ],
+      "remainingFields": [],
+      "nextAction": "逐字段审查上表候选；只有同一接入合同且语义/单位一致的证据才用于后续canonical更新。",
+      "notes": []
+    },
+    {
+      "recordKey": "compute/providers/openrouter.json#minimax/minimax-m3",
+      "modelId": "minimax/minimax-m3",
+      "config": "compute/providers/openrouter.json",
+      "sourceDoc": "docs/model-sources/providers/openrouter/models/minimax--minimax-m3.md",
+      "outcome": "official-fields-found",
+      "sourceIds": [
+        "openrouter-051e0609abb5"
+      ],
+      "fieldEvidence": [
+        {
+          "field": "modelName",
+          "currentValue": "minimax/minimax-m3",
+          "supportedValue": "minimax/minimax-m3",
+          "sourceId": "openrouter-051e0609abb5",
+          "assessment": "matches",
+          "explanation": "公共目录精确id，不证明账号有权或指定后端可用。"
+        },
+        {
+          "field": "contextWindow",
+          "currentValue": 1048576,
+          "supportedValue": 1048576,
+          "sourceId": "openrouter-051e0609abb5",
+          "assessment": "matches",
+          "explanation": "该平台目录context_length；不反推原厂合同。"
+        },
+        {
+          "field": "maxOutputTokens",
+          "currentValue": 512000,
+          "supportedValue": 512000,
+          "sourceId": "openrouter-051e0609abb5",
+          "assessment": "matches",
+          "explanation": "top_provider当前max_completion_tokens，可随后端变化。"
+        },
+        {
+          "field": "inputPrice",
+          "currentValue": 0.3,
+          "supportedValue": 0.3,
+          "sourceId": "openrouter-051e0609abb5",
+          "assessment": "matches",
+          "explanation": "OpenRouter USD/token×1,000,000；不得套用原厂价格。"
+        },
+        {
+          "field": "outputPrice",
+          "currentValue": 1.2,
+          "supportedValue": 1.2,
+          "sourceId": "openrouter-051e0609abb5",
+          "assessment": "matches",
+          "explanation": "OpenRouter USD/token×1,000,000；不得套用原厂价格。"
+        },
+        {
+          "field": "extra.cachedInputPrice",
+          "currentValue": null,
+          "supportedValue": 0.06,
+          "sourceId": "openrouter-051e0609abb5",
+          "assessment": "differs",
+          "explanation": "OpenRouter USD/token×1,000,000；不得套用原厂价格。"
+        },
+        {
+          "field": "supportedParameters",
+          "currentValue": null,
+          "supportedValue": [
+            "frequency_penalty",
+            "include_reasoning",
+            "logit_bias",
+            "logprobs",
+            "max_tokens",
+            "min_p",
+            "presence_penalty",
+            "reasoning",
+            "repetition_penalty",
+            "response_format",
+            "seed",
+            "stop",
+            "structured_outputs",
+            "temperature",
+            "tool_choice",
+            "tools",
+            "top_k",
+            "top_logprobs",
+            "top_p"
+          ],
+          "sourceId": "openrouter-051e0609abb5",
+          "assessment": "differs",
+          "explanation": "平台目录声明支持参数，不同后端/账号仍需验收。"
+        }
+      ],
+      "remainingFields": [],
+      "nextAction": "逐字段审查上表候选；只有同一接入合同且语义/单位一致的证据才用于后续canonical更新。",
+      "notes": []
+    },
+    {
+      "recordKey": "compute/providers/openrouter.json#mistralai/mistral-medium-3-5",
+      "modelId": "mistralai/mistral-medium-3-5",
+      "config": "compute/providers/openrouter.json",
+      "sourceDoc": "docs/model-sources/providers/openrouter/models/mistralai--mistral-medium-3-5.md",
+      "outcome": "official-fields-found",
+      "sourceIds": [
+        "openrouter-051e0609abb5"
+      ],
+      "fieldEvidence": [
+        {
+          "field": "modelName",
+          "currentValue": "mistralai/mistral-medium-3-5",
+          "supportedValue": "mistralai/mistral-medium-3-5",
+          "sourceId": "openrouter-051e0609abb5",
+          "assessment": "matches",
+          "explanation": "公共目录精确id，不证明账号有权或指定后端可用。"
+        },
+        {
+          "field": "contextWindow",
+          "currentValue": 262144,
+          "supportedValue": 262144,
+          "sourceId": "openrouter-051e0609abb5",
+          "assessment": "matches",
+          "explanation": "该平台目录context_length；不反推原厂合同。"
+        },
+        {
+          "field": "maxOutputTokens",
+          "currentValue": 209715,
+          "supportedValue": 209715,
+          "sourceId": "openrouter-051e0609abb5",
+          "assessment": "matches",
+          "explanation": "top_provider当前max_completion_tokens，可随后端变化。"
+        },
+        {
+          "field": "inputPrice",
+          "currentValue": 1.5,
+          "supportedValue": 1.5,
+          "sourceId": "openrouter-051e0609abb5",
+          "assessment": "matches",
+          "explanation": "OpenRouter USD/token×1,000,000；不得套用原厂价格。"
+        },
+        {
+          "field": "outputPrice",
+          "currentValue": 7.5,
+          "supportedValue": 7.5,
+          "sourceId": "openrouter-051e0609abb5",
+          "assessment": "matches",
+          "explanation": "OpenRouter USD/token×1,000,000；不得套用原厂价格。"
+        },
+        {
+          "field": "supportedParameters",
+          "currentValue": null,
+          "supportedValue": [
+            "frequency_penalty",
+            "include_reasoning",
+            "max_tokens",
+            "presence_penalty",
+            "reasoning",
+            "reasoning_effort",
+            "response_format",
+            "seed",
+            "stop",
+            "structured_outputs",
+            "temperature",
+            "tool_choice",
+            "tools",
+            "top_p"
+          ],
+          "sourceId": "openrouter-051e0609abb5",
+          "assessment": "differs",
+          "explanation": "平台目录声明支持参数，不同后端/账号仍需验收。"
+        }
+      ],
+      "remainingFields": [],
+      "nextAction": "逐字段审查上表候选；只有同一接入合同且语义/单位一致的证据才用于后续canonical更新。",
+      "notes": []
+    },
+    {
+      "recordKey": "compute/providers/openrouter.json#moonshotai/kimi-k3",
+      "modelId": "moonshotai/kimi-k3",
+      "config": "compute/providers/openrouter.json",
+      "sourceDoc": "docs/model-sources/providers/openrouter/models/moonshotai--kimi-k3.md",
+      "outcome": "official-conflict",
+      "sourceIds": [
+        "openrouter-051e0609abb5"
+      ],
+      "fieldEvidence": [
+        {
+          "field": "modelName",
+          "currentValue": "moonshotai/kimi-k3",
+          "supportedValue": "moonshotai/kimi-k3",
+          "sourceId": "openrouter-051e0609abb5",
+          "assessment": "matches",
+          "explanation": "公共目录精确id，不证明账号有权或指定后端可用。"
+        },
+        {
+          "field": "contextWindow",
+          "currentValue": 1048576,
+          "supportedValue": 1048576,
+          "sourceId": "openrouter-051e0609abb5",
+          "assessment": "matches",
+          "explanation": "该平台目录context_length；不反推原厂合同。"
+        },
+        {
+          "field": "maxOutputTokens",
+          "currentValue": 943718,
+          "supportedValue": 943718,
+          "sourceId": "openrouter-051e0609abb5",
+          "assessment": "matches",
+          "explanation": "top_provider当前max_completion_tokens，可随后端变化。"
+        },
+        {
+          "field": "inputPrice",
+          "currentValue": 2.7,
+          "supportedValue": 0.72,
+          "sourceId": "openrouter-051e0609abb5",
+          "assessment": "differs",
+          "explanation": "OpenRouter USD/token×1,000,000；不得套用原厂价格。"
+        },
+        {
+          "field": "outputPrice",
+          "currentValue": 13.5,
+          "supportedValue": 13.0,
+          "sourceId": "openrouter-051e0609abb5",
+          "assessment": "differs",
+          "explanation": "OpenRouter USD/token×1,000,000；不得套用原厂价格。"
+        },
+        {
+          "field": "extra.cachedInputPrice",
+          "currentValue": null,
+          "supportedValue": 0.7,
+          "sourceId": "openrouter-051e0609abb5",
+          "assessment": "differs",
+          "explanation": "OpenRouter USD/token×1,000,000；不得套用原厂价格。"
+        },
+        {
+          "field": "supportedParameters",
+          "currentValue": null,
+          "supportedValue": [
+            "frequency_penalty",
+            "include_reasoning",
+            "logit_bias",
+            "logprobs",
+            "max_tokens",
+            "min_p",
+            "presence_penalty",
+            "reasoning",
+            "reasoning_effort",
+            "repetition_penalty",
+            "response_format",
+            "seed",
+            "stop",
+            "structured_outputs",
+            "temperature",
+            "tool_choice",
+            "tools",
+            "top_k",
+            "top_logprobs",
+            "top_p"
+          ],
+          "sourceId": "openrouter-051e0609abb5",
+          "assessment": "differs",
+          "explanation": "平台目录声明支持参数，不同后端/账号仍需验收。"
+        }
+      ],
+      "remainingFields": [],
+      "nextAction": "逐字段审查上表候选；只有同一接入合同且语义/单位一致的证据才用于后续canonical更新。",
+      "notes": []
+    },
+    {
+      "recordKey": "compute/providers/openrouter.json#openai/gpt-6.1-sol",
+      "modelId": "openai/gpt-6.1-sol",
+      "config": "compute/providers/openrouter.json",
+      "sourceDoc": "docs/model-sources/providers/openrouter/models/openai--gpt-6.1-sol.md",
+      "outcome": "official-fields-found",
+      "sourceIds": [
+        "openrouter-051e0609abb5"
+      ],
+      "fieldEvidence": [
+        {
+          "field": "modelName",
+          "currentValue": "openai/gpt-6.1-sol",
+          "supportedValue": "openai/gpt-6.1-sol",
+          "sourceId": "openrouter-051e0609abb5",
+          "assessment": "matches",
+          "explanation": "公共目录精确id，不证明账号有权或指定后端可用。"
+        },
+        {
+          "field": "contextWindow",
+          "currentValue": 1050000,
+          "supportedValue": 1050000,
+          "sourceId": "openrouter-051e0609abb5",
+          "assessment": "matches",
+          "explanation": "该平台目录context_length；不反推原厂合同。"
+        },
+        {
+          "field": "maxOutputTokens",
+          "currentValue": 128000,
+          "supportedValue": 128000,
+          "sourceId": "openrouter-051e0609abb5",
+          "assessment": "matches",
+          "explanation": "top_provider当前max_completion_tokens，可随后端变化。"
+        },
+        {
+          "field": "inputPrice",
+          "currentValue": 2,
+          "supportedValue": 2.0,
+          "sourceId": "openrouter-051e0609abb5",
+          "assessment": "matches",
+          "explanation": "OpenRouter USD/token×1,000,000；不得套用原厂价格。"
+        },
+        {
+          "field": "outputPrice",
+          "currentValue": 10,
+          "supportedValue": 10.0,
+          "sourceId": "openrouter-051e0609abb5",
+          "assessment": "matches",
+          "explanation": "OpenRouter USD/token×1,000,000；不得套用原厂价格。"
+        },
+        {
+          "field": "extra.cachedInputPrice",
+          "currentValue": null,
+          "supportedValue": 0.1,
+          "sourceId": "openrouter-051e0609abb5",
+          "assessment": "differs",
+          "explanation": "OpenRouter USD/token×1,000,000；不得套用原厂价格。"
+        },
+        {
+          "field": "supportedParameters",
+          "currentValue": null,
+          "supportedValue": [
+            "include_reasoning",
+            "max_completion_tokens",
+            "max_tokens",
+            "reasoning",
+            "reasoning_effort",
+            "response_format",
+            "seed",
+            "structured_outputs",
+            "tool_choice",
+            "tools",
+            "verbosity"
+          ],
+          "sourceId": "openrouter-051e0609abb5",
+          "assessment": "differs",
+          "explanation": "平台目录声明支持参数，不同后端/账号仍需验收。"
+        }
+      ],
+      "remainingFields": [],
+      "nextAction": "逐字段审查上表候选；只有同一接入合同且语义/单位一致的证据才用于后续canonical更新。",
+      "notes": []
+    },
+    {
+      "recordKey": "compute/providers/openrouter.json#openrouter/auto",
+      "modelId": "openrouter/auto",
+      "config": "compute/providers/openrouter.json",
+      "sourceDoc": "docs/model-sources/providers/openrouter/models/openrouter--auto.md",
+      "outcome": "official-fields-found",
+      "sourceIds": [
+        "openrouter-051e0609abb5"
+      ],
+      "fieldEvidence": [
+        {
+          "field": "modelName",
+          "currentValue": "openrouter/auto",
+          "supportedValue": "openrouter/auto",
+          "sourceId": "openrouter-051e0609abb5",
+          "assessment": "matches",
+          "explanation": "公共目录精确id，不证明账号有权或指定后端可用。"
+        },
+        {
+          "field": "contextWindow",
+          "currentValue": 2000000,
+          "supportedValue": 2000000,
+          "sourceId": "openrouter-051e0609abb5",
+          "assessment": "matches",
+          "explanation": "该平台目录context_length；不反推原厂合同。"
+        },
+        {
+          "field": "supportedParameters",
+          "currentValue": null,
+          "supportedValue": [
+            "frequency_penalty",
+            "include_reasoning",
+            "logit_bias",
+            "logprobs",
+            "max_tokens",
+            "min_p",
+            "prediction",
+            "presence_penalty",
+            "reasoning",
+            "reasoning_effort",
+            "repetition_penalty",
+            "response_format",
+            "seed",
+            "stop",
+            "structured_outputs",
+            "temperature",
+            "tool_choice",
+            "tools",
+            "top_a",
+            "top_k",
+            "top_logprobs",
+            "top_p",
+            "web_search_options"
+          ],
+          "sourceId": "openrouter-051e0609abb5",
+          "assessment": "differs",
+          "explanation": "平台目录声明支持参数，不同后端/账号仍需验收。"
+        }
+      ],
+      "remainingFields": [
+        "defaultTemperature",
+        "defaultTopP",
+        "maxOutputTokens"
+      ],
+      "nextAction": "逐字段审查上表候选；只有同一接入合同且语义/单位一致的证据才用于后续canonical更新。 剩余字段需精确型号页/官方API schema或已授权账号目录核查，不推导默认值。",
+      "notes": [
+        "prompt=-1 是动态占位，不能判免费或固定USD价格。",
+        "completion=-1 是动态占位，不能判免费或固定USD价格。"
+      ]
+    },
+    {
+      "recordKey": "compute/providers/openrouter.json#qwen/qwen3.8-max-prime",
+      "modelId": "qwen/qwen3.8-max-prime",
+      "config": "compute/providers/openrouter.json",
+      "sourceDoc": "docs/model-sources/providers/openrouter/models/qwen--qwen3.8-max-prime.md",
+      "outcome": "official-fields-found",
+      "sourceIds": [
+        "openrouter-051e0609abb5"
+      ],
+      "fieldEvidence": [
+        {
+          "field": "modelName",
+          "currentValue": "qwen/qwen3.8-max-prime",
+          "supportedValue": "qwen/qwen3.8-max-prime",
+          "sourceId": "openrouter-051e0609abb5",
+          "assessment": "matches",
+          "explanation": "公共目录精确id，不证明账号有权或指定后端可用。"
+        },
+        {
+          "field": "contextWindow",
+          "currentValue": 1000000,
+          "supportedValue": 1000000,
+          "sourceId": "openrouter-051e0609abb5",
+          "assessment": "matches",
+          "explanation": "该平台目录context_length；不反推原厂合同。"
+        },
+        {
+          "field": "maxOutputTokens",
+          "currentValue": 131072,
+          "supportedValue": 131072,
+          "sourceId": "openrouter-051e0609abb5",
+          "assessment": "matches",
+          "explanation": "top_provider当前max_completion_tokens，可随后端变化。"
+        },
+        {
+          "field": "inputPrice",
+          "currentValue": 4,
+          "supportedValue": 4.0,
+          "sourceId": "openrouter-051e0609abb5",
+          "assessment": "matches",
+          "explanation": "OpenRouter USD/token×1,000,000；不得套用原厂价格。"
+        },
+        {
+          "field": "outputPrice",
+          "currentValue": 12,
+          "supportedValue": 12.0,
+          "sourceId": "openrouter-051e0609abb5",
+          "assessment": "matches",
+          "explanation": "OpenRouter USD/token×1,000,000；不得套用原厂价格。"
+        },
+        {
+          "field": "extra.cachedInputPrice",
+          "currentValue": null,
+          "supportedValue": 0.5,
+          "sourceId": "openrouter-051e0609abb5",
+          "assessment": "differs",
+          "explanation": "OpenRouter USD/token×1,000,000；不得套用原厂价格。"
+        },
+        {
+          "field": "supportedParameters",
+          "currentValue": null,
+          "supportedValue": [
+            "frequency_penalty",
+            "include_reasoning",
+            "logprobs",
+            "max_tokens",
+            "presence_penalty",
+            "reasoning",
+            "reasoning_effort",
+            "response_format",
+            "seed",
+            "stop",
+            "structured_outputs",
+            "temperature",
+            "tool_choice",
+            "tools",
+            "top_k",
+            "top_logprobs",
+            "top_p"
+          ],
+          "sourceId": "openrouter-051e0609abb5",
+          "assessment": "differs",
+          "explanation": "平台目录声明支持参数，不同后端/账号仍需验收。"
+        }
+      ],
+      "remainingFields": [],
+      "nextAction": "逐字段审查上表候选；只有同一接入合同且语义/单位一致的证据才用于后续canonical更新。",
+      "notes": []
+    },
+    {
+      "recordKey": "compute/providers/openrouter.json#qwen/qwen3.8-omni-flash",
+      "modelId": "qwen/qwen3.8-omni-flash",
+      "config": "compute/providers/openrouter.json",
+      "sourceDoc": "docs/model-sources/providers/openrouter/models/qwen--qwen3.8-omni-flash.md",
+      "outcome": "official-fields-found",
+      "sourceIds": [
+        "openrouter-051e0609abb5"
+      ],
+      "fieldEvidence": [
+        {
+          "field": "modelName",
+          "currentValue": "qwen/qwen3.8-omni-flash",
+          "supportedValue": "qwen/qwen3.8-omni-flash",
+          "sourceId": "openrouter-051e0609abb5",
+          "assessment": "matches",
+          "explanation": "公共目录精确id，不证明账号有权或指定后端可用。"
+        },
+        {
+          "field": "contextWindow",
+          "currentValue": 1000000,
+          "supportedValue": 1000000,
+          "sourceId": "openrouter-051e0609abb5",
+          "assessment": "matches",
+          "explanation": "该平台目录context_length；不反推原厂合同。"
+        },
+        {
+          "field": "maxOutputTokens",
+          "currentValue": 131072,
+          "supportedValue": 131072,
+          "sourceId": "openrouter-051e0609abb5",
+          "assessment": "matches",
+          "explanation": "top_provider当前max_completion_tokens，可随后端变化。"
+        },
+        {
+          "field": "inputPrice",
+          "currentValue": 0.15,
+          "supportedValue": 0.15,
+          "sourceId": "openrouter-051e0609abb5",
+          "assessment": "matches",
+          "explanation": "OpenRouter USD/token×1,000,000；不得套用原厂价格。"
+        },
+        {
+          "field": "outputPrice",
+          "currentValue": 0.47,
+          "supportedValue": 0.47,
+          "sourceId": "openrouter-051e0609abb5",
+          "assessment": "matches",
+          "explanation": "OpenRouter USD/token×1,000,000；不得套用原厂价格。"
+        },
+        {
+          "field": "extra.cachedInputPrice",
+          "currentValue": null,
+          "supportedValue": 0.016,
+          "sourceId": "openrouter-051e0609abb5",
+          "assessment": "differs",
+          "explanation": "OpenRouter USD/token×1,000,000；不得套用原厂价格。"
+        },
+        {
+          "field": "supportedParameters",
+          "currentValue": null,
+          "supportedValue": [
+            "frequency_penalty",
+            "include_reasoning",
+            "logprobs",
+            "max_tokens",
+            "presence_penalty",
+            "reasoning",
+            "response_format",
+            "seed",
+            "stop",
+            "structured_outputs",
+            "temperature",
+            "tool_choice",
+            "tools",
+            "top_k",
+            "top_logprobs",
+            "top_p"
+          ],
+          "sourceId": "openrouter-051e0609abb5",
+          "assessment": "differs",
+          "explanation": "平台目录声明支持参数，不同后端/账号仍需验收。"
+        }
+      ],
+      "remainingFields": [],
+      "nextAction": "逐字段审查上表候选；只有同一接入合同且语义/单位一致的证据才用于后续canonical更新。",
+      "notes": []
+    },
+    {
+      "recordKey": "compute/providers/openrouter.json#tencent/hy4-preview",
+      "modelId": "tencent/hy4-preview",
+      "config": "compute/providers/openrouter.json",
+      "sourceDoc": "docs/model-sources/providers/openrouter/models/tencent--hy4-preview.md",
+      "outcome": "official-fields-found",
+      "sourceIds": [
+        "openrouter-051e0609abb5"
+      ],
+      "fieldEvidence": [
+        {
+          "field": "modelName",
+          "currentValue": "tencent/hy4-preview",
+          "supportedValue": "tencent/hy4-preview",
+          "sourceId": "openrouter-051e0609abb5",
+          "assessment": "matches",
+          "explanation": "公共目录精确id，不证明账号有权或指定后端可用。"
+        },
+        {
+          "field": "contextWindow",
+          "currentValue": 1048576,
+          "supportedValue": 1048576,
+          "sourceId": "openrouter-051e0609abb5",
+          "assessment": "matches",
+          "explanation": "该平台目录context_length；不反推原厂合同。"
+        },
+        {
+          "field": "maxOutputTokens",
+          "currentValue": 64000,
+          "supportedValue": 64000,
+          "sourceId": "openrouter-051e0609abb5",
+          "assessment": "matches",
+          "explanation": "top_provider当前max_completion_tokens，可随后端变化。"
+        },
+        {
+          "field": "inputPrice",
+          "currentValue": 0.834,
+          "supportedValue": 0.834,
+          "sourceId": "openrouter-051e0609abb5",
+          "assessment": "matches",
+          "explanation": "OpenRouter USD/token×1,000,000；不得套用原厂价格。"
+        },
+        {
+          "field": "outputPrice",
+          "currentValue": 2.501,
+          "supportedValue": 2.501,
+          "sourceId": "openrouter-051e0609abb5",
+          "assessment": "matches",
+          "explanation": "OpenRouter USD/token×1,000,000；不得套用原厂价格。"
+        },
+        {
+          "field": "extra.cachedInputPrice",
+          "currentValue": null,
+          "supportedValue": 0.042,
+          "sourceId": "openrouter-051e0609abb5",
+          "assessment": "differs",
+          "explanation": "OpenRouter USD/token×1,000,000；不得套用原厂价格。"
+        },
+        {
+          "field": "supportedParameters",
+          "currentValue": null,
+          "supportedValue": [
+            "frequency_penalty",
+            "include_reasoning",
+            "logit_bias",
+            "max_completion_tokens",
+            "max_tokens",
+            "min_p",
+            "presence_penalty",
+            "reasoning",
+            "reasoning_effort",
+            "repetition_penalty",
+            "response_format",
+            "seed",
+            "stop",
+            "structured_outputs",
+            "temperature",
+            "tool_choice",
+            "tools",
+            "top_k",
+            "top_p"
+          ],
+          "sourceId": "openrouter-051e0609abb5",
+          "assessment": "differs",
+          "explanation": "平台目录声明支持参数，不同后端/账号仍需验收。"
+        }
+      ],
+      "remainingFields": [],
+      "nextAction": "逐字段审查上表候选；只有同一接入合同且语义/单位一致的证据才用于后续canonical更新。",
+      "notes": []
+    },
+    {
+      "recordKey": "compute/providers/openrouter.json#z-ai/glm-5.3-flash",
+      "modelId": "z-ai/glm-5.3-flash",
+      "config": "compute/providers/openrouter.json",
+      "sourceDoc": "docs/model-sources/providers/openrouter/models/z-ai--glm-5.3-flash.md",
+      "outcome": "official-fields-found",
+      "sourceIds": [
+        "openrouter-051e0609abb5"
+      ],
+      "fieldEvidence": [
+        {
+          "field": "modelName",
+          "currentValue": "z-ai/glm-5.3-flash",
+          "supportedValue": "z-ai/glm-5.3-flash",
+          "sourceId": "openrouter-051e0609abb5",
+          "assessment": "matches",
+          "explanation": "公共目录精确id，不证明账号有权或指定后端可用。"
+        },
+        {
+          "field": "contextWindow",
+          "currentValue": 1048576,
+          "supportedValue": 1048576,
+          "sourceId": "openrouter-051e0609abb5",
+          "assessment": "matches",
+          "explanation": "该平台目录context_length；不反推原厂合同。"
+        },
+        {
+          "field": "maxOutputTokens",
+          "currentValue": 943717,
+          "supportedValue": 943717,
+          "sourceId": "openrouter-051e0609abb5",
+          "assessment": "matches",
+          "explanation": "top_provider当前max_completion_tokens，可随后端变化。"
+        },
+        {
+          "field": "inputPrice",
+          "currentValue": 0.15,
+          "supportedValue": 0.15,
+          "sourceId": "openrouter-051e0609abb5",
+          "assessment": "matches",
+          "explanation": "OpenRouter USD/token×1,000,000；不得套用原厂价格。"
+        },
+        {
+          "field": "outputPrice",
+          "currentValue": 0.5,
+          "supportedValue": 0.5,
+          "sourceId": "openrouter-051e0609abb5",
+          "assessment": "matches",
+          "explanation": "OpenRouter USD/token×1,000,000；不得套用原厂价格。"
+        },
+        {
+          "field": "extra.cachedInputPrice",
+          "currentValue": null,
+          "supportedValue": 0.03,
+          "sourceId": "openrouter-051e0609abb5",
+          "assessment": "differs",
+          "explanation": "OpenRouter USD/token×1,000,000；不得套用原厂价格。"
+        },
+        {
+          "field": "supportedParameters",
+          "currentValue": null,
+          "supportedValue": [
+            "frequency_penalty",
+            "include_reasoning",
+            "logit_bias",
+            "logprobs",
+            "max_tokens",
+            "min_p",
+            "parallel_tool_calls",
+            "presence_penalty",
+            "reasoning",
+            "reasoning_effort",
+            "repetition_penalty",
+            "response_format",
+            "seed",
+            "stop",
+            "structured_outputs",
+            "temperature",
+            "tool_choice",
+            "tools",
+            "top_k",
+            "top_logprobs",
+            "top_p"
+          ],
+          "sourceId": "openrouter-051e0609abb5",
+          "assessment": "differs",
+          "explanation": "平台目录声明支持参数，不同后端/账号仍需验收。"
+        }
+      ],
+      "remainingFields": [],
+      "nextAction": "逐字段审查上表候选；只有同一接入合同且语义/单位一致的证据才用于后续canonical更新。",
+      "notes": []
+    },
+    {
+      "recordKey": "compute/providers/openrouter.json#z-ai/glm-5.3",
+      "modelId": "z-ai/glm-5.3",
+      "config": "compute/providers/openrouter.json",
+      "sourceDoc": "docs/model-sources/providers/openrouter/models/z-ai--glm-5.3.md",
+      "outcome": "official-fields-found",
+      "sourceIds": [
+        "openrouter-051e0609abb5"
+      ],
+      "fieldEvidence": [
+        {
+          "field": "modelName",
+          "currentValue": "z-ai/glm-5.3",
+          "supportedValue": "z-ai/glm-5.3",
+          "sourceId": "openrouter-051e0609abb5",
+          "assessment": "matches",
+          "explanation": "公共目录精确id，不证明账号有权或指定后端可用。"
+        },
+        {
+          "field": "contextWindow",
+          "currentValue": 1048576,
+          "supportedValue": 1048576,
+          "sourceId": "openrouter-051e0609abb5",
+          "assessment": "matches",
+          "explanation": "该平台目录context_length；不反推原厂合同。"
+        },
+        {
+          "field": "maxOutputTokens",
+          "currentValue": 131072,
+          "supportedValue": 131072,
+          "sourceId": "openrouter-051e0609abb5",
+          "assessment": "matches",
+          "explanation": "top_provider当前max_completion_tokens，可随后端变化。"
+        },
+        {
+          "field": "inputPrice",
+          "currentValue": 1.4,
+          "supportedValue": 1.4,
+          "sourceId": "openrouter-051e0609abb5",
+          "assessment": "matches",
+          "explanation": "OpenRouter USD/token×1,000,000；不得套用原厂价格。"
+        },
+        {
+          "field": "outputPrice",
+          "currentValue": 4.4,
+          "supportedValue": 4.4,
+          "sourceId": "openrouter-051e0609abb5",
+          "assessment": "matches",
+          "explanation": "OpenRouter USD/token×1,000,000；不得套用原厂价格。"
+        },
+        {
+          "field": "extra.cachedInputPrice",
+          "currentValue": null,
+          "supportedValue": 0.14,
+          "sourceId": "openrouter-051e0609abb5",
+          "assessment": "differs",
+          "explanation": "OpenRouter USD/token×1,000,000；不得套用原厂价格。"
+        },
+        {
+          "field": "supportedParameters",
+          "currentValue": null,
+          "supportedValue": [
+            "frequency_penalty",
+            "include_reasoning",
+            "logit_bias",
+            "logprobs",
+            "max_tokens",
+            "min_p",
+            "parallel_tool_calls",
+            "presence_penalty",
+            "reasoning",
+            "reasoning_effort",
+            "repetition_penalty",
+            "response_format",
+            "seed",
+            "stop",
+            "structured_outputs",
+            "temperature",
+            "tool_choice",
+            "tools",
+            "top_k",
+            "top_logprobs",
+            "top_p"
+          ],
+          "sourceId": "openrouter-051e0609abb5",
+          "assessment": "differs",
+          "explanation": "平台目录声明支持参数，不同后端/账号仍需验收。"
+        }
+      ],
+      "remainingFields": [],
+      "nextAction": "逐字段审查上表候选；只有同一接入合同且语义/单位一致的证据才用于后续canonical更新。",
+      "notes": []
+    }
+  ]
+}

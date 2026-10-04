@@ -1,0 +1,1236 @@
+{
+  "supplier": "xiaomi",
+  "checkedAt": "2026-10-04",
+  "sources": [
+    {
+      "id": "xiaomi",
+      "url": "https://mimo.mi.com/docs/en-US/news/latest/v2-6",
+      "finalUrl": "https://mimo.mi.com/docs/en-US/news/latest/v2-6",
+      "publisher": "xiaomi",
+      "kind": "official-docs",
+      "scope": "只适用于页面明确的原厂/地域/接入，套餐和聚合合同独立",
+      "contentSha256": "101d0e7233e16966073506c525bc95ae192b906eb7d2e31659598e04b22a94b0",
+      "retrieval": "readable",
+      "summary": "实际读取155672字符，可见正文17487字符；需逐精确ID定位，HTTP成功不代表字段已证。",
+      "digestKind": "sha256-utf8-decoded-response-body",
+      "retrievalMethod": "urllib.request HTTPS response read; bytes decoded as UTF-8 with replacement, SHA-256 over decoded text re-encoded as UTF-8 before visible-text extraction; full HTML/Markdown/JSON body, not a raw-byte digest or vendor signature"
+    },
+    {
+      "id": "xiaomi-models",
+      "url": "https://mimo.mi.com/docs/en-US/quick-start/summary/model",
+      "finalUrl": "https://mimo.mi.com/docs/en-US/quick-start/summary/model",
+      "publisher": "xiaomi",
+      "kind": "official-docs",
+      "scope": "只适用于页面明确的原厂/地域/接入，套餐和聚合合同独立",
+      "contentSha256": "b1237c793e11793d5b0dfc7451af0c0efe8319bdca6b8be2720ace532dfe93be",
+      "retrieval": "readable",
+      "summary": "实际读取155018字符，可见正文4804字符；需逐精确ID定位，HTTP成功不代表字段已证。",
+      "digestKind": "sha256-utf8-decoded-response-body",
+      "retrievalMethod": "urllib.request HTTPS response read; bytes decoded as UTF-8 with replacement, SHA-256 over decoded text re-encoded as UTF-8 before visible-text extraction; full HTML/Markdown/JSON body, not a raw-byte digest or vendor signature"
+    },
+    {
+      "id": "xiaomi-price",
+      "url": "https://mimo.mi.com/docs/en-US/price/pay-as-you-go",
+      "finalUrl": "https://mimo.mi.com/docs/en-US/price/pay-as-you-go",
+      "publisher": "xiaomi",
+      "kind": "official-docs",
+      "scope": "只适用于页面明确的原厂/地域/接入，套餐和聚合合同独立",
+      "contentSha256": "d0292517cfd66072dc8d11bda632aa0bb9f21e9f295b6e5a9129b404a4b62319",
+      "retrieval": "readable",
+      "summary": "实际读取138065字符，可见正文4075字符；需逐精确ID定位，HTTP成功不代表字段已证。",
+      "digestKind": "sha256-utf8-decoded-response-body",
+      "retrievalMethod": "urllib.request HTTPS response read; bytes decoded as UTF-8 with replacement, SHA-256 over decoded text re-encoded as UTF-8 before visible-text extraction; full HTML/Markdown/JSON body, not a raw-byte digest or vendor signature"
+    },
+    {
+      "id": "xiaomi-plan",
+      "url": "https://mimo.mi.com/docs/en-US/tokenplan/Token%20Plan/subscription",
+      "finalUrl": "https://mimo.mi.com/docs/en-US/tokenplan/Token%20Plan/subscription",
+      "publisher": "xiaomi",
+      "kind": "official-docs",
+      "scope": "只适用于页面明确的原厂/地域/接入，套餐和聚合合同独立",
+      "contentSha256": "757af8dfd5c3ec8ab8576349e072489fc2bcf2ab436ed9f427e21ca8a44a335c",
+      "retrieval": "readable",
+      "summary": "实际读取155214字符，可见正文10729字符；需逐精确ID定位，HTTP成功不代表字段已证。",
+      "digestKind": "sha256-utf8-decoded-response-body",
+      "retrievalMethod": "urllib.request HTTPS response read; bytes decoded as UTF-8 with replacement, SHA-256 over decoded text re-encoded as UTF-8 before visible-text extraction; full HTML/Markdown/JSON body, not a raw-byte digest or vendor signature"
+    },
+    {
+      "id": "xiaomi-llms",
+      "url": "https://mimo.mi.com/docs/llms.txt",
+      "finalUrl": "https://mimo.mi.com/docs/llms.txt",
+      "publisher": "xiaomi",
+      "kind": "official-docs",
+      "scope": "只适用于页面明确的原厂/地域/接入，套餐和聚合合同独立",
+      "contentSha256": "73a9753703ee540b7e1aceb87d9a6d68be2573ed1dc199b6b2d5f4e7757cc836",
+      "retrieval": "blocked",
+      "summary": "实际读取12723字符，可见正文18字符；需逐精确ID定位，HTTP成功不代表字段已证。",
+      "digestKind": "sha256-utf8-decoded-response-body",
+      "retrievalMethod": "urllib.request HTTPS response read; bytes decoded as UTF-8 with replacement, SHA-256 over decoded text re-encoded as UTF-8 before visible-text extraction; full HTML/Markdown/JSON body, not a raw-byte digest or vendor signature"
+    }
+  ],
+  "findings": [
+    {
+      "recordKey": "compute/model-specs/xiaomi.json#mimo-v2-flash",
+      "modelId": "mimo-v2-flash",
+      "config": "compute/model-specs/xiaomi.json",
+      "sourceDoc": "docs/model-sources/providers/xiaomi/models/mimo-v2-flash.md",
+      "outcome": "still-unresolved",
+      "sourceIds": [
+        "xiaomi",
+        "xiaomi-models",
+        "xiaomi-price",
+        "xiaomi-plan",
+        "xiaomi-llms"
+      ],
+      "fieldEvidence": [],
+      "remainingFields": [
+        "id",
+        "spec.contextWindow",
+        "spec.defaultTemperature",
+        "spec.maxOutputTokens",
+        "spec.supportsReasoning",
+        "spec.capabilities",
+        "spec.serviceType"
+      ],
+      "nextAction": "人工逐字段复核本次候选；只将matches且精确接入适用的字段迁入原来源文档，differs先审单位/阶梯/产品默认；缺项需精确模型页、官方版本卡或授权目录，不猜填。",
+      "notes": [
+        "当前支持模型目录未定位该精确旧/预览名称；名称缺失不证明退役或对应新版本，不把mimo-v2与mimo-v2.5及MiMo-X混成alias。"
+      ],
+      "originalStatus": "pending",
+      "originalGap": "pending"
+    },
+    {
+      "recordKey": "compute/model-specs/xiaomi.json#mimo-v2-omni",
+      "modelId": "mimo-v2-omni",
+      "config": "compute/model-specs/xiaomi.json",
+      "sourceDoc": "docs/model-sources/providers/xiaomi/models/mimo-v2-omni.md",
+      "outcome": "still-unresolved",
+      "sourceIds": [
+        "xiaomi",
+        "xiaomi-models",
+        "xiaomi-price",
+        "xiaomi-plan",
+        "xiaomi-llms"
+      ],
+      "fieldEvidence": [],
+      "remainingFields": [
+        "id",
+        "spec.contextWindow",
+        "spec.defaultTemperature",
+        "spec.maxOutputTokens",
+        "spec.supportsReasoning",
+        "spec.capabilities",
+        "spec.serviceType"
+      ],
+      "nextAction": "人工逐字段复核本次候选；只将matches且精确接入适用的字段迁入原来源文档，differs先审单位/阶梯/产品默认；缺项需精确模型页、官方版本卡或授权目录，不猜填。",
+      "notes": [
+        "当前支持模型目录未定位该精确旧/预览名称；名称缺失不证明退役或对应新版本，不把mimo-v2与mimo-v2.5及MiMo-X混成alias。"
+      ],
+      "originalStatus": "pending",
+      "originalGap": "pending"
+    },
+    {
+      "recordKey": "compute/model-specs/xiaomi.json#mimo-v2-pro",
+      "modelId": "mimo-v2-pro",
+      "config": "compute/model-specs/xiaomi.json",
+      "sourceDoc": "docs/model-sources/providers/xiaomi/models/mimo-v2-pro.md",
+      "outcome": "still-unresolved",
+      "sourceIds": [
+        "xiaomi",
+        "xiaomi-models",
+        "xiaomi-price",
+        "xiaomi-plan",
+        "xiaomi-llms"
+      ],
+      "fieldEvidence": [],
+      "remainingFields": [
+        "id",
+        "spec.contextWindow",
+        "spec.defaultTemperature",
+        "spec.maxOutputTokens",
+        "spec.supportsReasoning",
+        "spec.capabilities",
+        "spec.serviceType"
+      ],
+      "nextAction": "人工逐字段复核本次候选；只将matches且精确接入适用的字段迁入原来源文档，differs先审单位/阶梯/产品默认；缺项需精确模型页、官方版本卡或授权目录，不猜填。",
+      "notes": [
+        "当前支持模型目录未定位该精确旧/预览名称；名称缺失不证明退役或对应新版本，不把mimo-v2与mimo-v2.5及MiMo-X混成alias。"
+      ],
+      "originalStatus": "pending",
+      "originalGap": "pending"
+    },
+    {
+      "recordKey": "compute/model-specs/xiaomi.json#mimo-v2-tts",
+      "modelId": "mimo-v2-tts",
+      "config": "compute/model-specs/xiaomi.json",
+      "sourceDoc": "docs/model-sources/providers/xiaomi/models/mimo-v2-tts.md",
+      "outcome": "still-unresolved",
+      "sourceIds": [
+        "xiaomi",
+        "xiaomi-models",
+        "xiaomi-price",
+        "xiaomi-plan",
+        "xiaomi-llms"
+      ],
+      "fieldEvidence": [],
+      "remainingFields": [
+        "id",
+        "spec.contextWindow",
+        "spec.capabilities",
+        "spec.serviceType"
+      ],
+      "nextAction": "人工逐字段复核本次候选；只将matches且精确接入适用的字段迁入原来源文档，differs先审单位/阶梯/产品默认；缺项需精确模型页、官方版本卡或授权目录，不猜填。",
+      "notes": [
+        "当前支持模型目录未定位该精确旧/预览名称；名称缺失不证明退役或对应新版本，不把mimo-v2与mimo-v2.5及MiMo-X混成alias。"
+      ],
+      "originalStatus": "pending",
+      "originalGap": "pending"
+    },
+    {
+      "recordKey": "compute/providers/xiaomi.json#mimo-v2.5-asr",
+      "modelId": "mimo-v2.5-asr",
+      "config": "compute/providers/xiaomi.json",
+      "sourceDoc": "docs/model-sources/providers/xiaomi/models/mimo-v2.5-asr.md",
+      "outcome": "official-identity-only",
+      "sourceIds": [
+        "xiaomi-models",
+        "xiaomi-price"
+      ],
+      "fieldEvidence": [
+        {
+          "field": "modelName",
+          "currentValue": "mimo-v2.5-asr",
+          "supportedValue": "mimo-v2.5-asr",
+          "sourceId": "xiaomi-models",
+          "assessment": "matches",
+          "explanation": "本轮正文定位精确标识；只确认该标识在其来源合同出现，不证明其他字段或不同套餐可用性。"
+        },
+        {
+          "field": "contextWindow",
+          "currentValue": 8192,
+          "supportedValue": "8k",
+          "sourceId": "xiaomi-models",
+          "assessment": "not-comparable",
+          "explanation": "当前精确型号表使用K/M长度简写；未将简写自动转成已核整数。"
+        },
+        {
+          "field": "maxOutputTokens",
+          "currentValue": 2048,
+          "supportedValue": "2k",
+          "sourceId": "xiaomi-models",
+          "assessment": "not-comparable",
+          "explanation": "最大输出表仅给K值；voiceclone/voicedesign共用TTS系列合并格，其单独限制仍待确认。"
+        }
+      ],
+      "remainingFields": [
+        "capabilities",
+        "serviceType",
+        "access.maxInputTokens",
+        "access.protocol-readiness"
+      ],
+      "nextAction": "人工逐字段复核本次候选；只将matches且精确接入适用的字段迁入原来源文档，differs先审单位/阶梯/产品默认；缺项需精确模型页、官方版本卡或授权目录，不猜填。",
+      "notes": [
+        "ASR按输入音频时长计费，国内0.5元/小时、海外0.074美元/小时；不能写成token inputPrice。"
+      ],
+      "originalStatus": "partial",
+      "originalGap": "partial"
+    },
+    {
+      "recordKey": "compute/model-specs/xiaomi.json#mimo-v2.5-asr",
+      "modelId": "mimo-v2.5-asr",
+      "config": "compute/model-specs/xiaomi.json",
+      "sourceDoc": "docs/model-sources/providers/xiaomi/models/mimo-v2.5-asr.md",
+      "outcome": "official-identity-only",
+      "sourceIds": [
+        "xiaomi-models",
+        "xiaomi-price"
+      ],
+      "fieldEvidence": [
+        {
+          "field": "id",
+          "currentValue": "mimo-v2.5-asr",
+          "supportedValue": "mimo-v2.5-asr",
+          "sourceId": "xiaomi-models",
+          "assessment": "matches",
+          "explanation": "本轮正文定位精确标识；只确认该标识在其来源合同出现，不证明其他字段或不同套餐可用性。"
+        },
+        {
+          "field": "spec.contextWindow",
+          "currentValue": 8192,
+          "supportedValue": "8k",
+          "sourceId": "xiaomi-models",
+          "assessment": "not-comparable",
+          "explanation": "当前精确型号表使用K/M长度简写；未将简写自动转成已核整数。"
+        },
+        {
+          "field": "spec.maxOutputTokens",
+          "currentValue": 2048,
+          "supportedValue": "2k",
+          "sourceId": "xiaomi-models",
+          "assessment": "not-comparable",
+          "explanation": "最大输出表仅给K值；voiceclone/voicedesign共用TTS系列合并格，其单独限制仍待确认。"
+        }
+      ],
+      "remainingFields": [
+        "spec.capabilities",
+        "spec.serviceType"
+      ],
+      "nextAction": "人工逐字段复核本次候选；只将matches且精确接入适用的字段迁入原来源文档，differs先审单位/阶梯/产品默认；缺项需精确模型页、官方版本卡或授权目录，不猜填。",
+      "notes": [
+        "ASR按输入音频时长计费，国内0.5元/小时、海外0.074美元/小时；不能写成token inputPrice。"
+      ],
+      "originalStatus": "partial",
+      "originalGap": "partial"
+    },
+    {
+      "recordKey": "compute/providers/xiaomi.json#mimo-v2.5-pro",
+      "modelId": "mimo-v2.5-pro",
+      "config": "compute/providers/xiaomi.json",
+      "sourceDoc": "docs/model-sources/providers/xiaomi/models/mimo-v2.5-pro.md",
+      "outcome": "official-fields-found",
+      "sourceIds": [
+        "xiaomi-models",
+        "xiaomi-price"
+      ],
+      "fieldEvidence": [
+        {
+          "field": "modelName",
+          "currentValue": "mimo-v2.5-pro",
+          "supportedValue": "mimo-v2.5-pro",
+          "sourceId": "xiaomi-models",
+          "assessment": "matches",
+          "explanation": "本轮正文定位精确标识；只确认该标识在其来源合同出现，不证明其他字段或不同套餐可用性。"
+        },
+        {
+          "field": "contextWindow",
+          "currentValue": 1000000,
+          "supportedValue": "1M",
+          "sourceId": "xiaomi-models",
+          "assessment": "not-comparable",
+          "explanation": "当前精确型号表使用K/M长度简写；未将简写自动转成已核整数。"
+        },
+        {
+          "field": "maxOutputTokens",
+          "currentValue": 131072,
+          "supportedValue": "128K",
+          "sourceId": "xiaomi-models",
+          "assessment": "not-comparable",
+          "explanation": "最大输出表仅给K值；voiceclone/voicedesign共用TTS系列合并格，其单独限制仍待确认。"
+        },
+        {
+          "field": "inputPrice",
+          "currentValue": 3,
+          "supportedValue": 3,
+          "sourceId": "xiaomi-price",
+          "assessment": "matches",
+          "explanation": "国内实时API CNY/百万token，非Batch/海外价格，Token Plan不可沿用。"
+        },
+        {
+          "field": "outputPrice",
+          "currentValue": 6,
+          "supportedValue": 6,
+          "sourceId": "xiaomi-price",
+          "assessment": "matches",
+          "explanation": "国内实时API CNY/百万token，非Batch/海外价格，Token Plan不可沿用。"
+        },
+        {
+          "field": "extra.cachedInputPrice",
+          "currentValue": 0.025,
+          "supportedValue": 0.025,
+          "sourceId": "xiaomi-price",
+          "assessment": "matches",
+          "explanation": "国内实时API CNY/百万token，非Batch/海外价格，Token Plan不可沿用。"
+        }
+      ],
+      "remainingFields": [
+        "capabilities",
+        "serviceType",
+        "access.maxInputTokens",
+        "access.protocol-readiness"
+      ],
+      "nextAction": "人工逐字段复核本次候选；只将matches且精确接入适用的字段迁入原来源文档，differs先审单位/阶梯/产品默认；缺项需精确模型页、官方版本卡或授权目录，不猜填。",
+      "notes": [
+        "官网明确2026-10-21北京时间10:00停止旧型号，当前2026-10-04尚未到期，不能提前下架；需时区精确门控。"
+      ],
+      "originalStatus": "partial",
+      "originalGap": "partial"
+    },
+    {
+      "recordKey": "compute/model-specs/xiaomi.json#mimo-v2.5-pro",
+      "modelId": "mimo-v2.5-pro",
+      "config": "compute/model-specs/xiaomi.json",
+      "sourceDoc": "docs/model-sources/providers/xiaomi/models/mimo-v2.5-pro.md",
+      "outcome": "official-identity-only",
+      "sourceIds": [
+        "xiaomi-models"
+      ],
+      "fieldEvidence": [
+        {
+          "field": "id",
+          "currentValue": "mimo-v2.5-pro",
+          "supportedValue": "mimo-v2.5-pro",
+          "sourceId": "xiaomi-models",
+          "assessment": "matches",
+          "explanation": "本轮正文定位精确标识；只确认该标识在其来源合同出现，不证明其他字段或不同套餐可用性。"
+        },
+        {
+          "field": "spec.contextWindow",
+          "currentValue": 1000000,
+          "supportedValue": "1M",
+          "sourceId": "xiaomi-models",
+          "assessment": "not-comparable",
+          "explanation": "当前精确型号表使用K/M长度简写；未将简写自动转成已核整数。"
+        },
+        {
+          "field": "spec.maxOutputTokens",
+          "currentValue": 131072,
+          "supportedValue": "128K",
+          "sourceId": "xiaomi-models",
+          "assessment": "not-comparable",
+          "explanation": "最大输出表仅给K值；voiceclone/voicedesign共用TTS系列合并格，其单独限制仍待确认。"
+        }
+      ],
+      "remainingFields": [
+        "spec.defaultTemperature",
+        "spec.supportsReasoning",
+        "spec.capabilities",
+        "spec.serviceType"
+      ],
+      "nextAction": "人工逐字段复核本次候选；只将matches且精确接入适用的字段迁入原来源文档，differs先审单位/阶梯/产品默认；缺项需精确模型页、官方版本卡或授权目录，不猜填。",
+      "notes": [
+        "官网明确2026-10-21北京时间10:00停止旧型号，当前2026-10-04尚未到期，不能提前下架；需时区精确门控。"
+      ],
+      "originalStatus": "partial",
+      "originalGap": "partial"
+    },
+    {
+      "recordKey": "compute/providers/xiaomi.json#mimo-v2.5-tts-voiceclone",
+      "modelId": "mimo-v2.5-tts-voiceclone",
+      "config": "compute/providers/xiaomi.json",
+      "sourceDoc": "docs/model-sources/providers/xiaomi/models/mimo-v2.5-tts-voiceclone.md",
+      "outcome": "official-identity-only",
+      "sourceIds": [
+        "xiaomi-models",
+        "xiaomi-price"
+      ],
+      "fieldEvidence": [
+        {
+          "field": "modelName",
+          "currentValue": "mimo-v2.5-tts-voiceclone",
+          "supportedValue": "mimo-v2.5-tts-voiceclone",
+          "sourceId": "xiaomi-models",
+          "assessment": "matches",
+          "explanation": "本轮正文定位精确标识；只确认该标识在其来源合同出现，不证明其他字段或不同套餐可用性。"
+        },
+        {
+          "field": "contextWindow",
+          "currentValue": null,
+          "supportedValue": "8K",
+          "sourceId": "xiaomi-models",
+          "assessment": "not-comparable",
+          "explanation": "当前精确型号表使用K/M长度简写；未将简写自动转成已核整数。"
+        },
+        {
+          "field": "maxOutputTokens",
+          "currentValue": null,
+          "supportedValue": "8K",
+          "sourceId": "xiaomi-models",
+          "assessment": "not-comparable",
+          "explanation": "最大输出表仅给K值；voiceclone/voicedesign共用TTS系列合并格，其单独限制仍待确认。"
+        }
+      ],
+      "remainingFields": [
+        "capabilities",
+        "serviceType",
+        "access.maxInputTokens",
+        "access.protocol-readiness"
+      ],
+      "nextAction": "人工逐字段复核本次候选；只将matches且精确接入适用的字段迁入原来源文档，differs先审单位/阶梯/产品默认；缺项需精确模型页、官方版本卡或授权目录，不猜填。",
+      "notes": [
+        "TTS价签限时免费，不代表永久0；必须保留限时范围。"
+      ],
+      "originalStatus": "partial",
+      "originalGap": "idOnly"
+    },
+    {
+      "recordKey": "compute/model-specs/xiaomi.json#mimo-v2.5-tts-voiceclone",
+      "modelId": "mimo-v2.5-tts-voiceclone",
+      "config": "compute/model-specs/xiaomi.json",
+      "sourceDoc": "docs/model-sources/providers/xiaomi/models/mimo-v2.5-tts-voiceclone.md",
+      "outcome": "official-identity-only",
+      "sourceIds": [
+        "xiaomi-models",
+        "xiaomi-price"
+      ],
+      "fieldEvidence": [
+        {
+          "field": "id",
+          "currentValue": "mimo-v2.5-tts-voiceclone",
+          "supportedValue": "mimo-v2.5-tts-voiceclone",
+          "sourceId": "xiaomi-models",
+          "assessment": "matches",
+          "explanation": "本轮正文定位精确标识；只确认该标识在其来源合同出现，不证明其他字段或不同套餐可用性。"
+        },
+        {
+          "field": "spec.contextWindow",
+          "currentValue": 8192,
+          "supportedValue": "8K",
+          "sourceId": "xiaomi-models",
+          "assessment": "not-comparable",
+          "explanation": "当前精确型号表使用K/M长度简写；未将简写自动转成已核整数。"
+        },
+        {
+          "field": "spec.maxOutputTokens",
+          "currentValue": null,
+          "supportedValue": "8K",
+          "sourceId": "xiaomi-models",
+          "assessment": "not-comparable",
+          "explanation": "最大输出表仅给K值；voiceclone/voicedesign共用TTS系列合并格，其单独限制仍待确认。"
+        }
+      ],
+      "remainingFields": [
+        "spec.contextWindow",
+        "spec.capabilities",
+        "spec.serviceType"
+      ],
+      "nextAction": "人工逐字段复核本次候选；只将matches且精确接入适用的字段迁入原来源文档，differs先审单位/阶梯/产品默认；缺项需精确模型页、官方版本卡或授权目录，不猜填。",
+      "notes": [
+        "TTS价签限时免费，不代表永久0；必须保留限时范围。"
+      ],
+      "originalStatus": "partial",
+      "originalGap": "idOnly"
+    },
+    {
+      "recordKey": "compute/providers/xiaomi.json#mimo-v2.5-tts-voicedesign",
+      "modelId": "mimo-v2.5-tts-voicedesign",
+      "config": "compute/providers/xiaomi.json",
+      "sourceDoc": "docs/model-sources/providers/xiaomi/models/mimo-v2.5-tts-voicedesign.md",
+      "outcome": "official-identity-only",
+      "sourceIds": [
+        "xiaomi-models",
+        "xiaomi-price"
+      ],
+      "fieldEvidence": [
+        {
+          "field": "modelName",
+          "currentValue": "mimo-v2.5-tts-voicedesign",
+          "supportedValue": "mimo-v2.5-tts-voicedesign",
+          "sourceId": "xiaomi-models",
+          "assessment": "matches",
+          "explanation": "本轮正文定位精确标识；只确认该标识在其来源合同出现，不证明其他字段或不同套餐可用性。"
+        },
+        {
+          "field": "contextWindow",
+          "currentValue": null,
+          "supportedValue": "8K",
+          "sourceId": "xiaomi-models",
+          "assessment": "not-comparable",
+          "explanation": "当前精确型号表使用K/M长度简写；未将简写自动转成已核整数。"
+        },
+        {
+          "field": "maxOutputTokens",
+          "currentValue": null,
+          "supportedValue": "8K",
+          "sourceId": "xiaomi-models",
+          "assessment": "not-comparable",
+          "explanation": "最大输出表仅给K值；voiceclone/voicedesign共用TTS系列合并格，其单独限制仍待确认。"
+        }
+      ],
+      "remainingFields": [
+        "capabilities",
+        "serviceType",
+        "access.maxInputTokens",
+        "access.protocol-readiness"
+      ],
+      "nextAction": "人工逐字段复核本次候选；只将matches且精确接入适用的字段迁入原来源文档，differs先审单位/阶梯/产品默认；缺项需精确模型页、官方版本卡或授权目录，不猜填。",
+      "notes": [
+        "TTS价签限时免费，不代表永久0；必须保留限时范围。"
+      ],
+      "originalStatus": "partial",
+      "originalGap": "idOnly"
+    },
+    {
+      "recordKey": "compute/model-specs/xiaomi.json#mimo-v2.5-tts-voicedesign",
+      "modelId": "mimo-v2.5-tts-voicedesign",
+      "config": "compute/model-specs/xiaomi.json",
+      "sourceDoc": "docs/model-sources/providers/xiaomi/models/mimo-v2.5-tts-voicedesign.md",
+      "outcome": "official-identity-only",
+      "sourceIds": [
+        "xiaomi-models",
+        "xiaomi-price"
+      ],
+      "fieldEvidence": [
+        {
+          "field": "id",
+          "currentValue": "mimo-v2.5-tts-voicedesign",
+          "supportedValue": "mimo-v2.5-tts-voicedesign",
+          "sourceId": "xiaomi-models",
+          "assessment": "matches",
+          "explanation": "本轮正文定位精确标识；只确认该标识在其来源合同出现，不证明其他字段或不同套餐可用性。"
+        },
+        {
+          "field": "spec.contextWindow",
+          "currentValue": 8192,
+          "supportedValue": "8K",
+          "sourceId": "xiaomi-models",
+          "assessment": "not-comparable",
+          "explanation": "当前精确型号表使用K/M长度简写；未将简写自动转成已核整数。"
+        },
+        {
+          "field": "spec.maxOutputTokens",
+          "currentValue": null,
+          "supportedValue": "8K",
+          "sourceId": "xiaomi-models",
+          "assessment": "not-comparable",
+          "explanation": "最大输出表仅给K值；voiceclone/voicedesign共用TTS系列合并格，其单独限制仍待确认。"
+        }
+      ],
+      "remainingFields": [
+        "spec.contextWindow",
+        "spec.capabilities",
+        "spec.serviceType"
+      ],
+      "nextAction": "人工逐字段复核本次候选；只将matches且精确接入适用的字段迁入原来源文档，differs先审单位/阶梯/产品默认；缺项需精确模型页、官方版本卡或授权目录，不猜填。",
+      "notes": [
+        "TTS价签限时免费，不代表永久0；必须保留限时范围。"
+      ],
+      "originalStatus": "partial",
+      "originalGap": "idOnly"
+    },
+    {
+      "recordKey": "compute/providers/xiaomi.json#mimo-v2.5-tts",
+      "modelId": "mimo-v2.5-tts",
+      "config": "compute/providers/xiaomi.json",
+      "sourceDoc": "docs/model-sources/providers/xiaomi/models/mimo-v2.5-tts.md",
+      "outcome": "official-identity-only",
+      "sourceIds": [
+        "xiaomi-models",
+        "xiaomi-price"
+      ],
+      "fieldEvidence": [
+        {
+          "field": "modelName",
+          "currentValue": "mimo-v2.5-tts",
+          "supportedValue": "mimo-v2.5-tts",
+          "sourceId": "xiaomi-models",
+          "assessment": "matches",
+          "explanation": "本轮正文定位精确标识；只确认该标识在其来源合同出现，不证明其他字段或不同套餐可用性。"
+        },
+        {
+          "field": "contextWindow",
+          "currentValue": null,
+          "supportedValue": "8K",
+          "sourceId": "xiaomi-models",
+          "assessment": "not-comparable",
+          "explanation": "当前精确型号表使用K/M长度简写；未将简写自动转成已核整数。"
+        },
+        {
+          "field": "maxOutputTokens",
+          "currentValue": null,
+          "supportedValue": "8K",
+          "sourceId": "xiaomi-models",
+          "assessment": "not-comparable",
+          "explanation": "最大输出表仅给K值；voiceclone/voicedesign共用TTS系列合并格，其单独限制仍待确认。"
+        }
+      ],
+      "remainingFields": [
+        "capabilities",
+        "serviceType",
+        "access.maxInputTokens",
+        "access.protocol-readiness"
+      ],
+      "nextAction": "人工逐字段复核本次候选；只将matches且精确接入适用的字段迁入原来源文档，differs先审单位/阶梯/产品默认；缺项需精确模型页、官方版本卡或授权目录，不猜填。",
+      "notes": [
+        "TTS价签限时免费，不代表永久0；必须保留限时范围。"
+      ],
+      "originalStatus": "partial",
+      "originalGap": "idOnly"
+    },
+    {
+      "recordKey": "compute/model-specs/xiaomi.json#mimo-v2.5-tts",
+      "modelId": "mimo-v2.5-tts",
+      "config": "compute/model-specs/xiaomi.json",
+      "sourceDoc": "docs/model-sources/providers/xiaomi/models/mimo-v2.5-tts.md",
+      "outcome": "official-identity-only",
+      "sourceIds": [
+        "xiaomi-models",
+        "xiaomi-price"
+      ],
+      "fieldEvidence": [
+        {
+          "field": "id",
+          "currentValue": "mimo-v2.5-tts",
+          "supportedValue": "mimo-v2.5-tts",
+          "sourceId": "xiaomi-models",
+          "assessment": "matches",
+          "explanation": "本轮正文定位精确标识；只确认该标识在其来源合同出现，不证明其他字段或不同套餐可用性。"
+        },
+        {
+          "field": "spec.contextWindow",
+          "currentValue": 8192,
+          "supportedValue": "8K",
+          "sourceId": "xiaomi-models",
+          "assessment": "not-comparable",
+          "explanation": "当前精确型号表使用K/M长度简写；未将简写自动转成已核整数。"
+        },
+        {
+          "field": "spec.maxOutputTokens",
+          "currentValue": 8192,
+          "supportedValue": "8K",
+          "sourceId": "xiaomi-models",
+          "assessment": "not-comparable",
+          "explanation": "最大输出表仅给K值；voiceclone/voicedesign共用TTS系列合并格，其单独限制仍待确认。"
+        }
+      ],
+      "remainingFields": [
+        "spec.contextWindow",
+        "spec.maxOutputTokens",
+        "spec.capabilities",
+        "spec.serviceType"
+      ],
+      "nextAction": "人工逐字段复核本次候选；只将matches且精确接入适用的字段迁入原来源文档，differs先审单位/阶梯/产品默认；缺项需精确模型页、官方版本卡或授权目录，不猜填。",
+      "notes": [
+        "TTS价签限时免费，不代表永久0；必须保留限时范围。"
+      ],
+      "originalStatus": "partial",
+      "originalGap": "idOnly"
+    },
+    {
+      "recordKey": "compute/model-specs/xiaomi.json#mimo-v2.5",
+      "modelId": "mimo-v2.5",
+      "config": "compute/model-specs/xiaomi.json",
+      "sourceDoc": "docs/model-sources/providers/xiaomi/models/mimo-v2.5.md",
+      "outcome": "official-identity-only",
+      "sourceIds": [
+        "xiaomi-models"
+      ],
+      "fieldEvidence": [
+        {
+          "field": "id",
+          "currentValue": "mimo-v2.5",
+          "supportedValue": "mimo-v2.5",
+          "sourceId": "xiaomi-models",
+          "assessment": "matches",
+          "explanation": "本轮正文定位精确标识；只确认该标识在其来源合同出现，不证明其他字段或不同套餐可用性。"
+        },
+        {
+          "field": "spec.contextWindow",
+          "currentValue": 1000000,
+          "supportedValue": "1M",
+          "sourceId": "xiaomi-models",
+          "assessment": "not-comparable",
+          "explanation": "当前精确型号表使用K/M长度简写；未将简写自动转成已核整数。"
+        },
+        {
+          "field": "spec.maxOutputTokens",
+          "currentValue": 131072,
+          "supportedValue": "128K",
+          "sourceId": "xiaomi-models",
+          "assessment": "not-comparable",
+          "explanation": "最大输出表仅给K值；voiceclone/voicedesign共用TTS系列合并格，其单独限制仍待确认。"
+        }
+      ],
+      "remainingFields": [
+        "spec.contextWindow",
+        "spec.defaultTemperature",
+        "spec.maxOutputTokens",
+        "spec.supportsReasoning",
+        "spec.capabilities",
+        "spec.serviceType"
+      ],
+      "nextAction": "人工逐字段复核本次候选；只将matches且精确接入适用的字段迁入原来源文档，differs先审单位/阶梯/产品默认；缺项需精确模型页、官方版本卡或授权目录，不猜填。",
+      "notes": [
+        "官网明确2026-10-21北京时间10:00停止旧型号，当前2026-10-04尚未到期，不能提前下架；需时区精确门控。"
+      ],
+      "originalStatus": "partial",
+      "originalGap": "idOnly"
+    },
+    {
+      "recordKey": "compute/providers/xiaomi.json#mimo-v2.6-flash",
+      "modelId": "mimo-v2.6-flash",
+      "config": "compute/providers/xiaomi.json",
+      "sourceDoc": "docs/model-sources/providers/xiaomi/models/mimo-v2.6-flash.md",
+      "outcome": "official-fields-found",
+      "sourceIds": [
+        "xiaomi",
+        "xiaomi-models",
+        "xiaomi-price"
+      ],
+      "fieldEvidence": [
+        {
+          "field": "modelName",
+          "currentValue": "mimo-v2.6-flash",
+          "supportedValue": "mimo-v2.6-flash",
+          "sourceId": "xiaomi",
+          "assessment": "matches",
+          "explanation": "本轮正文定位精确标识；只确认该标识在其来源合同出现，不证明其他字段或不同套餐可用性。"
+        },
+        {
+          "field": "contextWindow",
+          "currentValue": 1000000,
+          "supportedValue": "1M",
+          "sourceId": "xiaomi-models",
+          "assessment": "not-comparable",
+          "explanation": "当前精确型号表使用K/M长度简写；未将简写自动转成已核整数。"
+        },
+        {
+          "field": "maxOutputTokens",
+          "currentValue": 131072,
+          "supportedValue": "128K",
+          "sourceId": "xiaomi-models",
+          "assessment": "not-comparable",
+          "explanation": "最大输出表仅给K值；voiceclone/voicedesign共用TTS系列合并格，其单独限制仍待确认。"
+        },
+        {
+          "field": "inputPrice",
+          "currentValue": 1,
+          "supportedValue": 1,
+          "sourceId": "xiaomi-price",
+          "assessment": "matches",
+          "explanation": "国内实时API CNY/百万token，非Batch/海外价格，Token Plan不可沿用。"
+        },
+        {
+          "field": "outputPrice",
+          "currentValue": 2,
+          "supportedValue": 2,
+          "sourceId": "xiaomi-price",
+          "assessment": "matches",
+          "explanation": "国内实时API CNY/百万token，非Batch/海外价格，Token Plan不可沿用。"
+        },
+        {
+          "field": "extra.cachedInputPrice",
+          "currentValue": 0.02,
+          "supportedValue": 0.02,
+          "sourceId": "xiaomi-price",
+          "assessment": "matches",
+          "explanation": "国内实时API CNY/百万token，非Batch/海外价格，Token Plan不可沿用。"
+        }
+      ],
+      "remainingFields": [
+        "capabilities",
+        "serviceType",
+        "access.maxInputTokens",
+        "access.protocol-readiness"
+      ],
+      "nextAction": "人工逐字段复核本次候选；只将matches且精确接入适用的字段迁入原来源文档，differs先审单位/阶梯/产品默认；缺项需精确模型页、官方版本卡或授权目录，不猜填。",
+      "notes": [
+        "本轮未在可读页面定位完整精确型号合同；缺失不判定停服。"
+      ],
+      "originalStatus": "partial",
+      "originalGap": "partial"
+    },
+    {
+      "recordKey": "compute/model-specs/xiaomi.json#mimo-v2.6-flash",
+      "modelId": "mimo-v2.6-flash",
+      "config": "compute/model-specs/xiaomi.json",
+      "sourceDoc": "docs/model-sources/providers/xiaomi/models/mimo-v2.6-flash.md",
+      "outcome": "official-identity-only",
+      "sourceIds": [
+        "xiaomi",
+        "xiaomi-models"
+      ],
+      "fieldEvidence": [
+        {
+          "field": "id",
+          "currentValue": "mimo-v2.6-flash",
+          "supportedValue": "mimo-v2.6-flash",
+          "sourceId": "xiaomi",
+          "assessment": "matches",
+          "explanation": "本轮正文定位精确标识；只确认该标识在其来源合同出现，不证明其他字段或不同套餐可用性。"
+        },
+        {
+          "field": "spec.contextWindow",
+          "currentValue": 1000000,
+          "supportedValue": "1M",
+          "sourceId": "xiaomi-models",
+          "assessment": "not-comparable",
+          "explanation": "当前精确型号表使用K/M长度简写；未将简写自动转成已核整数。"
+        },
+        {
+          "field": "spec.maxOutputTokens",
+          "currentValue": 131072,
+          "supportedValue": "128K",
+          "sourceId": "xiaomi-models",
+          "assessment": "not-comparable",
+          "explanation": "最大输出表仅给K值；voiceclone/voicedesign共用TTS系列合并格，其单独限制仍待确认。"
+        }
+      ],
+      "remainingFields": [
+        "spec.supportsReasoning",
+        "spec.capabilities",
+        "spec.serviceType"
+      ],
+      "nextAction": "人工逐字段复核本次候选；只将matches且精确接入适用的字段迁入原来源文档，differs先审单位/阶梯/产品默认；缺项需精确模型页、官方版本卡或授权目录，不猜填。",
+      "notes": [
+        "本轮未在可读页面定位完整精确型号合同；缺失不判定停服。"
+      ],
+      "originalStatus": "partial",
+      "originalGap": "partial"
+    },
+    {
+      "recordKey": "compute/providers/xiaomi.json#mimo-v2.6-pro-ultraspeed",
+      "modelId": "mimo-v2.6-pro-ultraspeed",
+      "config": "compute/providers/xiaomi.json",
+      "sourceDoc": "docs/model-sources/providers/xiaomi/models/mimo-v2.6-pro-ultraspeed.md",
+      "outcome": "official-fields-found",
+      "sourceIds": [
+        "xiaomi-models",
+        "xiaomi-price"
+      ],
+      "fieldEvidence": [
+        {
+          "field": "modelName",
+          "currentValue": "mimo-v2.6-pro-ultraspeed",
+          "supportedValue": "mimo-v2.6-pro-ultraspeed",
+          "sourceId": "xiaomi-models",
+          "assessment": "matches",
+          "explanation": "本轮正文定位精确标识；只确认该标识在其来源合同出现，不证明其他字段或不同套餐可用性。"
+        },
+        {
+          "field": "contextWindow",
+          "currentValue": 1000000,
+          "supportedValue": "1M",
+          "sourceId": "xiaomi-models",
+          "assessment": "not-comparable",
+          "explanation": "当前精确型号表使用K/M长度简写；未将简写自动转成已核整数。"
+        },
+        {
+          "field": "maxOutputTokens",
+          "currentValue": 131072,
+          "supportedValue": "128K",
+          "sourceId": "xiaomi-models",
+          "assessment": "not-comparable",
+          "explanation": "最大输出表仅给K值；voiceclone/voicedesign共用TTS系列合并格，其单独限制仍待确认。"
+        },
+        {
+          "field": "inputPrice",
+          "currentValue": 30,
+          "supportedValue": 30,
+          "sourceId": "xiaomi-price",
+          "assessment": "matches",
+          "explanation": "国内实时API CNY/百万token，非Batch/海外价格，Token Plan不可沿用。"
+        },
+        {
+          "field": "outputPrice",
+          "currentValue": 60,
+          "supportedValue": 60,
+          "sourceId": "xiaomi-price",
+          "assessment": "matches",
+          "explanation": "国内实时API CNY/百万token，非Batch/海外价格，Token Plan不可沿用。"
+        },
+        {
+          "field": "extra.cachedInputPrice",
+          "currentValue": 0.25,
+          "supportedValue": 0.25,
+          "sourceId": "xiaomi-price",
+          "assessment": "matches",
+          "explanation": "国内实时API CNY/百万token，非Batch/海外价格，Token Plan不可沿用。"
+        }
+      ],
+      "remainingFields": [
+        "capabilities",
+        "serviceType",
+        "access.maxInputTokens",
+        "access.protocol-readiness"
+      ],
+      "nextAction": "人工逐字段复核本次候选；只将matches且精确接入适用的字段迁入原来源文档，differs先审单位/阶梯/产品默认；缺项需精确模型页、官方版本卡或授权目录，不猜填。",
+      "notes": [
+        "本轮未在可读页面定位完整精确型号合同；缺失不判定停服。"
+      ],
+      "originalStatus": "partial",
+      "originalGap": "partial"
+    },
+    {
+      "recordKey": "compute/model-specs/xiaomi.json#mimo-v2.6-pro-ultraspeed",
+      "modelId": "mimo-v2.6-pro-ultraspeed",
+      "config": "compute/model-specs/xiaomi.json",
+      "sourceDoc": "docs/model-sources/providers/xiaomi/models/mimo-v2.6-pro-ultraspeed.md",
+      "outcome": "official-identity-only",
+      "sourceIds": [
+        "xiaomi-models"
+      ],
+      "fieldEvidence": [
+        {
+          "field": "id",
+          "currentValue": "mimo-v2.6-pro-ultraspeed",
+          "supportedValue": "mimo-v2.6-pro-ultraspeed",
+          "sourceId": "xiaomi-models",
+          "assessment": "matches",
+          "explanation": "本轮正文定位精确标识；只确认该标识在其来源合同出现，不证明其他字段或不同套餐可用性。"
+        },
+        {
+          "field": "spec.contextWindow",
+          "currentValue": 1000000,
+          "supportedValue": "1M",
+          "sourceId": "xiaomi-models",
+          "assessment": "not-comparable",
+          "explanation": "当前精确型号表使用K/M长度简写；未将简写自动转成已核整数。"
+        },
+        {
+          "field": "spec.maxOutputTokens",
+          "currentValue": 131072,
+          "supportedValue": "128K",
+          "sourceId": "xiaomi-models",
+          "assessment": "not-comparable",
+          "explanation": "最大输出表仅给K值；voiceclone/voicedesign共用TTS系列合并格，其单独限制仍待确认。"
+        }
+      ],
+      "remainingFields": [
+        "spec.supportsReasoning",
+        "spec.capabilities",
+        "spec.serviceType"
+      ],
+      "nextAction": "人工逐字段复核本次候选；只将matches且精确接入适用的字段迁入原来源文档，differs先审单位/阶梯/产品默认；缺项需精确模型页、官方版本卡或授权目录，不猜填。",
+      "notes": [
+        "本轮未在可读页面定位完整精确型号合同；缺失不判定停服。"
+      ],
+      "originalStatus": "partial",
+      "originalGap": "partial"
+    },
+    {
+      "recordKey": "compute/providers/xiaomi.json#mimo-v2.6-pro",
+      "modelId": "mimo-v2.6-pro",
+      "config": "compute/providers/xiaomi.json",
+      "sourceDoc": "docs/model-sources/providers/xiaomi/models/mimo-v2.6-pro.md",
+      "outcome": "official-fields-found",
+      "sourceIds": [
+        "xiaomi",
+        "xiaomi-models",
+        "xiaomi-price"
+      ],
+      "fieldEvidence": [
+        {
+          "field": "modelName",
+          "currentValue": "mimo-v2.6-pro",
+          "supportedValue": "mimo-v2.6-pro",
+          "sourceId": "xiaomi",
+          "assessment": "matches",
+          "explanation": "本轮正文定位精确标识；只确认该标识在其来源合同出现，不证明其他字段或不同套餐可用性。"
+        },
+        {
+          "field": "contextWindow",
+          "currentValue": 1000000,
+          "supportedValue": "1M",
+          "sourceId": "xiaomi-models",
+          "assessment": "not-comparable",
+          "explanation": "当前精确型号表使用K/M长度简写；未将简写自动转成已核整数。"
+        },
+        {
+          "field": "maxOutputTokens",
+          "currentValue": 131072,
+          "supportedValue": "128K",
+          "sourceId": "xiaomi-models",
+          "assessment": "not-comparable",
+          "explanation": "最大输出表仅给K值；voiceclone/voicedesign共用TTS系列合并格，其单独限制仍待确认。"
+        },
+        {
+          "field": "inputPrice",
+          "currentValue": 3,
+          "supportedValue": 3,
+          "sourceId": "xiaomi-price",
+          "assessment": "matches",
+          "explanation": "国内实时API CNY/百万token，非Batch/海外价格，Token Plan不可沿用。"
+        },
+        {
+          "field": "outputPrice",
+          "currentValue": 6,
+          "supportedValue": 6,
+          "sourceId": "xiaomi-price",
+          "assessment": "matches",
+          "explanation": "国内实时API CNY/百万token，非Batch/海外价格，Token Plan不可沿用。"
+        },
+        {
+          "field": "extra.cachedInputPrice",
+          "currentValue": 0.025,
+          "supportedValue": 0.025,
+          "sourceId": "xiaomi-price",
+          "assessment": "matches",
+          "explanation": "国内实时API CNY/百万token，非Batch/海外价格，Token Plan不可沿用。"
+        }
+      ],
+      "remainingFields": [
+        "capabilities",
+        "serviceType",
+        "access.maxInputTokens",
+        "access.protocol-readiness"
+      ],
+      "nextAction": "人工逐字段复核本次候选；只将matches且精确接入适用的字段迁入原来源文档，differs先审单位/阶梯/产品默认；缺项需精确模型页、官方版本卡或授权目录，不猜填。",
+      "notes": [
+        "本轮未在可读页面定位完整精确型号合同；缺失不判定停服。"
+      ],
+      "originalStatus": "partial",
+      "originalGap": "partial"
+    },
+    {
+      "recordKey": "compute/model-specs/xiaomi.json#mimo-v2.6-pro",
+      "modelId": "mimo-v2.6-pro",
+      "config": "compute/model-specs/xiaomi.json",
+      "sourceDoc": "docs/model-sources/providers/xiaomi/models/mimo-v2.6-pro.md",
+      "outcome": "official-identity-only",
+      "sourceIds": [
+        "xiaomi",
+        "xiaomi-models"
+      ],
+      "fieldEvidence": [
+        {
+          "field": "id",
+          "currentValue": "mimo-v2.6-pro",
+          "supportedValue": "mimo-v2.6-pro",
+          "sourceId": "xiaomi",
+          "assessment": "matches",
+          "explanation": "本轮正文定位精确标识；只确认该标识在其来源合同出现，不证明其他字段或不同套餐可用性。"
+        },
+        {
+          "field": "spec.contextWindow",
+          "currentValue": 1000000,
+          "supportedValue": "1M",
+          "sourceId": "xiaomi-models",
+          "assessment": "not-comparable",
+          "explanation": "当前精确型号表使用K/M长度简写；未将简写自动转成已核整数。"
+        },
+        {
+          "field": "spec.maxOutputTokens",
+          "currentValue": 131072,
+          "supportedValue": "128K",
+          "sourceId": "xiaomi-models",
+          "assessment": "not-comparable",
+          "explanation": "最大输出表仅给K值；voiceclone/voicedesign共用TTS系列合并格，其单独限制仍待确认。"
+        }
+      ],
+      "remainingFields": [
+        "spec.supportsReasoning",
+        "spec.capabilities",
+        "spec.serviceType"
+      ],
+      "nextAction": "人工逐字段复核本次候选；只将matches且精确接入适用的字段迁入原来源文档，differs先审单位/阶梯/产品默认；缺项需精确模型页、官方版本卡或授权目录，不猜填。",
+      "notes": [
+        "本轮未在可读页面定位完整精确型号合同；缺失不判定停服。"
+      ],
+      "originalStatus": "partial",
+      "originalGap": "partial"
+    },
+    {
+      "recordKey": "compute/providers/xiaomi.json#mimo-x-flash-preview",
+      "modelId": "mimo-x-flash-preview",
+      "config": "compute/providers/xiaomi.json",
+      "sourceDoc": "docs/model-sources/providers/xiaomi/models/mimo-x-flash-preview.md",
+      "outcome": "still-unresolved",
+      "sourceIds": [
+        "xiaomi",
+        "xiaomi-models",
+        "xiaomi-price",
+        "xiaomi-plan",
+        "xiaomi-llms"
+      ],
+      "fieldEvidence": [],
+      "remainingFields": [
+        "contextWindow",
+        "modelName",
+        "capabilities",
+        "serviceType",
+        "access.maxInputTokens",
+        "access.protocol-readiness"
+      ],
+      "nextAction": "人工逐字段复核本次候选；只将matches且精确接入适用的字段迁入原来源文档，differs先审单位/阶梯/产品默认；缺项需精确模型页、官方版本卡或授权目录，不猜填。",
+      "notes": [
+        "当前支持模型目录未定位该精确旧/预览名称；名称缺失不证明退役或对应新版本，不把mimo-v2与mimo-v2.5及MiMo-X混成alias。"
+      ],
+      "originalStatus": "pending",
+      "originalGap": "pending"
+    },
+    {
+      "recordKey": "compute/model-specs/xiaomi.json#mimo-x-flash-preview",
+      "modelId": "mimo-x-flash-preview",
+      "config": "compute/model-specs/xiaomi.json",
+      "sourceDoc": "docs/model-sources/providers/xiaomi/models/mimo-x-flash-preview.md",
+      "outcome": "still-unresolved",
+      "sourceIds": [
+        "xiaomi",
+        "xiaomi-models",
+        "xiaomi-price",
+        "xiaomi-plan",
+        "xiaomi-llms"
+      ],
+      "fieldEvidence": [],
+      "remainingFields": [
+        "id",
+        "spec.contextWindow",
+        "spec.capabilities",
+        "spec.serviceType"
+      ],
+      "nextAction": "人工逐字段复核本次候选；只将matches且精确接入适用的字段迁入原来源文档，differs先审单位/阶梯/产品默认；缺项需精确模型页、官方版本卡或授权目录，不猜填。",
+      "notes": [
+        "当前支持模型目录未定位该精确旧/预览名称；名称缺失不证明退役或对应新版本，不把mimo-v2与mimo-v2.5及MiMo-X混成alias。"
+      ],
+      "originalStatus": "pending",
+      "originalGap": "pending"
+    },
+    {
+      "recordKey": "compute/providers/xiaomi.json#mimo-x-pro-preview",
+      "modelId": "mimo-x-pro-preview",
+      "config": "compute/providers/xiaomi.json",
+      "sourceDoc": "docs/model-sources/providers/xiaomi/models/mimo-x-pro-preview.md",
+      "outcome": "still-unresolved",
+      "sourceIds": [
+        "xiaomi",
+        "xiaomi-models",
+        "xiaomi-price",
+        "xiaomi-plan",
+        "xiaomi-llms"
+      ],
+      "fieldEvidence": [],
+      "remainingFields": [
+        "contextWindow",
+        "modelName",
+        "capabilities",
+        "serviceType",
+        "access.maxInputTokens",
+        "access.protocol-readiness"
+      ],
+      "nextAction": "人工逐字段复核本次候选；只将matches且精确接入适用的字段迁入原来源文档，differs先审单位/阶梯/产品默认；缺项需精确模型页、官方版本卡或授权目录，不猜填。",
+      "notes": [
+        "当前支持模型目录未定位该精确旧/预览名称；名称缺失不证明退役或对应新版本，不把mimo-v2与mimo-v2.5及MiMo-X混成alias。"
+      ],
+      "originalStatus": "pending",
+      "originalGap": "pending"
+    },
+    {
+      "recordKey": "compute/model-specs/xiaomi.json#mimo-x-pro-preview",
+      "modelId": "mimo-x-pro-preview",
+      "config": "compute/model-specs/xiaomi.json",
+      "sourceDoc": "docs/model-sources/providers/xiaomi/models/mimo-x-pro-preview.md",
+      "outcome": "still-unresolved",
+      "sourceIds": [
+        "xiaomi",
+        "xiaomi-models",
+        "xiaomi-price",
+        "xiaomi-plan",
+        "xiaomi-llms"
+      ],
+      "fieldEvidence": [],
+      "remainingFields": [
+        "id",
+        "spec.contextWindow",
+        "spec.capabilities",
+        "spec.serviceType"
+      ],
+      "nextAction": "人工逐字段复核本次候选；只将matches且精确接入适用的字段迁入原来源文档，differs先审单位/阶梯/产品默认；缺项需精确模型页、官方版本卡或授权目录，不猜填。",
+      "notes": [
+        "当前支持模型目录未定位该精确旧/预览名称；名称缺失不证明退役或对应新版本，不把mimo-v2与mimo-v2.5及MiMo-X混成alias。"
+      ],
+      "originalStatus": "pending",
+      "originalGap": "pending"
+    }
+  ],
+  "coverage": {
+    "records": 25,
+    "sourceAttempts": 5,
+    "readableSources": 4,
+    "outcomes": {
+      "still-unresolved": 8,
+      "official-identity-only": 13,
+      "official-fields-found": 4
+    }
+  },
+  "boundary": "本轮只保存核查候选，未更改canonical、既有来源核验状态、指纹或manifest；可读正文和ID存在不是全参数/账号验收。"
+}

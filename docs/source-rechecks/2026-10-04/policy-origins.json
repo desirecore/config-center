@@ -1,0 +1,187 @@
+{
+  "checkedAt": "2026-10-04",
+  "sources": [
+    {
+      "id": "pricing-history",
+      "url": "https://github.com/desirecore/config-center/commit/ea740afdc58717130d7741833abf25581912e58a",
+      "finalUrl": "https://github.com/desirecore/config-center/commit/ea740afdc58717130d7741833abf25581912e58a",
+      "publisher": "DesireCore",
+      "kind": "repository-policy",
+      "retrieval": "readable",
+      "summary": "本地Git原始提交已读取，1.5/7.2可追溯至初始化。",
+      "scope": "实现历史不等于业务审批，7.2不是实时汇率。"
+    },
+    {
+      "id": "defaults-history",
+      "url": "https://github.com/desirecore/config-center/commit/5d9217f740627e86993f1a6f71792bc862b0be92",
+      "finalUrl": "https://github.com/desirecore/config-center/commit/5d9217f740627e86993f1a6f71792bc862b0be92",
+      "publisher": "DesireCore",
+      "kind": "repository-policy",
+      "retrieval": "readable",
+      "summary": "本地Git当前service-map与summary变更提交已读取。",
+      "scope": "只能证明当前实现及变更原因，不能证明全部默认型号的质量/费用/延迟评测。"
+    }
+  ],
+  "findings": [
+    {
+      "recordKind": "internal-policy",
+      "recordKey": "compute/pricing.json#markupRatio",
+      "supplier": "本仓策略",
+      "modelId": "markupRatio",
+      "config": "compute/pricing.json",
+      "sourceDoc": "docs/data-sources/policies/pricing.md",
+      "originalStatus": "policy",
+      "originalGap": "missing-approval",
+      "outcome": "internal-policy-missing-approval",
+      "sourceIds": [
+        "pricing-history"
+      ],
+      "current": {
+        "markupRatio": 1.5
+      },
+      "fieldEvidence": [],
+      "remainingFields": [
+        "历史批准依据",
+        "生效范围",
+        "结算单位与舍入规则"
+      ],
+      "nextAction": "由结算负责人确认政策与批准依据。",
+      "notes": [
+        "仓内当前值1.5；代码初始化可追溯，审批证据未取得。"
+      ]
+    },
+    {
+      "recordKind": "internal-policy",
+      "recordKey": "compute/pricing.json#usdToCny",
+      "supplier": "本仓策略",
+      "modelId": "usdToCny",
+      "config": "compute/pricing.json",
+      "sourceDoc": "docs/data-sources/policies/pricing.md",
+      "originalStatus": "policy",
+      "originalGap": "missing-approval",
+      "outcome": "internal-policy-missing-approval",
+      "sourceIds": [
+        "pricing-history"
+      ],
+      "current": {
+        "usdToCny": 7.2
+      },
+      "fieldEvidence": [],
+      "remainingFields": [
+        "历史批准依据",
+        "生效范围",
+        "结算单位与舍入规则"
+      ],
+      "nextAction": "确认固定结算假设或实时汇率机制及批准记录；不得从当前市场汇率反推。",
+      "notes": [
+        "仓内当前值7.2；代码初始化可追溯，审批证据未取得。"
+      ]
+    },
+    {
+      "recordKind": "internal-policy",
+      "recordKey": "compute/service-map.json#default-selection",
+      "supplier": "本仓策略",
+      "modelId": "默认服务映射",
+      "config": "compute/service-map.json",
+      "sourceDoc": "docs/data-sources/policies/service-map.md",
+      "originalStatus": "policy",
+      "originalGap": "missing-evaluation",
+      "outcome": "internal-policy-missing-approval",
+      "sourceIds": [
+        "defaults-history"
+      ],
+      "current": {
+        "chat": {
+          "modelName": "gpt-5.4-mini",
+          "providerId": "provider-openai-001"
+        },
+        "reasoning": {
+          "modelName": "deepseek-flash",
+          "providerId": "provider-deepseek-001"
+        },
+        "fast": {
+          "modelName": "gpt-5.4-nano",
+          "providerId": "provider-openai-001"
+        },
+        "embedding": {
+          "modelName": "text-embedding-3-small",
+          "providerId": "provider-openai-001"
+        },
+        "rerank": {
+          "modelName": "qwen3-rerank",
+          "providerId": "provider-dashscope-001"
+        },
+        "vision": {
+          "modelName": "gpt-5.4-mini",
+          "providerId": "provider-openai-001"
+        },
+        "tts": {
+          "modelName": "tts-1",
+          "providerId": "provider-openai-001"
+        },
+        "asr": {
+          "modelName": "whisper-large-v3",
+          "providerId": "provider-local-whisper"
+        },
+        "ocr": {
+          "modelName": "qwen3-vl-plus",
+          "providerId": "provider-dashscope-001"
+        },
+        "responses": {
+          "modelName": "gpt-5.5",
+          "providerId": "provider-openai-001"
+        },
+        "image_gen": {
+          "modelName": "image-01",
+          "providerId": "provider-minimax-001"
+        },
+        "video_gen": {
+          "modelName": "MiniMax-Hailuo-2.3",
+          "providerId": "provider-minimax-001"
+        },
+        "omni": {
+          "modelName": "gpt-realtime-2.1",
+          "providerId": "provider-openai-001"
+        },
+        "voice_clone": {
+          "modelName": "cosyvoice-clone",
+          "providerId": "provider-dashscope-001"
+        },
+        "realtime_voice": {
+          "modelName": "gpt-realtime-2.1",
+          "providerId": "provider-openai-001"
+        },
+        "simultaneous_interpret": {
+          "modelName": "volc-simultaneous",
+          "providerId": "provider-volcengine-001"
+        },
+        "translation": {
+          "modelName": "qwen-mt-plus",
+          "providerId": "provider-dashscope-001"
+        },
+        "computer_use": {
+          "modelName": "claude-sonnet-5",
+          "providerId": "provider-anthropic-001"
+        },
+        "music_gen": {
+          "modelName": "music-2.6",
+          "providerId": "provider-minimax-001"
+        },
+        "summary": {
+          "modelName": "mimo-v2.6-flash",
+          "providerId": "desirecore-cloud"
+        }
+      },
+      "fieldEvidence": [],
+      "remainingFields": [
+        "代表性质量/延迟/费用评测",
+        "选择理由与批准依据",
+        "原生适配验收"
+      ],
+      "nextAction": "保留现有映射，补同接入面评测；ASR等未适配不能因默认配置存在就标可调用。",
+      "notes": [
+        "当前summary为desirecore-cloud/mimo-v2.6-flash。"
+      ]
+    }
+  ]
+}

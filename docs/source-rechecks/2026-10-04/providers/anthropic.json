@@ -1,0 +1,2669 @@
+{
+  "supplier": "anthropic",
+  "checkedAt": "2026-10-04",
+  "sources": [
+    {
+      "id": "anthropic-dc594301e778",
+      "url": "https://platform.claude.com/docs/en/models/overview.md",
+      "finalUrl": "https://platform.claude.com/docs/en/models/overview.md",
+      "publisher": "Anthropic",
+      "kind": "official-docs",
+      "retrieval": "readable",
+      "summary": "正文已读取；仅用于下方逐字段列明的证据，读取成功不代表全规格核实。",
+      "scope": "该官网文档明确列出的模型/API；不扩展到其他接入面。"
+    },
+    {
+      "id": "anthropic-a37fbcdd8953",
+      "url": "https://platform.claude.com/docs/en/models/fable-5-1/overview.md",
+      "finalUrl": "https://platform.claude.com/docs/en/models/fable-5-1/overview.md",
+      "publisher": "Anthropic",
+      "kind": "official-docs",
+      "retrieval": "readable",
+      "summary": "正文已读取；仅用于下方逐字段列明的证据，读取成功不代表全规格核实。",
+      "scope": "该官网文档明确列出的模型/API；不扩展到其他接入面。"
+    },
+    {
+      "id": "anthropic-528c440a2ed8",
+      "url": "https://platform.claude.com/docs/en/build-with-claude/effort.md",
+      "finalUrl": "https://platform.claude.com/docs/en/build-with-claude/effort.md",
+      "publisher": "Anthropic",
+      "kind": "official-docs",
+      "retrieval": "readable",
+      "summary": "正文已读取；仅用于下方逐字段列明的证据，读取成功不代表全规格核实。",
+      "scope": "该官网文档明确列出的模型/API；不扩展到其他接入面。"
+    },
+    {
+      "id": "anthropic-058915f18c62",
+      "url": "https://platform.claude.com/docs/en/models/opus-5-5/overview.md",
+      "finalUrl": "https://platform.claude.com/docs/en/models/opus-5-5/overview.md",
+      "publisher": "Anthropic",
+      "kind": "official-docs",
+      "retrieval": "readable",
+      "summary": "正文已读取；仅用于下方逐字段列明的证据，读取成功不代表全规格核实。",
+      "scope": "该官网文档明确列出的模型/API；不扩展到其他接入面。"
+    },
+    {
+      "id": "anthropic-ad4b90c4ddf5",
+      "url": "https://platform.claude.com/docs/en/models/opus-5/overview.md",
+      "finalUrl": "https://platform.claude.com/docs/en/models/opus-5/overview.md",
+      "publisher": "Anthropic",
+      "kind": "official-docs",
+      "retrieval": "readable",
+      "summary": "正文已读取；仅用于下方逐字段列明的证据，读取成功不代表全规格核实。",
+      "scope": "该官网文档明确列出的模型/API；不扩展到其他接入面。"
+    },
+    {
+      "id": "anthropic-56873f510891",
+      "url": "https://platform.claude.com/docs/en/models/sonnet-5-5/overview.md",
+      "finalUrl": "https://platform.claude.com/docs/en/models/sonnet-5-5/overview.md",
+      "publisher": "Anthropic",
+      "kind": "official-docs",
+      "retrieval": "readable",
+      "summary": "正文已读取；仅用于下方逐字段列明的证据，读取成功不代表全规格核实。",
+      "scope": "该官网文档明确列出的模型/API；不扩展到其他接入面。"
+    },
+    {
+      "id": "anthropic-a5d34a661466",
+      "url": "https://platform.claude.com/docs/en/models/sonnet-5/overview.md",
+      "finalUrl": "https://platform.claude.com/docs/en/models/sonnet-5/overview.md",
+      "publisher": "Anthropic",
+      "kind": "official-docs",
+      "retrieval": "readable",
+      "summary": "正文已读取；仅用于下方逐字段列明的证据，读取成功不代表全规格核实。",
+      "scope": "该官网文档明确列出的模型/API；不扩展到其他接入面。"
+    },
+    {
+      "id": "anthropic-e17e9a5c103a",
+      "url": "https://platform.claude.com/docs/en/models/opus-4-7/overview.md",
+      "finalUrl": "https://platform.claude.com/docs/en/models/opus-4-7/overview.md",
+      "publisher": "Anthropic",
+      "kind": "official-docs",
+      "retrieval": "readable",
+      "summary": "正文已读取；仅用于下方逐字段列明的证据，读取成功不代表全规格核实。",
+      "scope": "该官网文档明确列出的模型/API；不扩展到其他接入面。"
+    },
+    {
+      "id": "anthropic-aa8ecc930e64",
+      "url": "https://platform.claude.com/docs/en/models/opus-4-8/overview.md",
+      "finalUrl": "https://platform.claude.com/docs/en/models/opus-4-8/overview.md",
+      "publisher": "Anthropic",
+      "kind": "official-docs",
+      "retrieval": "readable",
+      "summary": "正文已读取；仅用于下方逐字段列明的证据，读取成功不代表全规格核实。",
+      "scope": "该官网文档明确列出的模型/API；不扩展到其他接入面。"
+    },
+    {
+      "id": "anthropic-d1fd0501ddc3",
+      "url": "https://platform.claude.com/docs/en/models/sonnet-4-5/overview.md",
+      "finalUrl": "https://platform.claude.com/docs/en/models/sonnet-4-5/overview.md",
+      "publisher": "Anthropic",
+      "kind": "official-docs",
+      "retrieval": "readable",
+      "summary": "正文已读取；仅用于下方逐字段列明的证据，读取成功不代表全规格核实。",
+      "scope": "该官网文档明确列出的模型/API；不扩展到其他接入面。"
+    },
+    {
+      "id": "anthropic-dcf922f2f069",
+      "url": "https://platform.claude.com/docs/en/models/sonnet-4-6/overview.md",
+      "finalUrl": "https://platform.claude.com/docs/en/models/sonnet-4-6/overview.md",
+      "publisher": "Anthropic",
+      "kind": "official-docs",
+      "retrieval": "readable",
+      "summary": "正文已读取；仅用于下方逐字段列明的证据，读取成功不代表全规格核实。",
+      "scope": "该官网文档明确列出的模型/API；不扩展到其他接入面。"
+    },
+    {
+      "id": "anthropic-4d8052affc68",
+      "url": "https://platform.claude.com/docs/en/models/deprecations.md",
+      "finalUrl": "https://platform.claude.com/docs/en/models/deprecations.md",
+      "publisher": "Anthropic",
+      "kind": "official-docs",
+      "retrieval": "not-found",
+      "summary": "HTTP Error 404: Not Found",
+      "scope": "该官网文档明确列出的模型/API；不扩展到其他接入面。"
+    },
+    {
+      "id": "anthropic-26606ff14841",
+      "url": "https://code.claude.com/docs/en/model-config",
+      "finalUrl": "https://code.claude.com/docs/en/model-config",
+      "publisher": "Anthropic",
+      "kind": "official-docs",
+      "retrieval": "readable",
+      "summary": "实际读取Claude Code官方模型配置正文，作为订阅接入与别名范围说明；原厂API规格不能自动认证该订阅接入字段。",
+      "scope": "Claude Code模型选择、别名、订阅/套餐与账号配置；不证明原厂Claude API统一价格、窗口或所有账号订阅额度。",
+      "readMethod": "http-get-html-body-text-extraction"
+    },
+    {
+      "id": "anthropic-4089dc557e91",
+      "url": "https://platform.claude.com/docs/en/about-claude/model-deprecations.md",
+      "finalUrl": "https://platform.claude.com/docs/en/about-claude/model-deprecations.md",
+      "publisher": "Anthropic",
+      "kind": "official-docs",
+      "retrieval": "readable",
+      "summary": "正文已读取；仅用于下方逐字段列明的证据，读取成功不代表全规格核实。",
+      "scope": "该官网文档明确列出的模型/API；不扩展到其他接入面。"
+    },
+    {
+      "id": "anthropic-d82e15156c4c",
+      "url": "https://platform.claude.com/docs/en/about-claude/pricing.md",
+      "finalUrl": "https://platform.claude.com/docs/en/about-claude/pricing.md",
+      "publisher": "Anthropic",
+      "kind": "official-docs",
+      "retrieval": "readable",
+      "summary": "正文已读取；仅用于下方逐字段列明的证据，读取成功不代表全规格核实。",
+      "scope": "该官网文档明确列出的模型/API；不扩展到其他接入面。"
+    },
+    {
+      "id": "anthropic-6b001bfe3799",
+      "url": "https://platform.claude.com/docs/en/agents-and-tools/tool-use/web-search-tool.md",
+      "finalUrl": "https://platform.claude.com/docs/en/agents-and-tools/tool-use/web-search-tool.md",
+      "publisher": "Anthropic",
+      "kind": "official-docs",
+      "retrieval": "readable",
+      "summary": "正文已读取；仅用于下方逐字段列明的证据，读取成功不代表全规格核实。",
+      "scope": "该官网文档明确列出的模型/API；不扩展到其他接入面。"
+    },
+    {
+      "id": "anthropic-cc7f2719c27a",
+      "url": "https://platform.claude.com/docs/en/models/opus-5-5/whats-new-opus-5-5.md",
+      "finalUrl": "https://platform.claude.com/docs/en/models/opus-5-5/whats-new-opus-5-5.md",
+      "publisher": "Anthropic",
+      "kind": "official-docs",
+      "retrieval": "readable",
+      "summary": "正文已读取；仅用于下方逐字段列明的证据，读取成功不代表全规格核实。",
+      "scope": "该官网文档明确列出的模型/API；不扩展到其他接入面。"
+    },
+    {
+      "id": "anthropic-a2b1092518a3",
+      "url": "https://platform.claude.com/docs/en/models/sonnet-5-5/whats-new-sonnet-5-5.md",
+      "finalUrl": "https://platform.claude.com/docs/en/models/sonnet-5-5/whats-new-sonnet-5-5.md",
+      "publisher": "Anthropic",
+      "kind": "official-docs",
+      "retrieval": "readable",
+      "summary": "正文已读取；仅用于下方逐字段列明的证据，读取成功不代表全规格核实。",
+      "scope": "该官网文档明确列出的模型/API；不扩展到其他接入面。"
+    }
+  ],
+  "findings": [
+    {
+      "recordKey": "compute/providers/anthropic-claude.json#claude-fable-5-1",
+      "modelId": "claude-fable-5-1",
+      "config": "compute/providers/anthropic-claude.json",
+      "sourceDoc": "docs/model-sources/providers/anthropic/models/claude-fable-5-1.md",
+      "outcome": "official-identity-only",
+      "sourceIds": [
+        "anthropic-a37fbcdd8953",
+        "anthropic-d82e15156c4c",
+        "anthropic-528c440a2ed8",
+        "anthropic-dc594301e778"
+      ],
+      "fieldEvidence": [
+        {
+          "field": "modelName",
+          "currentValue": "claude-fable-5-1",
+          "supportedValue": "claude-fable-5-1",
+          "sourceId": "anthropic-a37fbcdd8953",
+          "assessment": "matches",
+          "explanation": "精确API ID/文档明确Claude API alias。"
+        },
+        {
+          "field": "contextWindow",
+          "currentValue": 1000000,
+          "supportedValue": 1000000,
+          "sourceId": "anthropic-a37fbcdd8953",
+          "assessment": "not-comparable",
+          "explanation": "官网K/M按十进制token惯例展开；同步Messages上限，不是Batch beta300K。 原厂API证据不可直接证明本订阅access有效合同。"
+        },
+        {
+          "field": "maxOutputTokens",
+          "currentValue": 128000,
+          "supportedValue": 128000,
+          "sourceId": "anthropic-a37fbcdd8953",
+          "assessment": "not-comparable",
+          "explanation": "官网K/M按十进制token惯例展开；同步Messages上限，不是Batch beta300K。 原厂API证据不可直接证明本订阅access有效合同。"
+        },
+        {
+          "field": "inputPrice",
+          "currentValue": null,
+          "supportedValue": 10.0,
+          "sourceId": "anthropic-d82e15156c4c",
+          "assessment": "not-comparable",
+          "explanation": "原厂Claude API标准USD / MTok；5m写入、1h写入与cache-read分开。 原厂API证据不可直接证明本订阅access有效合同。"
+        },
+        {
+          "field": "outputPrice",
+          "currentValue": null,
+          "supportedValue": 50.0,
+          "sourceId": "anthropic-d82e15156c4c",
+          "assessment": "not-comparable",
+          "explanation": "原厂Claude API标准USD / MTok；5m写入、1h写入与cache-read分开。 原厂API证据不可直接证明本订阅access有效合同。"
+        },
+        {
+          "field": "extra.adaptiveThinking",
+          "currentValue": true,
+          "supportedValue": true,
+          "sourceId": "anthropic-a37fbcdd8953",
+          "assessment": "not-comparable",
+          "explanation": "该精确型号技术表列Adaptive；需要Messages协议，不泛化OpenAI网关。 原厂API证据不可直接证明本订阅access有效合同。"
+        },
+        {
+          "field": "extra.thinkingOnly",
+          "currentValue": true,
+          "supportedValue": true,
+          "sourceId": "anthropic-a37fbcdd8953",
+          "assessment": "not-comparable",
+          "explanation": "该精确型号始终开启；不得用access override关闭。 原厂API证据不可直接证明本订阅access有效合同。"
+        },
+        {
+          "field": "supportsReasoning",
+          "currentValue": null,
+          "supportedValue": true,
+          "sourceId": "anthropic-a37fbcdd8953",
+          "assessment": "not-comparable",
+          "explanation": "型号技术表列Thinking能力。 原厂API证据不可直接证明本订阅access有效合同。"
+        },
+        {
+          "field": "extra.reasoning.defaultEffort",
+          "currentValue": "high",
+          "supportedValue": "high",
+          "sourceId": "anthropic-a37fbcdd8953",
+          "assessment": "not-comparable",
+          "explanation": "Claude API默认；Claude Code订阅显式设置另核。 原厂API证据不可直接证明本订阅access有效合同。"
+        },
+        {
+          "field": "extra.cachePricing.write5m",
+          "currentValue": null,
+          "supportedValue": 12.5,
+          "sourceId": "anthropic-d82e15156c4c",
+          "assessment": "not-comparable",
+          "explanation": "原厂Claude API标准USD / MTok；5m写入、1h写入与cache-read分开。 原厂API证据不可直接证明本订阅access有效合同。"
+        },
+        {
+          "field": "extra.cachePricing.write1h",
+          "currentValue": null,
+          "supportedValue": 20.0,
+          "sourceId": "anthropic-d82e15156c4c",
+          "assessment": "not-comparable",
+          "explanation": "原厂Claude API标准USD / MTok；5m写入、1h写入与cache-read分开。 原厂API证据不可直接证明本订阅access有效合同。"
+        },
+        {
+          "field": "extra.cachePricing.read",
+          "currentValue": null,
+          "supportedValue": 0.25,
+          "sourceId": "anthropic-d82e15156c4c",
+          "assessment": "not-comparable",
+          "explanation": "原厂Claude API标准USD / MTok；5m写入、1h写入与cache-read分开。 原厂API证据不可直接证明本订阅access有效合同。"
+        },
+        {
+          "field": "extra.reasoning.supportedEfforts",
+          "currentValue": [
+            "low",
+            "medium",
+            "high",
+            "xhigh",
+            "max"
+          ],
+          "supportedValue": [
+            "low",
+            "medium",
+            "high",
+            "xhigh",
+            "max"
+          ],
+          "sourceId": "anthropic-528c440a2ed8",
+          "assessment": "not-comparable",
+          "explanation": "官网effort单型号段落明确all five effort levels；只适用原厂Claude API。 原厂API证据不可直接证明本订阅access有效合同。"
+        }
+      ],
+      "remainingFields": [
+        "contextWindow",
+        "extra.adaptiveThinking",
+        "extra.reasoning.defaultEffort",
+        "extra.reasoning.supportedEfforts",
+        "extra.thinkingOnly",
+        "maxOutputTokens"
+      ],
+      "nextAction": "逐字段审查上表候选；只有同一接入合同且语义/单位一致的证据才用于后续canonical更新。 剩余字段需精确型号页/官方API schema或已授权账号目录核查，不推导默认值。",
+      "notes": [
+        "订阅/套餐实际允许型号、窗口、effort、工具与账号限额需独立官方接入合同；本表API参数只作不可比对照，不提升订阅字段状态。"
+      ]
+    },
+    {
+      "recordKey": "compute/providers/anthropic.json#claude-fable-5-1",
+      "modelId": "claude-fable-5-1",
+      "config": "compute/providers/anthropic.json",
+      "sourceDoc": "docs/model-sources/providers/anthropic/models/claude-fable-5-1.md",
+      "outcome": "official-fields-found",
+      "sourceIds": [
+        "anthropic-a37fbcdd8953",
+        "anthropic-d82e15156c4c",
+        "anthropic-528c440a2ed8",
+        "anthropic-dc594301e778"
+      ],
+      "fieldEvidence": [
+        {
+          "field": "modelName",
+          "currentValue": "claude-fable-5-1",
+          "supportedValue": "claude-fable-5-1",
+          "sourceId": "anthropic-a37fbcdd8953",
+          "assessment": "matches",
+          "explanation": "精确API ID/文档明确Claude API alias。"
+        },
+        {
+          "field": "contextWindow",
+          "currentValue": 1000000,
+          "supportedValue": 1000000,
+          "sourceId": "anthropic-a37fbcdd8953",
+          "assessment": "matches",
+          "explanation": "官网K/M按十进制token惯例展开；同步Messages上限，不是Batch beta300K。"
+        },
+        {
+          "field": "maxOutputTokens",
+          "currentValue": 128000,
+          "supportedValue": 128000,
+          "sourceId": "anthropic-a37fbcdd8953",
+          "assessment": "matches",
+          "explanation": "官网K/M按十进制token惯例展开；同步Messages上限，不是Batch beta300K。"
+        },
+        {
+          "field": "inputPrice",
+          "currentValue": 10,
+          "supportedValue": 10.0,
+          "sourceId": "anthropic-d82e15156c4c",
+          "assessment": "matches",
+          "explanation": "原厂Claude API标准USD / MTok；5m写入、1h写入与cache-read分开。"
+        },
+        {
+          "field": "outputPrice",
+          "currentValue": 50,
+          "supportedValue": 50.0,
+          "sourceId": "anthropic-d82e15156c4c",
+          "assessment": "matches",
+          "explanation": "原厂Claude API标准USD / MTok；5m写入、1h写入与cache-read分开。"
+        },
+        {
+          "field": "extra.adaptiveThinking",
+          "currentValue": true,
+          "supportedValue": true,
+          "sourceId": "anthropic-a37fbcdd8953",
+          "assessment": "matches",
+          "explanation": "该精确型号技术表列Adaptive；需要Messages协议，不泛化OpenAI网关。"
+        },
+        {
+          "field": "extra.thinkingOnly",
+          "currentValue": true,
+          "supportedValue": true,
+          "sourceId": "anthropic-a37fbcdd8953",
+          "assessment": "matches",
+          "explanation": "该精确型号始终开启；不得用access override关闭。"
+        },
+        {
+          "field": "supportsReasoning",
+          "currentValue": null,
+          "supportedValue": true,
+          "sourceId": "anthropic-a37fbcdd8953",
+          "assessment": "differs",
+          "explanation": "型号技术表列Thinking能力。"
+        },
+        {
+          "field": "extra.reasoning.defaultEffort",
+          "currentValue": "high",
+          "supportedValue": "high",
+          "sourceId": "anthropic-a37fbcdd8953",
+          "assessment": "matches",
+          "explanation": "Claude API默认；Claude Code订阅显式设置另核。"
+        },
+        {
+          "field": "extra.cachePricing.write5m",
+          "currentValue": 12.5,
+          "supportedValue": 12.5,
+          "sourceId": "anthropic-d82e15156c4c",
+          "assessment": "matches",
+          "explanation": "原厂Claude API标准USD / MTok；5m写入、1h写入与cache-read分开。"
+        },
+        {
+          "field": "extra.cachePricing.write1h",
+          "currentValue": 20,
+          "supportedValue": 20.0,
+          "sourceId": "anthropic-d82e15156c4c",
+          "assessment": "matches",
+          "explanation": "原厂Claude API标准USD / MTok；5m写入、1h写入与cache-read分开。"
+        },
+        {
+          "field": "extra.cachePricing.read",
+          "currentValue": 0.25,
+          "supportedValue": 0.25,
+          "sourceId": "anthropic-d82e15156c4c",
+          "assessment": "matches",
+          "explanation": "原厂Claude API标准USD / MTok；5m写入、1h写入与cache-read分开。"
+        },
+        {
+          "field": "extra.reasoning.supportedEfforts",
+          "currentValue": [
+            "low",
+            "medium",
+            "high",
+            "xhigh",
+            "max"
+          ],
+          "supportedValue": [
+            "low",
+            "medium",
+            "high",
+            "xhigh",
+            "max"
+          ],
+          "sourceId": "anthropic-528c440a2ed8",
+          "assessment": "matches",
+          "explanation": "官网effort单型号段落明确all five effort levels；只适用原厂Claude API。"
+        }
+      ],
+      "remainingFields": [
+        "extra.forcedToolChoiceUnsupported",
+        "extra.samplingParametersDeprecated",
+        "extra.serverSideWebSearch.searchRequestPriceUsd"
+      ],
+      "nextAction": "逐字段审查上表候选；只有同一接入合同且语义/单位一致的证据才用于后续canonical更新。 剩余字段需精确型号页/官方API schema或已授权账号目录核查，不推导默认值。",
+      "notes": []
+    },
+    {
+      "recordKey": "compute/model-specs/anthropic.json#claude-fable-5-1",
+      "modelId": "claude-fable-5-1",
+      "config": "compute/model-specs/anthropic.json",
+      "sourceDoc": "docs/model-sources/providers/anthropic/models/claude-fable-5-1.md",
+      "outcome": "official-fields-found",
+      "sourceIds": [
+        "anthropic-a37fbcdd8953",
+        "anthropic-d82e15156c4c",
+        "anthropic-528c440a2ed8",
+        "anthropic-dc594301e778"
+      ],
+      "fieldEvidence": [
+        {
+          "field": "id",
+          "currentValue": "claude-fable-5-1",
+          "supportedValue": "claude-fable-5-1",
+          "sourceId": "anthropic-a37fbcdd8953",
+          "assessment": "matches",
+          "explanation": "精确API ID/文档明确Claude API alias。"
+        },
+        {
+          "field": "spec.contextWindow",
+          "currentValue": 1000000,
+          "supportedValue": 1000000,
+          "sourceId": "anthropic-a37fbcdd8953",
+          "assessment": "matches",
+          "explanation": "官网K/M按十进制token惯例展开；同步Messages上限，不是Batch beta300K。"
+        },
+        {
+          "field": "spec.maxOutputTokens",
+          "currentValue": 128000,
+          "supportedValue": 128000,
+          "sourceId": "anthropic-a37fbcdd8953",
+          "assessment": "matches",
+          "explanation": "官网K/M按十进制token惯例展开；同步Messages上限，不是Batch beta300K。"
+        },
+        {
+          "field": "accessReference.inputPrice",
+          "currentValue": null,
+          "supportedValue": 10.0,
+          "sourceId": "anthropic-d82e15156c4c",
+          "assessment": "not-comparable",
+          "explanation": "原厂Claude API标准USD / MTok；5m写入、1h写入与cache-read分开。 仅原厂接入计价参考，共享ModelSpec禁止写入价格。"
+        },
+        {
+          "field": "accessReference.outputPrice",
+          "currentValue": null,
+          "supportedValue": 50.0,
+          "sourceId": "anthropic-d82e15156c4c",
+          "assessment": "not-comparable",
+          "explanation": "原厂Claude API标准USD / MTok；5m写入、1h写入与cache-read分开。 仅原厂接入计价参考，共享ModelSpec禁止写入价格。"
+        },
+        {
+          "field": "spec.extra.adaptiveThinking",
+          "currentValue": true,
+          "supportedValue": true,
+          "sourceId": "anthropic-a37fbcdd8953",
+          "assessment": "matches",
+          "explanation": "该精确型号技术表列Adaptive；需要Messages协议，不泛化OpenAI网关。"
+        },
+        {
+          "field": "spec.extra.thinkingOnly",
+          "currentValue": true,
+          "supportedValue": true,
+          "sourceId": "anthropic-a37fbcdd8953",
+          "assessment": "matches",
+          "explanation": "该精确型号始终开启；不得用access override关闭。"
+        },
+        {
+          "field": "spec.supportsReasoning",
+          "currentValue": true,
+          "supportedValue": true,
+          "sourceId": "anthropic-a37fbcdd8953",
+          "assessment": "matches",
+          "explanation": "型号技术表列Thinking能力。"
+        },
+        {
+          "field": "spec.extra.reasoning.defaultEffort",
+          "currentValue": null,
+          "supportedValue": "high",
+          "sourceId": "anthropic-a37fbcdd8953",
+          "assessment": "differs",
+          "explanation": "Claude API默认；Claude Code订阅显式设置另核。"
+        },
+        {
+          "field": "accessReference.extra.cachePricing.write5m",
+          "currentValue": null,
+          "supportedValue": 12.5,
+          "sourceId": "anthropic-d82e15156c4c",
+          "assessment": "not-comparable",
+          "explanation": "原厂Claude API标准USD / MTok；5m写入、1h写入与cache-read分开。 仅原厂接入计价参考，共享ModelSpec禁止写入价格。"
+        },
+        {
+          "field": "accessReference.extra.cachePricing.write1h",
+          "currentValue": null,
+          "supportedValue": 20.0,
+          "sourceId": "anthropic-d82e15156c4c",
+          "assessment": "not-comparable",
+          "explanation": "原厂Claude API标准USD / MTok；5m写入、1h写入与cache-read分开。 仅原厂接入计价参考，共享ModelSpec禁止写入价格。"
+        },
+        {
+          "field": "accessReference.extra.cachePricing.read",
+          "currentValue": null,
+          "supportedValue": 0.25,
+          "sourceId": "anthropic-d82e15156c4c",
+          "assessment": "not-comparable",
+          "explanation": "原厂Claude API标准USD / MTok；5m写入、1h写入与cache-read分开。 仅原厂接入计价参考，共享ModelSpec禁止写入价格。"
+        },
+        {
+          "field": "spec.extra.reasoning.supportedEfforts",
+          "currentValue": null,
+          "supportedValue": [
+            "low",
+            "medium",
+            "high",
+            "xhigh",
+            "max"
+          ],
+          "sourceId": "anthropic-528c440a2ed8",
+          "assessment": "differs",
+          "explanation": "官网effort单型号段落明确all five effort levels；只适用原厂Claude API。"
+        }
+      ],
+      "remainingFields": [
+        "spec.extra.forcedToolChoiceUnsupported",
+        "spec.extra.samplingParametersDeprecated"
+      ],
+      "nextAction": "逐字段审查上表候选；只有同一接入合同且语义/单位一致的证据才用于后续canonical更新。 剩余字段需精确型号页/官方API schema或已授权账号目录核查，不推导默认值。",
+      "notes": []
+    },
+    {
+      "recordKey": "compute/model-specs/anthropic.json#claude-opus-4-7",
+      "modelId": "claude-opus-4-7",
+      "config": "compute/model-specs/anthropic.json",
+      "sourceDoc": "docs/model-sources/providers/anthropic/models/claude-opus-4-7.md",
+      "outcome": "official-fields-found",
+      "sourceIds": [
+        "anthropic-e17e9a5c103a",
+        "anthropic-d82e15156c4c",
+        "anthropic-dc594301e778"
+      ],
+      "fieldEvidence": [
+        {
+          "field": "id",
+          "currentValue": "claude-opus-4-7",
+          "supportedValue": "claude-opus-4-7",
+          "sourceId": "anthropic-e17e9a5c103a",
+          "assessment": "matches",
+          "explanation": "精确API ID/文档明确Claude API alias。"
+        },
+        {
+          "field": "spec.contextWindow",
+          "currentValue": 1000000,
+          "supportedValue": 1000000,
+          "sourceId": "anthropic-e17e9a5c103a",
+          "assessment": "matches",
+          "explanation": "官网K/M按十进制token惯例展开；同步Messages上限，不是Batch beta300K。"
+        },
+        {
+          "field": "spec.maxOutputTokens",
+          "currentValue": 128000,
+          "supportedValue": 128000,
+          "sourceId": "anthropic-e17e9a5c103a",
+          "assessment": "matches",
+          "explanation": "官网K/M按十进制token惯例展开；同步Messages上限，不是Batch beta300K。"
+        },
+        {
+          "field": "accessReference.inputPrice",
+          "currentValue": null,
+          "supportedValue": 5.0,
+          "sourceId": "anthropic-d82e15156c4c",
+          "assessment": "not-comparable",
+          "explanation": "原厂Claude API标准USD / MTok；5m写入、1h写入与cache-read分开。 仅原厂接入计价参考，共享ModelSpec禁止写入价格。"
+        },
+        {
+          "field": "accessReference.outputPrice",
+          "currentValue": null,
+          "supportedValue": 25.0,
+          "sourceId": "anthropic-d82e15156c4c",
+          "assessment": "not-comparable",
+          "explanation": "原厂Claude API标准USD / MTok；5m写入、1h写入与cache-read分开。 仅原厂接入计价参考，共享ModelSpec禁止写入价格。"
+        },
+        {
+          "field": "spec.extra.adaptiveThinking",
+          "currentValue": true,
+          "supportedValue": true,
+          "sourceId": "anthropic-e17e9a5c103a",
+          "assessment": "matches",
+          "explanation": "该精确型号技术表列Adaptive；需要Messages协议，不泛化OpenAI网关。"
+        },
+        {
+          "field": "spec.supportsReasoning",
+          "currentValue": true,
+          "supportedValue": true,
+          "sourceId": "anthropic-e17e9a5c103a",
+          "assessment": "matches",
+          "explanation": "型号技术表列Thinking能力。"
+        },
+        {
+          "field": "spec.extra.reasoning.defaultEffort",
+          "currentValue": null,
+          "supportedValue": "high",
+          "sourceId": "anthropic-e17e9a5c103a",
+          "assessment": "differs",
+          "explanation": "Claude API默认；Claude Code订阅显式设置另核。"
+        },
+        {
+          "field": "accessReference.extra.cachePricing.write5m",
+          "currentValue": null,
+          "supportedValue": 6.25,
+          "sourceId": "anthropic-d82e15156c4c",
+          "assessment": "not-comparable",
+          "explanation": "原厂Claude API标准USD / MTok；5m写入、1h写入与cache-read分开。 仅原厂接入计价参考，共享ModelSpec禁止写入价格。"
+        },
+        {
+          "field": "accessReference.extra.cachePricing.write1h",
+          "currentValue": null,
+          "supportedValue": 10.0,
+          "sourceId": "anthropic-d82e15156c4c",
+          "assessment": "not-comparable",
+          "explanation": "原厂Claude API标准USD / MTok；5m写入、1h写入与cache-read分开。 仅原厂接入计价参考，共享ModelSpec禁止写入价格。"
+        },
+        {
+          "field": "accessReference.extra.cachePricing.read",
+          "currentValue": null,
+          "supportedValue": 0.5,
+          "sourceId": "anthropic-d82e15156c4c",
+          "assessment": "not-comparable",
+          "explanation": "原厂Claude API标准USD / MTok；5m写入、1h写入与cache-read分开。 仅原厂接入计价参考，共享ModelSpec禁止写入价格。"
+        }
+      ],
+      "remainingFields": [
+        "spec.defaultTemperature",
+        "spec.extra.samplingParametersDeprecated"
+      ],
+      "nextAction": "逐字段审查上表候选；只有同一接入合同且语义/单位一致的证据才用于后续canonical更新。 剩余字段需精确型号页/官方API schema或已授权账号目录核查，不推导默认值。",
+      "notes": []
+    },
+    {
+      "recordKey": "compute/model-specs/anthropic.json#claude-opus-4-8",
+      "modelId": "claude-opus-4-8",
+      "config": "compute/model-specs/anthropic.json",
+      "sourceDoc": "docs/model-sources/providers/anthropic/models/claude-opus-4-8.md",
+      "outcome": "official-fields-found",
+      "sourceIds": [
+        "anthropic-aa8ecc930e64",
+        "anthropic-d82e15156c4c",
+        "anthropic-dc594301e778"
+      ],
+      "fieldEvidence": [
+        {
+          "field": "id",
+          "currentValue": "claude-opus-4-8",
+          "supportedValue": "claude-opus-4-8",
+          "sourceId": "anthropic-aa8ecc930e64",
+          "assessment": "matches",
+          "explanation": "精确API ID/文档明确Claude API alias。"
+        },
+        {
+          "field": "spec.contextWindow",
+          "currentValue": 1000000,
+          "supportedValue": 1000000,
+          "sourceId": "anthropic-aa8ecc930e64",
+          "assessment": "matches",
+          "explanation": "官网K/M按十进制token惯例展开；同步Messages上限，不是Batch beta300K。"
+        },
+        {
+          "field": "spec.maxOutputTokens",
+          "currentValue": 128000,
+          "supportedValue": 128000,
+          "sourceId": "anthropic-aa8ecc930e64",
+          "assessment": "matches",
+          "explanation": "官网K/M按十进制token惯例展开；同步Messages上限，不是Batch beta300K。"
+        },
+        {
+          "field": "accessReference.inputPrice",
+          "currentValue": null,
+          "supportedValue": 5.0,
+          "sourceId": "anthropic-d82e15156c4c",
+          "assessment": "not-comparable",
+          "explanation": "原厂Claude API标准USD / MTok；5m写入、1h写入与cache-read分开。 仅原厂接入计价参考，共享ModelSpec禁止写入价格。"
+        },
+        {
+          "field": "accessReference.outputPrice",
+          "currentValue": null,
+          "supportedValue": 25.0,
+          "sourceId": "anthropic-d82e15156c4c",
+          "assessment": "not-comparable",
+          "explanation": "原厂Claude API标准USD / MTok；5m写入、1h写入与cache-read分开。 仅原厂接入计价参考，共享ModelSpec禁止写入价格。"
+        },
+        {
+          "field": "spec.extra.adaptiveThinking",
+          "currentValue": true,
+          "supportedValue": true,
+          "sourceId": "anthropic-aa8ecc930e64",
+          "assessment": "matches",
+          "explanation": "该精确型号技术表列Adaptive；需要Messages协议，不泛化OpenAI网关。"
+        },
+        {
+          "field": "spec.supportsReasoning",
+          "currentValue": true,
+          "supportedValue": true,
+          "sourceId": "anthropic-aa8ecc930e64",
+          "assessment": "matches",
+          "explanation": "型号技术表列Thinking能力。"
+        },
+        {
+          "field": "spec.extra.reasoning.defaultEffort",
+          "currentValue": null,
+          "supportedValue": "high",
+          "sourceId": "anthropic-aa8ecc930e64",
+          "assessment": "differs",
+          "explanation": "Claude API默认；Claude Code订阅显式设置另核。"
+        },
+        {
+          "field": "accessReference.extra.cachePricing.write5m",
+          "currentValue": null,
+          "supportedValue": 6.25,
+          "sourceId": "anthropic-d82e15156c4c",
+          "assessment": "not-comparable",
+          "explanation": "原厂Claude API标准USD / MTok；5m写入、1h写入与cache-read分开。 仅原厂接入计价参考，共享ModelSpec禁止写入价格。"
+        },
+        {
+          "field": "accessReference.extra.cachePricing.write1h",
+          "currentValue": null,
+          "supportedValue": 10.0,
+          "sourceId": "anthropic-d82e15156c4c",
+          "assessment": "not-comparable",
+          "explanation": "原厂Claude API标准USD / MTok；5m写入、1h写入与cache-read分开。 仅原厂接入计价参考，共享ModelSpec禁止写入价格。"
+        },
+        {
+          "field": "accessReference.extra.cachePricing.read",
+          "currentValue": null,
+          "supportedValue": 0.5,
+          "sourceId": "anthropic-d82e15156c4c",
+          "assessment": "not-comparable",
+          "explanation": "原厂Claude API标准USD / MTok；5m写入、1h写入与cache-read分开。 仅原厂接入计价参考，共享ModelSpec禁止写入价格。"
+        }
+      ],
+      "remainingFields": [
+        "spec.extra.samplingParametersDeprecated"
+      ],
+      "nextAction": "逐字段审查上表候选；只有同一接入合同且语义/单位一致的证据才用于后续canonical更新。 剩余字段需精确型号页/官方API schema或已授权账号目录核查，不推导默认值。",
+      "notes": []
+    },
+    {
+      "recordKey": "compute/providers/anthropic-claude.json#claude-opus-5-5",
+      "modelId": "claude-opus-5-5",
+      "config": "compute/providers/anthropic-claude.json",
+      "sourceDoc": "docs/model-sources/providers/anthropic/models/claude-opus-5-5.md",
+      "outcome": "official-identity-only",
+      "sourceIds": [
+        "anthropic-058915f18c62",
+        "anthropic-d82e15156c4c",
+        "anthropic-cc7f2719c27a",
+        "anthropic-528c440a2ed8",
+        "anthropic-dc594301e778"
+      ],
+      "fieldEvidence": [
+        {
+          "field": "modelName",
+          "currentValue": "claude-opus-5-5",
+          "supportedValue": "claude-opus-5-5",
+          "sourceId": "anthropic-058915f18c62",
+          "assessment": "matches",
+          "explanation": "精确API ID/文档明确Claude API alias。"
+        },
+        {
+          "field": "contextWindow",
+          "currentValue": 1000000,
+          "supportedValue": 1000000,
+          "sourceId": "anthropic-058915f18c62",
+          "assessment": "not-comparable",
+          "explanation": "官网K/M按十进制token惯例展开；同步Messages上限，不是Batch beta300K。 原厂API证据不可直接证明本订阅access有效合同。"
+        },
+        {
+          "field": "maxOutputTokens",
+          "currentValue": 128000,
+          "supportedValue": 128000,
+          "sourceId": "anthropic-058915f18c62",
+          "assessment": "not-comparable",
+          "explanation": "官网K/M按十进制token惯例展开；同步Messages上限，不是Batch beta300K。 原厂API证据不可直接证明本订阅access有效合同。"
+        },
+        {
+          "field": "inputPrice",
+          "currentValue": null,
+          "supportedValue": 4.0,
+          "sourceId": "anthropic-d82e15156c4c",
+          "assessment": "not-comparable",
+          "explanation": "原厂Claude API标准USD / MTok；5m写入、1h写入与cache-read分开。 原厂API证据不可直接证明本订阅access有效合同。"
+        },
+        {
+          "field": "outputPrice",
+          "currentValue": null,
+          "supportedValue": 20.0,
+          "sourceId": "anthropic-d82e15156c4c",
+          "assessment": "not-comparable",
+          "explanation": "原厂Claude API标准USD / MTok；5m写入、1h写入与cache-read分开。 原厂API证据不可直接证明本订阅access有效合同。"
+        },
+        {
+          "field": "extra.adaptiveThinking",
+          "currentValue": true,
+          "supportedValue": true,
+          "sourceId": "anthropic-058915f18c62",
+          "assessment": "not-comparable",
+          "explanation": "该精确型号技术表列Adaptive；需要Messages协议，不泛化OpenAI网关。 原厂API证据不可直接证明本订阅access有效合同。"
+        },
+        {
+          "field": "extra.thinkingOnly",
+          "currentValue": true,
+          "supportedValue": true,
+          "sourceId": "anthropic-058915f18c62",
+          "assessment": "not-comparable",
+          "explanation": "该精确型号始终开启；不得用access override关闭。 原厂API证据不可直接证明本订阅access有效合同。"
+        },
+        {
+          "field": "supportsReasoning",
+          "currentValue": null,
+          "supportedValue": true,
+          "sourceId": "anthropic-058915f18c62",
+          "assessment": "not-comparable",
+          "explanation": "型号技术表列Thinking能力。 原厂API证据不可直接证明本订阅access有效合同。"
+        },
+        {
+          "field": "extra.reasoning.defaultEffort",
+          "currentValue": "medium",
+          "supportedValue": "medium",
+          "sourceId": "anthropic-058915f18c62",
+          "assessment": "not-comparable",
+          "explanation": "Claude API默认；Claude Code订阅显式设置另核。 原厂API证据不可直接证明本订阅access有效合同。"
+        },
+        {
+          "field": "extra.cachePricing.write5m",
+          "currentValue": null,
+          "supportedValue": 5.0,
+          "sourceId": "anthropic-d82e15156c4c",
+          "assessment": "not-comparable",
+          "explanation": "原厂Claude API标准USD / MTok；5m写入、1h写入与cache-read分开。 原厂API证据不可直接证明本订阅access有效合同。"
+        },
+        {
+          "field": "extra.cachePricing.write1h",
+          "currentValue": null,
+          "supportedValue": 8.0,
+          "sourceId": "anthropic-d82e15156c4c",
+          "assessment": "not-comparable",
+          "explanation": "原厂Claude API标准USD / MTok；5m写入、1h写入与cache-read分开。 原厂API证据不可直接证明本订阅access有效合同。"
+        },
+        {
+          "field": "extra.cachePricing.read",
+          "currentValue": null,
+          "supportedValue": 0.2,
+          "sourceId": "anthropic-d82e15156c4c",
+          "assessment": "not-comparable",
+          "explanation": "原厂Claude API标准USD / MTok；5m写入、1h写入与cache-read分开。 原厂API证据不可直接证明本订阅access有效合同。"
+        },
+        {
+          "field": "extra.forcedToolChoiceUnsupported",
+          "currentValue": null,
+          "supportedValue": true,
+          "sourceId": "anthropic-cc7f2719c27a",
+          "assessment": "not-comparable",
+          "explanation": "forced tool_choice any/tool拒绝；auto/none仍支持。 原厂API证据不可直接证明本订阅access有效合同。"
+        },
+        {
+          "field": "extra.reasoning.supportedEfforts",
+          "currentValue": [
+            "low",
+            "medium",
+            "high",
+            "xhigh",
+            "max"
+          ],
+          "supportedValue": [
+            "low",
+            "medium",
+            "high",
+            "xhigh",
+            "max"
+          ],
+          "sourceId": "anthropic-528c440a2ed8",
+          "assessment": "not-comparable",
+          "explanation": "官网effort单型号段落明确all five effort levels；只适用原厂Claude API。 原厂API证据不可直接证明本订阅access有效合同。"
+        }
+      ],
+      "remainingFields": [
+        "extra.reasoning.supportedEfforts"
+      ],
+      "nextAction": "逐字段审查上表候选；只有同一接入合同且语义/单位一致的证据才用于后续canonical更新。 剩余字段需精确型号页/官方API schema或已授权账号目录核查，不推导默认值。",
+      "notes": [
+        "订阅/套餐实际允许型号、窗口、effort、工具与账号限额需独立官方接入合同；本表API参数只作不可比对照，不提升订阅字段状态。"
+      ]
+    },
+    {
+      "recordKey": "compute/providers/anthropic.json#claude-opus-5-5",
+      "modelId": "claude-opus-5-5",
+      "config": "compute/providers/anthropic.json",
+      "sourceDoc": "docs/model-sources/providers/anthropic/models/claude-opus-5-5.md",
+      "outcome": "official-fields-found",
+      "sourceIds": [
+        "anthropic-058915f18c62",
+        "anthropic-d82e15156c4c",
+        "anthropic-cc7f2719c27a",
+        "anthropic-528c440a2ed8",
+        "anthropic-dc594301e778"
+      ],
+      "fieldEvidence": [
+        {
+          "field": "modelName",
+          "currentValue": "claude-opus-5-5",
+          "supportedValue": "claude-opus-5-5",
+          "sourceId": "anthropic-058915f18c62",
+          "assessment": "matches",
+          "explanation": "精确API ID/文档明确Claude API alias。"
+        },
+        {
+          "field": "contextWindow",
+          "currentValue": 1000000,
+          "supportedValue": 1000000,
+          "sourceId": "anthropic-058915f18c62",
+          "assessment": "matches",
+          "explanation": "官网K/M按十进制token惯例展开；同步Messages上限，不是Batch beta300K。"
+        },
+        {
+          "field": "maxOutputTokens",
+          "currentValue": 128000,
+          "supportedValue": 128000,
+          "sourceId": "anthropic-058915f18c62",
+          "assessment": "matches",
+          "explanation": "官网K/M按十进制token惯例展开；同步Messages上限，不是Batch beta300K。"
+        },
+        {
+          "field": "inputPrice",
+          "currentValue": 4,
+          "supportedValue": 4.0,
+          "sourceId": "anthropic-d82e15156c4c",
+          "assessment": "matches",
+          "explanation": "原厂Claude API标准USD / MTok；5m写入、1h写入与cache-read分开。"
+        },
+        {
+          "field": "outputPrice",
+          "currentValue": 20,
+          "supportedValue": 20.0,
+          "sourceId": "anthropic-d82e15156c4c",
+          "assessment": "matches",
+          "explanation": "原厂Claude API标准USD / MTok；5m写入、1h写入与cache-read分开。"
+        },
+        {
+          "field": "extra.adaptiveThinking",
+          "currentValue": true,
+          "supportedValue": true,
+          "sourceId": "anthropic-058915f18c62",
+          "assessment": "matches",
+          "explanation": "该精确型号技术表列Adaptive；需要Messages协议，不泛化OpenAI网关。"
+        },
+        {
+          "field": "extra.thinkingOnly",
+          "currentValue": true,
+          "supportedValue": true,
+          "sourceId": "anthropic-058915f18c62",
+          "assessment": "matches",
+          "explanation": "该精确型号始终开启；不得用access override关闭。"
+        },
+        {
+          "field": "supportsReasoning",
+          "currentValue": null,
+          "supportedValue": true,
+          "sourceId": "anthropic-058915f18c62",
+          "assessment": "differs",
+          "explanation": "型号技术表列Thinking能力。"
+        },
+        {
+          "field": "extra.reasoning.defaultEffort",
+          "currentValue": "medium",
+          "supportedValue": "medium",
+          "sourceId": "anthropic-058915f18c62",
+          "assessment": "matches",
+          "explanation": "Claude API默认；Claude Code订阅显式设置另核。"
+        },
+        {
+          "field": "extra.cachePricing.write5m",
+          "currentValue": 5,
+          "supportedValue": 5.0,
+          "sourceId": "anthropic-d82e15156c4c",
+          "assessment": "matches",
+          "explanation": "原厂Claude API标准USD / MTok；5m写入、1h写入与cache-read分开。"
+        },
+        {
+          "field": "extra.cachePricing.write1h",
+          "currentValue": 8,
+          "supportedValue": 8.0,
+          "sourceId": "anthropic-d82e15156c4c",
+          "assessment": "matches",
+          "explanation": "原厂Claude API标准USD / MTok；5m写入、1h写入与cache-read分开。"
+        },
+        {
+          "field": "extra.cachePricing.read",
+          "currentValue": 0.2,
+          "supportedValue": 0.2,
+          "sourceId": "anthropic-d82e15156c4c",
+          "assessment": "matches",
+          "explanation": "原厂Claude API标准USD / MTok；5m写入、1h写入与cache-read分开。"
+        },
+        {
+          "field": "extra.forcedToolChoiceUnsupported",
+          "currentValue": true,
+          "supportedValue": true,
+          "sourceId": "anthropic-cc7f2719c27a",
+          "assessment": "matches",
+          "explanation": "forced tool_choice any/tool拒绝；auto/none仍支持。"
+        },
+        {
+          "field": "extra.reasoning.supportedEfforts",
+          "currentValue": [
+            "low",
+            "medium",
+            "high",
+            "xhigh",
+            "max"
+          ],
+          "supportedValue": [
+            "low",
+            "medium",
+            "high",
+            "xhigh",
+            "max"
+          ],
+          "sourceId": "anthropic-528c440a2ed8",
+          "assessment": "matches",
+          "explanation": "官网effort单型号段落明确all five effort levels；只适用原厂Claude API。"
+        }
+      ],
+      "remainingFields": [
+        "extra.samplingParametersDeprecated",
+        "extra.serverSideWebSearch.searchRequestPriceUsd"
+      ],
+      "nextAction": "逐字段审查上表候选；只有同一接入合同且语义/单位一致的证据才用于后续canonical更新。 剩余字段需精确型号页/官方API schema或已授权账号目录核查，不推导默认值。",
+      "notes": []
+    },
+    {
+      "recordKey": "compute/model-specs/anthropic.json#claude-opus-5-5",
+      "modelId": "claude-opus-5-5",
+      "config": "compute/model-specs/anthropic.json",
+      "sourceDoc": "docs/model-sources/providers/anthropic/models/claude-opus-5-5.md",
+      "outcome": "official-fields-found",
+      "sourceIds": [
+        "anthropic-058915f18c62",
+        "anthropic-d82e15156c4c",
+        "anthropic-cc7f2719c27a",
+        "anthropic-528c440a2ed8",
+        "anthropic-dc594301e778"
+      ],
+      "fieldEvidence": [
+        {
+          "field": "id",
+          "currentValue": "claude-opus-5-5",
+          "supportedValue": "claude-opus-5-5",
+          "sourceId": "anthropic-058915f18c62",
+          "assessment": "matches",
+          "explanation": "精确API ID/文档明确Claude API alias。"
+        },
+        {
+          "field": "spec.contextWindow",
+          "currentValue": 1000000,
+          "supportedValue": 1000000,
+          "sourceId": "anthropic-058915f18c62",
+          "assessment": "matches",
+          "explanation": "官网K/M按十进制token惯例展开；同步Messages上限，不是Batch beta300K。"
+        },
+        {
+          "field": "spec.maxOutputTokens",
+          "currentValue": 128000,
+          "supportedValue": 128000,
+          "sourceId": "anthropic-058915f18c62",
+          "assessment": "matches",
+          "explanation": "官网K/M按十进制token惯例展开；同步Messages上限，不是Batch beta300K。"
+        },
+        {
+          "field": "accessReference.inputPrice",
+          "currentValue": null,
+          "supportedValue": 4.0,
+          "sourceId": "anthropic-d82e15156c4c",
+          "assessment": "not-comparable",
+          "explanation": "原厂Claude API标准USD / MTok；5m写入、1h写入与cache-read分开。 仅原厂接入计价参考，共享ModelSpec禁止写入价格。"
+        },
+        {
+          "field": "accessReference.outputPrice",
+          "currentValue": null,
+          "supportedValue": 20.0,
+          "sourceId": "anthropic-d82e15156c4c",
+          "assessment": "not-comparable",
+          "explanation": "原厂Claude API标准USD / MTok；5m写入、1h写入与cache-read分开。 仅原厂接入计价参考，共享ModelSpec禁止写入价格。"
+        },
+        {
+          "field": "spec.extra.adaptiveThinking",
+          "currentValue": true,
+          "supportedValue": true,
+          "sourceId": "anthropic-058915f18c62",
+          "assessment": "matches",
+          "explanation": "该精确型号技术表列Adaptive；需要Messages协议，不泛化OpenAI网关。"
+        },
+        {
+          "field": "spec.extra.thinkingOnly",
+          "currentValue": true,
+          "supportedValue": true,
+          "sourceId": "anthropic-058915f18c62",
+          "assessment": "matches",
+          "explanation": "该精确型号始终开启；不得用access override关闭。"
+        },
+        {
+          "field": "spec.supportsReasoning",
+          "currentValue": true,
+          "supportedValue": true,
+          "sourceId": "anthropic-058915f18c62",
+          "assessment": "matches",
+          "explanation": "型号技术表列Thinking能力。"
+        },
+        {
+          "field": "spec.extra.reasoning.defaultEffort",
+          "currentValue": null,
+          "supportedValue": "medium",
+          "sourceId": "anthropic-058915f18c62",
+          "assessment": "differs",
+          "explanation": "Claude API默认；Claude Code订阅显式设置另核。"
+        },
+        {
+          "field": "accessReference.extra.cachePricing.write5m",
+          "currentValue": null,
+          "supportedValue": 5.0,
+          "sourceId": "anthropic-d82e15156c4c",
+          "assessment": "not-comparable",
+          "explanation": "原厂Claude API标准USD / MTok；5m写入、1h写入与cache-read分开。 仅原厂接入计价参考，共享ModelSpec禁止写入价格。"
+        },
+        {
+          "field": "accessReference.extra.cachePricing.write1h",
+          "currentValue": null,
+          "supportedValue": 8.0,
+          "sourceId": "anthropic-d82e15156c4c",
+          "assessment": "not-comparable",
+          "explanation": "原厂Claude API标准USD / MTok；5m写入、1h写入与cache-read分开。 仅原厂接入计价参考，共享ModelSpec禁止写入价格。"
+        },
+        {
+          "field": "accessReference.extra.cachePricing.read",
+          "currentValue": null,
+          "supportedValue": 0.2,
+          "sourceId": "anthropic-d82e15156c4c",
+          "assessment": "not-comparable",
+          "explanation": "原厂Claude API标准USD / MTok；5m写入、1h写入与cache-read分开。 仅原厂接入计价参考，共享ModelSpec禁止写入价格。"
+        },
+        {
+          "field": "spec.extra.forcedToolChoiceUnsupported",
+          "currentValue": true,
+          "supportedValue": true,
+          "sourceId": "anthropic-cc7f2719c27a",
+          "assessment": "matches",
+          "explanation": "forced tool_choice any/tool拒绝；auto/none仍支持。"
+        },
+        {
+          "field": "spec.extra.reasoning.supportedEfforts",
+          "currentValue": null,
+          "supportedValue": [
+            "low",
+            "medium",
+            "high",
+            "xhigh",
+            "max"
+          ],
+          "sourceId": "anthropic-528c440a2ed8",
+          "assessment": "differs",
+          "explanation": "官网effort单型号段落明确all five effort levels；只适用原厂Claude API。"
+        }
+      ],
+      "remainingFields": [
+        "spec.extra.samplingParametersDeprecated"
+      ],
+      "nextAction": "逐字段审查上表候选；只有同一接入合同且语义/单位一致的证据才用于后续canonical更新。 剩余字段需精确型号页/官方API schema或已授权账号目录核查，不推导默认值。",
+      "notes": []
+    },
+    {
+      "recordKey": "compute/providers/anthropic-claude.json#claude-opus-5",
+      "modelId": "claude-opus-5",
+      "config": "compute/providers/anthropic-claude.json",
+      "sourceDoc": "docs/model-sources/providers/anthropic/models/claude-opus-5.md",
+      "outcome": "official-identity-only",
+      "sourceIds": [
+        "anthropic-ad4b90c4ddf5",
+        "anthropic-d82e15156c4c",
+        "anthropic-528c440a2ed8",
+        "anthropic-dc594301e778"
+      ],
+      "fieldEvidence": [
+        {
+          "field": "modelName",
+          "currentValue": "claude-opus-5",
+          "supportedValue": "claude-opus-5",
+          "sourceId": "anthropic-ad4b90c4ddf5",
+          "assessment": "matches",
+          "explanation": "精确API ID/文档明确Claude API alias。"
+        },
+        {
+          "field": "contextWindow",
+          "currentValue": 1000000,
+          "supportedValue": 1000000,
+          "sourceId": "anthropic-ad4b90c4ddf5",
+          "assessment": "not-comparable",
+          "explanation": "官网K/M按十进制token惯例展开；同步Messages上限，不是Batch beta300K。 原厂API证据不可直接证明本订阅access有效合同。"
+        },
+        {
+          "field": "maxOutputTokens",
+          "currentValue": 128000,
+          "supportedValue": 128000,
+          "sourceId": "anthropic-ad4b90c4ddf5",
+          "assessment": "not-comparable",
+          "explanation": "官网K/M按十进制token惯例展开；同步Messages上限，不是Batch beta300K。 原厂API证据不可直接证明本订阅access有效合同。"
+        },
+        {
+          "field": "inputPrice",
+          "currentValue": null,
+          "supportedValue": 5.0,
+          "sourceId": "anthropic-d82e15156c4c",
+          "assessment": "not-comparable",
+          "explanation": "原厂Claude API标准USD / MTok；5m写入、1h写入与cache-read分开。 原厂API证据不可直接证明本订阅access有效合同。"
+        },
+        {
+          "field": "outputPrice",
+          "currentValue": null,
+          "supportedValue": 25.0,
+          "sourceId": "anthropic-d82e15156c4c",
+          "assessment": "not-comparable",
+          "explanation": "原厂Claude API标准USD / MTok；5m写入、1h写入与cache-read分开。 原厂API证据不可直接证明本订阅access有效合同。"
+        },
+        {
+          "field": "extra.adaptiveThinking",
+          "currentValue": true,
+          "supportedValue": true,
+          "sourceId": "anthropic-ad4b90c4ddf5",
+          "assessment": "not-comparable",
+          "explanation": "该精确型号技术表列Adaptive；需要Messages协议，不泛化OpenAI网关。 原厂API证据不可直接证明本订阅access有效合同。"
+        },
+        {
+          "field": "supportsReasoning",
+          "currentValue": null,
+          "supportedValue": true,
+          "sourceId": "anthropic-ad4b90c4ddf5",
+          "assessment": "not-comparable",
+          "explanation": "型号技术表列Thinking能力。 原厂API证据不可直接证明本订阅access有效合同。"
+        },
+        {
+          "field": "extra.reasoning.defaultEffort",
+          "currentValue": "high",
+          "supportedValue": "high",
+          "sourceId": "anthropic-ad4b90c4ddf5",
+          "assessment": "not-comparable",
+          "explanation": "Claude API默认；Claude Code订阅显式设置另核。 原厂API证据不可直接证明本订阅access有效合同。"
+        },
+        {
+          "field": "extra.reasoning.supportedEfforts",
+          "currentValue": [
+            "low",
+            "medium",
+            "high",
+            "xhigh",
+            "max"
+          ],
+          "supportedValue": [
+            "low",
+            "medium",
+            "high",
+            "xhigh",
+            "max"
+          ],
+          "sourceId": "anthropic-528c440a2ed8",
+          "assessment": "not-comparable",
+          "explanation": "官网effort单型号段落明确all five effort levels；只适用原厂Claude API。 原厂API证据不可直接证明本订阅access有效合同。"
+        },
+        {
+          "field": "extra.cachePricing.write5m",
+          "currentValue": null,
+          "supportedValue": 6.25,
+          "sourceId": "anthropic-d82e15156c4c",
+          "assessment": "not-comparable",
+          "explanation": "原厂Claude API标准USD / MTok；5m写入、1h写入与cache-read分开。 原厂API证据不可直接证明本订阅access有效合同。"
+        },
+        {
+          "field": "extra.cachePricing.write1h",
+          "currentValue": null,
+          "supportedValue": 10.0,
+          "sourceId": "anthropic-d82e15156c4c",
+          "assessment": "not-comparable",
+          "explanation": "原厂Claude API标准USD / MTok；5m写入、1h写入与cache-read分开。 原厂API证据不可直接证明本订阅access有效合同。"
+        },
+        {
+          "field": "extra.cachePricing.read",
+          "currentValue": null,
+          "supportedValue": 0.5,
+          "sourceId": "anthropic-d82e15156c4c",
+          "assessment": "not-comparable",
+          "explanation": "原厂Claude API标准USD / MTok；5m写入、1h写入与cache-read分开。 原厂API证据不可直接证明本订阅access有效合同。"
+        }
+      ],
+      "remainingFields": [
+        "contextWindow",
+        "extra.adaptiveThinking",
+        "extra.reasoning.defaultEffort",
+        "extra.reasoning.supportedEfforts",
+        "maxOutputTokens"
+      ],
+      "nextAction": "逐字段审查上表候选；只有同一接入合同且语义/单位一致的证据才用于后续canonical更新。 剩余字段需精确型号页/官方API schema或已授权账号目录核查，不推导默认值。",
+      "notes": [
+        "订阅/套餐实际允许型号、窗口、effort、工具与账号限额需独立官方接入合同；本表API参数只作不可比对照，不提升订阅字段状态。"
+      ]
+    },
+    {
+      "recordKey": "compute/providers/anthropic.json#claude-opus-5",
+      "modelId": "claude-opus-5",
+      "config": "compute/providers/anthropic.json",
+      "sourceDoc": "docs/model-sources/providers/anthropic/models/claude-opus-5.md",
+      "outcome": "official-fields-found",
+      "sourceIds": [
+        "anthropic-ad4b90c4ddf5",
+        "anthropic-d82e15156c4c",
+        "anthropic-528c440a2ed8",
+        "anthropic-dc594301e778"
+      ],
+      "fieldEvidence": [
+        {
+          "field": "modelName",
+          "currentValue": "claude-opus-5",
+          "supportedValue": "claude-opus-5",
+          "sourceId": "anthropic-ad4b90c4ddf5",
+          "assessment": "matches",
+          "explanation": "精确API ID/文档明确Claude API alias。"
+        },
+        {
+          "field": "contextWindow",
+          "currentValue": 1000000,
+          "supportedValue": 1000000,
+          "sourceId": "anthropic-ad4b90c4ddf5",
+          "assessment": "matches",
+          "explanation": "官网K/M按十进制token惯例展开；同步Messages上限，不是Batch beta300K。"
+        },
+        {
+          "field": "maxOutputTokens",
+          "currentValue": 128000,
+          "supportedValue": 128000,
+          "sourceId": "anthropic-ad4b90c4ddf5",
+          "assessment": "matches",
+          "explanation": "官网K/M按十进制token惯例展开；同步Messages上限，不是Batch beta300K。"
+        },
+        {
+          "field": "inputPrice",
+          "currentValue": 5,
+          "supportedValue": 5.0,
+          "sourceId": "anthropic-d82e15156c4c",
+          "assessment": "matches",
+          "explanation": "原厂Claude API标准USD / MTok；5m写入、1h写入与cache-read分开。"
+        },
+        {
+          "field": "outputPrice",
+          "currentValue": 25,
+          "supportedValue": 25.0,
+          "sourceId": "anthropic-d82e15156c4c",
+          "assessment": "matches",
+          "explanation": "原厂Claude API标准USD / MTok；5m写入、1h写入与cache-read分开。"
+        },
+        {
+          "field": "extra.adaptiveThinking",
+          "currentValue": true,
+          "supportedValue": true,
+          "sourceId": "anthropic-ad4b90c4ddf5",
+          "assessment": "matches",
+          "explanation": "该精确型号技术表列Adaptive；需要Messages协议，不泛化OpenAI网关。"
+        },
+        {
+          "field": "supportsReasoning",
+          "currentValue": null,
+          "supportedValue": true,
+          "sourceId": "anthropic-ad4b90c4ddf5",
+          "assessment": "differs",
+          "explanation": "型号技术表列Thinking能力。"
+        },
+        {
+          "field": "extra.reasoning.defaultEffort",
+          "currentValue": "high",
+          "supportedValue": "high",
+          "sourceId": "anthropic-ad4b90c4ddf5",
+          "assessment": "matches",
+          "explanation": "Claude API默认；Claude Code订阅显式设置另核。"
+        },
+        {
+          "field": "extra.reasoning.supportedEfforts",
+          "currentValue": [
+            "low",
+            "medium",
+            "high",
+            "xhigh",
+            "max"
+          ],
+          "supportedValue": [
+            "low",
+            "medium",
+            "high",
+            "xhigh",
+            "max"
+          ],
+          "sourceId": "anthropic-528c440a2ed8",
+          "assessment": "matches",
+          "explanation": "官网effort单型号段落明确all five effort levels；只适用原厂Claude API。"
+        },
+        {
+          "field": "extra.cachePricing.write5m",
+          "currentValue": 6.25,
+          "supportedValue": 6.25,
+          "sourceId": "anthropic-d82e15156c4c",
+          "assessment": "matches",
+          "explanation": "原厂Claude API标准USD / MTok；5m写入、1h写入与cache-read分开。"
+        },
+        {
+          "field": "extra.cachePricing.write1h",
+          "currentValue": 10,
+          "supportedValue": 10.0,
+          "sourceId": "anthropic-d82e15156c4c",
+          "assessment": "matches",
+          "explanation": "原厂Claude API标准USD / MTok；5m写入、1h写入与cache-read分开。"
+        },
+        {
+          "field": "extra.cachePricing.read",
+          "currentValue": 0.5,
+          "supportedValue": 0.5,
+          "sourceId": "anthropic-d82e15156c4c",
+          "assessment": "matches",
+          "explanation": "原厂Claude API标准USD / MTok；5m写入、1h写入与cache-read分开。"
+        }
+      ],
+      "remainingFields": [
+        "extra.samplingParametersDeprecated",
+        "extra.serverSideWebSearch.searchRequestPriceUsd"
+      ],
+      "nextAction": "逐字段审查上表候选；只有同一接入合同且语义/单位一致的证据才用于后续canonical更新。 剩余字段需精确型号页/官方API schema或已授权账号目录核查，不推导默认值。",
+      "notes": []
+    },
+    {
+      "recordKey": "compute/model-specs/anthropic.json#claude-opus-5",
+      "modelId": "claude-opus-5",
+      "config": "compute/model-specs/anthropic.json",
+      "sourceDoc": "docs/model-sources/providers/anthropic/models/claude-opus-5.md",
+      "outcome": "official-fields-found",
+      "sourceIds": [
+        "anthropic-ad4b90c4ddf5",
+        "anthropic-d82e15156c4c",
+        "anthropic-528c440a2ed8",
+        "anthropic-dc594301e778"
+      ],
+      "fieldEvidence": [
+        {
+          "field": "id",
+          "currentValue": "claude-opus-5",
+          "supportedValue": "claude-opus-5",
+          "sourceId": "anthropic-ad4b90c4ddf5",
+          "assessment": "matches",
+          "explanation": "精确API ID/文档明确Claude API alias。"
+        },
+        {
+          "field": "spec.contextWindow",
+          "currentValue": 1000000,
+          "supportedValue": 1000000,
+          "sourceId": "anthropic-ad4b90c4ddf5",
+          "assessment": "matches",
+          "explanation": "官网K/M按十进制token惯例展开；同步Messages上限，不是Batch beta300K。"
+        },
+        {
+          "field": "spec.maxOutputTokens",
+          "currentValue": 128000,
+          "supportedValue": 128000,
+          "sourceId": "anthropic-ad4b90c4ddf5",
+          "assessment": "matches",
+          "explanation": "官网K/M按十进制token惯例展开；同步Messages上限，不是Batch beta300K。"
+        },
+        {
+          "field": "accessReference.inputPrice",
+          "currentValue": null,
+          "supportedValue": 5.0,
+          "sourceId": "anthropic-d82e15156c4c",
+          "assessment": "not-comparable",
+          "explanation": "原厂Claude API标准USD / MTok；5m写入、1h写入与cache-read分开。 仅原厂接入计价参考，共享ModelSpec禁止写入价格。"
+        },
+        {
+          "field": "accessReference.outputPrice",
+          "currentValue": null,
+          "supportedValue": 25.0,
+          "sourceId": "anthropic-d82e15156c4c",
+          "assessment": "not-comparable",
+          "explanation": "原厂Claude API标准USD / MTok；5m写入、1h写入与cache-read分开。 仅原厂接入计价参考，共享ModelSpec禁止写入价格。"
+        },
+        {
+          "field": "spec.extra.adaptiveThinking",
+          "currentValue": true,
+          "supportedValue": true,
+          "sourceId": "anthropic-ad4b90c4ddf5",
+          "assessment": "matches",
+          "explanation": "该精确型号技术表列Adaptive；需要Messages协议，不泛化OpenAI网关。"
+        },
+        {
+          "field": "spec.supportsReasoning",
+          "currentValue": true,
+          "supportedValue": true,
+          "sourceId": "anthropic-ad4b90c4ddf5",
+          "assessment": "matches",
+          "explanation": "型号技术表列Thinking能力。"
+        },
+        {
+          "field": "spec.extra.reasoning.defaultEffort",
+          "currentValue": null,
+          "supportedValue": "high",
+          "sourceId": "anthropic-ad4b90c4ddf5",
+          "assessment": "differs",
+          "explanation": "Claude API默认；Claude Code订阅显式设置另核。"
+        },
+        {
+          "field": "spec.extra.reasoning.supportedEfforts",
+          "currentValue": null,
+          "supportedValue": [
+            "low",
+            "medium",
+            "high",
+            "xhigh",
+            "max"
+          ],
+          "sourceId": "anthropic-528c440a2ed8",
+          "assessment": "differs",
+          "explanation": "官网effort单型号段落明确all five effort levels；只适用原厂Claude API。"
+        },
+        {
+          "field": "accessReference.extra.cachePricing.write5m",
+          "currentValue": null,
+          "supportedValue": 6.25,
+          "sourceId": "anthropic-d82e15156c4c",
+          "assessment": "not-comparable",
+          "explanation": "原厂Claude API标准USD / MTok；5m写入、1h写入与cache-read分开。 仅原厂接入计价参考，共享ModelSpec禁止写入价格。"
+        },
+        {
+          "field": "accessReference.extra.cachePricing.write1h",
+          "currentValue": null,
+          "supportedValue": 10.0,
+          "sourceId": "anthropic-d82e15156c4c",
+          "assessment": "not-comparable",
+          "explanation": "原厂Claude API标准USD / MTok；5m写入、1h写入与cache-read分开。 仅原厂接入计价参考，共享ModelSpec禁止写入价格。"
+        },
+        {
+          "field": "accessReference.extra.cachePricing.read",
+          "currentValue": null,
+          "supportedValue": 0.5,
+          "sourceId": "anthropic-d82e15156c4c",
+          "assessment": "not-comparable",
+          "explanation": "原厂Claude API标准USD / MTok；5m写入、1h写入与cache-read分开。 仅原厂接入计价参考，共享ModelSpec禁止写入价格。"
+        }
+      ],
+      "remainingFields": [
+        "spec.extra.samplingParametersDeprecated"
+      ],
+      "nextAction": "逐字段审查上表候选；只有同一接入合同且语义/单位一致的证据才用于后续canonical更新。 剩余字段需精确型号页/官方API schema或已授权账号目录核查，不推导默认值。",
+      "notes": []
+    },
+    {
+      "recordKey": "compute/model-specs/anthropic.json#claude-opus",
+      "modelId": "claude-opus",
+      "config": "compute/model-specs/anthropic.json",
+      "sourceDoc": "docs/model-sources/providers/anthropic/models/claude-opus.md",
+      "outcome": "still-unresolved",
+      "sourceIds": [
+        "anthropic-dc594301e778"
+      ],
+      "fieldEvidence": [],
+      "remainingFields": [
+        "id",
+        "spec.contextWindow",
+        "spec.maxOutputTokens",
+        "spec.supportsReasoning"
+      ],
+      "nextAction": "逐字段审查上表候选；只有同一接入合同且语义/单位一致的证据才用于后续canonical更新。 剩余字段需精确型号页/官方API schema或已授权账号目录核查，不推导默认值。",
+      "notes": [
+        "泛家族兜底ID不等于官方精确型号；不能把最新Opus/Sonnet参数覆盖全部历史家族。"
+      ]
+    },
+    {
+      "recordKey": "compute/model-specs/anthropic.json#claude-sonnet-4-5",
+      "modelId": "claude-sonnet-4-5",
+      "config": "compute/model-specs/anthropic.json",
+      "sourceDoc": "docs/model-sources/providers/anthropic/models/claude-sonnet-4-5.md",
+      "outcome": "official-conflict",
+      "sourceIds": [
+        "anthropic-d1fd0501ddc3",
+        "anthropic-d82e15156c4c",
+        "anthropic-dc594301e778"
+      ],
+      "fieldEvidence": [
+        {
+          "field": "id",
+          "currentValue": "claude-sonnet-4-5",
+          "supportedValue": "claude-sonnet-4-5",
+          "sourceId": "anthropic-d1fd0501ddc3",
+          "assessment": "matches",
+          "explanation": "精确API ID/文档明确Claude API alias。"
+        },
+        {
+          "field": "spec.contextWindow",
+          "currentValue": 1000000,
+          "supportedValue": 200000,
+          "sourceId": "anthropic-d1fd0501ddc3",
+          "assessment": "differs",
+          "explanation": "官网K/M按十进制token惯例展开；同步Messages上限，不是Batch beta300K。"
+        },
+        {
+          "field": "spec.maxOutputTokens",
+          "currentValue": 64000,
+          "supportedValue": 64000,
+          "sourceId": "anthropic-d1fd0501ddc3",
+          "assessment": "matches",
+          "explanation": "官网K/M按十进制token惯例展开；同步Messages上限，不是Batch beta300K。"
+        },
+        {
+          "field": "accessReference.inputPrice",
+          "currentValue": null,
+          "supportedValue": 3.0,
+          "sourceId": "anthropic-d82e15156c4c",
+          "assessment": "not-comparable",
+          "explanation": "原厂Claude API标准USD / MTok；5m写入、1h写入与cache-read分开。 仅原厂接入计价参考，共享ModelSpec禁止写入价格。"
+        },
+        {
+          "field": "accessReference.outputPrice",
+          "currentValue": null,
+          "supportedValue": 15.0,
+          "sourceId": "anthropic-d82e15156c4c",
+          "assessment": "not-comparable",
+          "explanation": "原厂Claude API标准USD / MTok；5m写入、1h写入与cache-read分开。 仅原厂接入计价参考，共享ModelSpec禁止写入价格。"
+        },
+        {
+          "field": "spec.supportsReasoning",
+          "currentValue": true,
+          "supportedValue": true,
+          "sourceId": "anthropic-d1fd0501ddc3",
+          "assessment": "matches",
+          "explanation": "型号技术表列Thinking能力。"
+        },
+        {
+          "field": "accessReference.extra.cachePricing.write5m",
+          "currentValue": null,
+          "supportedValue": 3.75,
+          "sourceId": "anthropic-d82e15156c4c",
+          "assessment": "not-comparable",
+          "explanation": "原厂Claude API标准USD / MTok；5m写入、1h写入与cache-read分开。 仅原厂接入计价参考，共享ModelSpec禁止写入价格。"
+        },
+        {
+          "field": "accessReference.extra.cachePricing.write1h",
+          "currentValue": null,
+          "supportedValue": 6.0,
+          "sourceId": "anthropic-d82e15156c4c",
+          "assessment": "not-comparable",
+          "explanation": "原厂Claude API标准USD / MTok；5m写入、1h写入与cache-read分开。 仅原厂接入计价参考，共享ModelSpec禁止写入价格。"
+        },
+        {
+          "field": "accessReference.extra.cachePricing.read",
+          "currentValue": null,
+          "supportedValue": 0.3,
+          "sourceId": "anthropic-d82e15156c4c",
+          "assessment": "not-comparable",
+          "explanation": "原厂Claude API标准USD / MTok；5m写入、1h写入与cache-read分开。 仅原厂接入计价参考，共享ModelSpec禁止写入价格。"
+        }
+      ],
+      "remainingFields": [
+        "spec.defaultTemperature"
+      ],
+      "nextAction": "逐字段审查上表候选；只有同一接入合同且语义/单位一致的证据才用于后续canonical更新。 剩余字段需精确型号页/官方API schema或已授权账号目录核查，不推导默认值。",
+      "notes": [
+        "型号页常规窗口200K与旧共享1M存在冲突；若曾启用1M beta需单独保存接入与header证据。"
+      ]
+    },
+    {
+      "recordKey": "compute/model-specs/anthropic.json#claude-sonnet-4-6",
+      "modelId": "claude-sonnet-4-6",
+      "config": "compute/model-specs/anthropic.json",
+      "sourceDoc": "docs/model-sources/providers/anthropic/models/claude-sonnet-4-6.md",
+      "outcome": "official-conflict",
+      "sourceIds": [
+        "anthropic-dcf922f2f069",
+        "anthropic-d82e15156c4c",
+        "anthropic-dc594301e778"
+      ],
+      "fieldEvidence": [
+        {
+          "field": "id",
+          "currentValue": "claude-sonnet-4-6",
+          "supportedValue": "claude-sonnet-4-6",
+          "sourceId": "anthropic-dcf922f2f069",
+          "assessment": "matches",
+          "explanation": "精确API ID/文档明确Claude API alias。"
+        },
+        {
+          "field": "spec.contextWindow",
+          "currentValue": 1000000,
+          "supportedValue": 1000000,
+          "sourceId": "anthropic-dcf922f2f069",
+          "assessment": "matches",
+          "explanation": "官网K/M按十进制token惯例展开；同步Messages上限，不是Batch beta300K。"
+        },
+        {
+          "field": "spec.maxOutputTokens",
+          "currentValue": 64000,
+          "supportedValue": 128000,
+          "sourceId": "anthropic-dcf922f2f069",
+          "assessment": "differs",
+          "explanation": "官网K/M按十进制token惯例展开；同步Messages上限，不是Batch beta300K。"
+        },
+        {
+          "field": "accessReference.inputPrice",
+          "currentValue": null,
+          "supportedValue": 3.0,
+          "sourceId": "anthropic-d82e15156c4c",
+          "assessment": "not-comparable",
+          "explanation": "原厂Claude API标准USD / MTok；5m写入、1h写入与cache-read分开。 仅原厂接入计价参考，共享ModelSpec禁止写入价格。"
+        },
+        {
+          "field": "accessReference.outputPrice",
+          "currentValue": null,
+          "supportedValue": 15.0,
+          "sourceId": "anthropic-d82e15156c4c",
+          "assessment": "not-comparable",
+          "explanation": "原厂Claude API标准USD / MTok；5m写入、1h写入与cache-read分开。 仅原厂接入计价参考，共享ModelSpec禁止写入价格。"
+        },
+        {
+          "field": "spec.extra.adaptiveThinking",
+          "currentValue": null,
+          "supportedValue": true,
+          "sourceId": "anthropic-dcf922f2f069",
+          "assessment": "differs",
+          "explanation": "该精确型号技术表列Adaptive；需要Messages协议，不泛化OpenAI网关。"
+        },
+        {
+          "field": "spec.supportsReasoning",
+          "currentValue": true,
+          "supportedValue": true,
+          "sourceId": "anthropic-dcf922f2f069",
+          "assessment": "matches",
+          "explanation": "型号技术表列Thinking能力。"
+        },
+        {
+          "field": "spec.extra.reasoning.defaultEffort",
+          "currentValue": null,
+          "supportedValue": "high",
+          "sourceId": "anthropic-dcf922f2f069",
+          "assessment": "differs",
+          "explanation": "Claude API默认；Claude Code订阅显式设置另核。"
+        },
+        {
+          "field": "accessReference.extra.cachePricing.write5m",
+          "currentValue": null,
+          "supportedValue": 3.75,
+          "sourceId": "anthropic-d82e15156c4c",
+          "assessment": "not-comparable",
+          "explanation": "原厂Claude API标准USD / MTok；5m写入、1h写入与cache-read分开。 仅原厂接入计价参考，共享ModelSpec禁止写入价格。"
+        },
+        {
+          "field": "accessReference.extra.cachePricing.write1h",
+          "currentValue": null,
+          "supportedValue": 6.0,
+          "sourceId": "anthropic-d82e15156c4c",
+          "assessment": "not-comparable",
+          "explanation": "原厂Claude API标准USD / MTok；5m写入、1h写入与cache-read分开。 仅原厂接入计价参考，共享ModelSpec禁止写入价格。"
+        },
+        {
+          "field": "accessReference.extra.cachePricing.read",
+          "currentValue": null,
+          "supportedValue": 0.3,
+          "sourceId": "anthropic-d82e15156c4c",
+          "assessment": "not-comparable",
+          "explanation": "原厂Claude API标准USD / MTok；5m写入、1h写入与cache-read分开。 仅原厂接入计价参考，共享ModelSpec禁止写入价格。"
+        }
+      ],
+      "remainingFields": [
+        "spec.defaultTemperature"
+      ],
+      "nextAction": "逐字段审查上表候选；只有同一接入合同且语义/单位一致的证据才用于后续canonical更新。 剩余字段需精确型号页/官方API schema或已授权账号目录核查，不推导默认值。",
+      "notes": []
+    },
+    {
+      "recordKey": "compute/providers/anthropic-claude.json#claude-sonnet-5-5",
+      "modelId": "claude-sonnet-5-5",
+      "config": "compute/providers/anthropic-claude.json",
+      "sourceDoc": "docs/model-sources/providers/anthropic/models/claude-sonnet-5-5.md",
+      "outcome": "official-identity-only",
+      "sourceIds": [
+        "anthropic-56873f510891",
+        "anthropic-d82e15156c4c",
+        "anthropic-a2b1092518a3",
+        "anthropic-528c440a2ed8",
+        "anthropic-dc594301e778"
+      ],
+      "fieldEvidence": [
+        {
+          "field": "modelName",
+          "currentValue": "claude-sonnet-5-5",
+          "supportedValue": "claude-sonnet-5-5",
+          "sourceId": "anthropic-56873f510891",
+          "assessment": "matches",
+          "explanation": "精确API ID/文档明确Claude API alias。"
+        },
+        {
+          "field": "contextWindow",
+          "currentValue": 1000000,
+          "supportedValue": 1000000,
+          "sourceId": "anthropic-56873f510891",
+          "assessment": "not-comparable",
+          "explanation": "官网K/M按十进制token惯例展开；同步Messages上限，不是Batch beta300K。 原厂API证据不可直接证明本订阅access有效合同。"
+        },
+        {
+          "field": "maxOutputTokens",
+          "currentValue": 128000,
+          "supportedValue": 128000,
+          "sourceId": "anthropic-56873f510891",
+          "assessment": "not-comparable",
+          "explanation": "官网K/M按十进制token惯例展开；同步Messages上限，不是Batch beta300K。 原厂API证据不可直接证明本订阅access有效合同。"
+        },
+        {
+          "field": "inputPrice",
+          "currentValue": null,
+          "supportedValue": 2.0,
+          "sourceId": "anthropic-d82e15156c4c",
+          "assessment": "not-comparable",
+          "explanation": "原厂Claude API标准USD / MTok；5m写入、1h写入与cache-read分开。 原厂API证据不可直接证明本订阅access有效合同。"
+        },
+        {
+          "field": "outputPrice",
+          "currentValue": null,
+          "supportedValue": 10.0,
+          "sourceId": "anthropic-d82e15156c4c",
+          "assessment": "not-comparable",
+          "explanation": "原厂Claude API标准USD / MTok；5m写入、1h写入与cache-read分开。 原厂API证据不可直接证明本订阅access有效合同。"
+        },
+        {
+          "field": "extra.adaptiveThinking",
+          "currentValue": true,
+          "supportedValue": true,
+          "sourceId": "anthropic-56873f510891",
+          "assessment": "not-comparable",
+          "explanation": "该精确型号技术表列Adaptive；需要Messages协议，不泛化OpenAI网关。 原厂API证据不可直接证明本订阅access有效合同。"
+        },
+        {
+          "field": "supportsReasoning",
+          "currentValue": null,
+          "supportedValue": true,
+          "sourceId": "anthropic-56873f510891",
+          "assessment": "not-comparable",
+          "explanation": "型号技术表列Thinking能力。 原厂API证据不可直接证明本订阅access有效合同。"
+        },
+        {
+          "field": "extra.reasoning.defaultEffort",
+          "currentValue": "high",
+          "supportedValue": "high",
+          "sourceId": "anthropic-56873f510891",
+          "assessment": "not-comparable",
+          "explanation": "Claude API默认；Claude Code订阅显式设置另核。 原厂API证据不可直接证明本订阅access有效合同。"
+        },
+        {
+          "field": "extra.cachePricing.write5m",
+          "currentValue": null,
+          "supportedValue": 2.5,
+          "sourceId": "anthropic-d82e15156c4c",
+          "assessment": "not-comparable",
+          "explanation": "原厂Claude API标准USD / MTok；5m写入、1h写入与cache-read分开。 原厂API证据不可直接证明本订阅access有效合同。"
+        },
+        {
+          "field": "extra.cachePricing.write1h",
+          "currentValue": null,
+          "supportedValue": 4.0,
+          "sourceId": "anthropic-d82e15156c4c",
+          "assessment": "not-comparable",
+          "explanation": "原厂Claude API标准USD / MTok；5m写入、1h写入与cache-read分开。 原厂API证据不可直接证明本订阅access有效合同。"
+        },
+        {
+          "field": "extra.cachePricing.read",
+          "currentValue": null,
+          "supportedValue": 0.2,
+          "sourceId": "anthropic-d82e15156c4c",
+          "assessment": "not-comparable",
+          "explanation": "原厂Claude API标准USD / MTok；5m写入、1h写入与cache-read分开。 原厂API证据不可直接证明本订阅access有效合同。"
+        },
+        {
+          "field": "extra.forcedToolChoiceUnsupported",
+          "currentValue": true,
+          "supportedValue": true,
+          "sourceId": "anthropic-a2b1092518a3",
+          "assessment": "not-comparable",
+          "explanation": "forced tool_choice any/tool拒绝；auto/none仍支持。 原厂API证据不可直接证明本订阅access有效合同。"
+        },
+        {
+          "field": "extra.reasoning.supportedEfforts",
+          "currentValue": [
+            "low",
+            "medium",
+            "high",
+            "xhigh",
+            "max"
+          ],
+          "supportedValue": [
+            "low",
+            "medium",
+            "high",
+            "xhigh",
+            "max"
+          ],
+          "sourceId": "anthropic-528c440a2ed8",
+          "assessment": "not-comparable",
+          "explanation": "官网effort单型号段落明确all five effort levels；只适用原厂Claude API。 原厂API证据不可直接证明本订阅access有效合同。"
+        }
+      ],
+      "remainingFields": [
+        "extra.reasoning.supportedEfforts",
+        "extra.samplingParametersDeprecated"
+      ],
+      "nextAction": "逐字段审查上表候选；只有同一接入合同且语义/单位一致的证据才用于后续canonical更新。 剩余字段需精确型号页/官方API schema或已授权账号目录核查，不推导默认值。",
+      "notes": [
+        "订阅/套餐实际允许型号、窗口、effort、工具与账号限额需独立官方接入合同；本表API参数只作不可比对照，不提升订阅字段状态。"
+      ]
+    },
+    {
+      "recordKey": "compute/providers/anthropic.json#claude-sonnet-5-5",
+      "modelId": "claude-sonnet-5-5",
+      "config": "compute/providers/anthropic.json",
+      "sourceDoc": "docs/model-sources/providers/anthropic/models/claude-sonnet-5-5.md",
+      "outcome": "official-fields-found",
+      "sourceIds": [
+        "anthropic-56873f510891",
+        "anthropic-d82e15156c4c",
+        "anthropic-a2b1092518a3",
+        "anthropic-528c440a2ed8",
+        "anthropic-dc594301e778"
+      ],
+      "fieldEvidence": [
+        {
+          "field": "modelName",
+          "currentValue": "claude-sonnet-5-5",
+          "supportedValue": "claude-sonnet-5-5",
+          "sourceId": "anthropic-56873f510891",
+          "assessment": "matches",
+          "explanation": "精确API ID/文档明确Claude API alias。"
+        },
+        {
+          "field": "contextWindow",
+          "currentValue": 1000000,
+          "supportedValue": 1000000,
+          "sourceId": "anthropic-56873f510891",
+          "assessment": "matches",
+          "explanation": "官网K/M按十进制token惯例展开；同步Messages上限，不是Batch beta300K。"
+        },
+        {
+          "field": "maxOutputTokens",
+          "currentValue": 128000,
+          "supportedValue": 128000,
+          "sourceId": "anthropic-56873f510891",
+          "assessment": "matches",
+          "explanation": "官网K/M按十进制token惯例展开；同步Messages上限，不是Batch beta300K。"
+        },
+        {
+          "field": "inputPrice",
+          "currentValue": 2,
+          "supportedValue": 2.0,
+          "sourceId": "anthropic-d82e15156c4c",
+          "assessment": "matches",
+          "explanation": "原厂Claude API标准USD / MTok；5m写入、1h写入与cache-read分开。"
+        },
+        {
+          "field": "outputPrice",
+          "currentValue": 10,
+          "supportedValue": 10.0,
+          "sourceId": "anthropic-d82e15156c4c",
+          "assessment": "matches",
+          "explanation": "原厂Claude API标准USD / MTok；5m写入、1h写入与cache-read分开。"
+        },
+        {
+          "field": "extra.adaptiveThinking",
+          "currentValue": true,
+          "supportedValue": true,
+          "sourceId": "anthropic-56873f510891",
+          "assessment": "matches",
+          "explanation": "该精确型号技术表列Adaptive；需要Messages协议，不泛化OpenAI网关。"
+        },
+        {
+          "field": "supportsReasoning",
+          "currentValue": null,
+          "supportedValue": true,
+          "sourceId": "anthropic-56873f510891",
+          "assessment": "differs",
+          "explanation": "型号技术表列Thinking能力。"
+        },
+        {
+          "field": "extra.reasoning.defaultEffort",
+          "currentValue": "high",
+          "supportedValue": "high",
+          "sourceId": "anthropic-56873f510891",
+          "assessment": "matches",
+          "explanation": "Claude API默认；Claude Code订阅显式设置另核。"
+        },
+        {
+          "field": "extra.cachePricing.write5m",
+          "currentValue": 2.5,
+          "supportedValue": 2.5,
+          "sourceId": "anthropic-d82e15156c4c",
+          "assessment": "matches",
+          "explanation": "原厂Claude API标准USD / MTok；5m写入、1h写入与cache-read分开。"
+        },
+        {
+          "field": "extra.cachePricing.write1h",
+          "currentValue": 4,
+          "supportedValue": 4.0,
+          "sourceId": "anthropic-d82e15156c4c",
+          "assessment": "matches",
+          "explanation": "原厂Claude API标准USD / MTok；5m写入、1h写入与cache-read分开。"
+        },
+        {
+          "field": "extra.cachePricing.read",
+          "currentValue": 0.2,
+          "supportedValue": 0.2,
+          "sourceId": "anthropic-d82e15156c4c",
+          "assessment": "matches",
+          "explanation": "原厂Claude API标准USD / MTok；5m写入、1h写入与cache-read分开。"
+        },
+        {
+          "field": "extra.forcedToolChoiceUnsupported",
+          "currentValue": true,
+          "supportedValue": true,
+          "sourceId": "anthropic-a2b1092518a3",
+          "assessment": "matches",
+          "explanation": "forced tool_choice any/tool拒绝；auto/none仍支持。"
+        },
+        {
+          "field": "extra.reasoning.supportedEfforts",
+          "currentValue": [
+            "low",
+            "medium",
+            "high",
+            "xhigh",
+            "max"
+          ],
+          "supportedValue": [
+            "low",
+            "medium",
+            "high",
+            "xhigh",
+            "max"
+          ],
+          "sourceId": "anthropic-528c440a2ed8",
+          "assessment": "matches",
+          "explanation": "官网effort单型号段落明确all five effort levels；只适用原厂Claude API。"
+        }
+      ],
+      "remainingFields": [
+        "extra.samplingParametersDeprecated",
+        "extra.serverSideWebSearch.searchRequestPriceUsd"
+      ],
+      "nextAction": "逐字段审查上表候选；只有同一接入合同且语义/单位一致的证据才用于后续canonical更新。 剩余字段需精确型号页/官方API schema或已授权账号目录核查，不推导默认值。",
+      "notes": []
+    },
+    {
+      "recordKey": "compute/model-specs/anthropic.json#claude-sonnet-5-5",
+      "modelId": "claude-sonnet-5-5",
+      "config": "compute/model-specs/anthropic.json",
+      "sourceDoc": "docs/model-sources/providers/anthropic/models/claude-sonnet-5-5.md",
+      "outcome": "official-fields-found",
+      "sourceIds": [
+        "anthropic-56873f510891",
+        "anthropic-d82e15156c4c",
+        "anthropic-a2b1092518a3",
+        "anthropic-528c440a2ed8",
+        "anthropic-dc594301e778"
+      ],
+      "fieldEvidence": [
+        {
+          "field": "id",
+          "currentValue": "claude-sonnet-5-5",
+          "supportedValue": "claude-sonnet-5-5",
+          "sourceId": "anthropic-56873f510891",
+          "assessment": "matches",
+          "explanation": "精确API ID/文档明确Claude API alias。"
+        },
+        {
+          "field": "spec.contextWindow",
+          "currentValue": 1000000,
+          "supportedValue": 1000000,
+          "sourceId": "anthropic-56873f510891",
+          "assessment": "matches",
+          "explanation": "官网K/M按十进制token惯例展开；同步Messages上限，不是Batch beta300K。"
+        },
+        {
+          "field": "spec.maxOutputTokens",
+          "currentValue": 128000,
+          "supportedValue": 128000,
+          "sourceId": "anthropic-56873f510891",
+          "assessment": "matches",
+          "explanation": "官网K/M按十进制token惯例展开；同步Messages上限，不是Batch beta300K。"
+        },
+        {
+          "field": "accessReference.inputPrice",
+          "currentValue": null,
+          "supportedValue": 2.0,
+          "sourceId": "anthropic-d82e15156c4c",
+          "assessment": "not-comparable",
+          "explanation": "原厂Claude API标准USD / MTok；5m写入、1h写入与cache-read分开。 仅原厂接入计价参考，共享ModelSpec禁止写入价格。"
+        },
+        {
+          "field": "accessReference.outputPrice",
+          "currentValue": null,
+          "supportedValue": 10.0,
+          "sourceId": "anthropic-d82e15156c4c",
+          "assessment": "not-comparable",
+          "explanation": "原厂Claude API标准USD / MTok；5m写入、1h写入与cache-read分开。 仅原厂接入计价参考，共享ModelSpec禁止写入价格。"
+        },
+        {
+          "field": "spec.extra.adaptiveThinking",
+          "currentValue": true,
+          "supportedValue": true,
+          "sourceId": "anthropic-56873f510891",
+          "assessment": "matches",
+          "explanation": "该精确型号技术表列Adaptive；需要Messages协议，不泛化OpenAI网关。"
+        },
+        {
+          "field": "spec.supportsReasoning",
+          "currentValue": true,
+          "supportedValue": true,
+          "sourceId": "anthropic-56873f510891",
+          "assessment": "matches",
+          "explanation": "型号技术表列Thinking能力。"
+        },
+        {
+          "field": "spec.extra.reasoning.defaultEffort",
+          "currentValue": null,
+          "supportedValue": "high",
+          "sourceId": "anthropic-56873f510891",
+          "assessment": "differs",
+          "explanation": "Claude API默认；Claude Code订阅显式设置另核。"
+        },
+        {
+          "field": "accessReference.extra.cachePricing.write5m",
+          "currentValue": null,
+          "supportedValue": 2.5,
+          "sourceId": "anthropic-d82e15156c4c",
+          "assessment": "not-comparable",
+          "explanation": "原厂Claude API标准USD / MTok；5m写入、1h写入与cache-read分开。 仅原厂接入计价参考，共享ModelSpec禁止写入价格。"
+        },
+        {
+          "field": "accessReference.extra.cachePricing.write1h",
+          "currentValue": null,
+          "supportedValue": 4.0,
+          "sourceId": "anthropic-d82e15156c4c",
+          "assessment": "not-comparable",
+          "explanation": "原厂Claude API标准USD / MTok；5m写入、1h写入与cache-read分开。 仅原厂接入计价参考，共享ModelSpec禁止写入价格。"
+        },
+        {
+          "field": "accessReference.extra.cachePricing.read",
+          "currentValue": null,
+          "supportedValue": 0.2,
+          "sourceId": "anthropic-d82e15156c4c",
+          "assessment": "not-comparable",
+          "explanation": "原厂Claude API标准USD / MTok；5m写入、1h写入与cache-read分开。 仅原厂接入计价参考，共享ModelSpec禁止写入价格。"
+        },
+        {
+          "field": "spec.extra.forcedToolChoiceUnsupported",
+          "currentValue": true,
+          "supportedValue": true,
+          "sourceId": "anthropic-a2b1092518a3",
+          "assessment": "matches",
+          "explanation": "forced tool_choice any/tool拒绝；auto/none仍支持。"
+        },
+        {
+          "field": "spec.extra.reasoning.supportedEfforts",
+          "currentValue": null,
+          "supportedValue": [
+            "low",
+            "medium",
+            "high",
+            "xhigh",
+            "max"
+          ],
+          "sourceId": "anthropic-528c440a2ed8",
+          "assessment": "differs",
+          "explanation": "官网effort单型号段落明确all five effort levels；只适用原厂Claude API。"
+        }
+      ],
+      "remainingFields": [
+        "spec.extra.samplingParametersDeprecated"
+      ],
+      "nextAction": "逐字段审查上表候选；只有同一接入合同且语义/单位一致的证据才用于后续canonical更新。 剩余字段需精确型号页/官方API schema或已授权账号目录核查，不推导默认值。",
+      "notes": []
+    },
+    {
+      "recordKey": "compute/providers/anthropic-claude.json#claude-sonnet-5",
+      "modelId": "claude-sonnet-5",
+      "config": "compute/providers/anthropic-claude.json",
+      "sourceDoc": "docs/model-sources/providers/anthropic/models/claude-sonnet-5.md",
+      "outcome": "official-identity-only",
+      "sourceIds": [
+        "anthropic-a5d34a661466",
+        "anthropic-d82e15156c4c",
+        "anthropic-528c440a2ed8",
+        "anthropic-dc594301e778"
+      ],
+      "fieldEvidence": [
+        {
+          "field": "modelName",
+          "currentValue": "claude-sonnet-5",
+          "supportedValue": "claude-sonnet-5",
+          "sourceId": "anthropic-a5d34a661466",
+          "assessment": "matches",
+          "explanation": "精确API ID/文档明确Claude API alias。"
+        },
+        {
+          "field": "contextWindow",
+          "currentValue": 1000000,
+          "supportedValue": 1000000,
+          "sourceId": "anthropic-a5d34a661466",
+          "assessment": "not-comparable",
+          "explanation": "官网K/M按十进制token惯例展开；同步Messages上限，不是Batch beta300K。 原厂API证据不可直接证明本订阅access有效合同。"
+        },
+        {
+          "field": "maxOutputTokens",
+          "currentValue": 128000,
+          "supportedValue": 128000,
+          "sourceId": "anthropic-a5d34a661466",
+          "assessment": "not-comparable",
+          "explanation": "官网K/M按十进制token惯例展开；同步Messages上限，不是Batch beta300K。 原厂API证据不可直接证明本订阅access有效合同。"
+        },
+        {
+          "field": "inputPrice",
+          "currentValue": null,
+          "supportedValue": 2.0,
+          "sourceId": "anthropic-d82e15156c4c",
+          "assessment": "not-comparable",
+          "explanation": "原厂Claude API标准USD / MTok；5m写入、1h写入与cache-read分开。 原厂API证据不可直接证明本订阅access有效合同。"
+        },
+        {
+          "field": "outputPrice",
+          "currentValue": null,
+          "supportedValue": 10.0,
+          "sourceId": "anthropic-d82e15156c4c",
+          "assessment": "not-comparable",
+          "explanation": "原厂Claude API标准USD / MTok；5m写入、1h写入与cache-read分开。 原厂API证据不可直接证明本订阅access有效合同。"
+        },
+        {
+          "field": "extra.adaptiveThinking",
+          "currentValue": true,
+          "supportedValue": true,
+          "sourceId": "anthropic-a5d34a661466",
+          "assessment": "not-comparable",
+          "explanation": "该精确型号技术表列Adaptive；需要Messages协议，不泛化OpenAI网关。 原厂API证据不可直接证明本订阅access有效合同。"
+        },
+        {
+          "field": "supportsReasoning",
+          "currentValue": null,
+          "supportedValue": true,
+          "sourceId": "anthropic-a5d34a661466",
+          "assessment": "not-comparable",
+          "explanation": "型号技术表列Thinking能力。 原厂API证据不可直接证明本订阅access有效合同。"
+        },
+        {
+          "field": "extra.reasoning.defaultEffort",
+          "currentValue": "high",
+          "supportedValue": "high",
+          "sourceId": "anthropic-a5d34a661466",
+          "assessment": "not-comparable",
+          "explanation": "Claude API默认；Claude Code订阅显式设置另核。 原厂API证据不可直接证明本订阅access有效合同。"
+        },
+        {
+          "field": "extra.reasoning.supportedEfforts",
+          "currentValue": [
+            "low",
+            "medium",
+            "high",
+            "xhigh",
+            "max"
+          ],
+          "supportedValue": [
+            "low",
+            "medium",
+            "high",
+            "xhigh",
+            "max"
+          ],
+          "sourceId": "anthropic-528c440a2ed8",
+          "assessment": "not-comparable",
+          "explanation": "effort指南明确列本型号all five levels。 原厂API证据不可直接证明本订阅access有效合同。"
+        },
+        {
+          "field": "extra.cachePricing.write5m",
+          "currentValue": null,
+          "supportedValue": 2.5,
+          "sourceId": "anthropic-d82e15156c4c",
+          "assessment": "not-comparable",
+          "explanation": "原厂Claude API标准USD / MTok；5m写入、1h写入与cache-read分开。 原厂API证据不可直接证明本订阅access有效合同。"
+        },
+        {
+          "field": "extra.cachePricing.write1h",
+          "currentValue": null,
+          "supportedValue": 4.0,
+          "sourceId": "anthropic-d82e15156c4c",
+          "assessment": "not-comparable",
+          "explanation": "原厂Claude API标准USD / MTok；5m写入、1h写入与cache-read分开。 原厂API证据不可直接证明本订阅access有效合同。"
+        },
+        {
+          "field": "extra.cachePricing.read",
+          "currentValue": null,
+          "supportedValue": 0.2,
+          "sourceId": "anthropic-d82e15156c4c",
+          "assessment": "not-comparable",
+          "explanation": "原厂Claude API标准USD / MTok；5m写入、1h写入与cache-read分开。 原厂API证据不可直接证明本订阅access有效合同。"
+        }
+      ],
+      "remainingFields": [
+        "contextWindow",
+        "extra.adaptiveThinking",
+        "extra.reasoning.defaultEffort",
+        "extra.reasoning.supportedEfforts",
+        "maxOutputTokens"
+      ],
+      "nextAction": "逐字段审查上表候选；只有同一接入合同且语义/单位一致的证据才用于后续canonical更新。 剩余字段需精确型号页/官方API schema或已授权账号目录核查，不推导默认值。",
+      "notes": [
+        "订阅/套餐实际允许型号、窗口、effort、工具与账号限额需独立官方接入合同；本表API参数只作不可比对照，不提升订阅字段状态。"
+      ]
+    },
+    {
+      "recordKey": "compute/providers/anthropic.json#claude-sonnet-5",
+      "modelId": "claude-sonnet-5",
+      "config": "compute/providers/anthropic.json",
+      "sourceDoc": "docs/model-sources/providers/anthropic/models/claude-sonnet-5.md",
+      "outcome": "official-fields-found",
+      "sourceIds": [
+        "anthropic-a5d34a661466",
+        "anthropic-d82e15156c4c",
+        "anthropic-528c440a2ed8",
+        "anthropic-dc594301e778"
+      ],
+      "fieldEvidence": [
+        {
+          "field": "modelName",
+          "currentValue": "claude-sonnet-5",
+          "supportedValue": "claude-sonnet-5",
+          "sourceId": "anthropic-a5d34a661466",
+          "assessment": "matches",
+          "explanation": "精确API ID/文档明确Claude API alias。"
+        },
+        {
+          "field": "contextWindow",
+          "currentValue": 1000000,
+          "supportedValue": 1000000,
+          "sourceId": "anthropic-a5d34a661466",
+          "assessment": "matches",
+          "explanation": "官网K/M按十进制token惯例展开；同步Messages上限，不是Batch beta300K。"
+        },
+        {
+          "field": "maxOutputTokens",
+          "currentValue": 128000,
+          "supportedValue": 128000,
+          "sourceId": "anthropic-a5d34a661466",
+          "assessment": "matches",
+          "explanation": "官网K/M按十进制token惯例展开；同步Messages上限，不是Batch beta300K。"
+        },
+        {
+          "field": "inputPrice",
+          "currentValue": 2,
+          "supportedValue": 2.0,
+          "sourceId": "anthropic-d82e15156c4c",
+          "assessment": "matches",
+          "explanation": "原厂Claude API标准USD / MTok；5m写入、1h写入与cache-read分开。"
+        },
+        {
+          "field": "outputPrice",
+          "currentValue": 10,
+          "supportedValue": 10.0,
+          "sourceId": "anthropic-d82e15156c4c",
+          "assessment": "matches",
+          "explanation": "原厂Claude API标准USD / MTok；5m写入、1h写入与cache-read分开。"
+        },
+        {
+          "field": "extra.adaptiveThinking",
+          "currentValue": true,
+          "supportedValue": true,
+          "sourceId": "anthropic-a5d34a661466",
+          "assessment": "matches",
+          "explanation": "该精确型号技术表列Adaptive；需要Messages协议，不泛化OpenAI网关。"
+        },
+        {
+          "field": "supportsReasoning",
+          "currentValue": null,
+          "supportedValue": true,
+          "sourceId": "anthropic-a5d34a661466",
+          "assessment": "differs",
+          "explanation": "型号技术表列Thinking能力。"
+        },
+        {
+          "field": "extra.reasoning.defaultEffort",
+          "currentValue": "high",
+          "supportedValue": "high",
+          "sourceId": "anthropic-a5d34a661466",
+          "assessment": "matches",
+          "explanation": "Claude API默认；Claude Code订阅显式设置另核。"
+        },
+        {
+          "field": "extra.reasoning.supportedEfforts",
+          "currentValue": [
+            "low",
+            "medium",
+            "high",
+            "xhigh",
+            "max"
+          ],
+          "supportedValue": [
+            "low",
+            "medium",
+            "high",
+            "xhigh",
+            "max"
+          ],
+          "sourceId": "anthropic-528c440a2ed8",
+          "assessment": "matches",
+          "explanation": "effort指南明确列本型号all five levels。"
+        },
+        {
+          "field": "extra.cachePricing.write5m",
+          "currentValue": 2.5,
+          "supportedValue": 2.5,
+          "sourceId": "anthropic-d82e15156c4c",
+          "assessment": "matches",
+          "explanation": "原厂Claude API标准USD / MTok；5m写入、1h写入与cache-read分开。"
+        },
+        {
+          "field": "extra.cachePricing.write1h",
+          "currentValue": 4,
+          "supportedValue": 4.0,
+          "sourceId": "anthropic-d82e15156c4c",
+          "assessment": "matches",
+          "explanation": "原厂Claude API标准USD / MTok；5m写入、1h写入与cache-read分开。"
+        },
+        {
+          "field": "extra.cachePricing.read",
+          "currentValue": 0.2,
+          "supportedValue": 0.2,
+          "sourceId": "anthropic-d82e15156c4c",
+          "assessment": "matches",
+          "explanation": "原厂Claude API标准USD / MTok；5m写入、1h写入与cache-read分开。"
+        }
+      ],
+      "remainingFields": [
+        "extra.samplingParametersDeprecated",
+        "extra.serverSideWebSearch.searchRequestPriceUsd"
+      ],
+      "nextAction": "逐字段审查上表候选；只有同一接入合同且语义/单位一致的证据才用于后续canonical更新。 剩余字段需精确型号页/官方API schema或已授权账号目录核查，不推导默认值。",
+      "notes": []
+    },
+    {
+      "recordKey": "compute/model-specs/anthropic.json#claude-sonnet-5",
+      "modelId": "claude-sonnet-5",
+      "config": "compute/model-specs/anthropic.json",
+      "sourceDoc": "docs/model-sources/providers/anthropic/models/claude-sonnet-5.md",
+      "outcome": "official-fields-found",
+      "sourceIds": [
+        "anthropic-a5d34a661466",
+        "anthropic-d82e15156c4c",
+        "anthropic-528c440a2ed8",
+        "anthropic-dc594301e778"
+      ],
+      "fieldEvidence": [
+        {
+          "field": "id",
+          "currentValue": "claude-sonnet-5",
+          "supportedValue": "claude-sonnet-5",
+          "sourceId": "anthropic-a5d34a661466",
+          "assessment": "matches",
+          "explanation": "精确API ID/文档明确Claude API alias。"
+        },
+        {
+          "field": "spec.contextWindow",
+          "currentValue": 1000000,
+          "supportedValue": 1000000,
+          "sourceId": "anthropic-a5d34a661466",
+          "assessment": "matches",
+          "explanation": "官网K/M按十进制token惯例展开；同步Messages上限，不是Batch beta300K。"
+        },
+        {
+          "field": "spec.maxOutputTokens",
+          "currentValue": 128000,
+          "supportedValue": 128000,
+          "sourceId": "anthropic-a5d34a661466",
+          "assessment": "matches",
+          "explanation": "官网K/M按十进制token惯例展开；同步Messages上限，不是Batch beta300K。"
+        },
+        {
+          "field": "accessReference.inputPrice",
+          "currentValue": null,
+          "supportedValue": 2.0,
+          "sourceId": "anthropic-d82e15156c4c",
+          "assessment": "not-comparable",
+          "explanation": "原厂Claude API标准USD / MTok；5m写入、1h写入与cache-read分开。 仅原厂接入计价参考，共享ModelSpec禁止写入价格。"
+        },
+        {
+          "field": "accessReference.outputPrice",
+          "currentValue": null,
+          "supportedValue": 10.0,
+          "sourceId": "anthropic-d82e15156c4c",
+          "assessment": "not-comparable",
+          "explanation": "原厂Claude API标准USD / MTok；5m写入、1h写入与cache-read分开。 仅原厂接入计价参考，共享ModelSpec禁止写入价格。"
+        },
+        {
+          "field": "spec.extra.adaptiveThinking",
+          "currentValue": true,
+          "supportedValue": true,
+          "sourceId": "anthropic-a5d34a661466",
+          "assessment": "matches",
+          "explanation": "该精确型号技术表列Adaptive；需要Messages协议，不泛化OpenAI网关。"
+        },
+        {
+          "field": "spec.supportsReasoning",
+          "currentValue": true,
+          "supportedValue": true,
+          "sourceId": "anthropic-a5d34a661466",
+          "assessment": "matches",
+          "explanation": "型号技术表列Thinking能力。"
+        },
+        {
+          "field": "spec.extra.reasoning.defaultEffort",
+          "currentValue": null,
+          "supportedValue": "high",
+          "sourceId": "anthropic-a5d34a661466",
+          "assessment": "differs",
+          "explanation": "Claude API默认；Claude Code订阅显式设置另核。"
+        },
+        {
+          "field": "spec.extra.reasoning.supportedEfforts",
+          "currentValue": null,
+          "supportedValue": [
+            "low",
+            "medium",
+            "high",
+            "xhigh",
+            "max"
+          ],
+          "sourceId": "anthropic-528c440a2ed8",
+          "assessment": "differs",
+          "explanation": "effort指南明确列本型号all five levels。"
+        },
+        {
+          "field": "accessReference.extra.cachePricing.write5m",
+          "currentValue": null,
+          "supportedValue": 2.5,
+          "sourceId": "anthropic-d82e15156c4c",
+          "assessment": "not-comparable",
+          "explanation": "原厂Claude API标准USD / MTok；5m写入、1h写入与cache-read分开。 仅原厂接入计价参考，共享ModelSpec禁止写入价格。"
+        },
+        {
+          "field": "accessReference.extra.cachePricing.write1h",
+          "currentValue": null,
+          "supportedValue": 4.0,
+          "sourceId": "anthropic-d82e15156c4c",
+          "assessment": "not-comparable",
+          "explanation": "原厂Claude API标准USD / MTok；5m写入、1h写入与cache-read分开。 仅原厂接入计价参考，共享ModelSpec禁止写入价格。"
+        },
+        {
+          "field": "accessReference.extra.cachePricing.read",
+          "currentValue": null,
+          "supportedValue": 0.2,
+          "sourceId": "anthropic-d82e15156c4c",
+          "assessment": "not-comparable",
+          "explanation": "原厂Claude API标准USD / MTok；5m写入、1h写入与cache-read分开。 仅原厂接入计价参考，共享ModelSpec禁止写入价格。"
+        }
+      ],
+      "remainingFields": [
+        "spec.extra.samplingParametersDeprecated"
+      ],
+      "nextAction": "逐字段审查上表候选；只有同一接入合同且语义/单位一致的证据才用于后续canonical更新。 剩余字段需精确型号页/官方API schema或已授权账号目录核查，不推导默认值。",
+      "notes": []
+    },
+    {
+      "recordKey": "compute/model-specs/anthropic.json#claude-sonnet",
+      "modelId": "claude-sonnet",
+      "config": "compute/model-specs/anthropic.json",
+      "sourceDoc": "docs/model-sources/providers/anthropic/models/claude-sonnet.md",
+      "outcome": "still-unresolved",
+      "sourceIds": [
+        "anthropic-dc594301e778"
+      ],
+      "fieldEvidence": [],
+      "remainingFields": [
+        "id",
+        "spec.contextWindow",
+        "spec.maxOutputTokens",
+        "spec.supportsReasoning"
+      ],
+      "nextAction": "逐字段审查上表候选；只有同一接入合同且语义/单位一致的证据才用于后续canonical更新。 剩余字段需精确型号页/官方API schema或已授权账号目录核查，不推导默认值。",
+      "notes": [
+        "泛家族兜底ID不等于官方精确型号；不能把最新Opus/Sonnet参数覆盖全部历史家族。"
+      ]
+    }
+  ]
+}

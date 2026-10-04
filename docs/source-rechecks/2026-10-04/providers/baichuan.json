@@ -1,0 +1,532 @@
+{
+  "supplier": "baichuan",
+  "checkedAt": "2026-10-04",
+  "sources": [
+    {
+      "id": "baichuan",
+      "url": "https://www.baichuan-ai.com/blog/baichuan-M3",
+      "finalUrl": "https://www.baichuan-ai.com/blog/baichuan-M3",
+      "publisher": "baichuan",
+      "kind": "official-docs",
+      "scope": "只适用于页面明确的原厂/地域/接入，套餐和聚合合同独立",
+      "retrieval": "blocked",
+      "summary": "<urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1081)>",
+      "digestKind": "not-recorded",
+      "retrievalMethod": "urllib.request HTTPS attempt failed before a usable response body was saved; error recorded, no content digest"
+    },
+    {
+      "id": "baichuan-platform",
+      "url": "https://platform.baichuan-ai.com/docs/api",
+      "finalUrl": "https://platform.baichuan-ai.com/docs/api",
+      "publisher": "baichuan",
+      "kind": "official-docs",
+      "scope": "只适用于页面明确的原厂/地域/接入，套餐和聚合合同独立",
+      "retrieval": "blocked",
+      "summary": "<urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1081)>",
+      "digestKind": "not-recorded",
+      "retrievalMethod": "urllib.request HTTPS attempt failed before a usable response body was saved; error recorded, no content digest"
+    },
+    {
+      "id": "baichuan-home",
+      "url": "https://www.baichuan-ai.com/",
+      "finalUrl": "https://www.baichuan-ai.com/",
+      "publisher": "baichuan",
+      "kind": "official-docs",
+      "scope": "只适用于页面明确的原厂/地域/接入，套餐和聚合合同独立",
+      "retrieval": "blocked",
+      "summary": "<urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1081)>",
+      "digestKind": "not-recorded",
+      "retrievalMethod": "urllib.request HTTPS attempt failed before a usable response body was saved; error recorded, no content digest"
+    },
+    {
+      "id": "baichuan-prices",
+      "url": "https://platform.baichuan-ai.com/prices",
+      "finalUrl": "https://platform.baichuan-ai.com/prices",
+      "publisher": "baichuan",
+      "kind": "official-docs",
+      "scope": "只适用于页面明确的原厂/地域/接入，套餐和聚合合同独立",
+      "retrieval": "blocked",
+      "summary": "<urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1081)>",
+      "digestKind": "not-recorded",
+      "retrievalMethod": "urllib.request HTTPS attempt failed before a usable response body was saved; error recorded, no content digest"
+    },
+    {
+      "id": "baichuan-model-card",
+      "url": "https://huggingface.co/baichuan-inc/Baichuan-M3-235B/raw/main/README.md",
+      "finalUrl": "https://huggingface.co/baichuan-inc/Baichuan-M3-235B/raw/main/README.md",
+      "publisher": "baichuan-inc official organization",
+      "kind": "official-model-card",
+      "scope": "开放权重Baichuan-M3-235B模型卡，不等同托管Baichuan-M3-Plus API合同",
+      "contentSha256": "a7b040182568a4971ab35c6e506d4cedb07627d76f53764989196371ed51170f",
+      "retrieval": "readable",
+      "summary": "实际读取8794字符，可见正文8651字符；需逐精确ID定位，HTTP成功不代表字段已证。",
+      "digestKind": "sha256-utf8-decoded-response-body",
+      "retrievalMethod": "urllib.request HTTPS response read; bytes decoded as UTF-8 with replacement, SHA-256 over decoded text re-encoded as UTF-8 before visible-text extraction; full HTML/Markdown/JSON body, not a raw-byte digest or vendor signature"
+    },
+    {
+      "id": "baichuan-prices-web",
+      "url": "https://platform.baichuan-ai.com/prices",
+      "finalUrl": "https://platform.baichuan-ai.com/prices",
+      "publisher": "Baichuan official platform",
+      "kind": "official-platform",
+      "retrieval": "readable",
+      "summary": "通过网页正文读取独立取得完整官方价格表：M3Plus输入0.005/输出0.009元每千token，M3 0.01/0.03，M2Plus0.01/0.03，M2 0.002/0.02；窗口均标32k；此页不证明最大输出、采样或视觉能力。Python请求该页仍TLS失败，两条读取记录分开。",
+      "scope": "国内百川按量API；千token→百万token价格乘1000，32k上下文未明确定义k换算",
+      "transport": "web-page-reader",
+      "digestKind": "not-recorded",
+      "retrievalMethod": "web.run open official page; readable page extraction; no original HTTP body or HTTP-byte digest obtained"
+    }
+  ],
+  "findings": [
+    {
+      "recordKey": "compute/providers/baichuan.json#Baichuan-M2-Plus",
+      "modelId": "Baichuan-M2-Plus",
+      "config": "compute/providers/baichuan.json",
+      "sourceDoc": "docs/model-sources/providers/baichuan/models/baichuan-m2-plus.md",
+      "outcome": "official-fields-found",
+      "sourceIds": [
+        "baichuan-prices-web"
+      ],
+      "fieldEvidence": [
+        {
+          "field": "modelName",
+          "currentValue": "Baichuan-M2-Plus",
+          "supportedValue": "Baichuan-M2-Plus",
+          "sourceId": "baichuan-prices-web",
+          "assessment": "matches",
+          "explanation": "官网价格表精确列出API模型名；主站旧文章TLS失败不妨碍此独立官方证据。"
+        },
+        {
+          "field": "contextWindow",
+          "currentValue": 32000,
+          "supportedValue": "32k",
+          "sourceId": "baichuan-prices-web",
+          "assessment": "not-comparable",
+          "explanation": "官网上下文32k未明确定义换算；最大输出并未给，不能把32k上下文同时填输出。"
+        },
+        {
+          "field": "inputPrice",
+          "currentValue": 10,
+          "supportedValue": 10,
+          "sourceId": "baichuan-prices-web",
+          "assessment": "matches",
+          "explanation": "官网元/千token乘1000→元/百万token；Plus另有医疗搜索0.03元/次，不含在token价。"
+        },
+        {
+          "field": "outputPrice",
+          "currentValue": 30,
+          "supportedValue": 30,
+          "sourceId": "baichuan-prices-web",
+          "assessment": "matches",
+          "explanation": "官网元/千token乘1000→元/百万token；Plus另有医疗搜索0.03元/次，不含在token价。"
+        }
+      ],
+      "remainingFields": [
+        "contextWindow",
+        "defaultTemperature",
+        "defaultTopP",
+        "maxOutputTokens",
+        "capabilities",
+        "serviceType",
+        "access.maxInputTokens",
+        "access.protocol-readiness"
+      ],
+      "nextAction": "人工逐字段复核本次候选；只将matches且精确接入适用的字段迁入原来源文档，differs先审单位/阶梯/产品默认；缺项需精确模型页、官方版本卡或授权目录，不猜填。",
+      "notes": [
+        "模型卡Baichuan-M3-235B的开放权重、训练与医疗能力不是托管M3-Plus规格；当前视觉/最大输出/采样默认没有取得字段证明。"
+      ],
+      "originalStatus": "pending",
+      "originalGap": "blocked"
+    },
+    {
+      "recordKey": "compute/model-specs/baichuan.json#Baichuan-M2-Plus",
+      "modelId": "Baichuan-M2-Plus",
+      "config": "compute/model-specs/baichuan.json",
+      "sourceDoc": "docs/model-sources/providers/baichuan/models/baichuan-m2-plus.md",
+      "outcome": "official-identity-only",
+      "sourceIds": [
+        "baichuan-prices-web"
+      ],
+      "fieldEvidence": [
+        {
+          "field": "id",
+          "currentValue": "Baichuan-M2-Plus",
+          "supportedValue": "Baichuan-M2-Plus",
+          "sourceId": "baichuan-prices-web",
+          "assessment": "matches",
+          "explanation": "官网价格表精确列出API模型名；主站旧文章TLS失败不妨碍此独立官方证据。"
+        },
+        {
+          "field": "spec.contextWindow",
+          "currentValue": 32000,
+          "supportedValue": "32k",
+          "sourceId": "baichuan-prices-web",
+          "assessment": "not-comparable",
+          "explanation": "官网上下文32k未明确定义换算；最大输出并未给，不能把32k上下文同时填输出。"
+        }
+      ],
+      "remainingFields": [
+        "spec.contextWindow",
+        "spec.defaultTemperature",
+        "spec.maxOutputTokens",
+        "spec.capabilities",
+        "spec.serviceType"
+      ],
+      "nextAction": "人工逐字段复核本次候选；只将matches且精确接入适用的字段迁入原来源文档，differs先审单位/阶梯/产品默认；缺项需精确模型页、官方版本卡或授权目录，不猜填。",
+      "notes": [
+        "模型卡Baichuan-M3-235B的开放权重、训练与医疗能力不是托管M3-Plus规格；当前视觉/最大输出/采样默认没有取得字段证明。"
+      ],
+      "originalStatus": "pending",
+      "originalGap": "blocked"
+    },
+    {
+      "recordKey": "compute/providers/baichuan.json#Baichuan-M2",
+      "modelId": "Baichuan-M2",
+      "config": "compute/providers/baichuan.json",
+      "sourceDoc": "docs/model-sources/providers/baichuan/models/baichuan-m2.md",
+      "outcome": "official-fields-found",
+      "sourceIds": [
+        "baichuan-model-card",
+        "baichuan-prices-web"
+      ],
+      "fieldEvidence": [
+        {
+          "field": "modelName",
+          "currentValue": "Baichuan-M2",
+          "supportedValue": "Baichuan-M2",
+          "sourceId": "baichuan-model-card",
+          "assessment": "matches",
+          "explanation": "本轮正文定位精确标识；只确认该标识在其来源合同出现，不证明其他字段或不同套餐可用性。"
+        },
+        {
+          "field": "modelName",
+          "currentValue": "Baichuan-M2",
+          "supportedValue": "Baichuan-M2",
+          "sourceId": "baichuan-prices-web",
+          "assessment": "matches",
+          "explanation": "官网价格表精确列出API模型名；主站旧文章TLS失败不妨碍此独立官方证据。"
+        },
+        {
+          "field": "contextWindow",
+          "currentValue": 32000,
+          "supportedValue": "32k",
+          "sourceId": "baichuan-prices-web",
+          "assessment": "not-comparable",
+          "explanation": "官网上下文32k未明确定义换算；最大输出并未给，不能把32k上下文同时填输出。"
+        },
+        {
+          "field": "inputPrice",
+          "currentValue": 2,
+          "supportedValue": 2,
+          "sourceId": "baichuan-prices-web",
+          "assessment": "matches",
+          "explanation": "官网元/千token乘1000→元/百万token；Plus另有医疗搜索0.03元/次，不含在token价。"
+        },
+        {
+          "field": "outputPrice",
+          "currentValue": 20,
+          "supportedValue": 20,
+          "sourceId": "baichuan-prices-web",
+          "assessment": "matches",
+          "explanation": "官网元/千token乘1000→元/百万token；Plus另有医疗搜索0.03元/次，不含在token价。"
+        }
+      ],
+      "remainingFields": [
+        "contextWindow",
+        "defaultTemperature",
+        "defaultTopP",
+        "maxOutputTokens",
+        "capabilities",
+        "serviceType",
+        "access.maxInputTokens",
+        "access.protocol-readiness"
+      ],
+      "nextAction": "人工逐字段复核本次候选；只将matches且精确接入适用的字段迁入原来源文档，differs先审单位/阶梯/产品默认；缺项需精确模型页、官方版本卡或授权目录，不猜填。",
+      "notes": [
+        "模型卡Baichuan-M3-235B的开放权重、训练与医疗能力不是托管M3-Plus规格；当前视觉/最大输出/采样默认没有取得字段证明。"
+      ],
+      "originalStatus": "pending",
+      "originalGap": "blocked"
+    },
+    {
+      "recordKey": "compute/model-specs/baichuan.json#Baichuan-M2",
+      "modelId": "Baichuan-M2",
+      "config": "compute/model-specs/baichuan.json",
+      "sourceDoc": "docs/model-sources/providers/baichuan/models/baichuan-m2.md",
+      "outcome": "official-identity-only",
+      "sourceIds": [
+        "baichuan-model-card",
+        "baichuan-prices-web"
+      ],
+      "fieldEvidence": [
+        {
+          "field": "id",
+          "currentValue": "Baichuan-M2",
+          "supportedValue": "Baichuan-M2",
+          "sourceId": "baichuan-model-card",
+          "assessment": "matches",
+          "explanation": "本轮正文定位精确标识；只确认该标识在其来源合同出现，不证明其他字段或不同套餐可用性。"
+        },
+        {
+          "field": "id",
+          "currentValue": "Baichuan-M2",
+          "supportedValue": "Baichuan-M2",
+          "sourceId": "baichuan-prices-web",
+          "assessment": "matches",
+          "explanation": "官网价格表精确列出API模型名；主站旧文章TLS失败不妨碍此独立官方证据。"
+        },
+        {
+          "field": "spec.contextWindow",
+          "currentValue": 32000,
+          "supportedValue": "32k",
+          "sourceId": "baichuan-prices-web",
+          "assessment": "not-comparable",
+          "explanation": "官网上下文32k未明确定义换算；最大输出并未给，不能把32k上下文同时填输出。"
+        }
+      ],
+      "remainingFields": [
+        "spec.contextWindow",
+        "spec.defaultTemperature",
+        "spec.maxOutputTokens",
+        "spec.capabilities",
+        "spec.serviceType"
+      ],
+      "nextAction": "人工逐字段复核本次候选；只将matches且精确接入适用的字段迁入原来源文档，differs先审单位/阶梯/产品默认；缺项需精确模型页、官方版本卡或授权目录，不猜填。",
+      "notes": [
+        "模型卡Baichuan-M3-235B的开放权重、训练与医疗能力不是托管M3-Plus规格；当前视觉/最大输出/采样默认没有取得字段证明。"
+      ],
+      "originalStatus": "pending",
+      "originalGap": "blocked"
+    },
+    {
+      "recordKey": "compute/providers/baichuan.json#Baichuan-M3-Plus",
+      "modelId": "Baichuan-M3-Plus",
+      "config": "compute/providers/baichuan.json",
+      "sourceDoc": "docs/model-sources/providers/baichuan/models/baichuan-m3-plus.md",
+      "outcome": "official-fields-found",
+      "sourceIds": [
+        "baichuan-prices-web"
+      ],
+      "fieldEvidence": [
+        {
+          "field": "modelName",
+          "currentValue": "Baichuan-M3-Plus",
+          "supportedValue": "Baichuan-M3-Plus",
+          "sourceId": "baichuan-prices-web",
+          "assessment": "matches",
+          "explanation": "官网价格表精确列出API模型名；主站旧文章TLS失败不妨碍此独立官方证据。"
+        },
+        {
+          "field": "contextWindow",
+          "currentValue": 32000,
+          "supportedValue": "32k",
+          "sourceId": "baichuan-prices-web",
+          "assessment": "not-comparable",
+          "explanation": "官网上下文32k未明确定义换算；最大输出并未给，不能把32k上下文同时填输出。"
+        },
+        {
+          "field": "inputPrice",
+          "currentValue": 5,
+          "supportedValue": 5,
+          "sourceId": "baichuan-prices-web",
+          "assessment": "matches",
+          "explanation": "官网元/千token乘1000→元/百万token；Plus另有医疗搜索0.03元/次，不含在token价。"
+        },
+        {
+          "field": "outputPrice",
+          "currentValue": 9,
+          "supportedValue": 9,
+          "sourceId": "baichuan-prices-web",
+          "assessment": "matches",
+          "explanation": "官网元/千token乘1000→元/百万token；Plus另有医疗搜索0.03元/次，不含在token价。"
+        }
+      ],
+      "remainingFields": [
+        "contextWindow",
+        "defaultTemperature",
+        "defaultTopP",
+        "maxOutputTokens",
+        "capabilities",
+        "serviceType",
+        "access.maxInputTokens",
+        "access.protocol-readiness"
+      ],
+      "nextAction": "人工逐字段复核本次候选；只将matches且精确接入适用的字段迁入原来源文档，differs先审单位/阶梯/产品默认；缺项需精确模型页、官方版本卡或授权目录，不猜填。",
+      "notes": [
+        "模型卡Baichuan-M3-235B的开放权重、训练与医疗能力不是托管M3-Plus规格；当前视觉/最大输出/采样默认没有取得字段证明。"
+      ],
+      "originalStatus": "pending",
+      "originalGap": "blocked"
+    },
+    {
+      "recordKey": "compute/model-specs/baichuan.json#Baichuan-M3-Plus",
+      "modelId": "Baichuan-M3-Plus",
+      "config": "compute/model-specs/baichuan.json",
+      "sourceDoc": "docs/model-sources/providers/baichuan/models/baichuan-m3-plus.md",
+      "outcome": "official-identity-only",
+      "sourceIds": [
+        "baichuan-prices-web"
+      ],
+      "fieldEvidence": [
+        {
+          "field": "id",
+          "currentValue": "Baichuan-M3-Plus",
+          "supportedValue": "Baichuan-M3-Plus",
+          "sourceId": "baichuan-prices-web",
+          "assessment": "matches",
+          "explanation": "官网价格表精确列出API模型名；主站旧文章TLS失败不妨碍此独立官方证据。"
+        },
+        {
+          "field": "spec.contextWindow",
+          "currentValue": 32000,
+          "supportedValue": "32k",
+          "sourceId": "baichuan-prices-web",
+          "assessment": "not-comparable",
+          "explanation": "官网上下文32k未明确定义换算；最大输出并未给，不能把32k上下文同时填输出。"
+        }
+      ],
+      "remainingFields": [
+        "spec.contextWindow",
+        "spec.defaultTemperature",
+        "spec.maxOutputTokens",
+        "spec.capabilities",
+        "spec.serviceType"
+      ],
+      "nextAction": "人工逐字段复核本次候选；只将matches且精确接入适用的字段迁入原来源文档，differs先审单位/阶梯/产品默认；缺项需精确模型页、官方版本卡或授权目录，不猜填。",
+      "notes": [
+        "模型卡Baichuan-M3-235B的开放权重、训练与医疗能力不是托管M3-Plus规格；当前视觉/最大输出/采样默认没有取得字段证明。"
+      ],
+      "originalStatus": "pending",
+      "originalGap": "blocked"
+    },
+    {
+      "recordKey": "compute/providers/baichuan.json#Baichuan-M3",
+      "modelId": "Baichuan-M3",
+      "config": "compute/providers/baichuan.json",
+      "sourceDoc": "docs/model-sources/providers/baichuan/models/baichuan-m3.md",
+      "outcome": "official-fields-found",
+      "sourceIds": [
+        "baichuan-model-card",
+        "baichuan-prices-web"
+      ],
+      "fieldEvidence": [
+        {
+          "field": "modelName",
+          "currentValue": "Baichuan-M3",
+          "supportedValue": "Baichuan-M3",
+          "sourceId": "baichuan-model-card",
+          "assessment": "matches",
+          "explanation": "本轮正文定位精确标识；只确认该标识在其来源合同出现，不证明其他字段或不同套餐可用性。"
+        },
+        {
+          "field": "modelName",
+          "currentValue": "Baichuan-M3",
+          "supportedValue": "Baichuan-M3",
+          "sourceId": "baichuan-prices-web",
+          "assessment": "matches",
+          "explanation": "官网价格表精确列出API模型名；主站旧文章TLS失败不妨碍此独立官方证据。"
+        },
+        {
+          "field": "contextWindow",
+          "currentValue": 32000,
+          "supportedValue": "32k",
+          "sourceId": "baichuan-prices-web",
+          "assessment": "not-comparable",
+          "explanation": "官网上下文32k未明确定义换算；最大输出并未给，不能把32k上下文同时填输出。"
+        },
+        {
+          "field": "inputPrice",
+          "currentValue": 10,
+          "supportedValue": 10,
+          "sourceId": "baichuan-prices-web",
+          "assessment": "matches",
+          "explanation": "官网元/千token乘1000→元/百万token；Plus另有医疗搜索0.03元/次，不含在token价。"
+        },
+        {
+          "field": "outputPrice",
+          "currentValue": 30,
+          "supportedValue": 30,
+          "sourceId": "baichuan-prices-web",
+          "assessment": "matches",
+          "explanation": "官网元/千token乘1000→元/百万token；Plus另有医疗搜索0.03元/次，不含在token价。"
+        }
+      ],
+      "remainingFields": [
+        "contextWindow",
+        "defaultTemperature",
+        "defaultTopP",
+        "maxOutputTokens",
+        "capabilities",
+        "serviceType",
+        "access.maxInputTokens",
+        "access.protocol-readiness"
+      ],
+      "nextAction": "人工逐字段复核本次候选；只将matches且精确接入适用的字段迁入原来源文档，differs先审单位/阶梯/产品默认；缺项需精确模型页、官方版本卡或授权目录，不猜填。",
+      "notes": [
+        "模型卡Baichuan-M3-235B的开放权重、训练与医疗能力不是托管M3-Plus规格；当前视觉/最大输出/采样默认没有取得字段证明。"
+      ],
+      "originalStatus": "pending",
+      "originalGap": "blocked"
+    },
+    {
+      "recordKey": "compute/model-specs/baichuan.json#Baichuan-M3",
+      "modelId": "Baichuan-M3",
+      "config": "compute/model-specs/baichuan.json",
+      "sourceDoc": "docs/model-sources/providers/baichuan/models/baichuan-m3.md",
+      "outcome": "official-identity-only",
+      "sourceIds": [
+        "baichuan-model-card",
+        "baichuan-prices-web"
+      ],
+      "fieldEvidence": [
+        {
+          "field": "id",
+          "currentValue": "Baichuan-M3",
+          "supportedValue": "Baichuan-M3",
+          "sourceId": "baichuan-model-card",
+          "assessment": "matches",
+          "explanation": "本轮正文定位精确标识；只确认该标识在其来源合同出现，不证明其他字段或不同套餐可用性。"
+        },
+        {
+          "field": "id",
+          "currentValue": "Baichuan-M3",
+          "supportedValue": "Baichuan-M3",
+          "sourceId": "baichuan-prices-web",
+          "assessment": "matches",
+          "explanation": "官网价格表精确列出API模型名；主站旧文章TLS失败不妨碍此独立官方证据。"
+        },
+        {
+          "field": "spec.contextWindow",
+          "currentValue": 32000,
+          "supportedValue": "32k",
+          "sourceId": "baichuan-prices-web",
+          "assessment": "not-comparable",
+          "explanation": "官网上下文32k未明确定义换算；最大输出并未给，不能把32k上下文同时填输出。"
+        }
+      ],
+      "remainingFields": [
+        "spec.contextWindow",
+        "spec.defaultTemperature",
+        "spec.maxOutputTokens",
+        "spec.capabilities",
+        "spec.serviceType"
+      ],
+      "nextAction": "人工逐字段复核本次候选；只将matches且精确接入适用的字段迁入原来源文档，differs先审单位/阶梯/产品默认；缺项需精确模型页、官方版本卡或授权目录，不猜填。",
+      "notes": [
+        "模型卡Baichuan-M3-235B的开放权重、训练与医疗能力不是托管M3-Plus规格；当前视觉/最大输出/采样默认没有取得字段证明。"
+      ],
+      "originalStatus": "pending",
+      "originalGap": "blocked"
+    }
+  ],
+  "coverage": {
+    "records": 8,
+    "sourceAttempts": 6,
+    "readableSources": 2,
+    "outcomes": {
+      "official-fields-found": 4,
+      "official-identity-only": 4
+    }
+  },
+  "boundary": "本轮只保存核查候选，未更改canonical、既有来源核验状态、指纹或manifest；可读正文和ID存在不是全参数/账号验收。"
+}

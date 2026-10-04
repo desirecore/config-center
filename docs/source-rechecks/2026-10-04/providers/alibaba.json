@@ -1,0 +1,5436 @@
+{
+  "supplier": "alibaba",
+  "checkedAt": "2026-10-04",
+  "sources": [
+    {
+      "id": "page-minimax-m2-5",
+      "url": "https://help.aliyun.com/zh/model-studio/minimax-m2-5",
+      "finalUrl": "https://help.aliyun.com/zh/model-studio/minimax-m2-5",
+      "publisher": "alibaba",
+      "kind": "official-docs",
+      "retrieval": "readable",
+      "summary": "已读取HTTP正文；模型数字只按该页精确型号和接入记录。",
+      "scope": "阿里云百炼公开模型API，数值为华北2北京页面原价/托管合同；不是Coding/TokenPlan限制。",
+      "contentSha256": "caec84c0ed031e1a863b913a5e9969f165920e997a4a95a5074375d8f9884155",
+      "retrievalMethod": "http-body-htmlparser",
+      "contentDigestKind": "htmlparser-visible-text-not-raw-http-bytes"
+    },
+    {
+      "id": "page-cosyvoice-clone",
+      "url": "https://help.aliyun.com/zh/model-studio/cosyvoice-clone",
+      "finalUrl": "https://help.aliyun.com/zh/model-studio/cosyvoice-clone",
+      "publisher": "alibaba",
+      "kind": "official-docs",
+      "retrieval": "not-found",
+      "summary": "返回页面壳/空正文/404，不能作为字段证明",
+      "scope": "阿里云百炼公开模型API，数值为华北2北京页面原价/托管合同；不是Coding/TokenPlan限制。",
+      "contentSha256": "baada60034a93bf2ca3ca83184412cf546aca672afc4ae8f3dfa6340e5a24655",
+      "retrievalMethod": "http-body-htmlparser",
+      "contentDigestKind": "htmlparser-visible-text-not-raw-http-bytes"
+    },
+    {
+      "id": "page-cosyvoice-v2",
+      "url": "https://help.aliyun.com/zh/model-studio/cosyvoice-v2",
+      "finalUrl": "https://help.aliyun.com/zh/model-studio/cosyvoice-v2",
+      "publisher": "alibaba",
+      "kind": "official-docs",
+      "retrieval": "readable",
+      "summary": "已读取HTTP正文；模型数字只按该页精确型号和接入记录。",
+      "scope": "阿里云百炼公开模型API，数值为华北2北京页面原价/托管合同；不是Coding/TokenPlan限制。",
+      "contentSha256": "d8fb1683bc7c56971e1cb89eece9b7e4199af106937a3cbda6cc38cd0067439f",
+      "retrievalMethod": "http-body-htmlparser",
+      "contentDigestKind": "htmlparser-visible-text-not-raw-http-bytes"
+    },
+    {
+      "id": "page-deepseek-v4-flash-0731",
+      "url": "https://help.aliyun.com/zh/model-studio/deepseek-v4-flash-0731",
+      "finalUrl": "https://help.aliyun.com/zh/model-studio/deepseek-v4-flash-0731",
+      "publisher": "alibaba",
+      "kind": "official-docs",
+      "retrieval": "not-found",
+      "summary": "返回页面壳/空正文/404，不能作为字段证明",
+      "scope": "阿里云百炼公开模型API，数值为华北2北京页面原价/托管合同；不是Coding/TokenPlan限制。",
+      "contentSha256": "baada60034a93bf2ca3ca83184412cf546aca672afc4ae8f3dfa6340e5a24655",
+      "retrievalMethod": "http-body-htmlparser",
+      "contentDigestKind": "htmlparser-visible-text-not-raw-http-bytes"
+    },
+    {
+      "id": "page-deepseek-v4-pro",
+      "url": "https://help.aliyun.com/zh/model-studio/deepseek-v4-pro",
+      "finalUrl": "https://help.aliyun.com/zh/model-studio/deepseek-v4-pro",
+      "publisher": "alibaba",
+      "kind": "official-docs",
+      "retrieval": "readable",
+      "summary": "已读取HTTP正文；模型数字只按该页精确型号和接入记录。",
+      "scope": "阿里云百炼公开模型API，数值为华北2北京页面原价/托管合同；不是Coding/TokenPlan限制。",
+      "contentSha256": "b45d19d08d1e8d1a39ad28d277368b3e05ca05955ad44996493aa47f772f390b",
+      "retrievalMethod": "http-body-htmlparser",
+      "contentDigestKind": "htmlparser-visible-text-not-raw-http-bytes"
+    },
+    {
+      "id": "page-deepseek-v4-pro-0813",
+      "url": "https://help.aliyun.com/zh/model-studio/deepseek-v4-pro-0813",
+      "finalUrl": "https://help.aliyun.com/zh/model-studio/deepseek-v4-pro-0813",
+      "publisher": "alibaba",
+      "kind": "official-docs",
+      "retrieval": "not-found",
+      "summary": "返回页面壳/空正文/404，不能作为字段证明",
+      "scope": "阿里云百炼公开模型API，数值为华北2北京页面原价/托管合同；不是Coding/TokenPlan限制。",
+      "contentSha256": "baada60034a93bf2ca3ca83184412cf546aca672afc4ae8f3dfa6340e5a24655",
+      "retrievalMethod": "http-body-htmlparser",
+      "contentDigestKind": "htmlparser-visible-text-not-raw-http-bytes"
+    },
+    {
+      "id": "page-deepseek-v4-1-flash",
+      "url": "https://help.aliyun.com/zh/model-studio/deepseek-v4-1-flash",
+      "finalUrl": "https://help.aliyun.com/zh/model-studio/deepseek-v4-1-flash",
+      "publisher": "alibaba",
+      "kind": "official-docs",
+      "retrieval": "readable",
+      "summary": "已读取HTTP正文；模型数字只按该页精确型号和接入记录。",
+      "scope": "阿里云百炼公开模型API，数值为华北2北京页面原价/托管合同；不是Coding/TokenPlan限制。",
+      "contentSha256": "d11571198f4a3307af80c74d96ef6fbc9c512e94abc8e28a5072e3ef58e2e465",
+      "retrievalMethod": "http-body-htmlparser",
+      "contentDigestKind": "htmlparser-visible-text-not-raw-http-bytes"
+    },
+    {
+      "id": "page-glm-4-7",
+      "url": "https://help.aliyun.com/zh/model-studio/glm-4-7",
+      "finalUrl": "https://help.aliyun.com/zh/model-studio/glm-4-7",
+      "publisher": "alibaba",
+      "kind": "official-docs",
+      "retrieval": "readable",
+      "summary": "已读取HTTP正文；模型数字只按该页精确型号和接入记录。",
+      "scope": "阿里云百炼公开模型API，数值为华北2北京页面原价/托管合同；不是Coding/TokenPlan限制。",
+      "contentSha256": "ce6ceb2549a8069420953ab027dd1ca1efc36017331f96b181bbd4605c93f067",
+      "retrievalMethod": "http-body-htmlparser",
+      "contentDigestKind": "htmlparser-visible-text-not-raw-http-bytes"
+    },
+    {
+      "id": "page-glm-5",
+      "url": "https://help.aliyun.com/zh/model-studio/glm-5",
+      "finalUrl": "https://help.aliyun.com/zh/model-studio/glm-5",
+      "publisher": "alibaba",
+      "kind": "official-docs",
+      "retrieval": "not-found",
+      "summary": "返回页面壳/空正文/404，不能作为字段证明",
+      "scope": "阿里云百炼公开模型API，数值为华北2北京页面原价/托管合同；不是Coding/TokenPlan限制。",
+      "contentSha256": "baada60034a93bf2ca3ca83184412cf546aca672afc4ae8f3dfa6340e5a24655",
+      "retrievalMethod": "http-body-htmlparser",
+      "contentDigestKind": "htmlparser-visible-text-not-raw-http-bytes"
+    },
+    {
+      "id": "page-glm-5-2",
+      "url": "https://help.aliyun.com/zh/model-studio/glm-5-2",
+      "finalUrl": "https://help.aliyun.com/zh/model-studio/glm-5-2",
+      "publisher": "alibaba",
+      "kind": "official-docs",
+      "retrieval": "readable",
+      "summary": "已读取HTTP正文；模型数字只按该页精确型号和接入记录。",
+      "scope": "阿里云百炼公开模型API，数值为华北2北京页面原价/托管合同；不是Coding/TokenPlan限制。",
+      "contentSha256": "8610159e09ee36a43814692b82c96ba4f6d14846e10e87c1d327902d32c7bc86",
+      "retrievalMethod": "http-body-htmlparser",
+      "contentDigestKind": "htmlparser-visible-text-not-raw-http-bytes"
+    },
+    {
+      "id": "page-glm-5-3",
+      "url": "https://help.aliyun.com/zh/model-studio/glm-5-3",
+      "finalUrl": "https://help.aliyun.com/zh/model-studio/glm-5-3",
+      "publisher": "alibaba",
+      "kind": "official-docs",
+      "retrieval": "readable",
+      "summary": "已读取HTTP正文；模型数字只按该页精确型号和接入记录。",
+      "scope": "阿里云百炼公开模型API，数值为华北2北京页面原价/托管合同；不是Coding/TokenPlan限制。",
+      "contentSha256": "7c7d1bea2bca70a88523fcfa5bc0571f386726b8e0dbbb72a970498ebce05300",
+      "retrievalMethod": "http-body-htmlparser",
+      "contentDigestKind": "htmlparser-visible-text-not-raw-http-bytes"
+    },
+    {
+      "id": "page-happyhorse-1-0-i2v",
+      "url": "https://help.aliyun.com/zh/model-studio/happyhorse-1-0-i2v",
+      "finalUrl": "https://help.aliyun.com/zh/model-studio/happyhorse-1-0-i2v",
+      "publisher": "alibaba",
+      "kind": "official-docs",
+      "retrieval": "readable",
+      "summary": "已读取HTTP正文；模型数字只按该页精确型号和接入记录。",
+      "scope": "阿里云百炼公开模型API，数值为华北2北京页面原价/托管合同；不是Coding/TokenPlan限制。",
+      "contentSha256": "de02e821a27a4b549691af824c3dc07e40ba4c3d04885bf873e0733d8a12abc0",
+      "retrievalMethod": "http-body-htmlparser",
+      "contentDigestKind": "htmlparser-visible-text-not-raw-http-bytes"
+    },
+    {
+      "id": "page-happyhorse-1-0-r2v",
+      "url": "https://help.aliyun.com/zh/model-studio/happyhorse-1-0-r2v",
+      "finalUrl": "https://help.aliyun.com/zh/model-studio/happyhorse-1-0-r2v",
+      "publisher": "alibaba",
+      "kind": "official-docs",
+      "retrieval": "readable",
+      "summary": "已读取HTTP正文；模型数字只按该页精确型号和接入记录。",
+      "scope": "阿里云百炼公开模型API，数值为华北2北京页面原价/托管合同；不是Coding/TokenPlan限制。",
+      "contentSha256": "aa4a6155c61bf2faf9fbb8e83f114bde7fe627827dd338f6a41ac927a41a5b02",
+      "retrievalMethod": "http-body-htmlparser",
+      "contentDigestKind": "htmlparser-visible-text-not-raw-http-bytes"
+    },
+    {
+      "id": "page-happyhorse-1-0-t2v",
+      "url": "https://help.aliyun.com/zh/model-studio/happyhorse-1-0-t2v",
+      "finalUrl": "https://help.aliyun.com/zh/model-studio/happyhorse-1-0-t2v",
+      "publisher": "alibaba",
+      "kind": "official-docs",
+      "retrieval": "readable",
+      "summary": "已读取HTTP正文；模型数字只按该页精确型号和接入记录。",
+      "scope": "阿里云百炼公开模型API，数值为华北2北京页面原价/托管合同；不是Coding/TokenPlan限制。",
+      "contentSha256": "3b5a6778506e86d032735f9f3cc63bc76f51f62603c2e7ae7920c7a0d96aa6dc",
+      "retrievalMethod": "http-body-htmlparser",
+      "contentDigestKind": "htmlparser-visible-text-not-raw-http-bytes"
+    },
+    {
+      "id": "page-happyhorse-1-1-i2v",
+      "url": "https://help.aliyun.com/zh/model-studio/happyhorse-1-1-i2v",
+      "finalUrl": "https://help.aliyun.com/zh/model-studio/happyhorse-1-1-i2v",
+      "publisher": "alibaba",
+      "kind": "official-docs",
+      "retrieval": "readable",
+      "summary": "已读取HTTP正文；模型数字只按该页精确型号和接入记录。",
+      "scope": "阿里云百炼公开模型API，数值为华北2北京页面原价/托管合同；不是Coding/TokenPlan限制。",
+      "contentSha256": "0d8df78529caa5e2fd763376c9d14324dd7c2fba38aed927fdeb5fb502b8e45a",
+      "retrievalMethod": "http-body-htmlparser",
+      "contentDigestKind": "htmlparser-visible-text-not-raw-http-bytes"
+    },
+    {
+      "id": "page-happyhorse-1-1-r2v",
+      "url": "https://help.aliyun.com/zh/model-studio/happyhorse-1-1-r2v",
+      "finalUrl": "https://help.aliyun.com/zh/model-studio/happyhorse-1-1-r2v",
+      "publisher": "alibaba",
+      "kind": "official-docs",
+      "retrieval": "readable",
+      "summary": "已读取HTTP正文；模型数字只按该页精确型号和接入记录。",
+      "scope": "阿里云百炼公开模型API，数值为华北2北京页面原价/托管合同；不是Coding/TokenPlan限制。",
+      "contentSha256": "9f63afadf568d885dd7bc4ab0dd4d32dd1c868b6eb11bcaa0b5ce7a98a126cc4",
+      "retrievalMethod": "http-body-htmlparser",
+      "contentDigestKind": "htmlparser-visible-text-not-raw-http-bytes"
+    },
+    {
+      "id": "page-happyhorse-1-1-t2v",
+      "url": "https://help.aliyun.com/zh/model-studio/happyhorse-1-1-t2v",
+      "finalUrl": "https://help.aliyun.com/zh/model-studio/happyhorse-1-1-t2v",
+      "publisher": "alibaba",
+      "kind": "official-docs",
+      "retrieval": "readable",
+      "summary": "已读取HTTP正文；模型数字只按该页精确型号和接入记录。",
+      "scope": "阿里云百炼公开模型API，数值为华北2北京页面原价/托管合同；不是Coding/TokenPlan限制。",
+      "contentSha256": "6b3195380950d33614bb60cc493fc482bb9c70a5ddf2c90d3e280b69f8462b8d",
+      "retrievalMethod": "http-body-htmlparser",
+      "contentDigestKind": "htmlparser-visible-text-not-raw-http-bytes"
+    },
+    {
+      "id": "page-kimi-k2-5",
+      "url": "https://help.aliyun.com/zh/model-studio/kimi-k2-5",
+      "finalUrl": "https://help.aliyun.com/zh/model-studio/kimi-k2-5",
+      "publisher": "alibaba",
+      "kind": "official-docs",
+      "retrieval": "readable",
+      "summary": "已读取HTTP正文；模型数字只按该页精确型号和接入记录。",
+      "scope": "阿里云百炼公开模型API，数值为华北2北京页面原价/托管合同；不是Coding/TokenPlan限制。",
+      "contentSha256": "945614976139bafdd182c2e0457e3e1fb26d706310bf2d11b66063262462ca8e",
+      "retrievalMethod": "http-body-htmlparser",
+      "contentDigestKind": "htmlparser-visible-text-not-raw-http-bytes"
+    },
+    {
+      "id": "page-paraformer-v2",
+      "url": "https://help.aliyun.com/zh/model-studio/paraformer-v2",
+      "finalUrl": "https://help.aliyun.com/zh/model-studio/paraformer-v2",
+      "publisher": "alibaba",
+      "kind": "official-docs",
+      "retrieval": "readable",
+      "summary": "已读取HTTP正文；模型数字只按该页精确型号和接入记录。",
+      "scope": "阿里云百炼公开模型API，数值为华北2北京页面原价/托管合同；不是Coding/TokenPlan限制。",
+      "contentSha256": "2cb2e50da6b135045c9125fc2bcc112877f78c8a82d01bfa8a5a0f175e17a2f6",
+      "retrievalMethod": "http-body-htmlparser",
+      "contentDigestKind": "htmlparser-visible-text-not-raw-http-bytes"
+    },
+    {
+      "id": "page-qwen-image-2-0",
+      "url": "https://help.aliyun.com/zh/model-studio/qwen-image-2-0",
+      "finalUrl": "https://help.aliyun.com/zh/model-studio/qwen-image-2-0",
+      "publisher": "alibaba",
+      "kind": "official-docs",
+      "retrieval": "readable",
+      "summary": "已读取HTTP正文；模型数字只按该页精确型号和接入记录。",
+      "scope": "阿里云百炼公开模型API，数值为华北2北京页面原价/托管合同；不是Coding/TokenPlan限制。",
+      "contentSha256": "7c3968b740c9d097ebb5bb7abad860e6c40f7f5d168865a6e169cdf6d296128f",
+      "retrievalMethod": "http-body-htmlparser",
+      "contentDigestKind": "htmlparser-visible-text-not-raw-http-bytes"
+    },
+    {
+      "id": "page-qwen-image-2-0-pro",
+      "url": "https://help.aliyun.com/zh/model-studio/qwen-image-2-0-pro",
+      "finalUrl": "https://help.aliyun.com/zh/model-studio/qwen-image-2-0-pro",
+      "publisher": "alibaba",
+      "kind": "official-docs",
+      "retrieval": "readable",
+      "summary": "已读取HTTP正文；模型数字只按该页精确型号和接入记录。",
+      "scope": "阿里云百炼公开模型API，数值为华北2北京页面原价/托管合同；不是Coding/TokenPlan限制。",
+      "contentSha256": "56f82bbd6e10164dbd9ce073c5749ad7c87a5f8eea03e2eead2acb6835eb31ee",
+      "retrievalMethod": "http-body-htmlparser",
+      "contentDigestKind": "htmlparser-visible-text-not-raw-http-bytes"
+    },
+    {
+      "id": "page-qwen-image-3-0",
+      "url": "https://help.aliyun.com/zh/model-studio/qwen-image-3-0",
+      "finalUrl": "https://help.aliyun.com/zh/model-studio/qwen-image-3-0",
+      "publisher": "alibaba",
+      "kind": "official-docs",
+      "retrieval": "readable",
+      "summary": "已读取HTTP正文；模型数字只按该页精确型号和接入记录。",
+      "scope": "阿里云百炼公开模型API，数值为华北2北京页面原价/托管合同；不是Coding/TokenPlan限制。",
+      "contentSha256": "d5ba7e2f5d8d448991200eb69709ac4b2d797c057db9235b6731758b819359b5",
+      "retrievalMethod": "http-body-htmlparser",
+      "contentDigestKind": "htmlparser-visible-text-not-raw-http-bytes"
+    },
+    {
+      "id": "page-qwen-image-3-0-pro",
+      "url": "https://help.aliyun.com/zh/model-studio/qwen-image-3-0-pro",
+      "finalUrl": "https://help.aliyun.com/zh/model-studio/qwen-image-3-0-pro",
+      "publisher": "alibaba",
+      "kind": "official-docs",
+      "retrieval": "readable",
+      "summary": "已读取HTTP正文；模型数字只按该页精确型号和接入记录。",
+      "scope": "阿里云百炼公开模型API，数值为华北2北京页面原价/托管合同；不是Coding/TokenPlan限制。",
+      "contentSha256": "04003394b678ea099ae848046c8ee7f721c89b974bb5cc42e79b723e62f1b62f",
+      "retrievalMethod": "http-body-htmlparser",
+      "contentDigestKind": "htmlparser-visible-text-not-raw-http-bytes"
+    },
+    {
+      "id": "page-qwen-long",
+      "url": "https://help.aliyun.com/zh/model-studio/qwen-long",
+      "finalUrl": "https://help.aliyun.com/zh/model-studio/qwen-long",
+      "publisher": "alibaba",
+      "kind": "official-docs",
+      "retrieval": "readable",
+      "summary": "已读取HTTP正文；模型数字只按该页精确型号和接入记录。",
+      "scope": "阿里云百炼公开模型API，数值为华北2北京页面原价/托管合同；不是Coding/TokenPlan限制。",
+      "contentSha256": "721e2690d1514c2f869ae02f35931fa75cc958f687e23e2b2ed1a89694f0df82",
+      "retrievalMethod": "http-body-htmlparser",
+      "contentDigestKind": "htmlparser-visible-text-not-raw-http-bytes"
+    },
+    {
+      "id": "page-qwen-max",
+      "url": "https://help.aliyun.com/zh/model-studio/qwen-max",
+      "finalUrl": "https://help.aliyun.com/zh/model-studio/qwen-max",
+      "publisher": "alibaba",
+      "kind": "official-docs",
+      "retrieval": "readable",
+      "summary": "已读取HTTP正文；模型数字只按该页精确型号和接入记录。",
+      "scope": "阿里云百炼公开模型API，数值为华北2北京页面原价/托管合同；不是Coding/TokenPlan限制。",
+      "contentSha256": "24dab9c9d1ea77acbd2153243fb3f0088e0d21dc00d5b454079d30107851e01b",
+      "retrievalMethod": "http-body-htmlparser",
+      "contentDigestKind": "htmlparser-visible-text-not-raw-http-bytes"
+    },
+    {
+      "id": "page-qwen-mt-plus",
+      "url": "https://help.aliyun.com/zh/model-studio/qwen-mt-plus",
+      "finalUrl": "https://help.aliyun.com/zh/model-studio/qwen-mt-plus",
+      "publisher": "alibaba",
+      "kind": "official-docs",
+      "retrieval": "readable",
+      "summary": "已读取HTTP正文；模型数字只按该页精确型号和接入记录。",
+      "scope": "阿里云百炼公开模型API，数值为华北2北京页面原价/托管合同；不是Coding/TokenPlan限制。",
+      "contentSha256": "9cbd762fdc923a3455b82b024360ce3cc06e231a085017a099f9b2724923ab2a",
+      "retrievalMethod": "http-body-htmlparser",
+      "contentDigestKind": "htmlparser-visible-text-not-raw-http-bytes"
+    },
+    {
+      "id": "page-qwen-omni-turbo",
+      "url": "https://help.aliyun.com/zh/model-studio/qwen-omni-turbo",
+      "finalUrl": "https://help.aliyun.com/zh/model-studio/qwen-omni-turbo",
+      "publisher": "alibaba",
+      "kind": "official-docs",
+      "retrieval": "readable",
+      "summary": "已读取HTTP正文；模型数字只按该页精确型号和接入记录。",
+      "scope": "阿里云百炼公开模型API，数值为华北2北京页面原价/托管合同；不是Coding/TokenPlan限制。",
+      "contentSha256": "442ea287e6e28f82889a61a14993065c1fcf62765690fa9cfcab78825cd696b7",
+      "retrievalMethod": "http-body-htmlparser",
+      "contentDigestKind": "htmlparser-visible-text-not-raw-http-bytes"
+    },
+    {
+      "id": "page-qwen-plus",
+      "url": "https://help.aliyun.com/zh/model-studio/qwen-plus",
+      "finalUrl": "https://help.aliyun.com/zh/model-studio/qwen-plus",
+      "publisher": "alibaba",
+      "kind": "official-docs",
+      "retrieval": "readable",
+      "summary": "已读取HTTP正文；模型数字只按该页精确型号和接入记录。",
+      "scope": "阿里云百炼公开模型API，数值为华北2北京页面原价/托管合同；不是Coding/TokenPlan限制。",
+      "contentSha256": "c63aa750b3f698041dafcb496cd8a442f4dec692d87ea8fdcea98d0234675ab0",
+      "retrievalMethod": "http-body-htmlparser",
+      "contentDigestKind": "htmlparser-visible-text-not-raw-http-bytes"
+    },
+    {
+      "id": "page-qwen-turbo",
+      "url": "https://help.aliyun.com/zh/model-studio/qwen-turbo",
+      "finalUrl": "https://help.aliyun.com/zh/model-studio/qwen-turbo",
+      "publisher": "alibaba",
+      "kind": "official-docs",
+      "retrieval": "readable",
+      "summary": "已读取HTTP正文；模型数字只按该页精确型号和接入记录。",
+      "scope": "阿里云百炼公开模型API，数值为华北2北京页面原价/托管合同；不是Coding/TokenPlan限制。",
+      "contentSha256": "7bdc414efd1c53508c6d95ecaa9dedce6eb70452802f92ef2ccc9c5ecb3832fd",
+      "retrievalMethod": "http-body-htmlparser",
+      "contentDigestKind": "htmlparser-visible-text-not-raw-http-bytes"
+    },
+    {
+      "id": "page-qwen3-235b",
+      "url": "https://help.aliyun.com/zh/model-studio/qwen3-235b",
+      "finalUrl": "https://help.aliyun.com/zh/model-studio/qwen3-235b",
+      "publisher": "alibaba",
+      "kind": "official-docs",
+      "retrieval": "not-found",
+      "summary": "返回页面壳/空正文/404，不能作为字段证明",
+      "scope": "阿里云百炼公开模型API，数值为华北2北京页面原价/托管合同；不是Coding/TokenPlan限制。",
+      "contentSha256": "baada60034a93bf2ca3ca83184412cf546aca672afc4ae8f3dfa6340e5a24655",
+      "retrievalMethod": "http-body-htmlparser",
+      "contentDigestKind": "htmlparser-visible-text-not-raw-http-bytes"
+    },
+    {
+      "id": "page-qwen3-coder",
+      "url": "https://help.aliyun.com/zh/model-studio/qwen3-coder",
+      "finalUrl": "https://help.aliyun.com/zh/model-studio/qwen3-coder",
+      "publisher": "alibaba",
+      "kind": "official-docs",
+      "retrieval": "not-found",
+      "summary": "返回页面壳/空正文/404，不能作为字段证明",
+      "scope": "阿里云百炼公开模型API，数值为华北2北京页面原价/托管合同；不是Coding/TokenPlan限制。",
+      "contentSha256": "baada60034a93bf2ca3ca83184412cf546aca672afc4ae8f3dfa6340e5a24655",
+      "retrievalMethod": "http-body-htmlparser",
+      "contentDigestKind": "htmlparser-visible-text-not-raw-http-bytes"
+    },
+    {
+      "id": "page-qwen3-coder-480b",
+      "url": "https://help.aliyun.com/zh/model-studio/qwen3-coder-480b",
+      "finalUrl": "https://help.aliyun.com/zh/model-studio/qwen3-coder-480b",
+      "publisher": "alibaba",
+      "kind": "official-docs",
+      "retrieval": "not-found",
+      "summary": "返回页面壳/空正文/404，不能作为字段证明",
+      "scope": "阿里云百炼公开模型API，数值为华北2北京页面原价/托管合同；不是Coding/TokenPlan限制。",
+      "contentSha256": "baada60034a93bf2ca3ca83184412cf546aca672afc4ae8f3dfa6340e5a24655",
+      "retrievalMethod": "http-body-htmlparser",
+      "contentDigestKind": "htmlparser-visible-text-not-raw-http-bytes"
+    },
+    {
+      "id": "page-qwen3-coder-next",
+      "url": "https://help.aliyun.com/zh/model-studio/qwen3-coder-next",
+      "finalUrl": "https://help.aliyun.com/zh/model-studio/qwen3-coder-next",
+      "publisher": "alibaba",
+      "kind": "official-docs",
+      "retrieval": "readable",
+      "summary": "已读取HTTP正文；模型数字只按该页精确型号和接入记录。",
+      "scope": "阿里云百炼公开模型API，数值为华北2北京页面原价/托管合同；不是Coding/TokenPlan限制。",
+      "contentSha256": "a22e8ca3bf2747f305730582e499bb79a64051f6d3c81a23bb8a8692c4e50176",
+      "retrievalMethod": "http-body-htmlparser",
+      "contentDigestKind": "htmlparser-visible-text-not-raw-http-bytes"
+    },
+    {
+      "id": "page-qwen3-coder-plus",
+      "url": "https://help.aliyun.com/zh/model-studio/qwen3-coder-plus",
+      "finalUrl": "https://help.aliyun.com/zh/model-studio/qwen3-coder-plus",
+      "publisher": "alibaba",
+      "kind": "official-docs",
+      "retrieval": "readable",
+      "summary": "已读取HTTP正文；模型数字只按该页精确型号和接入记录。",
+      "scope": "阿里云百炼公开模型API，数值为华北2北京页面原价/托管合同；不是Coding/TokenPlan限制。",
+      "contentSha256": "88fbb355d65d542cb48a7ba2c55a4ef11b09e335a7ddf23c2741f93c07b537d6",
+      "retrievalMethod": "http-body-htmlparser",
+      "contentDigestKind": "htmlparser-visible-text-not-raw-http-bytes"
+    },
+    {
+      "id": "page-qwen3-max",
+      "url": "https://help.aliyun.com/zh/model-studio/qwen3-max",
+      "finalUrl": "https://help.aliyun.com/zh/model-studio/qwen3-max",
+      "publisher": "alibaba",
+      "kind": "official-docs",
+      "retrieval": "not-found",
+      "summary": "返回页面壳/空正文/404，不能作为字段证明",
+      "scope": "阿里云百炼公开模型API，数值为华北2北京页面原价/托管合同；不是Coding/TokenPlan限制。",
+      "contentSha256": "baada60034a93bf2ca3ca83184412cf546aca672afc4ae8f3dfa6340e5a24655",
+      "retrievalMethod": "http-body-htmlparser",
+      "contentDigestKind": "htmlparser-visible-text-not-raw-http-bytes"
+    },
+    {
+      "id": "page-qwen3-max-2026-01-23",
+      "url": "https://help.aliyun.com/zh/model-studio/qwen3-max-2026-01-23",
+      "finalUrl": "https://help.aliyun.com/zh/model-studio/qwen3-max-2026-01-23",
+      "publisher": "alibaba",
+      "kind": "official-docs",
+      "retrieval": "not-found",
+      "summary": "返回页面壳/空正文/404，不能作为字段证明",
+      "scope": "阿里云百炼公开模型API，数值为华北2北京页面原价/托管合同；不是Coding/TokenPlan限制。",
+      "contentSha256": "baada60034a93bf2ca3ca83184412cf546aca672afc4ae8f3dfa6340e5a24655",
+      "retrievalMethod": "http-body-htmlparser",
+      "contentDigestKind": "htmlparser-visible-text-not-raw-http-bytes"
+    },
+    {
+      "id": "page-qwen3-max-trans",
+      "url": "https://help.aliyun.com/zh/model-studio/qwen3-max-trans",
+      "finalUrl": "https://help.aliyun.com/zh/model-studio/qwen3-max-trans",
+      "publisher": "alibaba",
+      "kind": "official-docs",
+      "retrieval": "not-found",
+      "summary": "返回页面壳/空正文/404，不能作为字段证明",
+      "scope": "阿里云百炼公开模型API，数值为华北2北京页面原价/托管合同；不是Coding/TokenPlan限制。",
+      "contentSha256": "baada60034a93bf2ca3ca83184412cf546aca672afc4ae8f3dfa6340e5a24655",
+      "retrievalMethod": "http-body-htmlparser",
+      "contentDigestKind": "htmlparser-visible-text-not-raw-http-bytes"
+    },
+    {
+      "id": "page-qwen3-rerank",
+      "url": "https://help.aliyun.com/zh/model-studio/qwen3-rerank",
+      "finalUrl": "https://help.aliyun.com/zh/model-studio/qwen3-rerank",
+      "publisher": "alibaba",
+      "kind": "official-docs",
+      "retrieval": "readable",
+      "summary": "已读取HTTP正文；模型数字只按该页精确型号和接入记录。",
+      "scope": "阿里云百炼公开模型API，数值为华北2北京页面原价/托管合同；不是Coding/TokenPlan限制。",
+      "contentSha256": "fc11948af9b67df3caeb5b0b9eb90031b60b099d2877994c7c3ec17a119ed7bf",
+      "retrievalMethod": "http-body-htmlparser",
+      "contentDigestKind": "htmlparser-visible-text-not-raw-http-bytes"
+    },
+    {
+      "id": "page-qwen3-vl-flash",
+      "url": "https://help.aliyun.com/zh/model-studio/qwen3-vl-flash",
+      "finalUrl": "https://help.aliyun.com/zh/model-studio/qwen3-vl-flash",
+      "publisher": "alibaba",
+      "kind": "official-docs",
+      "retrieval": "readable",
+      "summary": "已读取HTTP正文；模型数字只按该页精确型号和接入记录。",
+      "scope": "阿里云百炼公开模型API，数值为华北2北京页面原价/托管合同；不是Coding/TokenPlan限制。",
+      "contentSha256": "6f14526110aae9032c72c7fcde8eb2c59624804426bc5ca11de66a5224dade91",
+      "retrievalMethod": "http-body-htmlparser",
+      "contentDigestKind": "htmlparser-visible-text-not-raw-http-bytes"
+    },
+    {
+      "id": "page-qwen3-vl-plus",
+      "url": "https://help.aliyun.com/zh/model-studio/qwen3-vl-plus",
+      "finalUrl": "https://help.aliyun.com/zh/model-studio/qwen3-vl-plus",
+      "publisher": "alibaba",
+      "kind": "official-docs",
+      "retrieval": "readable",
+      "summary": "已读取HTTP正文；模型数字只按该页精确型号和接入记录。",
+      "scope": "阿里云百炼公开模型API，数值为华北2北京页面原价/托管合同；不是Coding/TokenPlan限制。",
+      "contentSha256": "bcfde4da0dcf30054f0fcb1e6a762d3bb52ce6dba97431e3d7a6238389397704",
+      "retrievalMethod": "http-body-htmlparser",
+      "contentDigestKind": "htmlparser-visible-text-not-raw-http-bytes"
+    },
+    {
+      "id": "page-qwen3-5-27b",
+      "url": "https://help.aliyun.com/zh/model-studio/qwen3-5-27b",
+      "finalUrl": "https://help.aliyun.com/zh/model-studio/qwen3-5-27b",
+      "publisher": "alibaba",
+      "kind": "official-docs",
+      "retrieval": "readable",
+      "summary": "已读取HTTP正文；模型数字只按该页精确型号和接入记录。",
+      "scope": "阿里云百炼公开模型API，数值为华北2北京页面原价/托管合同；不是Coding/TokenPlan限制。",
+      "contentSha256": "e0f503094a0acc6aeef7afc8ca8be68c2887abe1fb8159cfe1ef45328c13949c",
+      "retrievalMethod": "http-body-htmlparser",
+      "contentDigestKind": "htmlparser-visible-text-not-raw-http-bytes"
+    },
+    {
+      "id": "page-qwen3-5-35b-a3b",
+      "url": "https://help.aliyun.com/zh/model-studio/qwen3-5-35b-a3b",
+      "finalUrl": "https://help.aliyun.com/zh/model-studio/qwen3-5-35b-a3b",
+      "publisher": "alibaba",
+      "kind": "official-docs",
+      "retrieval": "readable",
+      "summary": "已读取HTTP正文；模型数字只按该页精确型号和接入记录。",
+      "scope": "阿里云百炼公开模型API，数值为华北2北京页面原价/托管合同；不是Coding/TokenPlan限制。",
+      "contentSha256": "be067871078c14035d14bcdfdc0bc44cf3f3400cb34ecbec02f70e4b27712786",
+      "retrievalMethod": "http-body-htmlparser",
+      "contentDigestKind": "htmlparser-visible-text-not-raw-http-bytes"
+    },
+    {
+      "id": "page-qwen3-5-plus",
+      "url": "https://help.aliyun.com/zh/model-studio/qwen3-5-plus",
+      "finalUrl": "https://help.aliyun.com/zh/model-studio/qwen3-5-plus",
+      "publisher": "alibaba",
+      "kind": "official-docs",
+      "retrieval": "readable",
+      "summary": "已读取HTTP正文；模型数字只按该页精确型号和接入记录。",
+      "scope": "阿里云百炼公开模型API，数值为华北2北京页面原价/托管合同；不是Coding/TokenPlan限制。",
+      "contentSha256": "9bed95bef1421a85afdfee700f84412f117ad3e8073d7b2c5767c76c965c0938",
+      "retrievalMethod": "http-body-htmlparser",
+      "contentDigestKind": "htmlparser-visible-text-not-raw-http-bytes"
+    },
+    {
+      "id": "page-qwen3-6-flash",
+      "url": "https://help.aliyun.com/zh/model-studio/qwen3-6-flash",
+      "finalUrl": "https://help.aliyun.com/zh/model-studio/qwen3-6-flash",
+      "publisher": "alibaba",
+      "kind": "official-docs",
+      "retrieval": "readable",
+      "summary": "已读取HTTP正文；模型数字只按该页精确型号和接入记录。",
+      "scope": "阿里云百炼公开模型API，数值为华北2北京页面原价/托管合同；不是Coding/TokenPlan限制。",
+      "contentSha256": "5fd84a5988769a37fada8fc335eb3e83576fb676a3f5c5f7a2ccefc61b1be178",
+      "retrievalMethod": "http-body-htmlparser",
+      "contentDigestKind": "htmlparser-visible-text-not-raw-http-bytes"
+    },
+    {
+      "id": "page-qwen3-6-plus",
+      "url": "https://help.aliyun.com/zh/model-studio/qwen3-6-plus",
+      "finalUrl": "https://help.aliyun.com/zh/model-studio/qwen3-6-plus",
+      "publisher": "alibaba",
+      "kind": "official-docs",
+      "retrieval": "readable",
+      "summary": "已读取HTTP正文；模型数字只按该页精确型号和接入记录。",
+      "scope": "阿里云百炼公开模型API，数值为华北2北京页面原价/托管合同；不是Coding/TokenPlan限制。",
+      "contentSha256": "5e89424412932fb83c12beb343bbe0e05d64fb7d752d74789a7336bc0a8311c9",
+      "retrievalMethod": "http-body-htmlparser",
+      "contentDigestKind": "htmlparser-visible-text-not-raw-http-bytes"
+    },
+    {
+      "id": "page-qwen3-7-max",
+      "url": "https://help.aliyun.com/zh/model-studio/qwen3-7-max",
+      "finalUrl": "https://help.aliyun.com/zh/model-studio/qwen3-7-max",
+      "publisher": "alibaba",
+      "kind": "official-docs",
+      "retrieval": "readable",
+      "summary": "已读取HTTP正文；模型数字只按该页精确型号和接入记录。",
+      "scope": "阿里云百炼公开模型API，数值为华北2北京页面原价/托管合同；不是Coding/TokenPlan限制。",
+      "contentSha256": "9dc59d988d855972b78433dd40fcac89f51c1d52262bd5bbe92b312f7aee84e1",
+      "retrievalMethod": "http-body-htmlparser",
+      "contentDigestKind": "htmlparser-visible-text-not-raw-http-bytes"
+    },
+    {
+      "id": "page-qwen3-7-plus",
+      "url": "https://help.aliyun.com/zh/model-studio/qwen3-7-plus",
+      "finalUrl": "https://help.aliyun.com/zh/model-studio/qwen3-7-plus",
+      "publisher": "alibaba",
+      "kind": "official-docs",
+      "retrieval": "readable",
+      "summary": "已读取HTTP正文；模型数字只按该页精确型号和接入记录。",
+      "scope": "阿里云百炼公开模型API，数值为华北2北京页面原价/托管合同；不是Coding/TokenPlan限制。",
+      "contentSha256": "3fad86c5c1f4b68334b82ecd4a28b34e0efa054ed77002ccba53b2a3d2fdff89",
+      "retrievalMethod": "http-body-htmlparser",
+      "contentDigestKind": "htmlparser-visible-text-not-raw-http-bytes"
+    },
+    {
+      "id": "page-qwen3-7-text-embedding",
+      "url": "https://help.aliyun.com/zh/model-studio/qwen3-7-text-embedding",
+      "finalUrl": "https://help.aliyun.com/zh/model-studio/qwen3-7-text-embedding",
+      "publisher": "alibaba",
+      "kind": "official-docs",
+      "retrieval": "readable",
+      "summary": "已读取HTTP正文；模型数字只按该页精确型号和接入记录。",
+      "scope": "阿里云百炼公开模型API，数值为华北2北京页面原价/托管合同；不是Coding/TokenPlan限制。",
+      "contentSha256": "b3d9aafabf3c4cc3fd572d32f76882418af8534578192cd32e9a6de4d7a1c193",
+      "retrievalMethod": "http-body-htmlparser",
+      "contentDigestKind": "htmlparser-visible-text-not-raw-http-bytes"
+    },
+    {
+      "id": "page-qwen3-7-text-embedding-flash",
+      "url": "https://help.aliyun.com/zh/model-studio/qwen3-7-text-embedding-flash",
+      "finalUrl": "https://help.aliyun.com/zh/model-studio/qwen3-7-text-embedding-flash",
+      "publisher": "alibaba",
+      "kind": "official-docs",
+      "retrieval": "readable",
+      "summary": "已读取HTTP正文；模型数字只按该页精确型号和接入记录。",
+      "scope": "阿里云百炼公开模型API，数值为华北2北京页面原价/托管合同；不是Coding/TokenPlan限制。",
+      "contentSha256": "1bf4dd64f4c64c242369d45d603bc7a9d3572bab4834bbba97709c0d4cb62588",
+      "retrievalMethod": "http-body-htmlparser",
+      "contentDigestKind": "htmlparser-visible-text-not-raw-http-bytes"
+    },
+    {
+      "id": "page-qwen3-7-text-rerank",
+      "url": "https://help.aliyun.com/zh/model-studio/qwen3-7-text-rerank",
+      "finalUrl": "https://help.aliyun.com/zh/model-studio/qwen3-7-text-rerank",
+      "publisher": "alibaba",
+      "kind": "official-docs",
+      "retrieval": "readable",
+      "summary": "已读取HTTP正文；模型数字只按该页精确型号和接入记录。",
+      "scope": "阿里云百炼公开模型API，数值为华北2北京页面原价/托管合同；不是Coding/TokenPlan限制。",
+      "contentSha256": "827ba358e529b84484639b53c948e0b87c5e1059e0e6ebc2d57b1515ef69ed08",
+      "retrievalMethod": "http-body-htmlparser",
+      "contentDigestKind": "htmlparser-visible-text-not-raw-http-bytes"
+    },
+    {
+      "id": "page-qwen3-8-flash",
+      "url": "https://help.aliyun.com/zh/model-studio/qwen3-8-flash",
+      "finalUrl": "https://help.aliyun.com/zh/model-studio/qwen3-8-flash",
+      "publisher": "alibaba",
+      "kind": "official-docs",
+      "retrieval": "readable",
+      "summary": "已读取HTTP正文；模型数字只按该页精确型号和接入记录。",
+      "scope": "阿里云百炼公开模型API，数值为华北2北京页面原价/托管合同；不是Coding/TokenPlan限制。",
+      "contentSha256": "b256c6327b5ec1488f399d21b2767ea16bd5445b1393d7a242bdc9ee780dcbb7",
+      "retrievalMethod": "http-body-htmlparser",
+      "contentDigestKind": "htmlparser-visible-text-not-raw-http-bytes"
+    },
+    {
+      "id": "page-qwen3-8-max",
+      "url": "https://help.aliyun.com/zh/model-studio/qwen3-8-max",
+      "finalUrl": "https://help.aliyun.com/zh/model-studio/qwen3-8-max",
+      "publisher": "alibaba",
+      "kind": "official-docs",
+      "retrieval": "readable",
+      "summary": "已读取HTTP正文；模型数字只按该页精确型号和接入记录。",
+      "scope": "阿里云百炼公开模型API，数值为华北2北京页面原价/托管合同；不是Coding/TokenPlan限制。",
+      "contentSha256": "2ead63645c23400e1675eebc325b76b15499a80875b7a12b8c3171fe44aebbe6",
+      "retrievalMethod": "http-body-htmlparser",
+      "contentDigestKind": "htmlparser-visible-text-not-raw-http-bytes"
+    },
+    {
+      "id": "page-qwen3-8-max-preview",
+      "url": "https://help.aliyun.com/zh/model-studio/qwen3-8-max-preview",
+      "finalUrl": "https://help.aliyun.com/zh/model-studio/qwen3-8-max-preview",
+      "publisher": "alibaba",
+      "kind": "official-docs",
+      "retrieval": "blocked",
+      "summary": "返回页面壳/空正文/404，不能作为字段证明",
+      "scope": "阿里云百炼公开模型API，数值为华北2北京页面原价/托管合同；不是Coding/TokenPlan限制。",
+      "retrievalMethod": "web-or-http-failed"
+    },
+    {
+      "id": "page-qwen3-8-max-prime",
+      "url": "https://help.aliyun.com/zh/model-studio/qwen3-8-max-prime",
+      "finalUrl": "https://help.aliyun.com/zh/model-studio/qwen3-8-max-prime",
+      "publisher": "alibaba",
+      "kind": "official-docs",
+      "retrieval": "blocked",
+      "summary": "返回页面壳/空正文/404，不能作为字段证明",
+      "scope": "阿里云百炼公开模型API，数值为华北2北京页面原价/托管合同；不是Coding/TokenPlan限制。",
+      "retrievalMethod": "web-or-http-failed"
+    },
+    {
+      "id": "page-qwen3-8-omni-flash",
+      "url": "https://help.aliyun.com/zh/model-studio/qwen3-8-omni-flash",
+      "finalUrl": "https://help.aliyun.com/zh/model-studio/qwen3-8-omni-flash",
+      "publisher": "alibaba",
+      "kind": "official-docs",
+      "retrieval": "blocked",
+      "summary": "返回页面壳/空正文/404，不能作为字段证明",
+      "scope": "阿里云百炼公开模型API，数值为华北2北京页面原价/托管合同；不是Coding/TokenPlan限制。",
+      "retrievalMethod": "web-or-http-failed"
+    },
+    {
+      "id": "page-text-embedding-v3",
+      "url": "https://help.aliyun.com/zh/model-studio/text-embedding-v3",
+      "finalUrl": "https://help.aliyun.com/zh/model-studio/text-embedding-v3",
+      "publisher": "alibaba",
+      "kind": "official-docs",
+      "retrieval": "blocked",
+      "summary": "返回页面壳/空正文/404，不能作为字段证明",
+      "scope": "阿里云百炼公开模型API，数值为华北2北京页面原价/托管合同；不是Coding/TokenPlan限制。",
+      "retrievalMethod": "web-or-http-failed"
+    },
+    {
+      "id": "page-text-embedding-v4",
+      "url": "https://help.aliyun.com/zh/model-studio/text-embedding-v4",
+      "finalUrl": "https://help.aliyun.com/zh/model-studio/text-embedding-v4",
+      "publisher": "alibaba",
+      "kind": "official-docs",
+      "retrieval": "blocked",
+      "summary": "返回页面壳/空正文/404，不能作为字段证明",
+      "scope": "阿里云百炼公开模型API，数值为华北2北京页面原价/托管合同；不是Coding/TokenPlan限制。",
+      "retrievalMethod": "web-or-http-failed"
+    },
+    {
+      "id": "page-wan2-2-t2i-flash",
+      "url": "https://help.aliyun.com/zh/model-studio/wan2-2-t2i-flash",
+      "finalUrl": "https://help.aliyun.com/zh/model-studio/wan2-2-t2i-flash",
+      "publisher": "alibaba",
+      "kind": "official-docs",
+      "retrieval": "blocked",
+      "summary": "返回页面壳/空正文/404，不能作为字段证明",
+      "scope": "阿里云百炼公开模型API，数值为华北2北京页面原价/托管合同；不是Coding/TokenPlan限制。",
+      "retrievalMethod": "web-or-http-failed"
+    },
+    {
+      "id": "page-wan2-2-t2i-plus",
+      "url": "https://help.aliyun.com/zh/model-studio/wan2-2-t2i-plus",
+      "finalUrl": "https://help.aliyun.com/zh/model-studio/wan2-2-t2i-plus",
+      "publisher": "alibaba",
+      "kind": "official-docs",
+      "retrieval": "blocked",
+      "summary": "返回页面壳/空正文/404，不能作为字段证明",
+      "scope": "阿里云百炼公开模型API，数值为华北2北京页面原价/托管合同；不是Coding/TokenPlan限制。",
+      "retrievalMethod": "web-or-http-failed"
+    },
+    {
+      "id": "page-wan2-6-t2i",
+      "url": "https://help.aliyun.com/zh/model-studio/wan2-6-t2i",
+      "finalUrl": "https://help.aliyun.com/zh/model-studio/wan2-6-t2i",
+      "publisher": "alibaba",
+      "kind": "official-docs",
+      "retrieval": "blocked",
+      "summary": "返回页面壳/空正文/404，不能作为字段证明",
+      "scope": "阿里云百炼公开模型API，数值为华北2北京页面原价/托管合同；不是Coding/TokenPlan限制。",
+      "retrievalMethod": "web-or-http-failed"
+    },
+    {
+      "id": "page-wan2-6-t2v",
+      "url": "https://help.aliyun.com/zh/model-studio/wan2-6-t2v",
+      "finalUrl": "https://help.aliyun.com/zh/model-studio/wan2-6-t2v",
+      "publisher": "alibaba",
+      "kind": "official-docs",
+      "retrieval": "blocked",
+      "summary": "返回页面壳/空正文/404，不能作为字段证明",
+      "scope": "阿里云百炼公开模型API，数值为华北2北京页面原价/托管合同；不是Coding/TokenPlan限制。",
+      "retrievalMethod": "web-or-http-failed"
+    },
+    {
+      "id": "page-wan2-7-image",
+      "url": "https://help.aliyun.com/zh/model-studio/wan2-7-image",
+      "finalUrl": "https://help.aliyun.com/zh/model-studio/wan2-7-image",
+      "publisher": "alibaba",
+      "kind": "official-docs",
+      "retrieval": "blocked",
+      "summary": "返回页面壳/空正文/404，不能作为字段证明",
+      "scope": "阿里云百炼公开模型API，数值为华北2北京页面原价/托管合同；不是Coding/TokenPlan限制。",
+      "retrievalMethod": "web-or-http-failed"
+    },
+    {
+      "id": "page-wan2-7-image-pro",
+      "url": "https://help.aliyun.com/zh/model-studio/wan2-7-image-pro",
+      "finalUrl": "https://help.aliyun.com/zh/model-studio/wan2-7-image-pro",
+      "publisher": "alibaba",
+      "kind": "official-docs",
+      "retrieval": "blocked",
+      "summary": "返回页面壳/空正文/404，不能作为字段证明",
+      "scope": "阿里云百炼公开模型API，数值为华北2北京页面原价/托管合同；不是Coding/TokenPlan限制。",
+      "retrievalMethod": "web-or-http-failed"
+    },
+    {
+      "id": "page-wan3-0-video",
+      "url": "https://help.aliyun.com/zh/model-studio/wan3-0-video",
+      "finalUrl": "https://help.aliyun.com/zh/model-studio/wan3-0-video",
+      "publisher": "alibaba",
+      "kind": "official-docs",
+      "retrieval": "blocked",
+      "summary": "返回页面壳/空正文/404，不能作为字段证明",
+      "scope": "阿里云百炼公开模型API，数值为华北2北京页面原价/托管合同；不是Coding/TokenPlan限制。",
+      "retrievalMethod": "web-or-http-failed"
+    },
+    {
+      "id": "page-wan3-0-video-prime",
+      "url": "https://help.aliyun.com/zh/model-studio/wan3-0-video-prime",
+      "finalUrl": "https://help.aliyun.com/zh/model-studio/wan3-0-video-prime",
+      "publisher": "alibaba",
+      "kind": "official-docs",
+      "retrieval": "blocked",
+      "summary": "返回页面壳/空正文/404，不能作为字段证明",
+      "scope": "阿里云百炼公开模型API，数值为华北2北京页面原价/托管合同；不是Coding/TokenPlan限制。",
+      "retrievalMethod": "web-or-http-failed"
+    },
+    {
+      "id": "page-token-plan",
+      "url": "https://help.aliyun.com/zh/model-studio/token-plan-personal-overview",
+      "finalUrl": "https://help.aliyun.com/zh/model-studio/token-plan-personal-overview",
+      "publisher": "alibaba",
+      "kind": "official-docs",
+      "retrieval": "blocked",
+      "summary": "返回页面壳/空正文/404，不能作为字段证明",
+      "scope": "阿里云百炼公开模型API，数值为华北2北京页面原价/托管合同；不是Coding/TokenPlan限制。",
+      "retrievalMethod": "web-or-http-failed"
+    },
+    {
+      "id": "page-coding-plan",
+      "url": "https://help.aliyun.com/zh/model-studio/coding-plan",
+      "finalUrl": "https://help.aliyun.com/zh/model-studio/coding-plan",
+      "publisher": "alibaba",
+      "kind": "official-docs",
+      "retrieval": "blocked",
+      "summary": "返回页面壳/空正文/404，不能作为字段证明",
+      "scope": "阿里云百炼公开模型API，数值为华北2北京页面原价/托管合同；不是Coding/TokenPlan限制。",
+      "retrievalMethod": "web-or-http-failed"
+    },
+    {
+      "id": "page-ali-qwen3-max",
+      "url": "https://help.aliyun.com/zh/model-studio/model-qwen3-max",
+      "finalUrl": "https://help.aliyun.com/zh/model-studio/model-qwen3-max",
+      "publisher": "alibaba",
+      "kind": "official-docs",
+      "retrieval": "readable",
+      "summary": "已读取HTTP正文；模型数字只按该页精确型号和接入记录。",
+      "scope": "独立API/套餐来源，具体适用面见逐条finding。",
+      "contentSha256": "25109c8c3ab225040a8af8397cb8055e28ef174fbf509e3f16e7861f279124f0",
+      "retrievalMethod": "http-body-htmlparser",
+      "contentDigestKind": "htmlparser-visible-text-not-raw-http-bytes"
+    },
+    {
+      "id": "page-ali-qwen3-235b",
+      "url": "https://help.aliyun.com/zh/model-studio/qwen3-235b-a22b",
+      "finalUrl": "https://help.aliyun.com/zh/model-studio/qwen3-235b-a22b",
+      "publisher": "alibaba",
+      "kind": "official-docs",
+      "retrieval": "readable",
+      "summary": "已读取HTTP正文；模型数字只按该页精确型号和接入记录。",
+      "scope": "独立API/套餐来源，具体适用面见逐条finding。",
+      "contentSha256": "fea5d41b3f1470621005a374bc0ec1db9ee517b87e8b061b922c1f161085b1b0",
+      "retrievalMethod": "http-body-htmlparser",
+      "contentDigestKind": "htmlparser-visible-text-not-raw-http-bytes"
+    },
+    {
+      "id": "page-ali-glm5",
+      "url": "https://help.aliyun.com/zh/model-studio/glm-9",
+      "finalUrl": "https://help.aliyun.com/zh/model-studio/glm-9",
+      "publisher": "alibaba",
+      "kind": "official-docs",
+      "retrieval": "readable",
+      "summary": "已读取HTTP正文；模型数字只按该页精确型号和接入记录。",
+      "scope": "独立API/套餐来源，具体适用面见逐条finding。",
+      "contentSha256": "4c8a1f969aeeb706d89a386b16092236af42306e10351af0764a65c0e665c206",
+      "retrievalMethod": "http-body-htmlparser",
+      "contentDigestKind": "htmlparser-visible-text-not-raw-http-bytes"
+    },
+    {
+      "id": "page-ali-qwen3-coder480b",
+      "url": "https://help.aliyun.com/zh/model-studio/qwen3-coder-480b-a35b-instruct",
+      "finalUrl": "https://help.aliyun.com/zh/model-studio/qwen3-coder-480b-a35b-instruct",
+      "publisher": "alibaba",
+      "kind": "official-docs",
+      "retrieval": "readable",
+      "summary": "已读取HTTP正文；模型数字只按该页精确型号和接入记录。",
+      "scope": "独立API/套餐来源，具体适用面见逐条finding。",
+      "contentSha256": "9658913d683308853f392bb89b99b722aa590c71c3e54cece7df20512b36ffff",
+      "retrievalMethod": "http-body-htmlparser",
+      "contentDigestKind": "htmlparser-visible-text-not-raw-http-bytes"
+    },
+    {
+      "id": "page-ali-token",
+      "url": "https://help.aliyun.com/zh/model-studio/token-plan-personal-overview",
+      "finalUrl": "https://help.aliyun.com/zh/model-studio/token-plan-personal-overview",
+      "publisher": "alibaba",
+      "kind": "official-docs",
+      "retrieval": "readable",
+      "summary": "已读取HTTP正文；模型数字只按该页精确型号和接入记录。",
+      "scope": "独立API/套餐来源，具体适用面见逐条finding。",
+      "contentSha256": "2fa63bf3533e48afc9999fa7e8df549581ef0dbaf929eeea095aff2dee8f2cbe",
+      "retrievalMethod": "http-body-htmlparser",
+      "contentDigestKind": "htmlparser-visible-text-not-raw-http-bytes"
+    },
+    {
+      "id": "page-ali-coding",
+      "url": "https://help.aliyun.com/zh/model-studio/coding-plan",
+      "finalUrl": "https://help.aliyun.com/zh/model-studio/coding-plan",
+      "publisher": "alibaba",
+      "kind": "official-docs",
+      "retrieval": "readable",
+      "summary": "已读取HTTP正文；模型数字只按该页精确型号和接入记录。",
+      "scope": "独立API/套餐来源，具体适用面见逐条finding。",
+      "contentSha256": "59518cea196df2a5e4180caf1245bad05270877da8e776cabc20f944d76edbed",
+      "retrievalMethod": "http-body-htmlparser",
+      "contentDigestKind": "htmlparser-visible-text-not-raw-http-bytes"
+    },
+    {
+      "id": "page-ali-model-list",
+      "url": "https://help.aliyun.com/zh/model-studio/model-list-text-generation/",
+      "finalUrl": "https://help.aliyun.com/zh/model-studio/model-list-text-generation/",
+      "publisher": "alibaba",
+      "kind": "official-docs",
+      "retrieval": "readable",
+      "summary": "已读取HTTP正文；模型数字只按该页精确型号和接入记录。",
+      "scope": "独立API/套餐来源，具体适用面见逐条finding。",
+      "contentSha256": "dbc22010b4c9d94f3b442b246457017db45cead9b07d4a355c28006b1d72d8dc",
+      "retrievalMethod": "http-body-htmlparser",
+      "contentDigestKind": "htmlparser-visible-text-not-raw-http-bytes"
+    },
+    {
+      "id": "web-qwen3-8-omni-flash",
+      "url": "https://help.aliyun.com/zh/model-studio/qwen3-8-omni-flash",
+      "finalUrl": "https://help.aliyun.com/zh/model-studio/qwen3-8-omni-flash",
+      "publisher": "alibaba",
+      "kind": "official-docs",
+      "retrieval": "readable",
+      "summary": "web工具实际读取完整正文；静态HTTP空页面不作为证明。官方本页只列文本输出，并明确文本/图片/音频/视频输入；与旧音频输出标记需交叉核查。",
+      "scope": "华北2北京API模型页",
+      "retrievalMethod": "web-open-body"
+    },
+    {
+      "id": "web-wan2-7-image",
+      "url": "https://help.aliyun.com/zh/model-studio/wan2-7-image",
+      "finalUrl": "https://help.aliyun.com/zh/model-studio/wan2-7-image",
+      "publisher": "alibaba",
+      "kind": "official-docs",
+      "retrieval": "readable",
+      "summary": "web工具实际读取完整正文；静态HTTP空页面不作为证明。华北2北京按张计价；目录不提供token上下文数字。",
+      "scope": "华北2北京API模型页",
+      "retrievalMethod": "web-open-body"
+    },
+    {
+      "id": "ali-pricing",
+      "url": "https://help.aliyun.com/zh/model-studio/model-pricing",
+      "finalUrl": "https://help.aliyun.com/zh/model-studio/model-pricing",
+      "publisher": "alibaba",
+      "kind": "official-docs",
+      "retrieval": "readable",
+      "summary": "已读取价格正文；明确K=1000、M=1000000，阶梯按整次请求输入长度结算。只关联本轮指定精确ID。",
+      "scope": "北京按量API原价/价阶；不适用于套餐",
+      "retrievalMethod": "web-open-body"
+    }
+  ],
+  "findings": [
+    {
+      "recordKey": "compute/providers/dashscope.json#cosyvoice-clone",
+      "modelId": "cosyvoice-clone",
+      "config": "compute/providers/dashscope.json",
+      "sourceDoc": "docs/model-sources/providers/alibaba/models/cosyvoice-clone.md",
+      "outcome": "still-unresolved",
+      "sourceIds": [],
+      "fieldEvidence": [],
+      "remainingFields": [
+        "modelName",
+        "capabilities",
+        "extra.maxCloneSamples",
+        "extra.minCloneDuration"
+      ],
+      "nextAction": "按精确型号和本接入面继续核对；候选证据不自动应用。",
+      "notes": [
+        "已尝试专属页面https://help.aliyun.com/zh/model-studio/cosyvoice-clone，未找到本内部ID的可比字段正文；保留缺口，不将目录成功当全部参数证明。",
+        "未做账号API实测；采样、思考参数及媒体请求上限没有明文数字时保持待核。"
+      ]
+    },
+    {
+      "recordKey": "compute/model-specs/qwen.json#cosyvoice-clone",
+      "modelId": "cosyvoice-clone",
+      "config": "compute/model-specs/qwen.json",
+      "sourceDoc": "docs/model-sources/providers/alibaba/models/cosyvoice-clone.md",
+      "outcome": "still-unresolved",
+      "sourceIds": [],
+      "fieldEvidence": [],
+      "remainingFields": [
+        "id",
+        "spec.capabilities"
+      ],
+      "nextAction": "按精确型号和本接入面继续核对；候选证据不自动应用。",
+      "notes": [
+        "已尝试专属页面https://help.aliyun.com/zh/model-studio/cosyvoice-clone，未找到本内部ID的可比字段正文；保留缺口，不将目录成功当全部参数证明。",
+        "未做账号API实测；采样、思考参数及媒体请求上限没有明文数字时保持待核。"
+      ]
+    },
+    {
+      "recordKey": "compute/providers/dashscope.json#cosyvoice-v2",
+      "modelId": "cosyvoice-v2",
+      "config": "compute/providers/dashscope.json",
+      "sourceDoc": "docs/model-sources/providers/alibaba/models/cosyvoice-v2.md",
+      "outcome": "official-identity-only",
+      "sourceIds": [
+        "page-cosyvoice-v2"
+      ],
+      "fieldEvidence": [
+        {
+          "field": "modelName",
+          "currentValue": "cosyvoice-v2",
+          "supportedValue": "cosyvoice-v2",
+          "sourceId": "page-cosyvoice-v2",
+          "assessment": "matches",
+          "explanation": "专属官方模型页标题/推理供应商列出精确名；Spec ID只作为本仓引用，不代表全部别名已核。"
+        },
+        {
+          "field": "billing.unitPrice",
+          "currentValue": null,
+          "supportedValue": {
+            "amount": 2,
+            "currency": "CNY",
+            "unit": "10000-characters"
+          },
+          "sourceId": "page-cosyvoice-v2",
+          "assessment": "not-comparable",
+          "explanation": "CosyVoice按万字符收费，不能覆盖inputPrice/outputPrice当token价。"
+        }
+      ],
+      "remainingFields": [
+        "capabilities",
+        "extra.voices",
+        "extra.supportedAudioFormats"
+      ],
+      "nextAction": "按精确型号和本接入面继续核对；候选证据不自动应用。",
+      "notes": [
+        "未做账号API实测；采样、思考参数及媒体请求上限没有明文数字时保持待核。"
+      ]
+    },
+    {
+      "recordKey": "compute/model-specs/qwen.json#cosyvoice-v2",
+      "modelId": "cosyvoice-v2",
+      "config": "compute/model-specs/qwen.json",
+      "sourceDoc": "docs/model-sources/providers/alibaba/models/cosyvoice-v2.md",
+      "outcome": "official-identity-only",
+      "sourceIds": [
+        "page-cosyvoice-v2"
+      ],
+      "fieldEvidence": [
+        {
+          "field": "id",
+          "currentValue": "cosyvoice-v2",
+          "supportedValue": "cosyvoice-v2",
+          "sourceId": "page-cosyvoice-v2",
+          "assessment": "matches",
+          "explanation": "专属官方模型页标题/推理供应商列出精确名；Spec ID只作为本仓引用，不代表全部别名已核。"
+        }
+      ],
+      "remainingFields": [
+        "spec.capabilities"
+      ],
+      "nextAction": "按精确型号和本接入面继续核对；候选证据不自动应用。",
+      "notes": [
+        "未做账号API实测；采样、思考参数及媒体请求上限没有明文数字时保持待核。"
+      ]
+    },
+    {
+      "recordKey": "compute/coding-plans/dashscope-token-plan.json#deepseek-v4-flash-0731",
+      "modelId": "deepseek-v4-flash-0731",
+      "config": "compute/coding-plans/dashscope-token-plan.json",
+      "sourceDoc": "docs/model-sources/providers/alibaba/models/deepseek-v4-flash-0731.md",
+      "outcome": "official-identity-only",
+      "sourceIds": [
+        "page-ali-token"
+      ],
+      "fieldEvidence": [
+        {
+          "field": "modelName",
+          "currentValue": "deepseek-v4-flash-0731",
+          "supportedValue": "deepseek-v4-flash-0731",
+          "sourceId": "page-ali-token",
+          "assessment": "matches",
+          "explanation": "本套餐官方正文逐字列出的精确ID；不借此确认按量API页的窗口/价格也适用于套餐。"
+        }
+      ],
+      "remainingFields": [
+        "contextWindow",
+        "extra.reasoning.defaultEffort",
+        "extra.reasoning.supportedEfforts",
+        "maxOutputTokens",
+        "capabilities",
+        "extra.reasoning",
+        "extra.supportsThinking",
+        "extra.thinkingDefault"
+      ],
+      "nextAction": "按精确型号和本接入面继续核对；候选证据不自动应用。",
+      "notes": [
+        "参数数字仍需套餐自身证据，未采用同名按量API数字。",
+        "未做账号API实测；采样、思考参数及媒体请求上限没有明文数字时保持待核。"
+      ]
+    },
+    {
+      "recordKey": "compute/coding-plans/dashscope-token-plan.json#deepseek-v4-pro-0813",
+      "modelId": "deepseek-v4-pro-0813",
+      "config": "compute/coding-plans/dashscope-token-plan.json",
+      "sourceDoc": "docs/model-sources/providers/alibaba/models/deepseek-v4-pro-0813.md",
+      "outcome": "official-identity-only",
+      "sourceIds": [
+        "page-ali-token"
+      ],
+      "fieldEvidence": [
+        {
+          "field": "modelName",
+          "currentValue": "deepseek-v4-pro-0813",
+          "supportedValue": "deepseek-v4-pro-0813",
+          "sourceId": "page-ali-token",
+          "assessment": "matches",
+          "explanation": "本套餐官方正文逐字列出的精确ID；不借此确认按量API页的窗口/价格也适用于套餐。"
+        }
+      ],
+      "remainingFields": [
+        "contextWindow",
+        "extra.reasoning.defaultEffort",
+        "extra.reasoning.supportedEfforts",
+        "maxOutputTokens",
+        "capabilities",
+        "extra.reasoning",
+        "extra.supportsThinking",
+        "extra.thinkingDefault"
+      ],
+      "nextAction": "按精确型号和本接入面继续核对；候选证据不自动应用。",
+      "notes": [
+        "参数数字仍需套餐自身证据，未采用同名按量API数字。",
+        "未做账号API实测；采样、思考参数及媒体请求上限没有明文数字时保持待核。"
+      ]
+    },
+    {
+      "recordKey": "compute/coding-plans/dashscope-token-plan.json#deepseek-v4-pro",
+      "modelId": "deepseek-v4-pro",
+      "config": "compute/coding-plans/dashscope-token-plan.json",
+      "sourceDoc": "docs/model-sources/providers/alibaba/models/deepseek-v4-pro.md",
+      "outcome": "official-identity-only",
+      "sourceIds": [
+        "page-ali-token"
+      ],
+      "fieldEvidence": [
+        {
+          "field": "modelName",
+          "currentValue": "deepseek-v4-pro",
+          "supportedValue": "deepseek-v4-pro",
+          "sourceId": "page-ali-token",
+          "assessment": "matches",
+          "explanation": "本套餐官方正文逐字列出的精确ID；不借此确认按量API页的窗口/价格也适用于套餐。"
+        }
+      ],
+      "remainingFields": [
+        "contextWindow",
+        "extra.reasoning.defaultEffort",
+        "extra.reasoning.supportedEfforts",
+        "maxOutputTokens",
+        "capabilities",
+        "extra.reasoning",
+        "extra.supportsThinking",
+        "extra.thinkingDefault"
+      ],
+      "nextAction": "按精确型号和本接入面继续核对；候选证据不自动应用。",
+      "notes": [
+        "参数数字仍需套餐自身证据，未采用同名按量API数字。",
+        "另已找到按量API模型页，但因API/套餐不同合同，不给本条证明其容量。候选入口：https://help.aliyun.com/zh/model-studio/deepseek-v4-pro",
+        "未做账号API实测；采样、思考参数及媒体请求上限没有明文数字时保持待核。"
+      ]
+    },
+    {
+      "recordKey": "compute/coding-plans/dashscope-token-plan.json#deepseek-v4.1-flash",
+      "modelId": "deepseek-v4.1-flash",
+      "config": "compute/coding-plans/dashscope-token-plan.json",
+      "sourceDoc": "docs/model-sources/providers/alibaba/models/deepseek-v4.1-flash.md",
+      "outcome": "official-identity-only",
+      "sourceIds": [
+        "page-ali-token"
+      ],
+      "fieldEvidence": [
+        {
+          "field": "modelName",
+          "currentValue": "deepseek-v4.1-flash",
+          "supportedValue": "deepseek-v4.1-flash",
+          "sourceId": "page-ali-token",
+          "assessment": "matches",
+          "explanation": "本套餐官方正文逐字列出的精确ID；不借此确认按量API页的窗口/价格也适用于套餐。"
+        }
+      ],
+      "remainingFields": [
+        "contextWindow",
+        "extra.reasoning.defaultEffort",
+        "extra.reasoning.supportedEfforts",
+        "maxOutputTokens",
+        "capabilities",
+        "extra.reasoning",
+        "extra.supportsThinking",
+        "extra.thinkingDefault"
+      ],
+      "nextAction": "按精确型号和本接入面继续核对；候选证据不自动应用。",
+      "notes": [
+        "参数数字仍需套餐自身证据，未采用同名按量API数字。",
+        "另已找到按量API模型页，但因API/套餐不同合同，不给本条证明其容量。候选入口：https://help.aliyun.com/zh/model-studio/deepseek-v4-1-flash",
+        "未做账号API实测；采样、思考参数及媒体请求上限没有明文数字时保持待核。"
+      ]
+    },
+    {
+      "recordKey": "compute/coding-plans/dashscope-coding.json#glm-4.7",
+      "modelId": "glm-4.7",
+      "config": "compute/coding-plans/dashscope-coding.json",
+      "sourceDoc": "docs/model-sources/providers/alibaba/models/glm-4.7.md",
+      "outcome": "official-identity-only",
+      "sourceIds": [
+        "page-ali-coding"
+      ],
+      "fieldEvidence": [
+        {
+          "field": "modelName",
+          "currentValue": "glm-4.7",
+          "supportedValue": "glm-4.7",
+          "sourceId": "page-ali-coding",
+          "assessment": "matches",
+          "explanation": "本套餐官方正文逐字列出的精确ID；不借此确认按量API页的窗口/价格也适用于套餐。"
+        }
+      ],
+      "remainingFields": [
+        "contextWindow",
+        "maxOutputTokens",
+        "capabilities"
+      ],
+      "nextAction": "按精确型号和本接入面继续核对；候选证据不自动应用。",
+      "notes": [
+        "参数数字仍需套餐自身证据，未采用同名按量API数字。",
+        "另已找到按量API模型页，但因API/套餐不同合同，不给本条证明其容量。候选入口：https://help.aliyun.com/zh/model-studio/glm-4-7",
+        "未做账号API实测；采样、思考参数及媒体请求上限没有明文数字时保持待核。"
+      ]
+    },
+    {
+      "recordKey": "compute/coding-plans/dashscope-token-plan.json#glm-4.7",
+      "modelId": "glm-4.7",
+      "config": "compute/coding-plans/dashscope-token-plan.json",
+      "sourceDoc": "docs/model-sources/providers/alibaba/models/glm-4.7.md",
+      "outcome": "still-unresolved",
+      "sourceIds": [],
+      "fieldEvidence": [],
+      "remainingFields": [
+        "contextWindow",
+        "maxOutputTokens",
+        "capabilities"
+      ],
+      "nextAction": "按精确型号和本接入面继续核对；候选证据不自动应用。",
+      "notes": [
+        "另已找到按量API模型页，但因API/套餐不同合同，不给本条证明其容量。候选入口：https://help.aliyun.com/zh/model-studio/glm-4-7",
+        "本套餐当前正文没有该精确ID；目录缺失不直接证明停服，请查套餐公告/账号目录。",
+        "未做账号API实测；采样、思考参数及媒体请求上限没有明文数字时保持待核。"
+      ]
+    },
+    {
+      "recordKey": "compute/coding-plans/dashscope-token-plan.json#glm-5.2",
+      "modelId": "glm-5.2",
+      "config": "compute/coding-plans/dashscope-token-plan.json",
+      "sourceDoc": "docs/model-sources/providers/alibaba/models/glm-5.2.md",
+      "outcome": "official-identity-only",
+      "sourceIds": [
+        "page-ali-token"
+      ],
+      "fieldEvidence": [
+        {
+          "field": "modelName",
+          "currentValue": "glm-5.2",
+          "supportedValue": "glm-5.2",
+          "sourceId": "page-ali-token",
+          "assessment": "matches",
+          "explanation": "本套餐官方正文逐字列出的精确ID；不借此确认按量API页的窗口/价格也适用于套餐。"
+        }
+      ],
+      "remainingFields": [
+        "contextWindow",
+        "extra.reasoning.defaultEffort",
+        "extra.reasoning.supportedEfforts",
+        "maxOutputTokens",
+        "capabilities",
+        "extra.reasoning"
+      ],
+      "nextAction": "按精确型号和本接入面继续核对；候选证据不自动应用。",
+      "notes": [
+        "参数数字仍需套餐自身证据，未采用同名按量API数字。",
+        "另已找到按量API模型页，但因API/套餐不同合同，不给本条证明其容量。候选入口：https://help.aliyun.com/zh/model-studio/glm-5-2",
+        "未做账号API实测；采样、思考参数及媒体请求上限没有明文数字时保持待核。"
+      ]
+    },
+    {
+      "recordKey": "compute/coding-plans/dashscope-token-plan.json#glm-5.3",
+      "modelId": "glm-5.3",
+      "config": "compute/coding-plans/dashscope-token-plan.json",
+      "sourceDoc": "docs/model-sources/providers/alibaba/models/glm-5.3.md",
+      "outcome": "official-identity-only",
+      "sourceIds": [
+        "page-ali-token"
+      ],
+      "fieldEvidence": [
+        {
+          "field": "modelName",
+          "currentValue": "glm-5.3",
+          "supportedValue": "glm-5.3",
+          "sourceId": "page-ali-token",
+          "assessment": "matches",
+          "explanation": "本套餐官方正文逐字列出的精确ID；不借此确认按量API页的窗口/价格也适用于套餐。"
+        }
+      ],
+      "remainingFields": [
+        "contextWindow",
+        "extra.reasoning.defaultEffort",
+        "extra.reasoning.supportedEfforts",
+        "extra.thinkingOnly",
+        "maxOutputTokens",
+        "capabilities",
+        "extra.reasoning",
+        "extra.thinkingDefault"
+      ],
+      "nextAction": "按精确型号和本接入面继续核对；候选证据不自动应用。",
+      "notes": [
+        "参数数字仍需套餐自身证据，未采用同名按量API数字。",
+        "另已找到按量API模型页，但因API/套餐不同合同，不给本条证明其容量。候选入口：https://help.aliyun.com/zh/model-studio/glm-5-3",
+        "未做账号API实测；采样、思考参数及媒体请求上限没有明文数字时保持待核。"
+      ]
+    },
+    {
+      "recordKey": "compute/coding-plans/dashscope-coding.json#glm-5",
+      "modelId": "glm-5",
+      "config": "compute/coding-plans/dashscope-coding.json",
+      "sourceDoc": "docs/model-sources/providers/alibaba/models/glm-5.md",
+      "outcome": "official-identity-only",
+      "sourceIds": [
+        "page-ali-coding"
+      ],
+      "fieldEvidence": [
+        {
+          "field": "modelName",
+          "currentValue": "glm-5",
+          "supportedValue": "glm-5",
+          "sourceId": "page-ali-coding",
+          "assessment": "matches",
+          "explanation": "本套餐官方正文逐字列出的精确ID；不借此确认按量API页的窗口/价格也适用于套餐。"
+        }
+      ],
+      "remainingFields": [
+        "contextWindow",
+        "maxOutputTokens",
+        "capabilities"
+      ],
+      "nextAction": "按精确型号和本接入面继续核对；候选证据不自动应用。",
+      "notes": [
+        "参数数字仍需套餐自身证据，未采用同名按量API数字。",
+        "另已找到按量API模型页，但因API/套餐不同合同，不给本条证明其容量。候选入口：https://help.aliyun.com/zh/model-studio/glm-9",
+        "未做账号API实测；采样、思考参数及媒体请求上限没有明文数字时保持待核。"
+      ]
+    },
+    {
+      "recordKey": "compute/coding-plans/dashscope-token-plan.json#glm-5",
+      "modelId": "glm-5",
+      "config": "compute/coding-plans/dashscope-token-plan.json",
+      "sourceDoc": "docs/model-sources/providers/alibaba/models/glm-5.md",
+      "outcome": "still-unresolved",
+      "sourceIds": [],
+      "fieldEvidence": [],
+      "remainingFields": [
+        "contextWindow",
+        "maxOutputTokens",
+        "modelName",
+        "capabilities"
+      ],
+      "nextAction": "按精确型号和本接入面继续核对；候选证据不自动应用。",
+      "notes": [
+        "另已找到按量API模型页，但因API/套餐不同合同，不给本条证明其容量。候选入口：https://help.aliyun.com/zh/model-studio/glm-9",
+        "本套餐当前正文没有该精确ID；目录缺失不直接证明停服，请查套餐公告/账号目录。",
+        "未做账号API实测；采样、思考参数及媒体请求上限没有明文数字时保持待核。"
+      ]
+    },
+    {
+      "recordKey": "compute/providers/dashscope.json#happyhorse-1.0-i2v",
+      "modelId": "happyhorse-1.0-i2v",
+      "config": "compute/providers/dashscope.json",
+      "sourceDoc": "docs/model-sources/providers/alibaba/models/happyhorse-1.0-i2v.md",
+      "outcome": "official-identity-only",
+      "sourceIds": [
+        "page-happyhorse-1-0-i2v"
+      ],
+      "fieldEvidence": [
+        {
+          "field": "modelName",
+          "currentValue": "happyhorse-1.0-i2v",
+          "supportedValue": "happyhorse-1.0-i2v",
+          "sourceId": "page-happyhorse-1-0-i2v",
+          "assessment": "matches",
+          "explanation": "专属官方模型页标题/推理供应商列出精确名；Spec ID只作为本仓引用，不代表全部别名已核。"
+        }
+      ],
+      "remainingFields": [
+        "capabilities",
+        "extra.supportedResolutions",
+        "extra.endpoint",
+        "extra.asyncHeader",
+        "extra.taskQueryEndpoint",
+        "extra.maxVideoDuration"
+      ],
+      "nextAction": "按精确型号和本接入面继续核对；候选证据不自动应用。",
+      "notes": [
+        "未做账号API实测；采样、思考参数及媒体请求上限没有明文数字时保持待核。"
+      ]
+    },
+    {
+      "recordKey": "compute/model-specs/happyhorse.json#happyhorse-1.0-i2v",
+      "modelId": "happyhorse-1.0-i2v",
+      "config": "compute/model-specs/happyhorse.json",
+      "sourceDoc": "docs/model-sources/providers/alibaba/models/happyhorse-1.0-i2v.md",
+      "outcome": "official-identity-only",
+      "sourceIds": [
+        "page-happyhorse-1-0-i2v"
+      ],
+      "fieldEvidence": [
+        {
+          "field": "id",
+          "currentValue": "happyhorse-1.0-i2v",
+          "supportedValue": "happyhorse-1.0-i2v",
+          "sourceId": "page-happyhorse-1-0-i2v",
+          "assessment": "matches",
+          "explanation": "专属官方模型页标题/推理供应商列出精确名；Spec ID只作为本仓引用，不代表全部别名已核。"
+        }
+      ],
+      "remainingFields": [
+        "spec.capabilities"
+      ],
+      "nextAction": "按精确型号和本接入面继续核对；候选证据不自动应用。",
+      "notes": [
+        "未做账号API实测；采样、思考参数及媒体请求上限没有明文数字时保持待核。"
+      ]
+    },
+    {
+      "recordKey": "compute/providers/dashscope.json#happyhorse-1.0-r2v",
+      "modelId": "happyhorse-1.0-r2v",
+      "config": "compute/providers/dashscope.json",
+      "sourceDoc": "docs/model-sources/providers/alibaba/models/happyhorse-1.0-r2v.md",
+      "outcome": "official-identity-only",
+      "sourceIds": [
+        "page-happyhorse-1-0-r2v"
+      ],
+      "fieldEvidence": [
+        {
+          "field": "modelName",
+          "currentValue": "happyhorse-1.0-r2v",
+          "supportedValue": "happyhorse-1.0-r2v",
+          "sourceId": "page-happyhorse-1-0-r2v",
+          "assessment": "matches",
+          "explanation": "专属官方模型页标题/推理供应商列出精确名；Spec ID只作为本仓引用，不代表全部别名已核。"
+        }
+      ],
+      "remainingFields": [
+        "capabilities",
+        "extra.supportedResolutions",
+        "extra.endpoint",
+        "extra.asyncHeader",
+        "extra.taskQueryEndpoint",
+        "extra.maxReferenceImages",
+        "extra.maxVideoDuration"
+      ],
+      "nextAction": "按精确型号和本接入面继续核对；候选证据不自动应用。",
+      "notes": [
+        "未做账号API实测；采样、思考参数及媒体请求上限没有明文数字时保持待核。"
+      ]
+    },
+    {
+      "recordKey": "compute/model-specs/happyhorse.json#happyhorse-1.0-r2v",
+      "modelId": "happyhorse-1.0-r2v",
+      "config": "compute/model-specs/happyhorse.json",
+      "sourceDoc": "docs/model-sources/providers/alibaba/models/happyhorse-1.0-r2v.md",
+      "outcome": "official-identity-only",
+      "sourceIds": [
+        "page-happyhorse-1-0-r2v"
+      ],
+      "fieldEvidence": [
+        {
+          "field": "id",
+          "currentValue": "happyhorse-1.0-r2v",
+          "supportedValue": "happyhorse-1.0-r2v",
+          "sourceId": "page-happyhorse-1-0-r2v",
+          "assessment": "matches",
+          "explanation": "专属官方模型页标题/推理供应商列出精确名；Spec ID只作为本仓引用，不代表全部别名已核。"
+        }
+      ],
+      "remainingFields": [
+        "spec.capabilities"
+      ],
+      "nextAction": "按精确型号和本接入面继续核对；候选证据不自动应用。",
+      "notes": [
+        "未做账号API实测；采样、思考参数及媒体请求上限没有明文数字时保持待核。"
+      ]
+    },
+    {
+      "recordKey": "compute/providers/dashscope.json#happyhorse-1.0-t2v",
+      "modelId": "happyhorse-1.0-t2v",
+      "config": "compute/providers/dashscope.json",
+      "sourceDoc": "docs/model-sources/providers/alibaba/models/happyhorse-1.0-t2v.md",
+      "outcome": "official-identity-only",
+      "sourceIds": [
+        "page-happyhorse-1-0-t2v"
+      ],
+      "fieldEvidence": [
+        {
+          "field": "modelName",
+          "currentValue": "happyhorse-1.0-t2v",
+          "supportedValue": "happyhorse-1.0-t2v",
+          "sourceId": "page-happyhorse-1-0-t2v",
+          "assessment": "matches",
+          "explanation": "专属官方模型页标题/推理供应商列出精确名；Spec ID只作为本仓引用，不代表全部别名已核。"
+        }
+      ],
+      "remainingFields": [
+        "capabilities",
+        "extra.supportedResolutions",
+        "extra.endpoint",
+        "extra.asyncHeader",
+        "extra.taskQueryEndpoint",
+        "extra.maxVideoDuration"
+      ],
+      "nextAction": "按精确型号和本接入面继续核对；候选证据不自动应用。",
+      "notes": [
+        "未做账号API实测；采样、思考参数及媒体请求上限没有明文数字时保持待核。"
+      ]
+    },
+    {
+      "recordKey": "compute/model-specs/happyhorse.json#happyhorse-1.0-t2v",
+      "modelId": "happyhorse-1.0-t2v",
+      "config": "compute/model-specs/happyhorse.json",
+      "sourceDoc": "docs/model-sources/providers/alibaba/models/happyhorse-1.0-t2v.md",
+      "outcome": "official-identity-only",
+      "sourceIds": [
+        "page-happyhorse-1-0-t2v"
+      ],
+      "fieldEvidence": [
+        {
+          "field": "id",
+          "currentValue": "happyhorse-1.0-t2v",
+          "supportedValue": "happyhorse-1.0-t2v",
+          "sourceId": "page-happyhorse-1-0-t2v",
+          "assessment": "matches",
+          "explanation": "专属官方模型页标题/推理供应商列出精确名；Spec ID只作为本仓引用，不代表全部别名已核。"
+        }
+      ],
+      "remainingFields": [
+        "spec.capabilities"
+      ],
+      "nextAction": "按精确型号和本接入面继续核对；候选证据不自动应用。",
+      "notes": [
+        "未做账号API实测；采样、思考参数及媒体请求上限没有明文数字时保持待核。"
+      ]
+    },
+    {
+      "recordKey": "compute/coding-plans/dashscope-token-plan.json#happyhorse-1.1-i2v",
+      "modelId": "happyhorse-1.1-i2v",
+      "config": "compute/coding-plans/dashscope-token-plan.json",
+      "sourceDoc": "docs/model-sources/providers/alibaba/models/happyhorse-1.1-i2v.md",
+      "outcome": "official-identity-only",
+      "sourceIds": [
+        "page-ali-token"
+      ],
+      "fieldEvidence": [
+        {
+          "field": "modelName",
+          "currentValue": "happyhorse-1.1-i2v",
+          "supportedValue": "happyhorse-1.1-i2v",
+          "sourceId": "page-ali-token",
+          "assessment": "matches",
+          "explanation": "本套餐官方正文逐字列出的精确ID；不借此确认按量API页的窗口/价格也适用于套餐。"
+        }
+      ],
+      "remainingFields": [
+        "capabilities"
+      ],
+      "nextAction": "按精确型号和本接入面继续核对；候选证据不自动应用。",
+      "notes": [
+        "参数数字仍需套餐自身证据，未采用同名按量API数字。",
+        "另已找到按量API模型页，但因API/套餐不同合同，不给本条证明其容量。候选入口：https://help.aliyun.com/zh/model-studio/happyhorse-1-1-i2v",
+        "未做账号API实测；采样、思考参数及媒体请求上限没有明文数字时保持待核。"
+      ]
+    },
+    {
+      "recordKey": "compute/model-specs/happyhorse.json#happyhorse-1.1-i2v",
+      "modelId": "happyhorse-1.1-i2v",
+      "config": "compute/model-specs/happyhorse.json",
+      "sourceDoc": "docs/model-sources/providers/alibaba/models/happyhorse-1.1-i2v.md",
+      "outcome": "official-identity-only",
+      "sourceIds": [
+        "page-happyhorse-1-1-i2v"
+      ],
+      "fieldEvidence": [
+        {
+          "field": "id",
+          "currentValue": "happyhorse-1.1-i2v",
+          "supportedValue": "happyhorse-1.1-i2v",
+          "sourceId": "page-happyhorse-1-1-i2v",
+          "assessment": "matches",
+          "explanation": "专属官方模型页标题/推理供应商列出精确名；Spec ID只作为本仓引用，不代表全部别名已核。"
+        }
+      ],
+      "remainingFields": [
+        "spec.capabilities"
+      ],
+      "nextAction": "按精确型号和本接入面继续核对；候选证据不自动应用。",
+      "notes": [
+        "未做账号API实测；采样、思考参数及媒体请求上限没有明文数字时保持待核。"
+      ]
+    },
+    {
+      "recordKey": "compute/coding-plans/dashscope-token-plan.json#happyhorse-1.1-r2v",
+      "modelId": "happyhorse-1.1-r2v",
+      "config": "compute/coding-plans/dashscope-token-plan.json",
+      "sourceDoc": "docs/model-sources/providers/alibaba/models/happyhorse-1.1-r2v.md",
+      "outcome": "official-identity-only",
+      "sourceIds": [
+        "page-ali-token"
+      ],
+      "fieldEvidence": [
+        {
+          "field": "modelName",
+          "currentValue": "happyhorse-1.1-r2v",
+          "supportedValue": "happyhorse-1.1-r2v",
+          "sourceId": "page-ali-token",
+          "assessment": "matches",
+          "explanation": "本套餐官方正文逐字列出的精确ID；不借此确认按量API页的窗口/价格也适用于套餐。"
+        }
+      ],
+      "remainingFields": [
+        "capabilities"
+      ],
+      "nextAction": "按精确型号和本接入面继续核对；候选证据不自动应用。",
+      "notes": [
+        "参数数字仍需套餐自身证据，未采用同名按量API数字。",
+        "另已找到按量API模型页，但因API/套餐不同合同，不给本条证明其容量。候选入口：https://help.aliyun.com/zh/model-studio/happyhorse-1-1-r2v",
+        "未做账号API实测；采样、思考参数及媒体请求上限没有明文数字时保持待核。"
+      ]
+    },
+    {
+      "recordKey": "compute/model-specs/happyhorse.json#happyhorse-1.1-r2v",
+      "modelId": "happyhorse-1.1-r2v",
+      "config": "compute/model-specs/happyhorse.json",
+      "sourceDoc": "docs/model-sources/providers/alibaba/models/happyhorse-1.1-r2v.md",
+      "outcome": "official-identity-only",
+      "sourceIds": [
+        "page-happyhorse-1-1-r2v"
+      ],
+      "fieldEvidence": [
+        {
+          "field": "id",
+          "currentValue": "happyhorse-1.1-r2v",
+          "supportedValue": "happyhorse-1.1-r2v",
+          "sourceId": "page-happyhorse-1-1-r2v",
+          "assessment": "matches",
+          "explanation": "专属官方模型页标题/推理供应商列出精确名；Spec ID只作为本仓引用，不代表全部别名已核。"
+        }
+      ],
+      "remainingFields": [
+        "spec.capabilities"
+      ],
+      "nextAction": "按精确型号和本接入面继续核对；候选证据不自动应用。",
+      "notes": [
+        "未做账号API实测；采样、思考参数及媒体请求上限没有明文数字时保持待核。"
+      ]
+    },
+    {
+      "recordKey": "compute/coding-plans/dashscope-token-plan.json#happyhorse-1.1-t2v",
+      "modelId": "happyhorse-1.1-t2v",
+      "config": "compute/coding-plans/dashscope-token-plan.json",
+      "sourceDoc": "docs/model-sources/providers/alibaba/models/happyhorse-1.1-t2v.md",
+      "outcome": "official-identity-only",
+      "sourceIds": [
+        "page-ali-token"
+      ],
+      "fieldEvidence": [
+        {
+          "field": "modelName",
+          "currentValue": "happyhorse-1.1-t2v",
+          "supportedValue": "happyhorse-1.1-t2v",
+          "sourceId": "page-ali-token",
+          "assessment": "matches",
+          "explanation": "本套餐官方正文逐字列出的精确ID；不借此确认按量API页的窗口/价格也适用于套餐。"
+        }
+      ],
+      "remainingFields": [
+        "capabilities"
+      ],
+      "nextAction": "按精确型号和本接入面继续核对；候选证据不自动应用。",
+      "notes": [
+        "参数数字仍需套餐自身证据，未采用同名按量API数字。",
+        "另已找到按量API模型页，但因API/套餐不同合同，不给本条证明其容量。候选入口：https://help.aliyun.com/zh/model-studio/happyhorse-1-1-t2v",
+        "未做账号API实测；采样、思考参数及媒体请求上限没有明文数字时保持待核。"
+      ]
+    },
+    {
+      "recordKey": "compute/model-specs/happyhorse.json#happyhorse-1.1-t2v",
+      "modelId": "happyhorse-1.1-t2v",
+      "config": "compute/model-specs/happyhorse.json",
+      "sourceDoc": "docs/model-sources/providers/alibaba/models/happyhorse-1.1-t2v.md",
+      "outcome": "official-identity-only",
+      "sourceIds": [
+        "page-happyhorse-1-1-t2v"
+      ],
+      "fieldEvidence": [
+        {
+          "field": "id",
+          "currentValue": "happyhorse-1.1-t2v",
+          "supportedValue": "happyhorse-1.1-t2v",
+          "sourceId": "page-happyhorse-1-1-t2v",
+          "assessment": "matches",
+          "explanation": "专属官方模型页标题/推理供应商列出精确名；Spec ID只作为本仓引用，不代表全部别名已核。"
+        }
+      ],
+      "remainingFields": [
+        "spec.capabilities"
+      ],
+      "nextAction": "按精确型号和本接入面继续核对；候选证据不自动应用。",
+      "notes": [
+        "未做账号API实测；采样、思考参数及媒体请求上限没有明文数字时保持待核。"
+      ]
+    },
+    {
+      "recordKey": "compute/coding-plans/dashscope-coding.json#kimi-k2.5",
+      "modelId": "kimi-k2.5",
+      "config": "compute/coding-plans/dashscope-coding.json",
+      "sourceDoc": "docs/model-sources/providers/alibaba/models/kimi-k2.5.md",
+      "outcome": "official-identity-only",
+      "sourceIds": [
+        "page-ali-coding"
+      ],
+      "fieldEvidence": [
+        {
+          "field": "modelName",
+          "currentValue": "kimi-k2.5",
+          "supportedValue": "kimi-k2.5",
+          "sourceId": "page-ali-coding",
+          "assessment": "matches",
+          "explanation": "本套餐官方正文逐字列出的精确ID；不借此确认按量API页的窗口/价格也适用于套餐。"
+        }
+      ],
+      "remainingFields": [
+        "contextWindow",
+        "maxOutputTokens",
+        "capabilities"
+      ],
+      "nextAction": "按精确型号和本接入面继续核对；候选证据不自动应用。",
+      "notes": [
+        "参数数字仍需套餐自身证据，未采用同名按量API数字。",
+        "另已找到按量API模型页，但因API/套餐不同合同，不给本条证明其容量。候选入口：https://help.aliyun.com/zh/model-studio/kimi-k2-5",
+        "未做账号API实测；采样、思考参数及媒体请求上限没有明文数字时保持待核。"
+      ]
+    },
+    {
+      "recordKey": "compute/coding-plans/dashscope-token-plan.json#kimi-k2.5",
+      "modelId": "kimi-k2.5",
+      "config": "compute/coding-plans/dashscope-token-plan.json",
+      "sourceDoc": "docs/model-sources/providers/alibaba/models/kimi-k2.5.md",
+      "outcome": "still-unresolved",
+      "sourceIds": [],
+      "fieldEvidence": [],
+      "remainingFields": [
+        "contextWindow",
+        "maxOutputTokens",
+        "capabilities"
+      ],
+      "nextAction": "按精确型号和本接入面继续核对；候选证据不自动应用。",
+      "notes": [
+        "另已找到按量API模型页，但因API/套餐不同合同，不给本条证明其容量。候选入口：https://help.aliyun.com/zh/model-studio/kimi-k2-5",
+        "本套餐当前正文没有该精确ID；目录缺失不直接证明停服，请查套餐公告/账号目录。",
+        "未做账号API实测；采样、思考参数及媒体请求上限没有明文数字时保持待核。"
+      ]
+    },
+    {
+      "recordKey": "compute/coding-plans/dashscope-coding.json#MiniMax-M2.5",
+      "modelId": "MiniMax-M2.5",
+      "config": "compute/coding-plans/dashscope-coding.json",
+      "sourceDoc": "docs/model-sources/providers/alibaba/models/minimax-m2.5.md",
+      "outcome": "official-identity-only",
+      "sourceIds": [
+        "page-ali-coding"
+      ],
+      "fieldEvidence": [
+        {
+          "field": "modelName",
+          "currentValue": "MiniMax-M2.5",
+          "supportedValue": "MiniMax-M2.5",
+          "sourceId": "page-ali-coding",
+          "assessment": "matches",
+          "explanation": "本套餐官方正文逐字列出的精确ID；不借此确认按量API页的窗口/价格也适用于套餐。"
+        }
+      ],
+      "remainingFields": [
+        "contextWindow",
+        "maxOutputTokens",
+        "capabilities"
+      ],
+      "nextAction": "按精确型号和本接入面继续核对；候选证据不自动应用。",
+      "notes": [
+        "参数数字仍需套餐自身证据，未采用同名按量API数字。",
+        "另已找到按量API模型页，但因API/套餐不同合同，不给本条证明其容量。候选入口：https://help.aliyun.com/zh/model-studio/minimax-m2-5",
+        "未做账号API实测；采样、思考参数及媒体请求上限没有明文数字时保持待核。"
+      ]
+    },
+    {
+      "recordKey": "compute/coding-plans/dashscope-token-plan.json#MiniMax-M2.5",
+      "modelId": "MiniMax-M2.5",
+      "config": "compute/coding-plans/dashscope-token-plan.json",
+      "sourceDoc": "docs/model-sources/providers/alibaba/models/minimax-m2.5.md",
+      "outcome": "still-unresolved",
+      "sourceIds": [],
+      "fieldEvidence": [],
+      "remainingFields": [
+        "contextWindow",
+        "maxOutputTokens",
+        "capabilities"
+      ],
+      "nextAction": "按精确型号和本接入面继续核对；候选证据不自动应用。",
+      "notes": [
+        "另已找到按量API模型页，但因API/套餐不同合同，不给本条证明其容量。候选入口：https://help.aliyun.com/zh/model-studio/minimax-m2-5",
+        "本套餐当前正文没有该精确ID；目录缺失不直接证明停服，请查套餐公告/账号目录。",
+        "未做账号API实测；采样、思考参数及媒体请求上限没有明文数字时保持待核。"
+      ]
+    },
+    {
+      "recordKey": "compute/providers/dashscope.json#paraformer-v2",
+      "modelId": "paraformer-v2",
+      "config": "compute/providers/dashscope.json",
+      "sourceDoc": "docs/model-sources/providers/alibaba/models/paraformer-v2.md",
+      "outcome": "official-identity-only",
+      "sourceIds": [
+        "page-paraformer-v2"
+      ],
+      "fieldEvidence": [
+        {
+          "field": "modelName",
+          "currentValue": "paraformer-v2",
+          "supportedValue": "paraformer-v2",
+          "sourceId": "page-paraformer-v2",
+          "assessment": "matches",
+          "explanation": "专属官方模型页标题/推理供应商列出精确名；Spec ID只作为本仓引用，不代表全部别名已核。"
+        }
+      ],
+      "remainingFields": [
+        "capabilities",
+        "extra.maxAudioLength",
+        "extra.supportedInputFormats",
+        "extra.streamingSupported"
+      ],
+      "nextAction": "按精确型号和本接入面继续核对；候选证据不自动应用。",
+      "notes": [
+        "未做账号API实测；采样、思考参数及媒体请求上限没有明文数字时保持待核。"
+      ]
+    },
+    {
+      "recordKey": "compute/model-specs/qwen.json#paraformer-v2",
+      "modelId": "paraformer-v2",
+      "config": "compute/model-specs/qwen.json",
+      "sourceDoc": "docs/model-sources/providers/alibaba/models/paraformer-v2.md",
+      "outcome": "official-identity-only",
+      "sourceIds": [
+        "page-paraformer-v2"
+      ],
+      "fieldEvidence": [
+        {
+          "field": "id",
+          "currentValue": "paraformer-v2",
+          "supportedValue": "paraformer-v2",
+          "sourceId": "page-paraformer-v2",
+          "assessment": "matches",
+          "explanation": "专属官方模型页标题/推理供应商列出精确名；Spec ID只作为本仓引用，不代表全部别名已核。"
+        }
+      ],
+      "remainingFields": [
+        "spec.capabilities"
+      ],
+      "nextAction": "按精确型号和本接入面继续核对；候选证据不自动应用。",
+      "notes": [
+        "未做账号API实测；采样、思考参数及媒体请求上限没有明文数字时保持待核。"
+      ]
+    },
+    {
+      "recordKey": "compute/providers/dashscope.json#qwen-image-2.0-pro",
+      "modelId": "qwen-image-2.0-pro",
+      "config": "compute/providers/dashscope.json",
+      "sourceDoc": "docs/model-sources/providers/alibaba/models/qwen-image-2.0-pro.md",
+      "outcome": "official-identity-only",
+      "sourceIds": [
+        "page-qwen-image-2-0-pro"
+      ],
+      "fieldEvidence": [
+        {
+          "field": "modelName",
+          "currentValue": "qwen-image-2.0-pro",
+          "supportedValue": "qwen-image-2.0-pro",
+          "sourceId": "page-qwen-image-2-0-pro",
+          "assessment": "matches",
+          "explanation": "专属官方模型页标题/推理供应商列出精确名；Spec ID只作为本仓引用，不代表全部别名已核。"
+        }
+      ],
+      "remainingFields": [
+        "capabilities",
+        "extra.endpoint",
+        "extra.asyncHeader",
+        "extra.taskQueryEndpoint",
+        "extra.supportedImageSizes",
+        "extra.maxN"
+      ],
+      "nextAction": "按精确型号和本接入面继续核对；候选证据不自动应用。",
+      "notes": [
+        "未做账号API实测；采样、思考参数及媒体请求上限没有明文数字时保持待核。"
+      ]
+    },
+    {
+      "recordKey": "compute/model-specs/qwen.json#qwen-image-2.0-pro",
+      "modelId": "qwen-image-2.0-pro",
+      "config": "compute/model-specs/qwen.json",
+      "sourceDoc": "docs/model-sources/providers/alibaba/models/qwen-image-2.0-pro.md",
+      "outcome": "official-identity-only",
+      "sourceIds": [
+        "page-qwen-image-2-0-pro"
+      ],
+      "fieldEvidence": [
+        {
+          "field": "id",
+          "currentValue": "qwen-image-2.0-pro",
+          "supportedValue": "qwen-image-2.0-pro",
+          "sourceId": "page-qwen-image-2-0-pro",
+          "assessment": "matches",
+          "explanation": "专属官方模型页标题/推理供应商列出精确名；Spec ID只作为本仓引用，不代表全部别名已核。"
+        }
+      ],
+      "remainingFields": [
+        "spec.capabilities"
+      ],
+      "nextAction": "按精确型号和本接入面继续核对；候选证据不自动应用。",
+      "notes": [
+        "未做账号API实测；采样、思考参数及媒体请求上限没有明文数字时保持待核。"
+      ]
+    },
+    {
+      "recordKey": "compute/providers/dashscope.json#qwen-image-2.0",
+      "modelId": "qwen-image-2.0",
+      "config": "compute/providers/dashscope.json",
+      "sourceDoc": "docs/model-sources/providers/alibaba/models/qwen-image-2.0.md",
+      "outcome": "official-identity-only",
+      "sourceIds": [
+        "page-qwen-image-2-0"
+      ],
+      "fieldEvidence": [
+        {
+          "field": "modelName",
+          "currentValue": "qwen-image-2.0",
+          "supportedValue": "qwen-image-2.0",
+          "sourceId": "page-qwen-image-2-0",
+          "assessment": "matches",
+          "explanation": "专属官方模型页标题/推理供应商列出精确名；Spec ID只作为本仓引用，不代表全部别名已核。"
+        }
+      ],
+      "remainingFields": [
+        "capabilities",
+        "extra.endpoint",
+        "extra.asyncHeader",
+        "extra.taskQueryEndpoint",
+        "extra.supportedImageSizes",
+        "extra.maxN"
+      ],
+      "nextAction": "按精确型号和本接入面继续核对；候选证据不自动应用。",
+      "notes": [
+        "未做账号API实测；采样、思考参数及媒体请求上限没有明文数字时保持待核。"
+      ]
+    },
+    {
+      "recordKey": "compute/model-specs/qwen.json#qwen-image-2.0",
+      "modelId": "qwen-image-2.0",
+      "config": "compute/model-specs/qwen.json",
+      "sourceDoc": "docs/model-sources/providers/alibaba/models/qwen-image-2.0.md",
+      "outcome": "official-identity-only",
+      "sourceIds": [
+        "page-qwen-image-2-0"
+      ],
+      "fieldEvidence": [
+        {
+          "field": "id",
+          "currentValue": "qwen-image-2.0",
+          "supportedValue": "qwen-image-2.0",
+          "sourceId": "page-qwen-image-2-0",
+          "assessment": "matches",
+          "explanation": "专属官方模型页标题/推理供应商列出精确名；Spec ID只作为本仓引用，不代表全部别名已核。"
+        }
+      ],
+      "remainingFields": [
+        "spec.capabilities"
+      ],
+      "nextAction": "按精确型号和本接入面继续核对；候选证据不自动应用。",
+      "notes": [
+        "未做账号API实测；采样、思考参数及媒体请求上限没有明文数字时保持待核。"
+      ]
+    },
+    {
+      "recordKey": "compute/providers/dashscope.json#qwen-image-3.0-pro",
+      "modelId": "qwen-image-3.0-pro",
+      "config": "compute/providers/dashscope.json",
+      "sourceDoc": "docs/model-sources/providers/alibaba/models/qwen-image-3.0-pro.md",
+      "outcome": "official-identity-only",
+      "sourceIds": [
+        "page-qwen-image-3-0-pro"
+      ],
+      "fieldEvidence": [
+        {
+          "field": "modelName",
+          "currentValue": "qwen-image-3.0-pro",
+          "supportedValue": "qwen-image-3.0-pro",
+          "sourceId": "page-qwen-image-3-0-pro",
+          "assessment": "matches",
+          "explanation": "专属官方模型页标题/推理供应商列出精确名；Spec ID只作为本仓引用，不代表全部别名已核。"
+        }
+      ],
+      "remainingFields": [
+        "capabilities",
+        "extra.pricingNotes"
+      ],
+      "nextAction": "按精确型号和本接入面继续核对；候选证据不自动应用。",
+      "notes": [
+        "未做账号API实测；采样、思考参数及媒体请求上限没有明文数字时保持待核。"
+      ]
+    },
+    {
+      "recordKey": "compute/coding-plans/dashscope-token-plan.json#qwen-image-3.0-pro",
+      "modelId": "qwen-image-3.0-pro",
+      "config": "compute/coding-plans/dashscope-token-plan.json",
+      "sourceDoc": "docs/model-sources/providers/alibaba/models/qwen-image-3.0-pro.md",
+      "outcome": "official-identity-only",
+      "sourceIds": [
+        "page-ali-token"
+      ],
+      "fieldEvidence": [
+        {
+          "field": "modelName",
+          "currentValue": "qwen-image-3.0-pro",
+          "supportedValue": "qwen-image-3.0-pro",
+          "sourceId": "page-ali-token",
+          "assessment": "matches",
+          "explanation": "本套餐官方正文逐字列出的精确ID；不借此确认按量API页的窗口/价格也适用于套餐。"
+        }
+      ],
+      "remainingFields": [
+        "capabilities"
+      ],
+      "nextAction": "按精确型号和本接入面继续核对；候选证据不自动应用。",
+      "notes": [
+        "参数数字仍需套餐自身证据，未采用同名按量API数字。",
+        "另已找到按量API模型页，但因API/套餐不同合同，不给本条证明其容量。候选入口：https://help.aliyun.com/zh/model-studio/qwen-image-3-0-pro",
+        "未做账号API实测；采样、思考参数及媒体请求上限没有明文数字时保持待核。"
+      ]
+    },
+    {
+      "recordKey": "compute/model-specs/qwen.json#qwen-image-3.0-pro",
+      "modelId": "qwen-image-3.0-pro",
+      "config": "compute/model-specs/qwen.json",
+      "sourceDoc": "docs/model-sources/providers/alibaba/models/qwen-image-3.0-pro.md",
+      "outcome": "official-identity-only",
+      "sourceIds": [
+        "page-qwen-image-3-0-pro"
+      ],
+      "fieldEvidence": [
+        {
+          "field": "id",
+          "currentValue": "qwen-image-3.0-pro",
+          "supportedValue": "qwen-image-3.0-pro",
+          "sourceId": "page-qwen-image-3-0-pro",
+          "assessment": "matches",
+          "explanation": "专属官方模型页标题/推理供应商列出精确名；Spec ID只作为本仓引用，不代表全部别名已核。"
+        }
+      ],
+      "remainingFields": [
+        "spec.capabilities"
+      ],
+      "nextAction": "按精确型号和本接入面继续核对；候选证据不自动应用。",
+      "notes": [
+        "未做账号API实测；采样、思考参数及媒体请求上限没有明文数字时保持待核。"
+      ]
+    },
+    {
+      "recordKey": "compute/providers/dashscope.json#qwen-image-3.0",
+      "modelId": "qwen-image-3.0",
+      "config": "compute/providers/dashscope.json",
+      "sourceDoc": "docs/model-sources/providers/alibaba/models/qwen-image-3.0.md",
+      "outcome": "official-identity-only",
+      "sourceIds": [
+        "page-qwen-image-3-0"
+      ],
+      "fieldEvidence": [
+        {
+          "field": "modelName",
+          "currentValue": "qwen-image-3.0",
+          "supportedValue": "qwen-image-3.0",
+          "sourceId": "page-qwen-image-3-0",
+          "assessment": "matches",
+          "explanation": "专属官方模型页标题/推理供应商列出精确名；Spec ID只作为本仓引用，不代表全部别名已核。"
+        }
+      ],
+      "remainingFields": [
+        "capabilities",
+        "extra.pricingNotes"
+      ],
+      "nextAction": "按精确型号和本接入面继续核对；候选证据不自动应用。",
+      "notes": [
+        "未做账号API实测；采样、思考参数及媒体请求上限没有明文数字时保持待核。"
+      ]
+    },
+    {
+      "recordKey": "compute/model-specs/qwen.json#qwen-image-3.0",
+      "modelId": "qwen-image-3.0",
+      "config": "compute/model-specs/qwen.json",
+      "sourceDoc": "docs/model-sources/providers/alibaba/models/qwen-image-3.0.md",
+      "outcome": "official-identity-only",
+      "sourceIds": [
+        "page-qwen-image-3-0"
+      ],
+      "fieldEvidence": [
+        {
+          "field": "id",
+          "currentValue": "qwen-image-3.0",
+          "supportedValue": "qwen-image-3.0",
+          "sourceId": "page-qwen-image-3-0",
+          "assessment": "matches",
+          "explanation": "专属官方模型页标题/推理供应商列出精确名；Spec ID只作为本仓引用，不代表全部别名已核。"
+        }
+      ],
+      "remainingFields": [
+        "spec.capabilities"
+      ],
+      "nextAction": "按精确型号和本接入面继续核对；候选证据不自动应用。",
+      "notes": [
+        "未做账号API实测；采样、思考参数及媒体请求上限没有明文数字时保持待核。"
+      ]
+    },
+    {
+      "recordKey": "compute/providers/dashscope.json#qwen-long",
+      "modelId": "qwen-long",
+      "config": "compute/providers/dashscope.json",
+      "sourceDoc": "docs/model-sources/providers/alibaba/models/qwen-long.md",
+      "outcome": "official-conflict",
+      "sourceIds": [
+        "page-qwen-long"
+      ],
+      "fieldEvidence": [
+        {
+          "field": "modelName",
+          "currentValue": "qwen-long",
+          "supportedValue": "qwen-long",
+          "sourceId": "page-qwen-long",
+          "assessment": "matches",
+          "explanation": "专属官方模型页标题/推理供应商列出精确名；Spec ID只作为本仓引用，不代表全部别名已核。"
+        },
+        {
+          "field": "contextWindow",
+          "currentValue": 10000000,
+          "supportedValue": 10000000,
+          "sourceId": "page-qwen-long",
+          "assessment": "matches",
+          "explanation": "模型页明文整数。仅本API；思考模式另有输入/输出限制须分别记录。"
+        },
+        {
+          "field": "maxInputTokens",
+          "currentValue": null,
+          "supportedValue": 10000000,
+          "sourceId": "page-qwen-long",
+          "assessment": "not-comparable",
+          "explanation": "模型页明文整数。仅本API；思考模式另有输入/输出限制须分别记录。"
+        },
+        {
+          "field": "maxOutputTokens",
+          "currentValue": 32768,
+          "supportedValue": 8192,
+          "sourceId": "page-qwen-long",
+          "assessment": "differs",
+          "explanation": "模型页明文整数。仅本API；思考模式另有输入/输出限制须分别记录。"
+        },
+        {
+          "field": "inputPrice",
+          "currentValue": 0.5,
+          "supportedValue": 0.5,
+          "sourceId": "page-qwen-long",
+          "assessment": "matches",
+          "explanation": "CNY/百万token，北京原价；如本页存在阶梯，该值只适用于首阶梯，不是全请求通用价。"
+        },
+        {
+          "field": "outputPrice",
+          "currentValue": 2,
+          "supportedValue": 2.0,
+          "sourceId": "page-qwen-long",
+          "assessment": "matches",
+          "explanation": "CNY/百万token，北京原价；如本页存在阶梯，该值只适用于首阶梯，不是全请求通用价。"
+        }
+      ],
+      "remainingFields": [
+        "defaultTemperature",
+        "defaultTopP",
+        "capabilities"
+      ],
+      "nextAction": "按精确型号和本接入面继续核对；候选证据不自动应用。",
+      "notes": [
+        "未做账号API实测；采样、思考参数及媒体请求上限没有明文数字时保持待核。"
+      ]
+    },
+    {
+      "recordKey": "compute/model-specs/qwen.json#qwen-long",
+      "modelId": "qwen-long",
+      "config": "compute/model-specs/qwen.json",
+      "sourceDoc": "docs/model-sources/providers/alibaba/models/qwen-long.md",
+      "outcome": "official-conflict",
+      "sourceIds": [
+        "page-qwen-long"
+      ],
+      "fieldEvidence": [
+        {
+          "field": "id",
+          "currentValue": "qwen-long",
+          "supportedValue": "qwen-long",
+          "sourceId": "page-qwen-long",
+          "assessment": "matches",
+          "explanation": "专属官方模型页标题/推理供应商列出精确名；Spec ID只作为本仓引用，不代表全部别名已核。"
+        },
+        {
+          "field": "spec.contextWindow",
+          "currentValue": 10000000,
+          "supportedValue": 10000000,
+          "sourceId": "page-qwen-long",
+          "assessment": "matches",
+          "explanation": "模型页明文整数。这是百炼托管范围；不保证任意其他接入上限。"
+        },
+        {
+          "field": "spec.maxInputTokens",
+          "currentValue": null,
+          "supportedValue": 10000000,
+          "sourceId": "page-qwen-long",
+          "assessment": "not-comparable",
+          "explanation": "模型页明文整数。这是百炼托管范围；不保证任意其他接入上限。"
+        },
+        {
+          "field": "spec.maxOutputTokens",
+          "currentValue": 32768,
+          "supportedValue": 8192,
+          "sourceId": "page-qwen-long",
+          "assessment": "differs",
+          "explanation": "模型页明文整数。这是百炼托管范围；不保证任意其他接入上限。"
+        }
+      ],
+      "remainingFields": [
+        "spec.defaultTemperature",
+        "spec.capabilities"
+      ],
+      "nextAction": "按精确型号和本接入面继续核对；候选证据不自动应用。",
+      "notes": [
+        "未做账号API实测；采样、思考参数及媒体请求上限没有明文数字时保持待核。"
+      ]
+    },
+    {
+      "recordKey": "compute/model-specs/qwen.json#qwen-max",
+      "modelId": "qwen-max",
+      "config": "compute/model-specs/qwen.json",
+      "sourceDoc": "docs/model-sources/providers/alibaba/models/qwen-max.md",
+      "outcome": "official-fields-found",
+      "sourceIds": [
+        "page-qwen-max"
+      ],
+      "fieldEvidence": [
+        {
+          "field": "id",
+          "currentValue": "qwen-max",
+          "supportedValue": "qwen-max",
+          "sourceId": "page-qwen-max",
+          "assessment": "matches",
+          "explanation": "专属官方模型页标题/推理供应商列出精确名；Spec ID只作为本仓引用，不代表全部别名已核。"
+        },
+        {
+          "field": "spec.contextWindow",
+          "currentValue": 32768,
+          "supportedValue": 32768,
+          "sourceId": "page-qwen-max",
+          "assessment": "matches",
+          "explanation": "模型页明文整数。这是百炼托管范围；不保证任意其他接入上限。"
+        },
+        {
+          "field": "spec.maxInputTokens",
+          "currentValue": null,
+          "supportedValue": 30720,
+          "sourceId": "page-qwen-max",
+          "assessment": "not-comparable",
+          "explanation": "模型页明文整数。这是百炼托管范围；不保证任意其他接入上限。"
+        },
+        {
+          "field": "spec.maxOutputTokens",
+          "currentValue": 8192,
+          "supportedValue": 8192,
+          "sourceId": "page-qwen-max",
+          "assessment": "matches",
+          "explanation": "模型页明文整数。这是百炼托管范围；不保证任意其他接入上限。"
+        }
+      ],
+      "remainingFields": [
+        "spec.defaultTemperature",
+        "spec.capabilities"
+      ],
+      "nextAction": "按精确型号和本接入面继续核对；候选证据不自动应用。",
+      "notes": [
+        "未做账号API实测；采样、思考参数及媒体请求上限没有明文数字时保持待核。"
+      ]
+    },
+    {
+      "recordKey": "compute/providers/dashscope.json#qwen-mt-plus",
+      "modelId": "qwen-mt-plus",
+      "config": "compute/providers/dashscope.json",
+      "sourceDoc": "docs/model-sources/providers/alibaba/models/qwen-mt-plus.md",
+      "outcome": "official-fields-found",
+      "sourceIds": [
+        "page-qwen-mt-plus"
+      ],
+      "fieldEvidence": [
+        {
+          "field": "modelName",
+          "currentValue": "qwen-mt-plus",
+          "supportedValue": "qwen-mt-plus",
+          "sourceId": "page-qwen-mt-plus",
+          "assessment": "matches",
+          "explanation": "专属官方模型页标题/推理供应商列出精确名；Spec ID只作为本仓引用，不代表全部别名已核。"
+        },
+        {
+          "field": "contextWindow",
+          "currentValue": 16384,
+          "supportedValue": 16384,
+          "sourceId": "page-qwen-mt-plus",
+          "assessment": "matches",
+          "explanation": "模型页明文整数。仅本API；思考模式另有输入/输出限制须分别记录。"
+        },
+        {
+          "field": "maxInputTokens",
+          "currentValue": null,
+          "supportedValue": 8192,
+          "sourceId": "page-qwen-mt-plus",
+          "assessment": "not-comparable",
+          "explanation": "模型页明文整数。仅本API；思考模式另有输入/输出限制须分别记录。"
+        },
+        {
+          "field": "maxOutputTokens",
+          "currentValue": 8192,
+          "supportedValue": 8192,
+          "sourceId": "page-qwen-mt-plus",
+          "assessment": "matches",
+          "explanation": "模型页明文整数。仅本API；思考模式另有输入/输出限制须分别记录。"
+        },
+        {
+          "field": "inputPrice",
+          "currentValue": 1.8,
+          "supportedValue": 1.8,
+          "sourceId": "page-qwen-mt-plus",
+          "assessment": "matches",
+          "explanation": "CNY/百万token，北京原价；如本页存在阶梯，该值只适用于首阶梯，不是全请求通用价。"
+        },
+        {
+          "field": "outputPrice",
+          "currentValue": 5.4,
+          "supportedValue": 5.4,
+          "sourceId": "page-qwen-mt-plus",
+          "assessment": "matches",
+          "explanation": "CNY/百万token，北京原价；如本页存在阶梯，该值只适用于首阶梯，不是全请求通用价。"
+        }
+      ],
+      "remainingFields": [
+        "capabilities",
+        "extra.supportedLanguageCount",
+        "extra.supportsIncrementalStreaming"
+      ],
+      "nextAction": "按精确型号和本接入面继续核对；候选证据不自动应用。",
+      "notes": [
+        "未做账号API实测；采样、思考参数及媒体请求上限没有明文数字时保持待核。"
+      ]
+    },
+    {
+      "recordKey": "compute/providers/dashscope.json#qwen-omni-turbo",
+      "modelId": "qwen-omni-turbo",
+      "config": "compute/providers/dashscope.json",
+      "sourceDoc": "docs/model-sources/providers/alibaba/models/qwen-omni-turbo.md",
+      "outcome": "official-fields-found",
+      "sourceIds": [
+        "page-qwen-omni-turbo"
+      ],
+      "fieldEvidence": [
+        {
+          "field": "modelName",
+          "currentValue": "qwen-omni-turbo",
+          "supportedValue": "qwen-omni-turbo",
+          "sourceId": "page-qwen-omni-turbo",
+          "assessment": "matches",
+          "explanation": "专属官方模型页标题/推理供应商列出精确名；Spec ID只作为本仓引用，不代表全部别名已核。"
+        },
+        {
+          "field": "contextWindow",
+          "currentValue": 32768,
+          "supportedValue": 32768,
+          "sourceId": "page-qwen-omni-turbo",
+          "assessment": "matches",
+          "explanation": "模型页明文整数。仅本API；思考模式另有输入/输出限制须分别记录。"
+        },
+        {
+          "field": "maxInputTokens",
+          "currentValue": null,
+          "supportedValue": 30720,
+          "sourceId": "page-qwen-omni-turbo",
+          "assessment": "not-comparable",
+          "explanation": "模型页明文整数。仅本API；思考模式另有输入/输出限制须分别记录。"
+        },
+        {
+          "field": "maxOutputTokens",
+          "currentValue": 2048,
+          "supportedValue": 2048,
+          "sourceId": "page-qwen-omni-turbo",
+          "assessment": "matches",
+          "explanation": "模型页明文整数。仅本API；思考模式另有输入/输出限制须分别记录。"
+        }
+      ],
+      "remainingFields": [
+        "defaultTemperature",
+        "defaultTopP",
+        "capabilities"
+      ],
+      "nextAction": "按精确型号和本接入面继续核对；候选证据不自动应用。",
+      "notes": [
+        "未做账号API实测；采样、思考参数及媒体请求上限没有明文数字时保持待核。"
+      ]
+    },
+    {
+      "recordKey": "compute/model-specs/qwen.json#qwen-omni-turbo",
+      "modelId": "qwen-omni-turbo",
+      "config": "compute/model-specs/qwen.json",
+      "sourceDoc": "docs/model-sources/providers/alibaba/models/qwen-omni-turbo.md",
+      "outcome": "official-fields-found",
+      "sourceIds": [
+        "page-qwen-omni-turbo"
+      ],
+      "fieldEvidence": [
+        {
+          "field": "id",
+          "currentValue": "qwen-omni-turbo",
+          "supportedValue": "qwen-omni-turbo",
+          "sourceId": "page-qwen-omni-turbo",
+          "assessment": "matches",
+          "explanation": "专属官方模型页标题/推理供应商列出精确名；Spec ID只作为本仓引用，不代表全部别名已核。"
+        },
+        {
+          "field": "spec.contextWindow",
+          "currentValue": 32768,
+          "supportedValue": 32768,
+          "sourceId": "page-qwen-omni-turbo",
+          "assessment": "matches",
+          "explanation": "模型页明文整数。这是百炼托管范围；不保证任意其他接入上限。"
+        },
+        {
+          "field": "spec.maxInputTokens",
+          "currentValue": null,
+          "supportedValue": 30720,
+          "sourceId": "page-qwen-omni-turbo",
+          "assessment": "not-comparable",
+          "explanation": "模型页明文整数。这是百炼托管范围；不保证任意其他接入上限。"
+        },
+        {
+          "field": "spec.maxOutputTokens",
+          "currentValue": 2048,
+          "supportedValue": 2048,
+          "sourceId": "page-qwen-omni-turbo",
+          "assessment": "matches",
+          "explanation": "模型页明文整数。这是百炼托管范围；不保证任意其他接入上限。"
+        }
+      ],
+      "remainingFields": [
+        "spec.defaultTemperature",
+        "spec.capabilities"
+      ],
+      "nextAction": "按精确型号和本接入面继续核对；候选证据不自动应用。",
+      "notes": [
+        "未做账号API实测；采样、思考参数及媒体请求上限没有明文数字时保持待核。"
+      ]
+    },
+    {
+      "recordKey": "compute/model-specs/qwen.json#qwen-plus",
+      "modelId": "qwen-plus",
+      "config": "compute/model-specs/qwen.json",
+      "sourceDoc": "docs/model-sources/providers/alibaba/models/qwen-plus.md",
+      "outcome": "official-fields-found",
+      "sourceIds": [
+        "page-qwen-plus"
+      ],
+      "fieldEvidence": [
+        {
+          "field": "id",
+          "currentValue": "qwen-plus",
+          "supportedValue": "qwen-plus",
+          "sourceId": "page-qwen-plus",
+          "assessment": "matches",
+          "explanation": "专属官方模型页标题/推理供应商列出精确名；Spec ID只作为本仓引用，不代表全部别名已核。"
+        },
+        {
+          "field": "spec.contextWindow",
+          "currentValue": 1000000,
+          "supportedValue": 1000000,
+          "sourceId": "page-qwen-plus",
+          "assessment": "matches",
+          "explanation": "模型页明文整数。这是百炼托管范围；不保证任意其他接入上限。"
+        },
+        {
+          "field": "spec.maxInputTokens",
+          "currentValue": null,
+          "supportedValue": 997952,
+          "sourceId": "page-qwen-plus",
+          "assessment": "not-comparable",
+          "explanation": "模型页明文整数。这是百炼托管范围；不保证任意其他接入上限。"
+        },
+        {
+          "field": "spec.maxOutputTokens",
+          "currentValue": 32768,
+          "supportedValue": 32768,
+          "sourceId": "page-qwen-plus",
+          "assessment": "matches",
+          "explanation": "模型页明文整数。这是百炼托管范围；不保证任意其他接入上限。"
+        }
+      ],
+      "remainingFields": [
+        "spec.defaultTemperature",
+        "spec.capabilities"
+      ],
+      "nextAction": "按精确型号和本接入面继续核对；候选证据不自动应用。",
+      "notes": [
+        "未做账号API实测；采样、思考参数及媒体请求上限没有明文数字时保持待核。"
+      ]
+    },
+    {
+      "recordKey": "compute/model-specs/qwen.json#qwen-turbo",
+      "modelId": "qwen-turbo",
+      "config": "compute/model-specs/qwen.json",
+      "sourceDoc": "docs/model-sources/providers/alibaba/models/qwen-turbo.md",
+      "outcome": "official-conflict",
+      "sourceIds": [
+        "page-qwen-turbo"
+      ],
+      "fieldEvidence": [
+        {
+          "field": "id",
+          "currentValue": "qwen-turbo",
+          "supportedValue": "qwen-turbo",
+          "sourceId": "page-qwen-turbo",
+          "assessment": "matches",
+          "explanation": "专属官方模型页标题/推理供应商列出精确名；Spec ID只作为本仓引用，不代表全部别名已核。"
+        },
+        {
+          "field": "spec.contextWindow",
+          "currentValue": 1000000,
+          "supportedValue": 131072,
+          "sourceId": "page-qwen-turbo",
+          "assessment": "differs",
+          "explanation": "模型页明文整数。这是百炼托管范围；不保证任意其他接入上限。"
+        },
+        {
+          "field": "spec.maxInputTokens",
+          "currentValue": null,
+          "supportedValue": 98304,
+          "sourceId": "page-qwen-turbo",
+          "assessment": "not-comparable",
+          "explanation": "模型页明文整数。这是百炼托管范围；不保证任意其他接入上限。"
+        },
+        {
+          "field": "spec.maxOutputTokens",
+          "currentValue": 16384,
+          "supportedValue": 16384,
+          "sourceId": "page-qwen-turbo",
+          "assessment": "matches",
+          "explanation": "模型页明文整数。这是百炼托管范围；不保证任意其他接入上限。"
+        }
+      ],
+      "remainingFields": [
+        "spec.defaultTemperature",
+        "spec.capabilities"
+      ],
+      "nextAction": "按精确型号和本接入面继续核对；候选证据不自动应用。",
+      "notes": [
+        "未做账号API实测；采样、思考参数及媒体请求上限没有明文数字时保持待核。"
+      ]
+    },
+    {
+      "recordKey": "compute/model-specs/qwen.json#qwen3-235b",
+      "modelId": "qwen3-235b",
+      "config": "compute/model-specs/qwen.json",
+      "sourceDoc": "docs/model-sources/providers/alibaba/models/qwen3-235b.md",
+      "outcome": "still-unresolved",
+      "sourceIds": [],
+      "fieldEvidence": [],
+      "remainingFields": [
+        "id",
+        "spec.contextWindow",
+        "spec.defaultTemperature",
+        "spec.maxOutputTokens",
+        "spec.capabilities"
+      ],
+      "nextAction": "按精确型号和本接入面继续核对；候选证据不自动应用。",
+      "notes": [
+        "官网存在具体变体，但当前简称与该变体的精确绑定未证明，不能从family推断。",
+        "已尝试专属页面https://help.aliyun.com/zh/model-studio/qwen3-235b，未找到本内部ID的可比字段正文；保留缺口，不将目录成功当全部参数证明。",
+        "未做账号API实测；采样、思考参数及媒体请求上限没有明文数字时保持待核。"
+      ]
+    },
+    {
+      "recordKey": "compute/model-specs/qwen.json#qwen3-coder-480b",
+      "modelId": "qwen3-coder-480b",
+      "config": "compute/model-specs/qwen.json",
+      "sourceDoc": "docs/model-sources/providers/alibaba/models/qwen3-coder-480b.md",
+      "outcome": "still-unresolved",
+      "sourceIds": [],
+      "fieldEvidence": [],
+      "remainingFields": [
+        "id",
+        "spec.contextWindow",
+        "spec.defaultTemperature",
+        "spec.maxOutputTokens",
+        "spec.capabilities"
+      ],
+      "nextAction": "按精确型号和本接入面继续核对；候选证据不自动应用。",
+      "notes": [
+        "官网存在具体变体，但当前简称与该变体的精确绑定未证明，不能从family推断。",
+        "已尝试专属页面https://help.aliyun.com/zh/model-studio/qwen3-coder-480b，未找到本内部ID的可比字段正文；保留缺口，不将目录成功当全部参数证明。",
+        "未做账号API实测；采样、思考参数及媒体请求上限没有明文数字时保持待核。"
+      ]
+    },
+    {
+      "recordKey": "compute/coding-plans/dashscope-coding.json#qwen3-coder-next",
+      "modelId": "qwen3-coder-next",
+      "config": "compute/coding-plans/dashscope-coding.json",
+      "sourceDoc": "docs/model-sources/providers/alibaba/models/qwen3-coder-next.md",
+      "outcome": "official-identity-only",
+      "sourceIds": [
+        "page-ali-coding"
+      ],
+      "fieldEvidence": [
+        {
+          "field": "modelName",
+          "currentValue": "qwen3-coder-next",
+          "supportedValue": "qwen3-coder-next",
+          "sourceId": "page-ali-coding",
+          "assessment": "matches",
+          "explanation": "本套餐官方正文逐字列出的精确ID；不借此确认按量API页的窗口/价格也适用于套餐。"
+        }
+      ],
+      "remainingFields": [
+        "contextWindow",
+        "maxOutputTokens",
+        "capabilities"
+      ],
+      "nextAction": "按精确型号和本接入面继续核对；候选证据不自动应用。",
+      "notes": [
+        "参数数字仍需套餐自身证据，未采用同名按量API数字。",
+        "另已找到按量API模型页，但因API/套餐不同合同，不给本条证明其容量。候选入口：https://help.aliyun.com/zh/model-studio/qwen3-coder-next",
+        "未做账号API实测；采样、思考参数及媒体请求上限没有明文数字时保持待核。"
+      ]
+    },
+    {
+      "recordKey": "compute/model-specs/qwen.json#qwen3-coder-next",
+      "modelId": "qwen3-coder-next",
+      "config": "compute/model-specs/qwen.json",
+      "sourceDoc": "docs/model-sources/providers/alibaba/models/qwen3-coder-next.md",
+      "outcome": "official-identity-only",
+      "sourceIds": [
+        "page-qwen3-coder-next"
+      ],
+      "fieldEvidence": [
+        {
+          "field": "id",
+          "currentValue": "qwen3-coder-next",
+          "supportedValue": "qwen3-coder-next",
+          "sourceId": "page-qwen3-coder-next",
+          "assessment": "matches",
+          "explanation": "专属官方模型页标题/推理供应商列出精确名；Spec ID只作为本仓引用，不代表全部别名已核。"
+        },
+        {
+          "field": "spec.contextWindow",
+          "currentValue": null,
+          "supportedValue": 262144,
+          "sourceId": "page-qwen3-coder-next",
+          "assessment": "not-comparable",
+          "explanation": "模型页明文整数。这是百炼托管范围；不保证任意其他接入上限。"
+        },
+        {
+          "field": "spec.maxInputTokens",
+          "currentValue": null,
+          "supportedValue": 204800,
+          "sourceId": "page-qwen3-coder-next",
+          "assessment": "not-comparable",
+          "explanation": "模型页明文整数。这是百炼托管范围；不保证任意其他接入上限。"
+        },
+        {
+          "field": "spec.maxOutputTokens",
+          "currentValue": null,
+          "supportedValue": 65536,
+          "sourceId": "page-qwen3-coder-next",
+          "assessment": "not-comparable",
+          "explanation": "模型页明文整数。这是百炼托管范围；不保证任意其他接入上限。"
+        }
+      ],
+      "remainingFields": [],
+      "nextAction": "按精确型号和本接入面继续核对；候选证据不自动应用。",
+      "notes": [
+        "未做账号API实测；采样、思考参数及媒体请求上限没有明文数字时保持待核。"
+      ]
+    },
+    {
+      "recordKey": "compute/coding-plans/dashscope-coding.json#qwen3-coder-plus",
+      "modelId": "qwen3-coder-plus",
+      "config": "compute/coding-plans/dashscope-coding.json",
+      "sourceDoc": "docs/model-sources/providers/alibaba/models/qwen3-coder-plus.md",
+      "outcome": "official-identity-only",
+      "sourceIds": [
+        "page-ali-coding"
+      ],
+      "fieldEvidence": [
+        {
+          "field": "modelName",
+          "currentValue": "qwen3-coder-plus",
+          "supportedValue": "qwen3-coder-plus",
+          "sourceId": "page-ali-coding",
+          "assessment": "matches",
+          "explanation": "本套餐官方正文逐字列出的精确ID；不借此确认按量API页的窗口/价格也适用于套餐。"
+        }
+      ],
+      "remainingFields": [
+        "contextWindow",
+        "maxOutputTokens",
+        "capabilities"
+      ],
+      "nextAction": "按精确型号和本接入面继续核对；候选证据不自动应用。",
+      "notes": [
+        "参数数字仍需套餐自身证据，未采用同名按量API数字。",
+        "另已找到按量API模型页，但因API/套餐不同合同，不给本条证明其容量。候选入口：https://help.aliyun.com/zh/model-studio/qwen3-coder-plus",
+        "未做账号API实测；采样、思考参数及媒体请求上限没有明文数字时保持待核。"
+      ]
+    },
+    {
+      "recordKey": "compute/model-specs/qwen.json#qwen3-coder-plus",
+      "modelId": "qwen3-coder-plus",
+      "config": "compute/model-specs/qwen.json",
+      "sourceDoc": "docs/model-sources/providers/alibaba/models/qwen3-coder-plus.md",
+      "outcome": "official-identity-only",
+      "sourceIds": [
+        "page-qwen3-coder-plus"
+      ],
+      "fieldEvidence": [
+        {
+          "field": "id",
+          "currentValue": "qwen3-coder-plus",
+          "supportedValue": "qwen3-coder-plus",
+          "sourceId": "page-qwen3-coder-plus",
+          "assessment": "matches",
+          "explanation": "专属官方模型页标题/推理供应商列出精确名；Spec ID只作为本仓引用，不代表全部别名已核。"
+        },
+        {
+          "field": "spec.contextWindow",
+          "currentValue": null,
+          "supportedValue": 1000000,
+          "sourceId": "page-qwen3-coder-plus",
+          "assessment": "not-comparable",
+          "explanation": "模型页明文整数。这是百炼托管范围；不保证任意其他接入上限。"
+        },
+        {
+          "field": "spec.maxInputTokens",
+          "currentValue": null,
+          "supportedValue": 997952,
+          "sourceId": "page-qwen3-coder-plus",
+          "assessment": "not-comparable",
+          "explanation": "模型页明文整数。这是百炼托管范围；不保证任意其他接入上限。"
+        },
+        {
+          "field": "spec.maxOutputTokens",
+          "currentValue": null,
+          "supportedValue": 65536,
+          "sourceId": "page-qwen3-coder-plus",
+          "assessment": "not-comparable",
+          "explanation": "模型页明文整数。这是百炼托管范围；不保证任意其他接入上限。"
+        }
+      ],
+      "remainingFields": [],
+      "nextAction": "按精确型号和本接入面继续核对；候选证据不自动应用。",
+      "notes": [
+        "未做账号API实测；采样、思考参数及媒体请求上限没有明文数字时保持待核。"
+      ]
+    },
+    {
+      "recordKey": "compute/model-specs/qwen.json#qwen3-coder",
+      "modelId": "qwen3-coder",
+      "config": "compute/model-specs/qwen.json",
+      "sourceDoc": "docs/model-sources/providers/alibaba/models/qwen3-coder.md",
+      "outcome": "still-unresolved",
+      "sourceIds": [],
+      "fieldEvidence": [],
+      "remainingFields": [
+        "id",
+        "spec.contextWindow",
+        "spec.defaultTemperature",
+        "spec.maxOutputTokens",
+        "spec.capabilities"
+      ],
+      "nextAction": "按精确型号和本接入面继续核对；候选证据不自动应用。",
+      "notes": [
+        "已尝试专属页面https://help.aliyun.com/zh/model-studio/qwen3-coder，未找到本内部ID的可比字段正文；保留缺口，不将目录成功当全部参数证明。",
+        "未做账号API实测；采样、思考参数及媒体请求上限没有明文数字时保持待核。"
+      ]
+    },
+    {
+      "recordKey": "compute/coding-plans/dashscope-coding.json#qwen3-max-2026-01-23",
+      "modelId": "qwen3-max-2026-01-23",
+      "config": "compute/coding-plans/dashscope-coding.json",
+      "sourceDoc": "docs/model-sources/providers/alibaba/models/qwen3-max-2026-01-23.md",
+      "outcome": "official-identity-only",
+      "sourceIds": [
+        "page-ali-coding"
+      ],
+      "fieldEvidence": [
+        {
+          "field": "modelName",
+          "currentValue": "qwen3-max-2026-01-23",
+          "supportedValue": "qwen3-max-2026-01-23",
+          "sourceId": "page-ali-coding",
+          "assessment": "matches",
+          "explanation": "本套餐官方正文逐字列出的精确ID；不借此确认按量API页的窗口/价格也适用于套餐。"
+        }
+      ],
+      "remainingFields": [
+        "contextWindow",
+        "maxOutputTokens",
+        "capabilities"
+      ],
+      "nextAction": "按精确型号和本接入面继续核对；候选证据不自动应用。",
+      "notes": [
+        "参数数字仍需套餐自身证据，未采用同名按量API数字。",
+        "未做账号API实测；采样、思考参数及媒体请求上限没有明文数字时保持待核。"
+      ]
+    },
+    {
+      "recordKey": "compute/model-specs/qwen.json#qwen3-max-trans",
+      "modelId": "qwen3-max-trans",
+      "config": "compute/model-specs/qwen.json",
+      "sourceDoc": "docs/model-sources/providers/alibaba/models/qwen3-max-trans.md",
+      "outcome": "still-unresolved",
+      "sourceIds": [],
+      "fieldEvidence": [],
+      "remainingFields": [
+        "id",
+        "spec.contextWindow",
+        "spec.defaultTemperature",
+        "spec.maxOutputTokens",
+        "spec.capabilities"
+      ],
+      "nextAction": "按精确型号和本接入面继续核对；候选证据不自动应用。",
+      "notes": [
+        "已尝试专属页面https://help.aliyun.com/zh/model-studio/qwen3-max-trans，未找到本内部ID的可比字段正文；保留缺口，不将目录成功当全部参数证明。",
+        "未做账号API实测；采样、思考参数及媒体请求上限没有明文数字时保持待核。"
+      ]
+    },
+    {
+      "recordKey": "compute/model-specs/qwen.json#qwen3-max",
+      "modelId": "qwen3-max",
+      "config": "compute/model-specs/qwen.json",
+      "sourceDoc": "docs/model-sources/providers/alibaba/models/qwen3-max.md",
+      "outcome": "official-fields-found",
+      "sourceIds": [
+        "page-ali-qwen3-max"
+      ],
+      "fieldEvidence": [
+        {
+          "field": "id",
+          "currentValue": "qwen3-max",
+          "supportedValue": "qwen3-max",
+          "sourceId": "page-ali-qwen3-max",
+          "assessment": "matches",
+          "explanation": "专属官方模型页标题/推理供应商列出精确名；Spec ID只作为本仓引用，不代表全部别名已核。"
+        },
+        {
+          "field": "spec.contextWindow",
+          "currentValue": 262144,
+          "supportedValue": 262144,
+          "sourceId": "page-ali-qwen3-max",
+          "assessment": "matches",
+          "explanation": "模型页明文整数。这是百炼托管范围；不保证任意其他接入上限。"
+        },
+        {
+          "field": "spec.maxInputTokens",
+          "currentValue": null,
+          "supportedValue": 258048,
+          "sourceId": "page-ali-qwen3-max",
+          "assessment": "not-comparable",
+          "explanation": "模型页明文整数。这是百炼托管范围；不保证任意其他接入上限。"
+        },
+        {
+          "field": "spec.maxOutputTokens",
+          "currentValue": 65536,
+          "supportedValue": 65536,
+          "sourceId": "page-ali-qwen3-max",
+          "assessment": "matches",
+          "explanation": "模型页明文整数。这是百炼托管范围；不保证任意其他接入上限。"
+        }
+      ],
+      "remainingFields": [
+        "spec.defaultTemperature",
+        "spec.supportsReasoning",
+        "spec.capabilities"
+      ],
+      "nextAction": "按精确型号和本接入面继续核对；候选证据不自动应用。",
+      "notes": [
+        "未做账号API实测；采样、思考参数及媒体请求上限没有明文数字时保持待核。"
+      ]
+    },
+    {
+      "recordKey": "compute/providers/dashscope.json#qwen3-rerank",
+      "modelId": "qwen3-rerank",
+      "config": "compute/providers/dashscope.json",
+      "sourceDoc": "docs/model-sources/providers/alibaba/models/qwen3-rerank.md",
+      "outcome": "official-conflict",
+      "sourceIds": [
+        "page-qwen3-rerank"
+      ],
+      "fieldEvidence": [
+        {
+          "field": "modelName",
+          "currentValue": "qwen3-rerank",
+          "supportedValue": "qwen3-rerank",
+          "sourceId": "page-qwen3-rerank",
+          "assessment": "matches",
+          "explanation": "专属官方模型页标题/推理供应商列出精确名；Spec ID只作为本仓引用，不代表全部别名已核。"
+        },
+        {
+          "field": "contextWindow",
+          "currentValue": 120000,
+          "supportedValue": 30000,
+          "sourceId": "page-qwen3-rerank",
+          "assessment": "differs",
+          "explanation": "模型页明文整数。仅本API；思考模式另有输入/输出限制须分别记录。"
+        },
+        {
+          "field": "maxInputTokens",
+          "currentValue": null,
+          "supportedValue": 30000,
+          "sourceId": "page-qwen3-rerank",
+          "assessment": "not-comparable",
+          "explanation": "模型页明文整数。仅本API；思考模式另有输入/输出限制须分别记录。"
+        },
+        {
+          "field": "maxOutputTokens",
+          "currentValue": null,
+          "supportedValue": 0,
+          "sourceId": "page-qwen3-rerank",
+          "assessment": "not-comparable",
+          "explanation": "模型页明文整数。仅本API；思考模式另有输入/输出限制须分别记录。"
+        },
+        {
+          "field": "inputPrice",
+          "currentValue": 1,
+          "supportedValue": 0.5,
+          "sourceId": "page-qwen3-rerank",
+          "assessment": "differs",
+          "explanation": "CNY/百万token，北京原价；如本页存在阶梯，该值只适用于首阶梯，不是全请求通用价。"
+        }
+      ],
+      "remainingFields": [
+        "capabilities"
+      ],
+      "nextAction": "按精确型号和本接入面继续核对；候选证据不自动应用。",
+      "notes": [
+        "未做账号API实测；采样、思考参数及媒体请求上限没有明文数字时保持待核。"
+      ]
+    },
+    {
+      "recordKey": "compute/model-specs/qwen.json#qwen3-rerank",
+      "modelId": "qwen3-rerank",
+      "config": "compute/model-specs/qwen.json",
+      "sourceDoc": "docs/model-sources/providers/alibaba/models/qwen3-rerank.md",
+      "outcome": "official-conflict",
+      "sourceIds": [
+        "page-qwen3-rerank"
+      ],
+      "fieldEvidence": [
+        {
+          "field": "id",
+          "currentValue": "qwen3-rerank",
+          "supportedValue": "qwen3-rerank",
+          "sourceId": "page-qwen3-rerank",
+          "assessment": "matches",
+          "explanation": "专属官方模型页标题/推理供应商列出精确名；Spec ID只作为本仓引用，不代表全部别名已核。"
+        },
+        {
+          "field": "spec.contextWindow",
+          "currentValue": 120000,
+          "supportedValue": 30000,
+          "sourceId": "page-qwen3-rerank",
+          "assessment": "differs",
+          "explanation": "模型页明文整数。这是百炼托管范围；不保证任意其他接入上限。"
+        },
+        {
+          "field": "spec.maxInputTokens",
+          "currentValue": null,
+          "supportedValue": 30000,
+          "sourceId": "page-qwen3-rerank",
+          "assessment": "not-comparable",
+          "explanation": "模型页明文整数。这是百炼托管范围；不保证任意其他接入上限。"
+        },
+        {
+          "field": "spec.maxOutputTokens",
+          "currentValue": null,
+          "supportedValue": 0,
+          "sourceId": "page-qwen3-rerank",
+          "assessment": "not-comparable",
+          "explanation": "模型页明文整数。这是百炼托管范围；不保证任意其他接入上限。"
+        }
+      ],
+      "remainingFields": [
+        "spec.capabilities"
+      ],
+      "nextAction": "按精确型号和本接入面继续核对；候选证据不自动应用。",
+      "notes": [
+        "未做账号API实测；采样、思考参数及媒体请求上限没有明文数字时保持待核。"
+      ]
+    },
+    {
+      "recordKey": "compute/providers/dashscope.json#qwen3-vl-flash",
+      "modelId": "qwen3-vl-flash",
+      "config": "compute/providers/dashscope.json",
+      "sourceDoc": "docs/model-sources/providers/alibaba/models/qwen3-vl-flash.md",
+      "outcome": "official-conflict",
+      "sourceIds": [
+        "page-qwen3-vl-flash"
+      ],
+      "fieldEvidence": [
+        {
+          "field": "modelName",
+          "currentValue": "qwen3-vl-flash",
+          "supportedValue": "qwen3-vl-flash",
+          "sourceId": "page-qwen3-vl-flash",
+          "assessment": "matches",
+          "explanation": "专属官方模型页标题/推理供应商列出精确名；Spec ID只作为本仓引用，不代表全部别名已核。"
+        },
+        {
+          "field": "contextWindow",
+          "currentValue": 262144,
+          "supportedValue": 262144,
+          "sourceId": "page-qwen3-vl-flash",
+          "assessment": "matches",
+          "explanation": "模型页明文整数。仅本API；思考模式另有输入/输出限制须分别记录。"
+        },
+        {
+          "field": "maxInputTokens",
+          "currentValue": null,
+          "supportedValue": 260096,
+          "sourceId": "page-qwen3-vl-flash",
+          "assessment": "not-comparable",
+          "explanation": "模型页明文整数。仅本API；思考模式另有输入/输出限制须分别记录。"
+        },
+        {
+          "field": "maxOutputTokens",
+          "currentValue": 32768,
+          "supportedValue": 32768,
+          "sourceId": "page-qwen3-vl-flash",
+          "assessment": "matches",
+          "explanation": "模型页明文整数。仅本API；思考模式另有输入/输出限制须分别记录。"
+        },
+        {
+          "field": "inputPrice",
+          "currentValue": 0.8,
+          "supportedValue": 0.15,
+          "sourceId": "page-qwen3-vl-flash",
+          "assessment": "differs",
+          "explanation": "CNY/百万token，北京原价；如本页存在阶梯，该值只适用于首阶梯，不是全请求通用价。"
+        },
+        {
+          "field": "outputPrice",
+          "currentValue": 3,
+          "supportedValue": 1.5,
+          "sourceId": "page-qwen3-vl-flash",
+          "assessment": "differs",
+          "explanation": "CNY/百万token，北京原价；如本页存在阶梯，该值只适用于首阶梯，不是全请求通用价。"
+        },
+        {
+          "field": "extra.cacheHitPrice",
+          "currentValue": null,
+          "supportedValue": 0.03,
+          "sourceId": "page-qwen3-vl-flash",
+          "assessment": "not-comparable",
+          "explanation": "CNY/百万token，北京原价；如本页存在阶梯，该值只适用于首阶梯，不是全请求通用价。"
+        }
+      ],
+      "remainingFields": [
+        "defaultTemperature",
+        "defaultTopP",
+        "capabilities"
+      ],
+      "nextAction": "按精确型号和本接入面继续核对；候选证据不自动应用。",
+      "notes": [
+        "未做账号API实测；采样、思考参数及媒体请求上限没有明文数字时保持待核。"
+      ]
+    },
+    {
+      "recordKey": "compute/model-specs/qwen.json#qwen3-vl-flash",
+      "modelId": "qwen3-vl-flash",
+      "config": "compute/model-specs/qwen.json",
+      "sourceDoc": "docs/model-sources/providers/alibaba/models/qwen3-vl-flash.md",
+      "outcome": "official-fields-found",
+      "sourceIds": [
+        "page-qwen3-vl-flash"
+      ],
+      "fieldEvidence": [
+        {
+          "field": "id",
+          "currentValue": "qwen3-vl-flash",
+          "supportedValue": "qwen3-vl-flash",
+          "sourceId": "page-qwen3-vl-flash",
+          "assessment": "matches",
+          "explanation": "专属官方模型页标题/推理供应商列出精确名；Spec ID只作为本仓引用，不代表全部别名已核。"
+        },
+        {
+          "field": "spec.contextWindow",
+          "currentValue": 262144,
+          "supportedValue": 262144,
+          "sourceId": "page-qwen3-vl-flash",
+          "assessment": "matches",
+          "explanation": "模型页明文整数。这是百炼托管范围；不保证任意其他接入上限。"
+        },
+        {
+          "field": "spec.maxInputTokens",
+          "currentValue": null,
+          "supportedValue": 260096,
+          "sourceId": "page-qwen3-vl-flash",
+          "assessment": "not-comparable",
+          "explanation": "模型页明文整数。这是百炼托管范围；不保证任意其他接入上限。"
+        },
+        {
+          "field": "spec.maxOutputTokens",
+          "currentValue": 32768,
+          "supportedValue": 32768,
+          "sourceId": "page-qwen3-vl-flash",
+          "assessment": "matches",
+          "explanation": "模型页明文整数。这是百炼托管范围；不保证任意其他接入上限。"
+        }
+      ],
+      "remainingFields": [
+        "spec.defaultTemperature",
+        "spec.capabilities"
+      ],
+      "nextAction": "按精确型号和本接入面继续核对；候选证据不自动应用。",
+      "notes": [
+        "未做账号API实测；采样、思考参数及媒体请求上限没有明文数字时保持待核。"
+      ]
+    },
+    {
+      "recordKey": "compute/providers/dashscope.json#qwen3-vl-plus",
+      "modelId": "qwen3-vl-plus",
+      "config": "compute/providers/dashscope.json",
+      "sourceDoc": "docs/model-sources/providers/alibaba/models/qwen3-vl-plus.md",
+      "outcome": "official-conflict",
+      "sourceIds": [
+        "page-qwen3-vl-plus"
+      ],
+      "fieldEvidence": [
+        {
+          "field": "modelName",
+          "currentValue": "qwen3-vl-plus",
+          "supportedValue": "qwen3-vl-plus",
+          "sourceId": "page-qwen3-vl-plus",
+          "assessment": "matches",
+          "explanation": "专属官方模型页标题/推理供应商列出精确名；Spec ID只作为本仓引用，不代表全部别名已核。"
+        },
+        {
+          "field": "contextWindow",
+          "currentValue": 262144,
+          "supportedValue": 262144,
+          "sourceId": "page-qwen3-vl-plus",
+          "assessment": "matches",
+          "explanation": "模型页明文整数。仅本API；思考模式另有输入/输出限制须分别记录。"
+        },
+        {
+          "field": "maxInputTokens",
+          "currentValue": null,
+          "supportedValue": 260096,
+          "sourceId": "page-qwen3-vl-plus",
+          "assessment": "not-comparable",
+          "explanation": "模型页明文整数。仅本API；思考模式另有输入/输出限制须分别记录。"
+        },
+        {
+          "field": "maxOutputTokens",
+          "currentValue": 32768,
+          "supportedValue": 32768,
+          "sourceId": "page-qwen3-vl-plus",
+          "assessment": "matches",
+          "explanation": "模型页明文整数。仅本API；思考模式另有输入/输出限制须分别记录。"
+        },
+        {
+          "field": "inputPrice",
+          "currentValue": 1.5,
+          "supportedValue": 1.0,
+          "sourceId": "page-qwen3-vl-plus",
+          "assessment": "differs",
+          "explanation": "CNY/百万token，北京原价；如本页存在阶梯，该值只适用于首阶梯，不是全请求通用价。"
+        },
+        {
+          "field": "outputPrice",
+          "currentValue": 6,
+          "supportedValue": 10.0,
+          "sourceId": "page-qwen3-vl-plus",
+          "assessment": "differs",
+          "explanation": "CNY/百万token，北京原价；如本页存在阶梯，该值只适用于首阶梯，不是全请求通用价。"
+        },
+        {
+          "field": "extra.cacheHitPrice",
+          "currentValue": null,
+          "supportedValue": 0.2,
+          "sourceId": "page-qwen3-vl-plus",
+          "assessment": "not-comparable",
+          "explanation": "CNY/百万token，北京原价；如本页存在阶梯，该值只适用于首阶梯，不是全请求通用价。"
+        }
+      ],
+      "remainingFields": [
+        "defaultTemperature",
+        "defaultTopP",
+        "capabilities"
+      ],
+      "nextAction": "按精确型号和本接入面继续核对；候选证据不自动应用。",
+      "notes": [
+        "未做账号API实测；采样、思考参数及媒体请求上限没有明文数字时保持待核。"
+      ]
+    },
+    {
+      "recordKey": "compute/model-specs/qwen.json#qwen3-vl-plus",
+      "modelId": "qwen3-vl-plus",
+      "config": "compute/model-specs/qwen.json",
+      "sourceDoc": "docs/model-sources/providers/alibaba/models/qwen3-vl-plus.md",
+      "outcome": "official-fields-found",
+      "sourceIds": [
+        "page-qwen3-vl-plus"
+      ],
+      "fieldEvidence": [
+        {
+          "field": "id",
+          "currentValue": "qwen3-vl-plus",
+          "supportedValue": "qwen3-vl-plus",
+          "sourceId": "page-qwen3-vl-plus",
+          "assessment": "matches",
+          "explanation": "专属官方模型页标题/推理供应商列出精确名；Spec ID只作为本仓引用，不代表全部别名已核。"
+        },
+        {
+          "field": "spec.contextWindow",
+          "currentValue": 262144,
+          "supportedValue": 262144,
+          "sourceId": "page-qwen3-vl-plus",
+          "assessment": "matches",
+          "explanation": "模型页明文整数。这是百炼托管范围；不保证任意其他接入上限。"
+        },
+        {
+          "field": "spec.maxInputTokens",
+          "currentValue": null,
+          "supportedValue": 260096,
+          "sourceId": "page-qwen3-vl-plus",
+          "assessment": "not-comparable",
+          "explanation": "模型页明文整数。这是百炼托管范围；不保证任意其他接入上限。"
+        },
+        {
+          "field": "spec.maxOutputTokens",
+          "currentValue": 32768,
+          "supportedValue": 32768,
+          "sourceId": "page-qwen3-vl-plus",
+          "assessment": "matches",
+          "explanation": "模型页明文整数。这是百炼托管范围；不保证任意其他接入上限。"
+        }
+      ],
+      "remainingFields": [
+        "spec.defaultTemperature",
+        "spec.capabilities"
+      ],
+      "nextAction": "按精确型号和本接入面继续核对；候选证据不自动应用。",
+      "notes": [
+        "未做账号API实测；采样、思考参数及媒体请求上限没有明文数字时保持待核。"
+      ]
+    },
+    {
+      "recordKey": "compute/model-specs/qwen.json#qwen3.5-27b",
+      "modelId": "qwen3.5-27b",
+      "config": "compute/model-specs/qwen.json",
+      "sourceDoc": "docs/model-sources/providers/alibaba/models/qwen3.5-27b.md",
+      "outcome": "official-conflict",
+      "sourceIds": [
+        "page-qwen3-5-27b"
+      ],
+      "fieldEvidence": [
+        {
+          "field": "id",
+          "currentValue": "qwen3.5-27b",
+          "supportedValue": "qwen3.5-27b",
+          "sourceId": "page-qwen3-5-27b",
+          "assessment": "matches",
+          "explanation": "专属官方模型页标题/推理供应商列出精确名；Spec ID只作为本仓引用，不代表全部别名已核。"
+        },
+        {
+          "field": "spec.contextWindow",
+          "currentValue": 131072,
+          "supportedValue": 262144,
+          "sourceId": "page-qwen3-5-27b",
+          "assessment": "differs",
+          "explanation": "模型页明文整数。这是百炼托管范围；不保证任意其他接入上限。"
+        },
+        {
+          "field": "spec.maxInputTokens",
+          "currentValue": null,
+          "supportedValue": 260096,
+          "sourceId": "page-qwen3-5-27b",
+          "assessment": "not-comparable",
+          "explanation": "模型页明文整数。这是百炼托管范围；不保证任意其他接入上限。"
+        },
+        {
+          "field": "spec.maxOutputTokens",
+          "currentValue": 65536,
+          "supportedValue": 65536,
+          "sourceId": "page-qwen3-5-27b",
+          "assessment": "matches",
+          "explanation": "模型页明文整数。这是百炼托管范围；不保证任意其他接入上限。"
+        }
+      ],
+      "remainingFields": [
+        "spec.defaultTemperature",
+        "spec.capabilities"
+      ],
+      "nextAction": "按精确型号和本接入面继续核对；候选证据不自动应用。",
+      "notes": [
+        "未做账号API实测；采样、思考参数及媒体请求上限没有明文数字时保持待核。"
+      ]
+    },
+    {
+      "recordKey": "compute/model-specs/qwen.json#qwen3.5-35b-a3b",
+      "modelId": "qwen3.5-35b-a3b",
+      "config": "compute/model-specs/qwen.json",
+      "sourceDoc": "docs/model-sources/providers/alibaba/models/qwen3.5-35b-a3b.md",
+      "outcome": "official-conflict",
+      "sourceIds": [
+        "page-qwen3-5-35b-a3b"
+      ],
+      "fieldEvidence": [
+        {
+          "field": "id",
+          "currentValue": "qwen3.5-35b-a3b",
+          "supportedValue": "qwen3.5-35b-a3b",
+          "sourceId": "page-qwen3-5-35b-a3b",
+          "assessment": "matches",
+          "explanation": "专属官方模型页标题/推理供应商列出精确名；Spec ID只作为本仓引用，不代表全部别名已核。"
+        },
+        {
+          "field": "spec.contextWindow",
+          "currentValue": 131072,
+          "supportedValue": 262144,
+          "sourceId": "page-qwen3-5-35b-a3b",
+          "assessment": "differs",
+          "explanation": "模型页明文整数。这是百炼托管范围；不保证任意其他接入上限。"
+        },
+        {
+          "field": "spec.maxInputTokens",
+          "currentValue": null,
+          "supportedValue": 260096,
+          "sourceId": "page-qwen3-5-35b-a3b",
+          "assessment": "not-comparable",
+          "explanation": "模型页明文整数。这是百炼托管范围；不保证任意其他接入上限。"
+        },
+        {
+          "field": "spec.maxOutputTokens",
+          "currentValue": 65536,
+          "supportedValue": 65536,
+          "sourceId": "page-qwen3-5-35b-a3b",
+          "assessment": "matches",
+          "explanation": "模型页明文整数。这是百炼托管范围；不保证任意其他接入上限。"
+        }
+      ],
+      "remainingFields": [
+        "spec.defaultTemperature",
+        "spec.capabilities"
+      ],
+      "nextAction": "按精确型号和本接入面继续核对；候选证据不自动应用。",
+      "notes": [
+        "未做账号API实测；采样、思考参数及媒体请求上限没有明文数字时保持待核。"
+      ]
+    },
+    {
+      "recordKey": "compute/coding-plans/dashscope-coding.json#qwen3.5-plus",
+      "modelId": "qwen3.5-plus",
+      "config": "compute/coding-plans/dashscope-coding.json",
+      "sourceDoc": "docs/model-sources/providers/alibaba/models/qwen3.5-plus.md",
+      "outcome": "official-identity-only",
+      "sourceIds": [
+        "page-ali-coding"
+      ],
+      "fieldEvidence": [
+        {
+          "field": "modelName",
+          "currentValue": "qwen3.5-plus",
+          "supportedValue": "qwen3.5-plus",
+          "sourceId": "page-ali-coding",
+          "assessment": "matches",
+          "explanation": "本套餐官方正文逐字列出的精确ID；不借此确认按量API页的窗口/价格也适用于套餐。"
+        }
+      ],
+      "remainingFields": [
+        "contextWindow",
+        "maxOutputTokens",
+        "capabilities"
+      ],
+      "nextAction": "按精确型号和本接入面继续核对；候选证据不自动应用。",
+      "notes": [
+        "参数数字仍需套餐自身证据，未采用同名按量API数字。",
+        "另已找到按量API模型页，但因API/套餐不同合同，不给本条证明其容量。候选入口：https://help.aliyun.com/zh/model-studio/qwen3-5-plus",
+        "未做账号API实测；采样、思考参数及媒体请求上限没有明文数字时保持待核。"
+      ]
+    },
+    {
+      "recordKey": "compute/model-specs/qwen.json#qwen3.5-plus",
+      "modelId": "qwen3.5-plus",
+      "config": "compute/model-specs/qwen.json",
+      "sourceDoc": "docs/model-sources/providers/alibaba/models/qwen3.5-plus.md",
+      "outcome": "official-fields-found",
+      "sourceIds": [
+        "page-qwen3-5-plus"
+      ],
+      "fieldEvidence": [
+        {
+          "field": "id",
+          "currentValue": "qwen3.5-plus",
+          "supportedValue": "qwen3.5-plus",
+          "sourceId": "page-qwen3-5-plus",
+          "assessment": "matches",
+          "explanation": "专属官方模型页标题/推理供应商列出精确名；Spec ID只作为本仓引用，不代表全部别名已核。"
+        },
+        {
+          "field": "spec.contextWindow",
+          "currentValue": 1000000,
+          "supportedValue": 1000000,
+          "sourceId": "page-qwen3-5-plus",
+          "assessment": "matches",
+          "explanation": "模型页明文整数。这是百炼托管范围；不保证任意其他接入上限。"
+        },
+        {
+          "field": "spec.maxInputTokens",
+          "currentValue": null,
+          "supportedValue": 991808,
+          "sourceId": "page-qwen3-5-plus",
+          "assessment": "not-comparable",
+          "explanation": "模型页明文整数。这是百炼托管范围；不保证任意其他接入上限。"
+        },
+        {
+          "field": "spec.maxOutputTokens",
+          "currentValue": 65536,
+          "supportedValue": 65536,
+          "sourceId": "page-qwen3-5-plus",
+          "assessment": "matches",
+          "explanation": "模型页明文整数。这是百炼托管范围；不保证任意其他接入上限。"
+        }
+      ],
+      "remainingFields": [
+        "spec.defaultTemperature",
+        "spec.supportsReasoning",
+        "spec.capabilities"
+      ],
+      "nextAction": "按精确型号和本接入面继续核对；候选证据不自动应用。",
+      "notes": [
+        "未做账号API实测；采样、思考参数及媒体请求上限没有明文数字时保持待核。"
+      ]
+    },
+    {
+      "recordKey": "compute/providers/dashscope.json#qwen3.6-flash",
+      "modelId": "qwen3.6-flash",
+      "config": "compute/providers/dashscope.json",
+      "sourceDoc": "docs/model-sources/providers/alibaba/models/qwen3.6-flash.md",
+      "outcome": "official-fields-found",
+      "sourceIds": [
+        "page-qwen3-6-flash"
+      ],
+      "fieldEvidence": [
+        {
+          "field": "modelName",
+          "currentValue": "qwen3.6-flash",
+          "supportedValue": "qwen3.6-flash",
+          "sourceId": "page-qwen3-6-flash",
+          "assessment": "matches",
+          "explanation": "专属官方模型页标题/推理供应商列出精确名；Spec ID只作为本仓引用，不代表全部别名已核。"
+        },
+        {
+          "field": "contextWindow",
+          "currentValue": 1000000,
+          "supportedValue": 1000000,
+          "sourceId": "page-qwen3-6-flash",
+          "assessment": "matches",
+          "explanation": "模型页明文整数。仅本API；思考模式另有输入/输出限制须分别记录。"
+        },
+        {
+          "field": "maxInputTokens",
+          "currentValue": null,
+          "supportedValue": 991808,
+          "sourceId": "page-qwen3-6-flash",
+          "assessment": "not-comparable",
+          "explanation": "模型页明文整数。仅本API；思考模式另有输入/输出限制须分别记录。"
+        },
+        {
+          "field": "maxOutputTokens",
+          "currentValue": 65536,
+          "supportedValue": 65536,
+          "sourceId": "page-qwen3-6-flash",
+          "assessment": "matches",
+          "explanation": "模型页明文整数。仅本API；思考模式另有输入/输出限制须分别记录。"
+        },
+        {
+          "field": "inputPrice",
+          "currentValue": 1.2,
+          "supportedValue": 1.2,
+          "sourceId": "page-qwen3-6-flash",
+          "assessment": "matches",
+          "explanation": "CNY/百万token，北京原价；如本页存在阶梯，该值只适用于首阶梯，不是全请求通用价。"
+        },
+        {
+          "field": "outputPrice",
+          "currentValue": 7.2,
+          "supportedValue": 7.2,
+          "sourceId": "page-qwen3-6-flash",
+          "assessment": "matches",
+          "explanation": "CNY/百万token，北京原价；如本页存在阶梯，该值只适用于首阶梯，不是全请求通用价。"
+        }
+      ],
+      "remainingFields": [
+        "defaultTemperature",
+        "defaultTopP",
+        "extra.pricingTiers",
+        "capabilities",
+        "extra.thinkingMaxTokens"
+      ],
+      "nextAction": "按精确型号和本接入面继续核对；候选证据不自动应用。",
+      "notes": [
+        "未做账号API实测；采样、思考参数及媒体请求上限没有明文数字时保持待核。"
+      ]
+    },
+    {
+      "recordKey": "compute/coding-plans/dashscope-token-plan.json#qwen3.6-flash",
+      "modelId": "qwen3.6-flash",
+      "config": "compute/coding-plans/dashscope-token-plan.json",
+      "sourceDoc": "docs/model-sources/providers/alibaba/models/qwen3.6-flash.md",
+      "outcome": "official-identity-only",
+      "sourceIds": [
+        "page-ali-token"
+      ],
+      "fieldEvidence": [
+        {
+          "field": "modelName",
+          "currentValue": "qwen3.6-flash",
+          "supportedValue": "qwen3.6-flash",
+          "sourceId": "page-ali-token",
+          "assessment": "matches",
+          "explanation": "本套餐官方正文逐字列出的精确ID；不借此确认按量API页的窗口/价格也适用于套餐。"
+        }
+      ],
+      "remainingFields": [
+        "contextWindow",
+        "maxOutputTokens",
+        "capabilities"
+      ],
+      "nextAction": "按精确型号和本接入面继续核对；候选证据不自动应用。",
+      "notes": [
+        "参数数字仍需套餐自身证据，未采用同名按量API数字。",
+        "另已找到按量API模型页，但因API/套餐不同合同，不给本条证明其容量。候选入口：https://help.aliyun.com/zh/model-studio/qwen3-6-flash",
+        "未做账号API实测；采样、思考参数及媒体请求上限没有明文数字时保持待核。"
+      ]
+    },
+    {
+      "recordKey": "compute/model-specs/qwen.json#qwen3.6-flash",
+      "modelId": "qwen3.6-flash",
+      "config": "compute/model-specs/qwen.json",
+      "sourceDoc": "docs/model-sources/providers/alibaba/models/qwen3.6-flash.md",
+      "outcome": "official-fields-found",
+      "sourceIds": [
+        "page-qwen3-6-flash"
+      ],
+      "fieldEvidence": [
+        {
+          "field": "id",
+          "currentValue": "qwen3.6-flash",
+          "supportedValue": "qwen3.6-flash",
+          "sourceId": "page-qwen3-6-flash",
+          "assessment": "matches",
+          "explanation": "专属官方模型页标题/推理供应商列出精确名；Spec ID只作为本仓引用，不代表全部别名已核。"
+        },
+        {
+          "field": "spec.contextWindow",
+          "currentValue": 1000000,
+          "supportedValue": 1000000,
+          "sourceId": "page-qwen3-6-flash",
+          "assessment": "matches",
+          "explanation": "模型页明文整数。这是百炼托管范围；不保证任意其他接入上限。"
+        },
+        {
+          "field": "spec.maxInputTokens",
+          "currentValue": null,
+          "supportedValue": 991808,
+          "sourceId": "page-qwen3-6-flash",
+          "assessment": "not-comparable",
+          "explanation": "模型页明文整数。这是百炼托管范围；不保证任意其他接入上限。"
+        },
+        {
+          "field": "spec.maxOutputTokens",
+          "currentValue": 65536,
+          "supportedValue": 65536,
+          "sourceId": "page-qwen3-6-flash",
+          "assessment": "matches",
+          "explanation": "模型页明文整数。这是百炼托管范围；不保证任意其他接入上限。"
+        }
+      ],
+      "remainingFields": [
+        "spec.defaultTemperature",
+        "spec.supportsReasoning",
+        "spec.capabilities"
+      ],
+      "nextAction": "按精确型号和本接入面继续核对；候选证据不自动应用。",
+      "notes": [
+        "未做账号API实测；采样、思考参数及媒体请求上限没有明文数字时保持待核。"
+      ]
+    },
+    {
+      "recordKey": "compute/coding-plans/dashscope-coding.json#qwen3.6-plus",
+      "modelId": "qwen3.6-plus",
+      "config": "compute/coding-plans/dashscope-coding.json",
+      "sourceDoc": "docs/model-sources/providers/alibaba/models/qwen3.6-plus.md",
+      "outcome": "official-identity-only",
+      "sourceIds": [
+        "page-ali-coding"
+      ],
+      "fieldEvidence": [
+        {
+          "field": "modelName",
+          "currentValue": "qwen3.6-plus",
+          "supportedValue": "qwen3.6-plus",
+          "sourceId": "page-ali-coding",
+          "assessment": "matches",
+          "explanation": "本套餐官方正文逐字列出的精确ID；不借此确认按量API页的窗口/价格也适用于套餐。"
+        }
+      ],
+      "remainingFields": [
+        "contextWindow",
+        "maxOutputTokens",
+        "capabilities"
+      ],
+      "nextAction": "按精确型号和本接入面继续核对；候选证据不自动应用。",
+      "notes": [
+        "参数数字仍需套餐自身证据，未采用同名按量API数字。",
+        "另已找到按量API模型页，但因API/套餐不同合同，不给本条证明其容量。候选入口：https://help.aliyun.com/zh/model-studio/qwen3-6-plus",
+        "未做账号API实测；采样、思考参数及媒体请求上限没有明文数字时保持待核。"
+      ]
+    },
+    {
+      "recordKey": "compute/coding-plans/dashscope-token-plan.json#qwen3.6-plus",
+      "modelId": "qwen3.6-plus",
+      "config": "compute/coding-plans/dashscope-token-plan.json",
+      "sourceDoc": "docs/model-sources/providers/alibaba/models/qwen3.6-plus.md",
+      "outcome": "still-unresolved",
+      "sourceIds": [],
+      "fieldEvidence": [],
+      "remainingFields": [
+        "contextWindow",
+        "maxOutputTokens",
+        "capabilities"
+      ],
+      "nextAction": "按精确型号和本接入面继续核对；候选证据不自动应用。",
+      "notes": [
+        "另已找到按量API模型页，但因API/套餐不同合同，不给本条证明其容量。候选入口：https://help.aliyun.com/zh/model-studio/qwen3-6-plus",
+        "本套餐当前正文没有该精确ID；目录缺失不直接证明停服，请查套餐公告/账号目录。",
+        "未做账号API实测；采样、思考参数及媒体请求上限没有明文数字时保持待核。"
+      ]
+    },
+    {
+      "recordKey": "compute/model-specs/qwen.json#qwen3.6-plus",
+      "modelId": "qwen3.6-plus",
+      "config": "compute/model-specs/qwen.json",
+      "sourceDoc": "docs/model-sources/providers/alibaba/models/qwen3.6-plus.md",
+      "outcome": "official-fields-found",
+      "sourceIds": [
+        "page-qwen3-6-plus"
+      ],
+      "fieldEvidence": [
+        {
+          "field": "id",
+          "currentValue": "qwen3.6-plus",
+          "supportedValue": "qwen3.6-plus",
+          "sourceId": "page-qwen3-6-plus",
+          "assessment": "matches",
+          "explanation": "专属官方模型页标题/推理供应商列出精确名；Spec ID只作为本仓引用，不代表全部别名已核。"
+        },
+        {
+          "field": "spec.contextWindow",
+          "currentValue": 1000000,
+          "supportedValue": 1000000,
+          "sourceId": "page-qwen3-6-plus",
+          "assessment": "matches",
+          "explanation": "模型页明文整数。这是百炼托管范围；不保证任意其他接入上限。"
+        },
+        {
+          "field": "spec.maxInputTokens",
+          "currentValue": null,
+          "supportedValue": 991808,
+          "sourceId": "page-qwen3-6-plus",
+          "assessment": "not-comparable",
+          "explanation": "模型页明文整数。这是百炼托管范围；不保证任意其他接入上限。"
+        },
+        {
+          "field": "spec.maxOutputTokens",
+          "currentValue": 65536,
+          "supportedValue": 65536,
+          "sourceId": "page-qwen3-6-plus",
+          "assessment": "matches",
+          "explanation": "模型页明文整数。这是百炼托管范围；不保证任意其他接入上限。"
+        }
+      ],
+      "remainingFields": [
+        "spec.defaultTemperature",
+        "spec.supportsReasoning",
+        "spec.capabilities"
+      ],
+      "nextAction": "按精确型号和本接入面继续核对；候选证据不自动应用。",
+      "notes": [
+        "未做账号API实测；采样、思考参数及媒体请求上限没有明文数字时保持待核。"
+      ]
+    },
+    {
+      "recordKey": "compute/providers/dashscope.json#qwen3.7-max",
+      "modelId": "qwen3.7-max",
+      "config": "compute/providers/dashscope.json",
+      "sourceDoc": "docs/model-sources/providers/alibaba/models/qwen3.7-max.md",
+      "outcome": "official-fields-found",
+      "sourceIds": [
+        "page-qwen3-7-max"
+      ],
+      "fieldEvidence": [
+        {
+          "field": "modelName",
+          "currentValue": "qwen3.7-max",
+          "supportedValue": "qwen3.7-max",
+          "sourceId": "page-qwen3-7-max",
+          "assessment": "matches",
+          "explanation": "专属官方模型页标题/推理供应商列出精确名；Spec ID只作为本仓引用，不代表全部别名已核。"
+        },
+        {
+          "field": "contextWindow",
+          "currentValue": 1000000,
+          "supportedValue": 1000000,
+          "sourceId": "page-qwen3-7-max",
+          "assessment": "matches",
+          "explanation": "模型页明文整数。仅本API；思考模式另有输入/输出限制须分别记录。"
+        },
+        {
+          "field": "maxInputTokens",
+          "currentValue": null,
+          "supportedValue": 991808,
+          "sourceId": "page-qwen3-7-max",
+          "assessment": "not-comparable",
+          "explanation": "模型页明文整数。仅本API；思考模式另有输入/输出限制须分别记录。"
+        },
+        {
+          "field": "maxOutputTokens",
+          "currentValue": 131072,
+          "supportedValue": 131072,
+          "sourceId": "page-qwen3-7-max",
+          "assessment": "matches",
+          "explanation": "模型页明文整数。仅本API；思考模式另有输入/输出限制须分别记录。"
+        },
+        {
+          "field": "inputPrice",
+          "currentValue": 12,
+          "supportedValue": 12.0,
+          "sourceId": "page-qwen3-7-max",
+          "assessment": "matches",
+          "explanation": "CNY/百万token，北京原价；如本页存在阶梯，该值只适用于首阶梯，不是全请求通用价。"
+        },
+        {
+          "field": "outputPrice",
+          "currentValue": 36,
+          "supportedValue": 36.0,
+          "sourceId": "page-qwen3-7-max",
+          "assessment": "matches",
+          "explanation": "CNY/百万token，北京原价；如本页存在阶梯，该值只适用于首阶梯，不是全请求通用价。"
+        },
+        {
+          "field": "extra.cacheHitPrice",
+          "currentValue": 2.4,
+          "supportedValue": 2.4,
+          "sourceId": "page-qwen3-7-max",
+          "assessment": "matches",
+          "explanation": "CNY/百万token，北京原价；如本页存在阶梯，该值只适用于首阶梯，不是全请求通用价。"
+        }
+      ],
+      "remainingFields": [
+        "defaultTemperature",
+        "defaultTopP",
+        "capabilities"
+      ],
+      "nextAction": "按精确型号和本接入面继续核对；候选证据不自动应用。",
+      "notes": [
+        "未做账号API实测；采样、思考参数及媒体请求上限没有明文数字时保持待核。"
+      ]
+    },
+    {
+      "recordKey": "compute/coding-plans/dashscope-token-plan.json#qwen3.7-max",
+      "modelId": "qwen3.7-max",
+      "config": "compute/coding-plans/dashscope-token-plan.json",
+      "sourceDoc": "docs/model-sources/providers/alibaba/models/qwen3.7-max.md",
+      "outcome": "official-identity-only",
+      "sourceIds": [
+        "page-ali-token"
+      ],
+      "fieldEvidence": [
+        {
+          "field": "modelName",
+          "currentValue": "qwen3.7-max",
+          "supportedValue": "qwen3.7-max",
+          "sourceId": "page-ali-token",
+          "assessment": "matches",
+          "explanation": "本套餐官方正文逐字列出的精确ID；不借此确认按量API页的窗口/价格也适用于套餐。"
+        }
+      ],
+      "remainingFields": [
+        "capabilities"
+      ],
+      "nextAction": "按精确型号和本接入面继续核对；候选证据不自动应用。",
+      "notes": [
+        "参数数字仍需套餐自身证据，未采用同名按量API数字。",
+        "另已找到按量API模型页，但因API/套餐不同合同，不给本条证明其容量。候选入口：https://help.aliyun.com/zh/model-studio/qwen3-7-max",
+        "未做账号API实测；采样、思考参数及媒体请求上限没有明文数字时保持待核。"
+      ]
+    },
+    {
+      "recordKey": "compute/model-specs/qwen.json#qwen3.7-max",
+      "modelId": "qwen3.7-max",
+      "config": "compute/model-specs/qwen.json",
+      "sourceDoc": "docs/model-sources/providers/alibaba/models/qwen3.7-max.md",
+      "outcome": "official-fields-found",
+      "sourceIds": [
+        "page-qwen3-7-max"
+      ],
+      "fieldEvidence": [
+        {
+          "field": "id",
+          "currentValue": "qwen3.7-max",
+          "supportedValue": "qwen3.7-max",
+          "sourceId": "page-qwen3-7-max",
+          "assessment": "matches",
+          "explanation": "专属官方模型页标题/推理供应商列出精确名；Spec ID只作为本仓引用，不代表全部别名已核。"
+        },
+        {
+          "field": "spec.contextWindow",
+          "currentValue": 1000000,
+          "supportedValue": 1000000,
+          "sourceId": "page-qwen3-7-max",
+          "assessment": "matches",
+          "explanation": "模型页明文整数。这是百炼托管范围；不保证任意其他接入上限。"
+        },
+        {
+          "field": "spec.maxInputTokens",
+          "currentValue": null,
+          "supportedValue": 991808,
+          "sourceId": "page-qwen3-7-max",
+          "assessment": "not-comparable",
+          "explanation": "模型页明文整数。这是百炼托管范围；不保证任意其他接入上限。"
+        },
+        {
+          "field": "spec.maxOutputTokens",
+          "currentValue": 131072,
+          "supportedValue": 131072,
+          "sourceId": "page-qwen3-7-max",
+          "assessment": "matches",
+          "explanation": "模型页明文整数。这是百炼托管范围；不保证任意其他接入上限。"
+        }
+      ],
+      "remainingFields": [
+        "spec.defaultTemperature",
+        "spec.supportsReasoning",
+        "spec.capabilities"
+      ],
+      "nextAction": "按精确型号和本接入面继续核对；候选证据不自动应用。",
+      "notes": [
+        "未做账号API实测；采样、思考参数及媒体请求上限没有明文数字时保持待核。"
+      ]
+    },
+    {
+      "recordKey": "compute/providers/dashscope.json#qwen3.7-plus",
+      "modelId": "qwen3.7-plus",
+      "config": "compute/providers/dashscope.json",
+      "sourceDoc": "docs/model-sources/providers/alibaba/models/qwen3.7-plus.md",
+      "outcome": "official-conflict",
+      "sourceIds": [
+        "page-qwen3-7-plus"
+      ],
+      "fieldEvidence": [
+        {
+          "field": "modelName",
+          "currentValue": "qwen3.7-plus",
+          "supportedValue": "qwen3.7-plus",
+          "sourceId": "page-qwen3-7-plus",
+          "assessment": "matches",
+          "explanation": "专属官方模型页标题/推理供应商列出精确名；Spec ID只作为本仓引用，不代表全部别名已核。"
+        },
+        {
+          "field": "contextWindow",
+          "currentValue": 1000000,
+          "supportedValue": 1000000,
+          "sourceId": "page-qwen3-7-plus",
+          "assessment": "matches",
+          "explanation": "模型页明文整数。仅本API；思考模式另有输入/输出限制须分别记录。"
+        },
+        {
+          "field": "maxInputTokens",
+          "currentValue": null,
+          "supportedValue": 991808,
+          "sourceId": "page-qwen3-7-plus",
+          "assessment": "not-comparable",
+          "explanation": "模型页明文整数。仅本API；思考模式另有输入/输出限制须分别记录。"
+        },
+        {
+          "field": "maxOutputTokens",
+          "currentValue": 65536,
+          "supportedValue": 131072,
+          "sourceId": "page-qwen3-7-plus",
+          "assessment": "differs",
+          "explanation": "模型页明文整数。仅本API；思考模式另有输入/输出限制须分别记录。"
+        },
+        {
+          "field": "inputPrice",
+          "currentValue": 2,
+          "supportedValue": 2.0,
+          "sourceId": "page-qwen3-7-plus",
+          "assessment": "matches",
+          "explanation": "CNY/百万token，北京原价；如本页存在阶梯，该值只适用于首阶梯，不是全请求通用价。"
+        },
+        {
+          "field": "outputPrice",
+          "currentValue": 8,
+          "supportedValue": 8.0,
+          "sourceId": "page-qwen3-7-plus",
+          "assessment": "matches",
+          "explanation": "CNY/百万token，北京原价；如本页存在阶梯，该值只适用于首阶梯，不是全请求通用价。"
+        },
+        {
+          "field": "extra.cacheHitPrice",
+          "currentValue": null,
+          "supportedValue": 0.4,
+          "sourceId": "page-qwen3-7-plus",
+          "assessment": "not-comparable",
+          "explanation": "CNY/百万token，北京原价；如本页存在阶梯，该值只适用于首阶梯，不是全请求通用价。"
+        }
+      ],
+      "remainingFields": [
+        "defaultTemperature",
+        "defaultTopP",
+        "extra.pricingTiers",
+        "capabilities",
+        "extra.thinkingMaxTokens"
+      ],
+      "nextAction": "按精确型号和本接入面继续核对；候选证据不自动应用。",
+      "notes": [
+        "未做账号API实测；采样、思考参数及媒体请求上限没有明文数字时保持待核。"
+      ]
+    },
+    {
+      "recordKey": "compute/coding-plans/dashscope-coding.json#qwen3.7-plus",
+      "modelId": "qwen3.7-plus",
+      "config": "compute/coding-plans/dashscope-coding.json",
+      "sourceDoc": "docs/model-sources/providers/alibaba/models/qwen3.7-plus.md",
+      "outcome": "official-identity-only",
+      "sourceIds": [
+        "page-ali-coding"
+      ],
+      "fieldEvidence": [
+        {
+          "field": "modelName",
+          "currentValue": "qwen3.7-plus",
+          "supportedValue": "qwen3.7-plus",
+          "sourceId": "page-ali-coding",
+          "assessment": "matches",
+          "explanation": "本套餐官方正文逐字列出的精确ID；不借此确认按量API页的窗口/价格也适用于套餐。"
+        }
+      ],
+      "remainingFields": [
+        "contextWindow",
+        "maxOutputTokens",
+        "capabilities"
+      ],
+      "nextAction": "按精确型号和本接入面继续核对；候选证据不自动应用。",
+      "notes": [
+        "参数数字仍需套餐自身证据，未采用同名按量API数字。",
+        "另已找到按量API模型页，但因API/套餐不同合同，不给本条证明其容量。候选入口：https://help.aliyun.com/zh/model-studio/qwen3-7-plus",
+        "未做账号API实测；采样、思考参数及媒体请求上限没有明文数字时保持待核。"
+      ]
+    },
+    {
+      "recordKey": "compute/coding-plans/dashscope-token-plan.json#qwen3.7-plus",
+      "modelId": "qwen3.7-plus",
+      "config": "compute/coding-plans/dashscope-token-plan.json",
+      "sourceDoc": "docs/model-sources/providers/alibaba/models/qwen3.7-plus.md",
+      "outcome": "official-identity-only",
+      "sourceIds": [
+        "page-ali-token"
+      ],
+      "fieldEvidence": [
+        {
+          "field": "modelName",
+          "currentValue": "qwen3.7-plus",
+          "supportedValue": "qwen3.7-plus",
+          "sourceId": "page-ali-token",
+          "assessment": "matches",
+          "explanation": "本套餐官方正文逐字列出的精确ID；不借此确认按量API页的窗口/价格也适用于套餐。"
+        }
+      ],
+      "remainingFields": [
+        "contextWindow",
+        "maxOutputTokens",
+        "capabilities"
+      ],
+      "nextAction": "按精确型号和本接入面继续核对；候选证据不自动应用。",
+      "notes": [
+        "参数数字仍需套餐自身证据，未采用同名按量API数字。",
+        "另已找到按量API模型页，但因API/套餐不同合同，不给本条证明其容量。候选入口：https://help.aliyun.com/zh/model-studio/qwen3-7-plus",
+        "未做账号API实测；采样、思考参数及媒体请求上限没有明文数字时保持待核。"
+      ]
+    },
+    {
+      "recordKey": "compute/model-specs/qwen.json#qwen3.7-plus",
+      "modelId": "qwen3.7-plus",
+      "config": "compute/model-specs/qwen.json",
+      "sourceDoc": "docs/model-sources/providers/alibaba/models/qwen3.7-plus.md",
+      "outcome": "official-conflict",
+      "sourceIds": [
+        "page-qwen3-7-plus"
+      ],
+      "fieldEvidence": [
+        {
+          "field": "id",
+          "currentValue": "qwen3.7-plus",
+          "supportedValue": "qwen3.7-plus",
+          "sourceId": "page-qwen3-7-plus",
+          "assessment": "matches",
+          "explanation": "专属官方模型页标题/推理供应商列出精确名；Spec ID只作为本仓引用，不代表全部别名已核。"
+        },
+        {
+          "field": "spec.contextWindow",
+          "currentValue": 1000000,
+          "supportedValue": 1000000,
+          "sourceId": "page-qwen3-7-plus",
+          "assessment": "matches",
+          "explanation": "模型页明文整数。这是百炼托管范围；不保证任意其他接入上限。"
+        },
+        {
+          "field": "spec.maxInputTokens",
+          "currentValue": null,
+          "supportedValue": 991808,
+          "sourceId": "page-qwen3-7-plus",
+          "assessment": "not-comparable",
+          "explanation": "模型页明文整数。这是百炼托管范围；不保证任意其他接入上限。"
+        },
+        {
+          "field": "spec.maxOutputTokens",
+          "currentValue": 65536,
+          "supportedValue": 131072,
+          "sourceId": "page-qwen3-7-plus",
+          "assessment": "differs",
+          "explanation": "模型页明文整数。这是百炼托管范围；不保证任意其他接入上限。"
+        }
+      ],
+      "remainingFields": [
+        "spec.defaultTemperature",
+        "spec.supportsReasoning",
+        "spec.capabilities"
+      ],
+      "nextAction": "按精确型号和本接入面继续核对；候选证据不自动应用。",
+      "notes": [
+        "未做账号API实测；采样、思考参数及媒体请求上限没有明文数字时保持待核。"
+      ]
+    },
+    {
+      "recordKey": "compute/providers/dashscope.json#qwen3.7-text-embedding-flash",
+      "modelId": "qwen3.7-text-embedding-flash",
+      "config": "compute/providers/dashscope.json",
+      "sourceDoc": "docs/model-sources/providers/alibaba/models/qwen3.7-text-embedding-flash.md",
+      "outcome": "official-fields-found",
+      "sourceIds": [
+        "page-qwen3-7-text-embedding-flash"
+      ],
+      "fieldEvidence": [
+        {
+          "field": "modelName",
+          "currentValue": "qwen3.7-text-embedding-flash",
+          "supportedValue": "qwen3.7-text-embedding-flash",
+          "sourceId": "page-qwen3-7-text-embedding-flash",
+          "assessment": "matches",
+          "explanation": "专属官方模型页标题/推理供应商列出精确名；Spec ID只作为本仓引用，不代表全部别名已核。"
+        },
+        {
+          "field": "contextWindow",
+          "currentValue": null,
+          "supportedValue": 131072,
+          "sourceId": "page-qwen3-7-text-embedding-flash",
+          "assessment": "not-comparable",
+          "explanation": "模型页明文整数。仅本API；思考模式另有输入/输出限制须分别记录。"
+        },
+        {
+          "field": "maxInputTokens",
+          "currentValue": null,
+          "supportedValue": 131072,
+          "sourceId": "page-qwen3-7-text-embedding-flash",
+          "assessment": "not-comparable",
+          "explanation": "模型页明文整数。仅本API；思考模式另有输入/输出限制须分别记录。"
+        },
+        {
+          "field": "inputPrice",
+          "currentValue": 0.125,
+          "supportedValue": 0.125,
+          "sourceId": "page-qwen3-7-text-embedding-flash",
+          "assessment": "matches",
+          "explanation": "CNY/百万token，北京原价；如本页存在阶梯，该值只适用于首阶梯，不是全请求通用价。"
+        }
+      ],
+      "remainingFields": [
+        "outputPrice",
+        "capabilities"
+      ],
+      "nextAction": "按精确型号和本接入面继续核对；候选证据不自动应用。",
+      "notes": [
+        "未做账号API实测；采样、思考参数及媒体请求上限没有明文数字时保持待核。"
+      ]
+    },
+    {
+      "recordKey": "compute/model-specs/qwen.json#qwen3.7-text-embedding-flash",
+      "modelId": "qwen3.7-text-embedding-flash",
+      "config": "compute/model-specs/qwen.json",
+      "sourceDoc": "docs/model-sources/providers/alibaba/models/qwen3.7-text-embedding-flash.md",
+      "outcome": "official-identity-only",
+      "sourceIds": [
+        "page-qwen3-7-text-embedding-flash"
+      ],
+      "fieldEvidence": [
+        {
+          "field": "id",
+          "currentValue": "qwen3.7-text-embedding-flash",
+          "supportedValue": "qwen3.7-text-embedding-flash",
+          "sourceId": "page-qwen3-7-text-embedding-flash",
+          "assessment": "matches",
+          "explanation": "专属官方模型页标题/推理供应商列出精确名；Spec ID只作为本仓引用，不代表全部别名已核。"
+        },
+        {
+          "field": "spec.contextWindow",
+          "currentValue": null,
+          "supportedValue": 131072,
+          "sourceId": "page-qwen3-7-text-embedding-flash",
+          "assessment": "not-comparable",
+          "explanation": "模型页明文整数。这是百炼托管范围；不保证任意其他接入上限。"
+        },
+        {
+          "field": "spec.maxInputTokens",
+          "currentValue": null,
+          "supportedValue": 131072,
+          "sourceId": "page-qwen3-7-text-embedding-flash",
+          "assessment": "not-comparable",
+          "explanation": "模型页明文整数。这是百炼托管范围；不保证任意其他接入上限。"
+        }
+      ],
+      "remainingFields": [
+        "spec.capabilities"
+      ],
+      "nextAction": "按精确型号和本接入面继续核对；候选证据不自动应用。",
+      "notes": [
+        "未做账号API实测；采样、思考参数及媒体请求上限没有明文数字时保持待核。"
+      ]
+    },
+    {
+      "recordKey": "compute/providers/dashscope.json#qwen3.7-text-embedding",
+      "modelId": "qwen3.7-text-embedding",
+      "config": "compute/providers/dashscope.json",
+      "sourceDoc": "docs/model-sources/providers/alibaba/models/qwen3.7-text-embedding.md",
+      "outcome": "official-fields-found",
+      "sourceIds": [
+        "page-qwen3-7-text-embedding"
+      ],
+      "fieldEvidence": [
+        {
+          "field": "modelName",
+          "currentValue": "qwen3.7-text-embedding",
+          "supportedValue": "qwen3.7-text-embedding",
+          "sourceId": "page-qwen3-7-text-embedding",
+          "assessment": "matches",
+          "explanation": "专属官方模型页标题/推理供应商列出精确名；Spec ID只作为本仓引用，不代表全部别名已核。"
+        },
+        {
+          "field": "contextWindow",
+          "currentValue": null,
+          "supportedValue": 131072,
+          "sourceId": "page-qwen3-7-text-embedding",
+          "assessment": "not-comparable",
+          "explanation": "模型页明文整数。仅本API；思考模式另有输入/输出限制须分别记录。"
+        },
+        {
+          "field": "maxInputTokens",
+          "currentValue": null,
+          "supportedValue": 131072,
+          "sourceId": "page-qwen3-7-text-embedding",
+          "assessment": "not-comparable",
+          "explanation": "模型页明文整数。仅本API；思考模式另有输入/输出限制须分别记录。"
+        },
+        {
+          "field": "inputPrice",
+          "currentValue": 0.5,
+          "supportedValue": 0.5,
+          "sourceId": "page-qwen3-7-text-embedding",
+          "assessment": "matches",
+          "explanation": "CNY/百万token，北京原价；如本页存在阶梯，该值只适用于首阶梯，不是全请求通用价。"
+        }
+      ],
+      "remainingFields": [
+        "outputPrice",
+        "capabilities"
+      ],
+      "nextAction": "按精确型号和本接入面继续核对；候选证据不自动应用。",
+      "notes": [
+        "未做账号API实测；采样、思考参数及媒体请求上限没有明文数字时保持待核。"
+      ]
+    },
+    {
+      "recordKey": "compute/model-specs/qwen.json#qwen3.7-text-embedding",
+      "modelId": "qwen3.7-text-embedding",
+      "config": "compute/model-specs/qwen.json",
+      "sourceDoc": "docs/model-sources/providers/alibaba/models/qwen3.7-text-embedding.md",
+      "outcome": "official-identity-only",
+      "sourceIds": [
+        "page-qwen3-7-text-embedding"
+      ],
+      "fieldEvidence": [
+        {
+          "field": "id",
+          "currentValue": "qwen3.7-text-embedding",
+          "supportedValue": "qwen3.7-text-embedding",
+          "sourceId": "page-qwen3-7-text-embedding",
+          "assessment": "matches",
+          "explanation": "专属官方模型页标题/推理供应商列出精确名；Spec ID只作为本仓引用，不代表全部别名已核。"
+        },
+        {
+          "field": "spec.contextWindow",
+          "currentValue": null,
+          "supportedValue": 131072,
+          "sourceId": "page-qwen3-7-text-embedding",
+          "assessment": "not-comparable",
+          "explanation": "模型页明文整数。这是百炼托管范围；不保证任意其他接入上限。"
+        },
+        {
+          "field": "spec.maxInputTokens",
+          "currentValue": null,
+          "supportedValue": 131072,
+          "sourceId": "page-qwen3-7-text-embedding",
+          "assessment": "not-comparable",
+          "explanation": "模型页明文整数。这是百炼托管范围；不保证任意其他接入上限。"
+        }
+      ],
+      "remainingFields": [
+        "spec.capabilities"
+      ],
+      "nextAction": "按精确型号和本接入面继续核对；候选证据不自动应用。",
+      "notes": [
+        "未做账号API实测；采样、思考参数及媒体请求上限没有明文数字时保持待核。"
+      ]
+    },
+    {
+      "recordKey": "compute/providers/dashscope.json#qwen3.7-text-rerank",
+      "modelId": "qwen3.7-text-rerank",
+      "config": "compute/providers/dashscope.json",
+      "sourceDoc": "docs/model-sources/providers/alibaba/models/qwen3.7-text-rerank.md",
+      "outcome": "official-identity-only",
+      "sourceIds": [
+        "page-qwen3-7-text-rerank"
+      ],
+      "fieldEvidence": [
+        {
+          "field": "modelName",
+          "currentValue": "qwen3.7-text-rerank",
+          "supportedValue": "qwen3.7-text-rerank",
+          "sourceId": "page-qwen3-7-text-rerank",
+          "assessment": "matches",
+          "explanation": "专属官方模型页标题/推理供应商列出精确名；Spec ID只作为本仓引用，不代表全部别名已核。"
+        },
+        {
+          "field": "contextWindow",
+          "currentValue": null,
+          "supportedValue": 32768,
+          "sourceId": "page-qwen3-7-text-rerank",
+          "assessment": "not-comparable",
+          "explanation": "模型页明文整数。仅本API；思考模式另有输入/输出限制须分别记录。"
+        },
+        {
+          "field": "maxInputTokens",
+          "currentValue": null,
+          "supportedValue": 32768,
+          "sourceId": "page-qwen3-7-text-rerank",
+          "assessment": "not-comparable",
+          "explanation": "模型页明文整数。仅本API；思考模式另有输入/输出限制须分别记录。"
+        },
+        {
+          "field": "maxOutputTokens",
+          "currentValue": null,
+          "supportedValue": 0,
+          "sourceId": "page-qwen3-7-text-rerank",
+          "assessment": "not-comparable",
+          "explanation": "模型页明文整数。仅本API；思考模式另有输入/输出限制须分别记录。"
+        },
+        {
+          "field": "inputPrice",
+          "currentValue": null,
+          "supportedValue": 0.5,
+          "sourceId": "page-qwen3-7-text-rerank",
+          "assessment": "not-comparable",
+          "explanation": "CNY/百万token，北京原价；如本页存在阶梯，该值只适用于首阶梯，不是全请求通用价。"
+        }
+      ],
+      "remainingFields": [
+        "capabilities"
+      ],
+      "nextAction": "按精确型号和本接入面继续核对；候选证据不自动应用。",
+      "notes": [
+        "未做账号API实测；采样、思考参数及媒体请求上限没有明文数字时保持待核。"
+      ]
+    },
+    {
+      "recordKey": "compute/model-specs/qwen.json#qwen3.7-text-rerank",
+      "modelId": "qwen3.7-text-rerank",
+      "config": "compute/model-specs/qwen.json",
+      "sourceDoc": "docs/model-sources/providers/alibaba/models/qwen3.7-text-rerank.md",
+      "outcome": "official-identity-only",
+      "sourceIds": [
+        "page-qwen3-7-text-rerank"
+      ],
+      "fieldEvidence": [
+        {
+          "field": "id",
+          "currentValue": "qwen3.7-text-rerank",
+          "supportedValue": "qwen3.7-text-rerank",
+          "sourceId": "page-qwen3-7-text-rerank",
+          "assessment": "matches",
+          "explanation": "专属官方模型页标题/推理供应商列出精确名；Spec ID只作为本仓引用，不代表全部别名已核。"
+        },
+        {
+          "field": "spec.contextWindow",
+          "currentValue": null,
+          "supportedValue": 32768,
+          "sourceId": "page-qwen3-7-text-rerank",
+          "assessment": "not-comparable",
+          "explanation": "模型页明文整数。这是百炼托管范围；不保证任意其他接入上限。"
+        },
+        {
+          "field": "spec.maxInputTokens",
+          "currentValue": null,
+          "supportedValue": 32768,
+          "sourceId": "page-qwen3-7-text-rerank",
+          "assessment": "not-comparable",
+          "explanation": "模型页明文整数。这是百炼托管范围；不保证任意其他接入上限。"
+        },
+        {
+          "field": "spec.maxOutputTokens",
+          "currentValue": null,
+          "supportedValue": 0,
+          "sourceId": "page-qwen3-7-text-rerank",
+          "assessment": "not-comparable",
+          "explanation": "模型页明文整数。这是百炼托管范围；不保证任意其他接入上限。"
+        }
+      ],
+      "remainingFields": [
+        "spec.capabilities"
+      ],
+      "nextAction": "按精确型号和本接入面继续核对；候选证据不自动应用。",
+      "notes": [
+        "未做账号API实测；采样、思考参数及媒体请求上限没有明文数字时保持待核。"
+      ]
+    },
+    {
+      "recordKey": "compute/providers/dashscope.json#qwen3.8-flash",
+      "modelId": "qwen3.8-flash",
+      "config": "compute/providers/dashscope.json",
+      "sourceDoc": "docs/model-sources/providers/alibaba/models/qwen3.8-flash.md",
+      "outcome": "official-fields-found",
+      "sourceIds": [
+        "page-qwen3-8-flash"
+      ],
+      "fieldEvidence": [
+        {
+          "field": "modelName",
+          "currentValue": "qwen3.8-flash",
+          "supportedValue": "qwen3.8-flash",
+          "sourceId": "page-qwen3-8-flash",
+          "assessment": "matches",
+          "explanation": "专属官方模型页标题/推理供应商列出精确名；Spec ID只作为本仓引用，不代表全部别名已核。"
+        },
+        {
+          "field": "contextWindow",
+          "currentValue": 1000000,
+          "supportedValue": 1000000,
+          "sourceId": "page-qwen3-8-flash",
+          "assessment": "matches",
+          "explanation": "模型页明文整数。仅本API；思考模式另有输入/输出限制须分别记录。"
+        },
+        {
+          "field": "maxInputTokens",
+          "currentValue": null,
+          "supportedValue": 991808,
+          "sourceId": "page-qwen3-8-flash",
+          "assessment": "not-comparable",
+          "explanation": "模型页明文整数。仅本API；思考模式另有输入/输出限制须分别记录。"
+        },
+        {
+          "field": "maxOutputTokens",
+          "currentValue": 131072,
+          "supportedValue": 131072,
+          "sourceId": "page-qwen3-8-flash",
+          "assessment": "matches",
+          "explanation": "模型页明文整数。仅本API；思考模式另有输入/输出限制须分别记录。"
+        },
+        {
+          "field": "inputPrice",
+          "currentValue": 0.8,
+          "supportedValue": 0.8,
+          "sourceId": "page-qwen3-8-flash",
+          "assessment": "matches",
+          "explanation": "CNY/百万token，北京原价；如本页存在阶梯，该值只适用于首阶梯，不是全请求通用价。"
+        },
+        {
+          "field": "outputPrice",
+          "currentValue": 2.7,
+          "supportedValue": 2.7,
+          "sourceId": "page-qwen3-8-flash",
+          "assessment": "matches",
+          "explanation": "CNY/百万token，北京原价；如本页存在阶梯，该值只适用于首阶梯，不是全请求通用价。"
+        },
+        {
+          "field": "extra.cacheHitPrice",
+          "currentValue": null,
+          "supportedValue": 0.1,
+          "sourceId": "page-qwen3-8-flash",
+          "assessment": "not-comparable",
+          "explanation": "CNY/百万token，北京原价；如本页存在阶梯，该值只适用于首阶梯，不是全请求通用价。"
+        }
+      ],
+      "remainingFields": [
+        "defaultTemperature",
+        "defaultTopP",
+        "extra.cachedInputPrice",
+        "extra.reasoning.defaultEffort",
+        "extra.reasoning.supportedEfforts",
+        "capabilities",
+        "extra.reasoning",
+        "extra.pricingNotes",
+        "extra.preserveThinkingDefault",
+        "extra.thinkingMaxTokens"
+      ],
+      "nextAction": "按精确型号和本接入面继续核对；候选证据不自动应用。",
+      "notes": [
+        "未做账号API实测；采样、思考参数及媒体请求上限没有明文数字时保持待核。"
+      ]
+    },
+    {
+      "recordKey": "compute/coding-plans/dashscope-token-plan.json#qwen3.8-flash",
+      "modelId": "qwen3.8-flash",
+      "config": "compute/coding-plans/dashscope-token-plan.json",
+      "sourceDoc": "docs/model-sources/providers/alibaba/models/qwen3.8-flash.md",
+      "outcome": "official-identity-only",
+      "sourceIds": [
+        "page-ali-token"
+      ],
+      "fieldEvidence": [
+        {
+          "field": "modelName",
+          "currentValue": "qwen3.8-flash",
+          "supportedValue": "qwen3.8-flash",
+          "sourceId": "page-ali-token",
+          "assessment": "matches",
+          "explanation": "本套餐官方正文逐字列出的精确ID；不借此确认按量API页的窗口/价格也适用于套餐。"
+        }
+      ],
+      "remainingFields": [
+        "contextWindow",
+        "defaultTemperature",
+        "extra.reasoning.defaultEffort",
+        "extra.reasoning.supportedEfforts",
+        "maxOutputTokens",
+        "capabilities",
+        "extra.reasoning",
+        "extra.supportsThinking",
+        "extra.thinkingDefault",
+        "extra.thinkingMaxTokens",
+        "extra.preserveThinkingDefault",
+        "extra.supportsParallelToolCalls"
+      ],
+      "nextAction": "按精确型号和本接入面继续核对；候选证据不自动应用。",
+      "notes": [
+        "参数数字仍需套餐自身证据，未采用同名按量API数字。",
+        "另已找到按量API模型页，但因API/套餐不同合同，不给本条证明其容量。候选入口：https://help.aliyun.com/zh/model-studio/qwen3-8-flash",
+        "未做账号API实测；采样、思考参数及媒体请求上限没有明文数字时保持待核。"
+      ]
+    },
+    {
+      "recordKey": "compute/model-specs/qwen.json#qwen3.8-flash",
+      "modelId": "qwen3.8-flash",
+      "config": "compute/model-specs/qwen.json",
+      "sourceDoc": "docs/model-sources/providers/alibaba/models/qwen3.8-flash.md",
+      "outcome": "official-fields-found",
+      "sourceIds": [
+        "page-qwen3-8-flash"
+      ],
+      "fieldEvidence": [
+        {
+          "field": "id",
+          "currentValue": "qwen3.8-flash",
+          "supportedValue": "qwen3.8-flash",
+          "sourceId": "page-qwen3-8-flash",
+          "assessment": "matches",
+          "explanation": "专属官方模型页标题/推理供应商列出精确名；Spec ID只作为本仓引用，不代表全部别名已核。"
+        },
+        {
+          "field": "spec.contextWindow",
+          "currentValue": 1000000,
+          "supportedValue": 1000000,
+          "sourceId": "page-qwen3-8-flash",
+          "assessment": "matches",
+          "explanation": "模型页明文整数。这是百炼托管范围；不保证任意其他接入上限。"
+        },
+        {
+          "field": "spec.maxInputTokens",
+          "currentValue": null,
+          "supportedValue": 991808,
+          "sourceId": "page-qwen3-8-flash",
+          "assessment": "not-comparable",
+          "explanation": "模型页明文整数。这是百炼托管范围；不保证任意其他接入上限。"
+        },
+        {
+          "field": "spec.maxOutputTokens",
+          "currentValue": 131072,
+          "supportedValue": 131072,
+          "sourceId": "page-qwen3-8-flash",
+          "assessment": "matches",
+          "explanation": "模型页明文整数。这是百炼托管范围；不保证任意其他接入上限。"
+        }
+      ],
+      "remainingFields": [
+        "spec.defaultTemperature",
+        "spec.defaultTopP",
+        "spec.supportsReasoning",
+        "spec.capabilities",
+        "spec.extra.thinkingDefault",
+        "spec.extra.thinkingMaxTokens"
+      ],
+      "nextAction": "按精确型号和本接入面继续核对；候选证据不自动应用。",
+      "notes": [
+        "未做账号API实测；采样、思考参数及媒体请求上限没有明文数字时保持待核。"
+      ]
+    },
+    {
+      "recordKey": "compute/model-specs/qwen.json#qwen3.8-max-preview",
+      "modelId": "qwen3.8-max-preview",
+      "config": "compute/model-specs/qwen.json",
+      "sourceDoc": "docs/model-sources/providers/alibaba/models/qwen3.8-max-preview.md",
+      "outcome": "still-unresolved",
+      "sourceIds": [],
+      "fieldEvidence": [],
+      "remainingFields": [
+        "spec.contextWindow",
+        "spec.defaultTemperature",
+        "spec.defaultTopP",
+        "spec.maxOutputTokens",
+        "spec.supportsReasoning",
+        "spec.capabilities"
+      ],
+      "nextAction": "按精确型号和本接入面继续核对；候选证据不自动应用。",
+      "notes": [
+        "已尝试专属页面https://help.aliyun.com/zh/model-studio/qwen3-8-max-preview，未找到本内部ID的可比字段正文；保留缺口，不将目录成功当全部参数证明。",
+        "未做账号API实测；采样、思考参数及媒体请求上限没有明文数字时保持待核。"
+      ]
+    },
+    {
+      "recordKey": "compute/model-specs/qwen.json#qwen3.8-max-prime",
+      "modelId": "qwen3.8-max-prime",
+      "config": "compute/model-specs/qwen.json",
+      "sourceDoc": "docs/model-sources/providers/alibaba/models/qwen3.8-max-prime.md",
+      "outcome": "official-identity-only",
+      "sourceIds": [
+        "ali-pricing"
+      ],
+      "fieldEvidence": [
+        {
+          "field": "id",
+          "currentValue": "qwen3.8-max-prime",
+          "supportedValue": "qwen3.8-max-prime",
+          "sourceId": "ali-pricing",
+          "assessment": "matches",
+          "explanation": "价格页明确列该精确API ID；不为其他变体参数作证明。"
+        }
+      ],
+      "remainingFields": [
+        "spec.contextWindow",
+        "spec.supportsReasoning",
+        "spec.capabilities"
+      ],
+      "nextAction": "按精确型号和本接入面继续核对；候选证据不自动应用。",
+      "notes": [
+        "未做账号API实测；采样、思考参数及媒体请求上限没有明文数字时保持待核。"
+      ]
+    },
+    {
+      "recordKey": "compute/providers/dashscope.json#qwen3.8-max",
+      "modelId": "qwen3.8-max",
+      "config": "compute/providers/dashscope.json",
+      "sourceDoc": "docs/model-sources/providers/alibaba/models/qwen3.8-max.md",
+      "outcome": "official-fields-found",
+      "sourceIds": [
+        "page-qwen3-8-max"
+      ],
+      "fieldEvidence": [
+        {
+          "field": "modelName",
+          "currentValue": "qwen3.8-max",
+          "supportedValue": "qwen3.8-max",
+          "sourceId": "page-qwen3-8-max",
+          "assessment": "matches",
+          "explanation": "专属官方模型页标题/推理供应商列出精确名；Spec ID只作为本仓引用，不代表全部别名已核。"
+        },
+        {
+          "field": "contextWindow",
+          "currentValue": 1000000,
+          "supportedValue": 1000000,
+          "sourceId": "page-qwen3-8-max",
+          "assessment": "matches",
+          "explanation": "模型页明文整数。仅本API；思考模式另有输入/输出限制须分别记录。"
+        },
+        {
+          "field": "maxInputTokens",
+          "currentValue": null,
+          "supportedValue": 991808,
+          "sourceId": "page-qwen3-8-max",
+          "assessment": "not-comparable",
+          "explanation": "模型页明文整数。仅本API；思考模式另有输入/输出限制须分别记录。"
+        },
+        {
+          "field": "maxOutputTokens",
+          "currentValue": 131072,
+          "supportedValue": 131072,
+          "sourceId": "page-qwen3-8-max",
+          "assessment": "matches",
+          "explanation": "模型页明文整数。仅本API；思考模式另有输入/输出限制须分别记录。"
+        },
+        {
+          "field": "inputPrice",
+          "currentValue": 12,
+          "supportedValue": 12.0,
+          "sourceId": "page-qwen3-8-max",
+          "assessment": "matches",
+          "explanation": "CNY/百万token，北京原价；如本页存在阶梯，该值只适用于首阶梯，不是全请求通用价。"
+        },
+        {
+          "field": "outputPrice",
+          "currentValue": 36,
+          "supportedValue": 36.0,
+          "sourceId": "page-qwen3-8-max",
+          "assessment": "matches",
+          "explanation": "CNY/百万token，北京原价；如本页存在阶梯，该值只适用于首阶梯，不是全请求通用价。"
+        },
+        {
+          "field": "extra.cacheHitPrice",
+          "currentValue": null,
+          "supportedValue": 1.5,
+          "sourceId": "page-qwen3-8-max",
+          "assessment": "not-comparable",
+          "explanation": "CNY/百万token，北京原价；如本页存在阶梯，该值只适用于首阶梯，不是全请求通用价。"
+        }
+      ],
+      "remainingFields": [
+        "defaultTemperature",
+        "defaultTopP",
+        "extra.cachedInputPrice",
+        "extra.reasoning.defaultEffort",
+        "extra.reasoning.supportedEfforts",
+        "capabilities",
+        "extra.reasoning",
+        "extra.pricingNotes",
+        "extra.preserveThinkingDefault",
+        "extra.thinkingMaxTokens"
+      ],
+      "nextAction": "按精确型号和本接入面继续核对；候选证据不自动应用。",
+      "notes": [
+        "未做账号API实测；采样、思考参数及媒体请求上限没有明文数字时保持待核。"
+      ]
+    },
+    {
+      "recordKey": "compute/coding-plans/dashscope-token-plan.json#qwen3.8-max",
+      "modelId": "qwen3.8-max",
+      "config": "compute/coding-plans/dashscope-token-plan.json",
+      "sourceDoc": "docs/model-sources/providers/alibaba/models/qwen3.8-max.md",
+      "outcome": "official-identity-only",
+      "sourceIds": [
+        "page-ali-token"
+      ],
+      "fieldEvidence": [
+        {
+          "field": "modelName",
+          "currentValue": "qwen3.8-max",
+          "supportedValue": "qwen3.8-max",
+          "sourceId": "page-ali-token",
+          "assessment": "matches",
+          "explanation": "本套餐官方正文逐字列出的精确ID；不借此确认按量API页的窗口/价格也适用于套餐。"
+        }
+      ],
+      "remainingFields": [
+        "contextWindow",
+        "defaultTemperature",
+        "extra.reasoning.defaultEffort",
+        "extra.reasoning.supportedEfforts",
+        "maxOutputTokens",
+        "capabilities",
+        "extra.reasoning",
+        "extra.supportsThinking",
+        "extra.thinkingDefault",
+        "extra.thinkingMaxTokens",
+        "extra.preserveThinkingDefault",
+        "extra.supportsParallelToolCalls"
+      ],
+      "nextAction": "按精确型号和本接入面继续核对；候选证据不自动应用。",
+      "notes": [
+        "参数数字仍需套餐自身证据，未采用同名按量API数字。",
+        "另已找到按量API模型页，但因API/套餐不同合同，不给本条证明其容量。候选入口：https://help.aliyun.com/zh/model-studio/qwen3-8-max",
+        "未做账号API实测；采样、思考参数及媒体请求上限没有明文数字时保持待核。"
+      ]
+    },
+    {
+      "recordKey": "compute/model-specs/qwen.json#qwen3.8-max",
+      "modelId": "qwen3.8-max",
+      "config": "compute/model-specs/qwen.json",
+      "sourceDoc": "docs/model-sources/providers/alibaba/models/qwen3.8-max.md",
+      "outcome": "official-fields-found",
+      "sourceIds": [
+        "page-qwen3-8-max"
+      ],
+      "fieldEvidence": [
+        {
+          "field": "id",
+          "currentValue": "qwen3.8-max",
+          "supportedValue": "qwen3.8-max",
+          "sourceId": "page-qwen3-8-max",
+          "assessment": "matches",
+          "explanation": "专属官方模型页标题/推理供应商列出精确名；Spec ID只作为本仓引用，不代表全部别名已核。"
+        },
+        {
+          "field": "spec.contextWindow",
+          "currentValue": 1000000,
+          "supportedValue": 1000000,
+          "sourceId": "page-qwen3-8-max",
+          "assessment": "matches",
+          "explanation": "模型页明文整数。这是百炼托管范围；不保证任意其他接入上限。"
+        },
+        {
+          "field": "spec.maxInputTokens",
+          "currentValue": null,
+          "supportedValue": 991808,
+          "sourceId": "page-qwen3-8-max",
+          "assessment": "not-comparable",
+          "explanation": "模型页明文整数。这是百炼托管范围；不保证任意其他接入上限。"
+        },
+        {
+          "field": "spec.maxOutputTokens",
+          "currentValue": 131072,
+          "supportedValue": 131072,
+          "sourceId": "page-qwen3-8-max",
+          "assessment": "matches",
+          "explanation": "模型页明文整数。这是百炼托管范围；不保证任意其他接入上限。"
+        }
+      ],
+      "remainingFields": [
+        "spec.defaultTemperature",
+        "spec.defaultTopP",
+        "spec.supportsReasoning",
+        "spec.capabilities"
+      ],
+      "nextAction": "按精确型号和本接入面继续核对；候选证据不自动应用。",
+      "notes": [
+        "未做账号API实测；采样、思考参数及媒体请求上限没有明文数字时保持待核。"
+      ]
+    },
+    {
+      "recordKey": "compute/providers/dashscope.json#qwen3.8-omni-flash",
+      "modelId": "qwen3.8-omni-flash",
+      "config": "compute/providers/dashscope.json",
+      "sourceDoc": "docs/model-sources/providers/alibaba/models/qwen3.8-omni-flash.md",
+      "outcome": "official-fields-found",
+      "sourceIds": [
+        "web-qwen3-8-omni-flash"
+      ],
+      "fieldEvidence": [
+        {
+          "field": "modelName",
+          "currentValue": "qwen3.8-omni-flash",
+          "supportedValue": "qwen3.8-omni-flash",
+          "sourceId": "web-qwen3-8-omni-flash",
+          "assessment": "matches",
+          "explanation": "web实际读取专属页面精确ID。"
+        },
+        {
+          "field": "contextWindow",
+          "currentValue": 1000000,
+          "supportedValue": 1000000,
+          "sourceId": "web-qwen3-8-omni-flash",
+          "assessment": "matches",
+          "explanation": "页面明文整数，1M按该页面关联价格规则的1000000记录；音频输出能力需API参考交叉核实。"
+        },
+        {
+          "field": "maxInputTokens",
+          "currentValue": null,
+          "supportedValue": 991808,
+          "sourceId": "web-qwen3-8-omni-flash",
+          "assessment": "not-comparable",
+          "explanation": "页面明文整数，1M按该页面关联价格规则的1000000记录；音频输出能力需API参考交叉核实。"
+        },
+        {
+          "field": "maxOutputTokens",
+          "currentValue": 131072,
+          "supportedValue": 131072,
+          "sourceId": "web-qwen3-8-omni-flash",
+          "assessment": "matches",
+          "explanation": "页面明文整数，1M按该页面关联价格规则的1000000记录；音频输出能力需API参考交叉核实。"
+        }
+      ],
+      "remainingFields": [
+        "capabilities",
+        "extra.cachedInputPrice"
+      ],
+      "nextAction": "按精确型号和本接入面继续核对；候选证据不自动应用。",
+      "notes": [
+        "未做账号API实测；采样、思考参数及媒体请求上限没有明文数字时保持待核。"
+      ]
+    },
+    {
+      "recordKey": "compute/model-specs/qwen.json#qwen3.8-omni-flash",
+      "modelId": "qwen3.8-omni-flash",
+      "config": "compute/model-specs/qwen.json",
+      "sourceDoc": "docs/model-sources/providers/alibaba/models/qwen3.8-omni-flash.md",
+      "outcome": "official-fields-found",
+      "sourceIds": [
+        "web-qwen3-8-omni-flash"
+      ],
+      "fieldEvidence": [
+        {
+          "field": "id",
+          "currentValue": "qwen3.8-omni-flash",
+          "supportedValue": "qwen3.8-omni-flash",
+          "sourceId": "web-qwen3-8-omni-flash",
+          "assessment": "matches",
+          "explanation": "web实际读取专属页面精确ID。"
+        },
+        {
+          "field": "spec.contextWindow",
+          "currentValue": 1000000,
+          "supportedValue": 1000000,
+          "sourceId": "web-qwen3-8-omni-flash",
+          "assessment": "matches",
+          "explanation": "页面明文整数，1M按该页面关联价格规则的1000000记录；音频输出能力需API参考交叉核实。"
+        },
+        {
+          "field": "spec.maxInputTokens",
+          "currentValue": null,
+          "supportedValue": 991808,
+          "sourceId": "web-qwen3-8-omni-flash",
+          "assessment": "not-comparable",
+          "explanation": "页面明文整数，1M按该页面关联价格规则的1000000记录；音频输出能力需API参考交叉核实。"
+        },
+        {
+          "field": "spec.maxOutputTokens",
+          "currentValue": 131072,
+          "supportedValue": 131072,
+          "sourceId": "web-qwen3-8-omni-flash",
+          "assessment": "matches",
+          "explanation": "页面明文整数，1M按该页面关联价格规则的1000000记录；音频输出能力需API参考交叉核实。"
+        }
+      ],
+      "remainingFields": [
+        "spec.supportsReasoning",
+        "spec.capabilities"
+      ],
+      "nextAction": "按精确型号和本接入面继续核对；候选证据不自动应用。",
+      "notes": [
+        "未做账号API实测；采样、思考参数及媒体请求上限没有明文数字时保持待核。"
+      ]
+    },
+    {
+      "recordKey": "compute/providers/dashscope.json#text-embedding-v3",
+      "modelId": "text-embedding-v3",
+      "config": "compute/providers/dashscope.json",
+      "sourceDoc": "docs/model-sources/providers/alibaba/models/text-embedding-v3.md",
+      "outcome": "still-unresolved",
+      "sourceIds": [],
+      "fieldEvidence": [],
+      "remainingFields": [
+        "contextWindow",
+        "inputPrice",
+        "capabilities"
+      ],
+      "nextAction": "按精确型号和本接入面继续核对；候选证据不自动应用。",
+      "notes": [
+        "已尝试专属页面https://help.aliyun.com/zh/model-studio/text-embedding-v3，未找到本内部ID的可比字段正文；保留缺口，不将目录成功当全部参数证明。",
+        "未做账号API实测；采样、思考参数及媒体请求上限没有明文数字时保持待核。"
+      ]
+    },
+    {
+      "recordKey": "compute/model-specs/qwen.json#text-embedding-v3",
+      "modelId": "text-embedding-v3",
+      "config": "compute/model-specs/qwen.json",
+      "sourceDoc": "docs/model-sources/providers/alibaba/models/text-embedding-v3.md",
+      "outcome": "still-unresolved",
+      "sourceIds": [],
+      "fieldEvidence": [],
+      "remainingFields": [
+        "spec.contextWindow",
+        "spec.capabilities"
+      ],
+      "nextAction": "按精确型号和本接入面继续核对；候选证据不自动应用。",
+      "notes": [
+        "已尝试专属页面https://help.aliyun.com/zh/model-studio/text-embedding-v3，未找到本内部ID的可比字段正文；保留缺口，不将目录成功当全部参数证明。",
+        "未做账号API实测；采样、思考参数及媒体请求上限没有明文数字时保持待核。"
+      ]
+    },
+    {
+      "recordKey": "compute/providers/dashscope.json#text-embedding-v4",
+      "modelId": "text-embedding-v4",
+      "config": "compute/providers/dashscope.json",
+      "sourceDoc": "docs/model-sources/providers/alibaba/models/text-embedding-v4.md",
+      "outcome": "still-unresolved",
+      "sourceIds": [],
+      "fieldEvidence": [],
+      "remainingFields": [
+        "contextWindow",
+        "inputPrice",
+        "capabilities"
+      ],
+      "nextAction": "按精确型号和本接入面继续核对；候选证据不自动应用。",
+      "notes": [
+        "已尝试专属页面https://help.aliyun.com/zh/model-studio/text-embedding-v4，未找到本内部ID的可比字段正文；保留缺口，不将目录成功当全部参数证明。",
+        "未做账号API实测；采样、思考参数及媒体请求上限没有明文数字时保持待核。"
+      ]
+    },
+    {
+      "recordKey": "compute/model-specs/qwen.json#text-embedding-v4",
+      "modelId": "text-embedding-v4",
+      "config": "compute/model-specs/qwen.json",
+      "sourceDoc": "docs/model-sources/providers/alibaba/models/text-embedding-v4.md",
+      "outcome": "still-unresolved",
+      "sourceIds": [],
+      "fieldEvidence": [],
+      "remainingFields": [
+        "spec.contextWindow",
+        "spec.capabilities"
+      ],
+      "nextAction": "按精确型号和本接入面继续核对；候选证据不自动应用。",
+      "notes": [
+        "已尝试专属页面https://help.aliyun.com/zh/model-studio/text-embedding-v4，未找到本内部ID的可比字段正文；保留缺口，不将目录成功当全部参数证明。",
+        "未做账号API实测；采样、思考参数及媒体请求上限没有明文数字时保持待核。"
+      ]
+    },
+    {
+      "recordKey": "compute/providers/dashscope.json#wan2.2-t2i-flash",
+      "modelId": "wan2.2-t2i-flash",
+      "config": "compute/providers/dashscope.json",
+      "sourceDoc": "docs/model-sources/providers/alibaba/models/wan2.2-t2i-flash.md",
+      "outcome": "still-unresolved",
+      "sourceIds": [],
+      "fieldEvidence": [],
+      "remainingFields": [
+        "capabilities",
+        "extra.endpoint",
+        "extra.asyncHeader",
+        "extra.taskQueryEndpoint",
+        "extra.supportedImageSizes",
+        "extra.maxN",
+        "extra.supportsNegativePrompt"
+      ],
+      "nextAction": "按精确型号和本接入面继续核对；候选证据不自动应用。",
+      "notes": [
+        "已尝试专属页面https://help.aliyun.com/zh/model-studio/wan2-2-t2i-flash，未找到本内部ID的可比字段正文；保留缺口，不将目录成功当全部参数证明。",
+        "未做账号API实测；采样、思考参数及媒体请求上限没有明文数字时保持待核。"
+      ]
+    },
+    {
+      "recordKey": "compute/model-specs/qwen.json#wan2.2-t2i-flash",
+      "modelId": "wan2.2-t2i-flash",
+      "config": "compute/model-specs/qwen.json",
+      "sourceDoc": "docs/model-sources/providers/alibaba/models/wan2.2-t2i-flash.md",
+      "outcome": "still-unresolved",
+      "sourceIds": [],
+      "fieldEvidence": [],
+      "remainingFields": [
+        "spec.capabilities"
+      ],
+      "nextAction": "按精确型号和本接入面继续核对；候选证据不自动应用。",
+      "notes": [
+        "已尝试专属页面https://help.aliyun.com/zh/model-studio/wan2-2-t2i-flash，未找到本内部ID的可比字段正文；保留缺口，不将目录成功当全部参数证明。",
+        "未做账号API实测；采样、思考参数及媒体请求上限没有明文数字时保持待核。"
+      ]
+    },
+    {
+      "recordKey": "compute/providers/dashscope.json#wan2.2-t2i-plus",
+      "modelId": "wan2.2-t2i-plus",
+      "config": "compute/providers/dashscope.json",
+      "sourceDoc": "docs/model-sources/providers/alibaba/models/wan2.2-t2i-plus.md",
+      "outcome": "still-unresolved",
+      "sourceIds": [],
+      "fieldEvidence": [],
+      "remainingFields": [
+        "capabilities",
+        "extra.endpoint",
+        "extra.asyncHeader",
+        "extra.taskQueryEndpoint",
+        "extra.supportedImageSizes",
+        "extra.maxN",
+        "extra.supportsNegativePrompt"
+      ],
+      "nextAction": "按精确型号和本接入面继续核对；候选证据不自动应用。",
+      "notes": [
+        "已尝试专属页面https://help.aliyun.com/zh/model-studio/wan2-2-t2i-plus，未找到本内部ID的可比字段正文；保留缺口，不将目录成功当全部参数证明。",
+        "未做账号API实测；采样、思考参数及媒体请求上限没有明文数字时保持待核。"
+      ]
+    },
+    {
+      "recordKey": "compute/model-specs/qwen.json#wan2.2-t2i-plus",
+      "modelId": "wan2.2-t2i-plus",
+      "config": "compute/model-specs/qwen.json",
+      "sourceDoc": "docs/model-sources/providers/alibaba/models/wan2.2-t2i-plus.md",
+      "outcome": "still-unresolved",
+      "sourceIds": [],
+      "fieldEvidence": [],
+      "remainingFields": [
+        "spec.capabilities"
+      ],
+      "nextAction": "按精确型号和本接入面继续核对；候选证据不自动应用。",
+      "notes": [
+        "已尝试专属页面https://help.aliyun.com/zh/model-studio/wan2-2-t2i-plus，未找到本内部ID的可比字段正文；保留缺口，不将目录成功当全部参数证明。",
+        "未做账号API实测；采样、思考参数及媒体请求上限没有明文数字时保持待核。"
+      ]
+    },
+    {
+      "recordKey": "compute/providers/dashscope.json#wan2.6-t2i",
+      "modelId": "wan2.6-t2i",
+      "config": "compute/providers/dashscope.json",
+      "sourceDoc": "docs/model-sources/providers/alibaba/models/wan2.6-t2i.md",
+      "outcome": "still-unresolved",
+      "sourceIds": [],
+      "fieldEvidence": [],
+      "remainingFields": [
+        "capabilities",
+        "extra.endpoint",
+        "extra.asyncHeader",
+        "extra.taskQueryEndpoint",
+        "extra.supportedImageSizes",
+        "extra.maxN",
+        "extra.supportsNegativePrompt",
+        "extra.supportsPromptExtend"
+      ],
+      "nextAction": "按精确型号和本接入面继续核对；候选证据不自动应用。",
+      "notes": [
+        "已尝试专属页面https://help.aliyun.com/zh/model-studio/wan2-6-t2i，未找到本内部ID的可比字段正文；保留缺口，不将目录成功当全部参数证明。",
+        "未做账号API实测；采样、思考参数及媒体请求上限没有明文数字时保持待核。"
+      ]
+    },
+    {
+      "recordKey": "compute/model-specs/qwen.json#wan2.6-t2i",
+      "modelId": "wan2.6-t2i",
+      "config": "compute/model-specs/qwen.json",
+      "sourceDoc": "docs/model-sources/providers/alibaba/models/wan2.6-t2i.md",
+      "outcome": "still-unresolved",
+      "sourceIds": [],
+      "fieldEvidence": [],
+      "remainingFields": [
+        "spec.capabilities"
+      ],
+      "nextAction": "按精确型号和本接入面继续核对；候选证据不自动应用。",
+      "notes": [
+        "已尝试专属页面https://help.aliyun.com/zh/model-studio/wan2-6-t2i，未找到本内部ID的可比字段正文；保留缺口，不将目录成功当全部参数证明。",
+        "未做账号API实测；采样、思考参数及媒体请求上限没有明文数字时保持待核。"
+      ]
+    },
+    {
+      "recordKey": "compute/providers/dashscope.json#wan2.6-t2v",
+      "modelId": "wan2.6-t2v",
+      "config": "compute/providers/dashscope.json",
+      "sourceDoc": "docs/model-sources/providers/alibaba/models/wan2.6-t2v.md",
+      "outcome": "still-unresolved",
+      "sourceIds": [],
+      "fieldEvidence": [],
+      "remainingFields": [
+        "capabilities",
+        "extra.supportedResolutions",
+        "extra.maxVideoDuration",
+        "extra.endpoint",
+        "extra.asyncHeader",
+        "extra.taskQueryEndpoint"
+      ],
+      "nextAction": "按精确型号和本接入面继续核对；候选证据不自动应用。",
+      "notes": [
+        "已尝试专属页面https://help.aliyun.com/zh/model-studio/wan2-6-t2v，未找到本内部ID的可比字段正文；保留缺口，不将目录成功当全部参数证明。",
+        "未做账号API实测；采样、思考参数及媒体请求上限没有明文数字时保持待核。"
+      ]
+    },
+    {
+      "recordKey": "compute/model-specs/qwen.json#wan2.6-t2v",
+      "modelId": "wan2.6-t2v",
+      "config": "compute/model-specs/qwen.json",
+      "sourceDoc": "docs/model-sources/providers/alibaba/models/wan2.6-t2v.md",
+      "outcome": "still-unresolved",
+      "sourceIds": [],
+      "fieldEvidence": [],
+      "remainingFields": [
+        "spec.capabilities"
+      ],
+      "nextAction": "按精确型号和本接入面继续核对；候选证据不自动应用。",
+      "notes": [
+        "已尝试专属页面https://help.aliyun.com/zh/model-studio/wan2-6-t2v，未找到本内部ID的可比字段正文；保留缺口，不将目录成功当全部参数证明。",
+        "未做账号API实测；采样、思考参数及媒体请求上限没有明文数字时保持待核。"
+      ]
+    },
+    {
+      "recordKey": "compute/providers/dashscope.json#wan2.7-image-pro",
+      "modelId": "wan2.7-image-pro",
+      "config": "compute/providers/dashscope.json",
+      "sourceDoc": "docs/model-sources/providers/alibaba/models/wan2.7-image-pro.md",
+      "outcome": "still-unresolved",
+      "sourceIds": [],
+      "fieldEvidence": [],
+      "remainingFields": [
+        "capabilities",
+        "extra.endpoint",
+        "extra.asyncHeader",
+        "extra.taskQueryEndpoint",
+        "extra.supportedImageSizes",
+        "extra.sizeShortcuts.1K",
+        "extra.sizeShortcuts.2K",
+        "extra.sizeShortcuts.4K",
+        "extra.maxN",
+        "extra.supportsThinkingMode",
+        "extra.supportsColorPalette"
+      ],
+      "nextAction": "按精确型号和本接入面继续核对；候选证据不自动应用。",
+      "notes": [
+        "已尝试专属页面https://help.aliyun.com/zh/model-studio/wan2-7-image-pro，未找到本内部ID的可比字段正文；保留缺口，不将目录成功当全部参数证明。",
+        "未做账号API实测；采样、思考参数及媒体请求上限没有明文数字时保持待核。"
+      ]
+    },
+    {
+      "recordKey": "compute/coding-plans/dashscope-token-plan.json#wan2.7-image-pro",
+      "modelId": "wan2.7-image-pro",
+      "config": "compute/coding-plans/dashscope-token-plan.json",
+      "sourceDoc": "docs/model-sources/providers/alibaba/models/wan2.7-image-pro.md",
+      "outcome": "official-identity-only",
+      "sourceIds": [
+        "page-ali-token"
+      ],
+      "fieldEvidence": [
+        {
+          "field": "modelName",
+          "currentValue": "wan2.7-image-pro",
+          "supportedValue": "wan2.7-image-pro",
+          "sourceId": "page-ali-token",
+          "assessment": "matches",
+          "explanation": "本套餐官方正文逐字列出的精确ID；不借此确认按量API页的窗口/价格也适用于套餐。"
+        }
+      ],
+      "remainingFields": [
+        "capabilities"
+      ],
+      "nextAction": "按精确型号和本接入面继续核对；候选证据不自动应用。",
+      "notes": [
+        "参数数字仍需套餐自身证据，未采用同名按量API数字。",
+        "未做账号API实测；采样、思考参数及媒体请求上限没有明文数字时保持待核。"
+      ]
+    },
+    {
+      "recordKey": "compute/model-specs/qwen.json#wan2.7-image-pro",
+      "modelId": "wan2.7-image-pro",
+      "config": "compute/model-specs/qwen.json",
+      "sourceDoc": "docs/model-sources/providers/alibaba/models/wan2.7-image-pro.md",
+      "outcome": "still-unresolved",
+      "sourceIds": [],
+      "fieldEvidence": [],
+      "remainingFields": [
+        "spec.capabilities"
+      ],
+      "nextAction": "按精确型号和本接入面继续核对；候选证据不自动应用。",
+      "notes": [
+        "已尝试专属页面https://help.aliyun.com/zh/model-studio/wan2-7-image-pro，未找到本内部ID的可比字段正文；保留缺口，不将目录成功当全部参数证明。",
+        "未做账号API实测；采样、思考参数及媒体请求上限没有明文数字时保持待核。"
+      ]
+    },
+    {
+      "recordKey": "compute/providers/dashscope.json#wan2.7-image",
+      "modelId": "wan2.7-image",
+      "config": "compute/providers/dashscope.json",
+      "sourceDoc": "docs/model-sources/providers/alibaba/models/wan2.7-image.md",
+      "outcome": "official-identity-only",
+      "sourceIds": [
+        "web-wan2-7-image"
+      ],
+      "fieldEvidence": [
+        {
+          "field": "modelName",
+          "currentValue": "wan2.7-image",
+          "supportedValue": "wan2.7-image",
+          "sourceId": "web-wan2-7-image",
+          "assessment": "matches",
+          "explanation": "web实际读取专属页面精确ID。"
+        },
+        {
+          "field": "extra.pricePerImage",
+          "currentValue": null,
+          "supportedValue": 0.2,
+          "sourceId": "web-wan2-7-image",
+          "assessment": "not-comparable",
+          "explanation": "北京CNY/张图片原价，非token价。"
+        }
+      ],
+      "remainingFields": [
+        "capabilities",
+        "extra.endpoint",
+        "extra.asyncHeader",
+        "extra.taskQueryEndpoint",
+        "extra.supportedImageSizes",
+        "extra.maxN",
+        "extra.supportsThinkingMode"
+      ],
+      "nextAction": "按精确型号和本接入面继续核对；候选证据不自动应用。",
+      "notes": [
+        "未做账号API实测；采样、思考参数及媒体请求上限没有明文数字时保持待核。"
+      ]
+    },
+    {
+      "recordKey": "compute/coding-plans/dashscope-token-plan.json#wan2.7-image",
+      "modelId": "wan2.7-image",
+      "config": "compute/coding-plans/dashscope-token-plan.json",
+      "sourceDoc": "docs/model-sources/providers/alibaba/models/wan2.7-image.md",
+      "outcome": "official-identity-only",
+      "sourceIds": [
+        "page-ali-token"
+      ],
+      "fieldEvidence": [
+        {
+          "field": "modelName",
+          "currentValue": "wan2.7-image",
+          "supportedValue": "wan2.7-image",
+          "sourceId": "page-ali-token",
+          "assessment": "matches",
+          "explanation": "本套餐官方正文逐字列出的精确ID；不借此确认按量API页的窗口/价格也适用于套餐。"
+        }
+      ],
+      "remainingFields": [
+        "capabilities"
+      ],
+      "nextAction": "按精确型号和本接入面继续核对；候选证据不自动应用。",
+      "notes": [
+        "参数数字仍需套餐自身证据，未采用同名按量API数字。",
+        "未做账号API实测；采样、思考参数及媒体请求上限没有明文数字时保持待核。"
+      ]
+    },
+    {
+      "recordKey": "compute/model-specs/qwen.json#wan2.7-image",
+      "modelId": "wan2.7-image",
+      "config": "compute/model-specs/qwen.json",
+      "sourceDoc": "docs/model-sources/providers/alibaba/models/wan2.7-image.md",
+      "outcome": "official-identity-only",
+      "sourceIds": [
+        "web-wan2-7-image"
+      ],
+      "fieldEvidence": [
+        {
+          "field": "id",
+          "currentValue": "wan2.7-image",
+          "supportedValue": "wan2.7-image",
+          "sourceId": "web-wan2-7-image",
+          "assessment": "matches",
+          "explanation": "web实际读取专属页面精确ID。"
+        }
+      ],
+      "remainingFields": [
+        "spec.capabilities"
+      ],
+      "nextAction": "按精确型号和本接入面继续核对；候选证据不自动应用。",
+      "notes": [
+        "未做账号API实测；采样、思考参数及媒体请求上限没有明文数字时保持待核。"
+      ]
+    },
+    {
+      "recordKey": "compute/providers/dashscope.json#wan3.0-video-prime",
+      "modelId": "wan3.0-video-prime",
+      "config": "compute/providers/dashscope.json",
+      "sourceDoc": "docs/model-sources/providers/alibaba/models/wan3.0-video-prime.md",
+      "outcome": "still-unresolved",
+      "sourceIds": [],
+      "fieldEvidence": [],
+      "remainingFields": [
+        "capabilities",
+        "extra.supportedResolutions",
+        "extra.endpoint",
+        "extra.asyncHeader",
+        "extra.taskQueryEndpoint",
+        "extra.maxVideoDuration",
+        "extra.supportsIntelligentDuration",
+        "extra.fps",
+        "extra.supportedRatios",
+        "extra.mediaInputTypes",
+        "extra.maxReferenceImages",
+        "extra.maxReferenceVideos",
+        "extra.maxReferenceAudios",
+        "extra.supportsOutputAudio",
+        "extra.supportsSeed",
+        "extra.supportsPromptExtend",
+        "extra.supportsWatermark"
+      ],
+      "nextAction": "按精确型号和本接入面继续核对；候选证据不自动应用。",
+      "notes": [
+        "已尝试专属页面https://help.aliyun.com/zh/model-studio/wan3-0-video-prime，未找到本内部ID的可比字段正文；保留缺口，不将目录成功当全部参数证明。",
+        "未做账号API实测；采样、思考参数及媒体请求上限没有明文数字时保持待核。"
+      ]
+    },
+    {
+      "recordKey": "compute/model-specs/wan.json#wan3.0-video-prime",
+      "modelId": "wan3.0-video-prime",
+      "config": "compute/model-specs/wan.json",
+      "sourceDoc": "docs/model-sources/providers/alibaba/models/wan3.0-video-prime.md",
+      "outcome": "still-unresolved",
+      "sourceIds": [],
+      "fieldEvidence": [],
+      "remainingFields": [
+        "spec.capabilities",
+        "spec.extra.supportedResolutions",
+        "spec.extra.maxVideoDuration",
+        "spec.extra.fps"
+      ],
+      "nextAction": "按精确型号和本接入面继续核对；候选证据不自动应用。",
+      "notes": [
+        "已尝试专属页面https://help.aliyun.com/zh/model-studio/wan3-0-video-prime，未找到本内部ID的可比字段正文；保留缺口，不将目录成功当全部参数证明。",
+        "未做账号API实测；采样、思考参数及媒体请求上限没有明文数字时保持待核。"
+      ]
+    },
+    {
+      "recordKey": "compute/providers/dashscope.json#wan3.0-video",
+      "modelId": "wan3.0-video",
+      "config": "compute/providers/dashscope.json",
+      "sourceDoc": "docs/model-sources/providers/alibaba/models/wan3.0-video.md",
+      "outcome": "still-unresolved",
+      "sourceIds": [],
+      "fieldEvidence": [],
+      "remainingFields": [
+        "capabilities",
+        "extra.supportedResolutions",
+        "extra.endpoint",
+        "extra.asyncHeader",
+        "extra.taskQueryEndpoint",
+        "extra.maxVideoDuration",
+        "extra.supportsIntelligentDuration",
+        "extra.fps",
+        "extra.supportedRatios",
+        "extra.mediaInputTypes",
+        "extra.maxReferenceImages",
+        "extra.maxReferenceVideos",
+        "extra.maxReferenceAudios",
+        "extra.supportsOutputAudio",
+        "extra.supportsSeed",
+        "extra.supportsPromptExtend",
+        "extra.supportsWatermark"
+      ],
+      "nextAction": "按精确型号和本接入面继续核对；候选证据不自动应用。",
+      "notes": [
+        "已尝试专属页面https://help.aliyun.com/zh/model-studio/wan3-0-video，未找到本内部ID的可比字段正文；保留缺口，不将目录成功当全部参数证明。",
+        "未做账号API实测；采样、思考参数及媒体请求上限没有明文数字时保持待核。"
+      ]
+    },
+    {
+      "recordKey": "compute/model-specs/wan.json#wan3.0-video",
+      "modelId": "wan3.0-video",
+      "config": "compute/model-specs/wan.json",
+      "sourceDoc": "docs/model-sources/providers/alibaba/models/wan3.0-video.md",
+      "outcome": "still-unresolved",
+      "sourceIds": [],
+      "fieldEvidence": [],
+      "remainingFields": [
+        "spec.capabilities",
+        "spec.extra.supportedResolutions",
+        "spec.extra.maxVideoDuration",
+        "spec.extra.fps"
+      ],
+      "nextAction": "按精确型号和本接入面继续核对；候选证据不自动应用。",
+      "notes": [
+        "已尝试专属页面https://help.aliyun.com/zh/model-studio/wan3-0-video，未找到本内部ID的可比字段正文；保留缺口，不将目录成功当全部参数证明。",
+        "未做账号API实测；采样、思考参数及媒体请求上限没有明文数字时保持待核。"
+      ]
+    }
+  ],
+  "coverage": {
+    "records": 120,
+    "outcomes": {
+      "still-unresolved": 30,
+      "official-identity-only": 57,
+      "official-conflict": 11,
+      "official-fields-found": 22
+    },
+    "unchangedConfig": true,
+    "accountCallsPerformed": false
+  }
+}

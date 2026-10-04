@@ -1,0 +1,985 @@
+{
+  "supplier": "baidu",
+  "checkedAt": "2026-10-04",
+  "sources": [
+    {
+      "id": "page-baidu-model-list",
+      "url": "https://cloud.baidu.com/doc/qianfan/s/rmh4stp0j",
+      "finalUrl": "https://cloud.baidu.com/doc/qianfan/s/rmh4stp0j",
+      "publisher": "baidu",
+      "kind": "official-docs",
+      "retrieval": "readable",
+      "summary": "已读取HTTP正文；模型数字只按该页精确型号和接入记录。",
+      "scope": "千帆API模型表/旧Coding Plan/新Token Plan/停售公告分别适用。",
+      "contentSha256": "9528f21e468bb5b2752b4a7ee005d0a0ce0571c849e4e448013f28f1302c274e",
+      "retrievalMethod": "http-body-htmlparser",
+      "contentDigestKind": "htmlparser-visible-text-not-raw-http-bytes"
+    },
+    {
+      "id": "page-baidu-code",
+      "url": "https://cloud.baidu.com/doc/qianfan/s/imlg0beiu",
+      "finalUrl": "https://cloud.baidu.com/doc/qianfan/s/imlg0beiu",
+      "publisher": "baidu",
+      "kind": "official-docs",
+      "retrieval": "readable",
+      "summary": "已读取HTTP正文；模型数字只按该页精确型号和接入记录。",
+      "scope": "千帆API模型表/旧Coding Plan/新Token Plan/停售公告分别适用。",
+      "contentSha256": "b962241968a47d07a73f46bc059b8bdd82e62d9cffe718cf91c36c4c06566ca0",
+      "retrievalMethod": "http-body-htmlparser",
+      "contentDigestKind": "htmlparser-visible-text-not-raw-http-bytes"
+    },
+    {
+      "id": "page-baidu-token",
+      "url": "https://cloud.baidu.com/doc/qianfan/s/Dmrabu8b6",
+      "finalUrl": "https://cloud.baidu.com/doc/qianfan/s/Dmrabu8b6",
+      "publisher": "baidu",
+      "kind": "official-docs",
+      "retrieval": "readable",
+      "summary": "已读取HTTP正文；模型数字只按该页精确型号和接入记录。",
+      "scope": "千帆API模型表/旧Coding Plan/新Token Plan/停售公告分别适用。",
+      "contentSha256": "632b5edef1c94e862c86a08f62f2ba0af941d43a59630a5c9dda857a59323870",
+      "retrievalMethod": "http-body-htmlparser",
+      "contentDigestKind": "htmlparser-visible-text-not-raw-http-bytes"
+    },
+    {
+      "id": "page-baidu-stop-new",
+      "url": "https://cloud.baidu.com/doc/qianfan/s/Fmrexuejc",
+      "finalUrl": "https://cloud.baidu.com/doc/qianfan/s/Fmrexuejc",
+      "publisher": "baidu",
+      "kind": "official-docs",
+      "retrieval": "readable",
+      "summary": "已读取HTTP正文；模型数字只按该页精确型号和接入记录。",
+      "scope": "千帆API模型表/旧Coding Plan/新Token Plan/停售公告分别适用。",
+      "contentSha256": "b73dd60ae0fc7d8c8b59c691448410d9132335d88eace9df930f48fa59c7f0c3",
+      "retrievalMethod": "http-body-htmlparser",
+      "contentDigestKind": "htmlparser-visible-text-not-raw-http-bytes"
+    }
+  ],
+  "findings": [
+    {
+      "recordKey": "compute/coding-plans/baidu-coding.json#deepseek-v3.2",
+      "modelId": "deepseek-v3.2",
+      "config": "compute/coding-plans/baidu-coding.json",
+      "sourceDoc": "docs/model-sources/providers/baidu/models/deepseek-v3.2.md",
+      "outcome": "official-identity-only",
+      "sourceIds": [
+        "page-baidu-code",
+        "page-baidu-stop-new"
+      ],
+      "fieldEvidence": [
+        {
+          "field": "modelName",
+          "currentValue": "deepseek-v3.2",
+          "supportedValue": "deepseek-v3.2",
+          "sourceId": "page-baidu-code",
+          "assessment": "matches",
+          "explanation": "Coding Plan正文精确Model参数/示例；不能借此宣布TokenPlan套餐参数相同。"
+        },
+        {
+          "field": "access.newPurchase",
+          "currentValue": null,
+          "supportedValue": {
+            "available": false,
+            "effectiveAt": "2026-07-13T10:00:00+08:00",
+            "product": "Coding Plan"
+          },
+          "sourceId": "page-baidu-stop-new",
+          "assessment": "not-comparable",
+          "explanation": "停售公告只停止新购；既有订阅处置需读迁移与权益，不直接当API模型停服。"
+        }
+      ],
+      "remainingFields": [
+        "capabilities"
+      ],
+      "nextAction": "按精确型号和本接入面继续核对；候选证据不自动应用。",
+      "notes": []
+    },
+    {
+      "recordKey": "compute/coding-plans/baidu-coding.json#deepseek-v4-flash",
+      "modelId": "deepseek-v4-flash",
+      "config": "compute/coding-plans/baidu-coding.json",
+      "sourceDoc": "docs/model-sources/providers/baidu/models/deepseek-v4-flash.md",
+      "outcome": "official-identity-only",
+      "sourceIds": [
+        "page-baidu-code",
+        "page-baidu-stop-new"
+      ],
+      "fieldEvidence": [
+        {
+          "field": "modelName",
+          "currentValue": "deepseek-v4-flash",
+          "supportedValue": "deepseek-v4-flash",
+          "sourceId": "page-baidu-code",
+          "assessment": "matches",
+          "explanation": "Coding Plan正文精确Model参数/示例；不能借此宣布TokenPlan套餐参数相同。"
+        },
+        {
+          "field": "access.newPurchase",
+          "currentValue": null,
+          "supportedValue": {
+            "available": false,
+            "effectiveAt": "2026-07-13T10:00:00+08:00",
+            "product": "Coding Plan"
+          },
+          "sourceId": "page-baidu-stop-new",
+          "assessment": "not-comparable",
+          "explanation": "停售公告只停止新购；既有订阅处置需读迁移与权益，不直接当API模型停服。"
+        }
+      ],
+      "remainingFields": [
+        "capabilities"
+      ],
+      "nextAction": "按精确型号和本接入面继续核对；候选证据不自动应用。",
+      "notes": []
+    },
+    {
+      "recordKey": "compute/providers/baidu.json#ernie-4.5-turbo-128k",
+      "modelId": "ernie-4.5-turbo-128k",
+      "config": "compute/providers/baidu.json",
+      "sourceDoc": "docs/model-sources/providers/baidu/models/ernie-4.5-turbo-128k.md",
+      "outcome": "official-fields-found",
+      "sourceIds": [
+        "page-baidu-model-list"
+      ],
+      "fieldEvidence": [
+        {
+          "field": "modelName",
+          "currentValue": "ernie-4.5-turbo-128k",
+          "supportedValue": "ernie-4.5-turbo-128k",
+          "sourceId": "page-baidu-model-list",
+          "assessment": "matches",
+          "explanation": "本轮千帆模型表model参数列精确出现。"
+        },
+        {
+          "field": "contextWindow",
+          "currentValue": 131072,
+          "supportedValue": "128k",
+          "sourceId": "page-baidu-model-list",
+          "assessment": "not-comparable",
+          "explanation": "官网原文K；未猜1000/1024，只列候选。"
+        },
+        {
+          "field": "maxInputTokens",
+          "currentValue": null,
+          "supportedValue": "123k",
+          "sourceId": "page-baidu-model-list",
+          "assessment": "not-comparable",
+          "explanation": "官网独立输入预算，不混作总窗口。"
+        },
+        {
+          "field": "maxOutputTokens",
+          "currentValue": 12288,
+          "supportedValue": 12288,
+          "sourceId": "page-baidu-model-list",
+          "assessment": "matches",
+          "explanation": "官方max_tokens区间的明文上界。"
+        }
+      ],
+      "remainingFields": [
+        "contextWindow",
+        "defaultTemperature",
+        "defaultTopP",
+        "extra.cacheHitPrice",
+        "inputPrice",
+        "outputPrice",
+        "capabilities"
+      ],
+      "nextAction": "按精确型号和本接入面继续核对；候选证据不自动应用。",
+      "notes": []
+    },
+    {
+      "recordKey": "compute/model-specs/baidu.json#ernie-4.5-turbo-128k",
+      "modelId": "ernie-4.5-turbo-128k",
+      "config": "compute/model-specs/baidu.json",
+      "sourceDoc": "docs/model-sources/providers/baidu/models/ernie-4.5-turbo-128k.md",
+      "outcome": "official-fields-found",
+      "sourceIds": [
+        "page-baidu-model-list"
+      ],
+      "fieldEvidence": [
+        {
+          "field": "id",
+          "currentValue": "ernie-4.5-turbo-128k",
+          "supportedValue": "ernie-4.5-turbo-128k",
+          "sourceId": "page-baidu-model-list",
+          "assessment": "matches",
+          "explanation": "本轮千帆模型表model参数列精确出现。"
+        },
+        {
+          "field": "spec.contextWindow",
+          "currentValue": 131072,
+          "supportedValue": "128k",
+          "sourceId": "page-baidu-model-list",
+          "assessment": "not-comparable",
+          "explanation": "官网原文K；未猜1000/1024，只列候选。"
+        },
+        {
+          "field": "spec.maxInputTokens",
+          "currentValue": null,
+          "supportedValue": "123k",
+          "sourceId": "page-baidu-model-list",
+          "assessment": "not-comparable",
+          "explanation": "官网独立输入预算，不混作总窗口。"
+        },
+        {
+          "field": "spec.maxOutputTokens",
+          "currentValue": 12288,
+          "supportedValue": 12288,
+          "sourceId": "page-baidu-model-list",
+          "assessment": "matches",
+          "explanation": "官方max_tokens区间的明文上界。"
+        }
+      ],
+      "remainingFields": [
+        "spec.contextWindow",
+        "spec.defaultTemperature",
+        "spec.capabilities"
+      ],
+      "nextAction": "按精确型号和本接入面继续核对；候选证据不自动应用。",
+      "notes": []
+    },
+    {
+      "recordKey": "compute/providers/baidu.json#ernie-4.5-turbo-20260402",
+      "modelId": "ernie-4.5-turbo-20260402",
+      "config": "compute/providers/baidu.json",
+      "sourceDoc": "docs/model-sources/providers/baidu/models/ernie-4.5-turbo-20260402.md",
+      "outcome": "official-fields-found",
+      "sourceIds": [
+        "page-baidu-model-list"
+      ],
+      "fieldEvidence": [
+        {
+          "field": "modelName",
+          "currentValue": "ernie-4.5-turbo-20260402",
+          "supportedValue": "ernie-4.5-turbo-20260402",
+          "sourceId": "page-baidu-model-list",
+          "assessment": "matches",
+          "explanation": "本轮千帆模型表model参数列精确出现。"
+        },
+        {
+          "field": "contextWindow",
+          "currentValue": 131072,
+          "supportedValue": "128k",
+          "sourceId": "page-baidu-model-list",
+          "assessment": "not-comparable",
+          "explanation": "官网原文K；未猜1000/1024，只列候选。"
+        },
+        {
+          "field": "maxInputTokens",
+          "currentValue": null,
+          "supportedValue": "123k",
+          "sourceId": "page-baidu-model-list",
+          "assessment": "not-comparable",
+          "explanation": "官网独立输入预算，不混作总窗口。"
+        },
+        {
+          "field": "maxOutputTokens",
+          "currentValue": 12288,
+          "supportedValue": 12288,
+          "sourceId": "page-baidu-model-list",
+          "assessment": "matches",
+          "explanation": "官方max_tokens区间的明文上界。"
+        }
+      ],
+      "remainingFields": [
+        "contextWindow",
+        "defaultTemperature",
+        "defaultTopP",
+        "extra.cacheHitPrice",
+        "inputPrice",
+        "outputPrice",
+        "capabilities"
+      ],
+      "nextAction": "按精确型号和本接入面继续核对；候选证据不自动应用。",
+      "notes": []
+    },
+    {
+      "recordKey": "compute/coding-plans/baidu-coding.json#ernie-4.5-turbo-20260402",
+      "modelId": "ernie-4.5-turbo-20260402",
+      "config": "compute/coding-plans/baidu-coding.json",
+      "sourceDoc": "docs/model-sources/providers/baidu/models/ernie-4.5-turbo-20260402.md",
+      "outcome": "official-identity-only",
+      "sourceIds": [
+        "page-baidu-code",
+        "page-baidu-stop-new"
+      ],
+      "fieldEvidence": [
+        {
+          "field": "modelName",
+          "currentValue": "ernie-4.5-turbo-20260402",
+          "supportedValue": "ernie-4.5-turbo-20260402",
+          "sourceId": "page-baidu-code",
+          "assessment": "matches",
+          "explanation": "Coding Plan正文精确Model参数/示例；不能借此宣布TokenPlan套餐参数相同。"
+        },
+        {
+          "field": "access.newPurchase",
+          "currentValue": null,
+          "supportedValue": {
+            "available": false,
+            "effectiveAt": "2026-07-13T10:00:00+08:00",
+            "product": "Coding Plan"
+          },
+          "sourceId": "page-baidu-stop-new",
+          "assessment": "not-comparable",
+          "explanation": "停售公告只停止新购；既有订阅处置需读迁移与权益，不直接当API模型停服。"
+        }
+      ],
+      "remainingFields": [
+        "capabilities"
+      ],
+      "nextAction": "按精确型号和本接入面继续核对；候选证据不自动应用。",
+      "notes": []
+    },
+    {
+      "recordKey": "compute/model-specs/baidu.json#ernie-4.5-turbo-20260402",
+      "modelId": "ernie-4.5-turbo-20260402",
+      "config": "compute/model-specs/baidu.json",
+      "sourceDoc": "docs/model-sources/providers/baidu/models/ernie-4.5-turbo-20260402.md",
+      "outcome": "official-fields-found",
+      "sourceIds": [
+        "page-baidu-model-list"
+      ],
+      "fieldEvidence": [
+        {
+          "field": "id",
+          "currentValue": "ernie-4.5-turbo-20260402",
+          "supportedValue": "ernie-4.5-turbo-20260402",
+          "sourceId": "page-baidu-model-list",
+          "assessment": "matches",
+          "explanation": "本轮千帆模型表model参数列精确出现。"
+        },
+        {
+          "field": "spec.contextWindow",
+          "currentValue": 131072,
+          "supportedValue": "128k",
+          "sourceId": "page-baidu-model-list",
+          "assessment": "not-comparable",
+          "explanation": "官网原文K；未猜1000/1024，只列候选。"
+        },
+        {
+          "field": "spec.maxInputTokens",
+          "currentValue": null,
+          "supportedValue": "123k",
+          "sourceId": "page-baidu-model-list",
+          "assessment": "not-comparable",
+          "explanation": "官网独立输入预算，不混作总窗口。"
+        },
+        {
+          "field": "spec.maxOutputTokens",
+          "currentValue": 12288,
+          "supportedValue": 12288,
+          "sourceId": "page-baidu-model-list",
+          "assessment": "matches",
+          "explanation": "官方max_tokens区间的明文上界。"
+        }
+      ],
+      "remainingFields": [
+        "spec.contextWindow",
+        "spec.defaultTemperature",
+        "spec.capabilities"
+      ],
+      "nextAction": "按精确型号和本接入面继续核对；候选证据不自动应用。",
+      "notes": []
+    },
+    {
+      "recordKey": "compute/providers/baidu.json#ernie-5.0-thinking-latest",
+      "modelId": "ernie-5.0-thinking-latest",
+      "config": "compute/providers/baidu.json",
+      "sourceDoc": "docs/model-sources/providers/baidu/models/ernie-5.0-thinking-latest.md",
+      "outcome": "official-fields-found",
+      "sourceIds": [
+        "page-baidu-model-list"
+      ],
+      "fieldEvidence": [
+        {
+          "field": "modelName",
+          "currentValue": "ernie-5.0-thinking-latest",
+          "supportedValue": "ernie-5.0-thinking-latest",
+          "sourceId": "page-baidu-model-list",
+          "assessment": "matches",
+          "explanation": "本轮千帆模型表model参数列精确出现。"
+        },
+        {
+          "field": "contextWindow",
+          "currentValue": 128000,
+          "supportedValue": "128k",
+          "sourceId": "page-baidu-model-list",
+          "assessment": "not-comparable",
+          "explanation": "官网原文K；未猜1000/1024，只列候选。"
+        },
+        {
+          "field": "maxInputTokens",
+          "currentValue": null,
+          "supportedValue": "119k",
+          "sourceId": "page-baidu-model-list",
+          "assessment": "not-comparable",
+          "explanation": "官网独立输入预算，不混作总窗口。"
+        },
+        {
+          "field": "maxOutputTokens",
+          "currentValue": 65536,
+          "supportedValue": 65536,
+          "sourceId": "page-baidu-model-list",
+          "assessment": "matches",
+          "explanation": "官方max_tokens区间的明文上界。"
+        }
+      ],
+      "remainingFields": [
+        "contextWindow",
+        "extra.pricingTiers",
+        "inputPrice",
+        "outputPrice",
+        "capabilities",
+        "extra.thinkingMaxTokens"
+      ],
+      "nextAction": "按精确型号和本接入面继续核对；候选证据不自动应用。",
+      "notes": []
+    },
+    {
+      "recordKey": "compute/model-specs/baidu.json#ernie-5.0-thinking-latest",
+      "modelId": "ernie-5.0-thinking-latest",
+      "config": "compute/model-specs/baidu.json",
+      "sourceDoc": "docs/model-sources/providers/baidu/models/ernie-5.0-thinking-latest.md",
+      "outcome": "official-fields-found",
+      "sourceIds": [
+        "page-baidu-model-list"
+      ],
+      "fieldEvidence": [
+        {
+          "field": "id",
+          "currentValue": "ernie-5.0-thinking-latest",
+          "supportedValue": "ernie-5.0-thinking-latest",
+          "sourceId": "page-baidu-model-list",
+          "assessment": "matches",
+          "explanation": "本轮千帆模型表model参数列精确出现。"
+        },
+        {
+          "field": "spec.contextWindow",
+          "currentValue": 128000,
+          "supportedValue": "128k",
+          "sourceId": "page-baidu-model-list",
+          "assessment": "not-comparable",
+          "explanation": "官网原文K；未猜1000/1024，只列候选。"
+        },
+        {
+          "field": "spec.maxInputTokens",
+          "currentValue": null,
+          "supportedValue": "119k",
+          "sourceId": "page-baidu-model-list",
+          "assessment": "not-comparable",
+          "explanation": "官网独立输入预算，不混作总窗口。"
+        },
+        {
+          "field": "spec.maxOutputTokens",
+          "currentValue": 65536,
+          "supportedValue": 65536,
+          "sourceId": "page-baidu-model-list",
+          "assessment": "matches",
+          "explanation": "官方max_tokens区间的明文上界。"
+        }
+      ],
+      "remainingFields": [
+        "spec.contextWindow",
+        "spec.supportsReasoning",
+        "spec.capabilities"
+      ],
+      "nextAction": "按精确型号和本接入面继续核对；候选证据不自动应用。",
+      "notes": []
+    },
+    {
+      "recordKey": "compute/providers/baidu.json#ernie-5.0",
+      "modelId": "ernie-5.0",
+      "config": "compute/providers/baidu.json",
+      "sourceDoc": "docs/model-sources/providers/baidu/models/ernie-5.0.md",
+      "outcome": "official-fields-found",
+      "sourceIds": [
+        "page-baidu-model-list"
+      ],
+      "fieldEvidence": [
+        {
+          "field": "modelName",
+          "currentValue": "ernie-5.0",
+          "supportedValue": "ernie-5.0",
+          "sourceId": "page-baidu-model-list",
+          "assessment": "matches",
+          "explanation": "本轮千帆模型表model参数列精确出现。"
+        },
+        {
+          "field": "contextWindow",
+          "currentValue": 131072,
+          "supportedValue": "128k",
+          "sourceId": "page-baidu-model-list",
+          "assessment": "not-comparable",
+          "explanation": "官网原文K；未猜1000/1024，只列候选。"
+        },
+        {
+          "field": "maxInputTokens",
+          "currentValue": null,
+          "supportedValue": "119k",
+          "sourceId": "page-baidu-model-list",
+          "assessment": "not-comparable",
+          "explanation": "官网独立输入预算，不混作总窗口。"
+        },
+        {
+          "field": "maxOutputTokens",
+          "currentValue": 65536,
+          "supportedValue": 65536,
+          "sourceId": "page-baidu-model-list",
+          "assessment": "matches",
+          "explanation": "官方max_tokens区间的明文上界。"
+        }
+      ],
+      "remainingFields": [
+        "contextWindow",
+        "defaultTemperature",
+        "defaultTopP",
+        "extra.pricingTiers",
+        "inputPrice",
+        "outputPrice",
+        "capabilities"
+      ],
+      "nextAction": "按精确型号和本接入面继续核对；候选证据不自动应用。",
+      "notes": []
+    },
+    {
+      "recordKey": "compute/model-specs/baidu.json#ernie-5.0",
+      "modelId": "ernie-5.0",
+      "config": "compute/model-specs/baidu.json",
+      "sourceDoc": "docs/model-sources/providers/baidu/models/ernie-5.0.md",
+      "outcome": "official-fields-found",
+      "sourceIds": [
+        "page-baidu-model-list"
+      ],
+      "fieldEvidence": [
+        {
+          "field": "id",
+          "currentValue": "ernie-5.0",
+          "supportedValue": "ernie-5.0",
+          "sourceId": "page-baidu-model-list",
+          "assessment": "matches",
+          "explanation": "本轮千帆模型表model参数列精确出现。"
+        },
+        {
+          "field": "spec.contextWindow",
+          "currentValue": 131072,
+          "supportedValue": "128k",
+          "sourceId": "page-baidu-model-list",
+          "assessment": "not-comparable",
+          "explanation": "官网原文K；未猜1000/1024，只列候选。"
+        },
+        {
+          "field": "spec.maxInputTokens",
+          "currentValue": null,
+          "supportedValue": "119k",
+          "sourceId": "page-baidu-model-list",
+          "assessment": "not-comparable",
+          "explanation": "官网独立输入预算，不混作总窗口。"
+        },
+        {
+          "field": "spec.maxOutputTokens",
+          "currentValue": 65536,
+          "supportedValue": 65536,
+          "sourceId": "page-baidu-model-list",
+          "assessment": "matches",
+          "explanation": "官方max_tokens区间的明文上界。"
+        }
+      ],
+      "remainingFields": [
+        "spec.contextWindow",
+        "spec.defaultTemperature",
+        "spec.capabilities"
+      ],
+      "nextAction": "按精确型号和本接入面继续核对；候选证据不自动应用。",
+      "notes": []
+    },
+    {
+      "recordKey": "compute/providers/baidu.json#ernie-x1.1",
+      "modelId": "ernie-x1.1",
+      "config": "compute/providers/baidu.json",
+      "sourceDoc": "docs/model-sources/providers/baidu/models/ernie-x1.1.md",
+      "outcome": "official-fields-found",
+      "sourceIds": [
+        "page-baidu-model-list"
+      ],
+      "fieldEvidence": [
+        {
+          "field": "modelName",
+          "currentValue": "ernie-x1.1",
+          "supportedValue": "ernie-x1.1",
+          "sourceId": "page-baidu-model-list",
+          "assessment": "matches",
+          "explanation": "本轮千帆模型表model参数列精确出现。"
+        },
+        {
+          "field": "contextWindow",
+          "currentValue": 65536,
+          "supportedValue": "64k",
+          "sourceId": "page-baidu-model-list",
+          "assessment": "not-comparable",
+          "explanation": "官网原文K；未猜1000/1024，只列候选。"
+        },
+        {
+          "field": "maxInputTokens",
+          "currentValue": null,
+          "supportedValue": "55k",
+          "sourceId": "page-baidu-model-list",
+          "assessment": "not-comparable",
+          "explanation": "官网独立输入预算，不混作总窗口。"
+        },
+        {
+          "field": "maxOutputTokens",
+          "currentValue": 65536,
+          "supportedValue": 65536,
+          "sourceId": "page-baidu-model-list",
+          "assessment": "matches",
+          "explanation": "官方max_tokens区间的明文上界。"
+        },
+        {
+          "field": "access.notice",
+          "currentValue": null,
+          "supportedValue": "即将下线",
+          "sourceId": "page-baidu-model-list",
+          "assessment": "not-comparable",
+          "explanation": "模型目录明文注释，缺停服日期则不编造retiredAt。"
+        }
+      ],
+      "remainingFields": [
+        "contextWindow",
+        "inputPrice",
+        "outputPrice",
+        "capabilities",
+        "extra.thinkingMaxTokens"
+      ],
+      "nextAction": "按精确型号和本接入面继续核对；候选证据不自动应用。",
+      "notes": []
+    },
+    {
+      "recordKey": "compute/model-specs/baidu.json#ernie-x1.1",
+      "modelId": "ernie-x1.1",
+      "config": "compute/model-specs/baidu.json",
+      "sourceDoc": "docs/model-sources/providers/baidu/models/ernie-x1.1.md",
+      "outcome": "official-fields-found",
+      "sourceIds": [
+        "page-baidu-model-list"
+      ],
+      "fieldEvidence": [
+        {
+          "field": "id",
+          "currentValue": "ernie-x1.1",
+          "supportedValue": "ernie-x1.1",
+          "sourceId": "page-baidu-model-list",
+          "assessment": "matches",
+          "explanation": "本轮千帆模型表model参数列精确出现。"
+        },
+        {
+          "field": "spec.contextWindow",
+          "currentValue": 65536,
+          "supportedValue": "64k",
+          "sourceId": "page-baidu-model-list",
+          "assessment": "not-comparable",
+          "explanation": "官网原文K；未猜1000/1024，只列候选。"
+        },
+        {
+          "field": "spec.maxInputTokens",
+          "currentValue": null,
+          "supportedValue": "55k",
+          "sourceId": "page-baidu-model-list",
+          "assessment": "not-comparable",
+          "explanation": "官网独立输入预算，不混作总窗口。"
+        },
+        {
+          "field": "spec.maxOutputTokens",
+          "currentValue": 65536,
+          "supportedValue": 65536,
+          "sourceId": "page-baidu-model-list",
+          "assessment": "matches",
+          "explanation": "官方max_tokens区间的明文上界。"
+        },
+        {
+          "field": "access.notice",
+          "currentValue": null,
+          "supportedValue": "即将下线",
+          "sourceId": "page-baidu-model-list",
+          "assessment": "not-comparable",
+          "explanation": "模型目录明文注释，缺停服日期则不编造retiredAt。"
+        }
+      ],
+      "remainingFields": [
+        "spec.contextWindow",
+        "spec.defaultTemperature",
+        "spec.supportsReasoning",
+        "spec.capabilities"
+      ],
+      "nextAction": "按精确型号和本接入面继续核对；候选证据不自动应用。",
+      "notes": []
+    },
+    {
+      "recordKey": "compute/coding-plans/baidu-coding.json#glm-5.1",
+      "modelId": "glm-5.1",
+      "config": "compute/coding-plans/baidu-coding.json",
+      "sourceDoc": "docs/model-sources/providers/baidu/models/glm-5.1.md",
+      "outcome": "official-identity-only",
+      "sourceIds": [
+        "page-baidu-code",
+        "page-baidu-stop-new"
+      ],
+      "fieldEvidence": [
+        {
+          "field": "modelName",
+          "currentValue": "glm-5.1",
+          "supportedValue": "glm-5.1",
+          "sourceId": "page-baidu-code",
+          "assessment": "matches",
+          "explanation": "Coding Plan正文精确Model参数/示例；不能借此宣布TokenPlan套餐参数相同。"
+        },
+        {
+          "field": "access.newPurchase",
+          "currentValue": null,
+          "supportedValue": {
+            "available": false,
+            "effectiveAt": "2026-07-13T10:00:00+08:00",
+            "product": "Coding Plan"
+          },
+          "sourceId": "page-baidu-stop-new",
+          "assessment": "not-comparable",
+          "explanation": "停售公告只停止新购；既有订阅处置需读迁移与权益，不直接当API模型停服。"
+        }
+      ],
+      "remainingFields": [
+        "capabilities"
+      ],
+      "nextAction": "按精确型号和本接入面继续核对；候选证据不自动应用。",
+      "notes": [
+        "新TokenPlan也列此精确ID，但与本条旧CodingPlan不同合同，不用其目录替代旧套餐证明。"
+      ]
+    },
+    {
+      "recordKey": "compute/coding-plans/baidu-coding.json#glm-5",
+      "modelId": "glm-5",
+      "config": "compute/coding-plans/baidu-coding.json",
+      "sourceDoc": "docs/model-sources/providers/baidu/models/glm-5.md",
+      "outcome": "official-identity-only",
+      "sourceIds": [
+        "page-baidu-code",
+        "page-baidu-stop-new"
+      ],
+      "fieldEvidence": [
+        {
+          "field": "modelName",
+          "currentValue": "glm-5",
+          "supportedValue": "glm-5",
+          "sourceId": "page-baidu-code",
+          "assessment": "matches",
+          "explanation": "Coding Plan正文精确Model参数/示例；不能借此宣布TokenPlan套餐参数相同。"
+        },
+        {
+          "field": "access.newPurchase",
+          "currentValue": null,
+          "supportedValue": {
+            "available": false,
+            "effectiveAt": "2026-07-13T10:00:00+08:00",
+            "product": "Coding Plan"
+          },
+          "sourceId": "page-baidu-stop-new",
+          "assessment": "not-comparable",
+          "explanation": "停售公告只停止新购；既有订阅处置需读迁移与权益，不直接当API模型停服。"
+        }
+      ],
+      "remainingFields": [
+        "capabilities"
+      ],
+      "nextAction": "按精确型号和本接入面继续核对；候选证据不自动应用。",
+      "notes": []
+    },
+    {
+      "recordKey": "compute/coding-plans/baidu-coding.json#kimi-k2.5",
+      "modelId": "kimi-k2.5",
+      "config": "compute/coding-plans/baidu-coding.json",
+      "sourceDoc": "docs/model-sources/providers/baidu/models/kimi-k2.5.md",
+      "outcome": "official-identity-only",
+      "sourceIds": [
+        "page-baidu-code",
+        "page-baidu-stop-new"
+      ],
+      "fieldEvidence": [
+        {
+          "field": "modelName",
+          "currentValue": "kimi-k2.5",
+          "supportedValue": "kimi-k2.5",
+          "sourceId": "page-baidu-code",
+          "assessment": "matches",
+          "explanation": "Coding Plan正文精确Model参数/示例；不能借此宣布TokenPlan套餐参数相同。"
+        },
+        {
+          "field": "access.newPurchase",
+          "currentValue": null,
+          "supportedValue": {
+            "available": false,
+            "effectiveAt": "2026-07-13T10:00:00+08:00",
+            "product": "Coding Plan"
+          },
+          "sourceId": "page-baidu-stop-new",
+          "assessment": "not-comparable",
+          "explanation": "停售公告只停止新购；既有订阅处置需读迁移与权益，不直接当API模型停服。"
+        }
+      ],
+      "remainingFields": [
+        "capabilities"
+      ],
+      "nextAction": "按精确型号和本接入面继续核对；候选证据不自动应用。",
+      "notes": []
+    },
+    {
+      "recordKey": "compute/coding-plans/baidu-coding.json#kimi-k2.6",
+      "modelId": "kimi-k2.6",
+      "config": "compute/coding-plans/baidu-coding.json",
+      "sourceDoc": "docs/model-sources/providers/baidu/models/kimi-k2.6.md",
+      "outcome": "official-access-only",
+      "sourceIds": [
+        "page-baidu-stop-new"
+      ],
+      "fieldEvidence": [
+        {
+          "field": "access.newPurchase",
+          "currentValue": null,
+          "supportedValue": {
+            "available": false,
+            "effectiveAt": "2026-07-13T10:00:00+08:00",
+            "product": "Coding Plan"
+          },
+          "sourceId": "page-baidu-stop-new",
+          "assessment": "not-comparable",
+          "explanation": "停售公告只停止新购；既有订阅处置需读迁移与权益，不直接当API模型停服。"
+        }
+      ],
+      "remainingFields": [
+        "capabilities"
+      ],
+      "nextAction": "按精确型号和本接入面继续核对；候选证据不自动应用。",
+      "notes": [
+        "official-access-only只说明找到官方接入/产品入口，不计本条精确模型身份或容量已核。"
+      ]
+    },
+    {
+      "recordKey": "compute/coding-plans/baidu-coding.json#minimax-m2.5",
+      "modelId": "minimax-m2.5",
+      "config": "compute/coding-plans/baidu-coding.json",
+      "sourceDoc": "docs/model-sources/providers/baidu/models/minimax-m2.5.md",
+      "outcome": "official-identity-only",
+      "sourceIds": [
+        "page-baidu-code",
+        "page-baidu-stop-new"
+      ],
+      "fieldEvidence": [
+        {
+          "field": "modelName",
+          "currentValue": "minimax-m2.5",
+          "supportedValue": "minimax-m2.5",
+          "sourceId": "page-baidu-code",
+          "assessment": "matches",
+          "explanation": "Coding Plan正文精确Model参数/示例；不能借此宣布TokenPlan套餐参数相同。"
+        },
+        {
+          "field": "access.newPurchase",
+          "currentValue": null,
+          "supportedValue": {
+            "available": false,
+            "effectiveAt": "2026-07-13T10:00:00+08:00",
+            "product": "Coding Plan"
+          },
+          "sourceId": "page-baidu-stop-new",
+          "assessment": "not-comparable",
+          "explanation": "停售公告只停止新购；既有订阅处置需读迁移与权益，不直接当API模型停服。"
+        }
+      ],
+      "remainingFields": [
+        "capabilities"
+      ],
+      "nextAction": "按精确型号和本接入面继续核对；候选证据不自动应用。",
+      "notes": []
+    },
+    {
+      "recordKey": "compute/coding-plans/baidu-coding.json#minimax-m2.7",
+      "modelId": "minimax-m2.7",
+      "config": "compute/coding-plans/baidu-coding.json",
+      "sourceDoc": "docs/model-sources/providers/baidu/models/minimax-m2.7.md",
+      "outcome": "official-access-only",
+      "sourceIds": [
+        "page-baidu-stop-new"
+      ],
+      "fieldEvidence": [
+        {
+          "field": "access.newPurchase",
+          "currentValue": null,
+          "supportedValue": {
+            "available": false,
+            "effectiveAt": "2026-07-13T10:00:00+08:00",
+            "product": "Coding Plan"
+          },
+          "sourceId": "page-baidu-stop-new",
+          "assessment": "not-comparable",
+          "explanation": "停售公告只停止新购；既有订阅处置需读迁移与权益，不直接当API模型停服。"
+        }
+      ],
+      "remainingFields": [
+        "modelName",
+        "capabilities"
+      ],
+      "nextAction": "按精确型号和本接入面继续核对；候选证据不自动应用。",
+      "notes": [
+        "official-access-only只说明找到官方接入/产品入口，不计本条精确模型身份或容量已核。"
+      ]
+    },
+    {
+      "recordKey": "compute/coding-plans/baidu-coding.json#qianfan-code-latest",
+      "modelId": "qianfan-code-latest",
+      "config": "compute/coding-plans/baidu-coding.json",
+      "sourceDoc": "docs/model-sources/providers/baidu/models/qianfan-code-latest.md",
+      "outcome": "official-identity-only",
+      "sourceIds": [
+        "page-baidu-code",
+        "page-baidu-stop-new"
+      ],
+      "fieldEvidence": [
+        {
+          "field": "modelName",
+          "currentValue": "qianfan-code-latest",
+          "supportedValue": "qianfan-code-latest",
+          "sourceId": "page-baidu-code",
+          "assessment": "matches",
+          "explanation": "Coding Plan正文精确Model参数/示例；不能借此宣布TokenPlan套餐参数相同。"
+        },
+        {
+          "field": "access.newPurchase",
+          "currentValue": null,
+          "supportedValue": {
+            "available": false,
+            "effectiveAt": "2026-07-13T10:00:00+08:00",
+            "product": "Coding Plan"
+          },
+          "sourceId": "page-baidu-stop-new",
+          "assessment": "not-comparable",
+          "explanation": "停售公告只停止新购；既有订阅处置需读迁移与权益，不直接当API模型停服。"
+        }
+      ],
+      "remainingFields": [
+        "capabilities"
+      ],
+      "nextAction": "按精确型号和本接入面继续核对；候选证据不自动应用。",
+      "notes": [
+        "新TokenPlan也列此精确ID，但与本条旧CodingPlan不同合同，不用其目录替代旧套餐证明。"
+      ]
+    }
+  ],
+  "coverage": {
+    "records": 20,
+    "outcomes": {
+      "official-identity-only": 8,
+      "official-fields-found": 10,
+      "official-access-only": 2
+    },
+    "unchangedConfig": true,
+    "accountCallsPerformed": false
+  }
+}
