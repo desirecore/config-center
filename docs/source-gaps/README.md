@@ -44,6 +44,8 @@
 | [xunfei](providers/xunfei.md) | 0 | 0 | 2 | 0 | 2 | 0 |
 | [zhipu](providers/zhipu.md) | 0 | 0 | 3 | 18 | 10 | 0 |
 
+最新实际重检候选与统一复核说明见 [2026-10-04 来源重检](../source-rechecks/2026-10-04/README.md)。本目录计数仍依据原已登记字段证明，候选未自动提高原核验状态。
+
 另外单列：[型号/身份专属证据缺口](identities.md)、[非模型 API 证据不足](api-contracts.md)、[本仓策略历史依据缺失](policy-origins.md)。供应商记录详见上述细分文件，不在总目录堆全部模型。
 
 更新来源登记后运行 `npm run sources:gaps` 重新生成本目录及供应商清单；`npm run sources:gaps:check` 检查是否过期。生成器不会增加已核字段、改来源状态或写入主数据。

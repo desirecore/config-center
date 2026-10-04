@@ -1,0 +1,1032 @@
+{
+  "supplier": "moonshot",
+  "checkedAt": "2026-10-04",
+  "sources": [
+    {
+      "id": "kimi-k3",
+      "url": "https://platform.kimi.com/docs/guide/kimi-k3-quickstart.md",
+      "finalUrl": "https://platform.kimi.com/docs/guide/kimi-k3-quickstart.md",
+      "publisher": "moonshot",
+      "kind": "official-docs",
+      "scope": "只适用于页面明确的原厂/地域/接入，套餐和聚合合同独立",
+      "contentSha256": "58cefbeb0d2707c8297c762aa64e3f36879d4074de2dba32006920dcb3fa944d",
+      "retrieval": "readable",
+      "summary": "实际读取13211字符，可见正文11152字符；需逐精确ID定位，HTTP成功不代表字段已证。",
+      "digestKind": "sha256-utf8-decoded-response-body",
+      "retrievalMethod": "urllib.request HTTPS response read; bytes decoded as UTF-8 with replacement, SHA-256 over decoded text re-encoded as UTF-8 before visible-text extraction; full HTML/Markdown/JSON body, not a raw-byte digest or vendor signature"
+    },
+    {
+      "id": "kimi-pricing",
+      "url": "https://platform.kimi.com/docs/pricing/chat.md",
+      "finalUrl": "https://platform.kimi.com/docs/pricing/chat.md",
+      "publisher": "moonshot",
+      "kind": "official-docs",
+      "scope": "只适用于页面明确的原厂/地域/接入，套餐和聚合合同独立",
+      "contentSha256": "fe0dad2bcf7ac9c6de011eb6d18f8e33b01b67e1aef7a9154664acc1b7225262",
+      "retrieval": "readable",
+      "summary": "实际读取2797字符，可见正文2617字符；需逐精确ID定位，HTTP成功不代表字段已证。",
+      "digestKind": "sha256-utf8-decoded-response-body",
+      "retrievalMethod": "urllib.request HTTPS response read; bytes decoded as UTF-8 with replacement, SHA-256 over decoded text re-encoded as UTF-8 before visible-text extraction; full HTML/Markdown/JSON body, not a raw-byte digest or vendor signature"
+    },
+    {
+      "id": "kimi-k26",
+      "url": "https://platform.kimi.com/docs/guide/kimi-k2-6-quickstart.md",
+      "finalUrl": "https://platform.kimi.com/docs/guide/kimi-k2-6-quickstart.md",
+      "publisher": "moonshot",
+      "kind": "official-docs",
+      "scope": "只适用于页面明确的原厂/地域/接入，套餐和聚合合同独立",
+      "contentSha256": "5722f9999083ebac1347b1ccca13141f88ed32ae021361cce5084416cc8472b0",
+      "retrieval": "readable",
+      "summary": "实际读取13018字符，可见正文11014字符；需逐精确ID定位，HTTP成功不代表字段已证。",
+      "digestKind": "sha256-utf8-decoded-response-body",
+      "retrievalMethod": "urllib.request HTTPS response read; bytes decoded as UTF-8 with replacement, SHA-256 over decoded text re-encoded as UTF-8 before visible-text extraction; full HTML/Markdown/JSON body, not a raw-byte digest or vendor signature"
+    },
+    {
+      "id": "kimi-k27",
+      "url": "https://platform.kimi.com/docs/guide/kimi-k2-7-code-quickstart.md",
+      "finalUrl": "https://platform.kimi.com/docs/guide/kimi-k2-7-code-quickstart.md",
+      "publisher": "moonshot",
+      "kind": "official-docs",
+      "scope": "只适用于页面明确的原厂/地域/接入，套餐和聚合合同独立",
+      "contentSha256": "60221158b8350411da7a768eb773023ac865d783ebb8d3ebcb403ab202ebd397",
+      "retrieval": "readable",
+      "summary": "实际读取9178字符，可见正文8039字符；需逐精确ID定位，HTTP成功不代表字段已证。",
+      "digestKind": "sha256-utf8-decoded-response-body",
+      "retrievalMethod": "urllib.request HTTPS response read; bytes decoded as UTF-8 with replacement, SHA-256 over decoded text re-encoded as UTF-8 before visible-text extraction; full HTML/Markdown/JSON body, not a raw-byte digest or vendor signature"
+    },
+    {
+      "id": "kimi-llms",
+      "url": "https://platform.kimi.com/docs/llms.txt",
+      "finalUrl": "https://platform.kimi.com/docs/llms.txt",
+      "publisher": "moonshot",
+      "kind": "official-docs",
+      "scope": "只适用于页面明确的原厂/地域/接入，套餐和聚合合同独立",
+      "contentSha256": "5310bda697f6ae6829548add82a40b766631b284a4045b454775d3420238aaab",
+      "retrieval": "readable",
+      "summary": "实际读取24581字符，可见正文24575字符；需逐精确ID定位，HTTP成功不代表字段已证。",
+      "digestKind": "sha256-utf8-decoded-response-body",
+      "retrievalMethod": "urllib.request HTTPS response read; bytes decoded as UTF-8 with replacement, SHA-256 over decoded text re-encoded as UTF-8 before visible-text extraction; full HTML/Markdown/JSON body, not a raw-byte digest or vendor signature"
+    },
+    {
+      "id": "kimi-vision",
+      "url": "https://platform.kimi.com/docs/guide/use-kimi-vision-model.md",
+      "finalUrl": "https://platform.kimi.com/docs/guide/use-kimi-vision-model.md",
+      "publisher": "moonshot",
+      "kind": "official-docs",
+      "scope": "只适用于页面明确的原厂/地域/接入，套餐和聚合合同独立",
+      "contentSha256": "b93b0347e750757aca240bc8e782df099c15509ef3b5ef14a5138f2b341ebf54",
+      "retrieval": "readable",
+      "summary": "实际读取5979字符，可见正文4872字符；需逐精确ID定位，HTTP成功不代表字段已证。",
+      "digestKind": "sha256-utf8-decoded-response-body",
+      "retrievalMethod": "urllib.request HTTPS response read; bytes decoded as UTF-8 with replacement, SHA-256 over decoded text re-encoded as UTF-8 before visible-text extraction; full HTML/Markdown/JSON body, not a raw-byte digest or vendor signature"
+    },
+    {
+      "id": "kimi-coding",
+      "url": "https://www.kimi.com/code/docs/en/benefits.html",
+      "finalUrl": "https://www.kimi.com/code/docs/",
+      "publisher": "moonshot",
+      "kind": "official-docs",
+      "scope": "只适用于页面明确的原厂/地域/接入，套餐和聚合合同独立",
+      "contentSha256": "73aa713b0212923707ac7d7e0acc545249f553179c9c6cd487af2494f49c20d1",
+      "retrieval": "readable",
+      "summary": "实际读取81447字符，可见正文4309字符；需逐精确ID定位，HTTP成功不代表字段已证。",
+      "digestKind": "sha256-utf8-decoded-response-body",
+      "retrievalMethod": "urllib.request HTTPS response read; bytes decoded as UTF-8 with replacement, SHA-256 over decoded text re-encoded as UTF-8 before visible-text extraction; full HTML/Markdown/JSON body, not a raw-byte digest or vendor signature"
+    }
+  ],
+  "findings": [
+    {
+      "recordKey": "compute/coding-plans/moonshot-coding.json#kimi-for-coding",
+      "modelId": "kimi-for-coding",
+      "config": "compute/coding-plans/moonshot-coding.json",
+      "sourceDoc": "docs/model-sources/providers/moonshot/models/kimi-for-coding.md",
+      "outcome": "official-identity-only",
+      "sourceIds": [
+        "kimi-coding"
+      ],
+      "fieldEvidence": [
+        {
+          "field": "modelName",
+          "currentValue": "kimi-for-coding",
+          "supportedValue": "kimi-for-coding",
+          "sourceId": "kimi-coding",
+          "assessment": "matches",
+          "explanation": "本轮正文定位精确标识；只确认该标识在其来源合同出现，不证明其他字段或不同套餐可用性。"
+        }
+      ],
+      "remainingFields": [
+        "contextWindow",
+        "maxOutputTokens",
+        "capabilities",
+        "serviceType",
+        "access.maxInputTokens",
+        "access.protocol-readiness"
+      ],
+      "nextAction": "人工逐字段复核本次候选；只将matches且精确接入适用的字段迁入原来源文档，differs先审单位/阶梯/产品默认；缺项需精确模型页、官方版本卡或授权目录，不猜填。",
+      "notes": [
+        "Kimi Code官网权益页可读，但没有把该滚动接入永久对应某原厂版本/窗口的证据。"
+      ],
+      "originalStatus": "pending",
+      "originalGap": "pending"
+    },
+    {
+      "recordKey": "compute/model-specs/moonshot.json#kimi-k2-thinking",
+      "modelId": "kimi-k2-thinking",
+      "config": "compute/model-specs/moonshot.json",
+      "sourceDoc": "docs/model-sources/providers/moonshot/models/kimi-k2-thinking.md",
+      "outcome": "still-unresolved",
+      "sourceIds": [
+        "kimi-k3",
+        "kimi-pricing",
+        "kimi-k26",
+        "kimi-k27",
+        "kimi-llms",
+        "kimi-vision",
+        "kimi-coding"
+      ],
+      "fieldEvidence": [],
+      "remainingFields": [
+        "id",
+        "spec.contextWindow",
+        "spec.defaultTemperature",
+        "spec.maxOutputTokens",
+        "spec.supportsReasoning",
+        "spec.capabilities",
+        "spec.serviceType"
+      ],
+      "nextAction": "人工逐字段复核本次候选；只将matches且精确接入适用的字段迁入原来源文档，differs先审单位/阶梯/产品默认；缺项需精确模型页、官方版本卡或授权目录，不猜填。",
+      "notes": [
+        "本轮未在可读页面定位完整精确型号合同；缺失不判定停服。"
+      ],
+      "originalStatus": "pending",
+      "originalGap": "pending"
+    },
+    {
+      "recordKey": "compute/providers/moonshot.json#kimi-k2.5",
+      "modelId": "kimi-k2.5",
+      "config": "compute/providers/moonshot.json",
+      "sourceDoc": "docs/model-sources/providers/moonshot/models/kimi-k2.5.md",
+      "outcome": "still-unresolved",
+      "sourceIds": [
+        "kimi-k3",
+        "kimi-pricing",
+        "kimi-k26",
+        "kimi-k27",
+        "kimi-llms",
+        "kimi-vision",
+        "kimi-coding"
+      ],
+      "fieldEvidence": [],
+      "remainingFields": [
+        "contextWindow",
+        "defaultTemperature",
+        "defaultTopP",
+        "extra.cacheHitPrice",
+        "inputPrice",
+        "maxOutputTokens",
+        "modelName",
+        "outputPrice",
+        "capabilities",
+        "serviceType",
+        "access.maxInputTokens",
+        "access.protocol-readiness"
+      ],
+      "nextAction": "人工逐字段复核本次候选；只将matches且精确接入适用的字段迁入原来源文档，differs先审单位/阶梯/产品默认；缺项需精确模型页、官方版本卡或授权目录，不猜填。",
+      "notes": [
+        "本轮未在可读页面定位完整精确型号合同；缺失不判定停服。"
+      ],
+      "originalStatus": "pending",
+      "originalGap": "pending"
+    },
+    {
+      "recordKey": "compute/model-specs/moonshot.json#kimi-k2.5",
+      "modelId": "kimi-k2.5",
+      "config": "compute/model-specs/moonshot.json",
+      "sourceDoc": "docs/model-sources/providers/moonshot/models/kimi-k2.5.md",
+      "outcome": "still-unresolved",
+      "sourceIds": [
+        "kimi-k3",
+        "kimi-pricing",
+        "kimi-k26",
+        "kimi-k27",
+        "kimi-llms",
+        "kimi-vision",
+        "kimi-coding"
+      ],
+      "fieldEvidence": [],
+      "remainingFields": [
+        "id",
+        "spec.contextWindow",
+        "spec.defaultTemperature",
+        "spec.maxOutputTokens",
+        "spec.supportsReasoning",
+        "spec.capabilities",
+        "spec.serviceType"
+      ],
+      "nextAction": "人工逐字段复核本次候选；只将matches且精确接入适用的字段迁入原来源文档，differs先审单位/阶梯/产品默认；缺项需精确模型页、官方版本卡或授权目录，不猜填。",
+      "notes": [
+        "本轮未在可读页面定位完整精确型号合同；缺失不判定停服。"
+      ],
+      "originalStatus": "pending",
+      "originalGap": "pending"
+    },
+    {
+      "recordKey": "compute/providers/moonshot.json#kimi-k2.6",
+      "modelId": "kimi-k2.6",
+      "config": "compute/providers/moonshot.json",
+      "sourceDoc": "docs/model-sources/providers/moonshot/models/kimi-k2.6.md",
+      "outcome": "official-fields-found",
+      "sourceIds": [
+        "kimi-pricing",
+        "kimi-k26"
+      ],
+      "fieldEvidence": [
+        {
+          "field": "modelName",
+          "currentValue": "kimi-k2.6",
+          "supportedValue": "kimi-k2.6",
+          "sourceId": "kimi-pricing",
+          "assessment": "matches",
+          "explanation": "本轮正文定位精确标识；只确认该标识在其来源合同出现，不证明其他字段或不同套餐可用性。"
+        },
+        {
+          "field": "contextWindow",
+          "currentValue": 262144,
+          "supportedValue": 262144,
+          "sourceId": "kimi-pricing",
+          "assessment": "matches",
+          "explanation": "当前国内精确型号价签明文窗口；套餐接入须另核。"
+        },
+        {
+          "field": "maxOutputTokens",
+          "currentValue": 32768,
+          "supportedValue": 32768,
+          "sourceId": "kimi-k26",
+          "assessment": "not-comparable",
+          "explanation": "官方只说max_tokens默认32k即32768，本仓字段是最大输出；数字相同也不能当最大上限已核。"
+        },
+        {
+          "field": "inputPrice",
+          "currentValue": 6.5,
+          "supportedValue": 6.5,
+          "sourceId": "kimi-pricing",
+          "assessment": "matches",
+          "explanation": "国内CNY/百万token，缓存命中和TTL写价独立；不复制到Coding订阅。"
+        },
+        {
+          "field": "outputPrice",
+          "currentValue": 27,
+          "supportedValue": 27,
+          "sourceId": "kimi-pricing",
+          "assessment": "matches",
+          "explanation": "国内CNY/百万token，缓存命中和TTL写价独立；不复制到Coding订阅。"
+        },
+        {
+          "field": "extra.cacheHitPrice",
+          "currentValue": 1.1,
+          "supportedValue": 1.1,
+          "sourceId": "kimi-pricing",
+          "assessment": "matches",
+          "explanation": "国内CNY/百万token，缓存命中和TTL写价独立；不复制到Coding订阅。"
+        }
+      ],
+      "remainingFields": [
+        "defaultTopP",
+        "maxOutputTokens",
+        "capabilities",
+        "serviceType",
+        "access.maxInputTokens",
+        "access.protocol-readiness"
+      ],
+      "nextAction": "人工逐字段复核本次候选；只将matches且精确接入适用的字段迁入原来源文档，differs先审单位/阶梯/产品默认；缺项需精确模型页、官方版本卡或授权目录，不猜填。",
+      "notes": [
+        "本轮未在可读页面定位完整精确型号合同；缺失不判定停服。"
+      ],
+      "originalStatus": "partial",
+      "originalGap": "partial"
+    },
+    {
+      "recordKey": "compute/model-specs/moonshot.json#kimi-k2.6",
+      "modelId": "kimi-k2.6",
+      "config": "compute/model-specs/moonshot.json",
+      "sourceDoc": "docs/model-sources/providers/moonshot/models/kimi-k2.6.md",
+      "outcome": "official-fields-found",
+      "sourceIds": [
+        "kimi-pricing",
+        "kimi-k26"
+      ],
+      "fieldEvidence": [
+        {
+          "field": "id",
+          "currentValue": "kimi-k2.6",
+          "supportedValue": "kimi-k2.6",
+          "sourceId": "kimi-pricing",
+          "assessment": "matches",
+          "explanation": "本轮正文定位精确标识；只确认该标识在其来源合同出现，不证明其他字段或不同套餐可用性。"
+        },
+        {
+          "field": "spec.contextWindow",
+          "currentValue": 262144,
+          "supportedValue": 262144,
+          "sourceId": "kimi-pricing",
+          "assessment": "matches",
+          "explanation": "当前国内精确型号价签明文窗口；套餐接入须另核。"
+        },
+        {
+          "field": "spec.maxOutputTokens",
+          "currentValue": 16384,
+          "supportedValue": 32768,
+          "sourceId": "kimi-k26",
+          "assessment": "not-comparable",
+          "explanation": "官方只说max_tokens默认32k即32768，本仓字段是最大输出；数字相同也不能当最大上限已核。"
+        }
+      ],
+      "remainingFields": [
+        "spec.defaultTemperature",
+        "spec.maxOutputTokens",
+        "spec.supportsReasoning",
+        "spec.capabilities",
+        "spec.serviceType"
+      ],
+      "nextAction": "人工逐字段复核本次候选；只将matches且精确接入适用的字段迁入原来源文档，differs先审单位/阶梯/产品默认；缺项需精确模型页、官方版本卡或授权目录，不猜填。",
+      "notes": [
+        "本轮未在可读页面定位完整精确型号合同；缺失不判定停服。"
+      ],
+      "originalStatus": "partial",
+      "originalGap": "partial"
+    },
+    {
+      "recordKey": "compute/providers/moonshot.json#kimi-k2.7-code-highspeed",
+      "modelId": "kimi-k2.7-code-highspeed",
+      "config": "compute/providers/moonshot.json",
+      "sourceDoc": "docs/model-sources/providers/moonshot/models/kimi-k2.7-code-highspeed.md",
+      "outcome": "official-fields-found",
+      "sourceIds": [
+        "kimi-pricing",
+        "kimi-k27"
+      ],
+      "fieldEvidence": [
+        {
+          "field": "modelName",
+          "currentValue": "kimi-k2.7-code-highspeed",
+          "supportedValue": "kimi-k2.7-code-highspeed",
+          "sourceId": "kimi-pricing",
+          "assessment": "matches",
+          "explanation": "本轮正文定位精确标识；只确认该标识在其来源合同出现，不证明其他字段或不同套餐可用性。"
+        },
+        {
+          "field": "contextWindow",
+          "currentValue": 262144,
+          "supportedValue": 262144,
+          "sourceId": "kimi-pricing",
+          "assessment": "matches",
+          "explanation": "当前国内精确型号价签明文窗口；套餐接入须另核。"
+        },
+        {
+          "field": "maxOutputTokens",
+          "currentValue": 32768,
+          "supportedValue": 32768,
+          "sourceId": "kimi-k27",
+          "assessment": "not-comparable",
+          "explanation": "官方只说max_tokens默认32k即32768，本仓字段是最大输出；数字相同也不能当最大上限已核。"
+        },
+        {
+          "field": "inputPrice",
+          "currentValue": 13,
+          "supportedValue": 13,
+          "sourceId": "kimi-pricing",
+          "assessment": "matches",
+          "explanation": "国内CNY/百万token，缓存命中和TTL写价独立；不复制到Coding订阅。"
+        },
+        {
+          "field": "outputPrice",
+          "currentValue": 54,
+          "supportedValue": 54,
+          "sourceId": "kimi-pricing",
+          "assessment": "matches",
+          "explanation": "国内CNY/百万token，缓存命中和TTL写价独立；不复制到Coding订阅。"
+        },
+        {
+          "field": "extra.cacheHitPrice",
+          "currentValue": 2.6,
+          "supportedValue": 2.6,
+          "sourceId": "kimi-pricing",
+          "assessment": "matches",
+          "explanation": "国内CNY/百万token，缓存命中和TTL写价独立；不复制到Coding订阅。"
+        }
+      ],
+      "remainingFields": [
+        "defaultTopP",
+        "maxOutputTokens",
+        "capabilities",
+        "serviceType",
+        "access.maxInputTokens",
+        "access.protocol-readiness"
+      ],
+      "nextAction": "人工逐字段复核本次候选；只将matches且精确接入适用的字段迁入原来源文档，differs先审单位/阶梯/产品默认；缺项需精确模型页、官方版本卡或授权目录，不猜填。",
+      "notes": [
+        "本轮未在可读页面定位完整精确型号合同；缺失不判定停服。"
+      ],
+      "originalStatus": "partial",
+      "originalGap": "partial"
+    },
+    {
+      "recordKey": "compute/providers/moonshot.json#kimi-k2.7-code",
+      "modelId": "kimi-k2.7-code",
+      "config": "compute/providers/moonshot.json",
+      "sourceDoc": "docs/model-sources/providers/moonshot/models/kimi-k2.7-code.md",
+      "outcome": "official-fields-found",
+      "sourceIds": [
+        "kimi-pricing",
+        "kimi-k27"
+      ],
+      "fieldEvidence": [
+        {
+          "field": "modelName",
+          "currentValue": "kimi-k2.7-code",
+          "supportedValue": "kimi-k2.7-code",
+          "sourceId": "kimi-pricing",
+          "assessment": "matches",
+          "explanation": "本轮正文定位精确标识；只确认该标识在其来源合同出现，不证明其他字段或不同套餐可用性。"
+        },
+        {
+          "field": "contextWindow",
+          "currentValue": 262144,
+          "supportedValue": 262144,
+          "sourceId": "kimi-pricing",
+          "assessment": "matches",
+          "explanation": "当前国内精确型号价签明文窗口；套餐接入须另核。"
+        },
+        {
+          "field": "maxOutputTokens",
+          "currentValue": 32768,
+          "supportedValue": 32768,
+          "sourceId": "kimi-k27",
+          "assessment": "not-comparable",
+          "explanation": "官方只说max_tokens默认32k即32768，本仓字段是最大输出；数字相同也不能当最大上限已核。"
+        },
+        {
+          "field": "inputPrice",
+          "currentValue": 6.5,
+          "supportedValue": 6.5,
+          "sourceId": "kimi-pricing",
+          "assessment": "matches",
+          "explanation": "国内CNY/百万token，缓存命中和TTL写价独立；不复制到Coding订阅。"
+        },
+        {
+          "field": "outputPrice",
+          "currentValue": 27,
+          "supportedValue": 27,
+          "sourceId": "kimi-pricing",
+          "assessment": "matches",
+          "explanation": "国内CNY/百万token，缓存命中和TTL写价独立；不复制到Coding订阅。"
+        },
+        {
+          "field": "extra.cacheHitPrice",
+          "currentValue": 1.3,
+          "supportedValue": 1.3,
+          "sourceId": "kimi-pricing",
+          "assessment": "matches",
+          "explanation": "国内CNY/百万token，缓存命中和TTL写价独立；不复制到Coding订阅。"
+        }
+      ],
+      "remainingFields": [
+        "defaultTopP",
+        "maxOutputTokens",
+        "capabilities",
+        "serviceType",
+        "access.maxInputTokens",
+        "access.protocol-readiness"
+      ],
+      "nextAction": "人工逐字段复核本次候选；只将matches且精确接入适用的字段迁入原来源文档，differs先审单位/阶梯/产品默认；缺项需精确模型页、官方版本卡或授权目录，不猜填。",
+      "notes": [
+        "本轮未在可读页面定位完整精确型号合同；缺失不判定停服。"
+      ],
+      "originalStatus": "partial",
+      "originalGap": "partial"
+    },
+    {
+      "recordKey": "compute/model-specs/moonshot.json#kimi-k2.7-code",
+      "modelId": "kimi-k2.7-code",
+      "config": "compute/model-specs/moonshot.json",
+      "sourceDoc": "docs/model-sources/providers/moonshot/models/kimi-k2.7-code.md",
+      "outcome": "official-fields-found",
+      "sourceIds": [
+        "kimi-pricing",
+        "kimi-k27"
+      ],
+      "fieldEvidence": [
+        {
+          "field": "id",
+          "currentValue": "kimi-k2.7-code",
+          "supportedValue": "kimi-k2.7-code",
+          "sourceId": "kimi-pricing",
+          "assessment": "matches",
+          "explanation": "本轮正文定位精确标识；只确认该标识在其来源合同出现，不证明其他字段或不同套餐可用性。"
+        },
+        {
+          "field": "spec.contextWindow",
+          "currentValue": 262144,
+          "supportedValue": 262144,
+          "sourceId": "kimi-pricing",
+          "assessment": "matches",
+          "explanation": "当前国内精确型号价签明文窗口；套餐接入须另核。"
+        },
+        {
+          "field": "spec.maxOutputTokens",
+          "currentValue": 16384,
+          "supportedValue": 32768,
+          "sourceId": "kimi-k27",
+          "assessment": "not-comparable",
+          "explanation": "官方只说max_tokens默认32k即32768，本仓字段是最大输出；数字相同也不能当最大上限已核。"
+        }
+      ],
+      "remainingFields": [
+        "spec.defaultTemperature",
+        "spec.maxOutputTokens",
+        "spec.supportsReasoning",
+        "spec.capabilities",
+        "spec.serviceType"
+      ],
+      "nextAction": "人工逐字段复核本次候选；只将matches且精确接入适用的字段迁入原来源文档，differs先审单位/阶梯/产品默认；缺项需精确模型页、官方版本卡或授权目录，不猜填。",
+      "notes": [
+        "本轮未在可读页面定位完整精确型号合同；缺失不判定停服。"
+      ],
+      "originalStatus": "partial",
+      "originalGap": "partial"
+    },
+    {
+      "recordKey": "compute/model-specs/moonshot.json#kimi-k2",
+      "modelId": "kimi-k2",
+      "config": "compute/model-specs/moonshot.json",
+      "sourceDoc": "docs/model-sources/providers/moonshot/models/kimi-k2.md",
+      "outcome": "still-unresolved",
+      "sourceIds": [
+        "kimi-k3",
+        "kimi-pricing",
+        "kimi-k26",
+        "kimi-k27",
+        "kimi-llms",
+        "kimi-vision",
+        "kimi-coding"
+      ],
+      "fieldEvidence": [],
+      "remainingFields": [
+        "id",
+        "spec.contextWindow",
+        "spec.defaultTemperature",
+        "spec.maxOutputTokens",
+        "spec.supportsReasoning",
+        "spec.capabilities",
+        "spec.serviceType"
+      ],
+      "nextAction": "人工逐字段复核本次候选；只将matches且精确接入适用的字段迁入原来源文档，differs先审单位/阶梯/产品默认；缺项需精确模型页、官方版本卡或授权目录，不猜填。",
+      "notes": [
+        "本轮未在可读页面定位完整精确型号合同；缺失不判定停服。"
+      ],
+      "originalStatus": "pending",
+      "originalGap": "pending"
+    },
+    {
+      "recordKey": "compute/providers/moonshot.json#kimi-k3",
+      "modelId": "kimi-k3",
+      "config": "compute/providers/moonshot.json",
+      "sourceDoc": "docs/model-sources/providers/moonshot/models/kimi-k3.md",
+      "outcome": "official-fields-found",
+      "sourceIds": [
+        "kimi-k3",
+        "kimi-pricing"
+      ],
+      "fieldEvidence": [
+        {
+          "field": "modelName",
+          "currentValue": "kimi-k3",
+          "supportedValue": "kimi-k3",
+          "sourceId": "kimi-k3",
+          "assessment": "matches",
+          "explanation": "本轮正文定位精确标识；只确认该标识在其来源合同出现，不证明其他字段或不同套餐可用性。"
+        },
+        {
+          "field": "contextWindow",
+          "currentValue": 1048576,
+          "supportedValue": 1048576,
+          "sourceId": "kimi-pricing",
+          "assessment": "matches",
+          "explanation": "当前国内精确型号价签明文窗口；套餐接入须另核。"
+        },
+        {
+          "field": "maxOutputTokens",
+          "currentValue": 1048576,
+          "supportedValue": 1048576,
+          "sourceId": "kimi-k3",
+          "assessment": "matches",
+          "explanation": "官方max_completion_tokens最大1048576；默认131072另记，不混入最大字段。"
+        },
+        {
+          "field": "inputPrice",
+          "currentValue": 20,
+          "supportedValue": 20,
+          "sourceId": "kimi-pricing",
+          "assessment": "matches",
+          "explanation": "国内CNY/百万token，缓存命中和TTL写价独立；不复制到Coding订阅。"
+        },
+        {
+          "field": "outputPrice",
+          "currentValue": 100,
+          "supportedValue": 100,
+          "sourceId": "kimi-pricing",
+          "assessment": "matches",
+          "explanation": "国内CNY/百万token，缓存命中和TTL写价独立；不复制到Coding订阅。"
+        },
+        {
+          "field": "extra.cacheHitPrice",
+          "currentValue": 2,
+          "supportedValue": 2,
+          "sourceId": "kimi-pricing",
+          "assessment": "matches",
+          "explanation": "国内CNY/百万token，缓存命中和TTL写价独立；不复制到Coding订阅。"
+        }
+      ],
+      "remainingFields": [
+        "capabilities",
+        "serviceType",
+        "access.maxInputTokens",
+        "access.protocol-readiness"
+      ],
+      "nextAction": "人工逐字段复核本次候选；只将matches且精确接入适用的字段迁入原来源文档，differs先审单位/阶梯/产品默认；缺项需精确模型页、官方版本卡或授权目录，不猜填。",
+      "notes": [
+        "本轮未在可读页面定位完整精确型号合同；缺失不判定停服。"
+      ],
+      "originalStatus": "partial",
+      "originalGap": "partial"
+    },
+    {
+      "recordKey": "compute/model-specs/moonshot.json#kimi-k3",
+      "modelId": "kimi-k3",
+      "config": "compute/model-specs/moonshot.json",
+      "sourceDoc": "docs/model-sources/providers/moonshot/models/kimi-k3.md",
+      "outcome": "official-fields-found",
+      "sourceIds": [
+        "kimi-k3",
+        "kimi-pricing"
+      ],
+      "fieldEvidence": [
+        {
+          "field": "id",
+          "currentValue": "kimi-k3",
+          "supportedValue": "kimi-k3",
+          "sourceId": "kimi-k3",
+          "assessment": "matches",
+          "explanation": "本轮正文定位精确标识；只确认该标识在其来源合同出现，不证明其他字段或不同套餐可用性。"
+        },
+        {
+          "field": "spec.contextWindow",
+          "currentValue": 1048576,
+          "supportedValue": 1048576,
+          "sourceId": "kimi-pricing",
+          "assessment": "matches",
+          "explanation": "当前国内精确型号价签明文窗口；套餐接入须另核。"
+        },
+        {
+          "field": "spec.maxOutputTokens",
+          "currentValue": 1048576,
+          "supportedValue": 1048576,
+          "sourceId": "kimi-k3",
+          "assessment": "matches",
+          "explanation": "官方max_completion_tokens最大1048576；默认131072另记，不混入最大字段。"
+        }
+      ],
+      "remainingFields": [
+        "spec.supportsReasoning",
+        "spec.capabilities",
+        "spec.serviceType"
+      ],
+      "nextAction": "人工逐字段复核本次候选；只将matches且精确接入适用的字段迁入原来源文档，differs先审单位/阶梯/产品默认；缺项需精确模型页、官方版本卡或授权目录，不猜填。",
+      "notes": [
+        "本轮未在可读页面定位完整精确型号合同；缺失不判定停服。"
+      ],
+      "originalStatus": "partial",
+      "originalGap": "partial"
+    },
+    {
+      "recordKey": "compute/providers/moonshot.json#moonshot-v1-128k-vision-preview",
+      "modelId": "moonshot-v1-128k-vision-preview",
+      "config": "compute/providers/moonshot.json",
+      "sourceDoc": "docs/model-sources/providers/moonshot/models/moonshot-v1-128k-vision-preview.md",
+      "outcome": "still-unresolved",
+      "sourceIds": [
+        "kimi-k3",
+        "kimi-pricing",
+        "kimi-k26",
+        "kimi-k27",
+        "kimi-llms",
+        "kimi-vision",
+        "kimi-coding"
+      ],
+      "fieldEvidence": [],
+      "remainingFields": [
+        "contextWindow",
+        "defaultTemperature",
+        "defaultTopP",
+        "inputPrice",
+        "maxOutputTokens",
+        "modelName",
+        "outputPrice",
+        "capabilities",
+        "serviceType",
+        "access.maxInputTokens",
+        "access.protocol-readiness"
+      ],
+      "nextAction": "人工逐字段复核本次候选；只将matches且精确接入适用的字段迁入原来源文档，differs先审单位/阶梯/产品默认；缺项需精确模型页、官方版本卡或授权目录，不猜填。",
+      "notes": [
+        "当前vision/模型定价正文未定位该精确旧版本合同；8K/32K/128K及vision变体不互推，不从名字填窗口。"
+      ],
+      "originalStatus": "pending",
+      "originalGap": "pending"
+    },
+    {
+      "recordKey": "compute/providers/moonshot.json#moonshot-v1-128k",
+      "modelId": "moonshot-v1-128k",
+      "config": "compute/providers/moonshot.json",
+      "sourceDoc": "docs/model-sources/providers/moonshot/models/moonshot-v1-128k.md",
+      "outcome": "still-unresolved",
+      "sourceIds": [
+        "kimi-k3",
+        "kimi-pricing",
+        "kimi-k26",
+        "kimi-k27",
+        "kimi-llms",
+        "kimi-vision",
+        "kimi-coding"
+      ],
+      "fieldEvidence": [],
+      "remainingFields": [
+        "contextWindow",
+        "defaultTemperature",
+        "defaultTopP",
+        "inputPrice",
+        "maxOutputTokens",
+        "modelName",
+        "outputPrice",
+        "capabilities",
+        "serviceType",
+        "access.maxInputTokens",
+        "access.protocol-readiness"
+      ],
+      "nextAction": "人工逐字段复核本次候选；只将matches且精确接入适用的字段迁入原来源文档，differs先审单位/阶梯/产品默认；缺项需精确模型页、官方版本卡或授权目录，不猜填。",
+      "notes": [
+        "当前vision/模型定价正文未定位该精确旧版本合同；8K/32K/128K及vision变体不互推，不从名字填窗口。"
+      ],
+      "originalStatus": "pending",
+      "originalGap": "pending"
+    },
+    {
+      "recordKey": "compute/model-specs/moonshot.json#moonshot-v1-128k",
+      "modelId": "moonshot-v1-128k",
+      "config": "compute/model-specs/moonshot.json",
+      "sourceDoc": "docs/model-sources/providers/moonshot/models/moonshot-v1-128k.md",
+      "outcome": "still-unresolved",
+      "sourceIds": [
+        "kimi-k3",
+        "kimi-pricing",
+        "kimi-k26",
+        "kimi-k27",
+        "kimi-llms",
+        "kimi-vision",
+        "kimi-coding"
+      ],
+      "fieldEvidence": [],
+      "remainingFields": [
+        "id",
+        "spec.contextWindow",
+        "spec.defaultTemperature",
+        "spec.maxOutputTokens",
+        "spec.capabilities",
+        "spec.serviceType"
+      ],
+      "nextAction": "人工逐字段复核本次候选；只将matches且精确接入适用的字段迁入原来源文档，differs先审单位/阶梯/产品默认；缺项需精确模型页、官方版本卡或授权目录，不猜填。",
+      "notes": [
+        "当前vision/模型定价正文未定位该精确旧版本合同；8K/32K/128K及vision变体不互推，不从名字填窗口。"
+      ],
+      "originalStatus": "pending",
+      "originalGap": "pending"
+    },
+    {
+      "recordKey": "compute/providers/moonshot.json#moonshot-v1-32k-vision-preview",
+      "modelId": "moonshot-v1-32k-vision-preview",
+      "config": "compute/providers/moonshot.json",
+      "sourceDoc": "docs/model-sources/providers/moonshot/models/moonshot-v1-32k-vision-preview.md",
+      "outcome": "still-unresolved",
+      "sourceIds": [
+        "kimi-k3",
+        "kimi-pricing",
+        "kimi-k26",
+        "kimi-k27",
+        "kimi-llms",
+        "kimi-vision",
+        "kimi-coding"
+      ],
+      "fieldEvidence": [],
+      "remainingFields": [
+        "contextWindow",
+        "defaultTemperature",
+        "defaultTopP",
+        "inputPrice",
+        "maxOutputTokens",
+        "modelName",
+        "outputPrice",
+        "capabilities",
+        "serviceType",
+        "access.maxInputTokens",
+        "access.protocol-readiness"
+      ],
+      "nextAction": "人工逐字段复核本次候选；只将matches且精确接入适用的字段迁入原来源文档，differs先审单位/阶梯/产品默认；缺项需精确模型页、官方版本卡或授权目录，不猜填。",
+      "notes": [
+        "当前vision/模型定价正文未定位该精确旧版本合同；8K/32K/128K及vision变体不互推，不从名字填窗口。"
+      ],
+      "originalStatus": "pending",
+      "originalGap": "pending"
+    },
+    {
+      "recordKey": "compute/providers/moonshot.json#moonshot-v1-32k",
+      "modelId": "moonshot-v1-32k",
+      "config": "compute/providers/moonshot.json",
+      "sourceDoc": "docs/model-sources/providers/moonshot/models/moonshot-v1-32k.md",
+      "outcome": "still-unresolved",
+      "sourceIds": [
+        "kimi-k3",
+        "kimi-pricing",
+        "kimi-k26",
+        "kimi-k27",
+        "kimi-llms",
+        "kimi-vision",
+        "kimi-coding"
+      ],
+      "fieldEvidence": [],
+      "remainingFields": [
+        "contextWindow",
+        "defaultTemperature",
+        "defaultTopP",
+        "inputPrice",
+        "maxOutputTokens",
+        "modelName",
+        "outputPrice",
+        "capabilities",
+        "serviceType",
+        "access.maxInputTokens",
+        "access.protocol-readiness"
+      ],
+      "nextAction": "人工逐字段复核本次候选；只将matches且精确接入适用的字段迁入原来源文档，differs先审单位/阶梯/产品默认；缺项需精确模型页、官方版本卡或授权目录，不猜填。",
+      "notes": [
+        "当前vision/模型定价正文未定位该精确旧版本合同；8K/32K/128K及vision变体不互推，不从名字填窗口。"
+      ],
+      "originalStatus": "pending",
+      "originalGap": "pending"
+    },
+    {
+      "recordKey": "compute/model-specs/moonshot.json#moonshot-v1-32k",
+      "modelId": "moonshot-v1-32k",
+      "config": "compute/model-specs/moonshot.json",
+      "sourceDoc": "docs/model-sources/providers/moonshot/models/moonshot-v1-32k.md",
+      "outcome": "still-unresolved",
+      "sourceIds": [
+        "kimi-k3",
+        "kimi-pricing",
+        "kimi-k26",
+        "kimi-k27",
+        "kimi-llms",
+        "kimi-vision",
+        "kimi-coding"
+      ],
+      "fieldEvidence": [],
+      "remainingFields": [
+        "id",
+        "spec.contextWindow",
+        "spec.defaultTemperature",
+        "spec.maxOutputTokens",
+        "spec.capabilities",
+        "spec.serviceType"
+      ],
+      "nextAction": "人工逐字段复核本次候选；只将matches且精确接入适用的字段迁入原来源文档，differs先审单位/阶梯/产品默认；缺项需精确模型页、官方版本卡或授权目录，不猜填。",
+      "notes": [
+        "当前vision/模型定价正文未定位该精确旧版本合同；8K/32K/128K及vision变体不互推，不从名字填窗口。"
+      ],
+      "originalStatus": "pending",
+      "originalGap": "pending"
+    },
+    {
+      "recordKey": "compute/providers/moonshot.json#moonshot-v1-8k-vision-preview",
+      "modelId": "moonshot-v1-8k-vision-preview",
+      "config": "compute/providers/moonshot.json",
+      "sourceDoc": "docs/model-sources/providers/moonshot/models/moonshot-v1-8k-vision-preview.md",
+      "outcome": "still-unresolved",
+      "sourceIds": [
+        "kimi-k3",
+        "kimi-pricing",
+        "kimi-k26",
+        "kimi-k27",
+        "kimi-llms",
+        "kimi-vision",
+        "kimi-coding"
+      ],
+      "fieldEvidence": [],
+      "remainingFields": [
+        "contextWindow",
+        "defaultTemperature",
+        "defaultTopP",
+        "inputPrice",
+        "maxOutputTokens",
+        "modelName",
+        "outputPrice",
+        "capabilities",
+        "serviceType",
+        "access.maxInputTokens",
+        "access.protocol-readiness"
+      ],
+      "nextAction": "人工逐字段复核本次候选；只将matches且精确接入适用的字段迁入原来源文档，differs先审单位/阶梯/产品默认；缺项需精确模型页、官方版本卡或授权目录，不猜填。",
+      "notes": [
+        "当前vision/模型定价正文未定位该精确旧版本合同；8K/32K/128K及vision变体不互推，不从名字填窗口。"
+      ],
+      "originalStatus": "pending",
+      "originalGap": "pending"
+    },
+    {
+      "recordKey": "compute/providers/moonshot.json#moonshot-v1-8k",
+      "modelId": "moonshot-v1-8k",
+      "config": "compute/providers/moonshot.json",
+      "sourceDoc": "docs/model-sources/providers/moonshot/models/moonshot-v1-8k.md",
+      "outcome": "still-unresolved",
+      "sourceIds": [
+        "kimi-k3",
+        "kimi-pricing",
+        "kimi-k26",
+        "kimi-k27",
+        "kimi-llms",
+        "kimi-vision",
+        "kimi-coding"
+      ],
+      "fieldEvidence": [],
+      "remainingFields": [
+        "contextWindow",
+        "defaultTemperature",
+        "defaultTopP",
+        "inputPrice",
+        "maxOutputTokens",
+        "modelName",
+        "outputPrice",
+        "capabilities",
+        "serviceType",
+        "access.maxInputTokens",
+        "access.protocol-readiness"
+      ],
+      "nextAction": "人工逐字段复核本次候选；只将matches且精确接入适用的字段迁入原来源文档，differs先审单位/阶梯/产品默认；缺项需精确模型页、官方版本卡或授权目录，不猜填。",
+      "notes": [
+        "当前vision/模型定价正文未定位该精确旧版本合同；8K/32K/128K及vision变体不互推，不从名字填窗口。"
+      ],
+      "originalStatus": "pending",
+      "originalGap": "pending"
+    },
+    {
+      "recordKey": "compute/model-specs/moonshot.json#moonshot-v1-8k",
+      "modelId": "moonshot-v1-8k",
+      "config": "compute/model-specs/moonshot.json",
+      "sourceDoc": "docs/model-sources/providers/moonshot/models/moonshot-v1-8k.md",
+      "outcome": "still-unresolved",
+      "sourceIds": [
+        "kimi-k3",
+        "kimi-pricing",
+        "kimi-k26",
+        "kimi-k27",
+        "kimi-llms",
+        "kimi-vision",
+        "kimi-coding"
+      ],
+      "fieldEvidence": [],
+      "remainingFields": [
+        "id",
+        "spec.contextWindow",
+        "spec.defaultTemperature",
+        "spec.maxOutputTokens",
+        "spec.capabilities",
+        "spec.serviceType"
+      ],
+      "nextAction": "人工逐字段复核本次候选；只将matches且精确接入适用的字段迁入原来源文档，differs先审单位/阶梯/产品默认；缺项需精确模型页、官方版本卡或授权目录，不猜填。",
+      "notes": [
+        "当前vision/模型定价正文未定位该精确旧版本合同；8K/32K/128K及vision变体不互推，不从名字填窗口。"
+      ],
+      "originalStatus": "pending",
+      "originalGap": "pending"
+    }
+  ],
+  "coverage": {
+    "records": 21,
+    "sourceAttempts": 7,
+    "readableSources": 7,
+    "outcomes": {
+      "official-identity-only": 1,
+      "still-unresolved": 13,
+      "official-fields-found": 7
+    }
+  },
+  "boundary": "本轮只保存核查候选，未更改canonical、既有来源核验状态、指纹或manifest；可读正文和ID存在不是全参数/账号验收。"
+}

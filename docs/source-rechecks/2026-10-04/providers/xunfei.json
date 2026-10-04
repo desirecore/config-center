@@ -1,0 +1,244 @@
+{
+  "supplier": "xunfei",
+  "checkedAt": "2026-10-04",
+  "sources": [
+    {
+      "id": "page-xunfei-x2",
+      "url": "https://www.xfyun.cn/doc/spark/X1http.html",
+      "finalUrl": "https://www.xfyun.cn/doc/spark/X1http.html",
+      "publisher": "xunfei",
+      "kind": "official-docs",
+      "retrieval": "readable",
+      "summary": "已读取HTTP正文；模型数字只按该页精确型号和接入记录。",
+      "scope": "X2 /x2 和 X1.5 /v2 HTTP合同，正文分别注明max_tokens",
+      "contentSha256": "61239014682855b6ef967a816a6d9101fb717981d9b17add9cf19285737dcfb0",
+      "retrievalMethod": "http-body-htmlparser",
+      "contentDigestKind": "htmlparser-visible-text-not-raw-http-bytes"
+    },
+    {
+      "id": "page-xunfei-ultra",
+      "url": "https://www.xfyun.cn/doc/spark/HTTP%E8%B0%83%E7%94%A8%E6%96%87%E6%A1%A3.html",
+      "finalUrl": "https://www.xfyun.cn/doc/spark/HTTP%E8%B0%83%E7%94%A8%E6%96%87%E6%A1%A3.html",
+      "publisher": "xunfei",
+      "kind": "official-docs",
+      "retrieval": "readable",
+      "summary": "已读取HTTP正文；模型数字只按该页精确型号和接入记录。",
+      "scope": "Ultra /v1非思考HTTP合同，不适用于X2。",
+      "contentSha256": "75a6d320eefa7f835cf91d1eb663679d531a513010c0d8062b1c8d01c1791a7e",
+      "retrievalMethod": "http-body-htmlparser",
+      "contentDigestKind": "htmlparser-visible-text-not-raw-http-bytes"
+    }
+  ],
+  "findings": [
+    {
+      "recordKey": "compute/providers/xunfei.json#4.0Ultra",
+      "modelId": "4.0Ultra",
+      "config": "compute/providers/xunfei.json",
+      "sourceDoc": "docs/model-sources/providers/xunfei/models/4.0ultra.md",
+      "outcome": "official-identity-only",
+      "sourceIds": [
+        "page-xunfei-ultra"
+      ],
+      "fieldEvidence": [
+        {
+          "field": "modelName",
+          "currentValue": "4.0Ultra",
+          "supportedValue": "4.0Ultra",
+          "sourceId": "page-xunfei-ultra",
+          "assessment": "matches",
+          "explanation": "model枚举精确大小写且明确对应Ultra。"
+        },
+        {
+          "field": "maxOutputTokens",
+          "currentValue": 32768,
+          "supportedValue": "32K",
+          "sourceId": "page-xunfei-ultra",
+          "assessment": "not-comparable",
+          "explanation": "Ultra输出官网原文K；不将请求max_tokens默认值冒充硬最大。"
+        },
+        {
+          "field": "maxInputTokens",
+          "currentValue": null,
+          "supportedValue": "32K",
+          "sourceId": "page-xunfei-ultra",
+          "assessment": "not-comparable",
+          "explanation": "输入独立于输出，不证明总窗口32K。"
+        }
+      ],
+      "remainingFields": [
+        "contextWindow",
+        "defaultTemperature",
+        "defaultTopP",
+        "maxOutputTokens",
+        "capabilities",
+        "extra.pricingNote"
+      ],
+      "nextAction": "按精确型号和本接入面继续核对；候选证据不自动应用。",
+      "notes": [
+        "采样默认不是用户选用温度；API价格未在这两页取得，保持待核。"
+      ]
+    },
+    {
+      "recordKey": "compute/model-specs/xunfei.json#4.0Ultra",
+      "modelId": "4.0Ultra",
+      "config": "compute/model-specs/xunfei.json",
+      "sourceDoc": "docs/model-sources/providers/xunfei/models/4.0ultra.md",
+      "outcome": "official-identity-only",
+      "sourceIds": [
+        "page-xunfei-ultra"
+      ],
+      "fieldEvidence": [
+        {
+          "field": "id",
+          "currentValue": "4.0Ultra",
+          "supportedValue": "4.0Ultra",
+          "sourceId": "page-xunfei-ultra",
+          "assessment": "matches",
+          "explanation": "model枚举精确大小写且明确对应Ultra。"
+        },
+        {
+          "field": "spec.maxOutputTokens",
+          "currentValue": 32768,
+          "supportedValue": "32K",
+          "sourceId": "page-xunfei-ultra",
+          "assessment": "not-comparable",
+          "explanation": "Ultra输出官网原文K；不将请求max_tokens默认值冒充硬最大。"
+        },
+        {
+          "field": "spec.maxInputTokens",
+          "currentValue": null,
+          "supportedValue": "32K",
+          "sourceId": "page-xunfei-ultra",
+          "assessment": "not-comparable",
+          "explanation": "输入独立于输出，不证明总窗口32K。"
+        }
+      ],
+      "remainingFields": [
+        "spec.contextWindow",
+        "spec.defaultTemperature",
+        "spec.maxOutputTokens",
+        "spec.capabilities"
+      ],
+      "nextAction": "按精确型号和本接入面继续核对；候选证据不自动应用。",
+      "notes": [
+        "采样默认不是用户选用温度；API价格未在这两页取得，保持待核。"
+      ]
+    },
+    {
+      "recordKey": "compute/providers/xunfei-x2.json#spark-x",
+      "modelId": "spark-x",
+      "config": "compute/providers/xunfei-x2.json",
+      "sourceDoc": "docs/model-sources/providers/xunfei/models/spark-x.md",
+      "outcome": "official-fields-found",
+      "sourceIds": [
+        "page-xunfei-x2"
+      ],
+      "fieldEvidence": [
+        {
+          "field": "modelName",
+          "currentValue": "spark-x",
+          "supportedValue": "spark-x",
+          "sourceId": "page-xunfei-x2",
+          "assessment": "matches",
+          "explanation": "正文X2与X1.5均使用同一spark-x参数；实际型号必须结合baseUrl。"
+        },
+        {
+          "field": "maxOutputTokens",
+          "currentValue": 131072,
+          "supportedValue": 131072,
+          "sourceId": "page-xunfei-x2",
+          "assessment": "matches",
+          "explanation": "按对应/x2或/v2的max_tokens明文区间和默认值，不混不同协议。"
+        },
+        {
+          "field": "defaultTemperature",
+          "currentValue": 1.2,
+          "supportedValue": 1.2,
+          "sourceId": "page-xunfei-x2",
+          "assessment": "matches",
+          "explanation": "本条按description和端点限定X2，请求表明文温度默认1.2。"
+        },
+        {
+          "field": "defaultTopP",
+          "currentValue": 0.95,
+          "supportedValue": 0.95,
+          "sourceId": "page-xunfei-x2",
+          "assessment": "not-comparable",
+          "explanation": "官方默认TopP；仓库用户建议值与原厂默认需分开标注。"
+        }
+      ],
+      "remainingFields": [
+        "contextWindow",
+        "capabilities",
+        "defaultTopP",
+        "extra.pricingNote"
+      ],
+      "nextAction": "按精确型号和本接入面继续核对；候选证据不自动应用。",
+      "notes": [
+        "采样默认不是用户选用温度；API价格未在这两页取得，保持待核。"
+      ]
+    },
+    {
+      "recordKey": "compute/model-specs/xunfei.json#spark-x",
+      "modelId": "spark-x",
+      "config": "compute/model-specs/xunfei.json",
+      "sourceDoc": "docs/model-sources/providers/xunfei/models/spark-x.md",
+      "outcome": "official-fields-found",
+      "sourceIds": [
+        "page-xunfei-x2"
+      ],
+      "fieldEvidence": [
+        {
+          "field": "id",
+          "currentValue": "spark-x",
+          "supportedValue": "spark-x",
+          "sourceId": "page-xunfei-x2",
+          "assessment": "not-comparable",
+          "explanation": "正文X2与X1.5均使用同一spark-x参数；实际型号必须结合baseUrl。"
+        },
+        {
+          "field": "spec.maxOutputTokens",
+          "currentValue": 131072,
+          "supportedValue": 131072,
+          "sourceId": "page-xunfei-x2",
+          "assessment": "matches",
+          "explanation": "本条Spec description明确限定X2 /x2，因此采用X2明文max_tokens131072，不误用同名X1.5的65535。"
+        },
+        {
+          "field": "spec.defaultTemperature",
+          "currentValue": 1.2,
+          "supportedValue": 1.2,
+          "sourceId": "page-xunfei-x2",
+          "assessment": "matches",
+          "explanation": "本条按description和端点限定X2，请求表明文温度默认1.2。"
+        },
+        {
+          "field": "spec.defaultTopP",
+          "currentValue": null,
+          "supportedValue": 0.95,
+          "sourceId": "page-xunfei-x2",
+          "assessment": "not-comparable",
+          "explanation": "官方默认TopP；仓库用户建议值与原厂默认需分开标注。"
+        }
+      ],
+      "remainingFields": [
+        "spec.contextWindow",
+        "spec.supportsReasoning",
+        "spec.capabilities"
+      ],
+      "nextAction": "按精确型号和本接入面继续核对；候选证据不自动应用。",
+      "notes": [
+        "采样默认不是用户选用温度；API价格未在这两页取得，保持待核。"
+      ]
+    }
+  ],
+  "coverage": {
+    "records": 4,
+    "outcomes": {
+      "official-identity-only": 2,
+      "official-fields-found": 2
+    },
+    "unchangedConfig": true,
+    "accountCallsPerformed": false
+  }
+}

@@ -1,0 +1,2018 @@
+{
+  "supplier": "google",
+  "checkedAt": "2026-10-04",
+  "sources": [
+    {
+      "id": "google-919b66e84fc3",
+      "url": "https://ai.google.dev/gemini-api/docs/models",
+      "finalUrl": "https://ai.google.dev/gemini-api/docs/models",
+      "publisher": "Google",
+      "kind": "official-docs",
+      "retrieval": "readable",
+      "summary": "正文已读取；仅用于下方逐字段列明的证据，读取成功不代表全规格核实。",
+      "scope": "该官网文档明确列出的模型/API；不扩展到其他接入面。"
+    },
+    {
+      "id": "google-21b68069857f",
+      "url": "https://ai.google.dev/gemini-api/docs/models/gemini-2.5-flash",
+      "finalUrl": "https://ai.google.dev/gemini-api/docs/models/gemini-2.5-flash",
+      "publisher": "Google",
+      "kind": "official-docs",
+      "retrieval": "readable",
+      "summary": "正文已读取；仅用于下方逐字段列明的证据，读取成功不代表全规格核实。",
+      "scope": "该官网文档明确列出的模型/API；不扩展到其他接入面。"
+    },
+    {
+      "id": "google-a9cb7e5e43bf",
+      "url": "https://ai.google.dev/gemini-api/docs/models/gemini-2.5-pro",
+      "finalUrl": "https://ai.google.dev/gemini-api/docs/models/gemini-2.5-pro",
+      "publisher": "Google",
+      "kind": "official-docs",
+      "retrieval": "readable",
+      "summary": "正文已读取；仅用于下方逐字段列明的证据，读取成功不代表全规格核实。",
+      "scope": "该官网文档明确列出的模型/API；不扩展到其他接入面。"
+    },
+    {
+      "id": "google-51d94b2aaea3",
+      "url": "https://ai.google.dev/gemini-api/docs/models/gemini-3-flash-preview",
+      "finalUrl": "https://ai.google.dev/gemini-api/docs/models/gemini-3-flash-preview",
+      "publisher": "Google",
+      "kind": "official-docs",
+      "retrieval": "readable",
+      "summary": "正文已读取；仅用于下方逐字段列明的证据，读取成功不代表全规格核实。",
+      "scope": "该官网文档明确列出的模型/API；不扩展到其他接入面。"
+    },
+    {
+      "id": "google-a84a0adcc86d",
+      "url": "https://ai.google.dev/gemini-api/docs/models/gemini-3.1-flash-lite",
+      "finalUrl": "https://ai.google.dev/gemini-api/docs/models/gemini-3.1-flash-lite",
+      "publisher": "Google",
+      "kind": "official-docs",
+      "retrieval": "readable",
+      "summary": "正文已读取；仅用于下方逐字段列明的证据，读取成功不代表全规格核实。",
+      "scope": "该官网文档明确列出的模型/API；不扩展到其他接入面。"
+    },
+    {
+      "id": "google-07ba3e0f52cc",
+      "url": "https://ai.google.dev/gemini-api/docs/models/gemini-3.1-pro-preview",
+      "finalUrl": "https://ai.google.dev/gemini-api/docs/models/gemini-3.1-pro-preview",
+      "publisher": "Google",
+      "kind": "official-docs",
+      "retrieval": "readable",
+      "summary": "正文已读取；仅用于下方逐字段列明的证据，读取成功不代表全规格核实。",
+      "scope": "该官网文档明确列出的模型/API；不扩展到其他接入面。"
+    },
+    {
+      "id": "google-f7fe39222f11",
+      "url": "https://ai.google.dev/gemini-api/docs/models/gemini-3.5-flash-lite",
+      "finalUrl": "https://ai.google.dev/gemini-api/docs/models/gemini-3.5-flash-lite",
+      "publisher": "Google",
+      "kind": "official-docs",
+      "retrieval": "readable",
+      "summary": "正文已读取；仅用于下方逐字段列明的证据，读取成功不代表全规格核实。",
+      "scope": "该官网文档明确列出的模型/API；不扩展到其他接入面。"
+    },
+    {
+      "id": "google-872d1a79ef5f",
+      "url": "https://ai.google.dev/gemini-api/docs/models/gemini-3.5-flash",
+      "finalUrl": "https://ai.google.dev/gemini-api/docs/models/gemini-3.5-flash",
+      "publisher": "Google",
+      "kind": "official-docs",
+      "retrieval": "readable",
+      "summary": "正文已读取；仅用于下方逐字段列明的证据，读取成功不代表全规格核实。",
+      "scope": "该官网文档明确列出的模型/API；不扩展到其他接入面。"
+    },
+    {
+      "id": "google-7ff10c981762",
+      "url": "https://ai.google.dev/gemini-api/docs/models/gemini-3.7-flash",
+      "finalUrl": "https://ai.google.dev/gemini-api/docs/models/gemini-3.7-flash",
+      "publisher": "Google",
+      "kind": "official-docs",
+      "retrieval": "readable",
+      "summary": "正文已读取；仅用于下方逐字段列明的证据，读取成功不代表全规格核实。",
+      "scope": "该官网文档明确列出的模型/API；不扩展到其他接入面。"
+    },
+    {
+      "id": "google-2efc4e2cd74a",
+      "url": "https://ai.google.dev/gemini-api/docs/models/gemini-3.8-flash-tts",
+      "finalUrl": "https://ai.google.dev/gemini-api/docs/models/gemini-3.8-flash-tts",
+      "publisher": "Google",
+      "kind": "official-docs",
+      "retrieval": "readable",
+      "summary": "正文已读取；仅用于下方逐字段列明的证据，读取成功不代表全规格核实。",
+      "scope": "该官网文档明确列出的模型/API；不扩展到其他接入面。"
+    },
+    {
+      "id": "google-116c1a7f3be0",
+      "url": "https://ai.google.dev/gemini-api/docs/models/gemini-3.8-flash",
+      "finalUrl": "https://ai.google.dev/gemini-api/docs/models/gemini-3.8-flash",
+      "publisher": "Google",
+      "kind": "official-docs",
+      "retrieval": "readable",
+      "summary": "正文已读取；仅用于下方逐字段列明的证据，读取成功不代表全规格核实。",
+      "scope": "该官网文档明确列出的模型/API；不扩展到其他接入面。"
+    },
+    {
+      "id": "google-16dfbb2e47fb",
+      "url": "https://ai.google.dev/gemini-api/docs/embeddings",
+      "finalUrl": "https://ai.google.dev/gemini-api/docs/embeddings",
+      "publisher": "Google",
+      "kind": "official-docs",
+      "retrieval": "readable",
+      "summary": "正文已读取；仅用于下方逐字段列明的证据，读取成功不代表全规格核实。",
+      "scope": "该官网文档明确列出的模型/API；不扩展到其他接入面。"
+    },
+    {
+      "id": "google-b88c4950bbf3",
+      "url": "https://ai.google.dev/gemini-api/docs/pricing",
+      "finalUrl": "https://ai.google.dev/gemini-api/docs/pricing",
+      "publisher": "Google",
+      "kind": "official-docs",
+      "retrieval": "readable",
+      "summary": "正文已读取；仅用于下方逐字段列明的证据，读取成功不代表全规格核实。",
+      "scope": "该官网文档明确列出的模型/API；不扩展到其他接入面。"
+    },
+    {
+      "id": "google-a2e31992cadf",
+      "url": "https://ai.google.dev/gemini-api/docs/models/gemini-3.1-flash-image",
+      "finalUrl": "https://ai.google.dev/gemini-api/docs/models/gemini-3.1-flash-image",
+      "publisher": "Google",
+      "kind": "official-docs",
+      "retrieval": "readable",
+      "summary": "正文已读取；仅用于下方逐字段列明的证据，读取成功不代表全规格核实。",
+      "scope": "该官网文档明确列出的模型/API；不扩展到其他接入面。"
+    },
+    {
+      "id": "google-32769317e2f4",
+      "url": "https://ai.google.dev/gemini-api/docs/models/gemini-3.1-flash-lite-image",
+      "finalUrl": "https://ai.google.dev/gemini-api/docs/models/gemini-3.1-flash-lite-image",
+      "publisher": "Google",
+      "kind": "official-docs",
+      "retrieval": "readable",
+      "summary": "正文已读取；仅用于下方逐字段列明的证据，读取成功不代表全规格核实。",
+      "scope": "该官网文档明确列出的模型/API；不扩展到其他接入面。"
+    },
+    {
+      "id": "google-feed02f83171",
+      "url": "https://ai.google.dev/gemini-api/docs/models/gemini-3.1-flash-lite-preview",
+      "finalUrl": "https://ai.google.dev/gemini-api/docs/models/gemini-3.1-flash-lite-preview",
+      "publisher": "Google",
+      "kind": "official-docs",
+      "retrieval": "readable",
+      "summary": "正文已读取；仅用于下方逐字段列明的证据，读取成功不代表全规格核实。",
+      "scope": "该官网文档明确列出的模型/API；不扩展到其他接入面。"
+    },
+    {
+      "id": "google-f2daed4ae337",
+      "url": "https://ai.google.dev/gemini-api/docs/models/gemini-3.5-transcribe-live",
+      "finalUrl": "https://ai.google.dev/gemini-api/docs/models/gemini-3.5-transcribe-live",
+      "publisher": "Google",
+      "kind": "official-docs",
+      "retrieval": "not-found",
+      "summary": "HTTP Error 404: Not Found",
+      "scope": "该官网文档明确列出的模型/API；不扩展到其他接入面。"
+    },
+    {
+      "id": "google-cb77b83adaed",
+      "url": "https://ai.google.dev/gemini-api/docs/models/gemini-3.5-transcribe",
+      "finalUrl": "https://ai.google.dev/gemini-api/docs/models/gemini-3.5-transcribe",
+      "publisher": "Google",
+      "kind": "official-docs",
+      "retrieval": "readable",
+      "summary": "正文已读取；仅用于下方逐字段列明的证据，读取成功不代表全规格核实。",
+      "scope": "该官网文档明确列出的模型/API；不扩展到其他接入面。"
+    },
+    {
+      "id": "google-ab9e7f75b68b",
+      "url": "https://ai.google.dev/gemini-api/docs/models/gemini-3.8-flash-lite-tts",
+      "finalUrl": "https://ai.google.dev/gemini-api/docs/models/gemini-3.8-flash-lite-tts",
+      "publisher": "Google",
+      "kind": "official-docs",
+      "retrieval": "readable",
+      "summary": "正文已读取；仅用于下方逐字段列明的证据，读取成功不代表全规格核实。",
+      "scope": "该官网文档明确列出的模型/API；不扩展到其他接入面。"
+    },
+    {
+      "id": "google-d3ba80e42da9",
+      "url": "https://ai.google.dev/gemini-api/docs/models/gemini-3.8-live-extended-thinking",
+      "finalUrl": "https://ai.google.dev/gemini-api/docs/models/gemini-3.8-live-extended-thinking",
+      "publisher": "Google",
+      "kind": "official-docs",
+      "retrieval": "readable",
+      "summary": "正文已读取；仅用于下方逐字段列明的证据，读取成功不代表全规格核实。",
+      "scope": "该官网文档明确列出的模型/API；不扩展到其他接入面。"
+    },
+    {
+      "id": "google-04c98c33c883",
+      "url": "https://ai.google.dev/gemini-api/docs/models/gemini-3.8-live",
+      "finalUrl": "https://ai.google.dev/gemini-api/docs/models/gemini-3.8-live",
+      "publisher": "Google",
+      "kind": "official-docs",
+      "retrieval": "readable",
+      "summary": "正文已读取；仅用于下方逐字段列明的证据，读取成功不代表全规格核实。",
+      "scope": "该官网文档明确列出的模型/API；不扩展到其他接入面。"
+    },
+    {
+      "id": "google-064528a35566",
+      "url": "https://ai.google.dev/gemini-api/docs/models/gemini-embedding-2",
+      "finalUrl": "https://ai.google.dev/gemini-api/docs/models/gemini-embedding-2",
+      "publisher": "Google",
+      "kind": "official-docs",
+      "retrieval": "readable",
+      "summary": "正文已读取；仅用于下方逐字段列明的证据，读取成功不代表全规格核实。",
+      "scope": "该官网文档明确列出的模型/API；不扩展到其他接入面。"
+    },
+    {
+      "id": "google-0960c6d9f99c",
+      "url": "https://cloud.google.com/vertex-ai/generative-ai/docs/model-reference/text-embeddings-api",
+      "finalUrl": "https://docs.cloud.google.com/gemini-enterprise-agent-platform/reference/models/text-embeddings-api",
+      "publisher": "Google",
+      "kind": "official-docs",
+      "retrieval": "readable",
+      "summary": "正文已读取；仅用于下方逐字段列明的证据，读取成功不代表全规格核实。",
+      "scope": "该官网文档明确列出的模型/API；不扩展到其他接入面。"
+    }
+  ],
+  "findings": [
+    {
+      "recordKey": "compute/providers/google.json#gemini-2.5-flash",
+      "modelId": "gemini-2.5-flash",
+      "config": "compute/providers/google.json",
+      "sourceDoc": "docs/model-sources/providers/google/models/gemini-2.5-flash.md",
+      "outcome": "official-conflict",
+      "sourceIds": [
+        "google-21b68069857f",
+        "google-919b66e84fc3"
+      ],
+      "fieldEvidence": [
+        {
+          "field": "modelName",
+          "currentValue": "gemini-2.5-flash",
+          "supportedValue": "gemini-2.5-flash",
+          "sourceId": "google-21b68069857f",
+          "assessment": "matches",
+          "explanation": "官网Model code精确匹配。"
+        },
+        {
+          "field": "maxInputTokens",
+          "currentValue": null,
+          "supportedValue": 1048576,
+          "sourceId": "google-21b68069857f",
+          "assessment": "differs",
+          "explanation": "明确最大输入限制；不能等同总contextWindow。"
+        },
+        {
+          "field": "contextWindow",
+          "currentValue": 1048576,
+          "supportedValue": {
+            "maxInputTokens": 1048576,
+            "totalContextWindow": "not-published-here"
+          },
+          "sourceId": "google-21b68069857f",
+          "assessment": "not-comparable",
+          "explanation": "官网此值是Input token limit，本仓contextWindow即使数字相同也未证明总窗口；需拆字段并复核官方上下文定义。"
+        },
+        {
+          "field": "maxOutputTokens",
+          "currentValue": 65536,
+          "supportedValue": 65536,
+          "sourceId": "google-21b68069857f",
+          "assessment": "matches",
+          "explanation": "输出整数限制；TTS标明Gemini API serving limit，不是音频秒数。"
+        },
+        {
+          "field": "supportsReasoning",
+          "currentValue": null,
+          "supportedValue": true,
+          "sourceId": "google-21b68069857f",
+          "assessment": "differs",
+          "explanation": "该型号能力表明确Thinking Supported；live thinking_level支持须另核。"
+        }
+      ],
+      "remainingFields": [
+        "contextWindow",
+        "defaultTemperature",
+        "defaultTopP",
+        "inputPrice",
+        "outputPrice"
+      ],
+      "nextAction": "逐字段审查上表候选；只有同一接入合同且语义/单位一致的证据才用于后续canonical更新。 剩余字段需精确型号页/官方API schema或已授权账号目录核查，不推导默认值。",
+      "notes": []
+    },
+    {
+      "recordKey": "compute/model-specs/google.json#gemini-2.5-flash",
+      "modelId": "gemini-2.5-flash",
+      "config": "compute/model-specs/google.json",
+      "sourceDoc": "docs/model-sources/providers/google/models/gemini-2.5-flash.md",
+      "outcome": "official-conflict",
+      "sourceIds": [
+        "google-21b68069857f",
+        "google-919b66e84fc3"
+      ],
+      "fieldEvidence": [
+        {
+          "field": "id",
+          "currentValue": "gemini-2.5-flash",
+          "supportedValue": "gemini-2.5-flash",
+          "sourceId": "google-21b68069857f",
+          "assessment": "matches",
+          "explanation": "官网Model code精确匹配。"
+        },
+        {
+          "field": "spec.maxInputTokens",
+          "currentValue": null,
+          "supportedValue": 1048576,
+          "sourceId": "google-21b68069857f",
+          "assessment": "differs",
+          "explanation": "明确最大输入限制；不能等同总contextWindow。"
+        },
+        {
+          "field": "spec.contextWindow",
+          "currentValue": 1048576,
+          "supportedValue": {
+            "maxInputTokens": 1048576,
+            "totalContextWindow": "not-published-here"
+          },
+          "sourceId": "google-21b68069857f",
+          "assessment": "not-comparable",
+          "explanation": "官网此值是Input token limit，本仓contextWindow即使数字相同也未证明总窗口；需拆字段并复核官方上下文定义。"
+        },
+        {
+          "field": "spec.maxOutputTokens",
+          "currentValue": 65536,
+          "supportedValue": 65536,
+          "sourceId": "google-21b68069857f",
+          "assessment": "matches",
+          "explanation": "输出整数限制；TTS标明Gemini API serving limit，不是音频秒数。"
+        },
+        {
+          "field": "spec.supportsReasoning",
+          "currentValue": true,
+          "supportedValue": true,
+          "sourceId": "google-21b68069857f",
+          "assessment": "matches",
+          "explanation": "该型号能力表明确Thinking Supported；live thinking_level支持须另核。"
+        }
+      ],
+      "remainingFields": [
+        "spec.contextWindow",
+        "spec.defaultTemperature"
+      ],
+      "nextAction": "逐字段审查上表候选；只有同一接入合同且语义/单位一致的证据才用于后续canonical更新。 剩余字段需精确型号页/官方API schema或已授权账号目录核查，不推导默认值。",
+      "notes": []
+    },
+    {
+      "recordKey": "compute/providers/google.json#gemini-2.5-pro",
+      "modelId": "gemini-2.5-pro",
+      "config": "compute/providers/google.json",
+      "sourceDoc": "docs/model-sources/providers/google/models/gemini-2.5-pro.md",
+      "outcome": "official-conflict",
+      "sourceIds": [
+        "google-a9cb7e5e43bf",
+        "google-919b66e84fc3"
+      ],
+      "fieldEvidence": [
+        {
+          "field": "modelName",
+          "currentValue": "gemini-2.5-pro",
+          "supportedValue": "gemini-2.5-pro",
+          "sourceId": "google-a9cb7e5e43bf",
+          "assessment": "matches",
+          "explanation": "官网Model code精确匹配。"
+        },
+        {
+          "field": "maxInputTokens",
+          "currentValue": null,
+          "supportedValue": 1048576,
+          "sourceId": "google-a9cb7e5e43bf",
+          "assessment": "differs",
+          "explanation": "明确最大输入限制；不能等同总contextWindow。"
+        },
+        {
+          "field": "contextWindow",
+          "currentValue": 1048576,
+          "supportedValue": {
+            "maxInputTokens": 1048576,
+            "totalContextWindow": "not-published-here"
+          },
+          "sourceId": "google-a9cb7e5e43bf",
+          "assessment": "not-comparable",
+          "explanation": "官网此值是Input token limit，本仓contextWindow即使数字相同也未证明总窗口；需拆字段并复核官方上下文定义。"
+        },
+        {
+          "field": "maxOutputTokens",
+          "currentValue": 65536,
+          "supportedValue": 65536,
+          "sourceId": "google-a9cb7e5e43bf",
+          "assessment": "matches",
+          "explanation": "输出整数限制；TTS标明Gemini API serving limit，不是音频秒数。"
+        },
+        {
+          "field": "supportsReasoning",
+          "currentValue": null,
+          "supportedValue": true,
+          "sourceId": "google-a9cb7e5e43bf",
+          "assessment": "differs",
+          "explanation": "该型号能力表明确Thinking Supported；live thinking_level支持须另核。"
+        }
+      ],
+      "remainingFields": [
+        "contextWindow",
+        "defaultTemperature",
+        "defaultTopP",
+        "inputPrice",
+        "outputPrice"
+      ],
+      "nextAction": "逐字段审查上表候选；只有同一接入合同且语义/单位一致的证据才用于后续canonical更新。 剩余字段需精确型号页/官方API schema或已授权账号目录核查，不推导默认值。",
+      "notes": []
+    },
+    {
+      "recordKey": "compute/model-specs/google.json#gemini-2.5-pro",
+      "modelId": "gemini-2.5-pro",
+      "config": "compute/model-specs/google.json",
+      "sourceDoc": "docs/model-sources/providers/google/models/gemini-2.5-pro.md",
+      "outcome": "official-conflict",
+      "sourceIds": [
+        "google-a9cb7e5e43bf",
+        "google-919b66e84fc3"
+      ],
+      "fieldEvidence": [
+        {
+          "field": "id",
+          "currentValue": "gemini-2.5-pro",
+          "supportedValue": "gemini-2.5-pro",
+          "sourceId": "google-a9cb7e5e43bf",
+          "assessment": "matches",
+          "explanation": "官网Model code精确匹配。"
+        },
+        {
+          "field": "spec.maxInputTokens",
+          "currentValue": null,
+          "supportedValue": 1048576,
+          "sourceId": "google-a9cb7e5e43bf",
+          "assessment": "differs",
+          "explanation": "明确最大输入限制；不能等同总contextWindow。"
+        },
+        {
+          "field": "spec.contextWindow",
+          "currentValue": 1048576,
+          "supportedValue": {
+            "maxInputTokens": 1048576,
+            "totalContextWindow": "not-published-here"
+          },
+          "sourceId": "google-a9cb7e5e43bf",
+          "assessment": "not-comparable",
+          "explanation": "官网此值是Input token limit，本仓contextWindow即使数字相同也未证明总窗口；需拆字段并复核官方上下文定义。"
+        },
+        {
+          "field": "spec.maxOutputTokens",
+          "currentValue": 65536,
+          "supportedValue": 65536,
+          "sourceId": "google-a9cb7e5e43bf",
+          "assessment": "matches",
+          "explanation": "输出整数限制；TTS标明Gemini API serving limit，不是音频秒数。"
+        },
+        {
+          "field": "spec.supportsReasoning",
+          "currentValue": true,
+          "supportedValue": true,
+          "sourceId": "google-a9cb7e5e43bf",
+          "assessment": "matches",
+          "explanation": "该型号能力表明确Thinking Supported；live thinking_level支持须另核。"
+        }
+      ],
+      "remainingFields": [
+        "spec.contextWindow",
+        "spec.defaultTemperature"
+      ],
+      "nextAction": "逐字段审查上表候选；只有同一接入合同且语义/单位一致的证据才用于后续canonical更新。 剩余字段需精确型号页/官方API schema或已授权账号目录核查，不推导默认值。",
+      "notes": []
+    },
+    {
+      "recordKey": "compute/providers/google.json#gemini-3-flash-preview",
+      "modelId": "gemini-3-flash-preview",
+      "config": "compute/providers/google.json",
+      "sourceDoc": "docs/model-sources/providers/google/models/gemini-3-flash-preview.md",
+      "outcome": "official-conflict",
+      "sourceIds": [
+        "google-51d94b2aaea3",
+        "google-919b66e84fc3"
+      ],
+      "fieldEvidence": [
+        {
+          "field": "modelName",
+          "currentValue": "gemini-3-flash-preview",
+          "supportedValue": "gemini-3-flash-preview",
+          "sourceId": "google-51d94b2aaea3",
+          "assessment": "matches",
+          "explanation": "官网Model code精确匹配。"
+        },
+        {
+          "field": "maxInputTokens",
+          "currentValue": null,
+          "supportedValue": 1048576,
+          "sourceId": "google-51d94b2aaea3",
+          "assessment": "differs",
+          "explanation": "明确最大输入限制；不能等同总contextWindow。"
+        },
+        {
+          "field": "contextWindow",
+          "currentValue": 1048576,
+          "supportedValue": {
+            "maxInputTokens": 1048576,
+            "totalContextWindow": "not-published-here"
+          },
+          "sourceId": "google-51d94b2aaea3",
+          "assessment": "not-comparable",
+          "explanation": "官网此值是Input token limit，本仓contextWindow即使数字相同也未证明总窗口；需拆字段并复核官方上下文定义。"
+        },
+        {
+          "field": "maxOutputTokens",
+          "currentValue": 65536,
+          "supportedValue": 65536,
+          "sourceId": "google-51d94b2aaea3",
+          "assessment": "matches",
+          "explanation": "输出整数限制；TTS标明Gemini API serving limit，不是音频秒数。"
+        },
+        {
+          "field": "supportsReasoning",
+          "currentValue": null,
+          "supportedValue": true,
+          "sourceId": "google-51d94b2aaea3",
+          "assessment": "differs",
+          "explanation": "该型号能力表明确Thinking Supported；live thinking_level支持须另核。"
+        }
+      ],
+      "remainingFields": [
+        "contextWindow",
+        "defaultTemperature",
+        "defaultTopP",
+        "extra.cachePricing.audioInputCacheRead",
+        "extra.cachePricing.inputCacheRead",
+        "extra.cachePricing.storagePerMillionTokensPerHour",
+        "inputPrice",
+        "outputPrice"
+      ],
+      "nextAction": "逐字段审查上表候选；只有同一接入合同且语义/单位一致的证据才用于后续canonical更新。 剩余字段需精确型号页/官方API schema或已授权账号目录核查，不推导默认值。",
+      "notes": []
+    },
+    {
+      "recordKey": "compute/model-specs/google.json#gemini-3-flash-preview",
+      "modelId": "gemini-3-flash-preview",
+      "config": "compute/model-specs/google.json",
+      "sourceDoc": "docs/model-sources/providers/google/models/gemini-3-flash-preview.md",
+      "outcome": "official-conflict",
+      "sourceIds": [
+        "google-51d94b2aaea3",
+        "google-919b66e84fc3"
+      ],
+      "fieldEvidence": [
+        {
+          "field": "id",
+          "currentValue": "gemini-3-flash-preview",
+          "supportedValue": "gemini-3-flash-preview",
+          "sourceId": "google-51d94b2aaea3",
+          "assessment": "matches",
+          "explanation": "官网Model code精确匹配。"
+        },
+        {
+          "field": "spec.maxInputTokens",
+          "currentValue": null,
+          "supportedValue": 1048576,
+          "sourceId": "google-51d94b2aaea3",
+          "assessment": "differs",
+          "explanation": "明确最大输入限制；不能等同总contextWindow。"
+        },
+        {
+          "field": "spec.contextWindow",
+          "currentValue": 1048576,
+          "supportedValue": {
+            "maxInputTokens": 1048576,
+            "totalContextWindow": "not-published-here"
+          },
+          "sourceId": "google-51d94b2aaea3",
+          "assessment": "not-comparable",
+          "explanation": "官网此值是Input token limit，本仓contextWindow即使数字相同也未证明总窗口；需拆字段并复核官方上下文定义。"
+        },
+        {
+          "field": "spec.maxOutputTokens",
+          "currentValue": 65536,
+          "supportedValue": 65536,
+          "sourceId": "google-51d94b2aaea3",
+          "assessment": "matches",
+          "explanation": "输出整数限制；TTS标明Gemini API serving limit，不是音频秒数。"
+        },
+        {
+          "field": "spec.supportsReasoning",
+          "currentValue": true,
+          "supportedValue": true,
+          "sourceId": "google-51d94b2aaea3",
+          "assessment": "matches",
+          "explanation": "该型号能力表明确Thinking Supported；live thinking_level支持须另核。"
+        }
+      ],
+      "remainingFields": [
+        "spec.contextWindow",
+        "spec.defaultTemperature"
+      ],
+      "nextAction": "逐字段审查上表候选；只有同一接入合同且语义/单位一致的证据才用于后续canonical更新。 剩余字段需精确型号页/官方API schema或已授权账号目录核查，不推导默认值。",
+      "notes": []
+    },
+    {
+      "recordKey": "compute/model-specs/google.json#gemini-3.1-flash-image",
+      "modelId": "gemini-3.1-flash-image",
+      "config": "compute/model-specs/google.json",
+      "sourceDoc": "docs/model-sources/providers/google/models/gemini-3.1-flash-image.md",
+      "outcome": "official-conflict",
+      "sourceIds": [
+        "google-a2e31992cadf",
+        "google-919b66e84fc3"
+      ],
+      "fieldEvidence": [
+        {
+          "field": "id",
+          "currentValue": "gemini-3.1-flash-image",
+          "supportedValue": "gemini-3.1-flash-image",
+          "sourceId": "google-a2e31992cadf",
+          "assessment": "matches",
+          "explanation": "官网Model code精确匹配。"
+        },
+        {
+          "field": "spec.maxInputTokens",
+          "currentValue": null,
+          "supportedValue": 131072,
+          "sourceId": "google-a2e31992cadf",
+          "assessment": "differs",
+          "explanation": "明确最大输入限制；不能等同总contextWindow。"
+        },
+        {
+          "field": "spec.contextWindow",
+          "currentValue": 131072,
+          "supportedValue": {
+            "maxInputTokens": 131072,
+            "totalContextWindow": "not-published-here"
+          },
+          "sourceId": "google-a2e31992cadf",
+          "assessment": "not-comparable",
+          "explanation": "官网此值是Input token limit，本仓contextWindow即使数字相同也未证明总窗口；需拆字段并复核官方上下文定义。"
+        },
+        {
+          "field": "spec.maxOutputTokens",
+          "currentValue": 32768,
+          "supportedValue": 32768,
+          "sourceId": "google-a2e31992cadf",
+          "assessment": "matches",
+          "explanation": "输出整数限制；TTS标明Gemini API serving limit，不是音频秒数。"
+        },
+        {
+          "field": "spec.supportsReasoning",
+          "currentValue": null,
+          "supportedValue": true,
+          "sourceId": "google-a2e31992cadf",
+          "assessment": "differs",
+          "explanation": "该型号能力表明确Thinking Supported；live thinking_level支持须另核。"
+        }
+      ],
+      "remainingFields": [
+        "spec.contextWindow"
+      ],
+      "nextAction": "逐字段审查上表候选；只有同一接入合同且语义/单位一致的证据才用于后续canonical更新。 剩余字段需精确型号页/官方API schema或已授权账号目录核查，不推导默认值。",
+      "notes": []
+    },
+    {
+      "recordKey": "compute/model-specs/google.json#gemini-3.1-flash-lite-image",
+      "modelId": "gemini-3.1-flash-lite-image",
+      "config": "compute/model-specs/google.json",
+      "sourceDoc": "docs/model-sources/providers/google/models/gemini-3.1-flash-lite-image.md",
+      "outcome": "official-conflict",
+      "sourceIds": [
+        "google-32769317e2f4",
+        "google-919b66e84fc3"
+      ],
+      "fieldEvidence": [
+        {
+          "field": "id",
+          "currentValue": "gemini-3.1-flash-lite-image",
+          "supportedValue": "gemini-3.1-flash-lite-image",
+          "sourceId": "google-32769317e2f4",
+          "assessment": "matches",
+          "explanation": "官网Model code精确匹配。"
+        },
+        {
+          "field": "spec.maxInputTokens",
+          "currentValue": null,
+          "supportedValue": 65536,
+          "sourceId": "google-32769317e2f4",
+          "assessment": "differs",
+          "explanation": "明确最大输入限制；不能等同总contextWindow。"
+        },
+        {
+          "field": "spec.contextWindow",
+          "currentValue": 65536,
+          "supportedValue": {
+            "maxInputTokens": 65536,
+            "totalContextWindow": "not-published-here"
+          },
+          "sourceId": "google-32769317e2f4",
+          "assessment": "not-comparable",
+          "explanation": "官网此值是Input token limit，本仓contextWindow即使数字相同也未证明总窗口；需拆字段并复核官方上下文定义。"
+        },
+        {
+          "field": "spec.maxOutputTokens",
+          "currentValue": 4096,
+          "supportedValue": 4096,
+          "sourceId": "google-32769317e2f4",
+          "assessment": "matches",
+          "explanation": "输出整数限制；TTS标明Gemini API serving limit，不是音频秒数。"
+        },
+        {
+          "field": "spec.supportsReasoning",
+          "currentValue": true,
+          "supportedValue": true,
+          "sourceId": "google-32769317e2f4",
+          "assessment": "matches",
+          "explanation": "该型号能力表明确Thinking Supported；live thinking_level支持须另核。"
+        }
+      ],
+      "remainingFields": [
+        "spec.contextWindow"
+      ],
+      "nextAction": "逐字段审查上表候选；只有同一接入合同且语义/单位一致的证据才用于后续canonical更新。 剩余字段需精确型号页/官方API schema或已授权账号目录核查，不推导默认值。",
+      "notes": []
+    },
+    {
+      "recordKey": "compute/model-specs/google.json#gemini-3.1-flash-lite-preview",
+      "modelId": "gemini-3.1-flash-lite-preview",
+      "config": "compute/model-specs/google.json",
+      "sourceDoc": "docs/model-sources/providers/google/models/gemini-3.1-flash-lite-preview.md",
+      "outcome": "official-conflict",
+      "sourceIds": [
+        "google-feed02f83171",
+        "google-919b66e84fc3"
+      ],
+      "fieldEvidence": [
+        {
+          "field": "id",
+          "currentValue": "gemini-3.1-flash-lite-preview",
+          "supportedValue": "gemini-3.1-flash-lite-preview",
+          "sourceId": "google-feed02f83171",
+          "assessment": "matches",
+          "explanation": "官网Model code精确匹配。"
+        },
+        {
+          "field": "spec.maxInputTokens",
+          "currentValue": null,
+          "supportedValue": 1048576,
+          "sourceId": "google-feed02f83171",
+          "assessment": "differs",
+          "explanation": "明确最大输入限制；不能等同总contextWindow。"
+        },
+        {
+          "field": "spec.contextWindow",
+          "currentValue": 1048576,
+          "supportedValue": {
+            "maxInputTokens": 1048576,
+            "totalContextWindow": "not-published-here"
+          },
+          "sourceId": "google-feed02f83171",
+          "assessment": "not-comparable",
+          "explanation": "官网此值是Input token limit，本仓contextWindow即使数字相同也未证明总窗口；需拆字段并复核官方上下文定义。"
+        },
+        {
+          "field": "spec.maxOutputTokens",
+          "currentValue": 65536,
+          "supportedValue": 65536,
+          "sourceId": "google-feed02f83171",
+          "assessment": "matches",
+          "explanation": "输出整数限制；TTS标明Gemini API serving limit，不是音频秒数。"
+        },
+        {
+          "field": "spec.supportsReasoning",
+          "currentValue": null,
+          "supportedValue": true,
+          "sourceId": "google-feed02f83171",
+          "assessment": "differs",
+          "explanation": "该型号能力表明确Thinking Supported；live thinking_level支持须另核。"
+        },
+        {
+          "field": "spec.availability",
+          "currentValue": null,
+          "supportedValue": "shut-down",
+          "sourceId": "google-feed02f83171",
+          "assessment": "differs",
+          "explanation": "官方页面明确shut down；预览与stable不可互代。"
+        }
+      ],
+      "remainingFields": [
+        "spec.contextWindow",
+        "spec.defaultTemperature"
+      ],
+      "nextAction": "逐字段审查上表候选；只有同一接入合同且语义/单位一致的证据才用于后续canonical更新。 剩余字段需精确型号页/官方API schema或已授权账号目录核查，不推导默认值。",
+      "notes": []
+    },
+    {
+      "recordKey": "compute/providers/google.json#gemini-3.1-flash-lite",
+      "modelId": "gemini-3.1-flash-lite",
+      "config": "compute/providers/google.json",
+      "sourceDoc": "docs/model-sources/providers/google/models/gemini-3.1-flash-lite.md",
+      "outcome": "official-conflict",
+      "sourceIds": [
+        "google-a84a0adcc86d",
+        "google-919b66e84fc3"
+      ],
+      "fieldEvidence": [
+        {
+          "field": "modelName",
+          "currentValue": "gemini-3.1-flash-lite",
+          "supportedValue": "gemini-3.1-flash-lite",
+          "sourceId": "google-a84a0adcc86d",
+          "assessment": "matches",
+          "explanation": "官网Model code精确匹配。"
+        },
+        {
+          "field": "maxInputTokens",
+          "currentValue": null,
+          "supportedValue": 1048576,
+          "sourceId": "google-a84a0adcc86d",
+          "assessment": "differs",
+          "explanation": "明确最大输入限制；不能等同总contextWindow。"
+        },
+        {
+          "field": "contextWindow",
+          "currentValue": 1048576,
+          "supportedValue": {
+            "maxInputTokens": 1048576,
+            "totalContextWindow": "not-published-here"
+          },
+          "sourceId": "google-a84a0adcc86d",
+          "assessment": "not-comparable",
+          "explanation": "官网此值是Input token limit，本仓contextWindow即使数字相同也未证明总窗口；需拆字段并复核官方上下文定义。"
+        },
+        {
+          "field": "maxOutputTokens",
+          "currentValue": 65536,
+          "supportedValue": 65536,
+          "sourceId": "google-a84a0adcc86d",
+          "assessment": "matches",
+          "explanation": "输出整数限制；TTS标明Gemini API serving limit，不是音频秒数。"
+        },
+        {
+          "field": "supportsReasoning",
+          "currentValue": null,
+          "supportedValue": true,
+          "sourceId": "google-a84a0adcc86d",
+          "assessment": "differs",
+          "explanation": "该型号能力表明确Thinking Supported；live thinking_level支持须另核。"
+        }
+      ],
+      "remainingFields": [
+        "contextWindow",
+        "defaultTemperature",
+        "defaultTopP",
+        "extra.audioInputPrice",
+        "extra.cachePricing.audioInputCacheRead",
+        "extra.cachePricing.inputCacheRead",
+        "inputPrice",
+        "outputPrice"
+      ],
+      "nextAction": "逐字段审查上表候选；只有同一接入合同且语义/单位一致的证据才用于后续canonical更新。 剩余字段需精确型号页/官方API schema或已授权账号目录核查，不推导默认值。",
+      "notes": []
+    },
+    {
+      "recordKey": "compute/providers/google.json#gemini-3.1-pro-preview",
+      "modelId": "gemini-3.1-pro-preview",
+      "config": "compute/providers/google.json",
+      "sourceDoc": "docs/model-sources/providers/google/models/gemini-3.1-pro-preview.md",
+      "outcome": "official-conflict",
+      "sourceIds": [
+        "google-07ba3e0f52cc",
+        "google-919b66e84fc3"
+      ],
+      "fieldEvidence": [
+        {
+          "field": "modelName",
+          "currentValue": "gemini-3.1-pro-preview",
+          "supportedValue": "gemini-3.1-pro-preview",
+          "sourceId": "google-07ba3e0f52cc",
+          "assessment": "matches",
+          "explanation": "官网Model code精确匹配。"
+        },
+        {
+          "field": "maxInputTokens",
+          "currentValue": null,
+          "supportedValue": 1048576,
+          "sourceId": "google-07ba3e0f52cc",
+          "assessment": "differs",
+          "explanation": "明确最大输入限制；不能等同总contextWindow。"
+        },
+        {
+          "field": "contextWindow",
+          "currentValue": 1048576,
+          "supportedValue": {
+            "maxInputTokens": 1048576,
+            "totalContextWindow": "not-published-here"
+          },
+          "sourceId": "google-07ba3e0f52cc",
+          "assessment": "not-comparable",
+          "explanation": "官网此值是Input token limit，本仓contextWindow即使数字相同也未证明总窗口；需拆字段并复核官方上下文定义。"
+        },
+        {
+          "field": "maxOutputTokens",
+          "currentValue": 65536,
+          "supportedValue": 65536,
+          "sourceId": "google-07ba3e0f52cc",
+          "assessment": "matches",
+          "explanation": "输出整数限制；TTS标明Gemini API serving limit，不是音频秒数。"
+        },
+        {
+          "field": "supportsReasoning",
+          "currentValue": null,
+          "supportedValue": true,
+          "sourceId": "google-07ba3e0f52cc",
+          "assessment": "differs",
+          "explanation": "该型号能力表明确Thinking Supported；live thinking_level支持须另核。"
+        }
+      ],
+      "remainingFields": [
+        "contextWindow",
+        "defaultTemperature",
+        "defaultTopP",
+        "extra.cachePricing.inputCacheRead",
+        "extra.cachePricing.inputCacheReadOver200k",
+        "extra.cachePricing.storagePerMillionTokensPerHour",
+        "inputPrice",
+        "outputPrice"
+      ],
+      "nextAction": "逐字段审查上表候选；只有同一接入合同且语义/单位一致的证据才用于后续canonical更新。 剩余字段需精确型号页/官方API schema或已授权账号目录核查，不推导默认值。",
+      "notes": []
+    },
+    {
+      "recordKey": "compute/model-specs/google.json#gemini-3.1-pro-preview",
+      "modelId": "gemini-3.1-pro-preview",
+      "config": "compute/model-specs/google.json",
+      "sourceDoc": "docs/model-sources/providers/google/models/gemini-3.1-pro-preview.md",
+      "outcome": "official-conflict",
+      "sourceIds": [
+        "google-07ba3e0f52cc",
+        "google-919b66e84fc3"
+      ],
+      "fieldEvidence": [
+        {
+          "field": "id",
+          "currentValue": "gemini-3.1-pro-preview",
+          "supportedValue": "gemini-3.1-pro-preview",
+          "sourceId": "google-07ba3e0f52cc",
+          "assessment": "matches",
+          "explanation": "官网Model code精确匹配。"
+        },
+        {
+          "field": "spec.maxInputTokens",
+          "currentValue": null,
+          "supportedValue": 1048576,
+          "sourceId": "google-07ba3e0f52cc",
+          "assessment": "differs",
+          "explanation": "明确最大输入限制；不能等同总contextWindow。"
+        },
+        {
+          "field": "spec.contextWindow",
+          "currentValue": 1048576,
+          "supportedValue": {
+            "maxInputTokens": 1048576,
+            "totalContextWindow": "not-published-here"
+          },
+          "sourceId": "google-07ba3e0f52cc",
+          "assessment": "not-comparable",
+          "explanation": "官网此值是Input token limit，本仓contextWindow即使数字相同也未证明总窗口；需拆字段并复核官方上下文定义。"
+        },
+        {
+          "field": "spec.maxOutputTokens",
+          "currentValue": 65536,
+          "supportedValue": 65536,
+          "sourceId": "google-07ba3e0f52cc",
+          "assessment": "matches",
+          "explanation": "输出整数限制；TTS标明Gemini API serving limit，不是音频秒数。"
+        },
+        {
+          "field": "spec.supportsReasoning",
+          "currentValue": true,
+          "supportedValue": true,
+          "sourceId": "google-07ba3e0f52cc",
+          "assessment": "matches",
+          "explanation": "该型号能力表明确Thinking Supported；live thinking_level支持须另核。"
+        }
+      ],
+      "remainingFields": [
+        "spec.contextWindow",
+        "spec.defaultTemperature"
+      ],
+      "nextAction": "逐字段审查上表候选；只有同一接入合同且语义/单位一致的证据才用于后续canonical更新。 剩余字段需精确型号页/官方API schema或已授权账号目录核查，不推导默认值。",
+      "notes": []
+    },
+    {
+      "recordKey": "compute/providers/google.json#gemini-3.5-flash-lite",
+      "modelId": "gemini-3.5-flash-lite",
+      "config": "compute/providers/google.json",
+      "sourceDoc": "docs/model-sources/providers/google/models/gemini-3.5-flash-lite.md",
+      "outcome": "official-conflict",
+      "sourceIds": [
+        "google-f7fe39222f11",
+        "google-919b66e84fc3"
+      ],
+      "fieldEvidence": [
+        {
+          "field": "modelName",
+          "currentValue": "gemini-3.5-flash-lite",
+          "supportedValue": "gemini-3.5-flash-lite",
+          "sourceId": "google-f7fe39222f11",
+          "assessment": "matches",
+          "explanation": "官网Model code精确匹配。"
+        },
+        {
+          "field": "maxInputTokens",
+          "currentValue": null,
+          "supportedValue": 1048576,
+          "sourceId": "google-f7fe39222f11",
+          "assessment": "differs",
+          "explanation": "明确最大输入限制；不能等同总contextWindow。"
+        },
+        {
+          "field": "contextWindow",
+          "currentValue": 1048576,
+          "supportedValue": {
+            "maxInputTokens": 1048576,
+            "totalContextWindow": "not-published-here"
+          },
+          "sourceId": "google-f7fe39222f11",
+          "assessment": "not-comparable",
+          "explanation": "官网此值是Input token limit，本仓contextWindow即使数字相同也未证明总窗口；需拆字段并复核官方上下文定义。"
+        },
+        {
+          "field": "maxOutputTokens",
+          "currentValue": 65536,
+          "supportedValue": 65536,
+          "sourceId": "google-f7fe39222f11",
+          "assessment": "matches",
+          "explanation": "输出整数限制；TTS标明Gemini API serving limit，不是音频秒数。"
+        },
+        {
+          "field": "supportsReasoning",
+          "currentValue": null,
+          "supportedValue": true,
+          "sourceId": "google-f7fe39222f11",
+          "assessment": "differs",
+          "explanation": "该型号能力表明确Thinking Supported；live thinking_level支持须另核。"
+        }
+      ],
+      "remainingFields": [
+        "contextWindow",
+        "defaultTemperature",
+        "defaultTopP",
+        "extra.cachePricing.inputCacheRead",
+        "inputPrice",
+        "outputPrice"
+      ],
+      "nextAction": "逐字段审查上表候选；只有同一接入合同且语义/单位一致的证据才用于后续canonical更新。 剩余字段需精确型号页/官方API schema或已授权账号目录核查，不推导默认值。",
+      "notes": []
+    },
+    {
+      "recordKey": "compute/model-specs/google.json#gemini-3.5-flash-lite",
+      "modelId": "gemini-3.5-flash-lite",
+      "config": "compute/model-specs/google.json",
+      "sourceDoc": "docs/model-sources/providers/google/models/gemini-3.5-flash-lite.md",
+      "outcome": "official-conflict",
+      "sourceIds": [
+        "google-f7fe39222f11",
+        "google-919b66e84fc3"
+      ],
+      "fieldEvidence": [
+        {
+          "field": "id",
+          "currentValue": "gemini-3.5-flash-lite",
+          "supportedValue": "gemini-3.5-flash-lite",
+          "sourceId": "google-f7fe39222f11",
+          "assessment": "matches",
+          "explanation": "官网Model code精确匹配。"
+        },
+        {
+          "field": "spec.maxInputTokens",
+          "currentValue": null,
+          "supportedValue": 1048576,
+          "sourceId": "google-f7fe39222f11",
+          "assessment": "differs",
+          "explanation": "明确最大输入限制；不能等同总contextWindow。"
+        },
+        {
+          "field": "spec.contextWindow",
+          "currentValue": 1048576,
+          "supportedValue": {
+            "maxInputTokens": 1048576,
+            "totalContextWindow": "not-published-here"
+          },
+          "sourceId": "google-f7fe39222f11",
+          "assessment": "not-comparable",
+          "explanation": "官网此值是Input token limit，本仓contextWindow即使数字相同也未证明总窗口；需拆字段并复核官方上下文定义。"
+        },
+        {
+          "field": "spec.maxOutputTokens",
+          "currentValue": 65536,
+          "supportedValue": 65536,
+          "sourceId": "google-f7fe39222f11",
+          "assessment": "matches",
+          "explanation": "输出整数限制；TTS标明Gemini API serving limit，不是音频秒数。"
+        },
+        {
+          "field": "spec.supportsReasoning",
+          "currentValue": true,
+          "supportedValue": true,
+          "sourceId": "google-f7fe39222f11",
+          "assessment": "matches",
+          "explanation": "该型号能力表明确Thinking Supported；live thinking_level支持须另核。"
+        }
+      ],
+      "remainingFields": [
+        "spec.contextWindow",
+        "spec.defaultTemperature"
+      ],
+      "nextAction": "逐字段审查上表候选；只有同一接入合同且语义/单位一致的证据才用于后续canonical更新。 剩余字段需精确型号页/官方API schema或已授权账号目录核查，不推导默认值。",
+      "notes": []
+    },
+    {
+      "recordKey": "compute/providers/google.json#gemini-3.5-flash",
+      "modelId": "gemini-3.5-flash",
+      "config": "compute/providers/google.json",
+      "sourceDoc": "docs/model-sources/providers/google/models/gemini-3.5-flash.md",
+      "outcome": "official-conflict",
+      "sourceIds": [
+        "google-872d1a79ef5f",
+        "google-919b66e84fc3"
+      ],
+      "fieldEvidence": [
+        {
+          "field": "modelName",
+          "currentValue": "gemini-3.5-flash",
+          "supportedValue": "gemini-3.5-flash",
+          "sourceId": "google-872d1a79ef5f",
+          "assessment": "matches",
+          "explanation": "官网Model code精确匹配。"
+        },
+        {
+          "field": "maxInputTokens",
+          "currentValue": null,
+          "supportedValue": 1048576,
+          "sourceId": "google-872d1a79ef5f",
+          "assessment": "differs",
+          "explanation": "明确最大输入限制；不能等同总contextWindow。"
+        },
+        {
+          "field": "contextWindow",
+          "currentValue": 1048576,
+          "supportedValue": {
+            "maxInputTokens": 1048576,
+            "totalContextWindow": "not-published-here"
+          },
+          "sourceId": "google-872d1a79ef5f",
+          "assessment": "not-comparable",
+          "explanation": "官网此值是Input token limit，本仓contextWindow即使数字相同也未证明总窗口；需拆字段并复核官方上下文定义。"
+        },
+        {
+          "field": "maxOutputTokens",
+          "currentValue": 65536,
+          "supportedValue": 65536,
+          "sourceId": "google-872d1a79ef5f",
+          "assessment": "matches",
+          "explanation": "输出整数限制；TTS标明Gemini API serving limit，不是音频秒数。"
+        },
+        {
+          "field": "supportsReasoning",
+          "currentValue": null,
+          "supportedValue": true,
+          "sourceId": "google-872d1a79ef5f",
+          "assessment": "differs",
+          "explanation": "该型号能力表明确Thinking Supported；live thinking_level支持须另核。"
+        }
+      ],
+      "remainingFields": [
+        "contextWindow",
+        "defaultTemperature",
+        "defaultTopP",
+        "extra.cachePricing.inputCacheRead",
+        "inputPrice",
+        "outputPrice"
+      ],
+      "nextAction": "逐字段审查上表候选；只有同一接入合同且语义/单位一致的证据才用于后续canonical更新。 剩余字段需精确型号页/官方API schema或已授权账号目录核查，不推导默认值。",
+      "notes": []
+    },
+    {
+      "recordKey": "compute/model-specs/google.json#gemini-3.5-flash",
+      "modelId": "gemini-3.5-flash",
+      "config": "compute/model-specs/google.json",
+      "sourceDoc": "docs/model-sources/providers/google/models/gemini-3.5-flash.md",
+      "outcome": "official-conflict",
+      "sourceIds": [
+        "google-872d1a79ef5f",
+        "google-919b66e84fc3"
+      ],
+      "fieldEvidence": [
+        {
+          "field": "id",
+          "currentValue": "gemini-3.5-flash",
+          "supportedValue": "gemini-3.5-flash",
+          "sourceId": "google-872d1a79ef5f",
+          "assessment": "matches",
+          "explanation": "官网Model code精确匹配。"
+        },
+        {
+          "field": "spec.maxInputTokens",
+          "currentValue": null,
+          "supportedValue": 1048576,
+          "sourceId": "google-872d1a79ef5f",
+          "assessment": "differs",
+          "explanation": "明确最大输入限制；不能等同总contextWindow。"
+        },
+        {
+          "field": "spec.contextWindow",
+          "currentValue": 1048576,
+          "supportedValue": {
+            "maxInputTokens": 1048576,
+            "totalContextWindow": "not-published-here"
+          },
+          "sourceId": "google-872d1a79ef5f",
+          "assessment": "not-comparable",
+          "explanation": "官网此值是Input token limit，本仓contextWindow即使数字相同也未证明总窗口；需拆字段并复核官方上下文定义。"
+        },
+        {
+          "field": "spec.maxOutputTokens",
+          "currentValue": 65536,
+          "supportedValue": 65536,
+          "sourceId": "google-872d1a79ef5f",
+          "assessment": "matches",
+          "explanation": "输出整数限制；TTS标明Gemini API serving limit，不是音频秒数。"
+        },
+        {
+          "field": "spec.supportsReasoning",
+          "currentValue": true,
+          "supportedValue": true,
+          "sourceId": "google-872d1a79ef5f",
+          "assessment": "matches",
+          "explanation": "该型号能力表明确Thinking Supported；live thinking_level支持须另核。"
+        }
+      ],
+      "remainingFields": [
+        "spec.contextWindow",
+        "spec.defaultTemperature"
+      ],
+      "nextAction": "逐字段审查上表候选；只有同一接入合同且语义/单位一致的证据才用于后续canonical更新。 剩余字段需精确型号页/官方API schema或已授权账号目录核查，不推导默认值。",
+      "notes": []
+    },
+    {
+      "recordKey": "compute/model-specs/google.json#gemini-3.5-transcribe-live",
+      "modelId": "gemini-3.5-transcribe-live",
+      "config": "compute/model-specs/google.json",
+      "sourceDoc": "docs/model-sources/providers/google/models/gemini-3.5-transcribe-live.md",
+      "outcome": "official-identity-only",
+      "sourceIds": [
+        "google-919b66e84fc3",
+        "google-f2daed4ae337"
+      ],
+      "fieldEvidence": [
+        {
+          "field": "id",
+          "currentValue": "gemini-3.5-transcribe-live",
+          "supportedValue": "gemini-3.5-transcribe-live",
+          "sourceId": "google-919b66e84fc3",
+          "assessment": "matches",
+          "explanation": "官方模型目录列出精确ID，但其独立型号URL404；仅身份核实，未证规格。"
+        }
+      ],
+      "remainingFields": [],
+      "nextAction": "逐字段审查上表候选；只有同一接入合同且语义/单位一致的证据才用于后续canonical更新。",
+      "notes": [
+        "精确型号页未读取成功；目录存在或近似Live型号不证明本型号全字段。"
+      ]
+    },
+    {
+      "recordKey": "compute/model-specs/google.json#gemini-3.5-transcribe",
+      "modelId": "gemini-3.5-transcribe",
+      "config": "compute/model-specs/google.json",
+      "sourceDoc": "docs/model-sources/providers/google/models/gemini-3.5-transcribe.md",
+      "outcome": "official-fields-found",
+      "sourceIds": [
+        "google-cb77b83adaed",
+        "google-919b66e84fc3"
+      ],
+      "fieldEvidence": [
+        {
+          "field": "id",
+          "currentValue": "gemini-3.5-transcribe",
+          "supportedValue": "gemini-3.5-transcribe",
+          "sourceId": "google-cb77b83adaed",
+          "assessment": "matches",
+          "explanation": "官网Model code精确匹配。"
+        },
+        {
+          "field": "spec.audioDurationSeconds",
+          "currentValue": null,
+          "supportedValue": {
+            "normal": 3600,
+            "diarizationOrWordTimestamps": 1800
+          },
+          "sourceId": "google-cb77b83adaed",
+          "assessment": "differs",
+          "explanation": "音频时长限制，不能转换texttoken窗口。"
+        }
+      ],
+      "remainingFields": [],
+      "nextAction": "逐字段审查上表候选；只有同一接入合同且语义/单位一致的证据才用于后续canonical更新。",
+      "notes": []
+    },
+    {
+      "recordKey": "compute/providers/google.json#gemini-3.7-flash",
+      "modelId": "gemini-3.7-flash",
+      "config": "compute/providers/google.json",
+      "sourceDoc": "docs/model-sources/providers/google/models/gemini-3.7-flash.md",
+      "outcome": "official-conflict",
+      "sourceIds": [
+        "google-7ff10c981762",
+        "google-919b66e84fc3"
+      ],
+      "fieldEvidence": [
+        {
+          "field": "modelName",
+          "currentValue": "gemini-3.7-flash",
+          "supportedValue": "gemini-3.7-flash",
+          "sourceId": "google-7ff10c981762",
+          "assessment": "matches",
+          "explanation": "官网Model code精确匹配。"
+        },
+        {
+          "field": "maxInputTokens",
+          "currentValue": null,
+          "supportedValue": 1048576,
+          "sourceId": "google-7ff10c981762",
+          "assessment": "differs",
+          "explanation": "明确最大输入限制；不能等同总contextWindow。"
+        },
+        {
+          "field": "contextWindow",
+          "currentValue": 1048576,
+          "supportedValue": {
+            "maxInputTokens": 1048576,
+            "totalContextWindow": "not-published-here"
+          },
+          "sourceId": "google-7ff10c981762",
+          "assessment": "not-comparable",
+          "explanation": "官网此值是Input token limit，本仓contextWindow即使数字相同也未证明总窗口；需拆字段并复核官方上下文定义。"
+        },
+        {
+          "field": "maxOutputTokens",
+          "currentValue": 65536,
+          "supportedValue": 65536,
+          "sourceId": "google-7ff10c981762",
+          "assessment": "matches",
+          "explanation": "输出整数限制；TTS标明Gemini API serving limit，不是音频秒数。"
+        },
+        {
+          "field": "supportsReasoning",
+          "currentValue": null,
+          "supportedValue": true,
+          "sourceId": "google-7ff10c981762",
+          "assessment": "differs",
+          "explanation": "该型号能力表明确Thinking Supported；live thinking_level支持须另核。"
+        }
+      ],
+      "remainingFields": [
+        "contextWindow",
+        "defaultTemperature",
+        "defaultTopP",
+        "extra.cachePricing.inputCacheRead",
+        "extra.reasoning.defaultEffort",
+        "extra.reasoning.supportedEfforts",
+        "inputPrice",
+        "outputPrice"
+      ],
+      "nextAction": "逐字段审查上表候选；只有同一接入合同且语义/单位一致的证据才用于后续canonical更新。 剩余字段需精确型号页/官方API schema或已授权账号目录核查，不推导默认值。",
+      "notes": []
+    },
+    {
+      "recordKey": "compute/model-specs/google.json#gemini-3.7-flash",
+      "modelId": "gemini-3.7-flash",
+      "config": "compute/model-specs/google.json",
+      "sourceDoc": "docs/model-sources/providers/google/models/gemini-3.7-flash.md",
+      "outcome": "official-conflict",
+      "sourceIds": [
+        "google-7ff10c981762",
+        "google-919b66e84fc3"
+      ],
+      "fieldEvidence": [
+        {
+          "field": "id",
+          "currentValue": "gemini-3.7-flash",
+          "supportedValue": "gemini-3.7-flash",
+          "sourceId": "google-7ff10c981762",
+          "assessment": "matches",
+          "explanation": "官网Model code精确匹配。"
+        },
+        {
+          "field": "spec.maxInputTokens",
+          "currentValue": null,
+          "supportedValue": 1048576,
+          "sourceId": "google-7ff10c981762",
+          "assessment": "differs",
+          "explanation": "明确最大输入限制；不能等同总contextWindow。"
+        },
+        {
+          "field": "spec.contextWindow",
+          "currentValue": 1048576,
+          "supportedValue": {
+            "maxInputTokens": 1048576,
+            "totalContextWindow": "not-published-here"
+          },
+          "sourceId": "google-7ff10c981762",
+          "assessment": "not-comparable",
+          "explanation": "官网此值是Input token limit，本仓contextWindow即使数字相同也未证明总窗口；需拆字段并复核官方上下文定义。"
+        },
+        {
+          "field": "spec.maxOutputTokens",
+          "currentValue": 65536,
+          "supportedValue": 65536,
+          "sourceId": "google-7ff10c981762",
+          "assessment": "matches",
+          "explanation": "输出整数限制；TTS标明Gemini API serving limit，不是音频秒数。"
+        },
+        {
+          "field": "spec.supportsReasoning",
+          "currentValue": true,
+          "supportedValue": true,
+          "sourceId": "google-7ff10c981762",
+          "assessment": "matches",
+          "explanation": "该型号能力表明确Thinking Supported；live thinking_level支持须另核。"
+        }
+      ],
+      "remainingFields": [
+        "spec.contextWindow",
+        "spec.defaultTemperature"
+      ],
+      "nextAction": "逐字段审查上表候选；只有同一接入合同且语义/单位一致的证据才用于后续canonical更新。 剩余字段需精确型号页/官方API schema或已授权账号目录核查，不推导默认值。",
+      "notes": []
+    },
+    {
+      "recordKey": "compute/model-specs/google.json#gemini-3.8-flash-lite-tts",
+      "modelId": "gemini-3.8-flash-lite-tts",
+      "config": "compute/model-specs/google.json",
+      "sourceDoc": "docs/model-sources/providers/google/models/gemini-3.8-flash-lite-tts.md",
+      "outcome": "official-conflict",
+      "sourceIds": [
+        "google-ab9e7f75b68b",
+        "google-919b66e84fc3"
+      ],
+      "fieldEvidence": [
+        {
+          "field": "id",
+          "currentValue": "gemini-3.8-flash-lite-tts",
+          "supportedValue": "gemini-3.8-flash-lite-tts",
+          "sourceId": "google-ab9e7f75b68b",
+          "assessment": "matches",
+          "explanation": "官网Model code精确匹配。"
+        },
+        {
+          "field": "spec.maxInputTokens",
+          "currentValue": null,
+          "supportedValue": 8192,
+          "sourceId": "google-ab9e7f75b68b",
+          "assessment": "differs",
+          "explanation": "明确最大输入限制；不能等同总contextWindow。"
+        },
+        {
+          "field": "spec.contextWindow",
+          "currentValue": null,
+          "supportedValue": {
+            "maxInputTokens": 8192,
+            "totalContextWindow": "not-published-here"
+          },
+          "sourceId": "google-ab9e7f75b68b",
+          "assessment": "not-comparable",
+          "explanation": "官网此值是Input token limit，本仓contextWindow即使数字相同也未证明总窗口；需拆字段并复核官方上下文定义。"
+        },
+        {
+          "field": "spec.maxOutputTokens",
+          "currentValue": null,
+          "supportedValue": 16384,
+          "sourceId": "google-ab9e7f75b68b",
+          "assessment": "differs",
+          "explanation": "输出整数限制；TTS标明Gemini API serving limit，不是音频秒数。"
+        }
+      ],
+      "remainingFields": [],
+      "nextAction": "逐字段审查上表候选；只有同一接入合同且语义/单位一致的证据才用于后续canonical更新。",
+      "notes": []
+    },
+    {
+      "recordKey": "compute/model-specs/google.json#gemini-3.8-flash-tts",
+      "modelId": "gemini-3.8-flash-tts",
+      "config": "compute/model-specs/google.json",
+      "sourceDoc": "docs/model-sources/providers/google/models/gemini-3.8-flash-tts.md",
+      "outcome": "official-conflict",
+      "sourceIds": [
+        "google-2efc4e2cd74a",
+        "google-919b66e84fc3"
+      ],
+      "fieldEvidence": [
+        {
+          "field": "id",
+          "currentValue": "gemini-3.8-flash-tts",
+          "supportedValue": "gemini-3.8-flash-tts",
+          "sourceId": "google-2efc4e2cd74a",
+          "assessment": "matches",
+          "explanation": "官网Model code精确匹配。"
+        },
+        {
+          "field": "spec.maxInputTokens",
+          "currentValue": null,
+          "supportedValue": 8192,
+          "sourceId": "google-2efc4e2cd74a",
+          "assessment": "differs",
+          "explanation": "明确最大输入限制；不能等同总contextWindow。"
+        },
+        {
+          "field": "spec.contextWindow",
+          "currentValue": 8192,
+          "supportedValue": {
+            "maxInputTokens": 8192,
+            "totalContextWindow": "not-published-here"
+          },
+          "sourceId": "google-2efc4e2cd74a",
+          "assessment": "not-comparable",
+          "explanation": "官网此值是Input token limit，本仓contextWindow即使数字相同也未证明总窗口；需拆字段并复核官方上下文定义。"
+        },
+        {
+          "field": "spec.maxOutputTokens",
+          "currentValue": 16384,
+          "supportedValue": 16384,
+          "sourceId": "google-2efc4e2cd74a",
+          "assessment": "matches",
+          "explanation": "输出整数限制；TTS标明Gemini API serving limit，不是音频秒数。"
+        }
+      ],
+      "remainingFields": [],
+      "nextAction": "逐字段审查上表候选；只有同一接入合同且语义/单位一致的证据才用于后续canonical更新。",
+      "notes": []
+    },
+    {
+      "recordKey": "compute/providers/google.json#gemini-3.8-flash",
+      "modelId": "gemini-3.8-flash",
+      "config": "compute/providers/google.json",
+      "sourceDoc": "docs/model-sources/providers/google/models/gemini-3.8-flash.md",
+      "outcome": "official-conflict",
+      "sourceIds": [
+        "google-116c1a7f3be0",
+        "google-919b66e84fc3"
+      ],
+      "fieldEvidence": [
+        {
+          "field": "modelName",
+          "currentValue": "gemini-3.8-flash",
+          "supportedValue": "gemini-3.8-flash",
+          "sourceId": "google-116c1a7f3be0",
+          "assessment": "matches",
+          "explanation": "官网Model code精确匹配。"
+        },
+        {
+          "field": "maxInputTokens",
+          "currentValue": null,
+          "supportedValue": 1048576,
+          "sourceId": "google-116c1a7f3be0",
+          "assessment": "differs",
+          "explanation": "明确最大输入限制；不能等同总contextWindow。"
+        },
+        {
+          "field": "contextWindow",
+          "currentValue": 1048576,
+          "supportedValue": {
+            "maxInputTokens": 1048576,
+            "totalContextWindow": "not-published-here"
+          },
+          "sourceId": "google-116c1a7f3be0",
+          "assessment": "not-comparable",
+          "explanation": "官网此值是Input token limit，本仓contextWindow即使数字相同也未证明总窗口；需拆字段并复核官方上下文定义。"
+        },
+        {
+          "field": "maxOutputTokens",
+          "currentValue": 65536,
+          "supportedValue": 65536,
+          "sourceId": "google-116c1a7f3be0",
+          "assessment": "matches",
+          "explanation": "输出整数限制；TTS标明Gemini API serving limit，不是音频秒数。"
+        },
+        {
+          "field": "supportsReasoning",
+          "currentValue": null,
+          "supportedValue": true,
+          "sourceId": "google-116c1a7f3be0",
+          "assessment": "differs",
+          "explanation": "该型号能力表明确Thinking Supported；live thinking_level支持须另核。"
+        }
+      ],
+      "remainingFields": [
+        "contextWindow",
+        "defaultTemperature",
+        "defaultTopP",
+        "extra.cachePricing.inputCacheRead",
+        "extra.reasoning.defaultEffort",
+        "extra.reasoning.supportedEfforts",
+        "inputPrice",
+        "outputPrice"
+      ],
+      "nextAction": "逐字段审查上表候选；只有同一接入合同且语义/单位一致的证据才用于后续canonical更新。 剩余字段需精确型号页/官方API schema或已授权账号目录核查，不推导默认值。",
+      "notes": []
+    },
+    {
+      "recordKey": "compute/model-specs/google.json#gemini-3.8-flash",
+      "modelId": "gemini-3.8-flash",
+      "config": "compute/model-specs/google.json",
+      "sourceDoc": "docs/model-sources/providers/google/models/gemini-3.8-flash.md",
+      "outcome": "official-conflict",
+      "sourceIds": [
+        "google-116c1a7f3be0",
+        "google-919b66e84fc3"
+      ],
+      "fieldEvidence": [
+        {
+          "field": "id",
+          "currentValue": "gemini-3.8-flash",
+          "supportedValue": "gemini-3.8-flash",
+          "sourceId": "google-116c1a7f3be0",
+          "assessment": "matches",
+          "explanation": "官网Model code精确匹配。"
+        },
+        {
+          "field": "spec.maxInputTokens",
+          "currentValue": null,
+          "supportedValue": 1048576,
+          "sourceId": "google-116c1a7f3be0",
+          "assessment": "differs",
+          "explanation": "明确最大输入限制；不能等同总contextWindow。"
+        },
+        {
+          "field": "spec.contextWindow",
+          "currentValue": 1048576,
+          "supportedValue": {
+            "maxInputTokens": 1048576,
+            "totalContextWindow": "not-published-here"
+          },
+          "sourceId": "google-116c1a7f3be0",
+          "assessment": "not-comparable",
+          "explanation": "官网此值是Input token limit，本仓contextWindow即使数字相同也未证明总窗口；需拆字段并复核官方上下文定义。"
+        },
+        {
+          "field": "spec.maxOutputTokens",
+          "currentValue": 65536,
+          "supportedValue": 65536,
+          "sourceId": "google-116c1a7f3be0",
+          "assessment": "matches",
+          "explanation": "输出整数限制；TTS标明Gemini API serving limit，不是音频秒数。"
+        },
+        {
+          "field": "spec.supportsReasoning",
+          "currentValue": true,
+          "supportedValue": true,
+          "sourceId": "google-116c1a7f3be0",
+          "assessment": "matches",
+          "explanation": "该型号能力表明确Thinking Supported；live thinking_level支持须另核。"
+        }
+      ],
+      "remainingFields": [
+        "spec.contextWindow",
+        "spec.defaultTemperature"
+      ],
+      "nextAction": "逐字段审查上表候选；只有同一接入合同且语义/单位一致的证据才用于后续canonical更新。 剩余字段需精确型号页/官方API schema或已授权账号目录核查，不推导默认值。",
+      "notes": []
+    },
+    {
+      "recordKey": "compute/model-specs/google.json#gemini-3.8-live-extended-thinking",
+      "modelId": "gemini-3.8-live-extended-thinking",
+      "config": "compute/model-specs/google.json",
+      "sourceDoc": "docs/model-sources/providers/google/models/gemini-3.8-live-extended-thinking.md",
+      "outcome": "official-conflict",
+      "sourceIds": [
+        "google-d3ba80e42da9",
+        "google-919b66e84fc3"
+      ],
+      "fieldEvidence": [
+        {
+          "field": "id",
+          "currentValue": "gemini-3.8-live-extended-thinking",
+          "supportedValue": "gemini-3.8-live-extended-thinking",
+          "sourceId": "google-d3ba80e42da9",
+          "assessment": "matches",
+          "explanation": "官网Model code精确匹配。"
+        },
+        {
+          "field": "spec.maxInputTokens",
+          "currentValue": null,
+          "supportedValue": 131072,
+          "sourceId": "google-d3ba80e42da9",
+          "assessment": "differs",
+          "explanation": "明确最大输入限制；不能等同总contextWindow。"
+        },
+        {
+          "field": "spec.contextWindow",
+          "currentValue": null,
+          "supportedValue": {
+            "maxInputTokens": 131072,
+            "totalContextWindow": "not-published-here"
+          },
+          "sourceId": "google-d3ba80e42da9",
+          "assessment": "not-comparable",
+          "explanation": "官网此值是Input token limit，本仓contextWindow即使数字相同也未证明总窗口；需拆字段并复核官方上下文定义。"
+        },
+        {
+          "field": "spec.maxOutputTokens",
+          "currentValue": null,
+          "supportedValue": 65536,
+          "sourceId": "google-d3ba80e42da9",
+          "assessment": "differs",
+          "explanation": "输出整数限制；TTS标明Gemini API serving limit，不是音频秒数。"
+        },
+        {
+          "field": "spec.supportsReasoning",
+          "currentValue": null,
+          "supportedValue": true,
+          "sourceId": "google-d3ba80e42da9",
+          "assessment": "differs",
+          "explanation": "该型号能力表明确Thinking Supported；live thinking_level支持须另核。"
+        }
+      ],
+      "remainingFields": [],
+      "nextAction": "逐字段审查上表候选；只有同一接入合同且语义/单位一致的证据才用于后续canonical更新。",
+      "notes": []
+    },
+    {
+      "recordKey": "compute/model-specs/google.json#gemini-3.8-live",
+      "modelId": "gemini-3.8-live",
+      "config": "compute/model-specs/google.json",
+      "sourceDoc": "docs/model-sources/providers/google/models/gemini-3.8-live.md",
+      "outcome": "official-conflict",
+      "sourceIds": [
+        "google-04c98c33c883",
+        "google-919b66e84fc3"
+      ],
+      "fieldEvidence": [
+        {
+          "field": "id",
+          "currentValue": "gemini-3.8-live",
+          "supportedValue": "gemini-3.8-live",
+          "sourceId": "google-04c98c33c883",
+          "assessment": "matches",
+          "explanation": "官网Model code精确匹配。"
+        },
+        {
+          "field": "spec.maxInputTokens",
+          "currentValue": null,
+          "supportedValue": 131072,
+          "sourceId": "google-04c98c33c883",
+          "assessment": "differs",
+          "explanation": "明确最大输入限制；不能等同总contextWindow。"
+        },
+        {
+          "field": "spec.contextWindow",
+          "currentValue": null,
+          "supportedValue": {
+            "maxInputTokens": 131072,
+            "totalContextWindow": "not-published-here"
+          },
+          "sourceId": "google-04c98c33c883",
+          "assessment": "not-comparable",
+          "explanation": "官网此值是Input token limit，本仓contextWindow即使数字相同也未证明总窗口；需拆字段并复核官方上下文定义。"
+        },
+        {
+          "field": "spec.maxOutputTokens",
+          "currentValue": null,
+          "supportedValue": 65536,
+          "sourceId": "google-04c98c33c883",
+          "assessment": "differs",
+          "explanation": "输出整数限制；TTS标明Gemini API serving limit，不是音频秒数。"
+        },
+        {
+          "field": "spec.supportsReasoning",
+          "currentValue": null,
+          "supportedValue": true,
+          "sourceId": "google-04c98c33c883",
+          "assessment": "differs",
+          "explanation": "该型号能力表明确Thinking Supported；live thinking_level支持须另核。"
+        }
+      ],
+      "remainingFields": [],
+      "nextAction": "逐字段审查上表候选；只有同一接入合同且语义/单位一致的证据才用于后续canonical更新。",
+      "notes": []
+    },
+    {
+      "recordKey": "compute/providers/google.json#gemini-embedding-2",
+      "modelId": "gemini-embedding-2",
+      "config": "compute/providers/google.json",
+      "sourceDoc": "docs/model-sources/providers/google/models/gemini-embedding-2.md",
+      "outcome": "official-conflict",
+      "sourceIds": [
+        "google-064528a35566",
+        "google-919b66e84fc3",
+        "google-16dfbb2e47fb"
+      ],
+      "fieldEvidence": [
+        {
+          "field": "modelName",
+          "currentValue": "gemini-embedding-2",
+          "supportedValue": "gemini-embedding-2",
+          "sourceId": "google-064528a35566",
+          "assessment": "matches",
+          "explanation": "官网Model code精确匹配。"
+        },
+        {
+          "field": "maxInputTokens",
+          "currentValue": null,
+          "supportedValue": 8192,
+          "sourceId": "google-064528a35566",
+          "assessment": "differs",
+          "explanation": "每条embedding输入上限"
+        },
+        {
+          "field": "contextWindow",
+          "currentValue": 8192,
+          "supportedValue": {
+            "maxInputTokens": 8192,
+            "totalContextWindow": "not-published-here"
+          },
+          "sourceId": "google-064528a35566",
+          "assessment": "not-comparable",
+          "explanation": "官网此值是Input token limit，本仓contextWindow即使数字相同也未证明总窗口；需拆字段并复核官方上下文定义。"
+        },
+        {
+          "field": "extra.embeddingDimensions",
+          "currentValue": null,
+          "supportedValue": {
+            "range": [
+              128,
+              3072
+            ],
+            "recommended": [
+              768,
+              1536,
+              3072
+            ]
+          },
+          "sourceId": "google-064528a35566",
+          "assessment": "not-comparable",
+          "explanation": "官方范围/推荐宽度，不是固定default2560等。"
+        }
+      ],
+      "remainingFields": [],
+      "nextAction": "逐字段审查上表候选；只有同一接入合同且语义/单位一致的证据才用于后续canonical更新。",
+      "notes": []
+    },
+    {
+      "recordKey": "compute/model-specs/google.json#gemini-embedding-2",
+      "modelId": "gemini-embedding-2",
+      "config": "compute/model-specs/google.json",
+      "sourceDoc": "docs/model-sources/providers/google/models/gemini-embedding-2.md",
+      "outcome": "official-conflict",
+      "sourceIds": [
+        "google-064528a35566",
+        "google-919b66e84fc3",
+        "google-16dfbb2e47fb"
+      ],
+      "fieldEvidence": [
+        {
+          "field": "id",
+          "currentValue": "gemini-embedding-2",
+          "supportedValue": "gemini-embedding-2",
+          "sourceId": "google-064528a35566",
+          "assessment": "matches",
+          "explanation": "官网Model code精确匹配。"
+        },
+        {
+          "field": "spec.maxInputTokens",
+          "currentValue": null,
+          "supportedValue": 8192,
+          "sourceId": "google-064528a35566",
+          "assessment": "differs",
+          "explanation": "每条embedding输入上限"
+        },
+        {
+          "field": "spec.contextWindow",
+          "currentValue": 8192,
+          "supportedValue": {
+            "maxInputTokens": 8192,
+            "totalContextWindow": "not-published-here"
+          },
+          "sourceId": "google-064528a35566",
+          "assessment": "not-comparable",
+          "explanation": "官网此值是Input token limit，本仓contextWindow即使数字相同也未证明总窗口；需拆字段并复核官方上下文定义。"
+        },
+        {
+          "field": "spec.extra.embeddingDimensions",
+          "currentValue": null,
+          "supportedValue": {
+            "range": [
+              128,
+              3072
+            ],
+            "recommended": [
+              768,
+              1536,
+              3072
+            ]
+          },
+          "sourceId": "google-064528a35566",
+          "assessment": "not-comparable",
+          "explanation": "官方范围/推荐宽度，不是固定default2560等。"
+        }
+      ],
+      "remainingFields": [],
+      "nextAction": "逐字段审查上表候选；只有同一接入合同且语义/单位一致的证据才用于后续canonical更新。",
+      "notes": []
+    },
+    {
+      "recordKey": "compute/providers/google.json#text-embedding-005",
+      "modelId": "text-embedding-005",
+      "config": "compute/providers/google.json",
+      "sourceDoc": "docs/model-sources/providers/google/models/text-embedding-005.md",
+      "outcome": "official-fields-found",
+      "sourceIds": [
+        "google-0960c6d9f99c",
+        "google-919b66e84fc3"
+      ],
+      "fieldEvidence": [
+        {
+          "field": "modelName",
+          "currentValue": "text-embedding-005",
+          "supportedValue": "text-embedding-005",
+          "sourceId": "google-0960c6d9f99c",
+          "assessment": "matches",
+          "explanation": "Vertex/Enterprise Agent Platform接入，不是Gemini Developer API。"
+        },
+        {
+          "field": "maxInputTokens",
+          "currentValue": null,
+          "supportedValue": 2048,
+          "sourceId": "google-0960c6d9f99c",
+          "assessment": "differs",
+          "explanation": "官方每条文本最大2048tokens。"
+        },
+        {
+          "field": "extra.embeddingDimensions",
+          "currentValue": null,
+          "supportedValue": 768,
+          "sourceId": "google-0960c6d9f99c",
+          "assessment": "differs",
+          "explanation": "官方最大768维；up to不等于用户不能缩短。"
+        }
+      ],
+      "remainingFields": [
+        "contextWindow",
+        "inputPrice"
+      ],
+      "nextAction": "逐字段审查上表候选；只有同一接入合同且语义/单位一致的证据才用于后续canonical更新。 剩余字段需精确型号页/官方API schema或已授权账号目录核查，不推导默认值。",
+      "notes": []
+    },
+    {
+      "recordKey": "compute/model-specs/google.json#text-embedding-005",
+      "modelId": "text-embedding-005",
+      "config": "compute/model-specs/google.json",
+      "sourceDoc": "docs/model-sources/providers/google/models/text-embedding-005.md",
+      "outcome": "official-fields-found",
+      "sourceIds": [
+        "google-0960c6d9f99c",
+        "google-919b66e84fc3"
+      ],
+      "fieldEvidence": [
+        {
+          "field": "id",
+          "currentValue": "text-embedding-005",
+          "supportedValue": "text-embedding-005",
+          "sourceId": "google-0960c6d9f99c",
+          "assessment": "matches",
+          "explanation": "Vertex/Enterprise Agent Platform接入，不是Gemini Developer API。"
+        },
+        {
+          "field": "spec.maxInputTokens",
+          "currentValue": null,
+          "supportedValue": 2048,
+          "sourceId": "google-0960c6d9f99c",
+          "assessment": "differs",
+          "explanation": "官方每条文本最大2048tokens。"
+        },
+        {
+          "field": "spec.extra.embeddingDimensions",
+          "currentValue": null,
+          "supportedValue": 768,
+          "sourceId": "google-0960c6d9f99c",
+          "assessment": "differs",
+          "explanation": "官方最大768维；up to不等于用户不能缩短。"
+        }
+      ],
+      "remainingFields": [
+        "spec.contextWindow"
+      ],
+      "nextAction": "逐字段审查上表候选；只有同一接入合同且语义/单位一致的证据才用于后续canonical更新。 剩余字段需精确型号页/官方API schema或已授权账号目录核查，不推导默认值。",
+      "notes": []
+    }
+  ]
+}

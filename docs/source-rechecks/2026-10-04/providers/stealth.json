@@ -1,0 +1,72 @@
+{
+  "supplier": "stealth",
+  "checkedAt": "2026-10-04",
+  "sources": [
+    {
+      "id": "openrouter-api",
+      "url": "https://openrouter.ai/api/v1/models",
+      "finalUrl": "https://openrouter.ai/api/v1/models",
+      "publisher": "stealth",
+      "kind": "official-platform",
+      "scope": "只适用于页面明确的原厂/地域/接入，套餐和聚合合同独立",
+      "contentSha256": "656251f39327dfe599c6a05f5a02864d99b7b0ba18acac04e326f5ff29cdf1c1",
+      "retrieval": "readable",
+      "summary": "实际读取763590字符，可见正文763589字符；需逐精确ID定位，HTTP成功不代表字段已证。",
+      "digestKind": "sha256-utf8-decoded-response-body",
+      "retrievalMethod": "urllib.request HTTPS response read; bytes decoded as UTF-8 with replacement, SHA-256 over decoded text re-encoded as UTF-8 before visible-text extraction; full HTML/Markdown/JSON body, not a raw-byte digest or vendor signature"
+    },
+    {
+      "id": "glm53-flash",
+      "url": "https://docs.bigmodel.cn/cn/guide/models/vlm/glm-5.3-flash.md",
+      "finalUrl": "https://docs.bigmodel.cn/cn/guide/models/vlm/glm-5.3-flash.md",
+      "publisher": "stealth",
+      "kind": "official-docs",
+      "scope": "只适用于页面明确的原厂/地域/接入，套餐和聚合合同独立",
+      "contentSha256": "d9e2d56363f9e04e18c5bb60756edffaf565d2ccb28c420552da2ead3eecef9c",
+      "retrieval": "readable",
+      "summary": "实际读取10927字符，可见正文10652字符；需逐精确ID定位，HTTP成功不代表字段已证。",
+      "digestKind": "sha256-utf8-decoded-response-body",
+      "retrievalMethod": "urllib.request HTTPS response read; bytes decoded as UTF-8 with replacement, SHA-256 over decoded text re-encoded as UTF-8 before visible-text extraction; full HTML/Markdown/JSON body, not a raw-byte digest or vendor signature"
+    }
+  ],
+  "findings": [
+    {
+      "recordKey": "compute/model-specs/stealth.json#ox-alpha",
+      "modelId": "ox-alpha",
+      "config": "compute/model-specs/stealth.json",
+      "sourceDoc": "docs/model-sources/providers/stealth/models/ox-alpha.md",
+      "outcome": "historical-only",
+      "sourceIds": [
+        "openrouter-api",
+        "glm53-flash"
+      ],
+      "fieldEvidence": [],
+      "remainingFields": [
+        "id",
+        "spec.contextWindow",
+        "spec.defaultTemperature",
+        "spec.defaultTopP",
+        "spec.extra.thinkingOnly",
+        "spec.maxOutputTokens",
+        "spec.supportsReasoning",
+        "spec.capabilities",
+        "spec.serviceType"
+      ],
+      "nextAction": "人工逐字段复核本次候选；只将matches且精确接入适用的字段迁入原来源文档，differs先审单位/阶梯/产品默认；缺项需精确模型页、官方版本卡或授权目录，不猜填。",
+      "notes": [
+        "当前OpenRouter公共API没有ox-alpha或stealth/ox-alpha；未找到官方身份揭示。GLM5.3Flash官页只证明GLM自身，不能证明Ox Alpha真身；历史窗口/输出/发布日期仍未重新取得证据。"
+      ],
+      "originalStatus": "historical",
+      "originalGap": "historical"
+    }
+  ],
+  "coverage": {
+    "records": 1,
+    "sourceAttempts": 2,
+    "readableSources": 2,
+    "outcomes": {
+      "historical-only": 1
+    }
+  },
+  "boundary": "本轮只保存核查候选，未更改canonical、既有来源核验状态、指纹或manifest；可读正文和ID存在不是全参数/账号验收。"
+}

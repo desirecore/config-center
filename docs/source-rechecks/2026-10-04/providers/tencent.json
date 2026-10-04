@@ -1,0 +1,753 @@
+{
+  "supplier": "tencent",
+  "checkedAt": "2026-10-04",
+  "sources": [
+    {
+      "id": "page-tencent-model-list",
+      "url": "https://cloud.tencent.com/document/product/1823/130051",
+      "finalUrl": "https://cloud.tencent.com/document/product/1823/130051",
+      "publisher": "tencent",
+      "kind": "official-docs",
+      "retrieval": "readable",
+      "summary": "已读取HTTP正文；模型数字只按该页精确型号和接入记录。",
+      "scope": "分别为TokenHub目录/套餐/旧混元产品/旧API；不能跨合同继承。",
+      "contentSha256": "cdae651f5352cb30d4ec15f8d17a111255fa018f9b82f5d4c5be4735be8e03ca",
+      "retrievalMethod": "http-body-htmlparser",
+      "contentDigestKind": "htmlparser-visible-text-not-raw-http-bytes"
+    },
+    {
+      "id": "page-tencent-plan",
+      "url": "https://cloud.tencent.com/document/product/1823/130060",
+      "finalUrl": "https://cloud.tencent.com/document/product/1823/130060",
+      "publisher": "tencent",
+      "kind": "official-docs",
+      "retrieval": "readable",
+      "summary": "已读取HTTP正文；模型数字只按该页精确型号和接入记录。",
+      "scope": "分别为TokenHub目录/套餐/旧混元产品/旧API；不能跨合同继承。",
+      "contentSha256": "bb36cc06e5b65eea30c3f308c9781753c83afc641939579a7cedfcaef2388f1b",
+      "retrievalMethod": "http-body-htmlparser",
+      "contentDigestKind": "htmlparser-visible-text-not-raw-http-bytes"
+    },
+    {
+      "id": "page-tencent-legacy-status",
+      "url": "https://cloud.tencent.com/document/product/1729/97765",
+      "finalUrl": "https://cloud.tencent.com/document/product/1729/97765",
+      "publisher": "tencent",
+      "kind": "official-docs",
+      "retrieval": "readable",
+      "summary": "已读取HTTP正文；模型数字只按该页精确型号和接入记录。",
+      "scope": "分别为TokenHub目录/套餐/旧混元产品/旧API；不能跨合同继承。",
+      "contentSha256": "2dde59c90b18b7f74ff16f44f222fd8f0ce68555d461582233988f23739d2eed",
+      "retrievalMethod": "http-body-htmlparser",
+      "contentDigestKind": "htmlparser-visible-text-not-raw-http-bytes"
+    },
+    {
+      "id": "page-tencent-legacy-api",
+      "url": "https://cloud.tencent.com/document/api/1729/105701",
+      "finalUrl": "https://cloud.tencent.com/document/api/1729/105701",
+      "publisher": "tencent",
+      "kind": "official-docs",
+      "retrieval": "readable",
+      "summary": "已读取HTTP正文；模型数字只按该页精确型号和接入记录。",
+      "scope": "分别为TokenHub目录/套餐/旧混元产品/旧API；不能跨合同继承。",
+      "contentSha256": "11fb0b3d11ae1d182b6db2663f5606b520d9d9cb9f7a73d4c8d4ce06c9398091",
+      "retrievalMethod": "http-body-htmlparser",
+      "contentDigestKind": "htmlparser-visible-text-not-raw-http-bytes"
+    },
+    {
+      "id": "page-tencent-hy3-redirect",
+      "url": "https://cloud.tencent.com/announce/detail/2384",
+      "finalUrl": "https://cloud.tencent.com/announce/detail/2384",
+      "publisher": "tencent",
+      "kind": "official-docs",
+      "retrieval": "readable",
+      "summary": "已读取HTTP正文；模型数字只按该页精确型号和接入记录。",
+      "scope": "分别为TokenHub目录/套餐/旧混元产品/旧API；不能跨合同继承。",
+      "contentSha256": "d5689b1dcb4bbd370d1da6ab5bfdd26798ad33ac91fdc169aa429067d186ecaf",
+      "retrievalMethod": "http-body-htmlparser",
+      "contentDigestKind": "htmlparser-visible-text-not-raw-http-bytes"
+    }
+  ],
+  "findings": [
+    {
+      "recordKey": "compute/coding-plans/tencent-token.json#glm-5.1",
+      "modelId": "glm-5.1",
+      "config": "compute/coding-plans/tencent-token.json",
+      "sourceDoc": "docs/model-sources/providers/tencent/models/glm-5.1.md",
+      "outcome": "official-conflict",
+      "sourceIds": [
+        "page-tencent-plan"
+      ],
+      "fieldEvidence": [
+        {
+          "field": "modelName",
+          "currentValue": "glm-5.1",
+          "supportedValue": "glm-5.1",
+          "sourceId": "page-tencent-plan",
+          "assessment": "matches",
+          "explanation": "9/30官方个人套餐精确ID，不从API价格页转入套餐收费。"
+        },
+        {
+          "field": "baseUrl",
+          "currentValue": null,
+          "supportedValue": "https://api.lkeap.cloud.tencent.com/plan/v3",
+          "sourceId": "page-tencent-plan",
+          "assessment": "not-comparable",
+          "explanation": "个人套餐OpenAI兼容端点；需专属套餐账号合同。"
+        },
+        {
+          "field": "access.lifecycle",
+          "currentValue": null,
+          "supportedValue": {
+            "retiredAt": "2026-10-09",
+            "scope": "Token Plan personal"
+          },
+          "sourceId": "page-tencent-plan",
+          "assessment": "differs",
+          "explanation": "套餐官方行注明10/9下线；没有精确时刻，本次不编造。"
+        }
+      ],
+      "remainingFields": [
+        "capabilities"
+      ],
+      "nextAction": "按精确型号和本接入面继续核对；候选证据不自动应用。",
+      "notes": []
+    },
+    {
+      "recordKey": "compute/coding-plans/tencent-token.json#glm-5",
+      "modelId": "glm-5",
+      "config": "compute/coding-plans/tencent-token.json",
+      "sourceDoc": "docs/model-sources/providers/tencent/models/glm-5.md",
+      "outcome": "official-conflict",
+      "sourceIds": [
+        "page-tencent-plan"
+      ],
+      "fieldEvidence": [
+        {
+          "field": "modelName",
+          "currentValue": "glm-5",
+          "supportedValue": "glm-5",
+          "sourceId": "page-tencent-plan",
+          "assessment": "matches",
+          "explanation": "9/30官方个人套餐精确ID，不从API价格页转入套餐收费。"
+        },
+        {
+          "field": "baseUrl",
+          "currentValue": null,
+          "supportedValue": "https://api.lkeap.cloud.tencent.com/plan/v3",
+          "sourceId": "page-tencent-plan",
+          "assessment": "not-comparable",
+          "explanation": "个人套餐OpenAI兼容端点；需专属套餐账号合同。"
+        },
+        {
+          "field": "access.lifecycle",
+          "currentValue": null,
+          "supportedValue": {
+            "retiredAt": "2026-10-09",
+            "scope": "Token Plan personal"
+          },
+          "sourceId": "page-tencent-plan",
+          "assessment": "differs",
+          "explanation": "套餐官方行注明10/9下线；没有精确时刻，本次不编造。"
+        }
+      ],
+      "remainingFields": [
+        "capabilities"
+      ],
+      "nextAction": "按精确型号和本接入面继续核对；候选证据不自动应用。",
+      "notes": []
+    },
+    {
+      "recordKey": "compute/providers/tencent.json#hunyuan-2.0-instruct-20251111",
+      "modelId": "hunyuan-2.0-instruct-20251111",
+      "config": "compute/providers/tencent.json",
+      "sourceDoc": "docs/model-sources/providers/tencent/models/hunyuan-2.0-instruct-20251111.md",
+      "outcome": "still-unresolved",
+      "sourceIds": [],
+      "fieldEvidence": [],
+      "remainingFields": [
+        "contextWindow",
+        "defaultTemperature",
+        "defaultTopP",
+        "extra.pricingTiers",
+        "inputPrice",
+        "maxOutputTokens",
+        "modelName",
+        "outputPrice",
+        "capabilities"
+      ],
+      "nextAction": "优先读旧API到TokenHub的具体型号迁移公告；套餐下架需账号范围确认，历史规格参数勿套用。",
+      "notes": [
+        "旧混元1729产品动态6/22说旧生文版本下线并建议迁TokenHub，但未在这段读到本条逐字清单；不以TokenHub新目录替旧API型号补参数。",
+        "旧原生API文档预计下线12/21且旧控制台9/30下线；控制台/原生API/OpenAI兼容端点是不同范围，不据此封整个hunyuan域。"
+      ]
+    },
+    {
+      "recordKey": "compute/model-specs/tencent.json#hunyuan-2.0-instruct-20251111",
+      "modelId": "hunyuan-2.0-instruct-20251111",
+      "config": "compute/model-specs/tencent.json",
+      "sourceDoc": "docs/model-sources/providers/tencent/models/hunyuan-2.0-instruct-20251111.md",
+      "outcome": "still-unresolved",
+      "sourceIds": [],
+      "fieldEvidence": [],
+      "remainingFields": [
+        "id",
+        "spec.contextWindow",
+        "spec.defaultTemperature",
+        "spec.maxOutputTokens",
+        "spec.capabilities"
+      ],
+      "nextAction": "优先读旧API到TokenHub的具体型号迁移公告；套餐下架需账号范围确认，历史规格参数勿套用。",
+      "notes": [
+        "旧混元1729产品动态6/22说旧生文版本下线并建议迁TokenHub，但未在这段读到本条逐字清单；不以TokenHub新目录替旧API型号补参数。",
+        "旧原生API文档预计下线12/21且旧控制台9/30下线；控制台/原生API/OpenAI兼容端点是不同范围，不据此封整个hunyuan域。"
+      ]
+    },
+    {
+      "recordKey": "compute/coding-plans/tencent-token.json#hunyuan-2.0-instruct",
+      "modelId": "hunyuan-2.0-instruct",
+      "config": "compute/coding-plans/tencent-token.json",
+      "sourceDoc": "docs/model-sources/providers/tencent/models/hunyuan-2.0-instruct.md",
+      "outcome": "still-unresolved",
+      "sourceIds": [],
+      "fieldEvidence": [],
+      "remainingFields": [
+        "modelName",
+        "capabilities"
+      ],
+      "nextAction": "优先读旧API到TokenHub的具体型号迁移公告；套餐下架需账号范围确认，历史规格参数勿套用。",
+      "notes": [
+        "当期套餐正文未再列本精确ID；缺失不等于全域停服。需服务公告或账号目录确认旧别名是否仍路由。"
+      ]
+    },
+    {
+      "recordKey": "compute/providers/tencent.json#hunyuan-2.0-thinking-20251109",
+      "modelId": "hunyuan-2.0-thinking-20251109",
+      "config": "compute/providers/tencent.json",
+      "sourceDoc": "docs/model-sources/providers/tencent/models/hunyuan-2.0-thinking-20251109.md",
+      "outcome": "still-unresolved",
+      "sourceIds": [],
+      "fieldEvidence": [],
+      "remainingFields": [
+        "contextWindow",
+        "defaultTemperature",
+        "defaultTopP",
+        "extra.pricingTiers",
+        "inputPrice",
+        "maxOutputTokens",
+        "modelName",
+        "outputPrice",
+        "capabilities"
+      ],
+      "nextAction": "优先读旧API到TokenHub的具体型号迁移公告；套餐下架需账号范围确认，历史规格参数勿套用。",
+      "notes": [
+        "旧混元1729产品动态6/22说旧生文版本下线并建议迁TokenHub，但未在这段读到本条逐字清单；不以TokenHub新目录替旧API型号补参数。",
+        "旧原生API文档预计下线12/21且旧控制台9/30下线；控制台/原生API/OpenAI兼容端点是不同范围，不据此封整个hunyuan域。"
+      ]
+    },
+    {
+      "recordKey": "compute/model-specs/tencent.json#hunyuan-2.0-thinking-20251109",
+      "modelId": "hunyuan-2.0-thinking-20251109",
+      "config": "compute/model-specs/tencent.json",
+      "sourceDoc": "docs/model-sources/providers/tencent/models/hunyuan-2.0-thinking-20251109.md",
+      "outcome": "still-unresolved",
+      "sourceIds": [],
+      "fieldEvidence": [],
+      "remainingFields": [
+        "id",
+        "spec.contextWindow",
+        "spec.defaultTemperature",
+        "spec.maxOutputTokens",
+        "spec.supportsReasoning",
+        "spec.capabilities"
+      ],
+      "nextAction": "优先读旧API到TokenHub的具体型号迁移公告；套餐下架需账号范围确认，历史规格参数勿套用。",
+      "notes": [
+        "旧混元1729产品动态6/22说旧生文版本下线并建议迁TokenHub，但未在这段读到本条逐字清单；不以TokenHub新目录替旧API型号补参数。",
+        "旧原生API文档预计下线12/21且旧控制台9/30下线；控制台/原生API/OpenAI兼容端点是不同范围，不据此封整个hunyuan域。"
+      ]
+    },
+    {
+      "recordKey": "compute/coding-plans/tencent-token.json#hunyuan-2.0-thinking",
+      "modelId": "hunyuan-2.0-thinking",
+      "config": "compute/coding-plans/tencent-token.json",
+      "sourceDoc": "docs/model-sources/providers/tencent/models/hunyuan-2.0-thinking.md",
+      "outcome": "still-unresolved",
+      "sourceIds": [],
+      "fieldEvidence": [],
+      "remainingFields": [
+        "modelName",
+        "capabilities"
+      ],
+      "nextAction": "优先读旧API到TokenHub的具体型号迁移公告；套餐下架需账号范围确认，历史规格参数勿套用。",
+      "notes": [
+        "当期套餐正文未再列本精确ID；缺失不等于全域停服。需服务公告或账号目录确认旧别名是否仍路由。"
+      ]
+    },
+    {
+      "recordKey": "compute/providers/tencent.json#hunyuan-t1-latest",
+      "modelId": "hunyuan-t1-latest",
+      "config": "compute/providers/tencent.json",
+      "sourceDoc": "docs/model-sources/providers/tencent/models/hunyuan-t1-latest.md",
+      "outcome": "still-unresolved",
+      "sourceIds": [],
+      "fieldEvidence": [],
+      "remainingFields": [
+        "contextWindow",
+        "defaultTemperature",
+        "defaultTopP",
+        "inputPrice",
+        "maxOutputTokens",
+        "modelName",
+        "outputPrice",
+        "capabilities"
+      ],
+      "nextAction": "优先读旧API到TokenHub的具体型号迁移公告；套餐下架需账号范围确认，历史规格参数勿套用。",
+      "notes": [
+        "旧混元1729产品动态6/22说旧生文版本下线并建议迁TokenHub，但未在这段读到本条逐字清单；不以TokenHub新目录替旧API型号补参数。",
+        "旧原生API文档预计下线12/21且旧控制台9/30下线；控制台/原生API/OpenAI兼容端点是不同范围，不据此封整个hunyuan域。"
+      ]
+    },
+    {
+      "recordKey": "compute/model-specs/tencent.json#hunyuan-t1-latest",
+      "modelId": "hunyuan-t1-latest",
+      "config": "compute/model-specs/tencent.json",
+      "sourceDoc": "docs/model-sources/providers/tencent/models/hunyuan-t1-latest.md",
+      "outcome": "still-unresolved",
+      "sourceIds": [],
+      "fieldEvidence": [],
+      "remainingFields": [
+        "id",
+        "spec.contextWindow",
+        "spec.defaultTemperature",
+        "spec.maxOutputTokens",
+        "spec.supportsReasoning",
+        "spec.capabilities"
+      ],
+      "nextAction": "优先读旧API到TokenHub的具体型号迁移公告；套餐下架需账号范围确认，历史规格参数勿套用。",
+      "notes": [
+        "旧混元1729产品动态6/22说旧生文版本下线并建议迁TokenHub，但未在这段读到本条逐字清单；不以TokenHub新目录替旧API型号补参数。",
+        "旧原生API文档预计下线12/21且旧控制台9/30下线；控制台/原生API/OpenAI兼容端点是不同范围，不据此封整个hunyuan域。"
+      ]
+    },
+    {
+      "recordKey": "compute/providers/tencent.json#hunyuan-t1-vision",
+      "modelId": "hunyuan-t1-vision",
+      "config": "compute/providers/tencent.json",
+      "sourceDoc": "docs/model-sources/providers/tencent/models/hunyuan-t1-vision.md",
+      "outcome": "still-unresolved",
+      "sourceIds": [],
+      "fieldEvidence": [],
+      "remainingFields": [
+        "contextWindow",
+        "defaultTemperature",
+        "defaultTopP",
+        "inputPrice",
+        "maxOutputTokens",
+        "modelName",
+        "outputPrice",
+        "capabilities"
+      ],
+      "nextAction": "优先读旧API到TokenHub的具体型号迁移公告；套餐下架需账号范围确认，历史规格参数勿套用。",
+      "notes": [
+        "旧混元1729产品动态6/22说旧生文版本下线并建议迁TokenHub，但未在这段读到本条逐字清单；不以TokenHub新目录替旧API型号补参数。",
+        "旧原生API文档预计下线12/21且旧控制台9/30下线；控制台/原生API/OpenAI兼容端点是不同范围，不据此封整个hunyuan域。"
+      ]
+    },
+    {
+      "recordKey": "compute/model-specs/tencent.json#hunyuan-t1-vision",
+      "modelId": "hunyuan-t1-vision",
+      "config": "compute/model-specs/tencent.json",
+      "sourceDoc": "docs/model-sources/providers/tencent/models/hunyuan-t1-vision.md",
+      "outcome": "still-unresolved",
+      "sourceIds": [],
+      "fieldEvidence": [],
+      "remainingFields": [
+        "id",
+        "spec.contextWindow",
+        "spec.defaultTemperature",
+        "spec.maxOutputTokens",
+        "spec.supportsReasoning",
+        "spec.capabilities"
+      ],
+      "nextAction": "优先读旧API到TokenHub的具体型号迁移公告；套餐下架需账号范围确认，历史规格参数勿套用。",
+      "notes": [
+        "旧混元1729产品动态6/22说旧生文版本下线并建议迁TokenHub，但未在这段读到本条逐字清单；不以TokenHub新目录替旧API型号补参数。",
+        "旧原生API文档预计下线12/21且旧控制台9/30下线；控制台/原生API/OpenAI兼容端点是不同范围，不据此封整个hunyuan域。"
+      ]
+    },
+    {
+      "recordKey": "compute/coding-plans/tencent-token.json#hunyuan-t1",
+      "modelId": "hunyuan-t1",
+      "config": "compute/coding-plans/tencent-token.json",
+      "sourceDoc": "docs/model-sources/providers/tencent/models/hunyuan-t1.md",
+      "outcome": "still-unresolved",
+      "sourceIds": [],
+      "fieldEvidence": [],
+      "remainingFields": [
+        "modelName",
+        "capabilities"
+      ],
+      "nextAction": "优先读旧API到TokenHub的具体型号迁移公告；套餐下架需账号范围确认，历史规格参数勿套用。",
+      "notes": [
+        "当期套餐正文未再列本精确ID；缺失不等于全域停服。需服务公告或账号目录确认旧别名是否仍路由。"
+      ]
+    },
+    {
+      "recordKey": "compute/providers/tencent.json#hunyuan-turbos-latest",
+      "modelId": "hunyuan-turbos-latest",
+      "config": "compute/providers/tencent.json",
+      "sourceDoc": "docs/model-sources/providers/tencent/models/hunyuan-turbos-latest.md",
+      "outcome": "still-unresolved",
+      "sourceIds": [],
+      "fieldEvidence": [],
+      "remainingFields": [
+        "contextWindow",
+        "defaultTemperature",
+        "defaultTopP",
+        "inputPrice",
+        "maxOutputTokens",
+        "modelName",
+        "outputPrice",
+        "capabilities"
+      ],
+      "nextAction": "优先读旧API到TokenHub的具体型号迁移公告；套餐下架需账号范围确认，历史规格参数勿套用。",
+      "notes": [
+        "旧混元1729产品动态6/22说旧生文版本下线并建议迁TokenHub，但未在这段读到本条逐字清单；不以TokenHub新目录替旧API型号补参数。",
+        "旧原生API文档预计下线12/21且旧控制台9/30下线；控制台/原生API/OpenAI兼容端点是不同范围，不据此封整个hunyuan域。"
+      ]
+    },
+    {
+      "recordKey": "compute/model-specs/tencent.json#hunyuan-turbos-latest",
+      "modelId": "hunyuan-turbos-latest",
+      "config": "compute/model-specs/tencent.json",
+      "sourceDoc": "docs/model-sources/providers/tencent/models/hunyuan-turbos-latest.md",
+      "outcome": "still-unresolved",
+      "sourceIds": [],
+      "fieldEvidence": [],
+      "remainingFields": [
+        "id",
+        "spec.contextWindow",
+        "spec.defaultTemperature",
+        "spec.maxOutputTokens",
+        "spec.capabilities"
+      ],
+      "nextAction": "优先读旧API到TokenHub的具体型号迁移公告；套餐下架需账号范围确认，历史规格参数勿套用。",
+      "notes": [
+        "旧混元1729产品动态6/22说旧生文版本下线并建议迁TokenHub，但未在这段读到本条逐字清单；不以TokenHub新目录替旧API型号补参数。",
+        "旧原生API文档预计下线12/21且旧控制台9/30下线；控制台/原生API/OpenAI兼容端点是不同范围，不据此封整个hunyuan域。"
+      ]
+    },
+    {
+      "recordKey": "compute/providers/tencent.json#hunyuan-turbos-vision",
+      "modelId": "hunyuan-turbos-vision",
+      "config": "compute/providers/tencent.json",
+      "sourceDoc": "docs/model-sources/providers/tencent/models/hunyuan-turbos-vision.md",
+      "outcome": "still-unresolved",
+      "sourceIds": [],
+      "fieldEvidence": [],
+      "remainingFields": [
+        "contextWindow",
+        "defaultTemperature",
+        "defaultTopP",
+        "inputPrice",
+        "maxOutputTokens",
+        "modelName",
+        "outputPrice",
+        "capabilities"
+      ],
+      "nextAction": "优先读旧API到TokenHub的具体型号迁移公告；套餐下架需账号范围确认，历史规格参数勿套用。",
+      "notes": [
+        "旧混元1729产品动态6/22说旧生文版本下线并建议迁TokenHub，但未在这段读到本条逐字清单；不以TokenHub新目录替旧API型号补参数。",
+        "旧原生API文档预计下线12/21且旧控制台9/30下线；控制台/原生API/OpenAI兼容端点是不同范围，不据此封整个hunyuan域。"
+      ]
+    },
+    {
+      "recordKey": "compute/model-specs/tencent.json#hunyuan-turbos-vision",
+      "modelId": "hunyuan-turbos-vision",
+      "config": "compute/model-specs/tencent.json",
+      "sourceDoc": "docs/model-sources/providers/tencent/models/hunyuan-turbos-vision.md",
+      "outcome": "still-unresolved",
+      "sourceIds": [],
+      "fieldEvidence": [],
+      "remainingFields": [
+        "id",
+        "spec.contextWindow",
+        "spec.defaultTemperature",
+        "spec.maxOutputTokens",
+        "spec.capabilities"
+      ],
+      "nextAction": "优先读旧API到TokenHub的具体型号迁移公告；套餐下架需账号范围确认，历史规格参数勿套用。",
+      "notes": [
+        "旧混元1729产品动态6/22说旧生文版本下线并建议迁TokenHub，但未在这段读到本条逐字清单；不以TokenHub新目录替旧API型号补参数。",
+        "旧原生API文档预计下线12/21且旧控制台9/30下线；控制台/原生API/OpenAI兼容端点是不同范围，不据此封整个hunyuan域。"
+      ]
+    },
+    {
+      "recordKey": "compute/coding-plans/tencent-token.json#hunyuan-turbos",
+      "modelId": "hunyuan-turbos",
+      "config": "compute/coding-plans/tencent-token.json",
+      "sourceDoc": "docs/model-sources/providers/tencent/models/hunyuan-turbos.md",
+      "outcome": "still-unresolved",
+      "sourceIds": [],
+      "fieldEvidence": [],
+      "remainingFields": [
+        "modelName",
+        "capabilities"
+      ],
+      "nextAction": "优先读旧API到TokenHub的具体型号迁移公告；套餐下架需账号范围确认，历史规格参数勿套用。",
+      "notes": [
+        "当期套餐正文未再列本精确ID；缺失不等于全域停服。需服务公告或账号目录确认旧别名是否仍路由。"
+      ]
+    },
+    {
+      "recordKey": "compute/model-specs/tencent.json#hy3-preview",
+      "modelId": "hy3-preview",
+      "config": "compute/model-specs/tencent.json",
+      "sourceDoc": "docs/model-sources/providers/tencent/models/hy3-preview.md",
+      "outcome": "official-access-only",
+      "sourceIds": [
+        "page-tencent-hy3-redirect"
+      ],
+      "fieldEvidence": [
+        {
+          "field": "access.aliasRouting",
+          "currentValue": null,
+          "supportedValue": {
+            "hy3-preview": "hy3",
+            "effectiveAt": "2026-07-24T14:00:00+08:00",
+            "scope": "Hy Token Plan"
+          },
+          "sourceId": "page-tencent-hy3-redirect",
+          "assessment": "not-comparable",
+          "explanation": "官方通知仅Hy Token Plan；不能直接据此删除原厂Preview或宣称普通API同样路由。"
+        }
+      ],
+      "remainingFields": [
+        "id",
+        "spec.contextWindow",
+        "spec.defaultTemperature",
+        "spec.supportsReasoning",
+        "spec.capabilities"
+      ],
+      "nextAction": "按精确型号和本接入面继续核对；候选证据不自动应用。",
+      "notes": [
+        "official-access-only只说明找到官方接入/产品入口，不计本条精确模型身份或容量已核。"
+      ]
+    },
+    {
+      "recordKey": "compute/model-specs/tencent.json#hy3",
+      "modelId": "hy3",
+      "config": "compute/model-specs/tencent.json",
+      "sourceDoc": "docs/model-sources/providers/tencent/models/hy3.md",
+      "outcome": "official-identity-only",
+      "sourceIds": [
+        "page-tencent-model-list"
+      ],
+      "fieldEvidence": [
+        {
+          "field": "id",
+          "currentValue": "hy3",
+          "supportedValue": "hy3",
+          "sourceId": "page-tencent-model-list",
+          "assessment": "matches",
+          "explanation": "9月TokenHub模型目录精确ID；原厂Spec与TokenHub开放范围分别确认。"
+        },
+        {
+          "field": "spec.contextWindow",
+          "currentValue": 262144,
+          "supportedValue": "256k",
+          "sourceId": "page-tencent-model-list",
+          "assessment": "not-comparable",
+          "explanation": "目录原文K/M未本轮换算，托管输入与总窗口独立。"
+        },
+        {
+          "field": "spec.maxInputTokens",
+          "currentValue": null,
+          "supportedValue": "192k",
+          "sourceId": "page-tencent-model-list",
+          "assessment": "not-comparable",
+          "explanation": "目录原文K/M未本轮换算，托管输入与总窗口独立。"
+        },
+        {
+          "field": "spec.maxOutputTokens",
+          "currentValue": 128000,
+          "supportedValue": "128k",
+          "sourceId": "page-tencent-model-list",
+          "assessment": "not-comparable",
+          "explanation": "目录原文K/M未本轮换算，托管输入与总窗口独立。"
+        }
+      ],
+      "remainingFields": [
+        "spec.contextWindow",
+        "spec.defaultTemperature",
+        "spec.maxOutputTokens",
+        "spec.supportsReasoning",
+        "spec.capabilities"
+      ],
+      "nextAction": "按精确型号和本接入面继续核对；候选证据不自动应用。",
+      "notes": []
+    },
+    {
+      "recordKey": "compute/model-specs/tencent.json#hy4-preview",
+      "modelId": "hy4-preview",
+      "config": "compute/model-specs/tencent.json",
+      "sourceDoc": "docs/model-sources/providers/tencent/models/hy4-preview.md",
+      "outcome": "official-identity-only",
+      "sourceIds": [
+        "page-tencent-model-list"
+      ],
+      "fieldEvidence": [
+        {
+          "field": "id",
+          "currentValue": "hy4-preview",
+          "supportedValue": "hy4-preview",
+          "sourceId": "page-tencent-model-list",
+          "assessment": "matches",
+          "explanation": "9月TokenHub模型目录精确ID；原厂Spec与TokenHub开放范围分别确认。"
+        },
+        {
+          "field": "spec.contextWindow",
+          "currentValue": 1048576,
+          "supportedValue": "1M",
+          "sourceId": "page-tencent-model-list",
+          "assessment": "not-comparable",
+          "explanation": "目录原文K/M未本轮换算，托管输入与总窗口独立。"
+        },
+        {
+          "field": "spec.maxInputTokens",
+          "currentValue": null,
+          "supportedValue": "960k",
+          "sourceId": "page-tencent-model-list",
+          "assessment": "not-comparable",
+          "explanation": "目录原文K/M未本轮换算，托管输入与总窗口独立。"
+        },
+        {
+          "field": "spec.maxOutputTokens",
+          "currentValue": null,
+          "supportedValue": "64k",
+          "sourceId": "page-tencent-model-list",
+          "assessment": "not-comparable",
+          "explanation": "目录原文K/M未本轮换算，托管输入与总窗口独立。"
+        }
+      ],
+      "remainingFields": [
+        "spec.contextWindow",
+        "spec.capabilities"
+      ],
+      "nextAction": "按精确型号和本接入面继续核对；候选证据不自动应用。",
+      "notes": []
+    },
+    {
+      "recordKey": "compute/coding-plans/tencent-token.json#kimi-k2.5",
+      "modelId": "kimi-k2.5",
+      "config": "compute/coding-plans/tencent-token.json",
+      "sourceDoc": "docs/model-sources/providers/tencent/models/kimi-k2.5.md",
+      "outcome": "still-unresolved",
+      "sourceIds": [],
+      "fieldEvidence": [],
+      "remainingFields": [
+        "modelName",
+        "capabilities"
+      ],
+      "nextAction": "优先读旧API到TokenHub的具体型号迁移公告；套餐下架需账号范围确认，历史规格参数勿套用。",
+      "notes": [
+        "当期套餐正文未再列本精确ID；缺失不等于全域停服。需服务公告或账号目录确认旧别名是否仍路由。"
+      ]
+    },
+    {
+      "recordKey": "compute/coding-plans/tencent-token.json#minimax-m2.5",
+      "modelId": "minimax-m2.5",
+      "config": "compute/coding-plans/tencent-token.json",
+      "sourceDoc": "docs/model-sources/providers/tencent/models/minimax-m2.5.md",
+      "outcome": "still-unresolved",
+      "sourceIds": [],
+      "fieldEvidence": [],
+      "remainingFields": [
+        "modelName",
+        "capabilities"
+      ],
+      "nextAction": "优先读旧API到TokenHub的具体型号迁移公告；套餐下架需账号范围确认，历史规格参数勿套用。",
+      "notes": [
+        "当期套餐正文未再列本精确ID；缺失不等于全域停服。需服务公告或账号目录确认旧别名是否仍路由。"
+      ]
+    },
+    {
+      "recordKey": "compute/coding-plans/tencent-token.json#minimax-m2.7",
+      "modelId": "minimax-m2.7",
+      "config": "compute/coding-plans/tencent-token.json",
+      "sourceDoc": "docs/model-sources/providers/tencent/models/minimax-m2.7.md",
+      "outcome": "official-identity-only",
+      "sourceIds": [
+        "page-tencent-plan"
+      ],
+      "fieldEvidence": [
+        {
+          "field": "modelName",
+          "currentValue": "minimax-m2.7",
+          "supportedValue": "minimax-m2.7",
+          "sourceId": "page-tencent-plan",
+          "assessment": "matches",
+          "explanation": "9/30官方个人套餐精确ID，不从API价格页转入套餐收费。"
+        },
+        {
+          "field": "baseUrl",
+          "currentValue": null,
+          "supportedValue": "https://api.lkeap.cloud.tencent.com/plan/v3",
+          "sourceId": "page-tencent-plan",
+          "assessment": "not-comparable",
+          "explanation": "个人套餐OpenAI兼容端点；需专属套餐账号合同。"
+        }
+      ],
+      "remainingFields": [
+        "capabilities"
+      ],
+      "nextAction": "按精确型号和本接入面继续核对；候选证据不自动应用。",
+      "notes": []
+    },
+    {
+      "recordKey": "compute/coding-plans/tencent-token.json#tc-code-latest",
+      "modelId": "tc-code-latest",
+      "config": "compute/coding-plans/tencent-token.json",
+      "sourceDoc": "docs/model-sources/providers/tencent/models/tc-code-latest.md",
+      "outcome": "official-identity-only",
+      "sourceIds": [
+        "page-tencent-plan"
+      ],
+      "fieldEvidence": [
+        {
+          "field": "modelName",
+          "currentValue": "tc-code-latest",
+          "supportedValue": "tc-code-latest",
+          "sourceId": "page-tencent-plan",
+          "assessment": "matches",
+          "explanation": "9/30官方个人套餐精确ID，不从API价格页转入套餐收费。"
+        },
+        {
+          "field": "baseUrl",
+          "currentValue": null,
+          "supportedValue": "https://api.lkeap.cloud.tencent.com/plan/v3",
+          "sourceId": "page-tencent-plan",
+          "assessment": "not-comparable",
+          "explanation": "个人套餐OpenAI兼容端点；需专属套餐账号合同。"
+        }
+      ],
+      "remainingFields": [
+        "capabilities"
+      ],
+      "nextAction": "按精确型号和本接入面继续核对；候选证据不自动应用。",
+      "notes": []
+    }
+  ],
+  "coverage": {
+    "records": 25,
+    "outcomes": {
+      "official-conflict": 2,
+      "still-unresolved": 18,
+      "official-access-only": 1,
+      "official-identity-only": 4
+    },
+    "unchangedConfig": true,
+    "accountCallsPerformed": false
+  }
+}

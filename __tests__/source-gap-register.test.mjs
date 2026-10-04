@@ -23,7 +23,7 @@ test('an edited register cannot silently diverge from field evidence', () => {
   const root = mkdtempSync(join(tmpdir(), 'source-gaps-'))
   const repo = fileURLToPath(new URL('../', import.meta.url))
   try {
-    for (const path of ['compute', 'docs/model-sources', 'docs/source-gaps']) cpSync(join(repo, path), join(root, path), { recursive: true })
+    for (const path of ['compute', 'docs/model-sources', 'docs/source-gaps', 'docs/source-rechecks']) cpSync(join(repo, path), join(root, path), { recursive: true })
     rmSync(join(root, 'docs/model-sources/providers/github-copilot/models'), { recursive: true, force: true })
     assert.deepEqual(syncRegister(root, true).errors, [])
     appendFileSync(join(root, 'docs/source-gaps/providers/openai.md'), '\nIncorrect manual verification claim\n')

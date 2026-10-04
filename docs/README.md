@@ -11,3 +11,5 @@
 - [运行时官方来源](runtime-sources/README.md)
 - [官网缺失与来源不明独立清单](source-gaps/README.md)
 - [旧字段迁移、版本门控、域名退役与规格优化 PLAN](plans/catalog-contract-migration/PLAN.md)
+
+- [2026-10-04 来源重新检索与统一复核](source-rechecks/2026-10-04/README.md)

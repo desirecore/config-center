@@ -1,0 +1,315 @@
+{
+  "supplier": "perplexity",
+  "checkedAt": "2026-10-04",
+  "sources": [
+    {
+      "id": "perplexity-9ed2d545486b",
+      "url": "https://docs.perplexity.ai/docs/agent-api/migrate-from-sonar/overview",
+      "finalUrl": "https://docs.perplexity.ai/docs/agent-api/migrate-from-sonar/overview",
+      "publisher": "Perplexity",
+      "kind": "official-docs",
+      "retrieval": "readable",
+      "summary": "正文已读取；仅用于下方逐字段列明的证据，读取成功不代表全规格核实。",
+      "scope": "该官网文档明确列出的模型/API；不扩展到其他接入面。"
+    },
+    {
+      "id": "perplexity-bbb973120d73",
+      "url": "https://docs.perplexity.ai/getting-started/models/models/sonar",
+      "finalUrl": "https://docs.perplexity.ai/docs/agent-api/migrate-from-sonar/overview",
+      "publisher": "Perplexity",
+      "kind": "official-docs",
+      "retrieval": "readable",
+      "summary": "正文已读取；仅用于下方逐字段列明的证据，读取成功不代表全规格核实。",
+      "scope": "该官网文档明确列出的模型/API；不扩展到其他接入面。"
+    },
+    {
+      "id": "perplexity-1206d983ba8d",
+      "url": "https://docs.perplexity.ai/getting-started/models/models/sonar-pro",
+      "finalUrl": "https://docs.perplexity.ai/docs/agent-api/migrate-from-sonar/overview",
+      "publisher": "Perplexity",
+      "kind": "official-docs",
+      "retrieval": "readable",
+      "summary": "正文已读取；仅用于下方逐字段列明的证据，读取成功不代表全规格核实。",
+      "scope": "该官网文档明确列出的模型/API；不扩展到其他接入面。"
+    },
+    {
+      "id": "perplexity-dd781f6a6830",
+      "url": "https://docs.perplexity.ai/getting-started/models/models/sonar-reasoning-pro",
+      "finalUrl": "https://docs.perplexity.ai/docs/agent-api/migrate-from-sonar/overview",
+      "publisher": "Perplexity",
+      "kind": "official-docs",
+      "retrieval": "readable",
+      "summary": "正文已读取；仅用于下方逐字段列明的证据，读取成功不代表全规格核实。",
+      "scope": "该官网文档明确列出的模型/API；不扩展到其他接入面。"
+    },
+    {
+      "id": "perplexity-1e37729ca50c",
+      "url": "https://docs.perplexity.ai/docs/agent-api/migrate-from-sonar/overview.md",
+      "finalUrl": "https://docs.perplexity.ai/docs/agent-api/migrate-from-sonar/overview.md",
+      "publisher": "Perplexity",
+      "kind": "official-docs",
+      "retrieval": "readable",
+      "summary": "正文已读取；仅用于下方逐字段列明的证据，读取成功不代表全规格核实。",
+      "scope": "该官网文档明确列出的模型/API；不扩展到其他接入面。"
+    },
+    {
+      "id": "perplexity-1bc53630033a",
+      "url": "https://docs.perplexity.ai/docs/getting-started/pricing.md",
+      "finalUrl": "https://docs.perplexity.ai/docs/getting-started/pricing.md",
+      "publisher": "Perplexity",
+      "kind": "official-docs",
+      "retrieval": "readable",
+      "summary": "正文已读取；仅用于下方逐字段列明的证据，读取成功不代表全规格核实。",
+      "scope": "该官网文档明确列出的模型/API；不扩展到其他接入面。"
+    }
+  ],
+  "findings": [
+    {
+      "recordKey": "compute/providers/perplexity.json#sonar-pro",
+      "modelId": "sonar-pro",
+      "config": "compute/providers/perplexity.json",
+      "sourceDoc": "docs/model-sources/providers/perplexity/models/sonar-pro.md",
+      "outcome": "official-conflict",
+      "sourceIds": [
+        "perplexity-bbb973120d73",
+        "perplexity-9ed2d545486b",
+        "perplexity-1206d983ba8d"
+      ],
+      "fieldEvidence": [
+        {
+          "field": "accessAvailability",
+          "currentValue": null,
+          "supportedValue": {
+            "sonarChatCompletionsSupportEnded": "2026-09-27",
+            "syncAndStreaming": "reformulated-gradually-to-AgentAPI",
+            "async": "unsupported",
+            "preset": "fast"
+          },
+          "sourceId": "perplexity-bbb973120d73",
+          "assessment": "not-comparable",
+          "explanation": "官方迁移说明明确同步/流式兼容与异步停用区别，不证明旧token窗口/价格仍生效。"
+        }
+      ],
+      "remainingFields": [
+        "contextWindow",
+        "currentAccessContract",
+        "currentContextWindow",
+        "currentPricing",
+        "extra.requestPricingPer1k.high",
+        "extra.requestPricingPer1k.low",
+        "extra.requestPricingPer1k.medium",
+        "inputPrice",
+        "maxOutputTokens",
+        "modelName",
+        "outputPrice"
+      ],
+      "nextAction": "逐字段审查上表候选；只有同一接入合同且语义/单位一致的证据才用于后续canonical更新。 剩余字段需精确型号页/官方API schema或已授权账号目录核查，不推导默认值。",
+      "notes": [
+        "旧规格页最终跳转官方Agent迁移指南；原模型名称仅历史入口/重写路由。不能把域名有响应或旧套餐归为完整参数已核；需查Agentpreset最终model及pricing。"
+      ]
+    },
+    {
+      "recordKey": "compute/model-specs/perplexity.json#sonar-pro",
+      "modelId": "sonar-pro",
+      "config": "compute/model-specs/perplexity.json",
+      "sourceDoc": "docs/model-sources/providers/perplexity/models/sonar-pro.md",
+      "outcome": "official-conflict",
+      "sourceIds": [
+        "perplexity-bbb973120d73",
+        "perplexity-9ed2d545486b",
+        "perplexity-1206d983ba8d"
+      ],
+      "fieldEvidence": [
+        {
+          "field": "spec.accessAvailability",
+          "currentValue": null,
+          "supportedValue": {
+            "sonarChatCompletionsSupportEnded": "2026-09-27",
+            "syncAndStreaming": "reformulated-gradually-to-AgentAPI",
+            "async": "unsupported",
+            "preset": "fast"
+          },
+          "sourceId": "perplexity-bbb973120d73",
+          "assessment": "not-comparable",
+          "explanation": "官方迁移说明明确同步/流式兼容与异步停用区别，不证明旧token窗口/价格仍生效。"
+        }
+      ],
+      "remainingFields": [
+        "currentAccessContract",
+        "currentContextWindow",
+        "currentPricing",
+        "id",
+        "spec.contextWindow",
+        "spec.maxOutputTokens"
+      ],
+      "nextAction": "逐字段审查上表候选；只有同一接入合同且语义/单位一致的证据才用于后续canonical更新。 剩余字段需精确型号页/官方API schema或已授权账号目录核查，不推导默认值。",
+      "notes": [
+        "旧规格页最终跳转官方Agent迁移指南；原模型名称仅历史入口/重写路由。不能把域名有响应或旧套餐归为完整参数已核；需查Agentpreset最终model及pricing。"
+      ]
+    },
+    {
+      "recordKey": "compute/providers/perplexity.json#sonar-reasoning-pro",
+      "modelId": "sonar-reasoning-pro",
+      "config": "compute/providers/perplexity.json",
+      "sourceDoc": "docs/model-sources/providers/perplexity/models/sonar-reasoning-pro.md",
+      "outcome": "official-conflict",
+      "sourceIds": [
+        "perplexity-bbb973120d73",
+        "perplexity-9ed2d545486b",
+        "perplexity-dd781f6a6830"
+      ],
+      "fieldEvidence": [
+        {
+          "field": "accessAvailability",
+          "currentValue": null,
+          "supportedValue": {
+            "sonarChatCompletionsSupportEnded": "2026-09-27",
+            "syncAndStreaming": "reformulated-gradually-to-AgentAPI",
+            "async": "unsupported",
+            "preset": "low"
+          },
+          "sourceId": "perplexity-bbb973120d73",
+          "assessment": "not-comparable",
+          "explanation": "官方迁移说明明确同步/流式兼容与异步停用区别，不证明旧token窗口/价格仍生效。"
+        }
+      ],
+      "remainingFields": [
+        "contextWindow",
+        "currentAccessContract",
+        "currentContextWindow",
+        "currentPricing",
+        "extra.requestPricingPer1k.high",
+        "extra.requestPricingPer1k.low",
+        "extra.requestPricingPer1k.medium",
+        "inputPrice",
+        "maxOutputTokens",
+        "modelName",
+        "outputPrice"
+      ],
+      "nextAction": "逐字段审查上表候选；只有同一接入合同且语义/单位一致的证据才用于后续canonical更新。 剩余字段需精确型号页/官方API schema或已授权账号目录核查，不推导默认值。",
+      "notes": [
+        "旧规格页最终跳转官方Agent迁移指南；原模型名称仅历史入口/重写路由。不能把域名有响应或旧套餐归为完整参数已核；需查Agentpreset最终model及pricing。"
+      ]
+    },
+    {
+      "recordKey": "compute/model-specs/perplexity.json#sonar-reasoning-pro",
+      "modelId": "sonar-reasoning-pro",
+      "config": "compute/model-specs/perplexity.json",
+      "sourceDoc": "docs/model-sources/providers/perplexity/models/sonar-reasoning-pro.md",
+      "outcome": "official-conflict",
+      "sourceIds": [
+        "perplexity-bbb973120d73",
+        "perplexity-9ed2d545486b",
+        "perplexity-dd781f6a6830"
+      ],
+      "fieldEvidence": [
+        {
+          "field": "spec.accessAvailability",
+          "currentValue": null,
+          "supportedValue": {
+            "sonarChatCompletionsSupportEnded": "2026-09-27",
+            "syncAndStreaming": "reformulated-gradually-to-AgentAPI",
+            "async": "unsupported",
+            "preset": "low"
+          },
+          "sourceId": "perplexity-bbb973120d73",
+          "assessment": "not-comparable",
+          "explanation": "官方迁移说明明确同步/流式兼容与异步停用区别，不证明旧token窗口/价格仍生效。"
+        }
+      ],
+      "remainingFields": [
+        "currentAccessContract",
+        "currentContextWindow",
+        "currentPricing",
+        "id",
+        "spec.contextWindow",
+        "spec.defaultTemperature",
+        "spec.maxOutputTokens",
+        "spec.supportsReasoning"
+      ],
+      "nextAction": "逐字段审查上表候选；只有同一接入合同且语义/单位一致的证据才用于后续canonical更新。 剩余字段需精确型号页/官方API schema或已授权账号目录核查，不推导默认值。",
+      "notes": [
+        "旧规格页最终跳转官方Agent迁移指南；原模型名称仅历史入口/重写路由。不能把域名有响应或旧套餐归为完整参数已核；需查Agentpreset最终model及pricing。"
+      ]
+    },
+    {
+      "recordKey": "compute/providers/perplexity.json#sonar",
+      "modelId": "sonar",
+      "config": "compute/providers/perplexity.json",
+      "sourceDoc": "docs/model-sources/providers/perplexity/models/sonar.md",
+      "outcome": "official-conflict",
+      "sourceIds": [
+        "perplexity-bbb973120d73",
+        "perplexity-9ed2d545486b"
+      ],
+      "fieldEvidence": [
+        {
+          "field": "accessAvailability",
+          "currentValue": null,
+          "supportedValue": {
+            "sonarChatCompletionsSupportEnded": "2026-09-27",
+            "syncAndStreaming": "reformulated-gradually-to-AgentAPI",
+            "async": "unsupported",
+            "preset": "fast"
+          },
+          "sourceId": "perplexity-bbb973120d73",
+          "assessment": "not-comparable",
+          "explanation": "官方迁移说明明确同步/流式兼容与异步停用区别，不证明旧token窗口/价格仍生效。"
+        }
+      ],
+      "remainingFields": [
+        "contextWindow",
+        "currentAccessContract",
+        "currentContextWindow",
+        "currentPricing",
+        "extra.requestPricingPer1k.high",
+        "extra.requestPricingPer1k.low",
+        "extra.requestPricingPer1k.medium",
+        "inputPrice",
+        "maxOutputTokens",
+        "outputPrice"
+      ],
+      "nextAction": "逐字段审查上表候选；只有同一接入合同且语义/单位一致的证据才用于后续canonical更新。 剩余字段需精确型号页/官方API schema或已授权账号目录核查，不推导默认值。",
+      "notes": [
+        "旧规格页最终跳转官方Agent迁移指南；原模型名称仅历史入口/重写路由。不能把域名有响应或旧套餐归为完整参数已核；需查Agentpreset最终model及pricing。"
+      ]
+    },
+    {
+      "recordKey": "compute/model-specs/perplexity.json#sonar",
+      "modelId": "sonar",
+      "config": "compute/model-specs/perplexity.json",
+      "sourceDoc": "docs/model-sources/providers/perplexity/models/sonar.md",
+      "outcome": "official-conflict",
+      "sourceIds": [
+        "perplexity-bbb973120d73",
+        "perplexity-9ed2d545486b"
+      ],
+      "fieldEvidence": [
+        {
+          "field": "spec.accessAvailability",
+          "currentValue": null,
+          "supportedValue": {
+            "sonarChatCompletionsSupportEnded": "2026-09-27",
+            "syncAndStreaming": "reformulated-gradually-to-AgentAPI",
+            "async": "unsupported",
+            "preset": "fast"
+          },
+          "sourceId": "perplexity-bbb973120d73",
+          "assessment": "not-comparable",
+          "explanation": "官方迁移说明明确同步/流式兼容与异步停用区别，不证明旧token窗口/价格仍生效。"
+        }
+      ],
+      "remainingFields": [
+        "currentAccessContract",
+        "currentContextWindow",
+        "currentPricing",
+        "spec.contextWindow",
+        "spec.maxOutputTokens"
+      ],
+      "nextAction": "逐字段审查上表候选；只有同一接入合同且语义/单位一致的证据才用于后续canonical更新。 剩余字段需精确型号页/官方API schema或已授权账号目录核查，不推导默认值。",
+      "notes": [
+        "旧规格页最终跳转官方Agent迁移指南；原模型名称仅历史入口/重写路由。不能把域名有响应或旧套餐归为完整参数已核；需查Agentpreset最终model及pricing。"
+      ]
+    }
+  ]
+}

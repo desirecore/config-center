@@ -1,0 +1,618 @@
+{
+  "supplier": "deepseek",
+  "checkedAt": "2026-10-04",
+  "sources": [
+    {
+      "id": "deepseek-pricing",
+      "url": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+      "finalUrl": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+      "publisher": "deepseek",
+      "kind": "official-docs",
+      "scope": "只适用于页面明确的原厂/地域/接入，套餐和聚合合同独立",
+      "contentSha256": "5a7b1832592387340f2fc456399b34b89b05f3fa167c2e35909e2fa4afe021e3",
+      "retrieval": "readable",
+      "summary": "实际读取22232字符，可见正文1483字符；需逐精确ID定位，HTTP成功不代表字段已证。",
+      "digestKind": "sha256-utf8-decoded-response-body",
+      "retrievalMethod": "urllib.request HTTPS response read; bytes decoded as UTF-8 with replacement, SHA-256 over decoded text re-encoded as UTF-8 before visible-text extraction; full HTML/Markdown/JSON body, not a raw-byte digest or vendor signature"
+    },
+    {
+      "id": "deepseek-thinking",
+      "url": "https://api-docs.deepseek.com/guides/thinking_mode/",
+      "finalUrl": "https://api-docs.deepseek.com/guides/thinking_mode/",
+      "publisher": "deepseek",
+      "kind": "official-docs",
+      "scope": "只适用于页面明确的原厂/地域/接入，套餐和聚合合同独立",
+      "contentSha256": "35350389e59872d3733f7b7f99f5485c6cbc95f1bc2a71a47ba3ecf30bd7a060",
+      "retrieval": "readable",
+      "summary": "实际读取113644字符，可见正文11939字符；需逐精确ID定位，HTTP成功不代表字段已证。",
+      "digestKind": "sha256-utf8-decoded-response-body",
+      "retrievalMethod": "urllib.request HTTPS response read; bytes decoded as UTF-8 with replacement, SHA-256 over decoded text re-encoded as UTF-8 before visible-text extraction; full HTML/Markdown/JSON body, not a raw-byte digest or vendor signature"
+    },
+    {
+      "id": "deepseek-models",
+      "url": "https://api-docs.deepseek.com/api/list-models",
+      "finalUrl": "https://api-docs.deepseek.com/api/list-models/",
+      "publisher": "deepseek",
+      "kind": "official-docs",
+      "scope": "只适用于页面明确的原厂/地域/接入，套餐和聚合合同独立",
+      "contentSha256": "41551c3c498a93b6e6459eaeee89829940ca8acf999b24436a38a2231c7e091b",
+      "retrieval": "readable",
+      "summary": "实际读取39282字符，可见正文4402字符；需逐精确ID定位，HTTP成功不代表字段已证。",
+      "digestKind": "sha256-utf8-decoded-response-body",
+      "retrievalMethod": "urllib.request HTTPS response read; bytes decoded as UTF-8 with replacement, SHA-256 over decoded text re-encoded as UTF-8 before visible-text extraction; full HTML/Markdown/JSON body, not a raw-byte digest or vendor signature"
+    }
+  ],
+  "findings": [
+    {
+      "recordKey": "compute/model-specs/deepseek.json#deepseek-chat",
+      "modelId": "deepseek-chat",
+      "config": "compute/model-specs/deepseek.json",
+      "sourceDoc": "docs/model-sources/providers/deepseek/models/deepseek-chat.md",
+      "outcome": "still-unresolved",
+      "sourceIds": [
+        "deepseek-pricing",
+        "deepseek-thinking",
+        "deepseek-models"
+      ],
+      "fieldEvidence": [],
+      "remainingFields": [
+        "id",
+        "spec.contextWindow",
+        "spec.defaultTemperature",
+        "spec.maxOutputTokens",
+        "spec.capabilities",
+        "spec.serviceType"
+      ],
+      "nextAction": "人工逐字段复核本次候选；只将matches且精确接入适用的字段迁入原来源文档，differs先审单位/阶梯/产品默认；缺项需精确模型页、官方版本卡或授权目录，不猜填。",
+      "notes": [
+        "当前价签未逐精确旧版本给参数/退出时间，不能用新Flash参数替代历史身份。"
+      ],
+      "originalStatus": "pending",
+      "originalGap": "pending"
+    },
+    {
+      "recordKey": "compute/providers/deepseek.json#deepseek-flash",
+      "modelId": "deepseek-flash",
+      "config": "compute/providers/deepseek.json",
+      "sourceDoc": "docs/model-sources/providers/deepseek/models/deepseek-flash.md",
+      "outcome": "official-fields-found",
+      "sourceIds": [
+        "deepseek-pricing"
+      ],
+      "fieldEvidence": [
+        {
+          "field": "modelName",
+          "currentValue": "deepseek-flash",
+          "supportedValue": "deepseek-flash",
+          "sourceId": "deepseek-pricing",
+          "assessment": "matches",
+          "explanation": "本轮正文定位精确标识；只确认该标识在其来源合同出现，不证明其他字段或不同套餐可用性。"
+        },
+        {
+          "field": "contextWindow",
+          "currentValue": 1000000,
+          "supportedValue": "1M",
+          "sourceId": "deepseek-pricing",
+          "assessment": "not-comparable",
+          "explanation": "价格页使用1M简写，无本次明文整数；不能凭简写把1000000与1048576的差异消除。"
+        },
+        {
+          "field": "maxOutputTokens",
+          "currentValue": 384000,
+          "supportedValue": "384K",
+          "sourceId": "deepseek-pricing",
+          "assessment": "not-comparable",
+          "explanation": "当前API写最大384K，输入/输出均为简写，保留单位换算待核。"
+        },
+        {
+          "field": "inputPrice",
+          "currentValue": 1,
+          "supportedValue": 1,
+          "sourceId": "deepseek-pricing",
+          "assessment": "matches",
+          "explanation": "空闲时段CNY/百万token，与本仓默认价对应；高峰2/8/.04应保留独立阶梯，不把高峰与空闲标量当冲突。"
+        },
+        {
+          "field": "outputPrice",
+          "currentValue": 4,
+          "supportedValue": 4,
+          "sourceId": "deepseek-pricing",
+          "assessment": "matches",
+          "explanation": "空闲时段CNY/百万token，与本仓默认价对应；高峰2/8/.04应保留独立阶梯，不把高峰与空闲标量当冲突。"
+        },
+        {
+          "field": "extra.cacheHitPrice",
+          "currentValue": 0.02,
+          "supportedValue": 0.02,
+          "sourceId": "deepseek-pricing",
+          "assessment": "matches",
+          "explanation": "空闲时段CNY/百万token，与本仓默认价对应；高峰2/8/.04应保留独立阶梯，不把高峰与空闲标量当冲突。"
+        }
+      ],
+      "remainingFields": [
+        "defaultTemperature",
+        "defaultTopP",
+        "extra.pricingTiers",
+        "capabilities",
+        "serviceType",
+        "access.maxInputTokens",
+        "access.protocol-readiness"
+      ],
+      "nextAction": "人工逐字段复核本次候选；只将matches且精确接入适用的字段迁入原来源文档，differs先审单位/阶梯/产品默认；缺项需精确模型页、官方版本卡或授权目录，不猜填。",
+      "notes": [
+        "本轮未在可读页面定位完整精确型号合同；缺失不判定停服。"
+      ],
+      "originalStatus": "partial",
+      "originalGap": "partial"
+    },
+    {
+      "recordKey": "compute/model-specs/deepseek.json#deepseek-flash",
+      "modelId": "deepseek-flash",
+      "config": "compute/model-specs/deepseek.json",
+      "sourceDoc": "docs/model-sources/providers/deepseek/models/deepseek-flash.md",
+      "outcome": "official-identity-only",
+      "sourceIds": [
+        "deepseek-pricing"
+      ],
+      "fieldEvidence": [
+        {
+          "field": "id",
+          "currentValue": "deepseek-flash",
+          "supportedValue": "deepseek-flash",
+          "sourceId": "deepseek-pricing",
+          "assessment": "matches",
+          "explanation": "本轮正文定位精确标识；只确认该标识在其来源合同出现，不证明其他字段或不同套餐可用性。"
+        },
+        {
+          "field": "spec.contextWindow",
+          "currentValue": 1000000,
+          "supportedValue": "1M",
+          "sourceId": "deepseek-pricing",
+          "assessment": "not-comparable",
+          "explanation": "价格页使用1M简写，无本次明文整数；不能凭简写把1000000与1048576的差异消除。"
+        },
+        {
+          "field": "spec.maxOutputTokens",
+          "currentValue": 384000,
+          "supportedValue": "384K",
+          "sourceId": "deepseek-pricing",
+          "assessment": "not-comparable",
+          "explanation": "当前API写最大384K，输入/输出均为简写，保留单位换算待核。"
+        }
+      ],
+      "remainingFields": [
+        "spec.defaultTemperature",
+        "spec.supportsReasoning",
+        "spec.capabilities",
+        "spec.serviceType"
+      ],
+      "nextAction": "人工逐字段复核本次候选；只将matches且精确接入适用的字段迁入原来源文档，differs先审单位/阶梯/产品默认；缺项需精确模型页、官方版本卡或授权目录，不猜填。",
+      "notes": [
+        "本轮未在可读页面定位完整精确型号合同；缺失不判定停服。"
+      ],
+      "originalStatus": "partial",
+      "originalGap": "partial"
+    },
+    {
+      "recordKey": "compute/model-specs/deepseek.json#deepseek-reasoner",
+      "modelId": "deepseek-reasoner",
+      "config": "compute/model-specs/deepseek.json",
+      "sourceDoc": "docs/model-sources/providers/deepseek/models/deepseek-reasoner.md",
+      "outcome": "still-unresolved",
+      "sourceIds": [
+        "deepseek-pricing",
+        "deepseek-thinking",
+        "deepseek-models"
+      ],
+      "fieldEvidence": [],
+      "remainingFields": [
+        "id",
+        "spec.contextWindow",
+        "spec.defaultTemperature",
+        "spec.maxOutputTokens",
+        "spec.supportsReasoning",
+        "spec.capabilities",
+        "spec.serviceType"
+      ],
+      "nextAction": "人工逐字段复核本次候选；只将matches且精确接入适用的字段迁入原来源文档，differs先审单位/阶梯/产品默认；缺项需精确模型页、官方版本卡或授权目录，不猜填。",
+      "notes": [
+        "当前价签未逐精确旧版本给参数/退出时间，不能用新Flash参数替代历史身份。"
+      ],
+      "originalStatus": "pending",
+      "originalGap": "pending"
+    },
+    {
+      "recordKey": "compute/model-specs/deepseek.json#deepseek-v4-flash-0731",
+      "modelId": "deepseek-v4-flash-0731",
+      "config": "compute/model-specs/deepseek.json",
+      "sourceDoc": "docs/model-sources/providers/deepseek/models/deepseek-v4-flash-0731.md",
+      "outcome": "still-unresolved",
+      "sourceIds": [
+        "deepseek-pricing",
+        "deepseek-thinking",
+        "deepseek-models"
+      ],
+      "fieldEvidence": [],
+      "remainingFields": [
+        "id",
+        "spec.contextWindow",
+        "spec.defaultTemperature",
+        "spec.maxOutputTokens",
+        "spec.supportsReasoning",
+        "spec.capabilities",
+        "spec.serviceType"
+      ],
+      "nextAction": "人工逐字段复核本次候选；只将matches且精确接入适用的字段迁入原来源文档，differs先审单位/阶梯/产品默认；缺项需精确模型页、官方版本卡或授权目录，不猜填。",
+      "notes": [
+        "当前价签未逐精确旧版本给参数/退出时间，不能用新Flash参数替代历史身份。"
+      ],
+      "originalStatus": "pending",
+      "originalGap": "pending"
+    },
+    {
+      "recordKey": "compute/providers/deepseek.json#deepseek-v4-flash-vision-exp",
+      "modelId": "deepseek-v4-flash-vision-exp",
+      "config": "compute/providers/deepseek.json",
+      "sourceDoc": "docs/model-sources/providers/deepseek/models/deepseek-v4-flash-vision-exp.md",
+      "outcome": "official-identity-only",
+      "sourceIds": [
+        "deepseek-pricing"
+      ],
+      "fieldEvidence": [
+        {
+          "field": "modelName",
+          "currentValue": "deepseek-v4-flash-vision-exp",
+          "supportedValue": "deepseek-v4-flash-vision-exp",
+          "sourceId": "deepseek-pricing",
+          "assessment": "matches",
+          "explanation": "本轮正文定位精确标识；只确认该标识在其来源合同出现，不证明其他字段或不同套餐可用性。"
+        },
+        {
+          "field": "contextWindow",
+          "currentValue": 1000000,
+          "supportedValue": "1M",
+          "sourceId": "deepseek-pricing",
+          "assessment": "not-comparable",
+          "explanation": "价格页使用1M简写，无本次明文整数；不能凭简写把1000000与1048576的差异消除。"
+        },
+        {
+          "field": "maxOutputTokens",
+          "currentValue": 384000,
+          "supportedValue": "384K",
+          "sourceId": "deepseek-pricing",
+          "assessment": "not-comparable",
+          "explanation": "当前API写最大384K，输入/输出均为简写，保留单位换算待核。"
+        }
+      ],
+      "remainingFields": [
+        "contextWindow",
+        "defaultTemperature",
+        "defaultTopP",
+        "extra.cacheHitPrice",
+        "extra.reasoning.defaultEffort",
+        "extra.reasoning.supportedEfforts",
+        "inputPrice",
+        "maxOutputTokens",
+        "outputPrice",
+        "capabilities",
+        "serviceType",
+        "access.maxInputTokens",
+        "access.protocol-readiness"
+      ],
+      "nextAction": "人工逐字段复核本次候选；只将matches且精确接入适用的字段迁入原来源文档，differs先审单位/阶梯/产品默认；缺项需精确模型页、官方版本卡或授权目录，不猜填。",
+      "notes": [
+        "官方明确旧模型名仍可调用，但对应旧模型已下线，请求由V4.1-Flash服务并按Flash计费。旧ID可调用不等于旧模型版本仍有效。"
+      ],
+      "originalStatus": "partial",
+      "originalGap": "idOnly"
+    },
+    {
+      "recordKey": "compute/model-specs/deepseek.json#deepseek-v4-flash-vision-exp",
+      "modelId": "deepseek-v4-flash-vision-exp",
+      "config": "compute/model-specs/deepseek.json",
+      "sourceDoc": "docs/model-sources/providers/deepseek/models/deepseek-v4-flash-vision-exp.md",
+      "outcome": "official-identity-only",
+      "sourceIds": [
+        "deepseek-pricing"
+      ],
+      "fieldEvidence": [
+        {
+          "field": "id",
+          "currentValue": "deepseek-v4-flash-vision-exp",
+          "supportedValue": "deepseek-v4-flash-vision-exp",
+          "sourceId": "deepseek-pricing",
+          "assessment": "matches",
+          "explanation": "本轮正文定位精确标识；只确认该标识在其来源合同出现，不证明其他字段或不同套餐可用性。"
+        },
+        {
+          "field": "spec.contextWindow",
+          "currentValue": 1000000,
+          "supportedValue": "1M",
+          "sourceId": "deepseek-pricing",
+          "assessment": "not-comparable",
+          "explanation": "价格页使用1M简写，无本次明文整数；不能凭简写把1000000与1048576的差异消除。"
+        },
+        {
+          "field": "spec.maxOutputTokens",
+          "currentValue": 384000,
+          "supportedValue": "384K",
+          "sourceId": "deepseek-pricing",
+          "assessment": "not-comparable",
+          "explanation": "当前API写最大384K，输入/输出均为简写，保留单位换算待核。"
+        }
+      ],
+      "remainingFields": [
+        "spec.contextWindow",
+        "spec.defaultTemperature",
+        "spec.maxOutputTokens",
+        "spec.supportsReasoning",
+        "spec.capabilities",
+        "spec.serviceType"
+      ],
+      "nextAction": "人工逐字段复核本次候选；只将matches且精确接入适用的字段迁入原来源文档，differs先审单位/阶梯/产品默认；缺项需精确模型页、官方版本卡或授权目录，不猜填。",
+      "notes": [
+        "官方明确旧模型名仍可调用，但对应旧模型已下线，请求由V4.1-Flash服务并按Flash计费。旧ID可调用不等于旧模型版本仍有效。"
+      ],
+      "originalStatus": "partial",
+      "originalGap": "idOnly"
+    },
+    {
+      "recordKey": "compute/providers/deepseek.json#deepseek-v4-flash",
+      "modelId": "deepseek-v4-flash",
+      "config": "compute/providers/deepseek.json",
+      "sourceDoc": "docs/model-sources/providers/deepseek/models/deepseek-v4-flash.md",
+      "outcome": "official-identity-only",
+      "sourceIds": [
+        "deepseek-pricing"
+      ],
+      "fieldEvidence": [
+        {
+          "field": "modelName",
+          "currentValue": "deepseek-v4-flash",
+          "supportedValue": "deepseek-v4-flash",
+          "sourceId": "deepseek-pricing",
+          "assessment": "matches",
+          "explanation": "本轮正文定位精确标识；只确认该标识在其来源合同出现，不证明其他字段或不同套餐可用性。"
+        },
+        {
+          "field": "contextWindow",
+          "currentValue": 1000000,
+          "supportedValue": "1M",
+          "sourceId": "deepseek-pricing",
+          "assessment": "not-comparable",
+          "explanation": "价格页使用1M简写，无本次明文整数；不能凭简写把1000000与1048576的差异消除。"
+        },
+        {
+          "field": "maxOutputTokens",
+          "currentValue": 384000,
+          "supportedValue": "384K",
+          "sourceId": "deepseek-pricing",
+          "assessment": "not-comparable",
+          "explanation": "当前API写最大384K，输入/输出均为简写，保留单位换算待核。"
+        }
+      ],
+      "remainingFields": [
+        "contextWindow",
+        "defaultTemperature",
+        "defaultTopP",
+        "extra.cacheHitPrice",
+        "extra.reasoning.defaultEffort",
+        "extra.reasoning.supportedEfforts",
+        "inputPrice",
+        "maxOutputTokens",
+        "outputPrice",
+        "capabilities",
+        "serviceType",
+        "access.maxInputTokens",
+        "access.protocol-readiness"
+      ],
+      "nextAction": "人工逐字段复核本次候选；只将matches且精确接入适用的字段迁入原来源文档，differs先审单位/阶梯/产品默认；缺项需精确模型页、官方版本卡或授权目录，不猜填。",
+      "notes": [
+        "官方明确旧模型名仍可调用，但对应旧模型已下线，请求由V4.1-Flash服务并按Flash计费。旧ID可调用不等于旧模型版本仍有效。"
+      ],
+      "originalStatus": "partial",
+      "originalGap": "idOnly"
+    },
+    {
+      "recordKey": "compute/model-specs/deepseek.json#deepseek-v4-flash",
+      "modelId": "deepseek-v4-flash",
+      "config": "compute/model-specs/deepseek.json",
+      "sourceDoc": "docs/model-sources/providers/deepseek/models/deepseek-v4-flash.md",
+      "outcome": "official-identity-only",
+      "sourceIds": [
+        "deepseek-pricing"
+      ],
+      "fieldEvidence": [
+        {
+          "field": "id",
+          "currentValue": "deepseek-v4-flash",
+          "supportedValue": "deepseek-v4-flash",
+          "sourceId": "deepseek-pricing",
+          "assessment": "matches",
+          "explanation": "本轮正文定位精确标识；只确认该标识在其来源合同出现，不证明其他字段或不同套餐可用性。"
+        },
+        {
+          "field": "spec.contextWindow",
+          "currentValue": 1000000,
+          "supportedValue": "1M",
+          "sourceId": "deepseek-pricing",
+          "assessment": "not-comparable",
+          "explanation": "价格页使用1M简写，无本次明文整数；不能凭简写把1000000与1048576的差异消除。"
+        },
+        {
+          "field": "spec.maxOutputTokens",
+          "currentValue": 384000,
+          "supportedValue": "384K",
+          "sourceId": "deepseek-pricing",
+          "assessment": "not-comparable",
+          "explanation": "当前API写最大384K，输入/输出均为简写，保留单位换算待核。"
+        }
+      ],
+      "remainingFields": [
+        "spec.contextWindow",
+        "spec.defaultTemperature",
+        "spec.maxOutputTokens",
+        "spec.supportsReasoning",
+        "spec.capabilities",
+        "spec.serviceType"
+      ],
+      "nextAction": "人工逐字段复核本次候选；只将matches且精确接入适用的字段迁入原来源文档，differs先审单位/阶梯/产品默认；缺项需精确模型页、官方版本卡或授权目录，不猜填。",
+      "notes": [
+        "官方明确旧模型名仍可调用，但对应旧模型已下线，请求由V4.1-Flash服务并按Flash计费。旧ID可调用不等于旧模型版本仍有效。"
+      ],
+      "originalStatus": "partial",
+      "originalGap": "idOnly"
+    },
+    {
+      "recordKey": "compute/model-specs/deepseek.json#deepseek-v4-pro-0813",
+      "modelId": "deepseek-v4-pro-0813",
+      "config": "compute/model-specs/deepseek.json",
+      "sourceDoc": "docs/model-sources/providers/deepseek/models/deepseek-v4-pro-0813.md",
+      "outcome": "still-unresolved",
+      "sourceIds": [
+        "deepseek-pricing"
+      ],
+      "fieldEvidence": [
+        {
+          "field": "spec.contextWindow",
+          "currentValue": 1000000,
+          "supportedValue": "1M",
+          "sourceId": "deepseek-pricing",
+          "assessment": "not-comparable",
+          "explanation": "价格页使用1M简写，无本次明文整数；不能凭简写把1000000与1048576的差异消除。"
+        },
+        {
+          "field": "spec.maxOutputTokens",
+          "currentValue": 384000,
+          "supportedValue": "384K",
+          "sourceId": "deepseek-pricing",
+          "assessment": "not-comparable",
+          "explanation": "当前API写最大384K，输入/输出均为简写，保留单位换算待核。"
+        }
+      ],
+      "remainingFields": [
+        "spec.contextWindow",
+        "spec.defaultTemperature",
+        "spec.maxOutputTokens",
+        "spec.supportsReasoning",
+        "spec.capabilities",
+        "spec.serviceType"
+      ],
+      "nextAction": "人工逐字段复核本次候选；只将matches且精确接入适用的字段迁入原来源文档，differs先审单位/阶梯/产品默认；缺项需精确模型页、官方版本卡或授权目录，不猜填。",
+      "notes": [
+        "本轮未在可读页面定位完整精确型号合同；缺失不判定停服。"
+      ],
+      "originalStatus": "partial",
+      "originalGap": "idOnly"
+    },
+    {
+      "recordKey": "compute/providers/deepseek.json#deepseek-v4-pro",
+      "modelId": "deepseek-v4-pro",
+      "config": "compute/providers/deepseek.json",
+      "sourceDoc": "docs/model-sources/providers/deepseek/models/deepseek-v4-pro.md",
+      "outcome": "official-identity-only",
+      "sourceIds": [
+        "deepseek-pricing"
+      ],
+      "fieldEvidence": [
+        {
+          "field": "modelName",
+          "currentValue": "deepseek-v4-pro",
+          "supportedValue": "deepseek-v4-pro",
+          "sourceId": "deepseek-pricing",
+          "assessment": "matches",
+          "explanation": "本轮正文定位精确标识；只确认该标识在其来源合同出现，不证明其他字段或不同套餐可用性。"
+        },
+        {
+          "field": "contextWindow",
+          "currentValue": 1000000,
+          "supportedValue": "1M",
+          "sourceId": "deepseek-pricing",
+          "assessment": "not-comparable",
+          "explanation": "价格页使用1M简写，无本次明文整数；不能凭简写把1000000与1048576的差异消除。"
+        },
+        {
+          "field": "maxOutputTokens",
+          "currentValue": 384000,
+          "supportedValue": "384K",
+          "sourceId": "deepseek-pricing",
+          "assessment": "not-comparable",
+          "explanation": "当前API写最大384K，输入/输出均为简写，保留单位换算待核。"
+        }
+      ],
+      "remainingFields": [
+        "defaultTemperature",
+        "defaultTopP",
+        "capabilities",
+        "serviceType",
+        "access.maxInputTokens",
+        "access.protocol-readiness"
+      ],
+      "nextAction": "人工逐字段复核本次候选；只将matches且精确接入适用的字段迁入原来源文档，differs先审单位/阶梯/产品默认；缺项需精确模型页、官方版本卡或授权目录，不猜填。",
+      "notes": [
+        "本轮未在可读页面定位完整精确型号合同；缺失不判定停服。"
+      ],
+      "originalStatus": "partial",
+      "originalGap": "partial"
+    },
+    {
+      "recordKey": "compute/model-specs/deepseek.json#deepseek-v4-pro",
+      "modelId": "deepseek-v4-pro",
+      "config": "compute/model-specs/deepseek.json",
+      "sourceDoc": "docs/model-sources/providers/deepseek/models/deepseek-v4-pro.md",
+      "outcome": "official-identity-only",
+      "sourceIds": [
+        "deepseek-pricing"
+      ],
+      "fieldEvidence": [
+        {
+          "field": "id",
+          "currentValue": "deepseek-v4-pro",
+          "supportedValue": "deepseek-v4-pro",
+          "sourceId": "deepseek-pricing",
+          "assessment": "matches",
+          "explanation": "本轮正文定位精确标识；只确认该标识在其来源合同出现，不证明其他字段或不同套餐可用性。"
+        },
+        {
+          "field": "spec.contextWindow",
+          "currentValue": 1000000,
+          "supportedValue": "1M",
+          "sourceId": "deepseek-pricing",
+          "assessment": "not-comparable",
+          "explanation": "价格页使用1M简写，无本次明文整数；不能凭简写把1000000与1048576的差异消除。"
+        },
+        {
+          "field": "spec.maxOutputTokens",
+          "currentValue": 384000,
+          "supportedValue": "384K",
+          "sourceId": "deepseek-pricing",
+          "assessment": "not-comparable",
+          "explanation": "当前API写最大384K，输入/输出均为简写，保留单位换算待核。"
+        }
+      ],
+      "remainingFields": [
+        "spec.defaultTemperature",
+        "spec.supportsReasoning",
+        "spec.capabilities",
+        "spec.serviceType"
+      ],
+      "nextAction": "人工逐字段复核本次候选；只将matches且精确接入适用的字段迁入原来源文档，differs先审单位/阶梯/产品默认；缺项需精确模型页、官方版本卡或授权目录，不猜填。",
+      "notes": [
+        "本轮未在可读页面定位完整精确型号合同；缺失不判定停服。"
+      ],
+      "originalStatus": "partial",
+      "originalGap": "partial"
+    }
+  ],
+  "coverage": {
+    "records": 12,
+    "sourceAttempts": 3,
+    "readableSources": 3,
+    "outcomes": {
+      "still-unresolved": 4,
+      "official-fields-found": 1,
+      "official-identity-only": 7
+    }
+  },
+  "boundary": "本轮只保存核查候选，未更改canonical、既有来源核验状态、指纹或manifest；可读正文和ID存在不是全参数/账号验收。"
+}

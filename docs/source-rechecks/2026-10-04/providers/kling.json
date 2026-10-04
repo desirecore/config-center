@@ -1,0 +1,331 @@
+{
+  "supplier": "kling",
+  "checkedAt": "2026-10-04",
+  "sources": [
+    {
+      "id": "kling",
+      "url": "https://kling.ai/document-api/api/video/3-0-omni/text-to-video/legacy",
+      "finalUrl": "https://kling.ai/document-api/api/video/3-0-omni/text-to-video/legacy",
+      "publisher": "kling",
+      "kind": "official-docs",
+      "scope": "只适用于页面明确的原厂/地域/接入，套餐和聚合合同独立",
+      "contentSha256": "bc7c2eb4a6a83460c944054c4b1610c799adab2c1902910b828eee891d48a2e5",
+      "retrieval": "blocked",
+      "summary": "实际读取75910字符，可见正文45字符；需逐精确ID定位，HTTP成功不代表字段已证。；web.open同样仅标题壳；尝试渲染浏览器失败：iab browser unavailable，未登录/未读账号内容。",
+      "digestKind": "sha256-utf8-decoded-response-body",
+      "retrievalMethod": "urllib.request HTTPS response read; bytes decoded as UTF-8 with replacement, SHA-256 over decoded text re-encoded as UTF-8 before visible-text extraction; full HTML/Markdown/JSON body, not a raw-byte digest or vendor signature"
+    },
+    {
+      "id": "kling-legacy-docs",
+      "url": "https://app.klingai.com/global/dev/document-api/apiReference/model/textToVideo",
+      "finalUrl": "https://app.klingai.com/global/dev/document-api/apiReference/model/textToVideo",
+      "publisher": "kling",
+      "kind": "official-docs",
+      "scope": "只适用于页面明确的原厂/地域/接入，套餐和聚合合同独立",
+      "retrieval": "blocked",
+      "summary": "<urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1081)>；web.open同样仅标题壳；尝试渲染浏览器失败：iab browser unavailable，未登录/未读账号内容。",
+      "digestKind": "not-recorded",
+      "retrievalMethod": "urllib.request HTTPS attempt failed before a usable response body was saved; error recorded, no content digest"
+    },
+    {
+      "id": "kling-cap-map",
+      "url": "https://kling.ai/document-api/guides/capability-map/video",
+      "finalUrl": "https://kling.ai/document-api/guides/capability-map/video",
+      "publisher": "kling",
+      "kind": "official-docs",
+      "scope": "只适用于页面明确的原厂/地域/接入，套餐和聚合合同独立",
+      "contentSha256": "bc7c2eb4a6a83460c944054c4b1610c799adab2c1902910b828eee891d48a2e5",
+      "retrieval": "blocked",
+      "summary": "实际读取75910字符，可见正文45字符；需逐精确ID定位，HTTP成功不代表字段已证。；web.open同样仅标题壳；尝试渲染浏览器失败：iab browser unavailable，未登录/未读账号内容。",
+      "digestKind": "sha256-utf8-decoded-response-body",
+      "retrievalMethod": "urllib.request HTTPS response read; bytes decoded as UTF-8 with replacement, SHA-256 over decoded text re-encoded as UTF-8 before visible-text extraction; full HTML/Markdown/JSON body, not a raw-byte digest or vendor signature"
+    }
+  ],
+  "findings": [
+    {
+      "recordKey": "compute/model-specs/kling.json#kling-3.0-turbo",
+      "modelId": "kling-3.0-turbo",
+      "config": "compute/model-specs/kling.json",
+      "sourceDoc": "docs/model-sources/providers/kling/models/kling-3.0-turbo.md",
+      "outcome": "still-unresolved",
+      "sourceIds": [
+        "kling",
+        "kling-legacy-docs",
+        "kling-cap-map"
+      ],
+      "fieldEvidence": [],
+      "remainingFields": [
+        "id",
+        "spec.capabilities",
+        "spec.serviceType"
+      ],
+      "nextAction": "人工逐字段复核本次候选；只将matches且精确接入适用的字段迁入原来源文档，differs先审单位/阶梯/产品默认；缺项需精确模型页、官方版本卡或授权目录，不猜填。",
+      "notes": [
+        "本轮未在可读页面定位完整精确型号合同；缺失不判定停服。"
+      ],
+      "originalStatus": "pending",
+      "originalGap": "blocked"
+    },
+    {
+      "recordKey": "compute/providers/kling.json#kling-v2-5-turbo-pro",
+      "modelId": "kling-v2-5-turbo-pro",
+      "config": "compute/providers/kling.json",
+      "sourceDoc": "docs/model-sources/providers/kling/models/kling-v2-5-turbo-pro.md",
+      "outcome": "still-unresolved",
+      "sourceIds": [
+        "kling",
+        "kling-legacy-docs",
+        "kling-cap-map"
+      ],
+      "fieldEvidence": [],
+      "remainingFields": [
+        "extra.pricePerGeneration",
+        "modelName",
+        "capabilities",
+        "serviceType",
+        "access.maxInputTokens",
+        "access.protocol-readiness"
+      ],
+      "nextAction": "人工逐字段复核本次候选；只将matches且精确接入适用的字段迁入原来源文档，differs先审单位/阶梯/产品默认；缺项需精确模型页、官方版本卡或授权目录，不猜填。",
+      "notes": [
+        "本轮未在可读页面定位完整精确型号合同；缺失不判定停服。"
+      ],
+      "originalStatus": "pending",
+      "originalGap": "blocked"
+    },
+    {
+      "recordKey": "compute/model-specs/kling.json#kling-v2-5-turbo-pro",
+      "modelId": "kling-v2-5-turbo-pro",
+      "config": "compute/model-specs/kling.json",
+      "sourceDoc": "docs/model-sources/providers/kling/models/kling-v2-5-turbo-pro.md",
+      "outcome": "still-unresolved",
+      "sourceIds": [
+        "kling",
+        "kling-legacy-docs",
+        "kling-cap-map"
+      ],
+      "fieldEvidence": [],
+      "remainingFields": [
+        "id",
+        "spec.capabilities",
+        "spec.serviceType"
+      ],
+      "nextAction": "人工逐字段复核本次候选；只将matches且精确接入适用的字段迁入原来源文档，differs先审单位/阶梯/产品默认；缺项需精确模型页、官方版本卡或授权目录，不猜填。",
+      "notes": [
+        "本轮未在可读页面定位完整精确型号合同；缺失不判定停服。"
+      ],
+      "originalStatus": "pending",
+      "originalGap": "blocked"
+    },
+    {
+      "recordKey": "compute/providers/kling.json#kling-v2-5-turbo",
+      "modelId": "kling-v2-5-turbo",
+      "config": "compute/providers/kling.json",
+      "sourceDoc": "docs/model-sources/providers/kling/models/kling-v2-5-turbo.md",
+      "outcome": "still-unresolved",
+      "sourceIds": [
+        "kling",
+        "kling-legacy-docs",
+        "kling-cap-map"
+      ],
+      "fieldEvidence": [],
+      "remainingFields": [
+        "extra.pricePerGeneration",
+        "modelName",
+        "capabilities",
+        "serviceType",
+        "access.maxInputTokens",
+        "access.protocol-readiness"
+      ],
+      "nextAction": "人工逐字段复核本次候选；只将matches且精确接入适用的字段迁入原来源文档，differs先审单位/阶梯/产品默认；缺项需精确模型页、官方版本卡或授权目录，不猜填。",
+      "notes": [
+        "本轮未在可读页面定位完整精确型号合同；缺失不判定停服。"
+      ],
+      "originalStatus": "pending",
+      "originalGap": "blocked"
+    },
+    {
+      "recordKey": "compute/model-specs/kling.json#kling-v2-5-turbo",
+      "modelId": "kling-v2-5-turbo",
+      "config": "compute/model-specs/kling.json",
+      "sourceDoc": "docs/model-sources/providers/kling/models/kling-v2-5-turbo.md",
+      "outcome": "still-unresolved",
+      "sourceIds": [
+        "kling",
+        "kling-legacy-docs",
+        "kling-cap-map"
+      ],
+      "fieldEvidence": [],
+      "remainingFields": [
+        "id",
+        "spec.capabilities",
+        "spec.serviceType"
+      ],
+      "nextAction": "人工逐字段复核本次候选；只将matches且精确接入适用的字段迁入原来源文档，differs先审单位/阶梯/产品默认；缺项需精确模型页、官方版本卡或授权目录，不猜填。",
+      "notes": [
+        "本轮未在可读页面定位完整精确型号合同；缺失不判定停服。"
+      ],
+      "originalStatus": "pending",
+      "originalGap": "blocked"
+    },
+    {
+      "recordKey": "compute/providers/kling.json#kling-v2-master",
+      "modelId": "kling-v2-master",
+      "config": "compute/providers/kling.json",
+      "sourceDoc": "docs/model-sources/providers/kling/models/kling-v2-master.md",
+      "outcome": "still-unresolved",
+      "sourceIds": [
+        "kling",
+        "kling-legacy-docs",
+        "kling-cap-map"
+      ],
+      "fieldEvidence": [],
+      "remainingFields": [
+        "modelName",
+        "capabilities",
+        "serviceType",
+        "access.maxInputTokens",
+        "access.protocol-readiness"
+      ],
+      "nextAction": "人工逐字段复核本次候选；只将matches且精确接入适用的字段迁入原来源文档，differs先审单位/阶梯/产品默认；缺项需精确模型页、官方版本卡或授权目录，不猜填。",
+      "notes": [
+        "本轮未在可读页面定位完整精确型号合同；缺失不判定停服。"
+      ],
+      "originalStatus": "pending",
+      "originalGap": "blocked"
+    },
+    {
+      "recordKey": "compute/model-specs/kling.json#kling-v2-master",
+      "modelId": "kling-v2-master",
+      "config": "compute/model-specs/kling.json",
+      "sourceDoc": "docs/model-sources/providers/kling/models/kling-v2-master.md",
+      "outcome": "still-unresolved",
+      "sourceIds": [
+        "kling",
+        "kling-legacy-docs",
+        "kling-cap-map"
+      ],
+      "fieldEvidence": [],
+      "remainingFields": [
+        "id",
+        "spec.capabilities",
+        "spec.serviceType"
+      ],
+      "nextAction": "人工逐字段复核本次候选；只将matches且精确接入适用的字段迁入原来源文档，differs先审单位/阶梯/产品默认；缺项需精确模型页、官方版本卡或授权目录，不猜填。",
+      "notes": [
+        "本轮未在可读页面定位完整精确型号合同；缺失不判定停服。"
+      ],
+      "originalStatus": "pending",
+      "originalGap": "blocked"
+    },
+    {
+      "recordKey": "compute/providers/kling.json#kling-v2",
+      "modelId": "kling-v2",
+      "config": "compute/providers/kling.json",
+      "sourceDoc": "docs/model-sources/providers/kling/models/kling-v2.md",
+      "outcome": "still-unresolved",
+      "sourceIds": [
+        "kling",
+        "kling-legacy-docs",
+        "kling-cap-map"
+      ],
+      "fieldEvidence": [],
+      "remainingFields": [
+        "modelName",
+        "capabilities",
+        "serviceType",
+        "access.maxInputTokens",
+        "access.protocol-readiness"
+      ],
+      "nextAction": "人工逐字段复核本次候选；只将matches且精确接入适用的字段迁入原来源文档，differs先审单位/阶梯/产品默认；缺项需精确模型页、官方版本卡或授权目录，不猜填。",
+      "notes": [
+        "本轮未在可读页面定位完整精确型号合同；缺失不判定停服。"
+      ],
+      "originalStatus": "pending",
+      "originalGap": "blocked"
+    },
+    {
+      "recordKey": "compute/model-specs/kling.json#kling-v2",
+      "modelId": "kling-v2",
+      "config": "compute/model-specs/kling.json",
+      "sourceDoc": "docs/model-sources/providers/kling/models/kling-v2.md",
+      "outcome": "still-unresolved",
+      "sourceIds": [
+        "kling",
+        "kling-legacy-docs",
+        "kling-cap-map"
+      ],
+      "fieldEvidence": [],
+      "remainingFields": [
+        "id",
+        "spec.capabilities",
+        "spec.serviceType"
+      ],
+      "nextAction": "人工逐字段复核本次候选；只将matches且精确接入适用的字段迁入原来源文档，differs先审单位/阶梯/产品默认；缺项需精确模型页、官方版本卡或授权目录，不猜填。",
+      "notes": [
+        "本轮未在可读页面定位完整精确型号合同；缺失不判定停服。"
+      ],
+      "originalStatus": "pending",
+      "originalGap": "blocked"
+    },
+    {
+      "recordKey": "compute/providers/kling.json#kling-v3",
+      "modelId": "kling-v3",
+      "config": "compute/providers/kling.json",
+      "sourceDoc": "docs/model-sources/providers/kling/models/kling-v3.md",
+      "outcome": "still-unresolved",
+      "sourceIds": [
+        "kling",
+        "kling-legacy-docs",
+        "kling-cap-map"
+      ],
+      "fieldEvidence": [],
+      "remainingFields": [
+        "modelName",
+        "capabilities",
+        "serviceType",
+        "access.maxInputTokens",
+        "access.protocol-readiness"
+      ],
+      "nextAction": "人工逐字段复核本次候选；只将matches且精确接入适用的字段迁入原来源文档，differs先审单位/阶梯/产品默认；缺项需精确模型页、官方版本卡或授权目录，不猜填。",
+      "notes": [
+        "本轮未在可读页面定位完整精确型号合同；缺失不判定停服。"
+      ],
+      "originalStatus": "pending",
+      "originalGap": "blocked"
+    },
+    {
+      "recordKey": "compute/model-specs/kling.json#kling-v3",
+      "modelId": "kling-v3",
+      "config": "compute/model-specs/kling.json",
+      "sourceDoc": "docs/model-sources/providers/kling/models/kling-v3.md",
+      "outcome": "still-unresolved",
+      "sourceIds": [
+        "kling",
+        "kling-legacy-docs",
+        "kling-cap-map"
+      ],
+      "fieldEvidence": [],
+      "remainingFields": [
+        "id",
+        "spec.capabilities",
+        "spec.serviceType"
+      ],
+      "nextAction": "人工逐字段复核本次候选；只将matches且精确接入适用的字段迁入原来源文档，differs先审单位/阶梯/产品默认；缺项需精确模型页、官方版本卡或授权目录，不猜填。",
+      "notes": [
+        "本轮未在可读页面定位完整精确型号合同；缺失不判定停服。"
+      ],
+      "originalStatus": "pending",
+      "originalGap": "blocked"
+    }
+  ],
+  "coverage": {
+    "records": 11,
+    "sourceAttempts": 3,
+    "readableSources": 0,
+    "outcomes": {
+      "still-unresolved": 11
+    }
+  },
+  "boundary": "本轮只保存核查候选，未更改canonical、既有来源核验状态、指纹或manifest；可读正文和ID存在不是全参数/账号验收。"
+}

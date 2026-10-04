@@ -1,0 +1,71 @@
+{
+  "supplier": "kwai",
+  "checkedAt": "2026-10-04",
+  "sources": [
+    {
+      "id": "page-kwai-intl",
+      "url": "https://www.streamlake.ai/document/DOC/mg6k6nlp8j6qxicx4c9",
+      "finalUrl": "https://www.streamlake.ai/document/DOC/mg6k6nlp8j6qxicx4c9",
+      "publisher": "kwai",
+      "kind": "official-docs",
+      "retrieval": "readable",
+      "summary": "已读取HTTP正文；模型数字只按该页精确型号和接入记录。",
+      "scope": "国际vanchin Coding Plan / kat-coder-pro-v2.5；不是国内wanqing kwai-coder",
+      "contentSha256": "3ade33d7564bff0a1461f762e34a9d5c29d398bee7099a706bd8b2d8ffeaee00",
+      "retrievalMethod": "http-body-htmlparser",
+      "contentDigestKind": "htmlparser-visible-text-not-raw-http-bytes"
+    },
+    {
+      "id": "page-kwai-domestic",
+      "url": "https://www.streamlake.com/document/WANQING/mdptab9x4xn2v4vyo9v",
+      "finalUrl": "https://www.streamlake.com/document/WANQING/mdptab9x4xn2v4vyo9v",
+      "publisher": "kwai",
+      "kind": "official-docs",
+      "retrieval": "readable",
+      "summary": "已读取HTTP正文；模型数字只按该页精确型号和接入记录。",
+      "scope": "国内万擎操作流程；没有本条精确调用别名",
+      "contentSha256": "bc6b351378ceb6ced5e26ac53d968835113737dd20a671a621472c41b714e770",
+      "retrievalMethod": "http-body-htmlparser",
+      "contentDigestKind": "htmlparser-visible-text-not-raw-http-bytes"
+    }
+  ],
+  "findings": [
+    {
+      "recordKey": "compute/coding-plans/kwai-coding.json#kwai-coder",
+      "modelId": "kwai-coder",
+      "config": "compute/coding-plans/kwai-coding.json",
+      "sourceDoc": "docs/model-sources/providers/kwai/models/kwai-coder.md",
+      "outcome": "official-access-only",
+      "sourceIds": [
+        "page-kwai-intl"
+      ],
+      "fieldEvidence": [
+        {
+          "field": "baseUrl",
+          "currentValue": null,
+          "supportedValue": "https://vanchin.streamlake.ai/api/gateway/coding/v1",
+          "sourceId": "page-kwai-intl",
+          "assessment": "not-comparable",
+          "explanation": "国际官网入口，当前国内wanqing地址；地域/账号/型号不同，不是可直接替换的冲突。"
+        }
+      ],
+      "remainingFields": [
+        "modelName",
+        "capabilities"
+      ],
+      "nextAction": "按精确型号和本接入面继续核对；候选证据不自动应用。",
+      "notes": [
+        "官方model ID为kat-coder-pro-v2.5，不证明kwai-coder别名映射；不能跨域透明迁移Key。",
+        "official-access-only只说明找到官方接入/产品入口，不计本条精确模型身份或容量已核。"
+      ]
+    }
+  ],
+  "coverage": {
+    "records": 1,
+    "outcomes": {
+      "official-access-only": 1
+    },
+    "unchangedConfig": true,
+    "accountCallsPerformed": false
+  }
+}

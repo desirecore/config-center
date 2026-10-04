@@ -1,0 +1,476 @@
+{
+  "supplier": "mistral",
+  "checkedAt": "2026-10-04",
+  "sources": [
+    {
+      "id": "mistral-d844075da16b",
+      "url": "https://docs.mistral.ai/models",
+      "finalUrl": "https://docs.mistral.ai/models",
+      "publisher": "Mistral AI",
+      "kind": "official-docs",
+      "retrieval": "readable",
+      "summary": "正文已读取；仅用于下方逐字段列明的证据，读取成功不代表全规格核实。",
+      "scope": "该官网文档明确列出的模型/API；不扩展到其他接入面。"
+    },
+    {
+      "id": "mistral-9936c2015c06",
+      "url": "https://docs.mistral.ai/models/codestral-25-08",
+      "finalUrl": "https://docs.mistral.ai/models/codestral-25-08",
+      "publisher": "Mistral AI",
+      "kind": "official-docs",
+      "retrieval": "readable",
+      "summary": "正文已读取；仅用于下方逐字段列明的证据，读取成功不代表全规格核实。",
+      "scope": "该官网文档明确列出的模型/API；不扩展到其他接入面。"
+    },
+    {
+      "id": "mistral-3ab28585a19b",
+      "url": "https://docs.mistral.ai/models/mistral-large-3-25-12",
+      "finalUrl": "https://docs.mistral.ai/models/mistral-large-3-25-12",
+      "publisher": "Mistral AI",
+      "kind": "official-docs",
+      "retrieval": "readable",
+      "summary": "正文已读取；仅用于下方逐字段列明的证据，读取成功不代表全规格核实。",
+      "scope": "该官网文档明确列出的模型/API；不扩展到其他接入面。"
+    },
+    {
+      "id": "mistral-ece7a0a55f7b",
+      "url": "https://docs.mistral.ai/models/mistral-medium-3-5-26-04",
+      "finalUrl": "https://docs.mistral.ai/models/mistral-medium-3-5-26-04",
+      "publisher": "Mistral AI",
+      "kind": "official-docs",
+      "retrieval": "readable",
+      "summary": "正文已读取；仅用于下方逐字段列明的证据，读取成功不代表全规格核实。",
+      "scope": "该官网文档明确列出的模型/API；不扩展到其他接入面。"
+    },
+    {
+      "id": "mistral-b0218078301d",
+      "url": "https://docs.mistral.ai/models/mistral-small-4-0-26-03",
+      "finalUrl": "https://docs.mistral.ai/models/mistral-small-4-0-26-03",
+      "publisher": "Mistral AI",
+      "kind": "official-docs",
+      "retrieval": "readable",
+      "summary": "正文已读取；仅用于下方逐字段列明的证据，读取成功不代表全规格核实。",
+      "scope": "该官网文档明确列出的模型/API；不扩展到其他接入面。"
+    },
+    {
+      "id": "mistral-d8f92d5709d6",
+      "url": "https://docs.mistral.ai/resources/known-limitations",
+      "finalUrl": "https://docs.mistral.ai/resources/known-limitations",
+      "publisher": "Mistral AI",
+      "kind": "official-docs",
+      "retrieval": "readable",
+      "summary": "正文已读取；仅用于下方逐字段列明的证据，读取成功不代表全规格核实。",
+      "scope": "该官网文档明确列出的模型/API；不扩展到其他接入面。"
+    }
+  ],
+  "findings": [
+    {
+      "recordKey": "compute/providers/mistral.json#codestral-latest",
+      "modelId": "codestral-latest",
+      "config": "compute/providers/mistral.json",
+      "sourceDoc": "docs/model-sources/providers/mistral/models/codestral-latest.md",
+      "outcome": "official-identity-only",
+      "sourceIds": [
+        "mistral-d8f92d5709d6",
+        "mistral-d844075da16b",
+        "mistral-9936c2015c06"
+      ],
+      "fieldEvidence": [
+        {
+          "field": "contextWindow",
+          "currentValue": 128000,
+          "supportedValue": "128k",
+          "sourceId": "mistral-d8f92d5709d6",
+          "assessment": "not-comparable",
+          "explanation": "官方known-limits总context包含输入输出；只给缩写，尚未证明本仓131072/262144精确整数。"
+        }
+      ],
+      "remainingFields": [
+        "contextWindow",
+        "defaultTemperature",
+        "defaultTopP",
+        "maxOutputTokens",
+        "modelName"
+      ],
+      "nextAction": "逐字段审查上表候选；只有同一接入合同且语义/单位一致的证据才用于后续canonical更新。 剩余字段需精确型号页/官方API schema或已授权账号目录核查，不推导默认值。",
+      "notes": [
+        "仅latest名称不足以长期固定代际；默认temperature/top_p与最大输出须查对应endpoint schema/真实GET models，不能从网页读取成功推定。"
+      ]
+    },
+    {
+      "recordKey": "compute/model-specs/mistral.json#codestral-latest",
+      "modelId": "codestral-latest",
+      "config": "compute/model-specs/mistral.json",
+      "sourceDoc": "docs/model-sources/providers/mistral/models/codestral-latest.md",
+      "outcome": "official-identity-only",
+      "sourceIds": [
+        "mistral-d8f92d5709d6",
+        "mistral-d844075da16b"
+      ],
+      "fieldEvidence": [
+        {
+          "field": "spec.contextWindow",
+          "currentValue": 128000,
+          "supportedValue": "128k",
+          "sourceId": "mistral-d8f92d5709d6",
+          "assessment": "not-comparable",
+          "explanation": "官方known-limits总context包含输入输出；只给缩写，尚未证明本仓131072/262144精确整数。"
+        }
+      ],
+      "remainingFields": [
+        "id",
+        "spec.contextWindow",
+        "spec.defaultTemperature",
+        "spec.maxOutputTokens"
+      ],
+      "nextAction": "逐字段审查上表候选；只有同一接入合同且语义/单位一致的证据才用于后续canonical更新。 剩余字段需精确型号页/官方API schema或已授权账号目录核查，不推导默认值。",
+      "notes": [
+        "仅latest名称不足以长期固定代际；默认temperature/top_p与最大输出须查对应endpoint schema/真实GET models，不能从网页读取成功推定。"
+      ]
+    },
+    {
+      "recordKey": "compute/providers/mistral.json#mistral-large-latest",
+      "modelId": "mistral-large-latest",
+      "config": "compute/providers/mistral.json",
+      "sourceDoc": "docs/model-sources/providers/mistral/models/mistral-large-latest.md",
+      "outcome": "official-fields-found",
+      "sourceIds": [
+        "mistral-d8f92d5709d6",
+        "mistral-3ab28585a19b"
+      ],
+      "fieldEvidence": [
+        {
+          "field": "contextWindow",
+          "currentValue": 256000,
+          "supportedValue": "256k",
+          "sourceId": "mistral-d8f92d5709d6",
+          "assessment": "not-comparable",
+          "explanation": "官方known-limits总context包含输入输出；只给缩写，尚未证明本仓131072/262144精确整数。"
+        },
+        {
+          "field": "inputPrice",
+          "currentValue": 0.5,
+          "supportedValue": 0.5,
+          "sourceId": "mistral-3ab28585a19b",
+          "assessment": "matches",
+          "explanation": "Large3当前报价"
+        },
+        {
+          "field": "outputPrice",
+          "currentValue": 1.5,
+          "supportedValue": 1.5,
+          "sourceId": "mistral-3ab28585a19b",
+          "assessment": "matches",
+          "explanation": "Large3当前报价"
+        }
+      ],
+      "remainingFields": [
+        "contextWindow",
+        "defaultTemperature",
+        "defaultTopP",
+        "modelName"
+      ],
+      "nextAction": "逐字段审查上表候选；只有同一接入合同且语义/单位一致的证据才用于后续canonical更新。 剩余字段需精确型号页/官方API schema或已授权账号目录核查，不推导默认值。",
+      "notes": [
+        "仅latest名称不足以长期固定代际；默认temperature/top_p与最大输出须查对应endpoint schema/真实GET models，不能从网页读取成功推定。"
+      ]
+    },
+    {
+      "recordKey": "compute/model-specs/mistral.json#mistral-large-latest",
+      "modelId": "mistral-large-latest",
+      "config": "compute/model-specs/mistral.json",
+      "sourceDoc": "docs/model-sources/providers/mistral/models/mistral-large-latest.md",
+      "outcome": "official-identity-only",
+      "sourceIds": [
+        "mistral-d8f92d5709d6",
+        "mistral-3ab28585a19b",
+        "mistral-d844075da16b"
+      ],
+      "fieldEvidence": [
+        {
+          "field": "spec.contextWindow",
+          "currentValue": 256000,
+          "supportedValue": "256k",
+          "sourceId": "mistral-d8f92d5709d6",
+          "assessment": "not-comparable",
+          "explanation": "官方known-limits总context包含输入输出；只给缩写，尚未证明本仓131072/262144精确整数。"
+        },
+        {
+          "field": "accessReference.inputPrice",
+          "currentValue": null,
+          "supportedValue": 0.5,
+          "sourceId": "mistral-3ab28585a19b",
+          "assessment": "not-comparable",
+          "explanation": "Large3当前报价 仅原厂接入计价参考，共享ModelSpec禁止写入价格。"
+        },
+        {
+          "field": "accessReference.outputPrice",
+          "currentValue": null,
+          "supportedValue": 1.5,
+          "sourceId": "mistral-3ab28585a19b",
+          "assessment": "not-comparable",
+          "explanation": "Large3当前报价 仅原厂接入计价参考，共享ModelSpec禁止写入价格。"
+        }
+      ],
+      "remainingFields": [
+        "id",
+        "spec.contextWindow",
+        "spec.defaultTemperature"
+      ],
+      "nextAction": "逐字段审查上表候选；只有同一接入合同且语义/单位一致的证据才用于后续canonical更新。 剩余字段需精确型号页/官方API schema或已授权账号目录核查，不推导默认值。",
+      "notes": [
+        "仅latest名称不足以长期固定代际；默认temperature/top_p与最大输出须查对应endpoint schema/真实GET models，不能从网页读取成功推定。"
+      ]
+    },
+    {
+      "recordKey": "compute/providers/mistral.json#mistral-medium-3-5",
+      "modelId": "mistral-medium-3-5",
+      "config": "compute/providers/mistral.json",
+      "sourceDoc": "docs/model-sources/providers/mistral/models/mistral-medium-3-5.md",
+      "outcome": "official-fields-found",
+      "sourceIds": [
+        "mistral-ece7a0a55f7b",
+        "mistral-d8f92d5709d6"
+      ],
+      "fieldEvidence": [
+        {
+          "field": "modelName",
+          "currentValue": "mistral-medium-3-5",
+          "supportedValue": "mistral-medium-3-5",
+          "sourceId": "mistral-ece7a0a55f7b",
+          "assessment": "matches",
+          "explanation": "共享内部显示ID与API连字符ID须分离；latest为可移动alias。"
+        },
+        {
+          "field": "contextWindow",
+          "currentValue": 262144,
+          "supportedValue": "256k",
+          "sourceId": "mistral-d8f92d5709d6",
+          "assessment": "not-comparable",
+          "explanation": "官方known-limits总context包含输入输出；只给缩写，尚未证明本仓131072/262144精确整数。"
+        },
+        {
+          "field": "inputPrice",
+          "currentValue": 1.5,
+          "supportedValue": 1.5,
+          "sourceId": "mistral-ece7a0a55f7b",
+          "assessment": "matches",
+          "explanation": "当前Medium3.5原厂USD / milliontokens"
+        },
+        {
+          "field": "outputPrice",
+          "currentValue": 7.5,
+          "supportedValue": 7.5,
+          "sourceId": "mistral-ece7a0a55f7b",
+          "assessment": "matches",
+          "explanation": "当前Medium3.5原厂USD / milliontokens"
+        }
+      ],
+      "remainingFields": [
+        "contextWindow",
+        "defaultTemperature"
+      ],
+      "nextAction": "逐字段审查上表候选；只有同一接入合同且语义/单位一致的证据才用于后续canonical更新。 剩余字段需精确型号页/官方API schema或已授权账号目录核查，不推导默认值。",
+      "notes": [
+        "仅latest名称不足以长期固定代际；默认temperature/top_p与最大输出须查对应endpoint schema/真实GET models，不能从网页读取成功推定。"
+      ]
+    },
+    {
+      "recordKey": "compute/model-specs/mistral.json#mistral-medium-3.5",
+      "modelId": "mistral-medium-3.5",
+      "config": "compute/model-specs/mistral.json",
+      "sourceDoc": "docs/model-sources/providers/mistral/models/mistral-medium-3.5.md",
+      "outcome": "official-identity-only",
+      "sourceIds": [
+        "mistral-ece7a0a55f7b",
+        "mistral-d8f92d5709d6",
+        "mistral-d844075da16b"
+      ],
+      "fieldEvidence": [
+        {
+          "field": "id",
+          "currentValue": "mistral-medium-3.5",
+          "supportedValue": "mistral-medium-3-5",
+          "sourceId": "mistral-ece7a0a55f7b",
+          "assessment": "not-comparable",
+          "explanation": "共享内部显示ID与API连字符ID须分离；latest为可移动alias。 本仓spec内部ID非必然wireID，请核match.exact。"
+        },
+        {
+          "field": "spec.contextWindow",
+          "currentValue": 262144,
+          "supportedValue": "256k",
+          "sourceId": "mistral-d8f92d5709d6",
+          "assessment": "not-comparable",
+          "explanation": "官方known-limits总context包含输入输出；只给缩写，尚未证明本仓131072/262144精确整数。"
+        },
+        {
+          "field": "accessReference.inputPrice",
+          "currentValue": null,
+          "supportedValue": 1.5,
+          "sourceId": "mistral-ece7a0a55f7b",
+          "assessment": "not-comparable",
+          "explanation": "当前Medium3.5原厂USD / milliontokens 仅原厂接入计价参考，共享ModelSpec禁止写入价格。"
+        },
+        {
+          "field": "accessReference.outputPrice",
+          "currentValue": null,
+          "supportedValue": 7.5,
+          "sourceId": "mistral-ece7a0a55f7b",
+          "assessment": "not-comparable",
+          "explanation": "当前Medium3.5原厂USD / milliontokens 仅原厂接入计价参考，共享ModelSpec禁止写入价格。"
+        }
+      ],
+      "remainingFields": [
+        "id",
+        "spec.contextWindow",
+        "spec.defaultTemperature",
+        "spec.supportsReasoning"
+      ],
+      "nextAction": "逐字段审查上表候选；只有同一接入合同且语义/单位一致的证据才用于后续canonical更新。 剩余字段需精确型号页/官方API schema或已授权账号目录核查，不推导默认值。",
+      "notes": [
+        "仅latest名称不足以长期固定代际；默认temperature/top_p与最大输出须查对应endpoint schema/真实GET models，不能从网页读取成功推定。"
+      ]
+    },
+    {
+      "recordKey": "compute/providers/mistral.json#mistral-medium-latest",
+      "modelId": "mistral-medium-latest",
+      "config": "compute/providers/mistral.json",
+      "sourceDoc": "docs/model-sources/providers/mistral/models/mistral-medium-latest.md",
+      "outcome": "official-fields-found",
+      "sourceIds": [
+        "mistral-d8f92d5709d6",
+        "mistral-ece7a0a55f7b"
+      ],
+      "fieldEvidence": [
+        {
+          "field": "contextWindow",
+          "currentValue": 262144,
+          "supportedValue": "256k",
+          "sourceId": "mistral-d8f92d5709d6",
+          "assessment": "not-comparable",
+          "explanation": "官方known-limits总context包含输入输出；只给缩写，尚未证明本仓131072/262144精确整数。"
+        },
+        {
+          "field": "inputPrice",
+          "currentValue": 1.5,
+          "supportedValue": 1.5,
+          "sourceId": "mistral-ece7a0a55f7b",
+          "assessment": "matches",
+          "explanation": "当前Medium3.5原厂USD / milliontokens"
+        },
+        {
+          "field": "outputPrice",
+          "currentValue": 7.5,
+          "supportedValue": 7.5,
+          "sourceId": "mistral-ece7a0a55f7b",
+          "assessment": "matches",
+          "explanation": "当前Medium3.5原厂USD / milliontokens"
+        }
+      ],
+      "remainingFields": [
+        "contextWindow",
+        "defaultTemperature",
+        "defaultTopP",
+        "modelName"
+      ],
+      "nextAction": "逐字段审查上表候选；只有同一接入合同且语义/单位一致的证据才用于后续canonical更新。 剩余字段需精确型号页/官方API schema或已授权账号目录核查，不推导默认值。",
+      "notes": [
+        "仅latest名称不足以长期固定代际；默认temperature/top_p与最大输出须查对应endpoint schema/真实GET models，不能从网页读取成功推定。"
+      ]
+    },
+    {
+      "recordKey": "compute/providers/mistral.json#mistral-small-latest",
+      "modelId": "mistral-small-latest",
+      "config": "compute/providers/mistral.json",
+      "sourceDoc": "docs/model-sources/providers/mistral/models/mistral-small-latest.md",
+      "outcome": "official-fields-found",
+      "sourceIds": [
+        "mistral-d8f92d5709d6",
+        "mistral-b0218078301d"
+      ],
+      "fieldEvidence": [
+        {
+          "field": "contextWindow",
+          "currentValue": 262144,
+          "supportedValue": "256k",
+          "sourceId": "mistral-d8f92d5709d6",
+          "assessment": "not-comparable",
+          "explanation": "官方known-limits总context包含输入输出；只给缩写，尚未证明本仓131072/262144精确整数。"
+        },
+        {
+          "field": "inputPrice",
+          "currentValue": 0.15,
+          "supportedValue": 0.15,
+          "sourceId": "mistral-b0218078301d",
+          "assessment": "matches",
+          "explanation": "Small4当前报价"
+        },
+        {
+          "field": "outputPrice",
+          "currentValue": 0.6,
+          "supportedValue": 0.6,
+          "sourceId": "mistral-b0218078301d",
+          "assessment": "matches",
+          "explanation": "Small4当前报价"
+        }
+      ],
+      "remainingFields": [
+        "contextWindow",
+        "defaultTemperature",
+        "defaultTopP",
+        "modelName"
+      ],
+      "nextAction": "逐字段审查上表候选；只有同一接入合同且语义/单位一致的证据才用于后续canonical更新。 剩余字段需精确型号页/官方API schema或已授权账号目录核查，不推导默认值。",
+      "notes": [
+        "仅latest名称不足以长期固定代际；默认temperature/top_p与最大输出须查对应endpoint schema/真实GET models，不能从网页读取成功推定。"
+      ]
+    },
+    {
+      "recordKey": "compute/model-specs/mistral.json#mistral-small-latest",
+      "modelId": "mistral-small-latest",
+      "config": "compute/model-specs/mistral.json",
+      "sourceDoc": "docs/model-sources/providers/mistral/models/mistral-small-latest.md",
+      "outcome": "official-identity-only",
+      "sourceIds": [
+        "mistral-d8f92d5709d6",
+        "mistral-b0218078301d",
+        "mistral-d844075da16b"
+      ],
+      "fieldEvidence": [
+        {
+          "field": "spec.contextWindow",
+          "currentValue": 262144,
+          "supportedValue": "256k",
+          "sourceId": "mistral-d8f92d5709d6",
+          "assessment": "not-comparable",
+          "explanation": "官方known-limits总context包含输入输出；只给缩写，尚未证明本仓131072/262144精确整数。"
+        },
+        {
+          "field": "accessReference.inputPrice",
+          "currentValue": null,
+          "supportedValue": 0.15,
+          "sourceId": "mistral-b0218078301d",
+          "assessment": "not-comparable",
+          "explanation": "Small4当前报价 仅原厂接入计价参考，共享ModelSpec禁止写入价格。"
+        },
+        {
+          "field": "accessReference.outputPrice",
+          "currentValue": null,
+          "supportedValue": 0.6,
+          "sourceId": "mistral-b0218078301d",
+          "assessment": "not-comparable",
+          "explanation": "Small4当前报价 仅原厂接入计价参考，共享ModelSpec禁止写入价格。"
+        }
+      ],
+      "remainingFields": [
+        "id",
+        "spec.contextWindow",
+        "spec.defaultTemperature"
+      ],
+      "nextAction": "逐字段审查上表候选；只有同一接入合同且语义/单位一致的证据才用于后续canonical更新。 剩余字段需精确型号页/官方API schema或已授权账号目录核查，不推导默认值。",
+      "notes": [
+        "仅latest名称不足以长期固定代际；默认temperature/top_p与最大输出须查对应endpoint schema/真实GET models，不能从网页读取成功推定。"
+      ]
+    }
+  ]
+}

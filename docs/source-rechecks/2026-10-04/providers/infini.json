@@ -1,0 +1,91 @@
+{
+  "supplier": "infini",
+  "checkedAt": "2026-10-04",
+  "sources": [
+    {
+      "id": "infini-obisidian",
+      "url": "https://docs.infini-ai.com/gen-studio/integrations/use-obsidian.html",
+      "finalUrl": "https://docs.infini-ai.com/gen-studio/integrations/use-obsidian.html",
+      "publisher": "infini",
+      "kind": "official-docs",
+      "retrieval": "readable",
+      "summary": "web读取deepseek-v3示例与maas/v1；历史示例不保证当前可用。",
+      "scope": "GenStudio兼容API旧示例",
+      "retrievalMethod": "web-open-body"
+    },
+    {
+      "id": "infini-changelog",
+      "url": "https://docs.infini-ai.com/changelog.html",
+      "finalUrl": "https://docs.infini-ai.com/changelog.html",
+      "publisher": "infini",
+      "kind": "official-docs",
+      "retrieval": "readable",
+      "summary": "web实际读取8/28删除目录，逐字含deepseek-v3；官网页尾注明离线文档，正式应用前复核在线账号模型目录。",
+      "scope": "GenStudio官方更新日志精确型号下架",
+      "retrievalMethod": "web-open-body"
+    },
+    {
+      "id": "infini-current-model-guide",
+      "url": "https://docs.infini-ai.com/gen-studio/models/",
+      "finalUrl": "https://docs.infini-ai.com/gen-studio/models/",
+      "publisher": "infini",
+      "kind": "official-docs",
+      "retrieval": "readable",
+      "summary": "web正文要求账号服务列表和model详情确认规格；公开页面不提供账户当前价格/窗口。",
+      "scope": "当前模型目录操作指南",
+      "retrievalMethod": "web-open-body"
+    }
+  ],
+  "findings": [
+    {
+      "recordKey": "compute/coding-plans/infini-coding.json#deepseek-v3",
+      "modelId": "deepseek-v3",
+      "config": "compute/coding-plans/infini-coding.json",
+      "sourceDoc": "docs/model-sources/providers/infini/models/deepseek-v3.md",
+      "outcome": "official-conflict",
+      "sourceIds": [
+        "infini-obisidian",
+        "infini-changelog"
+      ],
+      "fieldEvidence": [
+        {
+          "field": "modelName",
+          "currentValue": "deepseek-v3",
+          "supportedValue": "deepseek-v3",
+          "sourceId": "infini-obisidian",
+          "assessment": "matches",
+          "explanation": "官方历史兼容示例逐字ID；不宣称现行可用。"
+        },
+        {
+          "field": "access.lifecycle",
+          "currentValue": null,
+          "supportedValue": {
+            "status": "retired",
+            "date": "2026-08-28",
+            "scope": "GenStudio"
+          },
+          "sourceId": "infini-changelog",
+          "assessment": "differs",
+          "explanation": "官方更新日志明确列已下线型号，需处理现preset模型；不是整个domain停服。"
+        }
+      ],
+      "remainingFields": [
+        "contextWindow",
+        "maxOutputTokens",
+        "capabilities"
+      ],
+      "nextAction": "先核对在线GenStudio目录，按精确Provider/model下架并选已适配替代模型；不要直接迁移凭据至新接入。",
+      "notes": [
+        "资料页末离线副本免责声明已保留，未把历史示例当当前账号调用证明。"
+      ]
+    }
+  ],
+  "coverage": {
+    "records": 1,
+    "outcomes": {
+      "official-conflict": 1
+    },
+    "unchangedConfig": true,
+    "accountCallsPerformed": false
+  }
+}

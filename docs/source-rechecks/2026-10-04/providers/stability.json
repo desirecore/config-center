@@ -1,0 +1,212 @@
+{
+  "supplier": "stability",
+  "checkedAt": "2026-10-04",
+  "sources": [
+    {
+      "id": "stability-60d00034055d",
+      "url": "https://stability.ai/news-updates",
+      "finalUrl": "https://stability.ai/news-updates",
+      "publisher": "Stability AI",
+      "kind": "official-docs",
+      "retrieval": "readable",
+      "summary": "正文已读取；仅用于下方逐字段列明的证据，读取成功不代表全规格核实。",
+      "scope": "该官网文档明确列出的模型/API；不扩展到其他接入面。"
+    },
+    {
+      "id": "stability-d4656e52aa54",
+      "url": "https://platform.stability.ai/pricing",
+      "finalUrl": "https://platform.stability.ai/pricing",
+      "publisher": "Stability AI",
+      "kind": "official-platform",
+      "retrieval": "readable",
+      "summary": "实际浏览器读取：1creditUSD0.01，SD3.5large6.5credits，StableAudio3.026credits。",
+      "scope": "该平台成功generation计费；模型别名与工具适配另核。"
+    },
+    {
+      "id": "stability-a840d66caddd",
+      "url": "https://platform.stability.ai/docs/api-reference",
+      "finalUrl": "https://platform.stability.ai/docs/api-reference",
+      "publisher": "Stability AI",
+      "kind": "official-docs",
+      "retrieval": "blocked",
+      "summary": "HTTP返回JavaScript页面壳，未提供模型正文；随后使用浏览器渲染读取，见独立浏览器来源。",
+      "scope": "该官网文档明确列出的模型/API；不扩展到其他接入面。"
+    },
+    {
+      "id": "stability-2ca29ecf5c94",
+      "url": "https://huggingface.co/stabilityai/stable-diffusion-3.5-large/raw/main/README.md",
+      "finalUrl": "https://huggingface.co/stabilityai/stable-diffusion-3.5-large/raw/main/README.md",
+      "publisher": "Stability AI",
+      "kind": "official-model-card",
+      "retrieval": "blocked",
+      "summary": "HTTP Error 401: Unauthorized",
+      "scope": "该官网文档明确列出的模型/API；不扩展到其他接入面。"
+    },
+    {
+      "id": "stability-6e084c8f9e0e",
+      "url": "https://platform.stability.ai/docs/api-reference#tag/Generate/paths/~1v2beta~1stable-image~1generate~1sd3/post",
+      "finalUrl": "https://platform.stability.ai/docs/api-reference#tag/Generate/paths/~1v2beta~1stable-image~1generate~1sd3/post",
+      "publisher": "Stability AI",
+      "kind": "official-docs",
+      "retrieval": "readable",
+      "summary": "Edge浏览器实际读取渲染API正文：sd3.5-large、styles枚举、audio model stable-audio-3、duration1..380、26credits。HTTP原始请求仅页面壳已另记。",
+      "scope": "Stability原生v2beta multipart接口；不证明OpenAI协议适配。"
+    }
+  ],
+  "findings": [
+    {
+      "recordKey": "compute/model-specs/stability.json#stable-audio-3.0",
+      "modelId": "stable-audio-3.0",
+      "config": "compute/model-specs/stability.json",
+      "sourceDoc": "docs/model-sources/providers/stability/models/stable-audio-3.0.md",
+      "outcome": "official-fields-found",
+      "sourceIds": [
+        "stability-6e084c8f9e0e",
+        "stability-d4656e52aa54",
+        "stability-60d00034055d"
+      ],
+      "fieldEvidence": [
+        {
+          "field": "id",
+          "currentValue": "stable-audio-3.0",
+          "supportedValue": "stable-audio-3",
+          "sourceId": "stability-6e084c8f9e0e",
+          "assessment": "not-comparable",
+          "explanation": "产品展示名称与原生请求model枚举不同，需显式wirealias不能直接发送配置展示ID。 本仓spec内部ID非必然wireID，请核match.exact。"
+        },
+        {
+          "field": "accessReference.generationPriceUsd",
+          "currentValue": null,
+          "supportedValue": 0.26,
+          "sourceId": "stability-d4656e52aa54",
+          "assessment": "not-comparable",
+          "explanation": "6.5/26credits×USD0.01，按成功生成，不是tokens/秒。 仅原厂接入计价参考，共享ModelSpec禁止写入价格。"
+        },
+        {
+          "field": "spec.audioDurationSeconds",
+          "currentValue": null,
+          "supportedValue": {
+            "min": 1,
+            "max": 380,
+            "default": 190
+          },
+          "sourceId": "stability-6e084c8f9e0e",
+          "assessment": "differs",
+          "explanation": "API参数明确1..380；概述写up to six minutes近似，与380精确参数有文案差异，采取参数值作为候选。"
+        }
+      ],
+      "remainingFields": [
+        "id"
+      ],
+      "nextAction": "逐字段审查上表候选；只有同一接入合同且语义/单位一致的证据才用于后续canonical更新。 剩余字段需精确型号页/官方API schema或已授权账号目录核查，不推导默认值。",
+      "notes": [
+        "原生audio异步HTTP202→GET /v2beta/audio/results/{id}，不是现有Stability图像协议；需要专用adapter。"
+      ]
+    },
+    {
+      "recordKey": "compute/providers/stability.json#stable-diffusion-3.5-large",
+      "modelId": "stable-diffusion-3.5-large",
+      "config": "compute/providers/stability.json",
+      "sourceDoc": "docs/model-sources/providers/stability/models/stable-diffusion-3.5-large.md",
+      "outcome": "official-fields-found",
+      "sourceIds": [
+        "stability-6e084c8f9e0e",
+        "stability-d4656e52aa54",
+        "stability-60d00034055d"
+      ],
+      "fieldEvidence": [
+        {
+          "field": "modelName",
+          "currentValue": "stable-diffusion-3.5-large",
+          "supportedValue": "sd3.5-large",
+          "sourceId": "stability-6e084c8f9e0e",
+          "assessment": "not-comparable",
+          "explanation": "产品展示名称与原生请求model枚举不同，需显式wirealias不能直接发送配置展示ID。"
+        },
+        {
+          "field": "generationPriceUsd",
+          "currentValue": null,
+          "supportedValue": 0.065,
+          "sourceId": "stability-d4656e52aa54",
+          "assessment": "differs",
+          "explanation": "6.5/26credits×USD0.01，按成功生成，不是tokens/秒。"
+        },
+        {
+          "field": "extra.supportedStyles",
+          "currentValue": [
+            "photographic",
+            "digital-art",
+            "anime",
+            "comic-book"
+          ],
+          "supportedValue": [
+            "photographic",
+            "digital-art",
+            "anime",
+            "comic-book"
+          ],
+          "sourceId": "stability-6e084c8f9e0e",
+          "assessment": "matches",
+          "explanation": "本仓四项均在官方style_preset枚举内，是支持项子集。"
+        }
+      ],
+      "remainingFields": [
+        "modelName"
+      ],
+      "nextAction": "逐字段审查上表候选；只有同一接入合同且语义/单位一致的证据才用于后续canonical更新。 剩余字段需精确型号页/官方API schema或已授权账号目录核查，不推导默认值。",
+      "notes": [
+        "官方使用aspect_ratio枚举、约1MP生成；不能直接证明本仓每个supportedImageSizes精确像素组合。HF card未登录401并未绕过。"
+      ]
+    },
+    {
+      "recordKey": "compute/model-specs/stability.json#stable-diffusion-3.5-large",
+      "modelId": "stable-diffusion-3.5-large",
+      "config": "compute/model-specs/stability.json",
+      "sourceDoc": "docs/model-sources/providers/stability/models/stable-diffusion-3.5-large.md",
+      "outcome": "official-fields-found",
+      "sourceIds": [
+        "stability-6e084c8f9e0e",
+        "stability-d4656e52aa54",
+        "stability-60d00034055d"
+      ],
+      "fieldEvidence": [
+        {
+          "field": "id",
+          "currentValue": "stable-diffusion-3.5-large",
+          "supportedValue": "sd3.5-large",
+          "sourceId": "stability-6e084c8f9e0e",
+          "assessment": "not-comparable",
+          "explanation": "产品展示名称与原生请求model枚举不同，需显式wirealias不能直接发送配置展示ID。 本仓spec内部ID非必然wireID，请核match.exact。"
+        },
+        {
+          "field": "accessReference.generationPriceUsd",
+          "currentValue": null,
+          "supportedValue": 0.065,
+          "sourceId": "stability-d4656e52aa54",
+          "assessment": "not-comparable",
+          "explanation": "6.5/26credits×USD0.01，按成功生成，不是tokens/秒。 仅原厂接入计价参考，共享ModelSpec禁止写入价格。"
+        },
+        {
+          "field": "spec.extra.supportedStyles",
+          "currentValue": null,
+          "supportedValue": [
+            "photographic",
+            "digital-art",
+            "anime",
+            "comic-book"
+          ],
+          "sourceId": "stability-6e084c8f9e0e",
+          "assessment": "differs",
+          "explanation": "本仓四项均在官方style_preset枚举内，是支持项子集。"
+        }
+      ],
+      "remainingFields": [
+        "id"
+      ],
+      "nextAction": "逐字段审查上表候选；只有同一接入合同且语义/单位一致的证据才用于后续canonical更新。 剩余字段需精确型号页/官方API schema或已授权账号目录核查，不推导默认值。",
+      "notes": [
+        "官方使用aspect_ratio枚举、约1MP生成；不能直接证明本仓每个supportedImageSizes精确像素组合。HF card未登录401并未绕过。"
+      ]
+    }
+  ]
+}
