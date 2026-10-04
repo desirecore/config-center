@@ -131,7 +131,8 @@
           "reasoning",
           "deep_thinking",
           "math",
-          "code"
+          "code",
+          "tool_use"
         ],
         "serviceType": [
           "reasoning"

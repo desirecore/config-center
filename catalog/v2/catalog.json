@@ -1222,7 +1222,8 @@
           "reasoning",
           "deep_thinking",
           "math",
-          "code"
+          "code",
+          "tool_use"
         ],
         "serviceType": [
           "reasoning"
@@ -6912,7 +6913,8 @@
         "capabilities": [
           "chat",
           "code",
-          "fast"
+          "fast",
+          "tool_use"
         ],
         "serviceType": [
           "fast"
@@ -7406,7 +7408,8 @@
           "chat",
           "code",
           "ultra_long_context",
-          "fast"
+          "fast",
+          "tool_use"
         ],
         "serviceType": [
           "fast"
@@ -7868,7 +7871,8 @@
         "capabilities": [
           "chat",
           "code",
-          "reasoning"
+          "reasoning",
+          "tool_use"
         ],
         "serviceType": [
           "chat"
@@ -9424,7 +9428,8 @@
           "reasoning",
           "code",
           "multilingual",
-          "long_context"
+          "long_context",
+          "tool_use"
         ],
         "serviceType": [
           "chat"
@@ -9472,7 +9477,8 @@
           "chat",
           "reasoning",
           "code",
-          "thinking_mode"
+          "thinking_mode",
+          "tool_use"
         ],
         "serviceType": [
           "chat"
@@ -9823,7 +9829,8 @@
           "vision",
           "image_understanding",
           "ocr",
-          "chart_analysis"
+          "chart_analysis",
+          "tool_use"
         ],
         "serviceType": [
           "vision"
@@ -9873,7 +9880,8 @@
           "chat",
           "vision",
           "image_understanding",
-          "fast"
+          "fast",
+          "tool_use"
         ],
         "serviceType": [
           "vision"
@@ -15160,7 +15168,8 @@
           "reasoning",
           "code",
           "multilingual",
-          "deep_thinking"
+          "deep_thinking",
+          "tool_use"
         ],
         "serviceType": [
           "chat"
@@ -25519,11 +25528,12 @@
               "value": [
                 "chat",
                 "code",
-                "reasoning"
+                "reasoning",
+                "tool_use"
               ],
-              "reason": "preserved-access-contract",
-              "evidence": "compute/providers/ollama.json#llama3.1:70b",
-              "verification": "inherited-not-reverified"
+              "reason": "保留原接入标签；2026-10-05 按官网补 tool_use，其余标签未重新核验。",
+              "evidence": "https://ollama.com/library/llama3.1:70b",
+              "verification": "tool-use-officially-verified-other-tags-inherited"
             },
             "defaultTemperature": {
               "value": 0.8,
@@ -27604,11 +27614,12 @@
                 "reasoning",
                 "code",
                 "fast",
-                "long_context"
+                "long_context",
+                "tool_use"
               ],
-              "reason": "preserved-access-contract",
-              "evidence": "compute/providers/openai.json#gpt-5.4-nano",
-              "verification": "inherited-not-reverified"
+              "reason": "保留原接入标签；2026-10-05 按官网补 tool_use，其余标签未重新核验。",
+              "evidence": "https://developers.openai.com/api/docs/models/gpt-5.4-nano.md",
+              "verification": "tool-use-officially-verified-other-tags-inherited"
             }
           },
           "request": {
@@ -30699,11 +30710,12 @@
             "capabilities": {
               "value": [
                 "chat",
-                "auto_routing"
+                "auto_routing",
+                "tool_use"
               ],
-              "reason": "preserved-access-contract",
-              "evidence": "compute/providers/openrouter.json#openrouter/auto",
-              "verification": "inherited-not-reverified"
+              "reason": "保留原接入标签；2026-10-05 按官网补 tool_use，其余标签未重新核验。",
+              "evidence": "https://openrouter.ai/api/v1/models",
+              "verification": "tool-use-officially-verified-other-tags-inherited"
             },
             "defaultTemperature": {
               "value": 1,
@@ -35895,11 +35907,12 @@
                 "chat",
                 "fast",
                 "long_context",
-                "multilingual"
+                "multilingual",
+                "tool_use"
               ],
-              "reason": "preserved-access-contract",
-              "evidence": "compute/providers/zhipu.json#glm-4.7-flashx",
-              "verification": "inherited-not-reverified"
+              "reason": "保留原接入标签；2026-10-05 按官网补 tool_use，其余标签未重新核验。",
+              "evidence": "https://docs.bigmodel.cn/cn/guide/models/text/glm-4.7.md",
+              "verification": "tool-use-officially-verified-other-tags-inherited"
             },
             "defaultTemperature": {
               "value": 1,
@@ -36587,11 +36600,12 @@
                 "chat",
                 "reasoning",
                 "code",
-                "agent"
+                "agent",
+                "tool_use"
               ],
-              "reason": "preserved-access-contract",
-              "evidence": "compute/coding-plans/baidu-coding.json#glm-5",
-              "verification": "inherited-not-reverified"
+              "reason": "保留原接入标签；2026-10-05 按官网补 tool_use，其余标签未重新核验。",
+              "evidence": "https://cloud.baidu.com/doc/qianfan-docs/s/xm95lyys5",
+              "verification": "tool-use-officially-verified-other-tags-inherited"
             }
           },
           "request": {},
@@ -36680,11 +36694,12 @@
                 "reasoning",
                 "code",
                 "agent",
-                "long_context"
+                "long_context",
+                "tool_use"
               ],
-              "reason": "preserved-access-contract",
-              "evidence": "compute/coding-plans/baidu-coding.json#kimi-k2.5",
-              "verification": "inherited-not-reverified"
+              "reason": "保留原接入标签；2026-10-05 按官网补 tool_use，其余标签未重新核验。",
+              "evidence": "https://cloud.baidu.com/doc/qianfan-docs/s/xm95lyys5",
+              "verification": "tool-use-officially-verified-other-tags-inherited"
             }
           },
           "request": {},
@@ -36780,11 +36795,12 @@
               "value": [
                 "chat",
                 "reasoning",
-                "code"
+                "code",
+                "tool_use"
               ],
-              "reason": "preserved-access-contract",
-              "evidence": "compute/coding-plans/baidu-coding.json#minimax-m2.5",
-              "verification": "inherited-not-reverified"
+              "reason": "保留原接入标签；2026-10-05 按官网补 tool_use，其余标签未重新核验。",
+              "evidence": "https://cloud.baidu.com/doc/qianfan-docs/s/xm95lyys5",
+              "verification": "tool-use-officially-verified-other-tags-inherited"
             }
           },
           "request": {},
@@ -37410,11 +37426,12 @@
               "value": [
                 "chat",
                 "reasoning",
-                "code"
+                "code",
+                "tool_use"
               ],
-              "reason": "preserved-access-contract",
-              "evidence": "compute/coding-plans/dashscope-coding.json#glm-4.7",
-              "verification": "inherited-not-reverified"
+              "reason": "保留原接入标签；2026-10-05 按官网补 tool_use，其余标签未重新核验。",
+              "evidence": "https://help.aliyun.com/zh/model-studio/glm-4-7",
+              "verification": "tool-use-officially-verified-other-tags-inherited"
             }
           },
           "request": {},
@@ -39768,11 +39785,12 @@
               "value": [
                 "chat",
                 "reasoning",
-                "code"
+                "code",
+                "tool_use"
               ],
-              "reason": "preserved-access-contract",
-              "evidence": "compute/coding-plans/tencent-token.json#tc-code-latest",
-              "verification": "inherited-not-reverified"
+              "reason": "保留原接入标签；2026-10-05 按官网补 tool_use，其余标签未重新核验。",
+              "evidence": "https://cloud.tencent.com/document/product/1823/130060",
+              "verification": "tool-use-per-official-plan-docs-other-tags-inherited"
             }
           },
           "request": {},
@@ -40137,11 +40155,12 @@
                 "chat",
                 "reasoning",
                 "code",
-                "agent"
+                "agent",
+                "tool_use"
               ],
-              "reason": "preserved-access-contract",
-              "evidence": "compute/coding-plans/tencent-token.json#minimax-m2.7",
-              "verification": "inherited-not-reverified"
+              "reason": "保留原接入标签；2026-10-05 按官网补 tool_use，其余标签未重新核验。",
+              "evidence": "https://cloud.tencent.com/document/product/1823/130051",
+              "verification": "tool-use-officially-verified-other-tags-inherited"
             }
           },
           "request": {},
@@ -40449,11 +40468,12 @@
               "value": [
                 "code",
                 "reasoning",
-                "chat"
+                "chat",
+                "tool_use"
               ],
-              "reason": "preserved-access-contract",
-              "evidence": "compute/coding-plans/volcengine-coding.json#ark-code-latest",
-              "verification": "inherited-not-reverified"
+              "reason": "保留原接入标签；2026-10-05 按官网补 tool_use，其余标签未重新核验。",
+              "evidence": "https://docs.volcengine.com/docs/ark/coding-plan-personal-get-started?lang=zh",
+              "verification": "tool-use-per-official-plan-docs-other-tags-inherited"
             }
           },
           "request": {},

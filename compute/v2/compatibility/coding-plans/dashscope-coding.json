@@ -183,7 +183,8 @@
       "capabilities": [
         "chat",
         "reasoning",
-        "code"
+        "code",
+        "tool_use"
       ],
       "source": "preset"
     },

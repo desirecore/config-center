@@ -33,7 +33,8 @@
     "reasoning",
     "deep_thinking",
     "math",
-    "code"
+    "code",
+    "tool_use"
   ],
   "inputPrice": 1,
   "outputPrice": 4
@@ -45,7 +46,9 @@
 
 | 模型 ID | 上下文 / 输出 | 计价 | 已核字段→来源 | 来源入口 | 状态 | 数据指纹 |
 | --- | --- | --- | --- | --- | --- | --- |
-| `ernie-x1.1` | 65536 / 65536 | CNY：1 / 4 | 待核实 | [baidu-models](../SOURCES.md#baidu-models) | pending | `39b6c69eacc5049a131c2b42bf54bc430531aac8dad426d88df12339cdff3e9e` |
+| `ernie-x1.1` | 65536 / 65536 | CNY：1 / 4 | 待核实 | [baidu-models](../SOURCES.md#baidu-models), [qianfan-function-calling](../SOURCES.md#qianfan-function-calling) | pending | `0e62f1467ecbb6f13c453ee3fdcc63b1ff50c718667f021f23bb8d45f81f4727` |
+
+- 2026-10-05 工具调用核对：`capabilities` 增加 `tool_use`。随共享规格继承。千帆 Function calling 文档「支持模型范围」的 ERNIE 系列列有 ernie-x1.1。依据：[qianfan-function-calling](../SOURCES.md#qianfan-function-calling)。本次只核对工具调用一项，其余标签仍是本仓产品标签，核验状态不变。
 
 ### compute/model-specs/baidu.json
 
@@ -66,7 +69,8 @@
     "reasoning",
     "deep_thinking",
     "math",
-    "code"
+    "code",
+    "tool_use"
   ],
   "spec.supportsReasoning": true,
   "spec.defaultTemperature": null
@@ -78,7 +82,9 @@
 
 | 模型 ID | 上下文 / 输出 | 计价 | 已核字段→来源 | 来源入口 | 状态 | 数据指纹 |
 | --- | --- | --- | --- | --- | --- | --- |
-| `ernie-x1.1` | 65536 / 65536 | 非计价主数据 | 待核实 | [baidu-models](../SOURCES.md#baidu-models) | pending | `0bfc1a2e9f52d3e8f1e3c9e70d4abf9a5c74d07e7a42750d2d232157191723f0` |
+| `ernie-x1.1` | 65536 / 65536 | 非计价主数据 | 待核实 | [baidu-models](../SOURCES.md#baidu-models), [qianfan-function-calling](../SOURCES.md#qianfan-function-calling) | pending | `bcc423916c3c70990d5f616a2c2c8ddf3c305c1d8f7a37334f096bd549022b69` |
+
+- 2026-10-05 工具调用核对：`spec.capabilities` 增加 `tool_use`。千帆 Function calling 文档「支持模型范围」的 ERNIE 系列列有 ernie-x1.1。依据：[qianfan-function-calling](../SOURCES.md#qianfan-function-calling)。本次只核对工具调用一项，其余标签仍是本仓产品标签，核验状态不变。
 
 ## 下次更新核查
 

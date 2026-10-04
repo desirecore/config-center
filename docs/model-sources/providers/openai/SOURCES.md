@@ -49,9 +49,31 @@
 - 入口：[gpt-5-4-nano-api](https://developers.openai.com/api/docs/models/gpt-5.4-nano.md)
 - 类型：`official-doc`；读取状态：`fetched`；适用范围：OpenAI 直连 API；USD 每百万 token，不能证明 Codex 订阅窗口或可用性。
 
+### openai-gpt-5-nano-tools
+
+- 入口：[openai-gpt-5-nano-tools](https://developers.openai.com/api/docs/models/gpt-5-nano.md)
+- 类型：`official-doc`；读取状态：`fetched`；适用范围：OpenAI 直连 API 型号页；2026-10-05 只核对 Supported features 是否含 function_calling 与端点支持情况。
+
+### openai-gpt-4-1-nano-tools
+
+- 入口：[openai-gpt-4-1-nano-tools](https://developers.openai.com/api/docs/models/gpt-4.1-nano.md)
+- 类型：`official-doc`；读取状态：`fetched`；适用范围：OpenAI 直连 API 型号页；2026-10-05 只核对 Supported features 是否含 function_calling 与端点支持情况。
+
+### openai-gpt-5-4-nano-tools
+
+- 入口：[openai-gpt-5-4-nano-tools](https://developers.openai.com/api/docs/models/gpt-5.4-nano.md)
+- 类型：`official-doc`；读取状态：`fetched`；适用范围：OpenAI 直连 API 型号页；2026-10-05 只核对 Supported features 是否含 function_calling 与端点支持情况。
+
+### openai-gpt-oss-120b-tools
+
+- 入口：[openai-gpt-oss-120b-tools](https://developers.openai.com/api/docs/models/gpt-oss-120b.md)
+- 类型：`official-doc`；读取状态：`fetched`；适用范围：OpenAI 开放权重型号页；直连只有 Responses 端点，其他托管平台另核；2026-10-05 只核对 function_calling。
+
 ## 已知边界与核验说明
 
 GPT-6.1 Sol 的窗口、输出、推理档位与直连计价已再次核对。API 参数不能自动套用到订阅后端；订阅的档位限制保留接入面记录。其他旧型号尚未在本次逐字段复核。
+
+2026-10-05 工具调用核对：以上 `openai-gpt-5-nano-tools`、`openai-gpt-4-1-nano-tools`、`openai-gpt-5-4-nano-tools`、`openai-gpt-oss-120b-tools` 只用于核对函数 / 工具调用是否受支持，读取日期 2026-10-05；没有借此复核窗口、价格等其他字段，也没有做账号调用验收。能力标签里只有 `tool_use` 一项以这些来源为依据。
 
 状态 `partial` 仅表示列出的字段已核实；不能推断整条配置、价格、账号权限或真实模型调用都已验收。`pending` 没有已核字段；`historical` 只作历史兼容参考。路由 tier/priority、产品标签和默认选择属于本仓策略，不伪装成官网数据。
 
@@ -212,6 +234,46 @@ GPT-6.1 Sol 的窗口、输出、推理档位与直连计价已再次核对。AP
       "checkedAt": "2026-10-03",
       "contentSha256": "ac78c7daedd9543728f7a2c6ed453afce3bcbdcf590535fb4b65a7d2e7c43481",
       "resolvedUrl": "https://developers.openai.com/api/docs/deprecations.md"
+    },
+    {
+      "id": "openai-gpt-5-nano-tools",
+      "url": "https://developers.openai.com/api/docs/models/gpt-5-nano.md",
+      "kind": "official-doc",
+      "scope": "OpenAI 直连 API 型号页；2026-10-05 只核对 Supported features 是否含 function_calling 与端点支持情况",
+      "retrieval": "fetched",
+      "checkedAt": "2026-10-05",
+      "contentSha256": "81508b2800ec4c9da22cf057ad4d6c2ba9237d98ec6a3915b5bc1df0ce45d131",
+      "resolvedUrl": "https://developers.openai.com/api/docs/models/gpt-5-nano.md"
+    },
+    {
+      "id": "openai-gpt-4-1-nano-tools",
+      "url": "https://developers.openai.com/api/docs/models/gpt-4.1-nano.md",
+      "kind": "official-doc",
+      "scope": "OpenAI 直连 API 型号页；2026-10-05 只核对 Supported features 是否含 function_calling 与端点支持情况",
+      "retrieval": "fetched",
+      "checkedAt": "2026-10-05",
+      "contentSha256": "b7bd756c48509d7eaa8187100fc682537c78eec6c3ff099ad6d3e28ace1a86eb",
+      "resolvedUrl": "https://developers.openai.com/api/docs/models/gpt-4.1-nano.md"
+    },
+    {
+      "id": "openai-gpt-5-4-nano-tools",
+      "url": "https://developers.openai.com/api/docs/models/gpt-5.4-nano.md",
+      "kind": "official-doc",
+      "scope": "OpenAI 直连 API 型号页；2026-10-05 只核对 Supported features 是否含 function_calling 与端点支持情况",
+      "retrieval": "fetched",
+      "checkedAt": "2026-10-05",
+      "contentSha256": "3dd20e2c95f09f3efb19c6255387a4e07d4d7c213367cca0a015e162a8f5b4e0",
+      "resolvedUrl": "https://developers.openai.com/api/docs/models/gpt-5.4-nano.md"
+    },
+    {
+      "id": "openai-gpt-oss-120b-tools",
+      "url": "https://developers.openai.com/api/docs/models/gpt-oss-120b.md",
+      "kind": "official-doc",
+      "scope": "OpenAI 开放权重型号页；直连只有 Responses 端点，其他托管平台另核；2026-10-05 只核对 function_calling",
+      "retrieval": "fetched",
+      "checkedAt": "2026-10-05",
+      "contentSha256": "2b57ea5a172afd293be49e3acb3d270c060a31ade355f04a4b7c4f45d37fae72",
+      "resolvedUrl": "https://developers.openai.com/api/docs/models/gpt-oss-120b.md"
     }
   ]
 }

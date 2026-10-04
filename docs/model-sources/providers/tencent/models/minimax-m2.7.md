@@ -29,7 +29,8 @@
     "chat",
     "reasoning",
     "code",
-    "agent"
+    "agent",
+    "tool_use"
   ]
 }
 ```
@@ -39,7 +40,9 @@
 
 | 模型 ID | 上下文 / 输出 | 计价 | 已核字段→来源 | 来源入口 | 状态 | 数据指纹 |
 | --- | --- | --- | --- | --- | --- | --- |
-| `minimax-m2.7` | 未声明 / 未声明 | 套餐：未声明 / 未声明 | 待核实 | [tencent](../SOURCES.md#tencent) | pending | `c1552bf2af76f109465fdae3de1d3141a6cef234fef7536eed3da12c58ed83f4` |
+| `minimax-m2.7` | 未声明 / 未声明 | 套餐：未声明 / 未声明 | 待核实 | [tencent](../SOURCES.md#tencent), [tokenhub-model-list](../SOURCES.md#tokenhub-model-list), [tencent-token-plan-doc](../SOURCES.md#tencent-token-plan-doc) | pending | `928432248506ad0475048b5757a3705f1396e9a3465a39aafe890655568dfa3c` |
+
+- 2026-10-05 工具调用核对：`capabilities` 增加 `tool_use`。TokenHub 模型列表 MiniMax-M2.7（minimax-m2.7）的能力支持含 Function Calling；Token Plan 文档的可用模型含 minimax-m2.7。依据：[tokenhub-model-list](../SOURCES.md#tokenhub-model-list)、[tencent-token-plan-doc](../SOURCES.md#tencent-token-plan-doc)。本次只核对工具调用一项，其余标签仍是本仓产品标签，核验状态不变。
 
 ## 下次更新核查
 

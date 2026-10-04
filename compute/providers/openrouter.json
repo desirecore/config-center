@@ -300,7 +300,8 @@
       "maxOutputTokens": 16384,
       "capabilities": [
         "chat",
-        "auto_routing"
+        "auto_routing",
+        "tool_use"
       ],
       "defaultTemperature": 1,
       "defaultTopP": 1,

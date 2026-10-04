@@ -1645,11 +1645,12 @@
       "value": [
         "chat",
         "code",
-        "reasoning"
+        "reasoning",
+        "tool_use"
       ],
-      "reason": "preserved-access-contract",
-      "evidence": "compute/providers/ollama.json#llama3.1:70b",
-      "verification": "inherited-not-reverified"
+      "reason": "保留原接入标签；2026-10-05 按官网补 tool_use，其余标签未重新核验。",
+      "evidence": "https://ollama.com/library/llama3.1:70b",
+      "verification": "tool-use-officially-verified-other-tags-inherited"
     },
     {
       "accessId": "provider-local-ollama",
@@ -2098,11 +2099,12 @@
         "reasoning",
         "code",
         "fast",
-        "long_context"
+        "long_context",
+        "tool_use"
       ],
-      "reason": "preserved-access-contract",
-      "evidence": "compute/providers/openai.json#gpt-5.4-nano",
-      "verification": "inherited-not-reverified"
+      "reason": "保留原接入标签；2026-10-05 按官网补 tool_use，其余标签未重新核验。",
+      "evidence": "https://developers.openai.com/api/docs/models/gpt-5.4-nano.md",
+      "verification": "tool-use-officially-verified-other-tags-inherited"
     },
     {
       "accessId": "provider-openai-001",
@@ -2734,11 +2736,12 @@
       "field": "capabilities",
       "value": [
         "chat",
-        "auto_routing"
+        "auto_routing",
+        "tool_use"
       ],
-      "reason": "preserved-access-contract",
-      "evidence": "compute/providers/openrouter.json#openrouter/auto",
-      "verification": "inherited-not-reverified"
+      "reason": "保留原接入标签；2026-10-05 按官网补 tool_use，其余标签未重新核验。",
+      "evidence": "https://openrouter.ai/api/v1/models",
+      "verification": "tool-use-officially-verified-other-tags-inherited"
     },
     {
       "accessId": "provider-openrouter-001",
@@ -3658,11 +3661,12 @@
         "chat",
         "fast",
         "long_context",
-        "multilingual"
+        "multilingual",
+        "tool_use"
       ],
-      "reason": "preserved-access-contract",
-      "evidence": "compute/providers/zhipu.json#glm-4.7-flashx",
-      "verification": "inherited-not-reverified"
+      "reason": "保留原接入标签；2026-10-05 按官网补 tool_use，其余标签未重新核验。",
+      "evidence": "https://docs.bigmodel.cn/cn/guide/models/text/glm-4.7.md",
+      "verification": "tool-use-officially-verified-other-tags-inherited"
     },
     {
       "accessId": "provider-zhipu-001",
@@ -3858,11 +3862,12 @@
         "chat",
         "reasoning",
         "code",
-        "agent"
+        "agent",
+        "tool_use"
       ],
-      "reason": "preserved-access-contract",
-      "evidence": "compute/coding-plans/baidu-coding.json#glm-5",
-      "verification": "inherited-not-reverified"
+      "reason": "保留原接入标签；2026-10-05 按官网补 tool_use，其余标签未重新核验。",
+      "evidence": "https://cloud.baidu.com/doc/qianfan-docs/s/xm95lyys5",
+      "verification": "tool-use-officially-verified-other-tags-inherited"
     },
     {
       "accessId": "provider-baidu-coding-001",
@@ -3887,11 +3892,12 @@
         "reasoning",
         "code",
         "agent",
-        "long_context"
+        "long_context",
+        "tool_use"
       ],
-      "reason": "preserved-access-contract",
-      "evidence": "compute/coding-plans/baidu-coding.json#kimi-k2.5",
-      "verification": "inherited-not-reverified"
+      "reason": "保留原接入标签；2026-10-05 按官网补 tool_use，其余标签未重新核验。",
+      "evidence": "https://cloud.baidu.com/doc/qianfan-docs/s/xm95lyys5",
+      "verification": "tool-use-officially-verified-other-tags-inherited"
     },
     {
       "accessId": "provider-baidu-coding-001",
@@ -3926,11 +3932,12 @@
       "value": [
         "chat",
         "reasoning",
-        "code"
+        "code",
+        "tool_use"
       ],
-      "reason": "preserved-access-contract",
-      "evidence": "compute/coding-plans/baidu-coding.json#minimax-m2.5",
-      "verification": "inherited-not-reverified"
+      "reason": "保留原接入标签；2026-10-05 按官网补 tool_use，其余标签未重新核验。",
+      "evidence": "https://cloud.baidu.com/doc/qianfan-docs/s/xm95lyys5",
+      "verification": "tool-use-officially-verified-other-tags-inherited"
     },
     {
       "accessId": "provider-baidu-coding-001",
@@ -4232,11 +4239,12 @@
       "value": [
         "chat",
         "reasoning",
-        "code"
+        "code",
+        "tool_use"
       ],
-      "reason": "preserved-access-contract",
-      "evidence": "compute/coding-plans/dashscope-coding.json#glm-4.7",
-      "verification": "inherited-not-reverified"
+      "reason": "保留原接入标签；2026-10-05 按官网补 tool_use，其余标签未重新核验。",
+      "evidence": "https://help.aliyun.com/zh/model-studio/glm-4-7",
+      "verification": "tool-use-officially-verified-other-tags-inherited"
     },
     {
       "accessId": "provider-dashscope-coding-001",
@@ -4802,11 +4810,12 @@
       "value": [
         "chat",
         "reasoning",
-        "code"
+        "code",
+        "tool_use"
       ],
-      "reason": "preserved-access-contract",
-      "evidence": "compute/coding-plans/tencent-token.json#tc-code-latest",
-      "verification": "inherited-not-reverified"
+      "reason": "保留原接入标签；2026-10-05 按官网补 tool_use，其余标签未重新核验。",
+      "evidence": "https://cloud.tencent.com/document/product/1823/130060",
+      "verification": "tool-use-per-official-plan-docs-other-tags-inherited"
     },
     {
       "accessId": "provider-tencent-token-001",
@@ -4957,11 +4966,12 @@
         "chat",
         "reasoning",
         "code",
-        "agent"
+        "agent",
+        "tool_use"
       ],
-      "reason": "preserved-access-contract",
-      "evidence": "compute/coding-plans/tencent-token.json#minimax-m2.7",
-      "verification": "inherited-not-reverified"
+      "reason": "保留原接入标签；2026-10-05 按官网补 tool_use，其余标签未重新核验。",
+      "evidence": "https://cloud.tencent.com/document/product/1823/130051",
+      "verification": "tool-use-officially-verified-other-tags-inherited"
     },
     {
       "accessId": "provider-tencent-token-001",
@@ -5076,11 +5086,12 @@
       "value": [
         "code",
         "reasoning",
-        "chat"
+        "chat",
+        "tool_use"
       ],
-      "reason": "preserved-access-contract",
-      "evidence": "compute/coding-plans/volcengine-coding.json#ark-code-latest",
-      "verification": "inherited-not-reverified"
+      "reason": "保留原接入标签；2026-10-05 按官网补 tool_use，其余标签未重新核验。",
+      "evidence": "https://docs.volcengine.com/docs/ark/coding-plan-personal-get-started?lang=zh",
+      "verification": "tool-use-per-official-plan-docs-other-tags-inherited"
     },
     {
       "accessId": "provider-volcengine-coding-001",

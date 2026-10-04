@@ -30,7 +30,8 @@
     "reasoning",
     "code",
     "agent",
-    "long_context"
+    "long_context",
+    "tool_use"
   ]
 }
 ```
@@ -40,7 +41,9 @@
 
 | 模型 ID | 上下文 / 输出 | 计价 | 已核字段→来源 | 来源入口 | 状态 | 数据指纹 |
 | --- | --- | --- | --- | --- | --- | --- |
-| `kimi-k2.5` | 未声明 / 未声明 | 套餐：未声明 / 未声明 | `modelName`→[baidu-plan](../SOURCES.md#baidu-plan) | [baidu-plan](../SOURCES.md#baidu-plan) | partial | `00e6c83e5b65b32615ef20958e927961d36bd8302b6661fb5bc20cd84b6cf35a` |
+| `kimi-k2.5` | 未声明 / 未声明 | 套餐：未声明 / 未声明 | `modelName`→[baidu-plan](../SOURCES.md#baidu-plan) | [baidu-plan](../SOURCES.md#baidu-plan), [qianfan-function-calling](../SOURCES.md#qianfan-function-calling), [qianfan-coding-plan-tools](../SOURCES.md#qianfan-coding-plan-tools) | partial | `f16fd6976ebe4df6a68f7a350c8c69dfe8e4ab89ef5f9125c64cf370c83c0776` |
+
+- 2026-10-05 工具调用核对：`capabilities` 增加 `tool_use`。千帆 Function calling 文档「支持模型范围」列有 kimi-k2.5；Coding Plan 文档可配置的 Model Name 含 kimi-k2.5。套餐当前可用性未重新核实。依据：[qianfan-function-calling](../SOURCES.md#qianfan-function-calling)、[qianfan-coding-plan-tools](../SOURCES.md#qianfan-coding-plan-tools)。本次只核对工具调用一项，其余标签仍是本仓产品标签，核验状态不变。
 
 ## 下次更新核查
 

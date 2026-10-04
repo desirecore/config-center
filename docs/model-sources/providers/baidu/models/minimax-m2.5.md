@@ -28,7 +28,8 @@
   "capabilities": [
     "chat",
     "reasoning",
-    "code"
+    "code",
+    "tool_use"
   ]
 }
 ```
@@ -38,7 +39,9 @@
 
 | 模型 ID | 上下文 / 输出 | 计价 | 已核字段→来源 | 来源入口 | 状态 | 数据指纹 |
 | --- | --- | --- | --- | --- | --- | --- |
-| `minimax-m2.5` | 未声明 / 未声明 | 套餐：未声明 / 未声明 | `modelName`→[baidu-plan](../SOURCES.md#baidu-plan) | [baidu-plan](../SOURCES.md#baidu-plan) | partial | `703afe7b05fe28d702ddcded549439837f45108b77f36580318be80a6761546d` |
+| `minimax-m2.5` | 未声明 / 未声明 | 套餐：未声明 / 未声明 | `modelName`→[baidu-plan](../SOURCES.md#baidu-plan) | [baidu-plan](../SOURCES.md#baidu-plan), [qianfan-function-calling](../SOURCES.md#qianfan-function-calling), [qianfan-coding-plan-tools](../SOURCES.md#qianfan-coding-plan-tools) | partial | `059315e8a6596cd914c4d3e8a34e9fa8937550abf281e03519ec626a2e5eabbf` |
+
+- 2026-10-05 工具调用核对：`capabilities` 增加 `tool_use`。千帆 Function calling 文档「支持模型范围」列有 minimax-m2.5；Coding Plan 文档可配置的 Model Name 含 minimax-m2.5（套餐表标注即将下线）。套餐当前可用性未重新核实。依据：[qianfan-function-calling](../SOURCES.md#qianfan-function-calling)、[qianfan-coding-plan-tools](../SOURCES.md#qianfan-coding-plan-tools)。本次只核对工具调用一项，其余标签仍是本仓产品标签，核验状态不变。
 
 ## 下次更新核查
 

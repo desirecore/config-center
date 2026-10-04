@@ -28,7 +28,8 @@
   "capabilities": [
     "chat",
     "reasoning",
-    "code"
+    "code",
+    "tool_use"
   ]
 }
 ```
@@ -38,7 +39,9 @@
 
 | 模型 ID | 上下文 / 输出 | 计价 | 已核字段→来源 | 来源入口 | 状态 | 数据指纹 |
 | --- | --- | --- | --- | --- | --- | --- |
-| `tc-code-latest` | 未声明 / 未声明 | 套餐：未声明 / 未声明 | 待核实 | [tencent](../SOURCES.md#tencent) | pending | `04d8a41f82a0efdc743c71357a33552c60c838dd598ed10d99077173cad3ea67` |
+| `tc-code-latest` | 未声明 / 未声明 | 套餐：未声明 / 未声明 | 待核实 | [tencent](../SOURCES.md#tencent), [tencent-token-plan-doc](../SOURCES.md#tencent-token-plan-doc), [tokenhub-model-list](../SOURCES.md#tokenhub-model-list) | pending | `2d1b66426d85dad1936fac50182749e2858aa17d2d7acbb371ebe16ff6e8ce4f` |
+
+- 2026-10-05 工具调用核对：`capabilities` 增加 `tool_use`。Token Plan 文档把 tc-code-latest 列为 Auto 智能路由的 Model ID，套餐适配 Claude Code、OpenCode 等编程工具；TokenHub 模型列表里套餐当前可用型号的能力支持均含 Function Calling。别名本身没有单独的能力表，依据是套餐文档。依据：[tencent-token-plan-doc](../SOURCES.md#tencent-token-plan-doc)、[tokenhub-model-list](../SOURCES.md#tokenhub-model-list)。本次只核对工具调用一项，其余标签仍是本仓产品标签，核验状态不变。
 
 ## 下次更新核查
 

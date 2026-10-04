@@ -31,7 +31,8 @@
   "capabilities": [
     "chat",
     "code",
-    "fast"
+    "fast",
+    "tool_use"
   ],
   "inputPrice": 0.05,
   "outputPrice": 0.4
@@ -43,7 +44,9 @@
 
 | 模型 ID | 上下文 / 输出 | 计价 | 已核字段→来源 | 来源入口 | 状态 | 数据指纹 |
 | --- | --- | --- | --- | --- | --- | --- |
-| `gpt-5-nano` | 400000 / 128000 | USD：0.05 / 0.4 | 待核实 | [openai-models](../SOURCES.md#openai-models) | pending | `90af0d7d4b1a5df561d95e574e1ebc1c4c974d42175a6a1a3046135edb5f80b8` |
+| `gpt-5-nano` | 400000 / 128000 | USD：0.05 / 0.4 | 待核实 | [openai-models](../SOURCES.md#openai-models), [openai-gpt-5-nano-tools](../SOURCES.md#openai-gpt-5-nano-tools) | pending | `439b0250c82f3a9d0caeca732c4b993353e2ef8e98898dd4ed120a3f8f0fb79c` |
+
+- 2026-10-05 工具调用核对：`capabilities` 增加 `tool_use`。随共享规格继承。官网型号页 Supported features 列有 function_calling，Chat Completions 端点为 Supported。依据：[openai-gpt-5-nano-tools](../SOURCES.md#openai-gpt-5-nano-tools)。本次只核对工具调用一项，其余标签仍是本仓产品标签，核验状态不变。
 
 ### compute/model-specs/openai.json
 
@@ -62,7 +65,8 @@
   "spec.capabilities": [
     "chat",
     "code",
-    "fast"
+    "fast",
+    "tool_use"
   ],
   "spec.defaultTemperature": 1
 }
@@ -73,7 +77,9 @@
 
 | 模型 ID | 上下文 / 输出 | 计价 | 已核字段→来源 | 来源入口 | 状态 | 数据指纹 |
 | --- | --- | --- | --- | --- | --- | --- |
-| `gpt-5-nano` | 400000 / 128000 | 非计价主数据 | 待核实 | [openai-models](../SOURCES.md#openai-models) | pending | `bf4ea84c497783cfbb7eaf471b5b23f8799e85a8b8fd660c6832fa12fd390173` |
+| `gpt-5-nano` | 400000 / 128000 | 非计价主数据 | 待核实 | [openai-models](../SOURCES.md#openai-models), [openai-gpt-5-nano-tools](../SOURCES.md#openai-gpt-5-nano-tools) | pending | `662dfdfc1ce5bd7fff2097242c6f5087d8e2c0706d4c65aa3bcb8000e347f276` |
+
+- 2026-10-05 工具调用核对：`spec.capabilities` 增加 `tool_use`。官网型号页 Supported features 列有 function_calling，Chat Completions 与 Responses 端点均为 Supported。依据：[openai-gpt-5-nano-tools](../SOURCES.md#openai-gpt-5-nano-tools)。本次只核对工具调用一项，其余标签仍是本仓产品标签，核验状态不变。
 
 ## 下次更新核查
 

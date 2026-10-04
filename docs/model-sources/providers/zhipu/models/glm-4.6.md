@@ -72,7 +72,8 @@
     "reasoning",
     "code",
     "multilingual",
-    "deep_thinking"
+    "deep_thinking",
+    "tool_use"
   ],
   "spec.supportsReasoning": true,
   "spec.defaultTemperature": 1
@@ -84,7 +85,9 @@
 
 | 模型 ID | 上下文 / 输出 | 计价 | 已核字段→来源 | 来源入口 | 状态 | 数据指纹 |
 | --- | --- | --- | --- | --- | --- | --- |
-| `glm-4.6` | 200000 / 128000 | 非计价主数据 | `id`→[glm-pricing](../SOURCES.md#glm-pricing) | [glm-pricing](../SOURCES.md#glm-pricing) | partial | `d000dbabac9ef3f752bc3afb854a3e84655dd496591354f05ffd9e93c5f46233` |
+| `glm-4.6` | 200000 / 128000 | 非计价主数据 | `id`→[glm-pricing](../SOURCES.md#glm-pricing) | [glm-pricing](../SOURCES.md#glm-pricing), [zhipu-glm-4-6-page](../SOURCES.md#zhipu-glm-4-6-page) | partial | `fdc0405d98bbabb6f2afd934364f84f18d9da89bd6b7a0b5dd006b05e3c53623` |
+
+- 2026-10-05 工具调用核对：`spec.capabilities` 增加 `tool_use`。官网 GLM-4.6 型号页「能力支持」列有 Function Calling。依据：[zhipu-glm-4-6-page](../SOURCES.md#zhipu-glm-4-6-page)。本次只核对工具调用一项，其余标签仍是本仓产品标签，核验状态不变。
 
 ## 下次更新核查
 

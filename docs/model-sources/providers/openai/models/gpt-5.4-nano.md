@@ -33,7 +33,8 @@
     "reasoning",
     "code",
     "fast",
-    "long_context"
+    "long_context",
+    "tool_use"
   ],
   "inputPrice": 0.2,
   "outputPrice": 1.25,
@@ -55,7 +56,9 @@
 
 | 模型 ID | 上下文 / 输出 | 计价 | 已核字段→来源 | 来源入口 | 状态 | 数据指纹 |
 | --- | --- | --- | --- | --- | --- | --- |
-| `gpt-5.4-nano` | 400000 / 128000 | USD：0.2 / 1.25 | `modelName`→[gpt-5-4-nano-api](../SOURCES.md#gpt-5-4-nano-api)；`contextWindow`→[gpt-5-4-nano-api](../SOURCES.md#gpt-5-4-nano-api)；`maxOutputTokens`→[gpt-5-4-nano-api](../SOURCES.md#gpt-5-4-nano-api)；`inputPrice`→[gpt-5-4-nano-api](../SOURCES.md#gpt-5-4-nano-api)；`outputPrice`→[gpt-5-4-nano-api](../SOURCES.md#gpt-5-4-nano-api)；`extra.reasoning.supportedEfforts`→[gpt-5-4-nano-api](../SOURCES.md#gpt-5-4-nano-api)；`extra.cachedInputPrice`→[gpt-5-4-nano-api](../SOURCES.md#gpt-5-4-nano-api) | [gpt-5-4-nano-api](../SOURCES.md#gpt-5-4-nano-api) | partial | `c9177352926f2671a78517659b30654fe41a14a2ebfcf435ba7854ee030bac0e` |
+| `gpt-5.4-nano` | 400000 / 128000 | USD：0.2 / 1.25 | `modelName`→[gpt-5-4-nano-api](../SOURCES.md#gpt-5-4-nano-api)；`contextWindow`→[gpt-5-4-nano-api](../SOURCES.md#gpt-5-4-nano-api)；`maxOutputTokens`→[gpt-5-4-nano-api](../SOURCES.md#gpt-5-4-nano-api)；`inputPrice`→[gpt-5-4-nano-api](../SOURCES.md#gpt-5-4-nano-api)；`outputPrice`→[gpt-5-4-nano-api](../SOURCES.md#gpt-5-4-nano-api)；`extra.reasoning.supportedEfforts`→[gpt-5-4-nano-api](../SOURCES.md#gpt-5-4-nano-api)；`extra.cachedInputPrice`→[gpt-5-4-nano-api](../SOURCES.md#gpt-5-4-nano-api) | [gpt-5-4-nano-api](../SOURCES.md#gpt-5-4-nano-api), [openai-gpt-5-4-nano-tools](../SOURCES.md#openai-gpt-5-4-nano-tools) | partial | `821b813acdd4c3ab2a7d8ba25980dd7123d9735e25ac1de4cd9a7f7026197465` |
+
+- 2026-10-05 工具调用核对：`capabilities` 增加 `tool_use`。官网型号页 Supported features 列有 function_calling，Chat Completions 与 Responses 端点均为 Supported。依据：[openai-gpt-5-4-nano-tools](../SOURCES.md#openai-gpt-5-4-nano-tools)。本次只核对工具调用一项，其余标签仍是本仓产品标签，核验状态不变。
 
 本轮读取该模型官方明文规格页，确认原厂直连窗口、输出、标准价格与推理合同。Pro 仅限 Responses；GPT-5.4 Pro 官方默认 medium，修正旧 high。none 在产品层映射 off，schema 不接受将 none 写成 defaultEffort，故未伪造其他显式默认档。
 

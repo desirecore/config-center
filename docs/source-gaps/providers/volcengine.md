@@ -8,11 +8,10 @@
 
 无该类记录。
 
-## 未取得可读官网证据（66 条）
+## 未取得可读官网证据（65 条）
 
 | 模型 | 接入面 | 未登记证明的关键字段 | 官网入口/读取结果 |
 | --- | --- | --- | --- |
-| [`ark-code-latest`](../../model-sources/providers/volcengine/models/ark-code-latest.md) | [`compute/coding-plans/volcengine-coding.json`](../../../compute/coding-plans/volcengine-coding.json) | `modelName` | [volcengine-models](../../model-sources/providers/volcengine/SOURCES.md#volcengine-models)：shell |
 | [`deepseek-r1`](../../model-sources/providers/volcengine/models/deepseek-r1.md) | [`compute/providers/volcengine.json`](../../../compute/providers/volcengine.json) | `contextWindow`、`inputPrice`、`maxOutputTokens`、`modelName`、`outputPrice` | [volcengine-models](../../model-sources/providers/volcengine/SOURCES.md#volcengine-models)：shell |
 | [`deepseek-r1`](../../model-sources/providers/volcengine/models/deepseek-r1.md) | [`compute/model-specs/volcengine.json`](../../../compute/model-specs/volcengine.json) | `id`、`spec.contextWindow`、`spec.defaultTemperature`、`spec.maxOutputTokens`、`spec.supportsReasoning` | [volcengine-models](../../model-sources/providers/volcengine/SOURCES.md#volcengine-models)：shell |
 | [`deepseek-v3.2`](../../model-sources/providers/volcengine/models/deepseek-v3.2.md) | [`compute/providers/volcengine.json`](../../../compute/providers/volcengine.json) | `contextWindow`、`defaultTemperature`、`defaultTopP`、`inputPrice`、`maxOutputTokens`、`modelName`、`outputPrice` | [volcengine-models](../../model-sources/providers/volcengine/SOURCES.md#volcengine-models)：shell |
@@ -79,9 +78,11 @@
 | [`volc-translation`](../../model-sources/providers/volcengine/models/volc-translation.md) | [`compute/providers/volcengine.json`](../../../compute/providers/volcengine.json) | `modelName` | [volcengine-models](../../model-sources/providers/volcengine/SOURCES.md#volcengine-models)：shell |
 | [`volc-translation`](../../model-sources/providers/volcengine/models/volc-translation.md) | [`compute/model-specs/volcengine.json`](../../../compute/model-specs/volcengine.json) | `id` | [volcengine-models](../../model-sources/providers/volcengine/SOURCES.md#volcengine-models)：shell |
 
-## 入口有读取记录，但本条模型无字段证明（0 条）
+## 入口有读取记录，但本条模型无字段证明（1 条）
 
-无该类记录。
+| 模型 | 接入面 | 未登记证明的关键字段 | 官网入口/读取结果 |
+| --- | --- | --- | --- |
+| [`ark-code-latest`](../../model-sources/providers/volcengine/models/ark-code-latest.md) | [`compute/coding-plans/volcengine-coding.json`](../../../compute/coding-plans/volcengine-coding.json) | `modelName` | [volcengine-models](../../model-sources/providers/volcengine/SOURCES.md#volcengine-models)：shell；[volcengine-coding-get-started](../../model-sources/providers/volcengine/SOURCES.md#volcengine-coding-get-started)：fetched；[volcengine-coding-overview](../../model-sources/providers/volcengine/SOURCES.md#volcengine-coding-overview)：fetched；[volcengine-models-rendered](../../model-sources/providers/volcengine/SOURCES.md#volcengine-models-rendered)：fetched |
 
 ## 仅确认 ID，参数来源未登记（0 条）
 

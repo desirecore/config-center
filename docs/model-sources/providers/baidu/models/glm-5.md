@@ -29,7 +29,8 @@
     "chat",
     "reasoning",
     "code",
-    "agent"
+    "agent",
+    "tool_use"
   ]
 }
 ```
@@ -39,7 +40,9 @@
 
 | 模型 ID | 上下文 / 输出 | 计价 | 已核字段→来源 | 来源入口 | 状态 | 数据指纹 |
 | --- | --- | --- | --- | --- | --- | --- |
-| `glm-5` | 未声明 / 未声明 | 套餐：未声明 / 未声明 | `modelName`→[baidu-models](../SOURCES.md#baidu-models) | [baidu-models](../SOURCES.md#baidu-models) | partial | `30124c9a2c4fd2f585b2076355bd65b0013232323456564c44787c78fc328c19` |
+| `glm-5` | 未声明 / 未声明 | 套餐：未声明 / 未声明 | `modelName`→[baidu-models](../SOURCES.md#baidu-models) | [baidu-models](../SOURCES.md#baidu-models), [qianfan-function-calling](../SOURCES.md#qianfan-function-calling), [qianfan-coding-plan-tools](../SOURCES.md#qianfan-coding-plan-tools) | partial | `3bf186dad57efece189eebe77031fe466294c7629acf51aa8a60435a187d8bcf` |
+
+- 2026-10-05 工具调用核对：`capabilities` 增加 `tool_use`。千帆 Function calling 文档「支持模型范围」列有 glm-5；Coding Plan 文档可配置的 Model Name 含 glm-5。套餐当前可用性未重新核实。依据：[qianfan-function-calling](../SOURCES.md#qianfan-function-calling)、[qianfan-coding-plan-tools](../SOURCES.md#qianfan-coding-plan-tools)。本次只核对工具调用一项，其余标签仍是本仓产品标签，核验状态不变。
 
 ## 下次更新核查
 

@@ -335,7 +335,8 @@
           "reasoning",
           "code",
           "multilingual",
-          "deep_thinking"
+          "deep_thinking",
+          "tool_use"
         ],
         "serviceType": [
           "chat"

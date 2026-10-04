@@ -33,7 +33,8 @@
     "vision",
     "image_understanding",
     "ocr",
-    "chart_analysis"
+    "chart_analysis",
+    "tool_use"
   ],
   "defaultTemperature": 0.7,
   "defaultTopP": 0.8,
@@ -47,7 +48,9 @@
 
 | 模型 ID | 上下文 / 输出 | 计价 | 已核字段→来源 | 来源入口 | 状态 | 数据指纹 |
 | --- | --- | --- | --- | --- | --- | --- |
-| `qwen3-vl-plus` | 262144 / 32768 | CNY：1.5 / 6 | `modelName`→[qwen-pricing](../SOURCES.md#qwen-pricing) | [qwen-pricing](../SOURCES.md#qwen-pricing) | partial | `51cc65a021a99eba029e212ea519c0d2a2e116d63f12522809ae51adba7126c0` |
+| `qwen3-vl-plus` | 262144 / 32768 | CNY：1.5 / 6 | `modelName`→[qwen-pricing](../SOURCES.md#qwen-pricing) | [qwen-pricing](../SOURCES.md#qwen-pricing), [bailian-qwen3-vl-plus-caps](../SOURCES.md#bailian-qwen3-vl-plus-caps), [bailian-function-calling](../SOURCES.md#bailian-function-calling) | partial | `1109e206fb6c0925d0f7aaf9ad49aaee4af64d8549b2c7abb1ff19891d19b885` |
+
+- 2026-10-05 工具调用核对：`capabilities` 增加 `tool_use`。随共享规格继承。本接入是华北 2（北京）兼容端点，型号页北京地域 Function Calling 支持。依据：[bailian-qwen3-vl-plus-caps](../SOURCES.md#bailian-qwen3-vl-plus-caps)、[bailian-function-calling](../SOURCES.md#bailian-function-calling)。本次只核对工具调用一项，其余标签仍是本仓产品标签，核验状态不变。
 
 ### compute/model-specs/qwen.json
 
@@ -68,7 +71,8 @@
     "vision",
     "image_understanding",
     "ocr",
-    "chart_analysis"
+    "chart_analysis",
+    "tool_use"
   ],
   "spec.defaultTemperature": 0.7
 }
@@ -79,7 +83,9 @@
 
 | 模型 ID | 上下文 / 输出 | 计价 | 已核字段→来源 | 来源入口 | 状态 | 数据指纹 |
 | --- | --- | --- | --- | --- | --- | --- |
-| `qwen3-vl-plus` | 262144 / 32768 | 非计价主数据 | `id`→[qwen-pricing](../SOURCES.md#qwen-pricing) | [qwen-pricing](../SOURCES.md#qwen-pricing) | partial | `d9fe3780a0249b4bacb26e4f63420359265c3f5f14526960c50d21292f5e233b` |
+| `qwen3-vl-plus` | 262144 / 32768 | 非计价主数据 | `id`→[qwen-pricing](../SOURCES.md#qwen-pricing) | [qwen-pricing](../SOURCES.md#qwen-pricing), [bailian-qwen3-vl-plus-caps](../SOURCES.md#bailian-qwen3-vl-plus-caps), [bailian-function-calling](../SOURCES.md#bailian-function-calling) | partial | `c7672b30f4e396e8f3635e12553d9df4edff9390d792e99acc1de8d133600a35` |
+
+- 2026-10-05 工具调用核对：`spec.capabilities` 增加 `tool_use`。百炼型号页模型能力表：华北 2（北京）Function Calling 支持，新加坡、法兰克福、弗吉尼亚、中国香港不支持；Function Calling 指南的支持清单列有 Qwen3-VL-Plus 系列。标签按北京地域记，其他地域接入不适用。依据：[bailian-qwen3-vl-plus-caps](../SOURCES.md#bailian-qwen3-vl-plus-caps)、[bailian-function-calling](../SOURCES.md#bailian-function-calling)。本次只核对工具调用一项，其余标签仍是本仓产品标签，核验状态不变。
 
 ## 下次更新核查
 

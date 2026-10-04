@@ -399,7 +399,8 @@
         "chat",
         "fast",
         "long_context",
-        "multilingual"
+        "multilingual",
+        "tool_use"
       ],
       "inputPrice": 0.5,
       "outputPrice": 3,
