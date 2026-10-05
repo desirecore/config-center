@@ -50,6 +50,7 @@
       "defaultTopP": 0.95,
       "description": "智谱 GLM-5.3 大推理模型，面向复杂软件工程与长程 Agent 任务，100 万上下文；强制思考，无法关闭",
       "extra": {
+        "adaptiveThinking": true,
         "thinkingDefault": true,
         "thinkingOnly": true,
         "reasoning": {
@@ -92,6 +93,7 @@
       "defaultTemperature": 1,
       "defaultTopP": 0.95,
       "extra": {
+        "adaptiveThinking": true,
         "supportsThinking": true,
         "thinkingDefault": true,
         "thinkingOnly": true,

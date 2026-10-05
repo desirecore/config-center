@@ -4,6 +4,7 @@
 
 - 精确模型 ID：`glm-5.3-flash`。
 - 核验日期：2026-10-03；本次只迁移记录，没有重新核验或提高状态。
+- 2026-10-05 补核：Anthropic 协议的思考强度控制（`thinking.type` 与 `output_config.effort`），见官网证据目录「已知边界与核验说明」；其余字段未重新核验。
 
 ## 适用接入面
 
@@ -55,6 +56,7 @@
     ],
     "defaultEffort": "max"
   },
+  "extra.adaptiveThinking": true,
   "extra.thinkingOnly": true,
   "extra.cacheHitPrice": 0.23,
   "extra.pricingNotes": "国内官方标准价，人民币/百万 tokens；Flash 限时优惠以控制台实际结算为准。"
@@ -62,11 +64,13 @@
 ```
 <!-- source-details:end -->
 
+`extra.adaptiveThinking` 依据同一 `/api/anthropic` 端点在 Coding Plan 官网页（[glm-plan](../SOURCES.md#glm-plan)）上的思考强度说明推定；按量 API Key 的账号实测待补，故未列入本接入面已核字段。
+
 <!-- source-config: compute/providers/zhipu.json -->
 
 | 模型 ID | 上下文 / 输出 | 计价 | 已核字段→来源 | 来源入口 | 状态 | 数据指纹 |
 | --- | --- | --- | --- | --- | --- | --- |
-| `glm-5.3-flash` | 1048576 / 131072 | CNY：0.8 / 2.8 | `extra.cacheHitPrice`→[glm-pricing](../SOURCES.md#glm-pricing), `extra.reasoning.defaultEffort`→[glm53-flash](../SOURCES.md#glm53-flash), `extra.reasoning.supportedEfforts`→[glm53-flash](../SOURCES.md#glm53-flash), `extra.thinkingOnly`→[glm53-flash](../SOURCES.md#glm53-flash), `inputPrice`→[glm-pricing](../SOURCES.md#glm-pricing), `modelName`→[glm53-flash](../SOURCES.md#glm53-flash), `outputPrice`→[glm-pricing](../SOURCES.md#glm-pricing) | [glm-pricing](../SOURCES.md#glm-pricing), [glm53-flash](../SOURCES.md#glm53-flash) | partial | `7ac4fc2d14893734f4e120e594d3f7a434166e27e64fc2f34da94fbb6296c9fe` |
+| `glm-5.3-flash` | 1048576 / 131072 | CNY：0.8 / 2.8 | `extra.cacheHitPrice`→[glm-pricing](../SOURCES.md#glm-pricing), `extra.reasoning.defaultEffort`→[glm53-flash](../SOURCES.md#glm53-flash), `extra.reasoning.supportedEfforts`→[glm53-flash](../SOURCES.md#glm53-flash), `extra.thinkingOnly`→[glm53-flash](../SOURCES.md#glm53-flash), `inputPrice`→[glm-pricing](../SOURCES.md#glm-pricing), `modelName`→[glm53-flash](../SOURCES.md#glm53-flash), `outputPrice`→[glm-pricing](../SOURCES.md#glm-pricing) | [glm-pricing](../SOURCES.md#glm-pricing), [glm53-flash](../SOURCES.md#glm53-flash) | partial | `e9b5a587cd462e819120f6771f9068aecc4efb5d6381823ecfffbd2a7a4a8e22` |
 
 ### compute/coding-plans/zhipu-coding.json
 
@@ -108,6 +112,7 @@
     ],
     "defaultEffort": "max"
   },
+  "extra.adaptiveThinking": true,
   "extra.thinkingOnly": true
 }
 ```
@@ -117,7 +122,7 @@
 
 | 模型 ID | 上下文 / 输出 | 计价 | 已核字段→来源 | 来源入口 | 状态 | 数据指纹 |
 | --- | --- | --- | --- | --- | --- | --- |
-| `glm-5.3-flash` | 1048576 / 131072 | 套餐：未声明 / 未声明 | `extra.reasoning.defaultEffort`→[glm53-flash](../SOURCES.md#glm53-flash), `extra.reasoning.supportedEfforts`→[glm53-flash](../SOURCES.md#glm53-flash), `extra.thinkingOnly`→[glm53-flash](../SOURCES.md#glm53-flash), `modelName`→[glm53-flash](../SOURCES.md#glm53-flash) | [glm53-flash](../SOURCES.md#glm53-flash) | partial | `38f4c09e9f3aa0fd17481b40d42378de63362ebbf714ae82222dbcbd0510e7f4` |
+| `glm-5.3-flash` | 1048576 / 131072 | 套餐：未声明 / 未声明 | `extra.adaptiveThinking`→[glm-plan-intl](../SOURCES.md#glm-plan-intl), `extra.reasoning.defaultEffort`→[glm53-flash](../SOURCES.md#glm53-flash), `extra.reasoning.supportedEfforts`→[glm53-flash](../SOURCES.md#glm53-flash), `extra.thinkingOnly`→[glm53-flash](../SOURCES.md#glm53-flash), `modelName`→[glm53-flash](../SOURCES.md#glm53-flash) | [glm-plan-intl](../SOURCES.md#glm-plan-intl), [glm53-flash](../SOURCES.md#glm53-flash) | partial | `72a649e6a18df9559bb6606103c29baf303e045d11037c1765f116d50f04d223` |
 
 ### compute/model-specs/zhipu.json
 
@@ -151,6 +156,7 @@
   "spec.defaultTemperature": 1,
   "spec.defaultTopP": 0.95,
   "spec.releasedAt": "2026-08-26",
+  "spec.extra.adaptiveThinking": true,
   "spec.extra.thinkingOnly": true,
   "routing.tier": "balanced",
   "routing.routingPriority": 48,
@@ -172,7 +178,7 @@
 
 | 模型 ID | 上下文 / 输出 | 计价 | 已核字段→来源 | 来源入口 | 状态 | 数据指纹 |
 | --- | --- | --- | --- | --- | --- | --- |
-| `glm-5.3-flash` | 1048576 / 131072 | 非计价主数据 | `id`→[glm53-flash](../SOURCES.md#glm53-flash), `spec.extra.thinkingOnly`→[glm53-flash](../SOURCES.md#glm53-flash) | [glm53-flash](../SOURCES.md#glm53-flash) | partial | `28114bb8b0a40a61668f84c0edbefc7a70d5dba44102ae184b16098798fa0609` |
+| `glm-5.3-flash` | 1048576 / 131072 | 非计价主数据 | `id`→[glm53-flash](../SOURCES.md#glm53-flash), `spec.extra.adaptiveThinking`→[glm-plan](../SOURCES.md#glm-plan), `spec.extra.thinkingOnly`→[glm53-flash](../SOURCES.md#glm53-flash) | [glm-plan](../SOURCES.md#glm-plan), [glm53-flash](../SOURCES.md#glm53-flash) | partial | `a9447c04b737184ab52b7aaac1380580422f05ade4cfb982675d02d6c31d6894` |
 
 ## 下次更新核查
 

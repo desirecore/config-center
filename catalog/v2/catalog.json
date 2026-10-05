@@ -14676,6 +14676,7 @@
             "extra"
           ],
           "extraKeys": [
+            "adaptiveThinking",
             "thinkingOnly"
           ]
         },
@@ -14690,7 +14691,17 @@
             ]
           }
         }
-      }
+      },
+      "protocolProfiles": [
+        {
+          "apiFormats": [
+            "anthropic-messages"
+          ],
+          "request": {
+            "adaptiveThinking": true
+          }
+        }
+      ]
     },
     {
       "modelRef": "zhipu:glm-5.3",
@@ -14759,6 +14770,7 @@
             "releasedAt"
           ],
           "extraKeys": [
+            "adaptiveThinking",
             "thinkingDefault",
             "thinkingOnly"
           ]
@@ -14777,7 +14789,17 @@
         "recordedFacts": {
           "releasedAt": "2026-08-16"
         }
-      }
+      },
+      "protocolProfiles": [
+        {
+          "apiFormats": [
+            "anthropic-messages"
+          ],
+          "request": {
+            "adaptiveThinking": true
+          }
+        }
+      ]
     },
     {
       "modelRef": "zhipu:glm-5.3-flash",
@@ -14849,6 +14871,7 @@
             "releasedAt"
           ],
           "extraKeys": [
+            "adaptiveThinking",
             "thinkingDefault",
             "thinkingOnly"
           ]
@@ -14867,7 +14890,17 @@
         "recordedFacts": {
           "releasedAt": "2026-08-26"
         }
-      }
+      },
+      "protocolProfiles": [
+        {
+          "apiFormats": [
+            "anthropic-messages"
+          ],
+          "request": {
+            "adaptiveThinking": true
+          }
+        }
+      ]
     },
     {
       "modelRef": "zhipu:glm-5.2",
@@ -34946,6 +34979,7 @@
           },
           "overrides": {},
           "request": {
+            "adaptiveThinking": true,
             "constraints": {
               "thinkingOnly": true
             },
@@ -35013,6 +35047,7 @@
                 "outputPrice"
               ],
               "extraKeys": [
+                "adaptiveThinking",
                 "thinkingOnly",
                 "cacheHitPrice",
                 "reasoning",
@@ -35031,6 +35066,7 @@
           },
           "overrides": {},
           "request": {
+            "adaptiveThinking": true,
             "constraints": {
               "thinkingOnly": true
             },
@@ -35102,6 +35138,7 @@
                 "outputPrice"
               ],
               "extraKeys": [
+                "adaptiveThinking",
                 "thinkingDefault",
                 "thinkingOnly",
                 "cacheHitPrice",
@@ -35121,6 +35158,7 @@
           },
           "overrides": {},
           "request": {
+            "adaptiveThinking": true,
             "constraints": {
               "thinkingOnly": true
             },
@@ -35192,6 +35230,7 @@
                 "outputPrice"
               ],
               "extraKeys": [
+                "adaptiveThinking",
                 "thinkingDefault",
                 "thinkingOnly",
                 "cacheHitPrice",
@@ -41080,6 +41119,7 @@
           },
           "overrides": {},
           "request": {
+            "adaptiveThinking": true,
             "constraints": {
               "thinkingOnly": true
             },
@@ -41128,6 +41168,7 @@
                 "source"
               ],
               "extraKeys": [
+                "adaptiveThinking",
                 "thinkingDefault",
                 "thinkingOnly",
                 "reasoning",
@@ -41166,6 +41207,7 @@
             }
           },
           "request": {
+            "adaptiveThinking": true,
             "constraints": {
               "thinkingOnly": true
             },
@@ -41207,6 +41249,7 @@
                 "source"
               ],
               "extraKeys": [
+                "adaptiveThinking",
                 "supportsThinking",
                 "thinkingDefault",
                 "thinkingOnly",

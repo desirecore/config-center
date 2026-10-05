@@ -33,6 +33,7 @@
         "supportsReasoning": true,
         "description": "Z.ai GLM-5.3-FlashX，高速多模态推理模型，100 万上下文，始终开启推理",
         "extra": {
+          "adaptiveThinking": true,
           "thinkingOnly": true
         }
       },
@@ -84,6 +85,7 @@
         "supportsReasoning": true,
         "description": "智谱 GLM-5.3 大推理模型，面向复杂软件工程与长程 Agent 任务，100 万上下文；强制思考，无法关闭",
         "extra": {
+          "adaptiveThinking": true,
           "thinkingDefault": true,
           "thinkingOnly": true
         },
@@ -140,6 +142,7 @@
         "supportsReasoning": true,
         "description": "智谱 GLM-5.3-Flash 原生多模态模型，混合稀疏与线性注意力，面向高效编码与长程 Agent 任务，100 万上下文；强制思考，无法关闭",
         "extra": {
+          "adaptiveThinking": true,
           "thinkingDefault": true,
           "thinkingOnly": true
         },

@@ -10,6 +10,7 @@
 | GLM5.3/Flash精确窗口 | 官网1M/128K简写尚不足以证明本仓具体整数，取得明文限制后统一 |
 | 存量Embedding/多模态接口 | 按独立接口读取向量维度、服务单位、端点和兼容格式；不由Chat参数迁移 |
 | 国内价与国际价 | 分币种/地域与峰谷/缓存，不能相互覆盖；逐型号补字段来源 |
+| 按量 API Key 与 FlashX 的 Anthropic 思考强度 | 2026-10-05 已按 Coding Plan 官网页给 GLM-5.3 系列声明 `adaptiveThinking`（客户端改发 `output_config.effort`）；官网只在 Coding Plan 页说明 /api/anthropic 的处理。需用按量 API Key 对 GLM-5.3 与 FlashX 各发一次 `output_config.effort` 为 low 与 max 的请求，确认均被接受且思考长度有差异，再把 `zhipu` 接入面与 FlashX 规格的 `adaptiveThinking` 列入已核字段 |
 
 未进行账号调用，不宣称国际套餐已实测。
 

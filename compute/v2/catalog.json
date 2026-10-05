@@ -9342,7 +9342,17 @@
       "metadata": {
         "recordedExtra": {},
         "sourceFile": "compute/model-specs/zhipu.json"
-      }
+      },
+      "protocolProfiles": [
+        {
+          "apiFormats": [
+            "anthropic-messages"
+          ],
+          "request": {
+            "adaptiveThinking": true
+          }
+        }
+      ]
     },
     {
       "modelRef": "zhipu:glm-5.3",
@@ -9401,7 +9411,17 @@
         "recordedFacts": {
           "releasedAt": "2026-08-16"
         }
-      }
+      },
+      "protocolProfiles": [
+        {
+          "apiFormats": [
+            "anthropic-messages"
+          ],
+          "request": {
+            "adaptiveThinking": true
+          }
+        }
+      ]
     },
     {
       "modelRef": "zhipu:glm-5.3-flash",
@@ -9463,7 +9483,17 @@
         "recordedFacts": {
           "releasedAt": "2026-08-26"
         }
-      }
+      },
+      "protocolProfiles": [
+        {
+          "apiFormats": [
+            "anthropic-messages"
+          ],
+          "request": {
+            "adaptiveThinking": true
+          }
+        }
+      ]
     },
     {
       "modelRef": "zhipu:glm-5.2",
@@ -25139,6 +25169,7 @@
           },
           "overrides": {},
           "request": {
+            "adaptiveThinking": true,
             "constraints": {
               "thinkingOnly": true
             },
@@ -25204,6 +25235,7 @@
           },
           "overrides": {},
           "request": {
+            "adaptiveThinking": true,
             "constraints": {
               "thinkingOnly": true
             },
@@ -25271,6 +25303,7 @@
           },
           "overrides": {},
           "request": {
+            "adaptiveThinking": true,
             "constraints": {
               "thinkingOnly": true
             },
@@ -29991,6 +30024,7 @@
           },
           "overrides": {},
           "request": {
+            "adaptiveThinking": true,
             "constraints": {
               "thinkingOnly": true
             },
@@ -30056,6 +30090,7 @@
             }
           },
           "request": {
+            "adaptiveThinking": true,
             "constraints": {
               "thinkingOnly": true
             },
@@ -30304,5 +30339,5 @@
     "authority": "catalog/v2/catalog.json",
     "verification": "migration-preserves-existing-evidence"
   },
-  "digest": "7ed3f47d0c41bec661509d5cb76d8130dbd4fb1e63d14eae0e73de5f00bcc4cb"
+  "digest": "8f0c6ee356bb44e60fb17d1dca04b012d47cae9cea9fd7890f874894ee74cdb5"
 }
