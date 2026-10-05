@@ -32,7 +32,8 @@
     "reasoning",
     "code",
     "multilingual",
-    "long_context"
+    "long_context",
+    "tool_use"
   ],
   "spec.defaultTemperature": 0.7
 }
@@ -43,7 +44,9 @@
 
 | 模型 ID | 上下文 / 输出 | 计价 | 已核字段→来源 | 来源入口 | 状态 | 数据指纹 |
 | --- | --- | --- | --- | --- | --- | --- |
-| `qwen-max` | 32768 / 8192 | 非计价主数据 | `id`→[qwen-pricing](../SOURCES.md#qwen-pricing) | [qwen-pricing](../SOURCES.md#qwen-pricing) | partial | `63f3d8412534f5a0fc5f00a68dd4db043e16d1597f164803f0a77b1e538709dc` |
+| `qwen-max` | 32768 / 8192 | 非计价主数据 | `id`→[qwen-pricing](../SOURCES.md#qwen-pricing) | [qwen-pricing](../SOURCES.md#qwen-pricing), [bailian-qwen-max-caps](../SOURCES.md#bailian-qwen-max-caps), [bailian-function-calling](../SOURCES.md#bailian-function-calling) | partial | `0b0943664ad4fbcb94f1bf3e1f1e7cadd6187cdc93bef46015747317acf14a22` |
+
+- 2026-10-05 工具调用核对：`spec.capabilities` 增加 `tool_use`。百炼型号页模型能力表：华北 2（北京）Function Calling 支持，新加坡（国际）不支持；Function Calling 指南的支持清单列有 Qwen-Max 系列。标签按北京地域记，国际站接入不适用。依据：[bailian-qwen-max-caps](../SOURCES.md#bailian-qwen-max-caps)、[bailian-function-calling](../SOURCES.md#bailian-function-calling)。本次只核对工具调用一项，其余标签仍是本仓产品标签，核验状态不变。
 
 ## 下次更新核查
 

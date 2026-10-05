@@ -418,7 +418,8 @@
           "reasoning",
           "code",
           "multilingual",
-          "long_context"
+          "long_context",
+          "tool_use"
         ],
         "serviceType": [
           "chat"
@@ -442,7 +443,8 @@
           "chat",
           "reasoning",
           "code",
-          "thinking_mode"
+          "thinking_mode",
+          "tool_use"
         ],
         "serviceType": [
           "chat"
@@ -619,7 +621,8 @@
           "vision",
           "image_understanding",
           "ocr",
-          "chart_analysis"
+          "chart_analysis",
+          "tool_use"
         ],
         "serviceType": [
           "vision"
@@ -644,7 +647,8 @@
           "chat",
           "vision",
           "image_understanding",
-          "fast"
+          "fast",
+          "tool_use"
         ],
         "serviceType": [
           "vision"

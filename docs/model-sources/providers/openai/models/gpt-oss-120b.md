@@ -30,7 +30,8 @@
   "spec.capabilities": [
     "chat",
     "code",
-    "reasoning"
+    "reasoning",
+    "tool_use"
   ]
 }
 ```
@@ -40,7 +41,9 @@
 
 | 模型 ID | 上下文 / 输出 | 计价 | 已核字段→来源 | 来源入口 | 状态 | 数据指纹 |
 | --- | --- | --- | --- | --- | --- | --- |
-| `gpt-oss-120b` | 128000 / 16384 | 非计价主数据 | 待核实 | [openai-models](../SOURCES.md#openai-models) | pending | `72d4d1688e4cccad25cb26f3fbaa100da07eff743b5b48dd1c4194221a996513` |
+| `gpt-oss-120b` | 128000 / 16384 | 非计价主数据 | 待核实 | [openai-models](../SOURCES.md#openai-models), [openai-gpt-oss-120b-tools](../SOURCES.md#openai-gpt-oss-120b-tools) | pending | `7b3895ebd43e215f2a8c9b0bbc968d698f3053df2dc24c8c756648de94b74762` |
+
+- 2026-10-05 工具调用核对：`spec.capabilities` 增加 `tool_use`。官网型号页 Supported features 列有 function_calling；OpenAI 直连只有 Responses 端点为 Supported（Chat Completions 为 Not supported），其他托管平台另核。依据：[openai-gpt-oss-120b-tools](../SOURCES.md#openai-gpt-oss-120b-tools)。本次只核对工具调用一项，其余标签仍是本仓产品标签，核验状态不变。
 
 ## 下次更新核查
 

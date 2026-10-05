@@ -224,7 +224,7 @@
     {
       "accessId": "provider-baidu-001",
       "apiModelId": "ernie-x1.1",
-      "digest": "b86e5ccf3283c143849fb02bbc34eca520ab6801d3d3737c0a00f32fb9c2fc9e",
+      "digest": "dd2d81697e6a05ab3c923532fa5481fbabd4d0f946eb9c4543dd257b3002981c",
       "selectable": true,
       "effectiveApiFormat": "openai-completions",
       "effectiveApiModelId": "ernie-x1.1",
@@ -456,7 +456,7 @@
     {
       "accessId": "provider-dashscope-001",
       "apiModelId": "qwen3-vl-plus",
-      "digest": "e0f7a9151d727b44ade879426089da0357db67a1faf7b2a5a03f4ec0c47c2d51",
+      "digest": "6a7769746e93f8aecc68a8b25fd38aa1cf3512dac1ad4a4e9432f4222272b4ed",
       "selectable": true,
       "effectiveApiFormat": "openai-completions",
       "effectiveApiModelId": "qwen3-vl-plus",
@@ -468,7 +468,7 @@
     {
       "accessId": "provider-dashscope-001",
       "apiModelId": "qwen3-vl-flash",
-      "digest": "2b60e20049a0bdd3413deed929e709c755a9c2da6d1adfaea304fb818d318950",
+      "digest": "f26d374ac54838b39c67abfd0be44dde37e338ec6d3f8c1db38f0f1f931be8b4",
       "selectable": true,
       "effectiveApiFormat": "openai-completions",
       "effectiveApiModelId": "qwen3-vl-flash",
@@ -1528,7 +1528,7 @@
     {
       "accessId": "provider-local-ollama",
       "apiModelId": "llama3.1:70b",
-      "digest": "fb26915d69cf1e15deb571b0d0398691a2e74b987fffbb3aa479e58a43575403",
+      "digest": "9ac8476dd5d917ef9b51b3ff9c4d2a4cd67c888471dc92715e7fea8fafad3f69",
       "selectable": true,
       "effectiveApiFormat": "openai-completions",
       "effectiveApiModelId": "llama3.1:70b",
@@ -1820,7 +1820,7 @@
     {
       "accessId": "provider-openai-001",
       "apiModelId": "gpt-5.4-nano",
-      "digest": "02091a6915bacbd1f019d3055287d53c0330dea9db1e1ab37479ff18e1864850",
+      "digest": "2cc88364e42b7655c3eca76647d66933fa9261395f1fc1bb04df783ede24c502",
       "selectable": false,
       "effectiveApiFormat": "openai-completions",
       "effectiveApiModelId": "gpt-5.4-nano",
@@ -1960,7 +1960,7 @@
     {
       "accessId": "provider-openai-001",
       "apiModelId": "gpt-5-nano",
-      "digest": "fd1c7c3772e82278b6c05ae39a670f8c436530b3a71340bd7393f8884baab4aa",
+      "digest": "544f31d8747c71e8264933c47282089db2459cf8f03a2eddbcd13f3bd00253d0",
       "selectable": true,
       "effectiveApiFormat": "openai-completions",
       "effectiveApiModelId": "gpt-5-nano",
@@ -1996,7 +1996,7 @@
     {
       "accessId": "provider-openai-001",
       "apiModelId": "gpt-4.1-nano",
-      "digest": "557701810c472e3e39bc27ec6d5c1f82ef2cb8ce6d9417d2056bb760efdc21ac",
+      "digest": "41e7fb15bc9f205dc26d71a6b6fb71d0ef0478405db33fe2ceeee6c64bbda1fb",
       "selectable": true,
       "effectiveApiFormat": "openai-completions",
       "effectiveApiModelId": "gpt-4.1-nano",
@@ -2308,7 +2308,7 @@
     {
       "accessId": "provider-openrouter-001",
       "apiModelId": "openrouter/auto",
-      "digest": "8b09973961c8acad1b2488174b8c64663371e7f515e9b78f75e72d3dbbee6f97",
+      "digest": "4a45ee85d0634ba4968c4d2e994c9cd47fd5057698d7aab4e8fe979ffceedd76",
       "selectable": true,
       "effectiveApiFormat": "openai-completions",
       "effectiveApiModelId": "openrouter/auto",
@@ -3070,7 +3070,7 @@
     {
       "accessId": "provider-zhipu-001",
       "apiModelId": "glm-4.7-flashx",
-      "digest": "576ea78c8a0cd325cc1eab06f9e5577c63b22ab60ae09260497aaf73b04750e9",
+      "digest": "98087fa8af24f153d38c2f94778f22737e5664c08deb902e55954fc5e65c1d11",
       "selectable": true,
       "effectiveApiFormat": "anthropic-messages",
       "effectiveApiModelId": "glm-4.7-flashx",
@@ -3166,7 +3166,7 @@
     {
       "accessId": "provider-baidu-coding-001",
       "apiModelId": "glm-5",
-      "digest": "d3dee36e091037612fa56044a83629c762580f0caa959574b4d43c76050a0cdf",
+      "digest": "71ad7271856d9e4c7ad3701290e10bb0abf5010e340e8ab86a72bf71be2e3cbc",
       "selectable": true,
       "effectiveApiFormat": "openai-completions",
       "effectiveApiModelId": "glm-5",
@@ -3190,7 +3190,7 @@
     {
       "accessId": "provider-baidu-coding-001",
       "apiModelId": "kimi-k2.5",
-      "digest": "850702adf4e368e63d3128635c9a4dc9b10f63c79da406fdab122d6bc325a767",
+      "digest": "d7e5cadd7251502c1ac5d6de858a9ed28b4d1c843c32ce12ed98b5b7cbd70a76",
       "selectable": true,
       "effectiveApiFormat": "openai-completions",
       "effectiveApiModelId": "kimi-k2.5",
@@ -3214,7 +3214,7 @@
     {
       "accessId": "provider-baidu-coding-001",
       "apiModelId": "minimax-m2.5",
-      "digest": "4f5fd9dc40c042a7d2d3bc6156ae4dcdc8c473f60243e4dc98e0dfc684533ccf",
+      "digest": "89b7e64f1bf435a302519ec574fef92227b3f6d4aa0399d5fa63458626cf539e",
       "selectable": true,
       "effectiveApiFormat": "openai-completions",
       "effectiveApiModelId": "minimax-m2.5",
@@ -3334,7 +3334,7 @@
     {
       "accessId": "provider-dashscope-coding-001",
       "apiModelId": "glm-4.7",
-      "digest": "be31578e5947adb03c37ed477e41154828f2af6279fcc0abac4cb1b2838a7fae",
+      "digest": "aa45010071570a851278154eb241e8b60f217e6c0e1f99c6621afa4cd2633f9c",
       "selectable": true,
       "effectiveApiFormat": "openai-completions",
       "effectiveApiModelId": "glm-4.7",
@@ -3812,7 +3812,7 @@
     {
       "accessId": "provider-tencent-token-001",
       "apiModelId": "tc-code-latest",
-      "digest": "9037eda4cb42feab41ece9b782289b77b4c3032b5959172cf2dcfb82f9bb4d47",
+      "digest": "13c962c64f853e03e9299b27ed6dc8e433dbc5f0e50012bfae03273d5dc513a9",
       "selectable": true,
       "effectiveApiFormat": "openai-completions",
       "effectiveApiModelId": "tc-code-latest",
@@ -3896,7 +3896,7 @@
     {
       "accessId": "provider-tencent-token-001",
       "apiModelId": "minimax-m2.7",
-      "digest": "4fe76bc43a3900666a5839418fd6327ae3af1f790fe6f4ed0d433d77f19f7634",
+      "digest": "085e44564da5a7e0b509395f2d335fd3b3b70fbf508257fb9f67a4ffddfa5aa9",
       "selectable": true,
       "effectiveApiFormat": "openai-completions",
       "effectiveApiModelId": "minimax-m2.7",
@@ -3956,7 +3956,7 @@
     {
       "accessId": "provider-volcengine-coding-001",
       "apiModelId": "ark-code-latest",
-      "digest": "7b3f4567497d08016305e9479280d22ab28b1890a2df50f616cdd0754fe52fca",
+      "digest": "5b54d4979e2b792958b058ca844d214e25cc66bfc7265f1fbe66caea0f9e662f",
       "selectable": true,
       "effectiveApiFormat": "openai-completions",
       "effectiveApiModelId": "ark-code-latest",

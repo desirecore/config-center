@@ -32,7 +32,8 @@
     "chat",
     "fast",
     "long_context",
-    "multilingual"
+    "multilingual",
+    "tool_use"
   ],
   "defaultTemperature": 1,
   "defaultTopP": 0.95,
@@ -47,7 +48,9 @@
 
 | 模型 ID | 上下文 / 输出 | 计价 | 已核字段→来源 | 来源入口 | 状态 | 数据指纹 |
 | --- | --- | --- | --- | --- | --- | --- |
-| `glm-4.7-flashx` | 200000 / 131072 | CNY：0.5 / 3 | `modelName`→[glm-pricing](../SOURCES.md#glm-pricing) | [glm-pricing](../SOURCES.md#glm-pricing) | partial | `60dcdbc2f8c517e20d6b926d0c38c84fd6b139ce3b5331ad0dc5eb8c801e9509` |
+| `glm-4.7-flashx` | 200000 / 131072 | CNY：0.5 / 3 | `modelName`→[glm-pricing](../SOURCES.md#glm-pricing) | [glm-pricing](../SOURCES.md#glm-pricing), [zhipu-glm-4-7-page](../SOURCES.md#zhipu-glm-4-7-page), [zhipu-model-overview](../SOURCES.md#zhipu-model-overview) | partial | `1f1692079bcaa050d7c6ce699b527af6a215cca735befcf11b19e736e26538c6` |
+
+- 2026-10-05 工具调用核对：`capabilities` 增加 `tool_use`。官网 GLM-4.7 系列页含 GLM-4.7-FlashX 页签，系列「能力支持」列有 Function Calling；模型概览的 GLM-4.7-FlashX 条目指向该页。精确 API ID 仍未单独证实，绑定方式不变。依据：[zhipu-glm-4-7-page](../SOURCES.md#zhipu-glm-4-7-page)、[zhipu-model-overview](../SOURCES.md#zhipu-model-overview)。本次只核对工具调用一项，其余标签仍是本仓产品标签，核验状态不变。
 
 ## 下次更新核查
 

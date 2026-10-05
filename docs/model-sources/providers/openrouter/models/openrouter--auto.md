@@ -29,7 +29,8 @@
   ],
   "capabilities": [
     "chat",
-    "auto_routing"
+    "auto_routing",
+    "tool_use"
   ],
   "defaultTemperature": 1,
   "defaultTopP": 1,
@@ -42,7 +43,9 @@
 
 | 模型 ID | 上下文 / 输出 | 计价 | 已核字段→来源 | 来源入口 | 状态 | 数据指纹 |
 | --- | --- | --- | --- | --- | --- | --- |
-| `openrouter/auto` | 2000000 / 16384 | USD：未声明 / 未声明 | `contextWindow`→[openrouter-api](../SOURCES.md#openrouter-api), `modelName`→[openrouter-api](../SOURCES.md#openrouter-api) | [openrouter-api](../SOURCES.md#openrouter-api) | partial | `f00c22f23fb9f8df157559d612b9c6d07a4df6959580b5da6eddee27b9aadf25` |
+| `openrouter/auto` | 2000000 / 16384 | USD：未声明 / 未声明 | `contextWindow`→[openrouter-api](../SOURCES.md#openrouter-api), `modelName`→[openrouter-api](../SOURCES.md#openrouter-api) | [openrouter-api](../SOURCES.md#openrouter-api), [openrouter-models-tools](../SOURCES.md#openrouter-models-tools) | partial | `d368331999e51b59f268f3405e5a948cd815fb471035b725e5b5d83648a2bc5f` |
+
+- 2026-10-05 工具调用核对：`capabilities` 增加 `tool_use`。OpenRouter 官方模型目录 API 中 openrouter/auto 的 supported_parameters 含 tools、tool_choice。实际能力取决于被路由到的后端模型。依据：[openrouter-models-tools](../SOURCES.md#openrouter-models-tools)。本次只核对工具调用一项，其余标签仍是本仓产品标签，核验状态不变。
 
 ## 下次更新核查
 

@@ -28,7 +28,8 @@
   "capabilities": [
     "code",
     "reasoning",
-    "chat"
+    "chat",
+    "tool_use"
   ]
 }
 ```
@@ -38,7 +39,9 @@
 
 | 模型 ID | 上下文 / 输出 | 计价 | 已核字段→来源 | 来源入口 | 状态 | 数据指纹 |
 | --- | --- | --- | --- | --- | --- | --- |
-| `ark-code-latest` | 未声明 / 未声明 | 套餐：未声明 / 未声明 | 待核实 | [volcengine-models](../SOURCES.md#volcengine-models) | pending | `be9dd39891377694e9dc4cd374dd621c7e95f522e01c6bb85fda4fe4ab005d8a` |
+| `ark-code-latest` | 未声明 / 未声明 | 套餐：未声明 / 未声明 | 待核实 | [volcengine-models](../SOURCES.md#volcengine-models), [volcengine-coding-get-started](../SOURCES.md#volcengine-coding-get-started), [volcengine-coding-overview](../SOURCES.md#volcengine-coding-overview), [volcengine-models-rendered](../SOURCES.md#volcengine-models-rendered) | pending | `46403787cddd2882c0efad76fffc3f355950f86f9d3472529eadcb1859a26fd8` |
+
+- 2026-10-05 工具调用核对：`capabilities` 增加 `tool_use`。Coding Plan 快速开始把 ark-code-latest 作为 Claude Code 的 ANTHROPIC_MODEL 配置；套餐概览写明套餐额度仅在 AI 编程工具中生效；方舟模型列表「工具调用能力」表里套餐内的豆包、GLM、DeepSeek 型号函数调用均为支持。别名本身没有单独的能力表，依据是套餐文档。依据：[volcengine-coding-get-started](../SOURCES.md#volcengine-coding-get-started)、[volcengine-coding-overview](../SOURCES.md#volcengine-coding-overview)、[volcengine-models-rendered](../SOURCES.md#volcengine-models-rendered)。本次只核对工具调用一项，其余标签仍是本仓产品标签，核验状态不变。
 
 ## 下次更新核查
 

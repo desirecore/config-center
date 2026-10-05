@@ -5,8 +5,8 @@
 供应商官网入口均已登记；“没有找到供应商官网”目前没有已登记案例。能明确单列的是官网入口读取失败/页面壳、未取得型号专属规格或身份揭示证据，以及缺少字段级证明。不能把这些情况混为“没有官网”。
 
 - 未登记官方入口：**0 条**。
-- 未取得可读官网证据：**87 条**。
-- 入口有读取记录，但本条模型无字段证明：**185 条**。
+- 未取得可读官网证据：**86 条**。
+- 入口有读取记录，但本条模型无字段证明：**186 条**。
 - 仅确认 ID，参数来源未登记：**216 条**。
 - 已有部分参数证明，仍需区分未证明字段：**137 条**。
 - 历史身份/参数不证明当前可用性：**1 条**。
@@ -38,7 +38,7 @@
 | [stability](providers/stability.md) | 0 | 0 | 3 | 0 | 0 | 0 |
 | [stealth](providers/stealth.md) | 0 | 0 | 0 | 0 | 0 | 1 |
 | [tencent](providers/tencent.md) | 0 | 0 | 23 | 1 | 1 | 0 |
-| [volcengine](providers/volcengine.md) | 0 | 66 | 0 | 0 | 0 | 0 |
+| [volcengine](providers/volcengine.md) | 0 | 65 | 1 | 0 | 0 | 0 |
 | [xai](providers/xai.md) | 0 | 0 | 5 | 3 | 1 | 0 |
 | [xiaomi](providers/xiaomi.md) | 0 | 0 | 8 | 7 | 10 | 0 |
 | [xunfei](providers/xunfei.md) | 0 | 0 | 2 | 0 | 2 | 0 |

@@ -25,7 +25,8 @@
       "capabilities": [
         "chat",
         "code",
-        "reasoning"
+        "reasoning",
+        "tool_use"
       ],
       "defaultTemperature": 0.8,
       "defaultTopP": 0.9,

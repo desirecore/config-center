@@ -145,7 +145,8 @@
         "reasoning",
         "deep_thinking",
         "math",
-        "code"
+        "code",
+        "tool_use"
       ],
       "inputPrice": 1,
       "outputPrice": 4,

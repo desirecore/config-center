@@ -30,7 +30,8 @@
   "capabilities": [
     "chat",
     "code",
-    "reasoning"
+    "reasoning",
+    "tool_use"
   ],
   "defaultTemperature": 0.8,
   "defaultTopP": 0.9
@@ -42,7 +43,9 @@
 
 | 模型 ID | 上下文 / 输出 | 计价 | 已核字段→来源 | 来源入口 | 状态 | 数据指纹 |
 | --- | --- | --- | --- | --- | --- | --- |
-| `llama3.1:70b` | 131072 / 8192 | USD：未声明 / 未声明 | 待核实 | [ollama](../SOURCES.md#ollama) | pending | `b66be25716689873b6ebbcd6863348791aa98452e41311478849a0c1e659c918` |
+| `llama3.1:70b` | 131072 / 8192 | USD：未声明 / 未声明 | 待核实 | [ollama](../SOURCES.md#ollama), [ollama-llama31-70b](../SOURCES.md#ollama-llama31-70b) | pending | `875fdb8c434149be5fa974c0baa22f6e2e5399a43f79ea45b98412e9c944b61f` |
+
+- 2026-10-05 工具调用核对：`capabilities` 增加 `tool_use`。Ollama 官方模型库 llama3.1:70b 页带 tools 能力标记。本地实际能力取决于用户拉取的权重与 Ollama 版本。依据：[ollama-llama31-70b](../SOURCES.md#ollama-llama31-70b)。本次只核对工具调用一项，其余标签仍是本仓产品标签，核验状态不变。
 
 ## 下次更新核查
 

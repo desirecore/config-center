@@ -32,7 +32,8 @@
     "chat",
     "code",
     "ultra_long_context",
-    "fast"
+    "fast",
+    "tool_use"
   ],
   "defaultTemperature": 1,
   "defaultTopP": 1,
@@ -46,7 +47,9 @@
 
 | 模型 ID | 上下文 / 输出 | 计价 | 已核字段→来源 | 来源入口 | 状态 | 数据指纹 |
 | --- | --- | --- | --- | --- | --- | --- |
-| `gpt-4.1-nano` | 1047576 / 32768 | USD：0.1 / 0.4 | 待核实 | [openai-models](../SOURCES.md#openai-models) | pending | `41339189c0645800f9be182f997c45ba1928d751f2d827a3767056c66c9bdd8f` |
+| `gpt-4.1-nano` | 1047576 / 32768 | USD：0.1 / 0.4 | 待核实 | [openai-models](../SOURCES.md#openai-models), [openai-gpt-4-1-nano-tools](../SOURCES.md#openai-gpt-4-1-nano-tools) | pending | `7b7fb17a5a0283edf7c7b5dc4e84ebd1f374b6fb3bbb55c46b2aeb0bae816c24` |
+
+- 2026-10-05 工具调用核对：`capabilities` 增加 `tool_use`。随共享规格继承。官网型号页 Supported features 列有 function_calling，Chat Completions 端点为 Supported。依据：[openai-gpt-4-1-nano-tools](../SOURCES.md#openai-gpt-4-1-nano-tools)。本次只核对工具调用一项，其余标签仍是本仓产品标签，核验状态不变。
 
 ### compute/model-specs/openai.json
 
@@ -66,7 +69,8 @@
     "chat",
     "code",
     "ultra_long_context",
-    "fast"
+    "fast",
+    "tool_use"
   ],
   "spec.defaultTemperature": 1
 }
@@ -77,7 +81,9 @@
 
 | 模型 ID | 上下文 / 输出 | 计价 | 已核字段→来源 | 来源入口 | 状态 | 数据指纹 |
 | --- | --- | --- | --- | --- | --- | --- |
-| `gpt-4.1-nano` | 1047576 / 32768 | 非计价主数据 | 待核实 | [openai-models](../SOURCES.md#openai-models) | pending | `10391c540c483d083065285db7767352c94a881f8cb6288fd590f5334bb3eed1` |
+| `gpt-4.1-nano` | 1047576 / 32768 | 非计价主数据 | 待核实 | [openai-models](../SOURCES.md#openai-models), [openai-gpt-4-1-nano-tools](../SOURCES.md#openai-gpt-4-1-nano-tools) | pending | `5bbaae9a35a6df5215ef9f38b1d7739131669c18ecdf3199e8f0a39a786505ee` |
+
+- 2026-10-05 工具调用核对：`spec.capabilities` 增加 `tool_use`。官网型号页 Supported features 列有 function_calling，Chat Completions 与 Responses 端点均为 Supported。依据：[openai-gpt-4-1-nano-tools](../SOURCES.md#openai-gpt-4-1-nano-tools)。本次只核对工具调用一项，其余标签仍是本仓产品标签，核验状态不变。
 
 ## 下次更新核查
 

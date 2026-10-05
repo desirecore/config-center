@@ -32,7 +32,8 @@
     "chat",
     "vision",
     "image_understanding",
-    "fast"
+    "fast",
+    "tool_use"
   ],
   "defaultTemperature": 0.7,
   "defaultTopP": 0.8,
@@ -46,7 +47,9 @@
 
 | 模型 ID | 上下文 / 输出 | 计价 | 已核字段→来源 | 来源入口 | 状态 | 数据指纹 |
 | --- | --- | --- | --- | --- | --- | --- |
-| `qwen3-vl-flash` | 262144 / 32768 | CNY：0.8 / 3 | `modelName`→[qwen-pricing](../SOURCES.md#qwen-pricing) | [qwen-pricing](../SOURCES.md#qwen-pricing) | partial | `735e6fd04d6f3d60bdc440cca46565afbbfcabd3f27079e7a6f12255a45eca1f` |
+| `qwen3-vl-flash` | 262144 / 32768 | CNY：0.8 / 3 | `modelName`→[qwen-pricing](../SOURCES.md#qwen-pricing) | [qwen-pricing](../SOURCES.md#qwen-pricing), [bailian-qwen3-vl-flash-caps](../SOURCES.md#bailian-qwen3-vl-flash-caps), [bailian-function-calling](../SOURCES.md#bailian-function-calling) | partial | `3d8dc40c45dd00e285c06d389fbf159b74d533093ad5a6c7ca65ac738a9c399f` |
+
+- 2026-10-05 工具调用核对：`capabilities` 增加 `tool_use`。随共享规格继承。本接入是华北 2（北京）兼容端点，型号页北京地域 Function Calling 支持。依据：[bailian-qwen3-vl-flash-caps](../SOURCES.md#bailian-qwen3-vl-flash-caps)、[bailian-function-calling](../SOURCES.md#bailian-function-calling)。本次只核对工具调用一项，其余标签仍是本仓产品标签，核验状态不变。
 
 ### compute/model-specs/qwen.json
 
@@ -66,7 +69,8 @@
     "chat",
     "vision",
     "image_understanding",
-    "fast"
+    "fast",
+    "tool_use"
   ],
   "spec.defaultTemperature": 0.7
 }
@@ -77,7 +81,9 @@
 
 | 模型 ID | 上下文 / 输出 | 计价 | 已核字段→来源 | 来源入口 | 状态 | 数据指纹 |
 | --- | --- | --- | --- | --- | --- | --- |
-| `qwen3-vl-flash` | 262144 / 32768 | 非计价主数据 | `id`→[qwen-pricing](../SOURCES.md#qwen-pricing) | [qwen-pricing](../SOURCES.md#qwen-pricing) | partial | `92f4f43392b9b1c78a7a8555e75e1307140c8d8333b81a0eb15718130fa7db0e` |
+| `qwen3-vl-flash` | 262144 / 32768 | 非计价主数据 | `id`→[qwen-pricing](../SOURCES.md#qwen-pricing) | [qwen-pricing](../SOURCES.md#qwen-pricing), [bailian-qwen3-vl-flash-caps](../SOURCES.md#bailian-qwen3-vl-flash-caps), [bailian-function-calling](../SOURCES.md#bailian-function-calling) | partial | `84e0c2757b3bf8fab93e4b3f462fb86dca0dc76abf2ccbbb761af5a23eb463bc` |
+
+- 2026-10-05 工具调用核对：`spec.capabilities` 增加 `tool_use`。百炼型号页模型能力表：华北 2（北京）Function Calling 支持，新加坡、法兰克福、弗吉尼亚不支持；Function Calling 指南的支持清单列有 Qwen3-VL-Flash 系列。标签按北京地域记，其他地域接入不适用。依据：[bailian-qwen3-vl-flash-caps](../SOURCES.md#bailian-qwen3-vl-flash-caps)、[bailian-function-calling](../SOURCES.md#bailian-function-calling)。本次只核对工具调用一项，其余标签仍是本仓产品标签，核验状态不变。
 
 ## 下次更新核查
 

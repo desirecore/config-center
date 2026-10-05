@@ -470,7 +470,8 @@
         "reasoning",
         "code",
         "fast",
-        "long_context"
+        "long_context",
+        "tool_use"
       ],
       "inputPrice": 0.2,
       "outputPrice": 1.25,
@@ -743,7 +744,8 @@
       "capabilities": [
         "chat",
         "code",
-        "fast"
+        "fast",
+        "tool_use"
       ],
       "inputPrice": 0.05,
       "outputPrice": 0.4,
@@ -823,7 +825,8 @@
         "chat",
         "code",
         "ultra_long_context",
-        "fast"
+        "fast",
+        "tool_use"
       ],
       "inputPrice": 0.1,
       "outputPrice": 0.4,

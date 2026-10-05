@@ -16,7 +16,7 @@
 
 | 模型 | 接入面 | 未登记证明的关键字段 | 官网入口/读取结果 |
 | --- | --- | --- | --- |
-| [`llama3.1:70b`](../../model-sources/providers/ollama/models/llama3.1--70b.md) | [`compute/providers/ollama.json`](../../../compute/providers/ollama.json) | `contextWindow`、`defaultTemperature`、`defaultTopP`、`maxOutputTokens`、`modelName` | [ollama](../../model-sources/providers/ollama/SOURCES.md#ollama)：fetched |
+| [`llama3.1:70b`](../../model-sources/providers/ollama/models/llama3.1--70b.md) | [`compute/providers/ollama.json`](../../../compute/providers/ollama.json) | `contextWindow`、`defaultTemperature`、`defaultTopP`、`maxOutputTokens`、`modelName` | [ollama](../../model-sources/providers/ollama/SOURCES.md#ollama)：fetched；[ollama-llama31-70b](../../model-sources/providers/ollama/SOURCES.md#ollama-llama31-70b)：fetched |
 
 ## 仅确认 ID，参数来源未登记（0 条）
 

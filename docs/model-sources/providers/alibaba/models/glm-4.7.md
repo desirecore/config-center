@@ -31,7 +31,8 @@
   "capabilities": [
     "chat",
     "reasoning",
-    "code"
+    "code",
+    "tool_use"
   ]
 }
 ```
@@ -41,7 +42,9 @@
 
 | 模型 ID | 上下文 / 输出 | 计价 | 已核字段→来源 | 来源入口 | 状态 | 数据指纹 |
 | --- | --- | --- | --- | --- | --- | --- |
-| `glm-4.7` | 202752 / 131072 | 套餐：未声明 / 未声明 | `modelName`→[qwen-pricing](../SOURCES.md#qwen-pricing) | [qwen-pricing](../SOURCES.md#qwen-pricing) | partial | `ee9d1b36d9a055b5c3429e95261eeb0ad63ec3046a5c606c14ec147e6e6bf3e4` |
+| `glm-4.7` | 202752 / 131072 | 套餐：未声明 / 未声明 | `modelName`→[qwen-pricing](../SOURCES.md#qwen-pricing) | [qwen-pricing](../SOURCES.md#qwen-pricing), [bailian-glm-4-7-caps](../SOURCES.md#bailian-glm-4-7-caps), [bailian-coding-plan-tools](../SOURCES.md#bailian-coding-plan-tools), [bailian-function-calling](../SOURCES.md#bailian-function-calling) | partial | `6176023da60e0822986ef3dd927fad84d1d1e07eef6c9af3b98fb7a860616945` |
+
+- 2026-10-05 工具调用核对：`capabilities` 增加 `tool_use`。百炼 glm-4.7 型号页模型能力表 Function Calling 支持；Coding Plan 概述的支持模型含 glm-4.7。百炼 Function Calling 指南注明调用 GLM 系列需在请求中传 tool_stream=true，否则不返回 tool_calls；套餐端点是否同样要求未核。依据：[bailian-glm-4-7-caps](../SOURCES.md#bailian-glm-4-7-caps)、[bailian-coding-plan-tools](../SOURCES.md#bailian-coding-plan-tools)、[bailian-function-calling](../SOURCES.md#bailian-function-calling)。本次只核对工具调用一项，其余标签仍是本仓产品标签，核验状态不变。
 
 ### compute/coding-plans/dashscope-token-plan.json
 

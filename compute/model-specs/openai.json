@@ -487,7 +487,8 @@
         "capabilities": [
           "chat",
           "code",
-          "fast"
+          "fast",
+          "tool_use"
         ],
         "serviceType": [
           "fast"
@@ -736,7 +737,8 @@
           "chat",
           "code",
           "ultra_long_context",
-          "fast"
+          "fast",
+          "tool_use"
         ],
         "serviceType": [
           "fast"
@@ -962,7 +964,8 @@
         "capabilities": [
           "chat",
           "code",
-          "reasoning"
+          "reasoning",
+          "tool_use"
         ],
         "serviceType": [
           "chat"

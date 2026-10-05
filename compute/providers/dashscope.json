@@ -353,7 +353,8 @@
         "vision",
         "image_understanding",
         "ocr",
-        "chart_analysis"
+        "chart_analysis",
+        "tool_use"
       ],
       "inputPrice": 1.5,
       "outputPrice": 6,
@@ -374,7 +375,8 @@
         "chat",
         "vision",
         "image_understanding",
-        "fast"
+        "fast",
+        "tool_use"
       ],
       "inputPrice": 0.8,
       "outputPrice": 3,
