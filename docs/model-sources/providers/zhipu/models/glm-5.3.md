@@ -4,6 +4,7 @@
 
 - 精确模型 ID：`glm-5.3`。
 - 核验日期：2026-10-03；本次只迁移记录，没有重新核验或提高状态。
+- 2026-10-05 补核：Anthropic 协议的思考强度控制（`thinking.type` 与 `output_config.effort`），见官网证据目录「已知边界与核验说明」；其余字段未重新核验。
 
 ## 适用接入面
 
@@ -52,6 +53,7 @@
     ],
     "defaultEffort": "max"
   },
+  "extra.adaptiveThinking": true,
   "extra.thinkingOnly": true,
   "extra.cacheHitPrice": 2,
   "extra.pricingNotes": "国内官方标准价，人民币/百万 tokens；Flash 限时优惠以控制台实际结算为准。"
@@ -59,11 +61,13 @@
 ```
 <!-- source-details:end -->
 
+`extra.adaptiveThinking` 依据同一 `/api/anthropic` 端点在 Coding Plan 官网页（[glm-plan](../SOURCES.md#glm-plan)）上的思考强度说明推定；按量 API Key 的账号实测待补，故未列入本接入面已核字段。
+
 <!-- source-config: compute/providers/zhipu.json -->
 
 | 模型 ID | 上下文 / 输出 | 计价 | 已核字段→来源 | 来源入口 | 状态 | 数据指纹 |
 | --- | --- | --- | --- | --- | --- | --- |
-| `glm-5.3` | 1048576 / 131072 | CNY：8 / 28 | `extra.cacheHitPrice`→[glm-pricing](../SOURCES.md#glm-pricing), `extra.reasoning.defaultEffort`→[glm53](../SOURCES.md#glm53), `extra.reasoning.supportedEfforts`→[glm53](../SOURCES.md#glm53), `extra.thinkingOnly`→[glm53](../SOURCES.md#glm53), `inputPrice`→[glm-pricing](../SOURCES.md#glm-pricing), `modelName`→[glm53](../SOURCES.md#glm53), `outputPrice`→[glm-pricing](../SOURCES.md#glm-pricing) | [glm-pricing](../SOURCES.md#glm-pricing), [glm53](../SOURCES.md#glm53) | partial | `4db175a86ebfcecbf4dacc3c3f5efe58b10d136aa09d8cac190c955b47fc550b` |
+| `glm-5.3` | 1048576 / 131072 | CNY：8 / 28 | `extra.cacheHitPrice`→[glm-pricing](../SOURCES.md#glm-pricing), `extra.reasoning.defaultEffort`→[glm53](../SOURCES.md#glm53), `extra.reasoning.supportedEfforts`→[glm53](../SOURCES.md#glm53), `extra.thinkingOnly`→[glm53](../SOURCES.md#glm53), `inputPrice`→[glm-pricing](../SOURCES.md#glm-pricing), `modelName`→[glm53](../SOURCES.md#glm53), `outputPrice`→[glm-pricing](../SOURCES.md#glm-pricing) | [glm-pricing](../SOURCES.md#glm-pricing), [glm53](../SOURCES.md#glm53) | partial | `cf4e9caea8bbef44a786a83758824551a9f4bfb0276d7ad11ce777b0aa315471` |
 
 ### compute/coding-plans/zhipu-coding.json
 
@@ -100,6 +104,7 @@
     ],
     "defaultEffort": "max"
   },
+  "extra.adaptiveThinking": true,
   "extra.thinkingOnly": true,
   "extra.pricingNotes": "国内官方标准价，人民币/百万 tokens；Flash 限时优惠以控制台实际结算为准。"
 }
@@ -110,7 +115,7 @@
 
 | 模型 ID | 上下文 / 输出 | 计价 | 已核字段→来源 | 来源入口 | 状态 | 数据指纹 |
 | --- | --- | --- | --- | --- | --- | --- |
-| `glm-5.3` | 1048576 / 131072 | 套餐：未声明 / 未声明 | `extra.reasoning.defaultEffort`→[glm53](../SOURCES.md#glm53), `extra.reasoning.supportedEfforts`→[glm53](../SOURCES.md#glm53), `extra.thinkingOnly`→[glm53](../SOURCES.md#glm53), `modelName`→[glm53](../SOURCES.md#glm53) | [glm53](../SOURCES.md#glm53) | partial | `639b9e9b3d7f8eff6d533c1b36f09ea7bea64f09bc4f20157fd01e779cda1016` |
+| `glm-5.3` | 1048576 / 131072 | 套餐：未声明 / 未声明 | `extra.adaptiveThinking`→[glm-plan-intl](../SOURCES.md#glm-plan-intl), `extra.reasoning.defaultEffort`→[glm53](../SOURCES.md#glm53), `extra.reasoning.supportedEfforts`→[glm53](../SOURCES.md#glm53), `extra.thinkingOnly`→[glm53](../SOURCES.md#glm53), `modelName`→[glm53](../SOURCES.md#glm53) | [glm-plan-intl](../SOURCES.md#glm-plan-intl), [glm53](../SOURCES.md#glm53) | partial | `68c44eb4198ed090d290f757b01cd7bbb95454061a04283a81eaf83f47845faa` |
 
 ### compute/model-specs/zhipu.json
 
@@ -141,6 +146,7 @@
   "spec.defaultTemperature": 1,
   "spec.defaultTopP": 0.95,
   "spec.releasedAt": "2026-08-16",
+  "spec.extra.adaptiveThinking": true,
   "spec.extra.thinkingOnly": true,
   "routing.tier": "flagship",
   "routing.routingPriority": 50,
@@ -162,7 +168,7 @@
 
 | 模型 ID | 上下文 / 输出 | 计价 | 已核字段→来源 | 来源入口 | 状态 | 数据指纹 |
 | --- | --- | --- | --- | --- | --- | --- |
-| `glm-5.3` | 1048576 / 131072 | 非计价主数据 | `id`→[glm53](../SOURCES.md#glm53), `spec.extra.thinkingOnly`→[glm53](../SOURCES.md#glm53) | [glm53](../SOURCES.md#glm53) | partial | `a626e0690b06921d5f41fcf764a7e295e75acface2d3ed005f664aaacc38411d` |
+| `glm-5.3` | 1048576 / 131072 | 非计价主数据 | `id`→[glm53](../SOURCES.md#glm53), `spec.extra.adaptiveThinking`→[glm-plan](../SOURCES.md#glm-plan), `spec.extra.thinkingOnly`→[glm53](../SOURCES.md#glm53) | [glm-plan](../SOURCES.md#glm-plan), [glm53](../SOURCES.md#glm53) | partial | `961ed39ff97065d0420ca60fc3ecf25ee605bde65939bd740362fc39726c5a5b` |
 
 ## 下次更新核查
 

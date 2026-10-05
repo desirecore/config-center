@@ -21,7 +21,12 @@
 ### glm-plan
 
 - 入口：[glm-plan](https://docs.bigmodel.cn/cn/coding-plan/latest-model.md)
-- 类型：`official-doc`；当前读取状态：`fetched`；地域/接入面：`中国区 GLM Coding Plan 文档；国际 api.z.ai 可用性另核`。
+- 类型：`official-doc`；当前读取状态：`fetched`；地域/接入面：`中国区 GLM Coding Plan 文档（Claude Code 走 open.bigmodel.cn/api/anthropic）；国际 api.z.ai 可用性另核`。
+
+### glm-plan-intl
+
+- 入口：[glm-plan-intl](https://docs.z.ai/devpack/latest-model.md)
+- 类型：`official-doc`；当前读取状态：`fetched`；地域/接入面：`Z.AI 国际 GLM Coding Plan 文档（Claude Code 走 api.z.ai/api/anthropic）`。
 
 ### glm52-cn-api
 
@@ -51,6 +56,8 @@
 ## 已知边界与核验说明
 
 国内官方价格页确认 5.3/Flash/FlashX 为 8/28、0.8/2.8、2/7 元/百万 tokens。官网给出的窗口简写 1M/128K 未直接作为跨接入面字节级精确值证明；本次不改已有换算。低/高/max、默认 max 和始终思考已核对。Coding Plan 提供 5.3 与 Flash，不提供 FlashX；国际套餐端点的账号实际可用性仍需验证。
+
+2026-10-05 Anthropic 协议思考强度核对：`glm-plan`（国内）与 `glm-plan-intl`（国际）两页「如何切换 effort」一节明文写出：Claude Code 使用 `thinking.type` 与 `output_config.effort`，Codex 使用 `reasoning.effort`；优先级为显式 effort > thinking 开关 > 默认 max；`thinking.type` 未传 / `true` / `enabled` / `adaptive` 按默认 max 处理，`false` / `disabled` / `none` / `off` 转为 low；effort `minimal` / `light` / `low` → low，`medium` / `high` → high，`xhigh` / `max` / `ultra` → max，其他未知值回退 max。`budget_tokens` 不在这张表的控制项里。据此在两个 anthropic-messages 接入面（`zhipu`、`zhipu-coding`）的 GLM-5.3 系列条目与 GLM-5.3 系列规格的 anthropic-messages 协议 profile 上声明 `adaptiveThinking`，客户端改用 `output_config.effort` 表达档位。两页属于 Coding Plan 文档：`zhipu-coding` 的 GLM-5.3 / 5.3-Flash 与规格中的这两个型号直接对应；`zhipu`（按量 API Key）与 FlashX 按同一 /api/anthropic 端点推定，API Key 账号实测待补，故未列入这些条目的已核字段。官网 Claude API 兼容页（`/cn/guide/develop/claude/introduction`）没有列出思考参数。
 
 2026-10-05 工具调用核对：以上 `zhipu-glm-4-6-page`、`zhipu-glm-4-7-page`、`zhipu-model-overview` 只用于核对函数 / 工具调用是否受支持，读取日期 2026-10-05；没有借此复核窗口、价格等其他字段，也没有做账号调用验收。能力标签里只有 `tool_use` 一项以这些来源为依据。
 
@@ -97,11 +104,21 @@
       "id": "glm-plan",
       "url": "https://docs.bigmodel.cn/cn/coding-plan/latest-model.md",
       "kind": "official-doc",
-      "scope": "中国区 GLM Coding Plan 文档；国际 api.z.ai 可用性另核",
+      "scope": "中国区 GLM Coding Plan 文档（Claude Code 走 open.bigmodel.cn/api/anthropic）；国际 api.z.ai 可用性另核",
       "retrieval": "fetched",
-      "checkedAt": "2026-10-03",
+      "checkedAt": "2026-10-05",
       "contentSha256": "d5c5eb7ef0ddf5a89128018fffb1d96a7e4a6745c8c16dc53c5c4453e59891fc",
       "resolvedUrl": "https://docs.bigmodel.cn/cn/coding-plan/latest-model.md"
+    },
+    {
+      "id": "glm-plan-intl",
+      "url": "https://docs.z.ai/devpack/latest-model.md",
+      "kind": "official-doc",
+      "scope": "Z.AI 国际 GLM Coding Plan 文档（Claude Code 走 api.z.ai/api/anthropic）",
+      "retrieval": "fetched",
+      "checkedAt": "2026-10-05",
+      "contentSha256": "4cc2c1a526a96efbe4c9d90be887fd07dc93a49d6c23b2cd1884899f822aea43",
+      "resolvedUrl": "https://docs.z.ai/devpack/latest-model.md"
     },
     {
       "id": "glm52-cn-api",

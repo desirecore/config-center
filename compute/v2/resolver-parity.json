@@ -2974,7 +2974,7 @@
     {
       "accessId": "provider-zhipu-001",
       "apiModelId": "glm-5.3-flashx",
-      "digest": "ea21bf8d96f65888a4f6991ed37a7824894d94fd1baa8509ccd9a4c9cea5c51c",
+      "digest": "d4886f90bf9c291fe3c23183348e995ad9a09d469b235ef0dc662e133a62d350",
       "selectable": true,
       "effectiveApiFormat": "anthropic-messages",
       "effectiveApiModelId": "glm-5.3-flashx",
@@ -2986,7 +2986,7 @@
     {
       "accessId": "provider-zhipu-001",
       "apiModelId": "glm-5.3-flash",
-      "digest": "0e50b1f0393cb2fd782ffa161b65c6151e213dcd7f9f4eae8621e4fdb1f4915d",
+      "digest": "a06221f39d4d13993cf160510bfe6dc2be5c28d082f6df7bd2ff81ce403d5b63",
       "selectable": true,
       "effectiveApiFormat": "anthropic-messages",
       "effectiveApiModelId": "glm-5.3-flash",
@@ -2998,7 +2998,7 @@
     {
       "accessId": "provider-zhipu-001",
       "apiModelId": "glm-5.3",
-      "digest": "44f0f52f12351b78825f7e32930e8e9f81693a80a3a277c196c30f88498e500d",
+      "digest": "d9c73c7eac661e0f6a429ead1ea86fb8920875b71c9577ec01c2f9f253cecb7b",
       "selectable": true,
       "effectiveApiFormat": "anthropic-messages",
       "effectiveApiModelId": "glm-5.3",
@@ -4100,7 +4100,7 @@
     {
       "accessId": "provider-zhipu-coding-001",
       "apiModelId": "glm-5.3",
-      "digest": "215a2293b36c7ba03f525fa42914eb81425051375a8b2f629bc76affc3d04691",
+      "digest": "ac57a48657071e66a8d0253e284b5cc598ae9bcf85d63ecde8e9d3672d17e8f8",
       "selectable": true,
       "effectiveApiFormat": "anthropic-messages",
       "effectiveApiModelId": "glm-5.3",
@@ -4112,7 +4112,7 @@
     {
       "accessId": "provider-zhipu-coding-001",
       "apiModelId": "glm-5.3-flash",
-      "digest": "c254302f180a5afb2303be38a65eb61237b464a4e4456b56297dcc9c2d2da38f",
+      "digest": "b44eecd20c164d0e36e7a54700f9f9505deb5d435b54532c25af9d3d899fdfa3",
       "selectable": true,
       "effectiveApiFormat": "anthropic-messages",
       "effectiveApiModelId": "glm-5.3-flash",

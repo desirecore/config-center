@@ -4,6 +4,7 @@
 
 - 精确模型 ID：`glm-5.3-flashx`。
 - 核验日期：2026-10-03；本次只迁移记录，没有重新核验或提高状态。
+- 2026-10-05 补核：Anthropic 协议的思考强度控制（`thinking.type` 与 `output_config.effort`），见官网证据目录「已知边界与核验说明」；其余字段未重新核验。
 
 ## 适用接入面
 
@@ -51,6 +52,7 @@
     ],
     "defaultEffort": "max"
   },
+  "extra.adaptiveThinking": true,
   "extra.thinkingOnly": true,
   "extra.cacheHitPrice": 0.57,
   "extra.pricingNotes": "国内官方标准价，人民币/百万 tokens；Flash 限时优惠以控制台实际结算为准。"
@@ -58,11 +60,13 @@
 ```
 <!-- source-details:end -->
 
+`extra.adaptiveThinking` 依据同一 `/api/anthropic` 端点在 Coding Plan 官网页（[glm-plan](../SOURCES.md#glm-plan)）上的思考强度说明推定；按量 API Key 的账号实测待补，故未列入本接入面已核字段。
+
 <!-- source-config: compute/providers/zhipu.json -->
 
 | 模型 ID | 上下文 / 输出 | 计价 | 已核字段→来源 | 来源入口 | 状态 | 数据指纹 |
 | --- | --- | --- | --- | --- | --- | --- |
-| `glm-5.3-flashx` | 1000000 / 128000 | CNY：2 / 7 | `extra.cacheHitPrice`→[glm-pricing](../SOURCES.md#glm-pricing), `extra.reasoning.defaultEffort`→[glm53-flash](../SOURCES.md#glm53-flash), `extra.reasoning.supportedEfforts`→[glm53-flash](../SOURCES.md#glm53-flash), `extra.thinkingOnly`→[glm53-flash](../SOURCES.md#glm53-flash), `inputPrice`→[glm-pricing](../SOURCES.md#glm-pricing), `modelName`→[glm53-flash](../SOURCES.md#glm53-flash), `outputPrice`→[glm-pricing](../SOURCES.md#glm-pricing) | [glm-pricing](../SOURCES.md#glm-pricing), [glm53-flash](../SOURCES.md#glm53-flash) | partial | `90198f90256cc40ac50dd2ac6f395ba1a0f6062cdefd392f61840c1569b6f8e1` |
+| `glm-5.3-flashx` | 1000000 / 128000 | CNY：2 / 7 | `extra.cacheHitPrice`→[glm-pricing](../SOURCES.md#glm-pricing), `extra.reasoning.defaultEffort`→[glm53-flash](../SOURCES.md#glm53-flash), `extra.reasoning.supportedEfforts`→[glm53-flash](../SOURCES.md#glm53-flash), `extra.thinkingOnly`→[glm53-flash](../SOURCES.md#glm53-flash), `inputPrice`→[glm-pricing](../SOURCES.md#glm-pricing), `modelName`→[glm53-flash](../SOURCES.md#glm53-flash), `outputPrice`→[glm-pricing](../SOURCES.md#glm-pricing) | [glm-pricing](../SOURCES.md#glm-pricing), [glm53-flash](../SOURCES.md#glm53-flash) | partial | `22d007a5ca6b209ac640ba425414039efb13bbae89294c0722e6d571933c47ba` |
 
 ### compute/model-specs/zhipu.json
 
@@ -92,6 +96,7 @@
     "fast"
   ],
   "spec.supportsReasoning": true,
+  "spec.extra.adaptiveThinking": true,
   "spec.extra.thinkingOnly": true,
   "routing.tier": "balanced",
   "routing.routingPriority": 49,
@@ -109,11 +114,13 @@
 ```
 <!-- source-details:end -->
 
+`spec.extra.adaptiveThinking` 是 anthropic-messages 协议 profile 的 V1 副本；Coding Plan 官网页未覆盖 FlashX，按同一端点推定，未列入已核字段。
+
 <!-- source-config: compute/model-specs/zhipu.json -->
 
 | 模型 ID | 上下文 / 输出 | 计价 | 已核字段→来源 | 来源入口 | 状态 | 数据指纹 |
 | --- | --- | --- | --- | --- | --- | --- |
-| `glm-5.3-flashx` | 1000000 / 128000 | 非计价主数据 | `id`→[glm53-flash](../SOURCES.md#glm53-flash), `spec.extra.thinkingOnly`→[glm53-flash](../SOURCES.md#glm53-flash) | [glm53-flash](../SOURCES.md#glm53-flash) | partial | `6d10e6cf17f4461142a1827d036c3cb2b7d798d5e579398e1d4ca9bc4d00394b` |
+| `glm-5.3-flashx` | 1000000 / 128000 | 非计价主数据 | `id`→[glm53-flash](../SOURCES.md#glm53-flash), `spec.extra.thinkingOnly`→[glm53-flash](../SOURCES.md#glm53-flash) | [glm53-flash](../SOURCES.md#glm53-flash) | partial | `29f64f9aa2a973bc71f00b2c053509b23ae8af5654142337c0bc99fc05b0ba89` |
 
 ## 下次更新核查
 

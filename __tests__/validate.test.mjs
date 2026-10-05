@@ -794,7 +794,11 @@ describe('真实数据全量校验', () => {
     // Anthropic Messages 中转只能从 ModelSpec 补全拿到声明，预置 Provider 条目不经补全，
     // 两处漏写都会回退成 budget_tokens（desirecore#2940）。Opus 4.6 / Sonnet 4.6 仍接受
     // budget_tokens（仅弃用），不在强制范围内。新代际若同样拒绝 budget_tokens，先扩展这里的正则。
-    const adaptiveGeneration = /^claude-(?:fable|mythos)(?:$|-)|^claude-(?:opus|sonnet)-(?:[5-9]|[1-9]\d)(?:$|-)|^claude-opus-4-[78](?:$|-)|^minimax-m3-1-flash-preview$/
+    // GLM-5.3 系列不拒绝 budget_tokens，但智谱官网（docs.bigmodel.cn/cn/coding-plan/latest-model、
+    // docs.z.ai/devpack/latest-model）写明 /api/anthropic 以 thinking.type 与 output_config.effort 控制强度，
+    // thinking.type=enabled 一律按默认 max 处理，budget_tokens 不是控制项；不声明 adaptive，客户端发出的
+    // 档位在上游全部变成 max，且 max 档无法发出（desirecore 档位协商回退到 max 后在本机拒绝）。
+    const adaptiveGeneration = /^claude-(?:fable|mythos)(?:$|-)|^claude-(?:opus|sonnet)-(?:[5-9]|[1-9]\d)(?:$|-)|^claude-opus-4-[78](?:$|-)|^minimax-m3-1-flash-preview$|^glm-5-3(?:-flashx?)?$/
     const thinkingOnlyGeneration = /^claude-(?:fable|mythos)(?:$|-)|^claude-opus-5-5(?:$|-)/
     // 与客户端匹配器同口径：小写、去 vendor 前缀、统一分隔符
     const normalizeId = (id) => id.toLowerCase().trim().split('/').at(-1).replace(/[._:\s]+/g, '-')

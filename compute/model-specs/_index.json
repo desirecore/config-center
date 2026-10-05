@@ -1,5 +1,5 @@
 {
-  "description": "模型规格库加载顺序索引，以及智能路由三档的同域定义。模型级路由策略仅写入各 ModelSpec 的 routing 字段，不另建 smart-routing 目录。 数据批次 129：按官网补对话规格的 tool_use 标签，路由策略不变；此前批次 126 为官方字段复核与临时、历史规格边界。 精确身份治理：隔离Nano/实时/固定变体，identity-only不继承family参数；发布批次由manifest统一标记。",
+  "description": "模型规格库加载顺序索引，以及智能路由三档的同域定义。模型级路由策略仅写入各 ModelSpec 的 routing 字段，不另建 smart-routing 目录。 数据批次 130：GLM-5.3 系列在 anthropic-messages 协议上按智谱官网以 thinking.type 与 output_config.effort 控制思考强度（protocolProfiles 声明 adaptive 形态），路由策略不变；此前批次 129 按官网补对话规格的 tool_use 标签，批次 126 为官方字段复核与临时、历史规格边界。 精确身份治理：隔离Nano/实时/固定变体，identity-only不继承family参数；发布批次由manifest统一标记。",
   "order": [
     "anthropic",
     "openai",
