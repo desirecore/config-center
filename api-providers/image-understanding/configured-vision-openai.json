@@ -1,0 +1,30 @@
+{
+  "id": "configured-vision-openai",
+  "name": "视觉模型（OpenAI 兼容，复用默认映射）",
+  "capability": "image_understanding",
+  "enabled": true,
+  "builtin": true,
+  "priority": 10,
+  "endpoint": "${baseUrl}/chat/completions",
+  "method": "POST",
+  "computeServiceType": "vision",
+  "requiresApiFormat": "openai-completions",
+  "auth": { "type": "bearer" },
+  "request": {
+    "imageMode": "url",
+    "bodyTemplate": {
+      "model": "${model}",
+      "messages": [
+        {
+          "role": "user",
+          "content": [
+            { "type": "text", "text": "${prompt}" },
+            { "type": "image_url", "image_url": { "url": "${imageUrl}" } }
+          ]
+        }
+      ]
+    }
+  },
+  "response": { "textPath": "choices.0.message.content" },
+  "timeoutMs": 30000
+}

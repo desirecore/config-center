@@ -1,0 +1,106 @@
+{
+  "description": "通义万相（Wan）多模态生成模型规格。Wan 3.0 视频模型通过阿里云百炼提供，统一支持文生视频、首帧/首尾帧图生视频和多类型参考生视频。",
+  "specs": [
+    {
+      "id": "wan3.0-video-prime",
+      "displayName": "通义万相 3.0 视频生成高速版",
+      "family": "wan3-video",
+      "match": {
+        "exact": [
+          "wan3.0-video-prime"
+        ]
+      },
+      "spec": {
+        "capabilities": [
+          "video_generation",
+          "text_to_video",
+          "image_to_video",
+          "reference_to_video",
+          "multi_image",
+          "reference_video",
+          "reference_audio",
+          "first_last_frame",
+          "audio_generation",
+          "high_quality",
+          "fast"
+        ],
+        "serviceType": [
+          "video_gen"
+        ],
+        "description": "万相 3.0 全能参考视频生成高速版，能力对齐标准版并显著提升端到端生成速度",
+        "releasedAt": "2026-08-06",
+        "extra": {
+          "maxVideoDuration": 30,
+          "fps": 30,
+          "supportedResolutions": [
+            "480P",
+            "720P",
+            "1080P"
+          ]
+        }
+      },
+      "routing": {
+        "tier": "flagship",
+        "routingPriority": 109,
+        "eligibleForAgent": false,
+        "defaultReference": false,
+        "reasoning": {
+          "supportedModes": [
+            "auto"
+          ],
+          "defaultMode": "auto"
+        }
+      }
+    },
+    {
+      "id": "wan3.0-video",
+      "displayName": "通义万相 3.0 视频生成",
+      "family": "wan3-video",
+      "match": {
+        "exact": [
+          "wan3.0-video"
+        ]
+      },
+      "spec": {
+        "capabilities": [
+          "video_generation",
+          "text_to_video",
+          "image_to_video",
+          "reference_to_video",
+          "multi_image",
+          "reference_video",
+          "reference_audio",
+          "first_last_frame",
+          "audio_generation",
+          "high_quality"
+        ],
+        "serviceType": [
+          "video_gen"
+        ],
+        "description": "万相 3.0 全能参考视频生成标准版，统一支持文生、首帧/首尾帧图生及多类型参考生视频",
+        "releasedAt": "2026-08-06",
+        "extra": {
+          "maxVideoDuration": 30,
+          "fps": 30,
+          "supportedResolutions": [
+            "480P",
+            "720P",
+            "1080P"
+          ]
+        }
+      },
+      "routing": {
+        "tier": "flagship",
+        "routingPriority": 110,
+        "eligibleForAgent": false,
+        "defaultReference": false,
+        "reasoning": {
+          "supportedModes": [
+            "auto"
+          ],
+          "defaultMode": "auto"
+        }
+      }
+    }
+  ]
+}

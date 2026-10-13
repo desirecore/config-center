@@ -1,0 +1,419 @@
+{
+  "id": "provider-moonshot-001",
+  "provider": "moonshot",
+  "label": "月之暗面 Kimi",
+  "baseUrl": "https://api.moonshot.cn/v1",
+  "apiFormat": "openai-completions",
+  "apiKeyRef": "moonshot",
+  "apiKeyVerified": false,
+  "enabled": false,
+  "status": "unconfigured",
+  "priceCurrency": "CNY",
+  "services": [
+    "chat",
+    "reasoning",
+    "vision"
+  ],
+  "tombstones": [
+    "kimi-k2",
+    "kimi-k2-0905-preview",
+    "kimi-k2-0711-preview",
+    "kimi-k2-turbo-preview",
+    "kimi-k2-thinking",
+    "kimi-k2-thinking-turbo",
+    "kimi-latest",
+    "kimi-thinking-preview"
+  ],
+  "models": [
+    {
+      "modelName": "kimi-k3",
+      "displayName": "Kimi K3",
+      "contextWindow": 1048576,
+      "maxOutputTokens": 1048576,
+      "capabilities": [
+        "chat",
+        "reasoning",
+        "code",
+        "tool_use",
+        "agent",
+        "long_context",
+        "vision",
+        "video_understanding"
+      ],
+      "serviceType": [
+        "reasoning"
+      ],
+      "description": "Kimi K3，1M 上下文，始终开启思考，low/high/max 三档（默认 max）；输出上限与输入共享窗口，默认 max_completion_tokens=131072",
+      "extra": {
+        "thinkingOnly": true,
+        "thinking": {
+          "default": "enabled",
+          "disableSupported": false,
+          "preserveReasoningContent": true
+        },
+        "reasoning": {
+          "supportedEfforts": [
+            "low",
+            "high",
+            "max"
+          ],
+          "defaultEffort": "max"
+        },
+        "pricingNotes": "CNY per 1M tokens: input 20, output 100, cache hit 2. Cache writes: TTL 5min 20, TTL 1h 40; recorded separately from cache-hit billing.",
+        "samplingParametersDeprecated": true,
+        "cacheHitPrice": 2
+      },
+      "inputPrice": 20,
+      "outputPrice": 100
+    },
+    {
+      "modelName": "kimi-k2.7-code",
+      "displayName": "Kimi K2.7 Code",
+      "serviceType": [
+        "chat",
+        "reasoning"
+      ],
+      "description": "月之暗面 Kimi K2.7 Code，当前最强 Coding 模型，256K 上下文，支持文本/图片/视频输入，始终启用思考模式",
+      "contextWindow": 262144,
+      "maxOutputTokens": 32768,
+      "capabilities": [
+        "chat",
+        "reasoning",
+        "deep_thinking",
+        "code",
+        "tool_use",
+        "agent",
+        "long_context",
+        "vision",
+        "video_understanding",
+        "image_understanding"
+      ],
+      "inputPrice": 6.5,
+      "outputPrice": 27,
+      "defaultTemperature": 1,
+      "defaultTopP": 0.95,
+      "extra": {
+        "thinking": {
+          "default": "enabled",
+          "disableSupported": false,
+          "preserveReasoningContent": true
+        },
+        "cacheHitPrice": 1.3,
+        "supportedImageFormats": [
+          "png",
+          "jpeg",
+          "webp",
+          "gif"
+        ],
+        "supportedVideoFormats": [
+          "mp4",
+          "mpeg",
+          "mov",
+          "avi",
+          "x-flv",
+          "mpg",
+          "webm",
+          "wmv",
+          "3gpp"
+        ]
+      }
+    },
+    {
+      "modelName": "kimi-k2.7-code-highspeed",
+      "displayName": "Kimi K2.7 Code HighSpeed",
+      "serviceType": [
+        "chat",
+        "reasoning"
+      ],
+      "description": "月之暗面 Kimi K2.7 Code 高速版，与 K2.7 Code 参数一致，输出速度约 180 Tokens/s，短上下文可达 260 Tokens/s",
+      "contextWindow": 262144,
+      "maxOutputTokens": 32768,
+      "capabilities": [
+        "chat",
+        "reasoning",
+        "deep_thinking",
+        "code",
+        "tool_use",
+        "agent",
+        "long_context",
+        "vision",
+        "video_understanding",
+        "image_understanding",
+        "fast"
+      ],
+      "inputPrice": 13,
+      "outputPrice": 54,
+      "defaultTemperature": 1,
+      "defaultTopP": 0.95,
+      "extra": {
+        "thinking": {
+          "default": "enabled",
+          "disableSupported": false,
+          "preserveReasoningContent": true
+        },
+        "cacheHitPrice": 2.6,
+        "supportedImageFormats": [
+          "png",
+          "jpeg",
+          "webp",
+          "gif"
+        ],
+        "supportedVideoFormats": [
+          "mp4",
+          "mpeg",
+          "mov",
+          "avi",
+          "x-flv",
+          "mpg",
+          "webm",
+          "wmv",
+          "3gpp"
+        ]
+      }
+    },
+    {
+      "modelName": "kimi-k2.6",
+      "displayName": "Kimi K2.6",
+      "serviceType": [
+        "chat",
+        "reasoning"
+      ],
+      "description": "月之暗面 Kimi K2.6，多模态模型，长程代码编写与 Agent 自主执行能力增强，256K 上下文，支持思考/非思考模式",
+      "contextWindow": 262144,
+      "maxOutputTokens": 32768,
+      "capabilities": [
+        "chat",
+        "reasoning",
+        "deep_thinking",
+        "code",
+        "tool_use",
+        "agent",
+        "long_context",
+        "vision",
+        "video_understanding",
+        "image_understanding"
+      ],
+      "inputPrice": 6.5,
+      "outputPrice": 27,
+      "defaultTemperature": 1,
+      "defaultTopP": 0.95,
+      "extra": {
+        "thinking": {
+          "default": "enabled",
+          "disabledTemperature": 0.6
+        },
+        "cacheHitPrice": 1.1,
+        "supportedImageFormats": [
+          "png",
+          "jpeg",
+          "webp",
+          "gif"
+        ],
+        "supportedVideoFormats": [
+          "mp4",
+          "mpeg",
+          "mov",
+          "avi",
+          "x-flv",
+          "mpg",
+          "webm",
+          "wmv",
+          "3gpp"
+        ]
+      }
+    },
+    {
+      "modelName": "kimi-k2.5",
+      "displayName": "Kimi K2.5",
+      "serviceType": [
+        "chat",
+        "reasoning"
+      ],
+      "description": "月之暗面 Kimi K2.5，原生多模态模型，256K 上下文，支持思考/非思考模式",
+      "contextWindow": 262144,
+      "maxOutputTokens": 32768,
+      "capabilities": [
+        "chat",
+        "reasoning",
+        "deep_thinking",
+        "code",
+        "tool_use",
+        "agent",
+        "long_context",
+        "vision",
+        "video_understanding",
+        "image_understanding"
+      ],
+      "inputPrice": 4,
+      "outputPrice": 21,
+      "defaultTemperature": 1,
+      "defaultTopP": 0.95,
+      "extra": {
+        "thinking": {
+          "default": "enabled",
+          "disabledTemperature": 0.6
+        },
+        "cacheHitPrice": 0.7,
+        "supportedImageFormats": [
+          "png",
+          "jpeg",
+          "webp",
+          "gif"
+        ],
+        "supportedVideoFormats": [
+          "mp4",
+          "mpeg",
+          "mov",
+          "avi",
+          "x-flv",
+          "mpg",
+          "webm",
+          "wmv",
+          "3gpp"
+        ]
+      }
+    },
+    {
+      "modelName": "moonshot-v1-8k",
+      "displayName": "Moonshot V1 8K",
+      "serviceType": [
+        "chat"
+      ],
+      "description": "月之暗面 Moonshot V1 生成模型，8K 上下文",
+      "contextWindow": 8192,
+      "maxOutputTokens": 4096,
+      "capabilities": [
+        "chat",
+        "code"
+      ],
+      "inputPrice": 2,
+      "outputPrice": 10,
+      "defaultTemperature": 0,
+      "defaultTopP": 1,
+      "extra": {}
+    },
+    {
+      "modelName": "moonshot-v1-32k",
+      "displayName": "Moonshot V1 32K",
+      "serviceType": [
+        "chat"
+      ],
+      "description": "月之暗面 Moonshot V1 生成模型，32K 上下文",
+      "contextWindow": 32768,
+      "maxOutputTokens": 4096,
+      "capabilities": [
+        "chat",
+        "code",
+        "long_context"
+      ],
+      "inputPrice": 5,
+      "outputPrice": 20,
+      "defaultTemperature": 0,
+      "defaultTopP": 1,
+      "extra": {}
+    },
+    {
+      "modelName": "moonshot-v1-128k",
+      "displayName": "Moonshot V1 128K",
+      "serviceType": [
+        "chat"
+      ],
+      "description": "月之暗面 Moonshot V1 生成模型，128K 上下文",
+      "contextWindow": 131072,
+      "maxOutputTokens": 4096,
+      "capabilities": [
+        "chat",
+        "code",
+        "long_context"
+      ],
+      "inputPrice": 10,
+      "outputPrice": 30,
+      "defaultTemperature": 0,
+      "defaultTopP": 1,
+      "extra": {}
+    },
+    {
+      "modelName": "moonshot-v1-8k-vision-preview",
+      "displayName": "Moonshot V1 8K Vision Preview",
+      "serviceType": [
+        "vision"
+      ],
+      "description": "月之暗面 Moonshot V1 视觉模型，理解图片内容并输出文本，8K 上下文",
+      "contextWindow": 8192,
+      "maxOutputTokens": 4096,
+      "capabilities": [
+        "chat",
+        "vision",
+        "image_understanding"
+      ],
+      "inputPrice": 2,
+      "outputPrice": 10,
+      "defaultTemperature": 0,
+      "defaultTopP": 1,
+      "extra": {
+        "supportedImageFormats": [
+          "png",
+          "jpeg",
+          "webp",
+          "gif"
+        ]
+      }
+    },
+    {
+      "modelName": "moonshot-v1-32k-vision-preview",
+      "displayName": "Moonshot V1 32K Vision Preview",
+      "serviceType": [
+        "vision"
+      ],
+      "description": "月之暗面 Moonshot V1 视觉模型，理解图片内容并输出文本，32K 上下文",
+      "contextWindow": 32768,
+      "maxOutputTokens": 4096,
+      "capabilities": [
+        "chat",
+        "vision",
+        "image_understanding",
+        "long_context"
+      ],
+      "inputPrice": 5,
+      "outputPrice": 20,
+      "defaultTemperature": 0,
+      "defaultTopP": 1,
+      "extra": {
+        "supportedImageFormats": [
+          "png",
+          "jpeg",
+          "webp",
+          "gif"
+        ]
+      }
+    },
+    {
+      "modelName": "moonshot-v1-128k-vision-preview",
+      "displayName": "Moonshot V1 128K Vision Preview",
+      "serviceType": [
+        "vision"
+      ],
+      "description": "月之暗面 Moonshot V1 视觉模型，理解图片内容并输出文本，128K 上下文",
+      "contextWindow": 131072,
+      "maxOutputTokens": 4096,
+      "capabilities": [
+        "chat",
+        "vision",
+        "image_understanding",
+        "long_context"
+      ],
+      "inputPrice": 10,
+      "outputPrice": 30,
+      "defaultTemperature": 0,
+      "defaultTopP": 1,
+      "extra": {
+        "supportedImageFormats": [
+          "png",
+          "jpeg",
+          "webp",
+          "gif"
+        ]
+      }
+    }
+  ]
+}

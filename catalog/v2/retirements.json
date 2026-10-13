@@ -1,0 +1,24 @@
+{
+  "description": "本产品已下架的受管预置接入。规则限定Provider身份与原始端点；不证明厂家根域停服，不删除用户凭据。",
+  "rules": [
+    {
+      "id": "config-center-lingyiwanwu-access-retirement",
+      "kind": "product-access-retired",
+      "scope": "managed-provider",
+      "providerId": "provider-lingyiwanwu-001",
+      "origin": {
+        "exactHost": "api.lingyiwanwu.com",
+        "pathPrefix": "/v1"
+      },
+      "effectiveAt": "2026-08-28T06:52:05Z",
+      "reason": "config-center #84 已移除零一万物预置接入；存量受管配置不再作为官方可调用接入。",
+      "evidence": {
+        "kind": "product-repository",
+        "url": "https://github.com/desirecore/config-center/commit/a998e18e6c4bdcc161f0baf82cbf534cc9d53627",
+        "checkedAt": "2026-10-03"
+      },
+      "preserveCredentials": true,
+      "vendorDomainShutdownConfirmed": false
+    }
+  ]
+}

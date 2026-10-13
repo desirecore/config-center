@@ -1,0 +1,41 @@
+{
+  "id": "provider-xunfei-x2-001",
+  "provider": "xunfei",
+  "label": "讯飞星火 X2",
+  "baseUrl": "https://spark-api-open.xf-yun.com/x2",
+  "apiFormat": "openai-completions",
+  "apiKeyRef": "xunfei",
+  "apiKeyVerified": false,
+  "enabled": false,
+  "status": "unconfigured",
+  "priceCurrency": "CNY",
+  "services": [
+    "chat",
+    "reasoning"
+  ],
+  "models": [
+    {
+      "modelName": "spark-x",
+      "displayName": "讯飞星火 X2",
+      "serviceType": [
+        "reasoning"
+      ],
+      "description": "讯飞深度推理模型（X2），输入64K/输出128K，支持思考模式与函数调用",
+      "contextWindow": 65536,
+      "maxOutputTokens": 131072,
+      "capabilities": [
+        "chat",
+        "reasoning",
+        "deep_thinking",
+        "math",
+        "code",
+        "tool_use"
+      ],
+      "defaultTemperature": 1.2,
+      "defaultTopP": 0.95,
+      "extra": {
+        "pricingNote": "官方公开文档说明模型价格以控制台及实际购买页为准，未公开固定 token 单价"
+      }
+    }
+  ]
+}

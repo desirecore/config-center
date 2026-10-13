@@ -1,0 +1,311 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://desirecore.net/schemas/config-center/model-spec.schema.json",
+  "title": "ModelSpecFile",
+  "description": "模型规格库（compute/model-specs/*.json）数据契约。\n\n用途：维护模型的唯一规格主数据：内在参数（上下文窗口、最大输出、能力标签、serviceType、默认采样参数等）以及智能路由策略（量级、排序、Agent 可选性和标准化 reasoning 合同）。同一事实不得再写入独立 smart-routing 目录。\n\nProvider 文件只描述接入面、可用性和明确的接入面覆盖；历史 Provider 条目中已有的规格字段为旧客户端兼容副本，不能覆盖本文件。\n\n严禁写入价格字段（inputPrice/outputPrice/cache 等）——价签真相源永远是 NewAPI pricing。",
+  "type": "object",
+  "required": ["specs"],
+  "properties": {
+    "description": {
+      "type": "string",
+      "description": "文件说明（如所属厂商、收录范围）"
+    },
+    "specs": {
+      "type": "array",
+      "description": "模型规格条目列表",
+      "items": { "$ref": "#/definitions/modelSpec" }
+    }
+  },
+  "additionalProperties": false,
+  "definitions": {
+    "modelOrigin": {
+      "type": "object",
+      "required": ["vendor", "canonicalModelId"],
+      "properties": {
+        "vendor": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$",
+          "description": "规范化原厂商 ID，如 xiaomi、openai、alibaba、minimax；不得填写当前算力 Provider ID。"
+        },
+        "canonicalModelId": {
+          "type": "string",
+          "minLength": 1,
+          "description": "原厂模型的稳定识别 ID，用于适配器匹配、诊断和日志；不替代实际路由使用的 modelName/apiModelId。"
+        },
+        "family": {
+          "type": "string",
+          "minLength": 1,
+          "description": "跨小版本稳定的模型家族，如 mimo-asr；同一协议下的后续模型版本可复用该家族语义。"
+        }
+      },
+      "additionalProperties": false
+    },
+    "speechVoice": {
+      "type": "object",
+      "required": ["id", "label"],
+      "properties": {
+        "id": {
+          "type": "string",
+          "minLength": 1,
+          "description": "传给上游语音接口的稳定音色 ID。"
+        },
+        "label": {
+          "type": "string",
+          "minLength": 1,
+          "description": "面向用户展示的音色名称。"
+        }
+      },
+      "additionalProperties": false
+    },
+    "speechModelProfile": {
+      "type": "object",
+      "required": ["protocol", "protocolVersion", "modes"],
+      "properties": {
+        "protocol": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$",
+          "description": "稳定语音协议族，如 xiaomi-mimo-chat-asr；模型常规迭代不得改变此值。"
+        },
+        "protocolVersion": {
+          "type": "string",
+          "pattern": "^[1-9][0-9]*$",
+          "description": "协议不兼容版本号；只有请求、认证、响应或流式状态机发生不兼容变化时才递增。"
+        },
+        "modes": {
+          "type": "array",
+          "minItems": 1,
+          "uniqueItems": true,
+          "items": { "type": "string", "enum": ["batch", "streaming"] },
+          "description": "模型协议支持的调用模式：batch（整段）和/或 streaming（流式）。"
+        },
+        "inputFormats": {
+          "type": "array",
+          "minItems": 1,
+          "uniqueItems": true,
+          "items": { "type": "string", "minLength": 1 },
+          "description": "ASR 上游接受的音频格式，如 wav、mp3、webm；格式名使用适配器可识别的规范值。"
+        },
+        "outputFormats": {
+          "type": "array",
+          "minItems": 1,
+          "uniqueItems": true,
+          "items": { "type": "string", "minLength": 1 },
+          "description": "TTS 上游可返回的音频格式，如 pcm16le、wav、mp3；运行时需与适配器和播放器能力求交集。"
+        },
+        "sampleRates": {
+          "type": "array",
+          "minItems": 1,
+          "uniqueItems": true,
+          "items": { "type": "integer", "minimum": 1 },
+          "description": "支持的采样率（Hz）；运行时不得假设固定采样率，需完成能力协商。"
+        },
+        "defaultVoice": {
+          "type": "string",
+          "minLength": 1,
+          "description": "TTS 推荐默认音色 ID；声明 voices 时必须能在 voices 中找到同 ID 条目。"
+        },
+        "voices": {
+          "type": "array",
+          "minItems": 1,
+          "items": { "$ref": "#/definitions/speechVoice" },
+          "description": "TTS 可选音色列表，统一为稳定 id 与用户可读 label。"
+        },
+        "languageHints": {
+          "type": "boolean",
+          "description": "ASR 协议是否接受语言提示参数；不是模型支持语言范围清单。"
+        }
+      },
+      "additionalProperties": false
+    },
+    "modelSpec": {
+      "type": "object",
+      "required": ["id", "spec"],
+      "properties": {
+        "id": {
+          "type": "string",
+          "description": "模型标准标识符，通常等于上游 model_name 原样（保留大小写与点号，如 claude-sonnet-4-6、MiniMax-M2.7）。同时作为精确匹配键；匹配时大小写/分隔符不敏感（由匹配器归一化）。",
+          "minLength": 1
+        },
+        "displayName": {
+          "type": "string",
+          "description": "模型友好显示名（如 Claude Sonnet 4.6）。命中后可覆盖 NewAPI 返回的原始 model_name，优化 UI 展示。"
+        },
+        "family": {
+          "type": "string",
+          "description": "模型家族标识（如 claude-sonnet、gpt-5、gemini-2.5）。当精确/别名/pattern 匹配均失败时，按最长 family 前缀兜底匹配，返回保守参数并标记 inferred。"
+        },
+        "match": {
+          "type": "object",
+          "description": "通用匹配规则。匹配器会先做归一化（小写、去 vendor 前缀如 anthropic/、去网关装饰、统一分隔符、去日期戳与波动后缀），再分层匹配：exact > 归一化 exact > 去日期戳后 exact > pattern（取最长） > family 兜底。",
+          "properties": {
+            "exact": {
+              "type": "array",
+              "description": "精确别名列表（除 id 外的已知精确名，含网关可能使用的全名）。归一化后比对。",
+              "items": { "type": "string", "minLength": 1 }
+            },
+            "patterns": {
+              "type": "array",
+              "description": "glob 模式列表（如 claude-sonnet-4-6*）。仅在 exact + 去日期戳仍无法覆盖变体时使用；避免对存在子型号的父模型（如 gpt-4o 之于 gpt-4o-mini）使用宽泛通配，以防误吞。多命中取最长 pattern。",
+              "items": { "type": "string", "minLength": 1 }
+            }
+          },
+          "additionalProperties": false
+        },
+        "routing": {
+          "type": "object",
+          "description": "智能路由策略。存在即表示该精确模型可进入路由候选；模型能力和 reasoning 合同均以本条目为准，Provider 只能为接入面收紧。",
+          "required": ["tier", "routingPriority", "eligibleForAgent", "defaultReference", "reasoning"],
+          "properties": {
+            "tier": {
+              "type": "string",
+              "enum": ["flagship", "balanced", "lightweight"],
+              "description": "模型在智能路由中的能力量级。"
+            },
+            "routingPriority": {
+              "type": "integer",
+              "minimum": 0,
+              "maximum": 10000,
+              "description": "同一量级内的稳定优先级，数值越小越优先。"
+            },
+            "eligibleForAgent": {
+              "type": "boolean",
+              "description": "是否允许作为 Agent 主模型；媒体专用模型必须为 false。"
+            },
+            "defaultReference": {
+              "type": "boolean",
+              "description": "是否是默认模型的策略参考，只影响同级排序，不是强制选择。"
+            },
+            "reasoning": {
+              "type": "object",
+              "description": "模型级标准化 reasoning 合同。auto 为不发送参数，off 为显式关闭；Provider 接入面可收紧此集合，但不得扩张。",
+              "required": ["supportedModes", "defaultMode"],
+              "properties": {
+                "supportedModes": {
+                  "type": "array",
+                  "minItems": 1,
+                  "uniqueItems": true,
+                  "items": {
+                    "type": "string",
+                    "enum": ["auto", "off", "minimal", "low", "medium", "high", "xhigh", "max"]
+                  },
+                  "description": "产品层可用的 reasoning 档位。"
+                },
+                "defaultMode": {
+                  "type": "string",
+                  "enum": ["auto", "off", "minimal", "low", "medium", "high", "xhigh", "max"],
+                  "description": "没有显式请求时的策略默认档位，必须包含在 supportedModes 中。"
+                }
+              },
+              "allOf": [
+                { "if": { "properties": { "defaultMode": { "const": "auto" } } }, "then": { "properties": { "supportedModes": { "contains": { "const": "auto" } } } } },
+                { "if": { "properties": { "defaultMode": { "const": "off" } } }, "then": { "properties": { "supportedModes": { "contains": { "const": "off" } } } } },
+                { "if": { "properties": { "defaultMode": { "const": "minimal" } } }, "then": { "properties": { "supportedModes": { "contains": { "const": "minimal" } } } } },
+                { "if": { "properties": { "defaultMode": { "const": "low" } } }, "then": { "properties": { "supportedModes": { "contains": { "const": "low" } } } } },
+                { "if": { "properties": { "defaultMode": { "const": "medium" } } }, "then": { "properties": { "supportedModes": { "contains": { "const": "medium" } } } } },
+                { "if": { "properties": { "defaultMode": { "const": "high" } } }, "then": { "properties": { "supportedModes": { "contains": { "const": "high" } } } } },
+                { "if": { "properties": { "defaultMode": { "const": "xhigh" } } }, "then": { "properties": { "supportedModes": { "contains": { "const": "xhigh" } } } } },
+                { "if": { "properties": { "defaultMode": { "const": "max" } } }, "then": { "properties": { "supportedModes": { "contains": { "const": "max" } } } } }
+              ],
+              "additionalProperties": false
+            }
+          },
+          "additionalProperties": false
+        },
+        "spec": {
+          "type": "object",
+          "description": "模型内在参数（不含任何价格字段）",
+          "properties": {
+            "contextWindow": {
+              "type": "number",
+              "description": "上下文窗口大小（token 数）。下游用于上下文裁剪阈值计算。",
+              "minimum": 0
+            },
+            "maxOutputTokens": {
+              "type": "number",
+              "description": "单次请求最大输出 token 数。tags 字符串无法表达，是本规格库相对 NewAPI tags 的核心补充。",
+              "minimum": 0
+            },
+            "capabilities": {
+              "type": "array",
+              "description": "模型能力标签：chat、vision、tool_use、code、reasoning 等。与 NewAPI tags 解析结果取并集。",
+              "items": { "type": "string" }
+            },
+            "serviceType": {
+              "type": ["string", "array"],
+              "items": { "type": "string" },
+              "description": "服务类型，单个字符串或数组：chat、reasoning、fast、vision、embedding、image_gen、tts、asr 等。命中时优先于 tags 解析。"
+            },
+            "defaultTemperature": {
+              "type": ["number", "null"],
+              "description": "推荐默认温度（0-2）。null 表示模型不支持温度调节（如 reasoning 模型），调用方应跳过该参数。本文件为新文件，老客户端不读，故允许 null。",
+              "minimum": 0,
+              "maximum": 2
+            },
+            "defaultTopP": {
+              "type": ["number", "null"],
+              "description": "推荐默认 Top-P（0-1）。null 表示不支持调节。",
+              "minimum": 0,
+              "maximum": 1
+            },
+            "supportsReasoning": {
+              "type": "boolean",
+              "description": "是否为推理模型。用于运行时决定是否启用 reasoning 相关处理。"
+            },
+            "description": {
+              "type": "string",
+              "description": "模型简要描述（一句话特点与适用场景）。命中后可覆盖 NewAPI 原值。"
+            },
+            "extra": {
+              "type": "object",
+              "description": "模型内在开放扩展：modelOrigin 描述真实原厂身份，speech 描述可跨小版本复用的语音协议，thinkingOnly 描述模型是否强制思考，adaptiveThinking 描述 Anthropic 模型是否只接受 adaptive thinking 线上形态；不含价格，也不得声明 Provider/接入面的 reasoning effort、thinking 回放能力（thinkingRoundTrip）或工具轮 thinking 校验口径（thinkingToolTurnValidation）——这些只能写在 provider model 的 extra 中，客户端 Schema 会拒收整份规格。",
+              "allOf": [
+                { "not": { "required": ["reasoning"] } },
+                { "not": { "required": ["thinkingRoundTrip"] } },
+                { "not": { "required": ["thinkingToolTurnValidation"] } }
+              ],
+              "properties": {
+                "modelOrigin": { "$ref": "#/definitions/modelOrigin" },
+                "speech": { "$ref": "#/definitions/speechModelProfile" },
+                "samplingParametersDeprecated": {
+                  "type": "boolean",
+                  "description": "模型是否拒绝采样参数（如 Claude Opus 4.7+ / Opus 5 / Fable / Mythos 携带 temperature、top_p 或 top_k 即 400，Sonnet 5 对非默认值 400）。true 时客户端出站删除请求体顶层的 temperature / top_p / top_k——无论取值来自模型 defaultTemperature、用户覆写、工作流默认值还是父会话继承；false 或缺省时原样发送，客户端不按模型 ID 推断。只描述模型固有属性：精确命中的 ModelSpec 会补全到各接入面的同名模型，family 兜底不继承；作用于 Agent 引擎发出的模型请求，Claude 订阅（claude-oauth）请求由 Claude CLI 自建、不受本字段影响。"
+                },
+                "forcedToolChoiceUnsupported": {
+                  "type": "boolean",
+                  "description": "模型是否拒绝强制工具选择（如 Claude Fable 5.1 / Mythos 5.1：tool_choice.type 为 any 或 tool 即 400）。true 时客户端把强制工具选择降级为 auto（Anthropic 的 any / tool、OpenAI 的 required / 指定函数），Anthropic 请求保留 disable_parallel_tool_use，none 与 auto 不受影响；false 或缺省时按调用方要求发送，客户端不按模型 ID 推断。只描述模型固有属性：精确命中的 ModelSpec 会补全到各接入面的同名模型，family 兜底不继承；作用于 Agent 引擎发出的模型请求，Claude 订阅（claude-oauth）请求由 Claude CLI 自建、不受本字段影响。"
+                },
+                "thinkingOnly": {
+                  "type": "boolean",
+                  "description": "模型强制思考、无法关闭（如 GLM-5.3 系列 thinking.type 仅接受 enabled）。true 时客户端把 off 从可选档位移除，并把内部 suppressThinking 降级为 auto，避免发出必然被上游拒绝的关闭参数。只描述模型固有属性，不声明接入面支持哪些深度档位——后者只能写在 provider model 的 extra.reasoning 中。"
+                },
+                "adaptiveThinking": {
+                  "type": "boolean",
+                  "description": "Anthropic Messages 模型是否属于 adaptive thinking 代际（Claude Opus 4.7+ / Opus 5 / Sonnet 5 / Fable / Mythos）。true 时客户端把思考参数发成 thinking.type=adaptive + output_config.effort，而不是会被上游 400 拒绝的 thinking.type=enabled + budget_tokens；false 表示明确不是，禁止客户端按模型 ID 推断；缺省时客户端仅在官方 api.anthropic.com 端点上按模型代际表兜底。只作用于 anthropic-messages 接入面，Claude 订阅（claude-oauth）由 Claude CLI 自行改写、不受本字段影响。命中本规格的模型由客户端 applySpec 复制到 provider model extra，运行时读的是那份副本——desirecore-cloud 等动态 Provider、非官方域名的 Anthropic Messages 中转只能从这里拿到声明，漏写即回退为 budget_tokens。match.exact、match.patterns 与 family 兜底命中时都会带上本键，因此声明本键的规格，其 exact、pattern 前缀与 family 都必须收窄到同一代际（如 family 写 claude-opus-5 而不是 claude-opus，pattern 写 claude-opus-4-7* 而不是 claude-opus-4*），否则 Opus 4.5 等旧型号会继承声明并被上游 400 拒绝。"
+                },
+                "thinkingDefault": {
+                  "type": "boolean",
+                  "description": "模型默认开启思考。当前不改变客户端行为，仅供维护者参考。"
+                }
+              },
+              "additionalProperties": true
+            },
+            "releasedAt": {
+              "type": "string",
+              "description": "厂商发布年月（YYYY-MM 或 YYYY-MM-DD），辅助人工判断模型新旧。无客户端行为，仅供维护者参考何时清理该条规格。",
+              "pattern": "^\\d{4}-\\d{2}(-\\d{2})?$"
+            },
+            "retiredAt": {
+              "type": "string",
+              "description": "厂商宣布停止访问的日期（YYYY-MM-DD），辅助人工批量删除已退役的规格条目。无客户端行为，仅作数据清理依据。",
+              "pattern": "^\\d{4}-\\d{2}-\\d{2}$"
+            }
+          },
+          "additionalProperties": false
+        }
+      },
+      "additionalProperties": false
+    }
+  }
+}

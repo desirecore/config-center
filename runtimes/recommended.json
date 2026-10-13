@@ -1,0 +1,44 @@
+{
+  "python": {
+    "name": "3.13",
+    "version": "3.13.9",
+    "distTag": "20251014",
+    "archives": {
+      "darwin-arm64": "20251014/cpython-3.13.9+20251014-aarch64-apple-darwin-install_only_stripped.tar.gz",
+      "darwin-x64": "20251014/cpython-3.13.9+20251014-x86_64-apple-darwin-install_only_stripped.tar.gz",
+      "win32-x64": "20251014/cpython-3.13.9+20251014-x86_64-pc-windows-msvc-install_only_stripped.tar.gz",
+      "win32-arm64": "20251014/cpython-3.13.9+20251014-aarch64-pc-windows-msvc-install_only_stripped.tar.gz",
+      "linux-x64": "20251014/cpython-3.13.9+20251014-x86_64-unknown-linux-gnu-install_only_stripped.tar.gz",
+      "linux-arm64": "20251014/cpython-3.13.9+20251014-aarch64-unknown-linux-gnu-install_only_stripped.tar.gz"
+    },
+    "sha256": {
+      "darwin-arm64": "52721745b0fa3196e4d0381fa5c06dda1d54343b90d49d90c3bba52d1171bd98",
+      "darwin-x64": "7c33b153a69c6255e6f2659cf39738f316b03969d6230d7bc47c73b7fde9a0d4",
+      "win32-x64": "76e0a9749c4deeb975a4b6b36d54be4e43f0c2a4c654bedab5d2e4d62dbc3006",
+      "win32-arm64": "419cce7a099d21389fca32a9fd4f7364fc61b91a760369c803de57c6ee1ddb99",
+      "linux-x64": "c0ccda275948c79996e46993c2c5476ff5cca606dee530f1dea712179131b348",
+      "linux-arm64": "baa3d107d17e4328448e30c3c9c83cca0eb41ca7a37c10982e14d46a5c3db07d"
+    }
+  },
+  "node": {
+    "version": "24.21.0",
+    "ltsCodename": "Krypton",
+    "archives": {
+      "darwin-arm64": "v24.21.0/node-v24.21.0-darwin-arm64.tar.gz",
+      "darwin-x64": "v24.21.0/node-v24.21.0-darwin-x64.tar.gz",
+      "win32-x64": "v24.21.0/node-v24.21.0-win-x64.zip",
+      "win32-arm64": "v24.21.0/node-v24.21.0-win-arm64.zip",
+      "linux-x64": "v24.21.0/node-v24.21.0-linux-x64.tar.gz",
+      "linux-arm64": "v24.21.0/node-v24.21.0-linux-arm64.tar.gz"
+    },
+    "sha256": {
+      "darwin-arm64": "bed7eea5325e1108f32ce5228ddd6a5f0f08a499ee42aa7442aea583702f6057",
+      "darwin-x64": "1462cb3b3046b815cf8ea436d3da450ec1a9f11dac7e5a46b0ada5305d7e8097",
+      "win32-x64": "158f7685b44de51f6c0df1d153526cbcd3e1bc739a8dfc607721cef75de9e541",
+      "win32-arm64": "8779b1bde1d39f8d420e3b57aa657b39891af434d3de44a919044cec06785921",
+      "linux-x64": "6e1db87ef58b8819e5d5402eff1536491b18edd8eb7bee5ef7897876e88dc5ff",
+      "linux-arm64": "724282c3b43aec998aa9527380465b45d229e021b58035f5f4f63095eabfe5d5"
+    }
+  },
+  "minClientVersion": "10.0.178"
+}
