@@ -1,0 +1,205 @@
+DesireCore License
+
+Copyright (c) 2026 Yunnan Solar Corona Technology Co., Ltd.
+
+This project uses a tiered licensing model based on version numbers (vx.y).
+Let x denote the latest major version and y denote the latest minor version.
+
+IMPORTANT NOTICE ON HISTORICAL VERSIONS:
+
+  Versions v9 and earlier were developed and released as proprietary
+  commercial software by Yunnan Solar Corona Technology Co., Ltd. They are
+  NOT open source and are NOT covered by any open-source license, including
+  the MIT License. All rights to those versions are reserved. No source code,
+  binaries, or other materials from v9 or earlier are licensed under the terms
+  of this document.
+
+The open-source licensing model described below applies ONLY to v10 and later.
+
+The applicable license depends on the version:
+
+  Part A — v(x-1) and earlier open-source versions   → MIT License
+  Part B — vx, previous minor releases               → Competition-Exclusion License (commercial use allowed)
+  Part C — vx latest minor and dev branches           → Non-Commercial & Competition-Exclusion License
+
+When a new minor version is released, the previous minor version transitions
+from Part C to Part B. When a new major version is released, the previous
+major version transitions from Part B to Part A (MIT License).
+
+  Example timeline:
+    v10.0 released → v10.0 is Part C
+    v10.1 released → v10.0 becomes Part B, v10.1 is Part C
+    v11.0 released → all v10.x become Part A (MIT), v11.0 is Part C
+
+  Note: This MIT transition (Part A) will first take effect when v11 is
+  released, making v10.x the first versions to receive the MIT License.
+  Versions v9 and earlier remain proprietary and are never relicensed.
+
+================================================================================
+PART A — MIT License
+Applies to: v(x-1) and all earlier open-source versions
+(First applicable when v11 is released, covering v10.x)
+================================================================================
+
+MIT License
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+================================================================================
+PART B — Competition-Exclusion License (Commercial Use Allowed)
+Applies to: vx previous minor releases (vx.0 – vx.(y-1))
+================================================================================
+
+TERMS AND CONDITIONS
+
+1. DEFINITIONS
+   "Software" refers to the DesireCore releases covered by this Part.
+
+   "Competing Product" means any software product or service that provides
+   substantially similar functionality to DesireCore, including but not limited
+   to delegation-based interactive agent operating systems, AI companion desktop
+   applications, or any product that directly competes with DesireCore in the
+   same market segment.
+
+2. PERMITTED USE
+   You are permitted to use, copy, modify, and distribute this Software for
+   any purpose, including commercial purposes, provided that you comply with
+   all the terms and conditions of this License.
+
+3. COMPETITION EXCLUSION
+   You may NOT use this Software, in whole or in part, to develop, build,
+   operate, market, or contribute to any Competing Product, whether for
+   commercial or non-commercial purposes. This restriction applies to:
+   - Direct use of the Software's source code or binaries
+   - Incorporating substantial portions of the Software into a Competing Product
+   - Using the Software's architecture, design, or implementation as a basis
+     for a Competing Product
+   - Providing the Software or modifications thereof as part of a Competing
+     Product's offering
+
+4. ATTRIBUTION
+   You must include a copy of this License and the above copyright notice in
+   any copies or substantial portions of the Software. You must retain all
+   copyright, patent, trademark, and attribution notices in the Software.
+
+5. MODIFICATIONS
+   If you modify this Software, you must clearly indicate that modifications
+   have been made and retain all original copyright notices. Modified versions
+   must also be licensed under this same Part (Part B).
+
+6. NO WARRANTY
+   THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+   IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+   FITNESS FOR A PARTICULAR PURPOSE, AND NONINFRINGEMENT. IN NO EVENT SHALL
+   YUNNAN SOLAR CORONA TECHNOLOGY CO., LTD. BE LIABLE FOR ANY CLAIM, DAMAGES,
+   OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE,
+   ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
+   DEALINGS IN THE SOFTWARE.
+
+7. TERMINATION
+   Your rights under this License are automatically terminated if you violate
+   any of its terms. Upon termination, you must cease all use and destroy all
+   copies of the Software in your possession.
+
+================================================================================
+PART C — Non-Commercial & Competition-Exclusion License
+Applies to: vx latest minor and all development branches
+================================================================================
+
+TERMS AND CONDITIONS
+
+1. DEFINITIONS
+   "Software" refers to the latest minor release of the current major version
+   of DesireCore, as well as all code on development branches (main/dev) and
+   any pre-release, alpha, beta, or release-candidate versions.
+
+   "Competing Product" has the same meaning as defined in Part B.
+
+2. PERMITTED USE
+   You are permitted to use, copy, modify, and distribute this Software for
+   non-commercial purposes only, including educational and research purposes,
+   provided that you comply with all the terms and conditions of this License.
+
+3. COMMERCIAL USE RESTRICTION
+   You may NOT use, sell, rent, lease, transfer, assign, or otherwise dispose
+   of this Software for any commercial purpose, or in any way that generates
+   revenue, profit, or business advantage, without prior written consent from
+   Yunnan Solar Corona Technology Co., Ltd.
+
+4. COMPETITION EXCLUSION
+   You may NOT use this Software, in whole or in part, to develop, build,
+   operate, market, or contribute to any Competing Product, whether for
+   commercial or non-commercial purposes. This restriction applies to:
+   - Direct use of the Software's source code or binaries
+   - Incorporating substantial portions of the Software into a Competing Product
+   - Using the Software's architecture, design, or implementation as a basis
+     for a Competing Product
+   - Providing the Software or modifications thereof as part of a Competing
+     Product's offering
+
+5. ATTRIBUTION
+   You must include a copy of this License and the above copyright notice in
+   any copies or substantial portions of the Software. You must retain all
+   copyright, patent, trademark, and attribution notices in the Software.
+
+6. MODIFICATIONS
+   If you modify this Software, you must clearly indicate that modifications
+   have been made and retain all original copyright notices. Modified versions
+   must also be licensed under this same Part (Part C).
+
+7. DISTRIBUTION
+   You may distribute the Software and modifications thereof, provided that:
+   - You include this License with every copy or substantial portion
+   - You retain all copyright and attribution notices
+   - Distribution is for non-commercial purposes only
+   - The recipient agrees to all terms of this License
+
+8. NO WARRANTY
+   THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+   IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+   FITNESS FOR A PARTICULAR PURPOSE, AND NONINFRINGEMENT. IN NO EVENT SHALL
+   YUNNAN SOLAR CORONA TECHNOLOGY CO., LTD. BE LIABLE FOR ANY CLAIM, DAMAGES,
+   OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE,
+   ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
+   DEALINGS IN THE SOFTWARE.
+
+9. TERMINATION
+   Your rights under this License are automatically terminated if you violate
+   any of its terms. Upon termination, you must cease all use and destroy all
+   copies of the Software in your possession.
+
+10. GOVERNING LAW
+    This License is governed by the laws of the People's Republic of China.
+
+================================================================================
+COMMERCIAL LICENSING
+================================================================================
+
+This tiered licensing model is designed to strike a balance between commercial
+investment and open-source contribution. We believe in sharing our work with
+the community while sustaining the resources needed to build and improve
+DesireCore.
+
+For commercial use of the latest version (Part C), please contact us to obtain
+a commercial license:
+
+  Email:   ceo@solar-corona.com
+  Website: https://www.solar-corona.com
+
+We are happy to discuss licensing arrangements that work for your use case.
