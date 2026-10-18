@@ -9,7 +9,7 @@
     "staticUnmatchedSpecs": 58
   },
   "currentCounts": {
-    "records": 340,
+    "records": 336,
     "none": 14,
     "family": 5,
     "numericalDifferences": 41
@@ -1502,7 +1502,7 @@
         {
           "field": "maxOutputTokens",
           "access": 8192,
-          "spec": 131072
+          "spec": 204800
         }
       ],
       "classification": "unverified-preserved",
@@ -1594,7 +1594,7 @@
         {
           "field": "maxOutputTokens",
           "access": 8192,
-          "spec": 131072
+          "spec": 204800
         }
       ],
       "classification": "unverified-preserved",
@@ -2240,6 +2240,62 @@
       "id": "MiniMax-M3",
       "contextWindow": 1000000,
       "maxOutputTokens": 524288,
+      "evidence": "https://platform.minimax.cn/docs/api-reference/text-chat-anthropic.md",
+      "maxInputTokens": null
+    },
+    {
+      "vendor": "minimax",
+      "id": "MiniMax-M2.7",
+      "contextWindow": 204800,
+      "maxOutputTokens": 204800,
+      "evidence": "https://platform.minimax.cn/docs/api-reference/text-chat-anthropic.md",
+      "maxInputTokens": null
+    },
+    {
+      "vendor": "minimax",
+      "id": "MiniMax-M2.7-highspeed",
+      "contextWindow": 204800,
+      "maxOutputTokens": 204800,
+      "evidence": "https://platform.minimax.cn/docs/api-reference/text-chat-anthropic.md",
+      "maxInputTokens": null
+    },
+    {
+      "vendor": "minimax",
+      "id": "MiniMax-M2.5",
+      "contextWindow": 204800,
+      "maxOutputTokens": 204800,
+      "evidence": "https://platform.minimax.cn/docs/api-reference/text-chat-anthropic.md",
+      "maxInputTokens": null
+    },
+    {
+      "vendor": "minimax",
+      "id": "MiniMax-M2.5-highspeed",
+      "contextWindow": 204800,
+      "maxOutputTokens": 204800,
+      "evidence": "https://platform.minimax.cn/docs/api-reference/text-chat-anthropic.md",
+      "maxInputTokens": null
+    },
+    {
+      "vendor": "minimax",
+      "id": "MiniMax-M2.1",
+      "contextWindow": 204800,
+      "maxOutputTokens": 204800,
+      "evidence": "https://platform.minimax.cn/docs/api-reference/text-chat-anthropic.md",
+      "maxInputTokens": null
+    },
+    {
+      "vendor": "minimax",
+      "id": "MiniMax-M2.1-highspeed",
+      "contextWindow": 204800,
+      "maxOutputTokens": 204800,
+      "evidence": "https://platform.minimax.cn/docs/api-reference/text-chat-anthropic.md",
+      "maxInputTokens": null
+    },
+    {
+      "vendor": "minimax",
+      "id": "MiniMax-M2",
+      "contextWindow": 204800,
+      "maxOutputTokens": 204800,
       "evidence": "https://platform.minimax.cn/docs/api-reference/text-chat-anthropic.md",
       "maxInputTokens": null
     }

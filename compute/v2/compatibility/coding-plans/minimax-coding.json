@@ -93,9 +93,9 @@
         "chat",
         "reasoning"
       ],
-      "description": "MiniMax 新一代旗舰模型，Token Plan 核心文本模型，5 小时滚动窗口计费。Starter 600次/5h，Plus 1500次/5h，Max 4500次/5h",
+      "description": "MiniMax 新一代旗舰模型，Token Plan 核心文本模型，5 小时滚动窗口计费。Starter 600次/5h，Plus 1500次/5h，Max 4500次/5h；官网通知：2026-10-19 起该名称的请求统一路由至 M3.1 Flash Preview，原名称保留为兼容入口",
       "contextWindow": 204800,
-      "maxOutputTokens": 131072,
+      "maxOutputTokens": 204800,
       "capabilities": [
         "chat",
         "reasoning",
@@ -110,9 +110,9 @@
       "serviceType": [
         "fast"
       ],
-      "description": "MiniMax M2.7 极速版，极速套餐专用。Plus-极速 1500次/5h，Max-极速 4500次/5h，Ultra-极速 30000次/5h",
+      "description": "MiniMax M2.7 极速版，极速套餐专用。Plus-极速 1500次/5h，Max-极速 4500次/5h，Ultra-极速 30000次/5h；官网通知：2026-10-19 起该名称的请求统一路由至 M3.1 Flash Preview，原名称保留为兼容入口",
       "contextWindow": 204800,
-      "maxOutputTokens": 131072,
+      "maxOutputTokens": 204800,
       "capabilities": [
         "chat",
         "reasoning",
