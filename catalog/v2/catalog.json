@@ -4133,7 +4133,7 @@
       },
       "facts": {
         "contextWindow": 1000000,
-        "maxOutputTokens": 512000,
+        "maxOutputTokens": 524288,
         "capabilities": [
           "chat",
           "reasoning",
@@ -22139,12 +22139,6 @@
               "evidence": "compute/providers/minimax.json#MiniMax-M3",
               "verification": "inherited-not-reverified"
             },
-            "maxOutputTokens": {
-              "value": 131072,
-              "reason": "preserved-access-contract",
-              "evidence": "compute/providers/minimax.json#MiniMax-M3",
-              "verification": "inherited-not-reverified"
-            },
             "capabilities": {
               "value": [
                 "chat",
@@ -39090,12 +39084,6 @@
                 "chat",
                 "reasoning"
               ],
-              "reason": "preserved-access-contract",
-              "evidence": "compute/coding-plans/minimax-coding.json#MiniMax-M3",
-              "verification": "inherited-not-reverified"
-            },
-            "maxOutputTokens": {
-              "value": 131072,
               "reason": "preserved-access-contract",
               "evidence": "compute/coding-plans/minimax-coding.json#MiniMax-M3",
               "verification": "inherited-not-reverified"

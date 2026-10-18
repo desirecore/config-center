@@ -23,5 +23,10 @@ test('all recorded baseline differences and exceptions have explicit decisions',
  for(const row of [...d.differences,...d.specOnly]){assert.ok(row.classification);assert.ok(row.decision);assert.ok(row.reason)}
  for(const row of d.accessExceptions){assert.equal(row.inheritFamily,false);assert.equal(row.automaticRouting,false);assert.equal(row.effectiveBinding,null)}
  assert.ok(d.differences.some(r=>r.id==='gpt-5.4-nano'&&!r.currentDifferences.length))
- assert.ok(d.differences.some(r=>r.id==='MiniMax-M3'&&r.verifiedOverride===false))
+ // MiniMax-M3 直连/套餐的输出上限已按官网 Messages API 参考核对为 524288（2026-10-18），接入不再保留差异覆盖
+ const minimaxM3=d.differences.filter(r=>r.id==='MiniMax-M3')
+ assert.equal(minimaxM3.length,2)
+ for(const row of minimaxM3){assert.equal(row.classification,'verified-official-limit');assert.deepEqual(row.currentDifferences,[]);assert.equal(row.verifiedOverride,false)}
+ assert.ok(d.verifiedLimits.some(r=>r.vendor==='minimax'&&r.id==='MiniMax-M3'&&r.maxOutputTokens===524288&&r.contextWindow===1000000))
+ assert.equal(d.currentCounts.numericalDifferences,d.differences.filter(r=>r.currentDifferences.length).length)
 })

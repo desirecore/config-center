@@ -12,7 +12,7 @@
     "records": 340,
     "none": 14,
     "family": 5,
-    "numericalDifferences": 43
+    "numericalDifferences": 41
   },
   "bindings": [
     {
@@ -1111,17 +1111,12 @@
         }
       ],
       "currentSpec": "MiniMax-M3",
-      "currentDifferences": [
-        {
-          "field": "maxOutputTokens",
-          "access": 131072,
-          "spec": 512000
-        }
-      ],
-      "classification": "unverified-preserved",
-      "decision": "retain-separate-values",
-      "reason": "直连/套餐131072与共享512000缺少同一语义输出证明；保持分开、unknown覆盖，不把其解释为thinking预算或默认max_tokens。",
-      "verifiedOverride": false
+      "currentDifferences": [],
+      "classification": "verified-official-limit",
+      "decision": "inherit-verified-spec",
+      "reason": "2026-10-18 官网 Messages API 参数参考写明 MiniMax-M3 的 max_tokens 推荐 131072、上限 524288。接入原值131072与推荐值相同但不是上限（V2原标inherited-not-reverified），规格原值512000与上限不符；规格更正为524288。同一 /anthropic 端点未按Key类型另设上限，接入删除覆盖、继承规格。",
+      "verifiedOverride": false,
+      "evidence": "https://platform.minimax.cn/docs/api-reference/text-chat-anthropic.md"
     },
     {
       "file": "compute/providers/xai.json",
@@ -1667,17 +1662,12 @@
         }
       ],
       "currentSpec": "MiniMax-M3",
-      "currentDifferences": [
-        {
-          "field": "maxOutputTokens",
-          "access": 131072,
-          "spec": 512000
-        }
-      ],
-      "classification": "unverified-preserved",
-      "decision": "retain-separate-values",
-      "reason": "直连/套餐131072与共享512000缺少同一语义输出证明；保持分开、unknown覆盖，不把其解释为thinking预算或默认max_tokens。",
-      "verifiedOverride": false
+      "currentDifferences": [],
+      "classification": "verified-official-limit",
+      "decision": "inherit-verified-spec",
+      "reason": "2026-10-18 官网 Messages API 参数参考写明 MiniMax-M3 的 max_tokens 推荐 131072、上限 524288。接入原值131072与推荐值相同但不是上限（V2原标inherited-not-reverified），规格原值512000与上限不符；规格更正为524288。同一 /anthropic 端点未按Key类型另设上限，接入删除覆盖、继承规格。",
+      "verifiedOverride": false,
+      "evidence": "https://platform.minimax.cn/docs/api-reference/text-chat-anthropic.md"
     }
   ],
   "specOnly": [
@@ -2243,6 +2233,14 @@
       "contextWindow": 16000,
       "maxOutputTokens": 2000,
       "evidence": "https://developers.openai.com/api/docs/models/gpt-realtime-translate.md",
+      "maxInputTokens": null
+    },
+    {
+      "vendor": "minimax",
+      "id": "MiniMax-M3",
+      "contextWindow": 1000000,
+      "maxOutputTokens": 524288,
+      "evidence": "https://platform.minimax.cn/docs/api-reference/text-chat-anthropic.md",
       "maxInputTokens": null
     }
   ],

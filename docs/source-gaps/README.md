@@ -7,8 +7,8 @@
 - 未登记官方入口：**0 条**。
 - 未取得可读官网证据：**86 条**。
 - 入口有读取记录，但本条模型无字段证明：**186 条**。
-- 仅确认 ID，参数来源未登记：**216 条**。
-- 已有部分参数证明，仍需区分未证明字段：**137 条**。
+- 仅确认 ID，参数来源未登记：**215 条**。
+- 已有部分参数证明，仍需区分未证明字段：**138 条**。
 - 历史身份/参数不证明当前可用性：**1 条**。
 
 总计 626 条：前四类需要补证；partial 类逐条列出已有数据中尚未登记证明的关键字段，不能全部当作数据已核；historical 另列。
@@ -26,7 +26,7 @@
 | [infini](providers/infini.md) | 0 | 1 | 0 | 0 | 0 | 0 |
 | [kling](providers/kling.md) | 0 | 11 | 0 | 0 | 0 | 0 |
 | [kwai](providers/kwai.md) | 0 | 0 | 1 | 0 | 0 | 0 |
-| [minimax](providers/minimax.md) | 0 | 0 | 12 | 39 | 16 | 0 |
+| [minimax](providers/minimax.md) | 0 | 0 | 12 | 38 | 17 | 0 |
 | [mistral](providers/mistral.md) | 0 | 0 | 4 | 0 | 5 | 0 |
 | [moonshot](providers/moonshot.md) | 0 | 0 | 14 | 0 | 7 | 0 |
 | [moorethread](providers/moorethread.md) | 0 | 1 | 0 | 0 | 0 | 0 |
