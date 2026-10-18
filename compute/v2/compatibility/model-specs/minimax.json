@@ -137,7 +137,7 @@
       "id": "MiniMax-M2.7",
       "spec": {
         "contextWindow": 204800,
-        "maxOutputTokens": 131072,
+        "maxOutputTokens": 204800,
         "capabilities": [
           "chat",
           "reasoning",
@@ -158,7 +158,7 @@
       "id": "MiniMax-M2.5",
       "spec": {
         "contextWindow": 204800,
-        "maxOutputTokens": 131072,
+        "maxOutputTokens": 204800,
         "capabilities": [
           "chat",
           "reasoning",
@@ -180,7 +180,7 @@
       "id": "MiniMax-M2",
       "spec": {
         "contextWindow": 204800,
-        "maxOutputTokens": 131072,
+        "maxOutputTokens": 204800,
         "capabilities": [
           "chat",
           "code",
@@ -203,7 +203,7 @@
       "id": "MiniMax-M2.7-highspeed",
       "spec": {
         "contextWindow": 204800,
-        "maxOutputTokens": 131072,
+        "maxOutputTokens": 204800,
         "capabilities": [
           "chat",
           "reasoning",
@@ -229,7 +229,7 @@
       "id": "MiniMax-M2.5-highspeed",
       "spec": {
         "contextWindow": 204800,
-        "maxOutputTokens": 131072,
+        "maxOutputTokens": 204800,
         "capabilities": [
           "chat",
           "reasoning",
@@ -255,7 +255,7 @@
       "id": "MiniMax-M2.1",
       "spec": {
         "contextWindow": 204800,
-        "maxOutputTokens": 131072,
+        "maxOutputTokens": 204800,
         "capabilities": [
           "chat",
           "code",
@@ -280,7 +280,7 @@
       "id": "MiniMax-M2.1-highspeed",
       "spec": {
         "contextWindow": 204800,
-        "maxOutputTokens": 131072,
+        "maxOutputTokens": 204800,
         "capabilities": [
           "chat",
           "reasoning",
@@ -305,8 +305,6 @@
       },
       "id": "M2-her",
       "spec": {
-        "contextWindow": 204800,
-        "maxOutputTokens": 131072,
         "capabilities": [
           "chat",
           "roleplay"

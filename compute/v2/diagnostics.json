@@ -1,9 +1,9 @@
 {
   "specs": 286,
   "accesses": 40,
-  "models": 340,
+  "models": 336,
   "bindings": {
-    "exact": 304,
+    "exact": 300,
     "access-local": 28,
     "dynamic": 8
   },
@@ -1054,42 +1054,6 @@
       "value": 0.95,
       "reason": "preserved-access-contract",
       "evidence": "compute/providers/minimax.json#MiniMax-M2.5-highspeed",
-      "verification": "inherited-not-reverified"
-    },
-    {
-      "accessId": "provider-minimax-001",
-      "apiModelId": "MiniMax-M2.1",
-      "field": "defaultTopP",
-      "value": 0.95,
-      "reason": "preserved-access-contract",
-      "evidence": "compute/providers/minimax.json#MiniMax-M2.1",
-      "verification": "inherited-not-reverified"
-    },
-    {
-      "accessId": "provider-minimax-001",
-      "apiModelId": "MiniMax-M2.1-highspeed",
-      "field": "defaultTopP",
-      "value": 0.95,
-      "reason": "preserved-access-contract",
-      "evidence": "compute/providers/minimax.json#MiniMax-M2.1-highspeed",
-      "verification": "inherited-not-reverified"
-    },
-    {
-      "accessId": "provider-minimax-001",
-      "apiModelId": "MiniMax-M2",
-      "field": "defaultTopP",
-      "value": 0.95,
-      "reason": "preserved-access-contract",
-      "evidence": "compute/providers/minimax.json#MiniMax-M2",
-      "verification": "inherited-not-reverified"
-    },
-    {
-      "accessId": "provider-minimax-001",
-      "apiModelId": "M2-her",
-      "field": "defaultTopP",
-      "value": 0.95,
-      "reason": "preserved-access-contract",
-      "evidence": "compute/providers/minimax.json#M2-her",
       "verification": "inherited-not-reverified"
     },
     {

@@ -2,7 +2,7 @@
 
 本文件记录P0/P3逐项处置，机器清单为 [SPEC-DECISIONS.json](SPEC-DECISIONS.json)。未知值保留unknown并禁止family扩权，不把分类完成称作官网事实全部完成。
 
-- 340条接入重新用正式tag真实匹配器核对；当前14 none、5 family、41条数值差异（2026-10-18 MiniMax-M3 直连/套餐两条按官网上限消除，原为43条）。
+- 340条接入重新用正式tag真实匹配器核对；当前14 none、5 family、41条数值差异（2026-10-18 MiniMax-M3 直连/套餐两条按官网上限消除，原为43条）。同日 MiniMax 直连移除官网已下线的 M2.1、M2.1-highspeed、M2、M2-her 并写入 tombstones，当前接入记录为336条；M2.x 七个规格输出上限按官网更正为204800，百炼两套餐 MiniMax-M2.5 的8192覆盖仍属未核差异，差异条数不变。
 - Nano和Pro独立精确规格；删除基础GPT-5.4宽泛pattern，实时三型号补官方窗口/输出。
 - Coding Plan官方正文确认qwen3-coder-plus/next ID，仅加identity-only精确规格，无参数/路由授权。
 - 其他19条明确access-local例外：实际请求ID/局部数值保留，V2不从family制造身份、能力或自动路由；原V1已发布匹配器历史行为不能仅靠此文件修复。

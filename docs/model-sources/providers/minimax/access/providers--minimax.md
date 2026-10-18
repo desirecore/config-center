@@ -3,7 +3,7 @@
 [供应商索引](../README.md) · [官网证据](../SOURCES.md)
 
 - 配置文件：[compute/providers/minimax.json](../../../../../compute/providers/minimax.json)
-- 核验日期：2026-10-03。
+- 核验日期：2026-10-03；2026-10-18 移除官网已下线的 MiniMax-M2.1、MiniMax-M2.1-highspeed、MiniMax-M2、M2-her 并写入 `tombstones`（依据 [minimax-model-list](../SOURCES.md#minimax-model-list)），端点与协议未变。
 - 接入类别：`providers`。
 
 ## 平台配置快照
@@ -16,7 +16,7 @@
 以上是配置快照，不能据此宣布该端点或账号已实际验收。核查地域、套餐支持、凭据来源及协议时，对照官网证据目录并记录结论。
 
 <!-- source-config: compute/providers/minimax.json -->
-<!-- source-config-fingerprint: f9c36c5055d91ecafe0cae2be175a95b025727c1e2f5a937c75e0865a04cc8bd -->
+<!-- source-config-fingerprint: adbffc212c5947a7f9e48180bd68240881dccbf2eb6f2c435eef212ae1a7725f -->
 
 ## 关联模型
 
@@ -25,10 +25,6 @@
 - [`MiniMax-M2.7-highspeed`](../models/minimax-m2.7-highspeed.md)
 - [`MiniMax-M2.5`](../models/minimax-m2.5.md)
 - [`MiniMax-M2.5-highspeed`](../models/minimax-m2.5-highspeed.md)
-- [`MiniMax-M2.1`](../models/minimax-m2.1.md)
-- [`MiniMax-M2.1-highspeed`](../models/minimax-m2.1-highspeed.md)
-- [`MiniMax-M2`](../models/minimax-m2.md)
-- [`M2-her`](../models/m2-her.md)
 - [`image-01`](../models/image-01.md)
 - [`image-01-live`](../models/image-01-live.md)
 - [`speech-2.8-hd`](../models/speech-2.8-hd.md)
@@ -46,6 +42,8 @@
 - [`music-2.5+`](../models/music-2.5--da64d60f.md)
 - [`music-2.5`](../models/music-2.5.md)
 - [`music-cover`](../models/music-cover.md)
+
+已在 `tombstones` 中的型号：`MiniMax-Text-01`、`MiniMax-M2.1`、`MiniMax-M2.1-highspeed`、`MiniMax-M2`、`M2-her`；它们的共享规格仍在 [compute/model-specs/minimax.json](model-specs--minimax.md) 记录。
 
 ## 更新前检查
 

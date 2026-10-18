@@ -2,7 +2,7 @@
 
 [供应商索引](README.md)
 
-核验日期：2026-10-03；2026-10-18 补核 MiniMax-M3 输出上限与窗口。这里只登记可复用的官网证据与适用边界，具体模型与接入面分别记录。
+核验日期：2026-10-03；2026-10-18 补核 MiniMax-M3 输出上限与窗口，同日补核 M2.x 输出上限与型号下线状态。这里只登记可复用的官网证据与适用边界，具体模型与接入面分别记录。
 
 ## 官网证据
 
@@ -18,6 +18,14 @@
 
 - 入口：[minimax-messages-api](https://platform.minimax.cn/docs/api-reference/text-chat-anthropic.md)
 - 类型：`official-doc`；当前读取状态：`fetched`；地域/接入面：`MiniMax 国内 Anthropic 兼容 Messages API 参数参考（/anthropic/v1/messages）；按模型给出 max_tokens 推荐值与上限，不区分按量与订阅 Key`。
+### minimax-model-list
+
+- 入口：[minimax-model-list](https://platform.minimax.cn/docs/faq/models.md)
+- 类型：`official-doc`；当前读取状态：`fetched`；地域/接入面：`MiniMax 国内开放平台模型列表；分「可用模型」与「历史模型（均已下线）」，不给下线日期`。
+### minimax-text-chat
+
+- 入口：[minimax-text-chat](https://platform.minimax.cn/docs/guides/text-chat.md)
+- 类型：`official-doc`；当前读取状态：`fetched`；地域/接入面：`M2-her 对话模型指南；OpenAI 兼容接口调用，型号表上下文写作 64 K（简写）`。
 ### minimax-video
 
 - 入口：[minimax-video](https://platform.minimax.cn/docs/api-reference/video-generation-v2-create.md)
@@ -32,6 +40,8 @@
 M3.1 Flash Preview 仅在 M Plan/Code 开放，需 adaptive thinking，none/disabled 被拒绝，effort low 至 max、默认 max。H3 使用视频 V2 原生协议，不通过 Anthropic Messages。合并了 Hailuo 2.3 Fast 的大小写重复规格，保留两个 exact 名称和原有非 Agent 路由策略。未由文档确认的输出上限保持缺省。
 
 2026-10-18 输出上限核对：`minimax-messages-api`（Messages API 参数参考）的 `max_tokens` 字段说明写明 MiniMax-M3.1-Flash-Preview 和 MiniMax-M3 推荐值 131072（128K）、上限 524288（512K），其他模型推荐值 65536（64K）、上限 204800（200K），思考 token 计入该上限；国际站同页（platform.minimax.io）英文说明数值相同，OpenAI 兼容 Chat Completions 参考的 `max_completion_tokens` 也是同一组数值。本仓 `maxOutputTokens` 表示单次输出上限（客户端出站准入按它拒绝超额请求），登记官网上限而非推荐值，据此把 MiniMax-M3 规格由 512000 更正为 524288；直连与 Token Plan 两个接入面原先的 131072 只是沿用旧副本（V2 标注 `inherited-not-reverified`），二者都走同一 `/anthropic` 端点，官网没有按 Key 类型另设单次输出上限，于是删去接入覆盖、改为继承规格。同日复读 `minimax-anthropic`：MiniMax-M3 上下文仍为 1,000,000。M Plan 上线后现行套餐文档只列 M3.1 Flash Preview，Token Plan 老用户「可以持续使用最新模型」，没有再逐个列出 M3；Token Plan 账号下 M3 是否仍可调用未做账号实测。本次只核对输出上限与窗口，M2.x 的 131072 与官网上限 204800 的差异未处理。
+
+2026-10-18 M2.x 输出上限与下线核对：`minimax-messages-api` 同一 `max_tokens` 说明中「其他模型」推荐值 65536、上限 204800（200K），同页 `model` 枚举列出 M2.7、M2.5、M2.1、M2 及各 highspeed，国际站同页与 OpenAI 兼容 `max_completion_tokens` 数值相同；据此把 7 个 M2.x 规格的 `maxOutputTokens` 由 131072 更正为 204800，直连与 Token Plan 条目没有输出覆盖、随规格变化。`minimax-model-list` 把 MiniMax-M2.1、MiniMax-M2.1-highspeed、MiniMax-M2、M2-her 列为已下线（国际站同页 Retired），直连 Provider 移除这 4 条并写入 tombstones，共享规格保留；Messages API 参数参考与 Anthropic SDK 页的 `model` 枚举、定价页「历史模型」仍列出 M2.1、M2.1-highspeed、M2，这些页面没有说明仍可调用，状态以模型列表页为准。M2-her 的官方指南 `minimax-text-chat` 只给出 64 K 上下文（简写）、未给输出上限，且走 OpenAI 兼容接口、不在 `/anthropic` 支持型号内，原规格 204800 / 131072 没有来源，改为未声明。`minimax-models` 页首通知 M2.5、M2.7 系列 2026-10-19 起停止向新用户开放调用、2026-11-18 正式下线，M Plan 与 Token Plan 中这两个系列的请求自 2026-10-19 起统一路由至 M3.1 Flash Preview、原名称保留为兼容入口；尚未到下线日，本次只在直连与 Token Plan 条目描述中写明，正式下线后另行按 tombstones 处置。本次未处理：Anthropic SDK 页写明 M2.x 的 `top_p` 默认值 0.9，直连条目 `defaultTopP` 0.95 为沿用值（V2 标 inherited-not-reverified）；模型列表页与定价页把 music-2.6、music-cover、Music-2.5+、Music-2.5 等音乐型号标为已下线，而 `minimax-models` 的音乐通知与本仓条目描述仍写「历史付费用户可继续使用」，官网两处说法不一致，需另行核对后再处置。
 
 状态 `partial` 仅表示列出的字段已核实；不能推断整条配置、价格、账号权限或真实模型调用都已验收。`pending` 没有已核字段；`historical` 只作历史兼容参考。路由 tier/priority、产品标签和默认选择属于本仓策略，不伪装成官网数据。
 
@@ -48,8 +58,8 @@ M3.1 Flash Preview 仅在 M Plan/Code 开放，需 adaptive thinking，none/disa
       "kind": "official-doc",
       "scope": "本轮读取 minimax 官方 minimax-models 页面；按单模型记录限定字段与接入面",
       "retrieval": "fetched",
-      "checkedAt": "2026-10-03",
-      "contentSha256": "79aec16c3b99d3871ab75de58087b3d1baa40dd79a33b639ef3bc1c079859a46",
+      "checkedAt": "2026-10-18",
+      "contentSha256": "8c7dd5559f403cd0bf67915a4b1866885c8524dce67e48280f9643b729c9f073",
       "resolvedUrl": "https://platform.minimax.cn/docs/guides/models-intro.md"
     },
     {
@@ -71,6 +81,26 @@ M3.1 Flash Preview 仅在 M Plan/Code 开放，需 adaptive thinking，none/disa
       "checkedAt": "2026-10-18",
       "contentSha256": "8519abe21561aa22065f1c9b2559b93e1aa922f5c9af92406798b7972c09c063",
       "resolvedUrl": "https://platform.minimax.cn/docs/api-reference/text-chat-anthropic.md"
+    },
+    {
+      "id": "minimax-model-list",
+      "url": "https://platform.minimax.cn/docs/faq/models.md",
+      "kind": "official-doc",
+      "scope": "MiniMax 国内开放平台模型列表；区分可用模型与已下线的历史模型，不给下线日期",
+      "retrieval": "fetched",
+      "checkedAt": "2026-10-18",
+      "contentSha256": "c146a865975cbbabaa3da441484c5e8d78fb274b8e3d03847907fbc08c30bc8f",
+      "resolvedUrl": "https://platform.minimax.cn/docs/faq/models.md"
+    },
+    {
+      "id": "minimax-text-chat",
+      "url": "https://platform.minimax.cn/docs/guides/text-chat.md",
+      "kind": "official-doc",
+      "scope": "M2-her 对话模型指南；OpenAI 兼容接口调用，型号表上下文写作 64 K（简写），未给输出上限",
+      "retrieval": "fetched",
+      "checkedAt": "2026-10-18",
+      "contentSha256": "cff2ffbcd0e0ae00cbc32d6baf5332700023f9692d690515b23538fdedf969a4",
+      "resolvedUrl": "https://platform.minimax.cn/docs/guides/text-chat.md"
     },
     {
       "id": "minimax-video",

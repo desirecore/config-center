@@ -4,6 +4,7 @@
 
 - 精确模型 ID：`MiniMax-M2.7-highspeed`。
 - 核验日期：2026-10-03；本轮增量复核仅覆盖明确列出的字段，其余接入面和参数保持各自状态。
+- 2026-10-18 补核：三个接入面的单次输出上限与上下文窗口，以及官网下线通知，见下方「2026-10-18 输出上限与下线通知复核」；其余字段未重新核验。
 
 ## 适用接入面
 
@@ -25,7 +26,7 @@
 ```json
 {
   "contextWindow": 204800,
-  "maxOutputTokens": 131072,
+  "maxOutputTokens": 204800,
   "serviceType": [
     "fast"
   ],
@@ -48,7 +49,7 @@
 
 | 模型 ID | 上下文 / 输出 | 计价 | 已核字段→来源 | 来源入口 | 状态 | 数据指纹 |
 | --- | --- | --- | --- | --- | --- | --- |
-| `MiniMax-M2.7-highspeed` | 204800 / 131072 | CNY：4.2 / 16.8 | `modelName`→[minimax-models](../SOURCES.md#minimax-models)；`contextWindow`→[minimax-anthropic](../SOURCES.md#minimax-anthropic) |[minimax-models](../SOURCES.md#minimax-models)；[minimax-anthropic](../SOURCES.md#minimax-anthropic) | partial | `bfdaa5b51506952de485070d9246dc9443e0320ae0e443e4ffcb147b6f1db507` |
+| `MiniMax-M2.7-highspeed` | 204800 / 204800 | CNY：4.2 / 16.8 | `modelName`→[minimax-models](../SOURCES.md#minimax-models)；`contextWindow`→[minimax-anthropic](../SOURCES.md#minimax-anthropic)；`maxOutputTokens`→[minimax-messages-api](../SOURCES.md#minimax-messages-api) | [minimax-models](../SOURCES.md#minimax-models)；[minimax-anthropic](../SOURCES.md#minimax-anthropic)；[minimax-messages-api](../SOURCES.md#minimax-messages-api) | partial | `e32d05e7cd28d3dc2df9220d373cf69f6834fd210047c599abb9b7a6317e9b8a` |
 
 ### compute/coding-plans/minimax-coding.json
 
@@ -60,7 +61,7 @@
 ```json
 {
   "contextWindow": 204800,
-  "maxOutputTokens": 131072,
+  "maxOutputTokens": 204800,
   "serviceType": [
     "fast"
   ],
@@ -79,7 +80,7 @@
 
 | 模型 ID | 上下文 / 输出 | 计价 | 已核字段→来源 | 来源入口 | 状态 | 数据指纹 |
 | --- | --- | --- | --- | --- | --- | --- |
-| `MiniMax-M2.7-highspeed` | 204800 / 131072 | 套餐：未声明 / 未声明 | `modelName`→[minimax-models](../SOURCES.md#minimax-models) | [minimax-models](../SOURCES.md#minimax-models) | partial | `a065dfa7d3287e8b9fbefc0f85f3e28587119807f7038804da8cbc9e5e95e9e5` |
+| `MiniMax-M2.7-highspeed` | 204800 / 204800 | 套餐：未声明 / 未声明 | `modelName`→[minimax-models](../SOURCES.md#minimax-models)；`contextWindow`→[minimax-anthropic](../SOURCES.md#minimax-anthropic)；`maxOutputTokens`→[minimax-messages-api](../SOURCES.md#minimax-messages-api) | [minimax-models](../SOURCES.md#minimax-models)；[minimax-anthropic](../SOURCES.md#minimax-anthropic)；[minimax-messages-api](../SOURCES.md#minimax-messages-api) | partial | `33536449c47b5cabe991a73220954be8353ef7380b2dc22f3b62a42ebb3a3f47` |
 
 ### compute/model-specs/minimax.json
 
@@ -91,7 +92,7 @@
 ```json
 {
   "spec.contextWindow": 204800,
-  "spec.maxOutputTokens": 131072,
+  "spec.maxOutputTokens": 204800,
   "spec.serviceType": [
     "fast"
   ],
@@ -111,7 +112,7 @@
 
 | 模型 ID | 上下文 / 输出 | 计价 | 已核字段→来源 | 来源入口 | 状态 | 数据指纹 |
 | --- | --- | --- | --- | --- | --- | --- |
-| `MiniMax-M2.7-highspeed` | 204800 / 131072 | 非计价主数据 | `id`→[minimax-models](../SOURCES.md#minimax-models)；`spec.contextWindow`→[minimax-anthropic](../SOURCES.md#minimax-anthropic) |[minimax-models](../SOURCES.md#minimax-models)；[minimax-anthropic](../SOURCES.md#minimax-anthropic) | partial | `510ebe4c0b5e6451a57158dc1bcd48d704dc92520971c2f5d4e2b341c866b2dc` |
+| `MiniMax-M2.7-highspeed` | 204800 / 204800 | 非计价主数据 | `id`→[minimax-models](../SOURCES.md#minimax-models)；`spec.contextWindow`→[minimax-anthropic](../SOURCES.md#minimax-anthropic)；`spec.maxOutputTokens`→[minimax-messages-api](../SOURCES.md#minimax-messages-api) | [minimax-models](../SOURCES.md#minimax-models)；[minimax-anthropic](../SOURCES.md#minimax-anthropic)；[minimax-messages-api](../SOURCES.md#minimax-messages-api) | partial | `253924de66a7f6bc67314ecf9e61a52b85adcc4d9f4949e8288b4b6ef46ca548` |
 
 ## 本轮补充核验
 
@@ -120,6 +121,13 @@
 ## 本轮补充核验
 
 本轮读取官方Anthropic SDK型号表明文上下文：M3为1000000，M2.7/2.5/2.1及highspeed为204800。M2.x仅文本和工具相关块，不支持图片/视频；清理API/套餐/sharedspec中误列的vision能力。输出上限、价格、套餐账号可用性不因窗口核验提高状态。
+
+## 2026-10-18 输出上限与下线通知复核
+
+- 输出上限：[minimax-messages-api](../SOURCES.md#minimax-messages-api) 的 `max_tokens` 说明写明，除 MiniMax-M3.1-Flash-Preview 与 MiniMax-M3 外的其他模型推荐值 65536（64K）、上限 204800（200K），超过上限的内容会被截断；同页 `model` 枚举列出 M2.7、M2.5、M2.1、M2 及各 highspeed，国际站同页（platform.minimax.io）与 OpenAI 兼容 Chat Completions 参考的 `max_completion_tokens` 数值相同。`maxOutputTokens` 表示单次输出上限（客户端出站准入按它拒绝超额请求），登记上限而非推荐值：规格由 131072 更正为 204800。直连（`provider-minimax-001`）与 Token Plan（`provider-minimax-coding-001`）两个接入面都走 `/anthropic` 端点、没有输出覆盖，随规格变为 204800；官网未按 Key 类型另设单次输出上限。
+- 上下文窗口：[minimax-anthropic](../SOURCES.md#minimax-anthropic) 型号表仍为 204,800，数值不变。输出上限与窗口数值相同，单次实际可用的输出仍受窗口余量约束。
+- 下线通知：[minimax-models](../SOURCES.md#minimax-models) 页首通知 MiniMax M2.5、M2.7 系列 2026-10-19 起停止向新用户开放调用、2026-11-18 正式下线（国际站同页日期相同）；按量付费的存量用户可调用至正式下线日；M Plan 与 Token Plan 中这两个系列的请求自 2026-10-19 起统一路由至 M3.1 Flash Preview，原模型名称保留为兼容入口。尚未到正式下线日，本次不删除条目，只在直连与 Token Plan 条目描述中写明通知；正式下线后再按 tombstones 处置。
+- Token Plan 边界：2026-10-19 起该名称在 Token Plan 下实际由 M3.1 Flash Preview 处理，本条目的窗口与输出仍按 M2.7 合同登记（小于 M3.1 Flash Preview 的合同，不会放大请求）；路由后思考参数等行为差异与套餐账号可用性未做账号实测。
 
 ## 下次更新核查
 

@@ -21,7 +21,11 @@
     "music_gen"
   ],
   "tombstones": [
-    "MiniMax-Text-01"
+    "MiniMax-Text-01",
+    "MiniMax-M2.1",
+    "MiniMax-M2.1-highspeed",
+    "MiniMax-M2",
+    "M2-her"
   ],
   "models": [
     {
@@ -87,9 +91,9 @@
         "chat",
         "reasoning"
       ],
-      "description": "MiniMax 新一代旗舰模型，擅长复杂 Agent、软件工程与专业办公任务",
+      "description": "MiniMax 新一代旗舰模型，擅长复杂 Agent、软件工程与专业办公任务；官网通知：2026-10-19 起不再向新用户开放，2026-11-18 正式下线，存量用户可调用至下线日",
       "contextWindow": 204800,
-      "maxOutputTokens": 131072,
+      "maxOutputTokens": 204800,
       "capabilities": [
         "chat",
         "reasoning",
@@ -112,9 +116,9 @@
       "serviceType": [
         "fast"
       ],
-      "description": "MiniMax M2.7 极速版，效果一致，输出更快，适合低延迟场景",
+      "description": "MiniMax M2.7 极速版，效果一致，输出更快，适合低延迟场景；官网通知：2026-10-19 起不再向新用户开放，2026-11-18 正式下线，存量用户可调用至下线日",
       "contextWindow": 204800,
-      "maxOutputTokens": 131072,
+      "maxOutputTokens": 204800,
       "capabilities": [
         "chat",
         "reasoning",
@@ -139,9 +143,9 @@
         "chat",
         "reasoning"
       ],
-      "description": "MiniMax M2.5，204.8K 上下文，支持深度推理和工具调用",
+      "description": "MiniMax M2.5，204.8K 上下文，支持深度推理和工具调用；官网通知：2026-10-19 起不再向新用户开放，2026-11-18 正式下线，存量用户可调用至下线日",
       "contextWindow": 204800,
-      "maxOutputTokens": 131072,
+      "maxOutputTokens": 204800,
       "capabilities": [
         "chat",
         "reasoning",
@@ -165,9 +169,9 @@
       "serviceType": [
         "fast"
       ],
-      "description": "MiniMax M2.5 高速推理版本(100TPS)，适合低延迟场景",
+      "description": "MiniMax M2.5 高速推理版本(100TPS)，适合低延迟场景；官网通知：2026-10-19 起不再向新用户开放，2026-11-18 正式下线，存量用户可调用至下线日",
       "contextWindow": 204800,
-      "maxOutputTokens": 131072,
+      "maxOutputTokens": 204800,
       "capabilities": [
         "chat",
         "reasoning",
@@ -183,103 +187,6 @@
         "cacheReadPrice": 0.21,
         "cacheWritePrice": 2.625,
         "outputSpeedTps": 100
-      }
-    },
-    {
-      "modelName": "MiniMax-M2.1",
-      "displayName": "MiniMax M2.1",
-      "serviceType": [
-        "chat"
-      ],
-      "description": "MiniMax 上一代主力模型，200K 上下文，性价比优秀",
-      "contextWindow": 204800,
-      "maxOutputTokens": 131072,
-      "capabilities": [
-        "chat",
-        "code",
-        "tool_use",
-        "reasoning"
-      ],
-      "inputPrice": 2.1,
-      "outputPrice": 8.4,
-      "defaultTemperature": 1,
-      "defaultTopP": 0.95,
-      "extra": {
-        "cacheReadPrice": 0.21,
-        "cacheWritePrice": 2.625,
-        "outputSpeedTps": 60
-      }
-    },
-    {
-      "modelName": "MiniMax-M2.1-highspeed",
-      "displayName": "MiniMax M2.1 高速版",
-      "serviceType": [
-        "fast"
-      ],
-      "description": "MiniMax M2.1 高速推理版本，适合低延迟场景",
-      "contextWindow": 204800,
-      "maxOutputTokens": 131072,
-      "capabilities": [
-        "chat",
-        "reasoning",
-        "code",
-        "tool_use",
-        "fast"
-      ],
-      "inputPrice": 4.2,
-      "outputPrice": 16.8,
-      "defaultTemperature": 1,
-      "defaultTopP": 0.95,
-      "extra": {
-        "cacheReadPrice": 0.21,
-        "cacheWritePrice": 2.625,
-        "outputSpeedTps": 100
-      }
-    },
-    {
-      "modelName": "MiniMax-M2",
-      "displayName": "MiniMax M2",
-      "serviceType": [
-        "chat"
-      ],
-      "description": "MiniMax M2，优化编码和 Agent 工作流",
-      "contextWindow": 204800,
-      "maxOutputTokens": 131072,
-      "capabilities": [
-        "chat",
-        "code",
-        "tool_use"
-      ],
-      "inputPrice": 2.1,
-      "outputPrice": 8.4,
-      "defaultTemperature": 1,
-      "defaultTopP": 0.95,
-      "extra": {
-        "legacy": true,
-        "cacheReadPrice": 0.21,
-        "cacheWritePrice": 2.625
-      }
-    },
-    {
-      "modelName": "M2-her",
-      "displayName": "MiniMax M2 Her",
-      "serviceType": [
-        "chat"
-      ],
-      "description": "MiniMax 角色扮演对话模型，专为多轮角色对话设计",
-      "contextWindow": 204800,
-      "maxOutputTokens": 131072,
-      "capabilities": [
-        "chat",
-        "roleplay"
-      ],
-      "inputPrice": 2.1,
-      "outputPrice": 8.4,
-      "defaultTemperature": 1,
-      "defaultTopP": 0.95,
-      "extra": {
-        "cacheReadPrice": 0.21,
-        "cacheWritePrice": 2.625
       }
     },
     {
