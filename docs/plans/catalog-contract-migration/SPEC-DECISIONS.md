@@ -2,7 +2,7 @@
 
 本文件记录P0/P3逐项处置，机器清单为 [SPEC-DECISIONS.json](SPEC-DECISIONS.json)。未知值保留unknown并禁止family扩权，不把分类完成称作官网事实全部完成。
 
-- 340条接入重新用正式tag真实匹配器核对；当前14 none、5 family、43条数值差异。
+- 340条接入重新用正式tag真实匹配器核对；当前14 none、5 family、41条数值差异（2026-10-18 MiniMax-M3 直连/套餐两条按官网上限消除，原为43条）。
 - Nano和Pro独立精确规格；删除基础GPT-5.4宽泛pattern，实时三型号补官方窗口/输出。
 - Coding Plan官方正文确认qwen3-coder-plus/next ID，仅加identity-only精确规格，无参数/路由授权。
 - 其他19条明确access-local例外：实际请求ID/局部数值保留，V2不从family制造身份、能力或自动路由；原V1已发布匹配器历史行为不能仅靠此文件修复。
@@ -67,7 +67,7 @@
 | `compute/providers/zhipu.json#glm-4.7-flashx` | unverified-preserved | 1000000/1048576、128000/131072等不能凭K/M简写推断换算；平台与原厂各值保留，精确整数待官网同页证明。 |
 | `compute/providers/zhipu.json#glm-5v-turbo` | unverified-preserved | 1000000/1048576、128000/131072等不能凭K/M简写推断换算；平台与原厂各值保留，精确整数待官网同页证明。 |
 | `compute/providers/zhipu.json#glm-4.6` | unverified-preserved | 1000000/1048576、128000/131072等不能凭K/M简写推断换算；平台与原厂各值保留，精确整数待官网同页证明。 |
-| `compute/providers/minimax.json#MiniMax-M3` | unverified-preserved | 直连/套餐131072与共享512000缺少同一语义输出证明；保持分开、unknown覆盖，不把其解释为thinking预算或默认max_tokens。 |
+| `compute/providers/minimax.json#MiniMax-M3` | verified-official-limit | 2026-10-18 官网 Messages API 参数参考写明 max_tokens 推荐131072、上限524288；规格512000更正为524288，同一 /anthropic 端点未按Key类型另设上限，直连/套餐删除131072覆盖、继承规格。 |
 | `compute/providers/xai.json#grok-4.20-0309-reasoning` | unverified-preserved | 缺少精确接入字段证明；原厂与接入值均不冒充已核，不用最大值或机械min覆盖。 |
 | `compute/providers/openrouter.json#minimax/minimax-m3` | platform-contract-preserved | OpenRouter托管合同独立于原厂；以本次官方目录核对接入值，不能反写为原厂固有上限。 |
 | `compute/providers/openrouter.json#deepseek/deepseek-v4.1-flash` | platform-contract-preserved | OpenRouter托管合同独立于原厂；以本次官方目录核对接入值，不能反写为原厂固有上限。 |
@@ -86,7 +86,7 @@
 | `compute/coding-plans/dashscope-token-plan.json#MiniMax-M2.5` | unverified-preserved | 缺少精确接入字段证明；原厂与接入值均不冒充已核，不用最大值或机械min覆盖。 |
 | `compute/coding-plans/dashscope-token-plan.json#glm-4.7` | unverified-preserved | 1000000/1048576、128000/131072等不能凭K/M简写推断换算；平台与原厂各值保留，精确整数待官网同页证明。 |
 | `compute/coding-plans/volcengine-coding.json#doubao-seed-2.1-turbo` | unverified-preserved | 官方正文读取边界仍存在，输入/输出和总窗口不可混用；不把套餐262144或旧共享128000/32000判定为已核。 |
-| `compute/coding-plans/minimax-coding.json#MiniMax-M3` | unverified-preserved | 直连/套餐131072与共享512000缺少同一语义输出证明；保持分开、unknown覆盖，不把其解释为thinking预算或默认max_tokens。 |
+| `compute/coding-plans/minimax-coding.json#MiniMax-M3` | verified-official-limit | 2026-10-18 官网 Messages API 参数参考写明 max_tokens 推荐131072、上限524288；规格512000更正为524288，同一 /anthropic 端点未按Key类型另设上限，直连/套餐删除131072覆盖、继承规格。 |
 
 ## 原58条spec-only用途
 

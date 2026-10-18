@@ -2621,7 +2621,7 @@
       },
       "facts": {
         "contextWindow": 1000000,
-        "maxOutputTokens": 512000,
+        "maxOutputTokens": 524288,
         "capabilities": [
           "chat",
           "reasoning",
@@ -15079,12 +15079,6 @@
                 "reasoning",
                 "vision"
               ],
-              "reason": "preserved-access-contract",
-              "evidence": "compute/providers/minimax.json#MiniMax-M3",
-              "verification": "inherited-not-reverified"
-            },
-            "maxOutputTokens": {
-              "value": 131072,
               "reason": "preserved-access-contract",
               "evidence": "compute/providers/minimax.json#MiniMax-M3",
               "verification": "inherited-not-reverified"
@@ -28407,12 +28401,6 @@
               "evidence": "compute/coding-plans/minimax-coding.json#MiniMax-M3",
               "verification": "inherited-not-reverified"
             },
-            "maxOutputTokens": {
-              "value": 131072,
-              "reason": "preserved-access-contract",
-              "evidence": "compute/coding-plans/minimax-coding.json#MiniMax-M3",
-              "verification": "inherited-not-reverified"
-            },
             "capabilities": {
               "value": [
                 "chat",
@@ -30339,5 +30327,5 @@
     "authority": "catalog/v2/catalog.json",
     "verification": "migration-preserves-existing-evidence"
   },
-  "digest": "8f0c6ee356bb44e60fb17d1dca04b012d47cae9cea9fd7890f874894ee74cdb5"
+  "digest": "847e6d789d69371b8925e69734fd1919749b0d2a3d84f9fb32357c68d77e42df"
 }

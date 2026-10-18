@@ -1012,7 +1012,7 @@
     {
       "accessId": "provider-minimax-001",
       "apiModelId": "MiniMax-M3",
-      "digest": "4f6c5c62861772d752a61e52f74ce12c564a99f9effd0de9bffa839b45762033",
+      "digest": "e0db25c62a39dd8c5de5e03be137c912c1448a4788d0067b892544b245953187",
       "selectable": true,
       "effectiveApiFormat": "anthropic-messages",
       "effectiveApiModelId": "MiniMax-M3",
@@ -3664,7 +3664,7 @@
     {
       "accessId": "provider-minimax-coding-001",
       "apiModelId": "MiniMax-M3",
-      "digest": "96e85a2b230d67da71c9a1266b2a4d234b5b002114aac0fa375cc60d844e6939",
+      "digest": "731c0c574e16271b42958ca76447c93a16f65e9fa9128a84f8d17ae4756d5f0e",
       "selectable": true,
       "effectiveApiFormat": "anthropic-messages",
       "effectiveApiModelId": "MiniMax-M3",

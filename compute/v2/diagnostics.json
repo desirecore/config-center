@@ -997,15 +997,6 @@
     {
       "accessId": "provider-minimax-001",
       "apiModelId": "MiniMax-M3",
-      "field": "maxOutputTokens",
-      "value": 131072,
-      "reason": "preserved-access-contract",
-      "evidence": "compute/providers/minimax.json#MiniMax-M3",
-      "verification": "inherited-not-reverified"
-    },
-    {
-      "accessId": "provider-minimax-001",
-      "apiModelId": "MiniMax-M3",
       "field": "capabilities",
       "value": [
         "chat",
@@ -4599,15 +4590,6 @@
         "chat",
         "reasoning"
       ],
-      "reason": "preserved-access-contract",
-      "evidence": "compute/coding-plans/minimax-coding.json#MiniMax-M3",
-      "verification": "inherited-not-reverified"
-    },
-    {
-      "accessId": "provider-minimax-coding-001",
-      "apiModelId": "MiniMax-M3",
-      "field": "maxOutputTokens",
-      "value": 131072,
       "reason": "preserved-access-contract",
       "evidence": "compute/coding-plans/minimax-coding.json#MiniMax-M3",
       "verification": "inherited-not-reverified"

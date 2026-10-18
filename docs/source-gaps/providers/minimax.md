@@ -29,7 +29,7 @@
 | [`S2V-01`](../../model-sources/providers/minimax/models/s2v-01.md) | [`compute/providers/minimax.json`](../../../compute/providers/minimax.json) | `modelName` | [minimax-models](../../model-sources/providers/minimax/SOURCES.md#minimax-models)：fetched |
 | [`S2V-01`](../../model-sources/providers/minimax/models/s2v-01.md) | [`compute/model-specs/minimax.json`](../../../compute/model-specs/minimax.json) | `id` | [minimax-models](../../model-sources/providers/minimax/SOURCES.md#minimax-models)：fetched |
 
-## 仅确认 ID，参数来源未登记（39 条）
+## 仅确认 ID，参数来源未登记（38 条）
 
 | 模型 | 接入面 | 未登记证明的关键字段 | 官网入口/读取结果 |
 | --- | --- | --- | --- |
@@ -50,7 +50,6 @@
 | [`MiniMax-M2.7`](../../model-sources/providers/minimax/models/minimax-m2.7.md) | [`compute/coding-plans/minimax-coding.json`](../../../compute/coding-plans/minimax-coding.json) | `contextWindow`、`maxOutputTokens` | [minimax-models](../../model-sources/providers/minimax/SOURCES.md#minimax-models)：fetched |
 | [`MiniMax-M2`](../../model-sources/providers/minimax/models/minimax-m2.md) | [`compute/providers/minimax.json`](../../../compute/providers/minimax.json) | `contextWindow`、`defaultTemperature`、`defaultTopP`、`extra.cacheReadPrice`、`extra.cacheWritePrice`、`inputPrice`、`maxOutputTokens`、`outputPrice` | [minimax-models](../../model-sources/providers/minimax/SOURCES.md#minimax-models)：fetched |
 | [`MiniMax-M2`](../../model-sources/providers/minimax/models/minimax-m2.md) | [`compute/model-specs/minimax.json`](../../../compute/model-specs/minimax.json) | `spec.contextWindow`、`spec.defaultTemperature`、`spec.maxOutputTokens` | [minimax-models](../../model-sources/providers/minimax/SOURCES.md#minimax-models)：fetched |
-| [`MiniMax-M3`](../../model-sources/providers/minimax/models/minimax-m3.md) | [`compute/coding-plans/minimax-coding.json`](../../../compute/coding-plans/minimax-coding.json) | `contextWindow`、`maxOutputTokens` | [minimax-models](../../model-sources/providers/minimax/SOURCES.md#minimax-models)：fetched |
 | [`music-2.6`](../../model-sources/providers/minimax/models/music-2.6.md) | [`compute/providers/minimax.json`](../../../compute/providers/minimax.json) | `extra.pricePerSongUpToFiveMinutes` | [minimax-models](../../model-sources/providers/minimax/SOURCES.md#minimax-models)：fetched |
 | [`music-2.6`](../../model-sources/providers/minimax/models/music-2.6.md) | [`compute/coding-plans/minimax-coding.json`](../../../compute/coding-plans/minimax-coding.json) | 已登记关键字段都有证明；其他合同限制仍按原记录复核 | [minimax-models](../../model-sources/providers/minimax/SOURCES.md#minimax-models)：fetched |
 | [`music-2.6`](../../model-sources/providers/minimax/models/music-2.6.md) | [`compute/model-specs/minimax.json`](../../../compute/model-specs/minimax.json) | 已登记关键字段都有证明；其他合同限制仍按原记录复核 | [minimax-models](../../model-sources/providers/minimax/SOURCES.md#minimax-models)：fetched |
@@ -73,7 +72,7 @@
 | [`T2V-01-Director`](../../model-sources/providers/minimax/models/t2v-01-director.md) | [`compute/providers/minimax.json`](../../../compute/providers/minimax.json) | 已登记关键字段都有证明；其他合同限制仍按原记录复核 | [minimax-hailuo](../../model-sources/providers/minimax/SOURCES.md#minimax-hailuo)：fetched |
 | [`T2V-01-Director`](../../model-sources/providers/minimax/models/t2v-01-director.md) | [`compute/model-specs/minimax.json`](../../../compute/model-specs/minimax.json) | 已登记关键字段都有证明；其他合同限制仍按原记录复核 | [minimax-hailuo](../../model-sources/providers/minimax/SOURCES.md#minimax-hailuo)：fetched |
 
-## 已有部分参数证明，仍需区分未证明字段（16 条）
+## 已有部分参数证明，仍需区分未证明字段（17 条）
 
 | 模型 | 接入面 | 未登记证明的关键字段 | 官网入口/读取结果 |
 | --- | --- | --- | --- |
@@ -91,8 +90,9 @@
 | [`MiniMax-M2.7`](../../model-sources/providers/minimax/models/minimax-m2.7.md) | [`compute/model-specs/minimax.json`](../../../compute/model-specs/minimax.json) | `spec.defaultTemperature`、`spec.maxOutputTokens`、`spec.supportsReasoning` | [minimax-models](../../model-sources/providers/minimax/SOURCES.md#minimax-models)：fetched；[minimax-anthropic](../../model-sources/providers/minimax/SOURCES.md#minimax-anthropic)：fetched |
 | [`MiniMax-M3.1-Flash-Preview`](../../model-sources/providers/minimax/models/minimax-m3.1-flash-preview.md) | [`compute/coding-plans/minimax-coding.json`](../../../compute/coding-plans/minimax-coding.json) | 已登记关键字段都有证明；其他合同限制仍按原记录复核 | [minimax-anthropic](../../model-sources/providers/minimax/SOURCES.md#minimax-anthropic)：fetched；[minimax-models](../../model-sources/providers/minimax/SOURCES.md#minimax-models)：fetched |
 | [`MiniMax-M3.1-Flash-Preview`](../../model-sources/providers/minimax/models/minimax-m3.1-flash-preview.md) | [`compute/model-specs/minimax.json`](../../../compute/model-specs/minimax.json) | `spec.supportsReasoning` | [minimax-anthropic](../../model-sources/providers/minimax/SOURCES.md#minimax-anthropic)：fetched；[minimax-models](../../model-sources/providers/minimax/SOURCES.md#minimax-models)：fetched |
-| [`MiniMax-M3`](../../model-sources/providers/minimax/models/minimax-m3.md) | [`compute/providers/minimax.json`](../../../compute/providers/minimax.json) | `defaultTemperature`、`defaultTopP`、`extra.pricingTiers`、`extra.priorityPricingTiers`、`inputPrice`、`maxOutputTokens`、`outputPrice` | [minimax-models](../../model-sources/providers/minimax/SOURCES.md#minimax-models)：fetched；[minimax-anthropic](../../model-sources/providers/minimax/SOURCES.md#minimax-anthropic)：fetched |
-| [`MiniMax-M3`](../../model-sources/providers/minimax/models/minimax-m3.md) | [`compute/model-specs/minimax.json`](../../../compute/model-specs/minimax.json) | `spec.defaultTemperature`、`spec.maxOutputTokens`、`spec.supportsReasoning` | [minimax-models](../../model-sources/providers/minimax/SOURCES.md#minimax-models)：fetched；[minimax-anthropic](../../model-sources/providers/minimax/SOURCES.md#minimax-anthropic)：fetched |
+| [`MiniMax-M3`](../../model-sources/providers/minimax/models/minimax-m3.md) | [`compute/providers/minimax.json`](../../../compute/providers/minimax.json) | `defaultTemperature`、`defaultTopP`、`extra.pricingTiers`、`extra.priorityPricingTiers`、`inputPrice`、`outputPrice` | [minimax-models](../../model-sources/providers/minimax/SOURCES.md#minimax-models)：fetched；[minimax-anthropic](../../model-sources/providers/minimax/SOURCES.md#minimax-anthropic)：fetched；[minimax-messages-api](../../model-sources/providers/minimax/SOURCES.md#minimax-messages-api)：fetched |
+| [`MiniMax-M3`](../../model-sources/providers/minimax/models/minimax-m3.md) | [`compute/coding-plans/minimax-coding.json`](../../../compute/coding-plans/minimax-coding.json) | 已登记关键字段都有证明；其他合同限制仍按原记录复核 | [minimax-models](../../model-sources/providers/minimax/SOURCES.md#minimax-models)：fetched；[minimax-anthropic](../../model-sources/providers/minimax/SOURCES.md#minimax-anthropic)：fetched；[minimax-messages-api](../../model-sources/providers/minimax/SOURCES.md#minimax-messages-api)：fetched |
+| [`MiniMax-M3`](../../model-sources/providers/minimax/models/minimax-m3.md) | [`compute/model-specs/minimax.json`](../../../compute/model-specs/minimax.json) | `spec.defaultTemperature`、`spec.supportsReasoning` | [minimax-models](../../model-sources/providers/minimax/SOURCES.md#minimax-models)：fetched；[minimax-anthropic](../../model-sources/providers/minimax/SOURCES.md#minimax-anthropic)：fetched；[minimax-messages-api](../../model-sources/providers/minimax/SOURCES.md#minimax-messages-api)：fetched |
 
 ## 历史身份/参数不证明当前可用性（0 条）
 
