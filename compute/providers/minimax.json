@@ -31,7 +31,7 @@
       ],
       "description": "MiniMax M3，前沿多模态 Coding 与 Agent 模型，1M 上下文",
       "contextWindow": 1000000,
-      "maxOutputTokens": 131072,
+      "maxOutputTokens": 524288,
       "capabilities": [
         "chat",
         "reasoning",

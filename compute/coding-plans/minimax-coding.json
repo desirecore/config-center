@@ -74,7 +74,7 @@
       ],
       "description": "MiniMax M3，Token Plan 核心文本模型，1M 上下文，面向 Coding 与 Agent",
       "contextWindow": 1000000,
-      "maxOutputTokens": 131072,
+      "maxOutputTokens": 524288,
       "capabilities": [
         "chat",
         "reasoning",
