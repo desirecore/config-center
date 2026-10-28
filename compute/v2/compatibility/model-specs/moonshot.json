@@ -2,6 +2,101 @@
   "description": "Moonshot Kimi 系列模型规格。参数来源：config-center compute/providers/moonshot.json。注意 kimi-k2 存在多个子版本（k2.5/k2.6/k2-thinking），故 kimi-k2 仅用 exact 主键匹配，不用宽 pattern。",
   "specs": [
     {
+      "displayName": "Kimi K3.1 Pro",
+      "family": "kimi-k3.1-pro",
+      "match": {
+        "exact": [
+          "kimi-k3.1-pro",
+          "moonshotai/kimi-k3.1-pro"
+        ]
+      },
+      "id": "kimi-k3.1-pro",
+      "spec": {
+        "contextWindow": 1048576,
+        "maxOutputTokens": 1048576,
+        "capabilities": [
+          "chat",
+          "reasoning",
+          "code",
+          "vision",
+          "tool_use",
+          "long_context",
+          "video_understanding"
+        ],
+        "serviceType": [
+          "reasoning"
+        ],
+        "supportsReasoning": true,
+        "description": "Kimi K3.1 Pro，强制思考，low/high/max（按量 API 默认 max）；max_completion_tokens 默认 131072、允许上限 1048576，与输入共享窗口",
+        "extra": {
+          "thinkingOnly": true,
+          "samplingParametersDeprecated": true
+        }
+      },
+      "routing": {
+        "tier": "flagship",
+        "routingPriority": 50,
+        "eligibleForAgent": false,
+        "defaultReference": false,
+        "reasoning": {
+          "supportedModes": [
+            "auto",
+            "low",
+            "high",
+            "max"
+          ],
+          "defaultMode": "max"
+        }
+      }
+    },
+    {
+      "displayName": "Kimi K3.1 Pro Highspeed",
+      "family": "kimi-k3.1-pro-highspeed",
+      "match": {
+        "exact": [
+          "kimi-k3.1-pro-highspeed"
+        ]
+      },
+      "id": "kimi-k3.1-pro-highspeed",
+      "spec": {
+        "contextWindow": 1048576,
+        "maxOutputTokens": 1048576,
+        "capabilities": [
+          "chat",
+          "reasoning",
+          "code",
+          "vision",
+          "tool_use",
+          "long_context",
+          "video_understanding"
+        ],
+        "serviceType": [
+          "reasoning"
+        ],
+        "supportsReasoning": true,
+        "description": "Kimi K3.1 Pro Highspeed，能力与普通版相同，约 2–3 倍输出速度；按量 API 默认 max，与输入共享 1048576 token 窗口",
+        "extra": {
+          "thinkingOnly": true,
+          "samplingParametersDeprecated": true
+        }
+      },
+      "routing": {
+        "tier": "flagship",
+        "routingPriority": 50,
+        "eligibleForAgent": false,
+        "defaultReference": false,
+        "reasoning": {
+          "supportedModes": [
+            "auto",
+            "low",
+            "high",
+            "max"
+          ],
+          "defaultMode": "max"
+        }
+      }
+    },
+    {
       "displayName": "Kimi K3",
       "family": "kimi-k3",
       "match": {

@@ -2,6 +2,54 @@
   "description": "Google Gemini 系列模型规格。参数来源：config-center compute/providers/google.json。",
   "specs": [
     {
+      "displayName": "Gemini 4 Argon",
+      "family": "gemini-4-argon",
+      "match": {
+        "exact": [
+          "gemini-4-argon",
+          "google/gemini-4-argon"
+        ]
+      },
+      "id": "gemini-4-argon",
+      "spec": {
+        "contextWindow": 1048576,
+        "maxOutputTokens": 65536,
+        "capabilities": [
+          "chat",
+          "reasoning",
+          "code",
+          "vision",
+          "tool_use",
+          "long_context",
+          "video_understanding",
+          "audio_understanding"
+        ],
+        "serviceType": [
+          "chat"
+        ],
+        "supportsReasoning": true,
+        "description": "Gemini 4 Argon，共享 1048576 token 窗口；单次流式输出 65536，非流式 REST 32768；百万输出需要额外 long decode 流程",
+        "extra": {
+          "samplingParametersDeprecated": true
+        }
+      },
+      "routing": {
+        "tier": "flagship",
+        "routingPriority": 50,
+        "eligibleForAgent": false,
+        "defaultReference": false,
+        "reasoning": {
+          "supportedModes": [
+            "auto",
+            "low",
+            "medium",
+            "high"
+          ],
+          "defaultMode": "medium"
+        }
+      }
+    },
+    {
       "displayName": "Gemini Embedding 2",
       "family": "gemini-embedding-2",
       "match": {

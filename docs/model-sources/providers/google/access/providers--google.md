@@ -20,6 +20,8 @@
 
 ## 关联模型
 
+- [`gemini-4-argon`](../models/gemini-4-argon.md)
+
 - [`gemini-embedding-2`](../models/gemini-embedding-2.md)
 - [`gemini-3.8-flash`](../models/gemini-3.8-flash.md)
 - [`gemini-3.7-flash`](../models/gemini-3.7-flash.md)

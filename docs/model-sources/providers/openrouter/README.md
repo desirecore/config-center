@@ -10,6 +10,18 @@
 
 ## 模型
 
+- [`openai/gpt-6.1-terra`](models/openai--gpt-6.1-terra.md)
+
+- [`anthropic/claude-haiku-5.5`](models/anthropic--claude-haiku-5.5.md)
+
+- [`minimax/minimax-m3.1-flash`](models/minimax--minimax-m3.1-flash.md)
+
+- [`moonshotai/kimi-k3.1-pro`](models/moonshotai--kimi-k3.1-pro.md)
+
+- [`google/gemini-4-argon`](models/google--gemini-4-argon.md)
+
+- [`mistralai/mistral-large-4-0`](models/mistralai--mistral-large-4-0.md)
+
 - [`anthropic/claude-opus-5.5`](models/anthropic--claude-opus-5.5.md)
 - [`anthropic/claude-sonnet-5.5`](models/anthropic--claude-sonnet-5.5.md)
 - [`cohere/command-a-plus`](models/cohere--command-a-plus.md)

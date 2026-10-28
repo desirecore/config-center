@@ -98,6 +98,22 @@ GPT-6.1 Sol 的窗口、输出、推理档位与直连计价已再次核对。AP
 
 - 入口：[openai-deprecations](https://developers.openai.com/api/docs/deprecations.md)；本轮读取正文，Nano停止日2027-04-01，当前只deprecated。
 
+## 2026-10-28 新型号核对
+
+Terra 原厂 API 明确窗口 1050000、最大输入 922000、最大输出 128000。最大输入保存在 V2 facts.maxInputTokens，冻结 V1 契约没有新增键。原厂启用已有 responsesOnly；Codex 不声明 none 档，保留原订阅协议，不把 CLI 0.159.0 写成 DesireCore 版本门槛。长上下文倍率、缓存写入与不同服务层级记录在计价说明。
+
+### openai-terra61
+
+- 入口：[openai-terra61](https://developers.openai.com/api/docs/models/gpt-6.1-terra.md)。
+- 读取日期：2026-10-28；状态：`fetched`；最终地址：https://developers.openai.com/api/docs/models/gpt-6.1-terra.md。
+- 适用范围：OpenAI API 原厂 GPT-6.1 Terra；精确窗口、输入与输出上限、模态、Responses 工具合同和 USD Standard 计价。
+
+### openai-terra61-codex
+
+- 入口：[openai-terra61-codex](https://developers.openai.com/codex/models.md)。
+- 读取日期：2026-10-28；状态：`fetched`；最终地址：https://learn.chatgpt.com/docs/models.md。
+- 适用范围：Work/Codex 官方型号目录；仅证明订阅产品列出 Terra，不证明订阅账号、独立窗口或每个推理档位。
+
 <!-- source-metadata:start -->
 ```json
 {
@@ -274,6 +290,26 @@ GPT-6.1 Sol 的窗口、输出、推理档位与直连计价已再次核对。AP
       "checkedAt": "2026-10-05",
       "contentSha256": "2b57ea5a172afd293be49e3acb3d270c060a31ade355f04a4b7c4f45d37fae72",
       "resolvedUrl": "https://developers.openai.com/api/docs/models/gpt-oss-120b.md"
+    },
+    {
+      "id": "openai-terra61",
+      "url": "https://developers.openai.com/api/docs/models/gpt-6.1-terra.md",
+      "kind": "official-doc",
+      "scope": "OpenAI API 原厂 GPT-6.1 Terra；精确窗口、输入与输出上限、模态、Responses 工具合同和 USD Standard 计价",
+      "retrieval": "fetched",
+      "checkedAt": "2026-10-28",
+      "contentSha256": "cd34faa8904d85961ab5fe270f079b8be45a9c876af6c809b38b2c069f687a7a",
+      "resolvedUrl": "https://developers.openai.com/api/docs/models/gpt-6.1-terra.md"
+    },
+    {
+      "id": "openai-terra61-codex",
+      "url": "https://developers.openai.com/codex/models.md",
+      "kind": "official-doc",
+      "scope": "Work/Codex 官方型号目录；仅证明订阅产品列出 Terra，不证明订阅账号、独立窗口或每个推理档位",
+      "retrieval": "fetched",
+      "checkedAt": "2026-10-28",
+      "contentSha256": "87a2915f285b10cafd7e5bc8875edd640d273fe63a4ec0cd13a62866e75828fb",
+      "resolvedUrl": "https://learn.chatgpt.com/docs/models.md"
     }
   ]
 }

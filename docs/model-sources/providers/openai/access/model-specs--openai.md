@@ -17,6 +17,8 @@
 
 ## 关联模型
 
+- [`gpt-6.1-terra`](../models/gpt-6.1-terra.md)
+
 - [`gpt-6.1-sol`](../models/gpt-6.1-sol.md)
 - [`gpt-image-2.5-sunburst`](../models/gpt-image-2.5-sunburst.md)
 - [`gpt-image-2.5-flare`](../models/gpt-image-2.5-flare.md)

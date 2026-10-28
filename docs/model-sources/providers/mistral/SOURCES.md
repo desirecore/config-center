@@ -34,6 +34,22 @@
 
 状态 `partial` 仅表示列出的字段已核实；不能推断整条配置、价格、账号权限或真实模型调用都已验收。`pending` 没有已核字段；`historical` 只作历史兼容参考。路由 tier/priority、产品标签和默认选择属于本仓策略，不伪装成官网数据。
 
+## 2026-10-28 新型号核对
+
+Large 4 为 Public Preview。原厂模型页仅写 1M，精确窗口和输出上限保持 unknown，不把 OpenRouter 的 1048576/262144 复制成原厂硬上限。标准 USD/M 1.36/4.18/0.14，发布后两周五折已结束。本仓原生接入只暴露 none，以使用普通字符串响应；high 的 thinking/text chunk 数组尚未做客户端账号验收，不能凭通用 Chat Completions 名称宣布适配完成。OpenRouter 由平台正规化响应，独立记录其托管限额。
+
+### mistral-large4
+
+- 入口：[mistral-large4](https://docs.mistral.ai/models/mistral-large)。
+- 读取日期：2026-10-28；状态：`fetched`；最终地址：https://docs.mistral.ai/models/mistral-large。
+- 适用范围：Mistral Large 4 Public Preview，正式 ID/兼容 ID、文字与图像输入、函数调用和 USD 标准原价；1M 仅为简写、未取得原厂精确窗口及输出上限。
+
+### mistral-large4-reasoning
+
+- 入口：[mistral-large4-reasoning](https://docs.mistral.ai/studio/conversations/reasoning)。
+- 读取日期：2026-10-28；状态：`fetched`；最终地址：https://docs.mistral.ai/studio/conversations/reasoning。
+- 适用范围：Mistral 原生 Chat Completions none/high 行为；high 返回 thinking/text chunk 数组，当前预置暂仅 none。
+
 <!-- source-metadata:start -->
 ```json
 {
@@ -90,6 +106,26 @@
       "checkedAt": "2026-10-03",
       "contentSha256": "3248f36c4eca93679cc8507daf04d24e07aa9d51a06c10f2feec9415a62687d5",
       "resolvedUrl": "https://docs.mistral.ai/models/codestral-25-08"
+    },
+    {
+      "id": "mistral-large4",
+      "url": "https://docs.mistral.ai/models/mistral-large",
+      "kind": "official-doc",
+      "scope": "Mistral Large 4 Public Preview，正式 ID/兼容 ID、文字与图像输入、函数调用和 USD 标准原价；1M 仅为简写、未取得原厂精确窗口及输出上限",
+      "retrieval": "fetched",
+      "checkedAt": "2026-10-28",
+      "contentSha256": "b207954f3bd02b010e3439ade44607fe90932390ab8c635b9a6759d13529c2bd",
+      "resolvedUrl": "https://docs.mistral.ai/models/mistral-large"
+    },
+    {
+      "id": "mistral-large4-reasoning",
+      "url": "https://docs.mistral.ai/studio/conversations/reasoning",
+      "kind": "official-doc",
+      "scope": "Mistral 原生 Chat Completions none/high 行为；high 返回 thinking/text chunk 数组，当前预置暂仅 none",
+      "retrieval": "fetched",
+      "checkedAt": "2026-10-28",
+      "contentSha256": "88d396069aaf8f23c0f6b6bafc80f2c5e4ea72cd4efa21e766f43ccd60f20135",
+      "resolvedUrl": "https://docs.mistral.ai/studio/conversations/reasoning"
     }
   ]
 }

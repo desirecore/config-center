@@ -58,6 +58,15 @@ test('拒绝第三方、社区、伪官方仓库和带凭据的来源 URL', () =
   assert.ok(sourceUrlError('openai', 'https://developers.openai.com/docs?api_key=secret'))
 })
 
+test('订阅专属模型文档只接受对应供应商的精确官网域名', () => {
+  assert.equal(sourceUrlError('moonshot', 'https://www.kimi.com/code/docs/en/kimi-code/models'), null)
+  assert.equal(sourceUrlError('anthropic', 'https://code.claude.com/docs/en/model-config.md'), null)
+  assert.ok(sourceUrlError('moonshot', 'https://www.kimi.com.example.org/code/docs/en/'))
+  assert.ok(sourceUrlError('anthropic', 'https://code.claude.com.example.org/docs/en/'))
+  assert.ok(sourceUrlError('openai', 'https://code.claude.com/docs/en/model-config.md'))
+  assert.ok(sourceUrlError('anthropic', 'https://www.kimi.com/code/docs/en/'))
+})
+
 test('端点变化也必须复核来源，即使模型参数完全未变', () => fixture(({ root, provider, dataPath }) => {
   assert.equal(validateSources(root).errors.length, 0)
   provider.baseUrl = 'https://api.openai.com/v1'

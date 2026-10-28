@@ -17,6 +17,10 @@
 
 ## 关联模型
 
+- [`kimi-k3.1-pro-highspeed`](../models/kimi-k3.1-pro-highspeed.md)
+
+- [`kimi-k3.1-pro`](../models/kimi-k3.1-pro.md)
+
 - [`kimi-k3`](../models/kimi-k3.md)
 - [`kimi-k2.7-code`](../models/kimi-k2.7-code.md)
 - [`kimi-k2.6`](../models/kimi-k2.6.md)

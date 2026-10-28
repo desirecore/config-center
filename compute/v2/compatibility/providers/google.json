@@ -19,6 +19,41 @@
   ],
   "models": [
     {
+      "modelName": "gemini-4-argon",
+      "displayName": "Gemini 4 Argon",
+      "serviceType": [
+        "chat"
+      ],
+      "description": "Gemini 4 Argon，共享 1048576 token 窗口；单次流式输出 65536，非流式 REST 32768；百万输出需要额外 long decode 流程",
+      "contextWindow": 1048576,
+      "maxOutputTokens": 32768,
+      "capabilities": [
+        "chat",
+        "reasoning",
+        "code",
+        "vision",
+        "tool_use",
+        "long_context",
+        "video_understanding",
+        "audio_understanding"
+      ],
+      "inputPrice": 2,
+      "outputPrice": 10,
+      "extra": {
+        "reasoning": {
+          "supportedEfforts": [
+            "low",
+            "medium",
+            "high"
+          ],
+          "defaultEffort": "medium"
+        },
+        "samplingParametersDeprecated": true,
+        "cachedInputPrice": 0.1,
+        "pricingNotes": "Google Standard USD/百万 tokens：截至 2026-11-30 输入 2、输出 10、隐式缓存读 0.10；2026-12-01 起分别为 4、20、0.20。无免费层，不支持显式缓存。预置采用非流式 REST 的 32768 上限，流式单次可达 65536；未启用 long decode/Interactions 后台续传，不能把百万输出作为当前原生接入上限。"
+      }
+    },
+    {
       "modelName": "gemini-embedding-2",
       "displayName": "Gemini Embedding 2",
       "contextWindow": 8192,

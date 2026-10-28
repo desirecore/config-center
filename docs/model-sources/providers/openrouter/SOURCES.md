@@ -24,6 +24,16 @@
 
 状态 `partial` 仅表示列出的字段已核实；不能推断整条配置、价格、账号权限或真实模型调用都已验收。`pending` 没有已核字段；`historical` 只作历史兼容参考。路由 tier/priority、产品标签和默认选择属于本仓策略，不伪装成官网数据。
 
+## 2026-10-28 新型号核对
+
+只新增 gpt-6.1-terra、claude-haiku-5.5、minimax-m3.1-flash、kimi-k3.1-pro、gemini-4-argon 和 mistral-large-4-0 六个托管条目，不添加 batch 变体、Terra Pro 或本次未取得原厂精确身份证明的其他目录项。价格以 Decimal 等价十进制换算 USD/token × 1000000；不得把媒体、search 单位视为 token 费。MiniMax 平台窗口 1048576 与原厂 1000000 不同，Kimi/Argon 输出 943718 均为独立平台合同；无账号调用验收。
+
+### openrouter-20261028
+
+- 入口：[openrouter-20261028](https://openrouter.ai/api/v1/models)。
+- 读取日期：2026-10-28；状态：`fetched`；最终地址：https://openrouter.ai/api/v1/models。
+- 适用范围：仅核对本批六个新型号的 OpenRouter ID、输入模态、工具、窗口/输出和 USD/token 价格；不刷新存量条目或推断厂家退役。
+
 <!-- source-metadata:start -->
 ```json
 {
@@ -49,6 +59,16 @@
       "retrieval": "fetched",
       "checkedAt": "2026-10-05",
       "contentSha256": "e417af0907c15237d9f86fd1eb6344902b50129aa38539c14a74244b1d11a199",
+      "resolvedUrl": "https://openrouter.ai/api/v1/models"
+    },
+    {
+      "id": "openrouter-20261028",
+      "url": "https://openrouter.ai/api/v1/models",
+      "kind": "official-api",
+      "scope": "仅核对本批六个新型号的 OpenRouter ID、输入模态、工具、窗口/输出和 USD/token 价格；不刷新存量条目或推断厂家退役",
+      "retrieval": "fetched",
+      "checkedAt": "2026-10-28",
+      "contentSha256": "aa52ebd64de8f9a479134c57cf643e7285d86326196de02a93495c2c4059c02c",
       "resolvedUrl": "https://openrouter.ai/api/v1/models"
     }
   ]

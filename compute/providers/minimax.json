@@ -20,7 +20,54 @@
     "video_gen",
     "music_gen"
   ],
+  "tombstones": [
+    "MiniMax-Text-01",
+    "MiniMax-M2.1",
+    "MiniMax-M2.1-highspeed",
+    "MiniMax-M2",
+    "M2-her"
+  ],
   "models": [
+    {
+      "modelName": "MiniMax-M3.1-Flash",
+      "displayName": "MiniMax M3.1 Flash",
+      "serviceType": [
+        "chat",
+        "reasoning",
+        "vision"
+      ],
+      "description": "MiniMax M3.1 Flash 正式版，100 万上下文；强制思考，low/medium/high/xhigh/max，默认 max",
+      "contextWindow": 1000000,
+      "maxOutputTokens": 524288,
+      "capabilities": [
+        "chat",
+        "reasoning",
+        "code",
+        "vision",
+        "tool_use",
+        "long_context",
+        "video_understanding"
+      ],
+      "inputPrice": 1,
+      "outputPrice": 4,
+      "extra": {
+        "reasoning": {
+          "supportedEfforts": [
+            "low",
+            "medium",
+            "high",
+            "xhigh",
+            "max"
+          ],
+          "defaultEffort": "max"
+        },
+        "adaptiveThinking": true,
+        "thinkingOnly": true,
+        "samplingParametersDeprecated": true,
+        "cacheReadPrice": 0.1,
+        "pricingNotes": "MiniMax 国内按量 Standard，CNY/百万 tokens：输入 1.00、输出 4.00、缓存读 0.10；不使用国际站美元价，不支持 service_tier 优先级字段。"
+      }
+    },
     {
       "modelName": "MiniMax-M3",
       "displayName": "MiniMax M3",
@@ -624,12 +671,5 @@
         ]
       }
     }
-  ],
-  "tombstones": [
-    "MiniMax-Text-01",
-    "MiniMax-M2.1",
-    "MiniMax-M2.1-highspeed",
-    "MiniMax-M2",
-    "M2-her"
   ]
 }

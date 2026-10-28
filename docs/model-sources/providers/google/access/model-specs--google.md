@@ -17,6 +17,8 @@
 
 ## 关联模型
 
+- [`gemini-4-argon`](../models/gemini-4-argon.md)
+
 - [`gemini-embedding-2`](../models/gemini-embedding-2.md)
 - [`gemini-3.5-transcribe-live`](../models/gemini-3.5-transcribe-live.md)
 - [`gemini-3.5-transcribe`](../models/gemini-3.5-transcribe.md)

@@ -2,6 +2,55 @@
   "description": "Anthropic Claude 系列模型规格。参数来源：config-center compute/providers/anthropic.json。",
   "specs": [
     {
+      "displayName": "Claude Haiku 5.5",
+      "family": "claude-haiku-5-5",
+      "match": {
+        "exact": [
+          "claude-haiku-5-5",
+          "anthropic/claude-haiku-5.5"
+        ]
+      },
+      "id": "claude-haiku-5-5",
+      "spec": {
+        "contextWindow": 1000000,
+        "maxOutputTokens": 128000,
+        "capabilities": [
+          "chat",
+          "reasoning",
+          "code",
+          "vision",
+          "tool_use",
+          "long_context"
+        ],
+        "serviceType": [
+          "chat"
+        ],
+        "supportsReasoning": true,
+        "description": "Claude Haiku 5.5，低延迟模型；自适应思考，默认 medium；输入超过 100000 tokens 使用独立价阶",
+        "extra": {
+          "adaptiveThinking": true,
+          "samplingParametersDeprecated": true
+        }
+      },
+      "routing": {
+        "tier": "lightweight",
+        "routingPriority": 50,
+        "eligibleForAgent": false,
+        "defaultReference": false,
+        "reasoning": {
+          "supportedModes": [
+            "auto",
+            "low",
+            "medium",
+            "high",
+            "xhigh",
+            "max"
+          ],
+          "defaultMode": "medium"
+        }
+      }
+    },
+    {
       "displayName": "Claude Opus 5.5",
       "family": "claude-opus-5-5",
       "match": {

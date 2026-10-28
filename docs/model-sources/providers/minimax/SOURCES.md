@@ -45,6 +45,34 @@ M3.1 Flash Preview 仅在 M Plan/Code 开放，需 adaptive thinking，none/disa
 
 状态 `partial` 仅表示列出的字段已核实；不能推断整条配置、价格、账号权限或真实模型调用都已验收。`pending` 没有已核字段；`historical` 只作历史兼容参考。路由 tier/priority、产品标签和默认选择属于本仓策略，不伪装成官网数据。
 
+## 2026-10-28 新型号核对
+
+本轮补入 M3.1 Flash 正式版：原厂 1000000 窗口、524288 单次输出（131072 是推荐值），强制 adaptive thinking，low/medium/high/xhigh/max，默认 max；采样固定并忽略入参。国内价格为 CNY 1/4/0.1，不能换用国际 USD 0.15/0.60/0.015。M Plan 三档均可用，Preview 已下线且旧名转发正式版：预置改用正式 ID，旧名写入该套餐 tombstones，原规格仅作历史解析；未以新模型添加为由移除其他存量条目。
+
+### minimax-flash31-sdk
+
+- 入口：[minimax-flash31-sdk](https://platform.minimax.cn/docs/api-reference/text-anthropic-api.md)。
+- 读取日期：2026-10-28；状态：`fetched`；最终地址：https://platform.minimax.cn/docs/api-reference/text-anthropic-api.md。
+- 适用范围：国内 Anthropic 兼容接口；正式 ID、1,000,000 窗口、文本/图像/视频/工具、强制 adaptive、五档默认 max、固定采样。
+
+### minimax-flash31-messages
+
+- 入口：[minimax-flash31-messages](https://platform.minimax.cn/docs/api-reference/text-chat-anthropic.md)。
+- 读取日期：2026-10-28；状态：`fetched`；最终地址：https://platform.minimax.cn/docs/api-reference/text-chat-anthropic.md。
+- 适用范围：MiniMax-M3.1-Flash 单次 max_tokens 推荐 131072、允许上限 524288；思考计入输出预算。
+
+### minimax-flash31-pricing
+
+- 入口：[minimax-flash31-pricing](https://platform.minimax.cn/docs/pricing/overview.md)。
+- 读取日期：2026-10-28；状态：`fetched`；最终地址：https://platform.minimax.cn/docs/pricing/overview.md。
+- 适用范围：国内 CNY/百万 tokens Standard；输入 1、输出 4、缓存读取 0.1。
+
+### minimax-flash31-plan
+
+- 入口：[minimax-flash31-plan](https://platform.minimax.cn/docs/m-plan/intro.md)。
+- 读取日期：2026-10-28；状态：`fetched`；最终地址：https://platform.minimax.cn/docs/m-plan/intro.md。
+- 适用范围：M Plan 各档支持正式 M3.1 Flash；Preview 已下线且旧名转发正式版。
+
 <!-- source-metadata:start -->
 ```json
 {
@@ -121,6 +149,46 @@ M3.1 Flash Preview 仅在 M Plan/Code 开放，需 adaptive thinking，none/disa
       "checkedAt": "2026-10-03",
       "contentSha256": "cf0a461b04259a227db2ea3ca31ec62086775736afce5cb6e8d0d42c5c8b74fa",
       "resolvedUrl": "https://platform.minimax.cn/docs/api-reference/video-generation-t2v.md"
+    },
+    {
+      "id": "minimax-flash31-sdk",
+      "url": "https://platform.minimax.cn/docs/api-reference/text-anthropic-api.md",
+      "kind": "official-doc",
+      "scope": "国内 Anthropic 兼容接口；正式 ID、1,000,000 窗口、文本/图像/视频/工具、强制 adaptive、五档默认 max、固定采样",
+      "retrieval": "fetched",
+      "checkedAt": "2026-10-28",
+      "contentSha256": "40fcb7555eb76c26ac57f5ea27111fb4c669f25b32db81ecf8fa58c645ebc6d2",
+      "resolvedUrl": "https://platform.minimax.cn/docs/api-reference/text-anthropic-api.md"
+    },
+    {
+      "id": "minimax-flash31-messages",
+      "url": "https://platform.minimax.cn/docs/api-reference/text-chat-anthropic.md",
+      "kind": "official-doc",
+      "scope": "MiniMax-M3.1-Flash 单次 max_tokens 推荐 131072、允许上限 524288；思考计入输出预算",
+      "retrieval": "fetched",
+      "checkedAt": "2026-10-28",
+      "contentSha256": "14d65b5a7d61f728066ad7c33bf80f938184da5fcbe659db0234a1cf5fadbb29",
+      "resolvedUrl": "https://platform.minimax.cn/docs/api-reference/text-chat-anthropic.md"
+    },
+    {
+      "id": "minimax-flash31-pricing",
+      "url": "https://platform.minimax.cn/docs/pricing/overview.md",
+      "kind": "official-doc",
+      "scope": "国内 CNY/百万 tokens Standard；输入 1、输出 4、缓存读取 0.1",
+      "retrieval": "fetched",
+      "checkedAt": "2026-10-28",
+      "contentSha256": "4e761390e9f6e0371d59c3595efcdd0d74b91a488b93a5837126f912102a4d1d",
+      "resolvedUrl": "https://platform.minimax.cn/docs/pricing/overview.md"
+    },
+    {
+      "id": "minimax-flash31-plan",
+      "url": "https://platform.minimax.cn/docs/m-plan/intro.md",
+      "kind": "official-doc",
+      "scope": "M Plan 各档支持正式 M3.1 Flash；Preview 已下线且旧名转发正式版",
+      "retrieval": "fetched",
+      "checkedAt": "2026-10-28",
+      "contentSha256": "4cfd6c85bbbf4fa5cc5832733e7a84bd4d9beacf3cd8d28651200b3d69422d95",
+      "resolvedUrl": "https://platform.minimax.cn/docs/m-plan/intro.md"
     }
   ]
 }

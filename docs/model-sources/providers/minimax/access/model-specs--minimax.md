@@ -17,6 +17,8 @@
 
 ## 关联模型
 
+- [`MiniMax-M3.1-Flash`](../models/minimax-m3.1-flash.md)
+
 - [`MiniMax-H3-Max`](../models/minimax-h3-max.md)
 - [`MiniMax-H3`](../models/minimax-h3.md)
 - [`MiniMax-M3.1-Flash-Preview`](../models/minimax-m3.1-flash-preview.md)

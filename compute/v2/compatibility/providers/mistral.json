@@ -15,6 +15,33 @@
   ],
   "models": [
     {
+      "modelName": "mistral-large-4",
+      "displayName": "Mistral Large 4",
+      "serviceType": [
+        "chat"
+      ],
+      "description": "Mistral Large 4（Public Preview），原厂文档窗口为 1M 简写、精确整数及输出上限未取得证明；原厂高强度思考返回 chunk 数组，本接入暂使用 none",
+      "capabilities": [
+        "chat",
+        "reasoning",
+        "code",
+        "vision",
+        "tool_use",
+        "long_context"
+      ],
+      "inputPrice": 1.36,
+      "outputPrice": 4.18,
+      "extra": {
+        "reasoning": {
+          "supportedEfforts": [
+            "none"
+          ]
+        },
+        "cachedInputPrice": 0.14,
+        "pricingNotes": "USD/百万 tokens 标准原价；发布后两周五折活动已结束。原厂窗口只取得 1M 简写，精确整数与输出上限保持未知；高强度思考返回 thinking/text chunk 数组，当前直连接入暂只暴露 none，未进行账号调用验收。"
+      }
+    },
+    {
       "modelName": "mistral-medium-3-5",
       "displayName": "Mistral Medium 3.5",
       "contextWindow": 262144,

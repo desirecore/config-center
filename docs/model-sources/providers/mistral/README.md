@@ -11,6 +11,8 @@
 
 ## 模型
 
+- [`mistral-large-4`](models/mistral-large-4.md)
+
 - [`codestral-latest`](models/codestral-latest.md)
 - [`mistral-large-latest`](models/mistral-large-latest.md)
 - [`mistral-medium-3-5`](models/mistral-medium-3-5.md)

@@ -20,6 +20,18 @@
 
 ## 关联模型
 
+- [`openai/gpt-6.1-terra`](../models/openai--gpt-6.1-terra.md)
+
+- [`anthropic/claude-haiku-5.5`](../models/anthropic--claude-haiku-5.5.md)
+
+- [`minimax/minimax-m3.1-flash`](../models/minimax--minimax-m3.1-flash.md)
+
+- [`moonshotai/kimi-k3.1-pro`](../models/moonshotai--kimi-k3.1-pro.md)
+
+- [`google/gemini-4-argon`](../models/google--gemini-4-argon.md)
+
+- [`mistralai/mistral-large-4-0`](../models/mistralai--mistral-large-4-0.md)
+
 - [`cohere/command-a-plus`](../models/cohere--command-a-plus.md)
 - [`mistralai/mistral-medium-3-5`](../models/mistralai--mistral-medium-3-5.md)
 - [`google/gemini-3.8-flash`](../models/google--gemini-3.8-flash.md)

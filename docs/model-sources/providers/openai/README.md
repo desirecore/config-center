@@ -13,6 +13,8 @@
 
 ## 模型
 
+- [`gpt-6.1-terra`](models/gpt-6.1-terra.md)
+
 - [`dall-e-3`](models/dall-e-3.md)
 - [`gpt-4.1`](models/gpt-4.1.md)
 - [`gpt-4.1-mini`](models/gpt-4.1-mini.md)

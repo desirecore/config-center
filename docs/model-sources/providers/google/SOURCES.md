@@ -74,6 +74,40 @@ Embedding 2 的最大输入 8192 和推荐维度 768/1536/3072 已再次核对�
 
 状态 `partial` 仅表示列出的字段已核实；不能推断整条配置、价格、账号权限或真实模型调用都已验收。`pending` 没有已核字段；`historical` 只作历史兼容参考。路由 tier/priority、产品标签和默认选择属于本仓策略，不伪装成官网数据。
 
+## 2026-10-28 新型号核对
+
+Argon 原厂共享 1048576 窗口，GenerateContent 单次流式 65536、非流式 REST 32768。共享规格记录单次流式上限 65536，当前原生接入采用两种请求均可接受的 32768；百万输出需要额外 continuation 或 Interactions 后台执行，本次没有声明这项适配。推理 low/medium/high、默认 medium；移除采样入参，只使用隐式缓存。Standard 优惠 2/10/0.1 USD/M 至 2026-11-30；2026-12-01 起 4/20/0.2。没有把 Managed Agents/Antigravity 的可用性当本仓订阅接入证据。
+
+### google-argon
+
+- 入口：[google-argon](https://ai.google.dev/gemini-api/docs/models/gemini-4-argon)。
+- 读取日期：2026-10-28；状态：`fetched`；最终地址：https://ai.google.dev/gemini-api/docs/models/gemini-4-argon。
+- 适用范围：Gemini Developer API 精确模型页；统一 1048576 窗口、模态、函数调用及单次流式输出上限。
+
+### google-argon-thinking
+
+- 入口：[google-argon-thinking](https://ai.google.dev/gemini-api/docs/thinking)。
+- 读取日期：2026-10-28；状态：`fetched`；最终地址：https://ai.google.dev/gemini-api/docs/thinking。
+- 适用范围：Gemini 4 low/medium/high、默认 medium；不将后台长输出视为原生单次响应。
+
+### google-argon-pricing
+
+- 入口：[google-argon-pricing](https://ai.google.dev/gemini-api/docs/pricing)。
+- 读取日期：2026-10-28；状态：`fetched`；最终地址：https://ai.google.dev/gemini-api/docs/pricing。
+- 适用范围：Google Standard USD 价格；当前优惠截至 2026-11-30，2026-12-01 起恢复原价，无免费层、只支持隐式缓存。
+
+### google-argon-latest
+
+- 入口：[google-argon-latest](https://ai.google.dev/gemini-api/docs/latest-model)。
+- 读取日期：2026-10-28；状态：`fetched`；最终地址：https://ai.google.dev/gemini-api/docs/latest-model。
+- 适用范围：Gemini 4 采样参数被忽略、显式缓存不支持；生成与 Interactions 后台执行区别。
+
+### google-argon-generate-content
+
+- 入口：[google-argon-generate-content](https://ai.google.dev/gemini-api/docs/generate-content/long-decode)。
+- 读取日期：2026-10-28；状态：`fetched`；最终地址：https://ai.google.dev/gemini-api/docs/generate-content/long-decode。
+- 适用范围：GenerateContent 官方单次响应：流式 65536、非流式 REST 32768；long decode 必须额外 SDK/continuation 流程。
+
 <!-- source-metadata:start -->
 ```json
 {
@@ -210,6 +244,56 @@ Embedding 2 的最大输入 8192 和推荐维度 768/1536/3072 已再次核对�
       "checkedAt": "2026-10-03",
       "contentSha256": "e362b28bbf49e3baf48f6e8b97dd01c00456c0a23ca0f84badc5f5218eca8679",
       "resolvedUrl": "https://ai.google.dev/gemini-api/docs/models/gemini-2.5-flash"
+    },
+    {
+      "id": "google-argon",
+      "url": "https://ai.google.dev/gemini-api/docs/models/gemini-4-argon",
+      "kind": "official-doc",
+      "scope": "Gemini Developer API 精确模型页；统一 1048576 窗口、模态、函数调用及单次流式输出上限",
+      "retrieval": "fetched",
+      "checkedAt": "2026-10-28",
+      "contentSha256": "fa68a69cfa8c6753d0ac67779eba79ef31ba4c40be91219b057bfe6215fdf5ff",
+      "resolvedUrl": "https://ai.google.dev/gemini-api/docs/models/gemini-4-argon"
+    },
+    {
+      "id": "google-argon-thinking",
+      "url": "https://ai.google.dev/gemini-api/docs/thinking",
+      "kind": "official-doc",
+      "scope": "Gemini 4 low/medium/high、默认 medium；不将后台长输出视为原生单次响应",
+      "retrieval": "fetched",
+      "checkedAt": "2026-10-28",
+      "contentSha256": "ed211ddce11d78053fb7649091e3b69bb7fc107c1022df4399bef46a2435ab6d",
+      "resolvedUrl": "https://ai.google.dev/gemini-api/docs/thinking"
+    },
+    {
+      "id": "google-argon-pricing",
+      "url": "https://ai.google.dev/gemini-api/docs/pricing",
+      "kind": "official-doc",
+      "scope": "Google Standard USD 价格；当前优惠截至 2026-11-30，2026-12-01 起恢复原价，无免费层、只支持隐式缓存",
+      "retrieval": "fetched",
+      "checkedAt": "2026-10-28",
+      "contentSha256": "a61da7c818bba203efde249a8888b624ca0f6aa54d2f9563cfecc4124e0df0e5",
+      "resolvedUrl": "https://ai.google.dev/gemini-api/docs/pricing"
+    },
+    {
+      "id": "google-argon-latest",
+      "url": "https://ai.google.dev/gemini-api/docs/latest-model",
+      "kind": "official-doc",
+      "scope": "Gemini 4 采样参数被忽略、显式缓存不支持；生成与 Interactions 后台执行区别",
+      "retrieval": "fetched",
+      "checkedAt": "2026-10-28",
+      "contentSha256": "dd120181253c58ac2d355d099b9fa7360570fd56cdea66cb6d282d66773a91a5",
+      "resolvedUrl": "https://ai.google.dev/gemini-api/docs/latest-model"
+    },
+    {
+      "id": "google-argon-generate-content",
+      "url": "https://ai.google.dev/gemini-api/docs/generate-content/long-decode",
+      "kind": "official-doc",
+      "scope": "GenerateContent 官方单次响应：流式 65536、非流式 REST 32768；long decode 必须额外 SDK/continuation 流程",
+      "retrieval": "fetched",
+      "checkedAt": "2026-10-28",
+      "contentSha256": "d2813754f98f93ee1ae6932afd8650c9cf67f1cea9d9b352a0affc1f996779a6",
+      "resolvedUrl": "https://ai.google.dev/gemini-api/docs/generate-content/long-decode"
     }
   ]
 }

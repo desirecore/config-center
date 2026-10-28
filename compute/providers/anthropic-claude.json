@@ -24,7 +24,53 @@
     "chat",
     "reasoning"
   ],
+  "tombstones": [
+    "claude-opus-4-8",
+    "claude-fable-5",
+    "claude-haiku-4-5",
+    "claude-haiku-4-5-20251001"
+  ],
   "models": [
+    {
+      "modelName": "claude-haiku-5-5",
+      "displayName": "Claude Haiku 5.5",
+      "serviceType": [
+        "chat"
+      ],
+      "description": "Claude Haiku 5.5，Claude Code 订阅入口；自适应思考默认 medium，实际可用性与额度取决于账户",
+      "contextWindow": 1000000,
+      "maxOutputTokens": 128000,
+      "capabilities": [
+        "chat",
+        "reasoning",
+        "code",
+        "vision",
+        "tool_use",
+        "long_context"
+      ],
+      "extra": {
+        "adaptiveThinking": true,
+        "reasoning": {
+          "supportedEfforts": [
+            "low",
+            "medium",
+            "high",
+            "xhigh",
+            "max"
+          ],
+          "defaultEffort": "medium"
+        },
+        "samplingParametersDeprecated": true,
+        "thinkingRoundTrip": {
+          "enabled": true,
+          "protocol": "anthropic-messages",
+          "allowEmptySignature": false,
+          "scope": "active-tool-turn"
+        },
+        "thinkingToolTurnValidation": "accepts-thinkless"
+      },
+      "source": "preset"
+    },
     {
       "modelName": "claude-opus-5-5",
       "displayName": "Claude Opus 5.5",
@@ -229,11 +275,5 @@
       },
       "source": "preset"
     }
-  ],
-  "tombstones": [
-    "claude-opus-4-8",
-    "claude-fable-5",
-    "claude-haiku-4-5",
-    "claude-haiku-4-5-20251001"
   ]
 }

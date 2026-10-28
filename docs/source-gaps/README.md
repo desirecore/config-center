@@ -7,32 +7,32 @@
 - 未登记官方入口：**0 条**。
 - 未取得可读官网证据：**86 条**。
 - 入口有读取记录，但本条模型无字段证明：**185 条**。
-- 仅确认 ID，参数来源未登记：**211 条**。
-- 已有部分参数证明，仍需区分未证明字段：**139 条**。
+- 仅确认 ID，参数来源未登记：**212 条**。
+- 已有部分参数证明，仍需区分未证明字段：**162 条**。
 - 历史身份/参数不证明当前可用性：**1 条**。
 
-总计 622 条：前四类需要补证；partial 类逐条列出已有数据中尚未登记证明的关键字段，不能全部当作数据已核；historical 另列。
+总计 646 条：前四类需要补证；partial 类逐条列出已有数据中尚未登记证明的关键字段，不能全部当作数据已核；historical 另列。
 
 | 供应商清单 | 未登记入口 | 入口不可读 | 无字段证明 | 仅 ID | 参数部分已核 | 历史 |
 | --- | --- | --- | --- | --- | --- | --- |
 | [alibaba](providers/alibaba.md) | 0 | 0 | 15 | 98 | 7 | 0 |
-| [anthropic](providers/anthropic.md) | 0 | 0 | 6 | 3 | 12 | 0 |
+| [anthropic](providers/anthropic.md) | 0 | 0 | 6 | 3 | 15 | 0 |
 | [baichuan](providers/baichuan.md) | 0 | 8 | 0 | 0 | 0 | 0 |
 | [baidu](providers/baidu.md) | 0 | 0 | 5 | 13 | 2 | 0 |
 | [cohere](providers/cohere.md) | 0 | 0 | 0 | 9 | 8 | 0 |
 | [deepseek](providers/deepseek.md) | 0 | 0 | 3 | 5 | 4 | 0 |
 | [github-copilot](providers/github-copilot.md) | 0 | 0 | 0 | 0 | 0 | 0 |
-| [google](providers/google.md) | 0 | 0 | 2 | 8 | 20 | 0 |
+| [google](providers/google.md) | 0 | 0 | 2 | 8 | 22 | 0 |
 | [infini](providers/infini.md) | 0 | 1 | 0 | 0 | 0 | 0 |
 | [kling](providers/kling.md) | 0 | 11 | 0 | 0 | 0 | 0 |
 | [kwai](providers/kwai.md) | 0 | 0 | 1 | 0 | 0 | 0 |
-| [minimax](providers/minimax.md) | 0 | 0 | 11 | 34 | 18 | 0 |
-| [mistral](providers/mistral.md) | 0 | 0 | 4 | 0 | 5 | 0 |
-| [moonshot](providers/moonshot.md) | 0 | 0 | 14 | 0 | 7 | 0 |
+| [minimax](providers/minimax.md) | 0 | 0 | 11 | 34 | 20 | 0 |
+| [mistral](providers/mistral.md) | 0 | 0 | 4 | 0 | 7 | 0 |
+| [moonshot](providers/moonshot.md) | 0 | 0 | 14 | 0 | 13 | 0 |
 | [moorethread](providers/moorethread.md) | 0 | 1 | 0 | 0 | 0 | 0 |
 | [ollama](providers/ollama.md) | 0 | 0 | 1 | 0 | 0 | 0 |
-| [openai](providers/openai.md) | 0 | 0 | 71 | 10 | 17 | 0 |
-| [openrouter](providers/openrouter.md) | 0 | 0 | 0 | 0 | 15 | 0 |
+| [openai](providers/openai.md) | 0 | 0 | 71 | 11 | 19 | 0 |
+| [openrouter](providers/openrouter.md) | 0 | 0 | 0 | 0 | 21 | 0 |
 | [perplexity](providers/perplexity.md) | 0 | 0 | 4 | 2 | 0 | 0 |
 | [siliconflow](providers/siliconflow.md) | 0 | 0 | 3 | 0 | 0 | 0 |
 | [stability](providers/stability.md) | 0 | 0 | 3 | 0 | 0 | 0 |

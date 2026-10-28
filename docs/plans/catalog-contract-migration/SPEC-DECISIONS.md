@@ -2,6 +2,8 @@
 
 本文件记录P0/P3逐项处置，机器清单为 [SPEC-DECISIONS.json](SPEC-DECISIONS.json)。未知值保留unknown并禁止family扩权，不把分类完成称作官网事实全部完成。
 
+2026-10-28 批次 134 增加 7 个精确型号及 18 条接入，MiniMax 套餐的旧 Preview 预置移除并 tombstone、旧规格仅作历史解析；当前 293 条规格、353 条接入。以下原有绑定例外、差异和机器清单仍记录原迁移范围，不因新增型号而回写历史计数或提高核验等级。新增型号均使用显式精确绑定；Kimi Code 的短 ID 不添加全局规格别名，未知订阅输出保持 null；Mistral 原厂未取得明文整数的窗口和输出保持 unknown；OpenRouter 的独立限额以本批官方目录为依据。详见 [来源目录](../../model-sources/README.md)。
+
 - 340条接入重新用正式tag真实匹配器核对；当前14 none、5 family、41条数值差异（2026-10-18 MiniMax-M3 直连/套餐两条按官网上限消除，原为43条）。同日 MiniMax 直连移除官网已下线的 M2.1、M2.1-highspeed、M2、M2-her 并写入 tombstones，当前接入记录为336条；M2.x 七个规格输出上限按官网更正为204800，百炼两套餐 MiniMax-M2.5 的8192覆盖仍属未核差异，差异条数不变。
 - Nano和Pro独立精确规格；删除基础GPT-5.4宽泛pattern，实时三型号补官方窗口/输出。
 - Coding Plan官方正文确认qwen3-coder-plus/next ID，仅加identity-only精确规格，无参数/路由授权。

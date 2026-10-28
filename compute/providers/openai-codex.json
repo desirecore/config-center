@@ -23,7 +23,43 @@
     "chat",
     "reasoning"
   ],
+  "tombstones": [
+    "gpt-5.3-codex",
+    "gpt-5.2-codex",
+    "gpt-5.1-codex-mini"
+  ],
   "models": [
+    {
+      "modelName": "gpt-6.1-terra",
+      "displayName": "GPT-6.1 Terra",
+      "serviceType": [
+        "chat"
+      ],
+      "description": "GPT-6.1 Terra，ChatGPT/Codex 订阅模型；实际可用性与额度以账户为准，未执行订阅账号调用验收",
+      "contextWindow": 1050000,
+      "maxOutputTokens": 128000,
+      "capabilities": [
+        "chat",
+        "reasoning",
+        "code",
+        "vision",
+        "tool_use",
+        "long_context"
+      ],
+      "extra": {
+        "reasoning": {
+          "supportedEfforts": [
+            "low",
+            "medium",
+            "high",
+            "xhigh",
+            "max"
+          ],
+          "defaultEffort": "medium"
+        }
+      },
+      "source": "preset"
+    },
     {
       "modelName": "gpt-6.1-sol",
       "displayName": "GPT-6.1 Sol",
@@ -204,7 +240,13 @@
       ],
       "extra": {
         "reasoning": {
-          "supportedEfforts": ["low", "medium", "high", "xhigh", "max"],
+          "supportedEfforts": [
+            "low",
+            "medium",
+            "high",
+            "xhigh",
+            "max"
+          ],
           "defaultEffort": "low"
         }
       },
@@ -230,7 +272,13 @@
       ],
       "extra": {
         "reasoning": {
-          "supportedEfforts": ["low", "medium", "high", "xhigh", "max"],
+          "supportedEfforts": [
+            "low",
+            "medium",
+            "high",
+            "xhigh",
+            "max"
+          ],
           "defaultEffort": "medium"
         }
       },
@@ -256,7 +304,13 @@
       ],
       "extra": {
         "reasoning": {
-          "supportedEfforts": ["low", "medium", "high", "xhigh", "max"],
+          "supportedEfforts": [
+            "low",
+            "medium",
+            "high",
+            "xhigh",
+            "max"
+          ],
           "defaultEffort": "medium"
         }
       },
@@ -338,10 +392,5 @@
       ],
       "source": "preset"
     }
-  ],
-  "tombstones": [
-    "gpt-5.3-codex",
-    "gpt-5.2-codex",
-    "gpt-5.1-codex-mini"
   ]
 }

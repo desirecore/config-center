@@ -23,7 +23,48 @@
     "simultaneous_interpret",
     "translation"
   ],
+  "tombstones": [
+    "dall-e-3",
+    "gpt-4o-realtime",
+    "gpt-4o-realtime-preview"
+  ],
   "models": [
+    {
+      "modelName": "gpt-6.1-terra",
+      "displayName": "GPT-6.1 Terra",
+      "serviceType": [
+        "chat"
+      ],
+      "description": "GPT-6.1 Terra，视觉推理、电脑操作与写作；工具调用使用 Responses API，支持关闭推理",
+      "contextWindow": 1050000,
+      "maxOutputTokens": 128000,
+      "capabilities": [
+        "chat",
+        "reasoning",
+        "code",
+        "vision",
+        "tool_use",
+        "long_context"
+      ],
+      "inputPrice": 1,
+      "outputPrice": 5,
+      "extra": {
+        "responsesOnly": true,
+        "reasoning": {
+          "supportedEfforts": [
+            "none",
+            "low",
+            "medium",
+            "high",
+            "xhigh",
+            "max"
+          ],
+          "defaultEffort": "medium"
+        },
+        "cachedInputPrice": 0.05,
+        "pricingNotes": "USD/百万 tokens，Standard：输入 1、缓存读取 0.05、输出 5；30 分钟缓存写入 1.25，12 小时写入 2.50。输入超过 272000 tokens 时整次请求输入与缓存费率 2 倍、输出 1.5 倍；Batch/Flex、Fast 及地域费率另计。"
+      }
+    },
     {
       "modelName": "gpt-6.1-sol",
       "displayName": "GPT-6.1 Sol",
@@ -50,12 +91,18 @@
           "enabled": true,
           "dialect": "openai-responses",
           "fallbackPriority": 2,
-          "searchRequestPriceUsd": 0.01,
-          "toolType": "web_search"
+          "toolType": "web_search",
+          "searchRequestPriceUsd": 0.01
         },
         "cachedInputPrice": 0.1,
         "reasoning": {
-          "supportedEfforts": ["low", "medium", "high", "xhigh", "max"],
+          "supportedEfforts": [
+            "low",
+            "medium",
+            "high",
+            "xhigh",
+            "max"
+          ],
           "defaultEffort": "medium"
         },
         "pricingNotes": "Prices are per 1M tokens. Cache writes $2.50/M. Above 272K input tokens, input and cache rates are 2x and output rates are 1.5x for the full request. Fast mode is 2x; Batch and Flex are 50% lower. Tool calling requires Responses API; none/minimal reasoning are unsupported.",
@@ -134,8 +181,8 @@
           "enabled": true,
           "dialect": "openai-responses",
           "fallbackPriority": 2,
-          "searchRequestPriceUsd": 0.01,
-          "toolType": "web_search"
+          "toolType": "web_search",
+          "searchRequestPriceUsd": 0.01
         },
         "cachedInputPrice": 0.2,
         "reasoning": {
@@ -179,8 +226,8 @@
           "enabled": true,
           "dialect": "openai-responses",
           "fallbackPriority": 3,
-          "searchRequestPriceUsd": 0.01,
-          "toolType": "web_search"
+          "toolType": "web_search",
+          "searchRequestPriceUsd": 0.01
         },
         "cachedInputPrice": 0.01,
         "reasoning": {
@@ -223,12 +270,18 @@
           "enabled": true,
           "dialect": "openai-responses",
           "fallbackPriority": 1,
-          "searchRequestPriceUsd": 0.01,
-          "toolType": "web_search"
+          "toolType": "web_search",
+          "searchRequestPriceUsd": 0.01
         },
         "cachedInputPrice": 1,
         "reasoning": {
-          "supportedEfforts": ["low", "medium", "high", "xhigh", "max"],
+          "supportedEfforts": [
+            "low",
+            "medium",
+            "high",
+            "xhigh",
+            "max"
+          ],
           "defaultEffort": "medium"
         },
         "pricingNotes": "Prices are per 1M tokens. Cache writes cost $12.50. Above 272K input tokens, input and cache rates are 2x and output rates are 1.5x for the full request."
@@ -260,8 +313,8 @@
           "enabled": true,
           "dialect": "openai-responses",
           "fallbackPriority": 1,
-          "searchRequestPriceUsd": 0.01,
-          "toolType": "web_search"
+          "toolType": "web_search",
+          "searchRequestPriceUsd": 0.01
         },
         "cachedInputPrice": 0.5,
         "pricingNotes": "Prices are per 1M tokens; long-context requests may use higher-tier pricing per OpenAI pricing page.",
@@ -302,8 +355,8 @@
           "enabled": true,
           "dialect": "openai-responses",
           "fallbackPriority": 2,
-          "searchRequestPriceUsd": 0.01,
-          "toolType": "web_search"
+          "toolType": "web_search",
+          "searchRequestPriceUsd": 0.01
         },
         "responsesOnly": true,
         "pricingNotes": "No cached-input discount is listed for GPT-5.5 Pro on the official pricing page.",
@@ -342,8 +395,8 @@
           "enabled": true,
           "dialect": "openai-responses",
           "fallbackPriority": 3,
-          "searchRequestPriceUsd": 0.01,
-          "toolType": "web_search"
+          "toolType": "web_search",
+          "searchRequestPriceUsd": 0.01
         },
         "cachedInputPrice": 0.25,
         "pricingNotes": "Prices are per 1M tokens; long-context requests may use higher-tier pricing per OpenAI pricing page.",
@@ -382,8 +435,8 @@
           "enabled": true,
           "dialect": "openai-responses",
           "fallbackPriority": 4,
-          "searchRequestPriceUsd": 0.01,
-          "toolType": "web_search"
+          "toolType": "web_search",
+          "searchRequestPriceUsd": 0.01
         },
         "responsesOnly": true,
         "reasoning": {
@@ -423,8 +476,8 @@
           "enabled": true,
           "dialect": "openai-responses",
           "fallbackPriority": 5,
-          "searchRequestPriceUsd": 0.01,
-          "toolType": "web_search"
+          "toolType": "web_search",
+          "searchRequestPriceUsd": 0.01
         },
         "cachedInputPrice": 0.075,
         "reasoning": {
@@ -463,8 +516,8 @@
           "enabled": true,
           "dialect": "openai-responses",
           "fallbackPriority": 6,
-          "searchRequestPriceUsd": 0.01,
-          "toolType": "web_search"
+          "toolType": "web_search",
+          "searchRequestPriceUsd": 0.01
         },
         "cachedInputPrice": 0.02,
         "reasoning": {
@@ -669,8 +722,8 @@
           "enabled": true,
           "dialect": "openai-responses",
           "fallbackPriority": 7,
-          "searchRequestPriceUsd": 0.01,
-          "toolType": "web_search"
+          "toolType": "web_search",
+          "searchRequestPriceUsd": 0.01
         }
       }
     },
@@ -760,8 +813,8 @@
           "enabled": true,
           "dialect": "openai-responses",
           "fallbackPriority": 8,
-          "searchRequestPriceUsd": 0.01,
-          "toolType": "web_search"
+          "toolType": "web_search",
+          "searchRequestPriceUsd": 0.01
         }
       }
     },
@@ -790,8 +843,8 @@
           "enabled": true,
           "dialect": "openai-responses",
           "fallbackPriority": 9,
-          "searchRequestPriceUsd": 0.01,
-          "toolType": "web_search"
+          "toolType": "web_search",
+          "searchRequestPriceUsd": 0.01
         }
       }
     },
@@ -1054,15 +1107,10 @@
           "enabled": true,
           "dialect": "openai-responses",
           "fallbackPriority": 10,
-          "searchRequestPriceUsd": 0.01,
-          "toolType": "web_search"
+          "toolType": "web_search",
+          "searchRequestPriceUsd": 0.01
         }
       }
     }
-  ],
-  "tombstones": [
-    "dall-e-3",
-    "gpt-4o-realtime",
-    "gpt-4o-realtime-preview"
   ]
 }
