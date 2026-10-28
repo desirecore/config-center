@@ -12,6 +12,14 @@
 
 ## 模型
 
+- [`k3.1-pro`](models/k3.1-pro.md)
+
+- [`k3.1-pro-highspeed`](models/k3.1-pro-highspeed.md)
+
+- [`kimi-k3.1-pro-highspeed`](models/kimi-k3.1-pro-highspeed.md)
+
+- [`kimi-k3.1-pro`](models/kimi-k3.1-pro.md)
+
 - [`kimi-for-coding`](models/kimi-for-coding.md)
 - [`kimi-k2`](models/kimi-k2.md)
 - [`kimi-k2-thinking`](models/kimi-k2-thinking.md)

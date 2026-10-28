@@ -2,6 +2,59 @@
   "description": "MiniMax 系列模型规格。参数来源：config-center compute/providers/minimax.json。id 保留上游 model_name 原始写法（含大小写与点号），匹配时由匹配器归一化处理。",
   "specs": [
     {
+      "displayName": "MiniMax M3.1 Flash",
+      "family": "minimax-m3.1-flash",
+      "match": {
+        "exact": [
+          "MiniMax-M3.1-Flash",
+          "minimax/minimax-m3.1-flash"
+        ]
+      },
+      "id": "MiniMax-M3.1-Flash",
+      "spec": {
+        "contextWindow": 1000000,
+        "maxOutputTokens": 524288,
+        "capabilities": [
+          "chat",
+          "reasoning",
+          "code",
+          "vision",
+          "tool_use",
+          "long_context",
+          "video_understanding"
+        ],
+        "serviceType": [
+          "chat",
+          "reasoning",
+          "vision"
+        ],
+        "supportsReasoning": true,
+        "description": "MiniMax M3.1 Flash 正式版，100 万上下文；强制思考，low/medium/high/xhigh/max，默认 max",
+        "extra": {
+          "adaptiveThinking": true,
+          "thinkingOnly": true,
+          "samplingParametersDeprecated": true
+        }
+      },
+      "routing": {
+        "tier": "balanced",
+        "routingPriority": 50,
+        "eligibleForAgent": false,
+        "defaultReference": false,
+        "reasoning": {
+          "supportedModes": [
+            "auto",
+            "low",
+            "medium",
+            "high",
+            "xhigh",
+            "max"
+          ],
+          "defaultMode": "max"
+        }
+      }
+    },
+    {
       "displayName": "MiniMax H3 Max",
       "family": "MiniMax-H3-Max",
       "match": {

@@ -2,6 +2,47 @@
   "description": "Mistral 系列模型规格。参数来源：config-center compute/providers/mistral.json。",
   "specs": [
     {
+      "displayName": "Mistral Large 4",
+      "family": "mistral-large-4",
+      "match": {
+        "exact": [
+          "mistral-large-4",
+          "mistral-large-4-0",
+          "mistralai/mistral-large-4-0"
+        ]
+      },
+      "id": "mistral-large-4",
+      "spec": {
+        "capabilities": [
+          "chat",
+          "reasoning",
+          "code",
+          "vision",
+          "tool_use",
+          "long_context"
+        ],
+        "serviceType": [
+          "chat"
+        ],
+        "supportsReasoning": true,
+        "description": "Mistral Large 4（Public Preview），原厂文档窗口为 1M 简写、精确整数及输出上限未取得证明；原厂高强度思考返回 chunk 数组，本接入暂使用 none"
+      },
+      "routing": {
+        "tier": "flagship",
+        "routingPriority": 50,
+        "eligibleForAgent": false,
+        "defaultReference": false,
+        "reasoning": {
+          "supportedModes": [
+            "auto",
+            "off",
+            "high"
+          ],
+          "defaultMode": "off"
+        }
+      }
+    },
+    {
       "displayName": "Mistral Medium 3.5",
       "family": "mistral-medium-3-5",
       "match": {

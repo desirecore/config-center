@@ -12,6 +12,8 @@
 
 ## 模型
 
+- [`MiniMax-M3.1-Flash`](models/minimax-m3.1-flash.md)
+
 - [`M2-her`](models/m2-her.md)
 - [`MiniMax-H3`](models/minimax-h3.md)
 - [`MiniMax-H3-Max`](models/minimax-h3-max.md)

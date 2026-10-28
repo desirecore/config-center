@@ -7,12 +7,12 @@ import { createHash } from 'node:crypto'
 const ROOT = resolve(dirname(fileURLToPath(import.meta.url)), '..')
 export const OFFICIAL_HOSTS = {
   openai: ['developers.openai.com', 'platform.openai.com', 'learn.chatgpt.com', 'github.com'],
-  anthropic: ['platform.claude.com', 'docs.claude.com', 'anthropic.com', 'www.anthropic.com'],
+  anthropic: ['platform.claude.com', 'docs.claude.com', 'code.claude.com', 'anthropic.com', 'www.anthropic.com'],
   'github-copilot': ['docs.github.com', 'github.com'],
   deepseek: ['api-docs.deepseek.com'],
   alibaba: ['help.aliyun.com', 'www.alibabacloud.com'],
   volcengine: ['docs.volcengine.com', 'www.volcengine.com'],
-  moonshot: ['platform.kimi.com', 'platform.kimi.ai', 'platform.moonshot.cn', 'platform.moonshot.ai'],
+  moonshot: ['platform.kimi.com', 'platform.kimi.ai', 'www.kimi.com', 'platform.moonshot.cn', 'platform.moonshot.ai'],
   zhipu: ['docs.bigmodel.cn', 'open.bigmodel.cn', 'docs.z.ai'],
   baichuan: ['www.baichuan-ai.com', 'platform.baichuan-ai.com'],
   minimax: ['platform.minimax.cn', 'platform.minimaxi.com', 'platform.minimax.io'],

@@ -20,6 +20,10 @@
 
 ## 关联模型
 
+- [`k3.1-pro`](../models/k3.1-pro.md)
+
+- [`k3.1-pro-highspeed`](../models/k3.1-pro-highspeed.md)
+
 - [`kimi-for-coding`](../models/kimi-for-coding.md)
 
 ## 更新前检查

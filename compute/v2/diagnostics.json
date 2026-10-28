@@ -1,9 +1,9 @@
 {
-  "specs": 286,
+  "specs": 293,
   "accesses": 40,
-  "models": 336,
+  "models": 353,
   "bindings": {
-    "exact": 300,
+    "exact": 317,
     "access-local": 28,
     "dynamic": 8
   },
@@ -741,6 +741,15 @@
       "reason": "preserved-access-contract",
       "evidence": "compute/providers/deepseek.json#deepseek-v4-pro",
       "verification": "inherited-not-reverified"
+    },
+    {
+      "accessId": "provider-google-001",
+      "apiModelId": "gemini-4-argon",
+      "field": "maxOutputTokens",
+      "value": 32768,
+      "reason": "safe-common-limit-for-generateContent-without-continuation",
+      "evidence": "https://ai.google.dev/gemini-api/docs/generate-content/long-decode",
+      "verification": "officially-verified-access-contract"
     },
     {
       "accessId": "provider-google-001",
@@ -2247,6 +2256,51 @@
       "reason": "preserved-access-contract",
       "evidence": "compute/providers/openai.json#o4-mini",
       "verification": "inherited-not-reverified"
+    },
+    {
+      "accessId": "provider-openrouter-001",
+      "apiModelId": "mistralai/mistral-large-4-0",
+      "field": "contextWindow",
+      "value": 1048576,
+      "reason": "independent-openrouter-hosted-contract",
+      "evidence": "https://openrouter.ai/api/v1/models",
+      "verification": "officially-verified-access-contract"
+    },
+    {
+      "accessId": "provider-openrouter-001",
+      "apiModelId": "mistralai/mistral-large-4-0",
+      "field": "maxOutputTokens",
+      "value": 262144,
+      "reason": "independent-openrouter-hosted-contract",
+      "evidence": "https://openrouter.ai/api/v1/models",
+      "verification": "officially-verified-access-contract"
+    },
+    {
+      "accessId": "provider-openrouter-001",
+      "apiModelId": "google/gemini-4-argon",
+      "field": "maxOutputTokens",
+      "value": 943718,
+      "reason": "independent-openrouter-hosted-contract",
+      "evidence": "https://openrouter.ai/api/v1/models",
+      "verification": "officially-verified-access-contract"
+    },
+    {
+      "accessId": "provider-openrouter-001",
+      "apiModelId": "moonshotai/kimi-k3.1-pro",
+      "field": "maxOutputTokens",
+      "value": 943718,
+      "reason": "independent-openrouter-hosted-contract",
+      "evidence": "https://openrouter.ai/api/v1/models",
+      "verification": "officially-verified-access-contract"
+    },
+    {
+      "accessId": "provider-openrouter-001",
+      "apiModelId": "minimax/minimax-m3.1-flash",
+      "field": "contextWindow",
+      "value": 1048576,
+      "reason": "independent-openrouter-hosted-contract",
+      "evidence": "https://openrouter.ai/api/v1/models",
+      "verification": "officially-verified-access-contract"
     },
     {
       "accessId": "provider-openrouter-001",
@@ -4667,6 +4721,40 @@
       "reason": "preserved-access-contract",
       "evidence": "compute/coding-plans/minimax-coding.json#music-2.6",
       "verification": "inherited-not-reverified"
+    },
+    {
+      "accessId": "provider-moonshot-coding-001",
+      "apiModelId": "k3.1-pro-highspeed",
+      "field": "contextWindow",
+      "value": 1048576,
+      "reason": "documented-subscription-tier-cap",
+      "evidence": "https://www.kimi.com/code/docs/en/kimi-code/models",
+      "verification": "officially-verified-access-contract"
+    },
+    {
+      "accessId": "provider-moonshot-coding-001",
+      "apiModelId": "k3.1-pro-highspeed",
+      "field": "maxOutputTokens",
+      "value": null,
+      "reason": "subscription-output-limit-not-documented",
+      "evidence": "https://www.kimi.com/code/docs/en/kimi-code/models"
+    },
+    {
+      "accessId": "provider-moonshot-coding-001",
+      "apiModelId": "k3.1-pro",
+      "field": "contextWindow",
+      "value": 262144,
+      "reason": "documented-subscription-tier-cap",
+      "evidence": "https://www.kimi.com/code/docs/en/kimi-code/models",
+      "verification": "officially-verified-access-contract"
+    },
+    {
+      "accessId": "provider-moonshot-coding-001",
+      "apiModelId": "k3.1-pro",
+      "field": "maxOutputTokens",
+      "value": null,
+      "reason": "subscription-output-limit-not-documented",
+      "evidence": "https://www.kimi.com/code/docs/en/kimi-code/models"
     },
     {
       "accessId": "provider-moonshot-coding-001",

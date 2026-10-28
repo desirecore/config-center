@@ -6,6 +6,92 @@
   },
   "specs": [
     {
+      "modelRef": "anthropic:claude-haiku-5-5",
+      "identity": {
+        "vendor": "anthropic",
+        "canonicalModelId": "claude-haiku-5-5"
+      },
+      "facts": {
+        "contextWindow": 1000000,
+        "maxOutputTokens": 128000,
+        "capabilities": [
+          "chat",
+          "reasoning",
+          "code",
+          "vision",
+          "tool_use",
+          "long_context"
+        ],
+        "serviceType": [
+          "chat"
+        ],
+        "supportsReasoning": true,
+        "description": "Claude Haiku 5.5，低延迟模型；自适应思考，默认 medium；输入超过 100000 tokens 使用独立价阶",
+        "constraints": {
+          "samplingParametersDeprecated": true
+        }
+      },
+      "routing": {
+        "tier": "lightweight",
+        "routingPriority": 50,
+        "eligibleForAgent": false,
+        "defaultReference": false,
+        "reasoning": {
+          "supportedModes": [
+            "auto",
+            "low",
+            "medium",
+            "high",
+            "xhigh",
+            "max"
+          ],
+          "defaultMode": "medium"
+        }
+      },
+      "lifecycle": {
+        "status": "active"
+      },
+      "metadata": {
+        "recordedExtra": {},
+        "projection": {
+          "specKeys": [
+            "contextWindow",
+            "maxOutputTokens",
+            "capabilities",
+            "serviceType",
+            "supportsReasoning",
+            "description",
+            "extra"
+          ],
+          "extraKeys": [
+            "adaptiveThinking",
+            "samplingParametersDeprecated"
+          ]
+        },
+        "sourceFile": "compute/model-specs/anthropic.json",
+        "legacyIdentity": {
+          "displayName": "Claude Haiku 5.5",
+          "family": "claude-haiku-5-5",
+          "match": {
+            "exact": [
+              "claude-haiku-5-5",
+              "anthropic/claude-haiku-5.5"
+            ]
+          }
+        }
+      },
+      "protocolProfiles": [
+        {
+          "apiFormats": [
+            "anthropic-messages"
+          ],
+          "request": {
+            "adaptiveThinking": true
+          }
+        }
+      ]
+    },
+    {
       "modelRef": "anthropic:claude-opus-5-5",
       "identity": {
         "vendor": "anthropic",
@@ -2401,6 +2487,81 @@
       }
     },
     {
+      "modelRef": "google:gemini-4-argon",
+      "identity": {
+        "vendor": "google",
+        "canonicalModelId": "gemini-4-argon"
+      },
+      "facts": {
+        "contextWindow": 1048576,
+        "maxOutputTokens": 65536,
+        "capabilities": [
+          "chat",
+          "reasoning",
+          "code",
+          "vision",
+          "tool_use",
+          "long_context",
+          "video_understanding",
+          "audio_understanding"
+        ],
+        "serviceType": [
+          "chat"
+        ],
+        "supportsReasoning": true,
+        "description": "Gemini 4 Argon，共享 1048576 token 窗口；单次流式输出 65536，非流式 REST 32768；百万输出需要额外 long decode 流程",
+        "constraints": {
+          "samplingParametersDeprecated": true
+        }
+      },
+      "routing": {
+        "tier": "flagship",
+        "routingPriority": 50,
+        "eligibleForAgent": false,
+        "defaultReference": false,
+        "reasoning": {
+          "supportedModes": [
+            "auto",
+            "low",
+            "medium",
+            "high"
+          ],
+          "defaultMode": "medium"
+        }
+      },
+      "lifecycle": {
+        "status": "active"
+      },
+      "metadata": {
+        "recordedExtra": {},
+        "projection": {
+          "specKeys": [
+            "contextWindow",
+            "maxOutputTokens",
+            "capabilities",
+            "serviceType",
+            "supportsReasoning",
+            "description",
+            "extra"
+          ],
+          "extraKeys": [
+            "samplingParametersDeprecated"
+          ]
+        },
+        "sourceFile": "compute/model-specs/google.json",
+        "legacyIdentity": {
+          "displayName": "Gemini 4 Argon",
+          "family": "gemini-4-argon",
+          "match": {
+            "exact": [
+              "gemini-4-argon",
+              "google/gemini-4-argon"
+            ]
+          }
+        }
+      }
+    },
+    {
       "modelRef": "google:gemini-embedding-2",
       "identity": {
         "vendor": "google",
@@ -3961,6 +4122,97 @@
       }
     },
     {
+      "modelRef": "minimax:MiniMax-M3.1-Flash",
+      "identity": {
+        "vendor": "minimax",
+        "canonicalModelId": "MiniMax-M3.1-Flash"
+      },
+      "facts": {
+        "contextWindow": 1000000,
+        "maxOutputTokens": 524288,
+        "capabilities": [
+          "chat",
+          "reasoning",
+          "code",
+          "vision",
+          "tool_use",
+          "long_context",
+          "video_understanding"
+        ],
+        "serviceType": [
+          "chat",
+          "reasoning",
+          "vision"
+        ],
+        "supportsReasoning": true,
+        "description": "MiniMax M3.1 Flash 正式版，100 万上下文；强制思考，low/medium/high/xhigh/max，默认 max",
+        "constraints": {
+          "thinkingOnly": true,
+          "samplingParametersDeprecated": true
+        }
+      },
+      "routing": {
+        "tier": "balanced",
+        "routingPriority": 50,
+        "eligibleForAgent": false,
+        "defaultReference": false,
+        "reasoning": {
+          "supportedModes": [
+            "auto",
+            "low",
+            "medium",
+            "high",
+            "xhigh",
+            "max"
+          ],
+          "defaultMode": "max"
+        }
+      },
+      "lifecycle": {
+        "status": "active"
+      },
+      "metadata": {
+        "recordedExtra": {},
+        "projection": {
+          "specKeys": [
+            "contextWindow",
+            "maxOutputTokens",
+            "capabilities",
+            "serviceType",
+            "supportsReasoning",
+            "description",
+            "extra"
+          ],
+          "extraKeys": [
+            "adaptiveThinking",
+            "thinkingOnly",
+            "samplingParametersDeprecated"
+          ]
+        },
+        "sourceFile": "compute/model-specs/minimax.json",
+        "legacyIdentity": {
+          "displayName": "MiniMax M3.1 Flash",
+          "family": "minimax-m3.1-flash",
+          "match": {
+            "exact": [
+              "MiniMax-M3.1-Flash",
+              "minimax/minimax-m3.1-flash"
+            ]
+          }
+        }
+      },
+      "protocolProfiles": [
+        {
+          "apiFormats": [
+            "anthropic-messages"
+          ],
+          "request": {
+            "adaptiveThinking": true
+          }
+        }
+      ]
+    },
+    {
       "modelRef": "minimax:MiniMax-H3-Max",
       "identity": {
         "vendor": "minimax",
@@ -4085,7 +4337,7 @@
       },
       "routing": {},
       "lifecycle": {
-        "status": "unknown"
+        "status": "historical"
       },
       "metadata": {
         "recordedExtra": {},
@@ -5419,6 +5671,69 @@
       }
     },
     {
+      "modelRef": "mistral:mistral-large-4",
+      "identity": {
+        "vendor": "mistral",
+        "canonicalModelId": "mistral-large-4"
+      },
+      "facts": {
+        "capabilities": [
+          "chat",
+          "reasoning",
+          "code",
+          "vision",
+          "tool_use",
+          "long_context"
+        ],
+        "serviceType": [
+          "chat"
+        ],
+        "supportsReasoning": true,
+        "description": "Mistral Large 4（Public Preview），原厂文档窗口为 1M 简写、精确整数及输出上限未取得证明；原厂高强度思考返回 chunk 数组，本接入暂使用 none"
+      },
+      "routing": {
+        "tier": "flagship",
+        "routingPriority": 50,
+        "eligibleForAgent": false,
+        "defaultReference": false,
+        "reasoning": {
+          "supportedModes": [
+            "auto",
+            "off",
+            "high"
+          ],
+          "defaultMode": "off"
+        }
+      },
+      "lifecycle": {
+        "status": "active"
+      },
+      "metadata": {
+        "recordedExtra": {},
+        "projection": {
+          "specKeys": [
+            "capabilities",
+            "serviceType",
+            "supportsReasoning",
+            "description"
+          ],
+          "extraKeys": []
+        },
+        "sourceFile": "compute/model-specs/mistral.json",
+        "legacyIdentity": {
+          "displayName": "Mistral Large 4",
+          "family": "mistral-large-4",
+          "match": {
+            "exact": [
+              "mistral-large-4",
+              "mistral-large-4-0",
+              "mistralai/mistral-large-4-0"
+            ]
+          }
+        }
+      }
+    },
+    {
       "modelRef": "mistral:mistral-medium-3.5",
       "identity": {
         "vendor": "mistral",
@@ -5610,6 +5925,157 @@
           "match": {
             "patterns": [
               "codestral*"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "modelRef": "moonshot:kimi-k3.1-pro",
+      "identity": {
+        "vendor": "moonshot",
+        "canonicalModelId": "kimi-k3.1-pro"
+      },
+      "facts": {
+        "contextWindow": 1048576,
+        "maxOutputTokens": 1048576,
+        "capabilities": [
+          "chat",
+          "reasoning",
+          "code",
+          "vision",
+          "tool_use",
+          "long_context",
+          "video_understanding"
+        ],
+        "serviceType": [
+          "reasoning"
+        ],
+        "supportsReasoning": true,
+        "description": "Kimi K3.1 Pro，强制思考，low/high/max（按量 API 默认 max）；max_completion_tokens 默认 131072、允许上限 1048576，与输入共享窗口",
+        "constraints": {
+          "thinkingOnly": true,
+          "samplingParametersDeprecated": true
+        }
+      },
+      "routing": {
+        "tier": "flagship",
+        "routingPriority": 50,
+        "eligibleForAgent": false,
+        "defaultReference": false,
+        "reasoning": {
+          "supportedModes": [
+            "auto",
+            "low",
+            "high",
+            "max"
+          ],
+          "defaultMode": "max"
+        }
+      },
+      "lifecycle": {
+        "status": "active"
+      },
+      "metadata": {
+        "recordedExtra": {},
+        "projection": {
+          "specKeys": [
+            "contextWindow",
+            "maxOutputTokens",
+            "capabilities",
+            "serviceType",
+            "supportsReasoning",
+            "description",
+            "extra"
+          ],
+          "extraKeys": [
+            "thinkingOnly",
+            "samplingParametersDeprecated"
+          ]
+        },
+        "sourceFile": "compute/model-specs/moonshot.json",
+        "legacyIdentity": {
+          "displayName": "Kimi K3.1 Pro",
+          "family": "kimi-k3.1-pro",
+          "match": {
+            "exact": [
+              "kimi-k3.1-pro",
+              "moonshotai/kimi-k3.1-pro"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "modelRef": "moonshot:kimi-k3.1-pro-highspeed",
+      "identity": {
+        "vendor": "moonshot",
+        "canonicalModelId": "kimi-k3.1-pro-highspeed"
+      },
+      "facts": {
+        "contextWindow": 1048576,
+        "maxOutputTokens": 1048576,
+        "capabilities": [
+          "chat",
+          "reasoning",
+          "code",
+          "vision",
+          "tool_use",
+          "long_context",
+          "video_understanding"
+        ],
+        "serviceType": [
+          "reasoning"
+        ],
+        "supportsReasoning": true,
+        "description": "Kimi K3.1 Pro Highspeed，能力与普通版相同，约 2–3 倍输出速度；按量 API 默认 max，与输入共享 1048576 token 窗口",
+        "constraints": {
+          "thinkingOnly": true,
+          "samplingParametersDeprecated": true
+        }
+      },
+      "routing": {
+        "tier": "flagship",
+        "routingPriority": 50,
+        "eligibleForAgent": false,
+        "defaultReference": false,
+        "reasoning": {
+          "supportedModes": [
+            "auto",
+            "low",
+            "high",
+            "max"
+          ],
+          "defaultMode": "max"
+        }
+      },
+      "lifecycle": {
+        "status": "active"
+      },
+      "metadata": {
+        "recordedExtra": {},
+        "projection": {
+          "specKeys": [
+            "contextWindow",
+            "maxOutputTokens",
+            "capabilities",
+            "serviceType",
+            "supportsReasoning",
+            "description",
+            "extra"
+          ],
+          "extraKeys": [
+            "thinkingOnly",
+            "samplingParametersDeprecated"
+          ]
+        },
+        "sourceFile": "compute/model-specs/moonshot.json",
+        "legacyIdentity": {
+          "displayName": "Kimi K3.1 Pro Highspeed",
+          "family": "kimi-k3.1-pro-highspeed",
+          "match": {
+            "exact": [
+              "kimi-k3.1-pro-highspeed"
             ]
           }
         }
@@ -6086,6 +6552,77 @@
         "legacyIdentity": {
           "displayName": "Moonshot v1 128K",
           "family": "moonshot-v1"
+        }
+      }
+    },
+    {
+      "modelRef": "openai:gpt-6.1-terra",
+      "identity": {
+        "vendor": "openai",
+        "canonicalModelId": "gpt-6.1-terra"
+      },
+      "facts": {
+        "contextWindow": 1050000,
+        "maxInputTokens": 922000,
+        "maxOutputTokens": 128000,
+        "capabilities": [
+          "chat",
+          "reasoning",
+          "code",
+          "vision",
+          "tool_use",
+          "long_context"
+        ],
+        "serviceType": [
+          "chat"
+        ],
+        "supportsReasoning": true,
+        "description": "GPT-6.1 Terra，视觉推理、电脑操作与写作；工具调用使用 Responses API，支持关闭推理"
+      },
+      "routing": {
+        "tier": "balanced",
+        "routingPriority": 50,
+        "eligibleForAgent": false,
+        "defaultReference": false,
+        "reasoning": {
+          "supportedModes": [
+            "auto",
+            "off",
+            "low",
+            "medium",
+            "high",
+            "xhigh",
+            "max"
+          ],
+          "defaultMode": "medium"
+        }
+      },
+      "lifecycle": {
+        "status": "active"
+      },
+      "metadata": {
+        "recordedExtra": {},
+        "projection": {
+          "specKeys": [
+            "contextWindow",
+            "maxOutputTokens",
+            "capabilities",
+            "serviceType",
+            "supportsReasoning",
+            "description"
+          ],
+          "extraKeys": []
+        },
+        "sourceFile": "compute/model-specs/openai.json",
+        "legacyIdentity": {
+          "displayName": "GPT-6.1 Terra",
+          "family": "gpt-6.1-terra",
+          "match": {
+            "exact": [
+              "gpt-6.1-terra",
+              "openai/gpt-6.1-terra"
+            ]
+          }
         }
       }
     },
@@ -15480,6 +16017,71 @@
       },
       "models": [
         {
+          "apiModelId": "claude-haiku-5-5",
+          "modelRef": "anthropic:claude-haiku-5-5",
+          "binding": {
+            "kind": "exact",
+            "reason": "official-exact-model-identity"
+          },
+          "overrides": {},
+          "request": {
+            "adaptiveThinking": true,
+            "constraints": {
+              "samplingParametersDeprecated": true
+            },
+            "reasoning": {
+              "supportedEfforts": [
+                "low",
+                "medium",
+                "high",
+                "xhigh",
+                "max"
+              ],
+              "defaultEffort": "medium"
+            },
+            "thinkingRoundTrip": {
+              "enabled": true,
+              "protocol": "anthropic-messages",
+              "allowEmptySignature": false,
+              "scope": "active-tool-turn"
+            },
+            "thinkingToolTurnValidation": "accepts-thinkless"
+          },
+          "billing": [],
+          "lifecycle": {
+            "status": "active"
+          },
+          "metadata": {
+            "attributes": {
+              "displayName": "Claude Haiku 5.5",
+              "description": "Claude Haiku 5.5，Claude Code 订阅入口；自适应思考默认 medium，实际可用性与额度取决于账户",
+              "source": "preset"
+            },
+            "recordedExtra": {},
+            "projection": {
+              "modelKeys": [
+                "modelName",
+                "displayName",
+                "serviceType",
+                "description",
+                "contextWindow",
+                "maxOutputTokens",
+                "capabilities",
+                "extra",
+                "source"
+              ],
+              "extraKeys": [
+                "adaptiveThinking",
+                "reasoning",
+                "samplingParametersDeprecated",
+                "thinkingRoundTrip",
+                "thinkingToolTurnValidation"
+              ]
+            },
+            "sourceRecord": "compute/providers/anthropic-claude.json#claude-haiku-5-5"
+          }
+        },
+        {
           "apiModelId": "claude-opus-5-5",
           "modelRef": "anthropic:claude-opus-5-5",
           "binding": {
@@ -15911,6 +16513,125 @@
         ]
       },
       "models": [
+        {
+          "apiModelId": "claude-haiku-5-5",
+          "modelRef": "anthropic:claude-haiku-5-5",
+          "binding": {
+            "kind": "exact",
+            "reason": "official-exact-model-identity"
+          },
+          "overrides": {},
+          "request": {
+            "adaptiveThinking": true,
+            "constraints": {
+              "samplingParametersDeprecated": true
+            },
+            "reasoning": {
+              "supportedEfforts": [
+                "low",
+                "medium",
+                "high",
+                "xhigh",
+                "max"
+              ],
+              "defaultEffort": "medium"
+            },
+            "thinkingRoundTrip": {
+              "enabled": true,
+              "protocol": "anthropic-messages",
+              "allowEmptySignature": false,
+              "scope": "active-tool-turn"
+            },
+            "thinkingToolTurnValidation": "accepts-thinkless"
+          },
+          "billing": [
+            {
+              "sourceKey": "inputPrice",
+              "amount": 0.1,
+              "currency": "USD",
+              "unit": "million-tokens",
+              "direction": "input",
+              "verification": "officially-verified-access-contract"
+            },
+            {
+              "sourceKey": "outputPrice",
+              "amount": 0.5,
+              "currency": "USD",
+              "unit": "million-tokens",
+              "direction": "output",
+              "verification": "officially-verified-access-contract"
+            },
+            {
+              "sourceKey": "extra.cacheReadPrice",
+              "amount": 0.01,
+              "currency": "USD",
+              "unit": "million-tokens",
+              "verification": "officially-verified-access-contract"
+            },
+            {
+              "sourceKey": "extra.pricingTiers",
+              "amount": [
+                {
+                  "maxInputTokens": 100000,
+                  "inputPrice": 0.1,
+                  "outputPrice": 0.5,
+                  "cacheReadPrice": 0.01
+                },
+                {
+                  "maxInputTokens": 1000000,
+                  "inputPrice": 0.5,
+                  "outputPrice": 2.5,
+                  "cacheReadPrice": 0.05
+                }
+              ],
+              "currency": "USD",
+              "unit": "tiered-source-unit",
+              "verification": "officially-verified-access-contract"
+            },
+            {
+              "sourceKey": "extra.pricingNotes",
+              "amount": "USD/百万 tokens；输入超过 100000 tokens 时整次请求按输入 0.50、输出 2.50、缓存读 0.05 计价。5 分钟缓存写入 0.125 / 0.625，1 小时 0.20 / 1.00（分别对应两档输入长度）。Batch 半价；同步输出 128000，300K 输出仅适用于带 beta header 的 Batch API。",
+              "currency": "USD",
+              "unit": "annotation",
+              "verification": "officially-verified-access-contract"
+            }
+          ],
+          "lifecycle": {
+            "status": "active"
+          },
+          "metadata": {
+            "attributes": {
+              "displayName": "Claude Haiku 5.5",
+              "description": "Claude Haiku 5.5，低延迟模型；自适应思考，默认 medium；输入超过 100000 tokens 使用独立价阶"
+            },
+            "recordedExtra": {},
+            "projection": {
+              "modelKeys": [
+                "modelName",
+                "displayName",
+                "serviceType",
+                "description",
+                "contextWindow",
+                "maxOutputTokens",
+                "capabilities",
+                "inputPrice",
+                "outputPrice",
+                "extra"
+              ],
+              "extraKeys": [
+                "adaptiveThinking",
+                "reasoning",
+                "samplingParametersDeprecated",
+                "cacheReadPrice",
+                "pricingTiers",
+                "pricingNotes",
+                "thinkingRoundTrip",
+                "thinkingToolTurnValidation"
+              ]
+            },
+            "sourceRecord": "compute/providers/anthropic.json#claude-haiku-5-5"
+          }
+        },
         {
           "apiModelId": "claude-opus-5-5",
           "modelRef": "anthropic:claude-opus-5-5",
@@ -20709,6 +21430,98 @@
       },
       "models": [
         {
+          "apiModelId": "gemini-4-argon",
+          "modelRef": "google:gemini-4-argon",
+          "binding": {
+            "kind": "exact",
+            "reason": "official-exact-model-identity"
+          },
+          "overrides": {
+            "maxOutputTokens": {
+              "value": 32768,
+              "reason": "safe-common-limit-for-generateContent-without-continuation",
+              "evidence": "https://ai.google.dev/gemini-api/docs/generate-content/long-decode",
+              "verification": "officially-verified-access-contract"
+            }
+          },
+          "request": {
+            "constraints": {
+              "samplingParametersDeprecated": true
+            },
+            "reasoning": {
+              "supportedEfforts": [
+                "low",
+                "medium",
+                "high"
+              ],
+              "defaultEffort": "medium"
+            }
+          },
+          "billing": [
+            {
+              "sourceKey": "inputPrice",
+              "amount": 2,
+              "currency": "USD",
+              "unit": "million-tokens",
+              "direction": "input",
+              "verification": "officially-verified-access-contract"
+            },
+            {
+              "sourceKey": "outputPrice",
+              "amount": 10,
+              "currency": "USD",
+              "unit": "million-tokens",
+              "direction": "output",
+              "verification": "officially-verified-access-contract"
+            },
+            {
+              "sourceKey": "extra.cachedInputPrice",
+              "amount": 0.1,
+              "currency": "USD",
+              "unit": "million-tokens",
+              "verification": "officially-verified-access-contract"
+            },
+            {
+              "sourceKey": "extra.pricingNotes",
+              "amount": "Google Standard USD/百万 tokens：截至 2026-11-30 输入 2、输出 10、隐式缓存读 0.10；2026-12-01 起分别为 4、20、0.20。无免费层，不支持显式缓存。预置采用非流式 REST 的 32768 上限，流式单次可达 65536；未启用 long decode/Interactions 后台续传，不能把百万输出作为当前原生接入上限。",
+              "currency": "USD",
+              "unit": "annotation",
+              "verification": "officially-verified-access-contract"
+            }
+          ],
+          "lifecycle": {
+            "status": "active"
+          },
+          "metadata": {
+            "attributes": {
+              "displayName": "Gemini 4 Argon",
+              "description": "Gemini 4 Argon，共享 1048576 token 窗口；单次流式输出 65536，非流式 REST 32768；百万输出需要额外 long decode 流程"
+            },
+            "recordedExtra": {},
+            "projection": {
+              "modelKeys": [
+                "modelName",
+                "displayName",
+                "serviceType",
+                "description",
+                "contextWindow",
+                "maxOutputTokens",
+                "capabilities",
+                "inputPrice",
+                "outputPrice",
+                "extra"
+              ],
+              "extraKeys": [
+                "reasoning",
+                "samplingParametersDeprecated",
+                "cachedInputPrice",
+                "pricingNotes"
+              ]
+            },
+            "sourceRecord": "compute/providers/google.json#gemini-4-argon"
+          }
+        },
+        {
           "apiModelId": "gemini-embedding-2",
           "modelRef": "google:gemini-embedding-2",
           "binding": {
@@ -22121,6 +22934,97 @@
         ]
       },
       "models": [
+        {
+          "apiModelId": "MiniMax-M3.1-Flash",
+          "modelRef": "minimax:MiniMax-M3.1-Flash",
+          "binding": {
+            "kind": "exact",
+            "reason": "official-exact-model-identity"
+          },
+          "overrides": {},
+          "request": {
+            "constraints": {
+              "thinkingOnly": true,
+              "samplingParametersDeprecated": true
+            },
+            "reasoning": {
+              "supportedEfforts": [
+                "low",
+                "medium",
+                "high",
+                "xhigh",
+                "max"
+              ],
+              "defaultEffort": "max"
+            },
+            "adaptiveThinking": true
+          },
+          "billing": [
+            {
+              "sourceKey": "inputPrice",
+              "amount": 1,
+              "currency": "CNY",
+              "unit": "million-tokens",
+              "direction": "input",
+              "verification": "officially-verified-access-contract"
+            },
+            {
+              "sourceKey": "outputPrice",
+              "amount": 4,
+              "currency": "CNY",
+              "unit": "million-tokens",
+              "direction": "output",
+              "verification": "officially-verified-access-contract"
+            },
+            {
+              "sourceKey": "extra.cacheReadPrice",
+              "amount": 0.1,
+              "currency": "CNY",
+              "unit": "million-tokens",
+              "verification": "officially-verified-access-contract"
+            },
+            {
+              "sourceKey": "extra.pricingNotes",
+              "amount": "MiniMax 国内按量 Standard，CNY/百万 tokens：输入 1.00、输出 4.00、缓存读 0.10；不使用国际站美元价，不支持 service_tier 优先级字段。",
+              "currency": "CNY",
+              "unit": "annotation",
+              "verification": "officially-verified-access-contract"
+            }
+          ],
+          "lifecycle": {
+            "status": "active"
+          },
+          "metadata": {
+            "attributes": {
+              "displayName": "MiniMax M3.1 Flash",
+              "description": "MiniMax M3.1 Flash 正式版，100 万上下文；强制思考，low/medium/high/xhigh/max，默认 max"
+            },
+            "recordedExtra": {},
+            "projection": {
+              "modelKeys": [
+                "modelName",
+                "displayName",
+                "serviceType",
+                "description",
+                "contextWindow",
+                "maxOutputTokens",
+                "capabilities",
+                "inputPrice",
+                "outputPrice",
+                "extra"
+              ],
+              "extraKeys": [
+                "reasoning",
+                "adaptiveThinking",
+                "thinkingOnly",
+                "samplingParametersDeprecated",
+                "cacheReadPrice",
+                "pricingNotes"
+              ]
+            },
+            "sourceRecord": "compute/providers/minimax.json#MiniMax-M3.1-Flash"
+          }
+        },
         {
           "apiModelId": "MiniMax-M3",
           "modelRef": "minimax:MiniMax-M3",
@@ -23652,6 +24556,82 @@
       },
       "models": [
         {
+          "apiModelId": "mistral-large-4",
+          "modelRef": "mistral:mistral-large-4",
+          "binding": {
+            "kind": "exact",
+            "reason": "official-exact-model-identity"
+          },
+          "overrides": {},
+          "request": {
+            "reasoning": {
+              "supportedEfforts": [
+                "none"
+              ]
+            }
+          },
+          "billing": [
+            {
+              "sourceKey": "inputPrice",
+              "amount": 1.36,
+              "currency": "USD",
+              "unit": "million-tokens",
+              "direction": "input",
+              "verification": "officially-verified-access-contract"
+            },
+            {
+              "sourceKey": "outputPrice",
+              "amount": 4.18,
+              "currency": "USD",
+              "unit": "million-tokens",
+              "direction": "output",
+              "verification": "officially-verified-access-contract"
+            },
+            {
+              "sourceKey": "extra.cachedInputPrice",
+              "amount": 0.14,
+              "currency": "USD",
+              "unit": "million-tokens",
+              "verification": "officially-verified-access-contract"
+            },
+            {
+              "sourceKey": "extra.pricingNotes",
+              "amount": "USD/百万 tokens 标准原价；发布后两周五折活动已结束。原厂窗口只取得 1M 简写，精确整数与输出上限保持未知；高强度思考返回 thinking/text chunk 数组，当前直连接入暂只暴露 none，未进行账号调用验收。",
+              "currency": "USD",
+              "unit": "annotation",
+              "verification": "officially-verified-access-contract"
+            }
+          ],
+          "lifecycle": {
+            "status": "active"
+          },
+          "metadata": {
+            "attributes": {
+              "displayName": "Mistral Large 4",
+              "description": "Mistral Large 4（Public Preview），原厂文档窗口为 1M 简写、精确整数及输出上限未取得证明；原厂高强度思考返回 chunk 数组，本接入暂使用 none"
+            },
+            "recordedExtra": {},
+            "projection": {
+              "modelKeys": [
+                "modelName",
+                "displayName",
+                "serviceType",
+                "description",
+                "capabilities",
+                "inputPrice",
+                "outputPrice",
+                "extra"
+              ],
+              "extraKeys": [
+                "reasoning",
+                "cachedInputPrice",
+                "pricingNotes"
+              ]
+            },
+            "sourceRecord": "compute/providers/mistral.json#mistral-large-4"
+          }
+        },
+        {
           "apiModelId": "mistral-medium-3-5",
           "modelRef": "mistral:mistral-medium-3.5",
           "binding": {
@@ -24024,6 +25004,192 @@
         ]
       },
       "models": [
+        {
+          "apiModelId": "kimi-k3.1-pro-highspeed",
+          "modelRef": "moonshot:kimi-k3.1-pro-highspeed",
+          "binding": {
+            "kind": "exact",
+            "reason": "official-exact-model-identity"
+          },
+          "overrides": {},
+          "request": {
+            "constraints": {
+              "thinkingOnly": true,
+              "samplingParametersDeprecated": true
+            },
+            "thinking": {
+              "default": "enabled",
+              "disableSupported": false,
+              "preserveReasoningContent": true
+            },
+            "reasoning": {
+              "supportedEfforts": [
+                "low",
+                "high",
+                "max"
+              ],
+              "defaultEffort": "max"
+            }
+          },
+          "billing": [
+            {
+              "sourceKey": "inputPrice",
+              "amount": 26,
+              "currency": "CNY",
+              "unit": "million-tokens",
+              "direction": "input",
+              "verification": "officially-verified-access-contract"
+            },
+            {
+              "sourceKey": "outputPrice",
+              "amount": 136,
+              "currency": "CNY",
+              "unit": "million-tokens",
+              "direction": "output",
+              "verification": "officially-verified-access-contract"
+            },
+            {
+              "sourceKey": "extra.cacheHitPrice",
+              "amount": 1.3,
+              "currency": "CNY",
+              "unit": "million-tokens",
+              "verification": "officially-verified-access-contract"
+            },
+            {
+              "sourceKey": "extra.pricingNotes",
+              "amount": "Kimi 国内 CNY/百万 tokens：输入 26、输出 136、缓存命中 1.30；官网首页缓存写入 26，TTL 的额外档位本次未取得证明，不以此推断其他 TTL 价格。",
+              "currency": "CNY",
+              "unit": "annotation",
+              "verification": "officially-verified-access-contract"
+            }
+          ],
+          "lifecycle": {
+            "status": "active"
+          },
+          "metadata": {
+            "attributes": {
+              "displayName": "Kimi K3.1 Pro Highspeed",
+              "description": "Kimi K3.1 Pro Highspeed，能力与普通版相同，约 2–3 倍输出速度；按量 API 默认 max，与输入共享 1048576 token 窗口"
+            },
+            "recordedExtra": {},
+            "projection": {
+              "modelKeys": [
+                "modelName",
+                "displayName",
+                "serviceType",
+                "description",
+                "contextWindow",
+                "maxOutputTokens",
+                "capabilities",
+                "inputPrice",
+                "outputPrice",
+                "extra"
+              ],
+              "extraKeys": [
+                "thinking",
+                "reasoning",
+                "thinkingOnly",
+                "samplingParametersDeprecated",
+                "cacheHitPrice",
+                "pricingNotes"
+              ]
+            },
+            "sourceRecord": "compute/providers/moonshot.json#kimi-k3.1-pro-highspeed"
+          }
+        },
+        {
+          "apiModelId": "kimi-k3.1-pro",
+          "modelRef": "moonshot:kimi-k3.1-pro",
+          "binding": {
+            "kind": "exact",
+            "reason": "official-exact-model-identity"
+          },
+          "overrides": {},
+          "request": {
+            "constraints": {
+              "thinkingOnly": true,
+              "samplingParametersDeprecated": true
+            },
+            "thinking": {
+              "default": "enabled",
+              "disableSupported": false,
+              "preserveReasoningContent": true
+            },
+            "reasoning": {
+              "supportedEfforts": [
+                "low",
+                "high",
+                "max"
+              ],
+              "defaultEffort": "max"
+            }
+          },
+          "billing": [
+            {
+              "sourceKey": "inputPrice",
+              "amount": 13,
+              "currency": "CNY",
+              "unit": "million-tokens",
+              "direction": "input",
+              "verification": "officially-verified-access-contract"
+            },
+            {
+              "sourceKey": "outputPrice",
+              "amount": 68,
+              "currency": "CNY",
+              "unit": "million-tokens",
+              "direction": "output",
+              "verification": "officially-verified-access-contract"
+            },
+            {
+              "sourceKey": "extra.cacheHitPrice",
+              "amount": 1.3,
+              "currency": "CNY",
+              "unit": "million-tokens",
+              "verification": "officially-verified-access-contract"
+            },
+            {
+              "sourceKey": "extra.pricingNotes",
+              "amount": "Kimi 国内 CNY/百万 tokens：输入 13、输出 68、缓存命中 1.30；官网首页缓存写入 13，TTL 的额外档位本次未取得证明，不以此推断其他 TTL 价格。",
+              "currency": "CNY",
+              "unit": "annotation",
+              "verification": "officially-verified-access-contract"
+            }
+          ],
+          "lifecycle": {
+            "status": "active"
+          },
+          "metadata": {
+            "attributes": {
+              "displayName": "Kimi K3.1 Pro",
+              "description": "Kimi K3.1 Pro，强制思考，low/high/max（按量 API 默认 max）；max_completion_tokens 默认 131072、允许上限 1048576，与输入共享窗口"
+            },
+            "recordedExtra": {},
+            "projection": {
+              "modelKeys": [
+                "modelName",
+                "displayName",
+                "serviceType",
+                "description",
+                "contextWindow",
+                "maxOutputTokens",
+                "capabilities",
+                "inputPrice",
+                "outputPrice",
+                "extra"
+              ],
+              "extraKeys": [
+                "thinking",
+                "reasoning",
+                "thinkingOnly",
+                "samplingParametersDeprecated",
+                "cacheHitPrice",
+                "pricingNotes"
+              ]
+            },
+            "sourceRecord": "compute/providers/moonshot.json#kimi-k3.1-pro"
+          }
+        },
         {
           "apiModelId": "kimi-k3",
           "modelRef": "moonshot:kimi-k3",
@@ -25318,6 +26484,56 @@
       },
       "models": [
         {
+          "apiModelId": "gpt-6.1-terra",
+          "modelRef": "openai:gpt-6.1-terra",
+          "binding": {
+            "kind": "exact",
+            "reason": "official-exact-model-identity"
+          },
+          "overrides": {},
+          "request": {
+            "reasoning": {
+              "supportedEfforts": [
+                "low",
+                "medium",
+                "high",
+                "xhigh",
+                "max"
+              ],
+              "defaultEffort": "medium"
+            }
+          },
+          "billing": [],
+          "lifecycle": {
+            "status": "active"
+          },
+          "metadata": {
+            "attributes": {
+              "displayName": "GPT-6.1 Terra",
+              "description": "GPT-6.1 Terra，ChatGPT/Codex 订阅模型；实际可用性与额度以账户为准，未执行订阅账号调用验收",
+              "source": "preset"
+            },
+            "recordedExtra": {},
+            "projection": {
+              "modelKeys": [
+                "modelName",
+                "displayName",
+                "serviceType",
+                "description",
+                "contextWindow",
+                "maxOutputTokens",
+                "capabilities",
+                "extra",
+                "source"
+              ],
+              "extraKeys": [
+                "reasoning"
+              ]
+            },
+            "sourceRecord": "compute/providers/openai-codex.json#gpt-6.1-terra"
+          }
+        },
+        {
           "apiModelId": "gpt-6.1-sol",
           "modelRef": "openai:gpt-6.1-sol",
           "binding": {
@@ -26022,6 +27238,92 @@
         ]
       },
       "models": [
+        {
+          "apiModelId": "gpt-6.1-terra",
+          "modelRef": "openai:gpt-6.1-terra",
+          "binding": {
+            "kind": "exact",
+            "reason": "official-exact-model-identity"
+          },
+          "overrides": {},
+          "request": {
+            "responsesOnly": true,
+            "reasoning": {
+              "supportedEfforts": [
+                "none",
+                "low",
+                "medium",
+                "high",
+                "xhigh",
+                "max"
+              ],
+              "defaultEffort": "medium"
+            }
+          },
+          "billing": [
+            {
+              "sourceKey": "inputPrice",
+              "amount": 1,
+              "currency": "USD",
+              "unit": "million-tokens",
+              "direction": "input",
+              "verification": "officially-verified-access-contract"
+            },
+            {
+              "sourceKey": "outputPrice",
+              "amount": 5,
+              "currency": "USD",
+              "unit": "million-tokens",
+              "direction": "output",
+              "verification": "officially-verified-access-contract"
+            },
+            {
+              "sourceKey": "extra.cachedInputPrice",
+              "amount": 0.05,
+              "currency": "USD",
+              "unit": "million-tokens",
+              "verification": "officially-verified-access-contract"
+            },
+            {
+              "sourceKey": "extra.pricingNotes",
+              "amount": "USD/百万 tokens，Standard：输入 1、缓存读取 0.05、输出 5；30 分钟缓存写入 1.25，12 小时写入 2.50。输入超过 272000 tokens 时整次请求输入与缓存费率 2 倍、输出 1.5 倍；Batch/Flex、Fast 及地域费率另计。",
+              "currency": "USD",
+              "unit": "annotation",
+              "verification": "officially-verified-access-contract"
+            }
+          ],
+          "lifecycle": {
+            "status": "active"
+          },
+          "metadata": {
+            "attributes": {
+              "displayName": "GPT-6.1 Terra",
+              "description": "GPT-6.1 Terra，视觉推理、电脑操作与写作；工具调用使用 Responses API，支持关闭推理"
+            },
+            "recordedExtra": {},
+            "projection": {
+              "modelKeys": [
+                "modelName",
+                "displayName",
+                "serviceType",
+                "description",
+                "contextWindow",
+                "maxOutputTokens",
+                "capabilities",
+                "inputPrice",
+                "outputPrice",
+                "extra"
+              ],
+              "extraKeys": [
+                "responsesOnly",
+                "reasoning",
+                "cachedInputPrice",
+                "pricingNotes"
+              ]
+            },
+            "sourceRecord": "compute/providers/openai.json#gpt-6.1-terra"
+          }
+        },
         {
           "apiModelId": "gpt-6.1-sol",
           "modelRef": "openai:gpt-6.1-sol",
@@ -29234,6 +30536,466 @@
         ]
       },
       "models": [
+        {
+          "apiModelId": "mistralai/mistral-large-4-0",
+          "modelRef": "mistral:mistral-large-4",
+          "binding": {
+            "kind": "exact",
+            "reason": "official-exact-model-identity"
+          },
+          "overrides": {
+            "contextWindow": {
+              "value": 1048576,
+              "reason": "independent-openrouter-hosted-contract",
+              "evidence": "https://openrouter.ai/api/v1/models",
+              "verification": "officially-verified-access-contract"
+            },
+            "maxOutputTokens": {
+              "value": 262144,
+              "reason": "independent-openrouter-hosted-contract",
+              "evidence": "https://openrouter.ai/api/v1/models",
+              "verification": "officially-verified-access-contract"
+            }
+          },
+          "request": {},
+          "billing": [
+            {
+              "sourceKey": "inputPrice",
+              "amount": 1.36,
+              "currency": "USD",
+              "unit": "million-tokens",
+              "direction": "input",
+              "verification": "officially-verified-access-contract"
+            },
+            {
+              "sourceKey": "outputPrice",
+              "amount": 4.18,
+              "currency": "USD",
+              "unit": "million-tokens",
+              "direction": "output",
+              "verification": "officially-verified-access-contract"
+            },
+            {
+              "sourceKey": "extra.cachedInputPrice",
+              "amount": 0.14,
+              "currency": "USD",
+              "unit": "million-tokens",
+              "verification": "officially-verified-access-contract"
+            },
+            {
+              "sourceKey": "extra.pricingNotes",
+              "amount": "OpenRouter 官方 Models API 2026-10-28 快照；USD/token 乘 1000000；窗口与输出是该平台独立托管合同，不反写原厂或订阅接入。",
+              "currency": "USD",
+              "unit": "annotation",
+              "verification": "officially-verified-access-contract"
+            }
+          ],
+          "lifecycle": {
+            "status": "active"
+          },
+          "metadata": {
+            "attributes": {
+              "displayName": "Mistral Large 4",
+              "description": "Mistral Large 4，OpenRouter 独立托管入口；参数与美元计价以平台目录为准"
+            },
+            "recordedExtra": {},
+            "projection": {
+              "modelKeys": [
+                "modelName",
+                "displayName",
+                "serviceType",
+                "description",
+                "contextWindow",
+                "maxOutputTokens",
+                "capabilities",
+                "inputPrice",
+                "outputPrice",
+                "extra"
+              ],
+              "extraKeys": [
+                "cachedInputPrice",
+                "pricingNotes"
+              ]
+            },
+            "sourceRecord": "compute/providers/openrouter.json#mistralai/mistral-large-4-0"
+          }
+        },
+        {
+          "apiModelId": "google/gemini-4-argon",
+          "modelRef": "google:gemini-4-argon",
+          "binding": {
+            "kind": "exact",
+            "reason": "official-exact-model-identity"
+          },
+          "overrides": {
+            "maxOutputTokens": {
+              "value": 943718,
+              "reason": "independent-openrouter-hosted-contract",
+              "evidence": "https://openrouter.ai/api/v1/models",
+              "verification": "officially-verified-access-contract"
+            }
+          },
+          "request": {},
+          "billing": [
+            {
+              "sourceKey": "inputPrice",
+              "amount": 2,
+              "currency": "USD",
+              "unit": "million-tokens",
+              "direction": "input",
+              "verification": "officially-verified-access-contract"
+            },
+            {
+              "sourceKey": "outputPrice",
+              "amount": 10,
+              "currency": "USD",
+              "unit": "million-tokens",
+              "direction": "output",
+              "verification": "officially-verified-access-contract"
+            },
+            {
+              "sourceKey": "extra.cachedInputPrice",
+              "amount": 0.1,
+              "currency": "USD",
+              "unit": "million-tokens",
+              "verification": "officially-verified-access-contract"
+            },
+            {
+              "sourceKey": "extra.pricingNotes",
+              "amount": "OpenRouter 官方 Models API 2026-10-28 快照；USD/token 乘 1000000；窗口与输出是该平台独立托管合同，不反写原厂或订阅接入。",
+              "currency": "USD",
+              "unit": "annotation",
+              "verification": "officially-verified-access-contract"
+            }
+          ],
+          "lifecycle": {
+            "status": "active"
+          },
+          "metadata": {
+            "attributes": {
+              "displayName": "Gemini 4 Argon",
+              "description": "Gemini 4 Argon，OpenRouter 独立托管入口；参数与美元计价以平台目录为准"
+            },
+            "recordedExtra": {},
+            "projection": {
+              "modelKeys": [
+                "modelName",
+                "displayName",
+                "serviceType",
+                "description",
+                "contextWindow",
+                "maxOutputTokens",
+                "capabilities",
+                "inputPrice",
+                "outputPrice",
+                "extra"
+              ],
+              "extraKeys": [
+                "cachedInputPrice",
+                "pricingNotes"
+              ]
+            },
+            "sourceRecord": "compute/providers/openrouter.json#google/gemini-4-argon"
+          }
+        },
+        {
+          "apiModelId": "moonshotai/kimi-k3.1-pro",
+          "modelRef": "moonshot:kimi-k3.1-pro",
+          "binding": {
+            "kind": "exact",
+            "reason": "official-exact-model-identity"
+          },
+          "overrides": {
+            "maxOutputTokens": {
+              "value": 943718,
+              "reason": "independent-openrouter-hosted-contract",
+              "evidence": "https://openrouter.ai/api/v1/models",
+              "verification": "officially-verified-access-contract"
+            }
+          },
+          "request": {},
+          "billing": [
+            {
+              "sourceKey": "inputPrice",
+              "amount": 2,
+              "currency": "USD",
+              "unit": "million-tokens",
+              "direction": "input",
+              "verification": "officially-verified-access-contract"
+            },
+            {
+              "sourceKey": "outputPrice",
+              "amount": 10,
+              "currency": "USD",
+              "unit": "million-tokens",
+              "direction": "output",
+              "verification": "officially-verified-access-contract"
+            },
+            {
+              "sourceKey": "extra.cachedInputPrice",
+              "amount": 0.2,
+              "currency": "USD",
+              "unit": "million-tokens",
+              "verification": "officially-verified-access-contract"
+            },
+            {
+              "sourceKey": "extra.pricingNotes",
+              "amount": "OpenRouter 官方 Models API 2026-10-28 快照；USD/token 乘 1000000；窗口与输出是该平台独立托管合同，不反写原厂或订阅接入。",
+              "currency": "USD",
+              "unit": "annotation",
+              "verification": "officially-verified-access-contract"
+            }
+          ],
+          "lifecycle": {
+            "status": "active"
+          },
+          "metadata": {
+            "attributes": {
+              "displayName": "Kimi K3.1 Pro",
+              "description": "Kimi K3.1 Pro，OpenRouter 独立托管入口；参数与美元计价以平台目录为准"
+            },
+            "recordedExtra": {},
+            "projection": {
+              "modelKeys": [
+                "modelName",
+                "displayName",
+                "serviceType",
+                "description",
+                "contextWindow",
+                "maxOutputTokens",
+                "capabilities",
+                "inputPrice",
+                "outputPrice",
+                "extra"
+              ],
+              "extraKeys": [
+                "cachedInputPrice",
+                "pricingNotes"
+              ]
+            },
+            "sourceRecord": "compute/providers/openrouter.json#moonshotai/kimi-k3.1-pro"
+          }
+        },
+        {
+          "apiModelId": "minimax/minimax-m3.1-flash",
+          "modelRef": "minimax:MiniMax-M3.1-Flash",
+          "binding": {
+            "kind": "exact",
+            "reason": "official-exact-model-identity"
+          },
+          "overrides": {
+            "contextWindow": {
+              "value": 1048576,
+              "reason": "independent-openrouter-hosted-contract",
+              "evidence": "https://openrouter.ai/api/v1/models",
+              "verification": "officially-verified-access-contract"
+            }
+          },
+          "request": {},
+          "billing": [
+            {
+              "sourceKey": "inputPrice",
+              "amount": 0.15,
+              "currency": "USD",
+              "unit": "million-tokens",
+              "direction": "input",
+              "verification": "officially-verified-access-contract"
+            },
+            {
+              "sourceKey": "outputPrice",
+              "amount": 0.6,
+              "currency": "USD",
+              "unit": "million-tokens",
+              "direction": "output",
+              "verification": "officially-verified-access-contract"
+            },
+            {
+              "sourceKey": "extra.cachedInputPrice",
+              "amount": 0.015,
+              "currency": "USD",
+              "unit": "million-tokens",
+              "verification": "officially-verified-access-contract"
+            },
+            {
+              "sourceKey": "extra.pricingNotes",
+              "amount": "OpenRouter 官方 Models API 2026-10-28 快照；USD/token 乘 1000000；窗口与输出是该平台独立托管合同，不反写原厂或订阅接入。",
+              "currency": "USD",
+              "unit": "annotation",
+              "verification": "officially-verified-access-contract"
+            }
+          ],
+          "lifecycle": {
+            "status": "active"
+          },
+          "metadata": {
+            "attributes": {
+              "displayName": "MiniMax M3.1 Flash",
+              "description": "MiniMax M3.1 Flash，OpenRouter 独立托管入口；参数与美元计价以平台目录为准"
+            },
+            "recordedExtra": {},
+            "projection": {
+              "modelKeys": [
+                "modelName",
+                "displayName",
+                "serviceType",
+                "description",
+                "contextWindow",
+                "maxOutputTokens",
+                "capabilities",
+                "inputPrice",
+                "outputPrice",
+                "extra"
+              ],
+              "extraKeys": [
+                "cachedInputPrice",
+                "pricingNotes"
+              ]
+            },
+            "sourceRecord": "compute/providers/openrouter.json#minimax/minimax-m3.1-flash"
+          }
+        },
+        {
+          "apiModelId": "anthropic/claude-haiku-5.5",
+          "modelRef": "anthropic:claude-haiku-5-5",
+          "binding": {
+            "kind": "exact",
+            "reason": "official-exact-model-identity"
+          },
+          "overrides": {},
+          "request": {},
+          "billing": [
+            {
+              "sourceKey": "inputPrice",
+              "amount": 0.1,
+              "currency": "USD",
+              "unit": "million-tokens",
+              "direction": "input",
+              "verification": "officially-verified-access-contract"
+            },
+            {
+              "sourceKey": "outputPrice",
+              "amount": 0.5,
+              "currency": "USD",
+              "unit": "million-tokens",
+              "direction": "output",
+              "verification": "officially-verified-access-contract"
+            },
+            {
+              "sourceKey": "extra.cachedInputPrice",
+              "amount": 0.01,
+              "currency": "USD",
+              "unit": "million-tokens",
+              "verification": "officially-verified-access-contract"
+            },
+            {
+              "sourceKey": "extra.pricingNotes",
+              "amount": "OpenRouter 官方 Models API 2026-10-28 快照；USD/token 乘 1000000；窗口与输出是该平台独立托管合同，不反写原厂或订阅接入。长上下文价阶：[{\"min_prompt_tokens\":100000,\"prompt\":\"0.0000005\",\"completion\":\"0.0000025\",\"input_cache_read\":\"0.00000005\",\"input_cache_write\":\"0.000000625\",\"input_cache_write_1h\":\"0.000001\"}]",
+              "currency": "USD",
+              "unit": "annotation",
+              "verification": "officially-verified-access-contract"
+            }
+          ],
+          "lifecycle": {
+            "status": "active"
+          },
+          "metadata": {
+            "attributes": {
+              "displayName": "Claude Haiku 5.5",
+              "description": "Claude Haiku 5.5，OpenRouter 独立托管入口；参数与美元计价以平台目录为准"
+            },
+            "recordedExtra": {},
+            "projection": {
+              "modelKeys": [
+                "modelName",
+                "displayName",
+                "serviceType",
+                "description",
+                "contextWindow",
+                "maxOutputTokens",
+                "capabilities",
+                "inputPrice",
+                "outputPrice",
+                "extra"
+              ],
+              "extraKeys": [
+                "cachedInputPrice",
+                "pricingNotes"
+              ]
+            },
+            "sourceRecord": "compute/providers/openrouter.json#anthropic/claude-haiku-5.5"
+          }
+        },
+        {
+          "apiModelId": "openai/gpt-6.1-terra",
+          "modelRef": "openai:gpt-6.1-terra",
+          "binding": {
+            "kind": "exact",
+            "reason": "official-exact-model-identity"
+          },
+          "overrides": {},
+          "request": {},
+          "billing": [
+            {
+              "sourceKey": "inputPrice",
+              "amount": 1,
+              "currency": "USD",
+              "unit": "million-tokens",
+              "direction": "input",
+              "verification": "officially-verified-access-contract"
+            },
+            {
+              "sourceKey": "outputPrice",
+              "amount": 5,
+              "currency": "USD",
+              "unit": "million-tokens",
+              "direction": "output",
+              "verification": "officially-verified-access-contract"
+            },
+            {
+              "sourceKey": "extra.cachedInputPrice",
+              "amount": 0.05,
+              "currency": "USD",
+              "unit": "million-tokens",
+              "verification": "officially-verified-access-contract"
+            },
+            {
+              "sourceKey": "extra.pricingNotes",
+              "amount": "OpenRouter 官方 Models API 2026-10-28 快照；USD/token 乘 1000000；窗口与输出是该平台独立托管合同，不反写原厂或订阅接入。长上下文价阶：[{\"min_prompt_tokens\":272000,\"prompt\":\"0.000002\",\"completion\":\"0.0000075\",\"input_cache_read\":\"0.0000001\",\"input_cache_write\":\"0.0000025\"}]",
+              "currency": "USD",
+              "unit": "annotation",
+              "verification": "officially-verified-access-contract"
+            }
+          ],
+          "lifecycle": {
+            "status": "active"
+          },
+          "metadata": {
+            "attributes": {
+              "displayName": "GPT-6.1 Terra",
+              "description": "GPT-6.1 Terra，OpenRouter 独立托管入口；参数与美元计价以平台目录为准"
+            },
+            "recordedExtra": {},
+            "projection": {
+              "modelKeys": [
+                "modelName",
+                "displayName",
+                "serviceType",
+                "description",
+                "contextWindow",
+                "maxOutputTokens",
+                "capabilities",
+                "inputPrice",
+                "outputPrice",
+                "extra"
+              ],
+              "extraKeys": [
+                "cachedInputPrice",
+                "pricingNotes"
+              ]
+            },
+            "sourceRecord": "compute/providers/openrouter.json#openai/gpt-6.1-terra"
+          }
+        },
         {
           "apiModelId": "cohere/command-a-plus",
           "modelRef": null,
@@ -38685,21 +40447,24 @@
             "endpoint": "https://api.minimaxi.com/v1/token_plan/remains",
             "consoleUrl": "https://platform.minimaxi.com/"
           }
-        }
+        },
+        "tombstones": [
+          "MiniMax-M3.1-Flash-Preview"
+        ]
       },
       "models": [
         {
-          "apiModelId": "MiniMax-M3.1-Flash-Preview",
-          "modelRef": "minimax:MiniMax-M3.1-Flash-Preview",
+          "apiModelId": "MiniMax-M3.1-Flash",
+          "modelRef": "minimax:MiniMax-M3.1-Flash",
           "binding": {
             "kind": "exact",
-            "reason": "exact-id-or-declared-alias"
+            "reason": "official-exact-model-identity"
           },
           "overrides": {},
           "request": {
-            "adaptiveThinking": true,
             "constraints": {
-              "thinkingOnly": true
+              "thinkingOnly": true,
+              "samplingParametersDeprecated": true
             },
             "reasoning": {
               "supportedEfforts": [
@@ -38710,16 +40475,17 @@
                 "max"
               ],
               "defaultEffort": "max"
-            }
+            },
+            "adaptiveThinking": true
           },
           "billing": [],
           "lifecycle": {
-            "status": "unknown"
+            "status": "active"
           },
           "metadata": {
             "attributes": {
-              "displayName": "MiniMax M3.1 Flash Preview",
-              "description": "MiniMax M3.1 Flash Preview，目前仅通过 M Plan / MiniMax Code 提供",
+              "displayName": "MiniMax M3.1 Flash",
+              "description": "MiniMax M3.1 Flash 正式版，M Plan 各档均可用；按订阅额度计费，替代已下线 Preview 预置",
               "source": "preset"
             },
             "recordedExtra": {},
@@ -38727,20 +40493,22 @@
               "modelKeys": [
                 "modelName",
                 "displayName",
-                "capabilities",
                 "serviceType",
                 "description",
                 "contextWindow",
+                "maxOutputTokens",
+                "capabilities",
                 "extra",
                 "source"
               ],
               "extraKeys": [
+                "reasoning",
                 "adaptiveThinking",
                 "thinkingOnly",
-                "reasoning"
+                "samplingParametersDeprecated"
               ]
             },
-            "sourceRecord": "compute/coding-plans/minimax-coding.json#MiniMax-M3.1-Flash-Preview"
+            "sourceRecord": "compute/coding-plans/minimax-coding.json#MiniMax-M3.1-Flash"
           }
         },
         {
@@ -39273,6 +41041,148 @@
         }
       },
       "models": [
+        {
+          "apiModelId": "k3.1-pro-highspeed",
+          "modelRef": "moonshot:kimi-k3.1-pro-highspeed",
+          "binding": {
+            "kind": "exact",
+            "reason": "official-exact-model-identity"
+          },
+          "overrides": {
+            "contextWindow": {
+              "value": 1048576,
+              "reason": "documented-subscription-tier-cap",
+              "evidence": "https://www.kimi.com/code/docs/en/kimi-code/models",
+              "verification": "officially-verified-access-contract"
+            },
+            "maxOutputTokens": {
+              "value": null,
+              "reason": "subscription-output-limit-not-documented",
+              "evidence": "https://www.kimi.com/code/docs/en/kimi-code/models"
+            }
+          },
+          "request": {
+            "constraints": {
+              "thinkingOnly": true,
+              "samplingParametersDeprecated": true
+            },
+            "thinking": {
+              "default": "enabled",
+              "disableSupported": false,
+              "preserveReasoningContent": true
+            },
+            "reasoning": {
+              "supportedEfforts": [
+                "low",
+                "high",
+                "max"
+              ],
+              "defaultEffort": "high"
+            }
+          },
+          "billing": [],
+          "lifecycle": {
+            "status": "active"
+          },
+          "metadata": {
+            "attributes": {
+              "displayName": "Kimi K3.1 Pro Highspeed",
+              "description": "Kimi Code K3.1 Pro Highspeed，Pro/Allegretto 及以上，最多 1048576 上下文，约 2 倍额度消耗；默认 high，输出上限未核实",
+              "source": "preset"
+            },
+            "recordedExtra": {},
+            "projection": {
+              "modelKeys": [
+                "modelName",
+                "displayName",
+                "serviceType",
+                "description",
+                "contextWindow",
+                "capabilities",
+                "extra",
+                "source"
+              ],
+              "extraKeys": [
+                "thinking",
+                "reasoning",
+                "thinkingOnly",
+                "samplingParametersDeprecated"
+              ]
+            },
+            "sourceRecord": "compute/coding-plans/moonshot-coding.json#k3.1-pro-highspeed"
+          }
+        },
+        {
+          "apiModelId": "k3.1-pro",
+          "modelRef": "moonshot:kimi-k3.1-pro",
+          "binding": {
+            "kind": "exact",
+            "reason": "official-exact-model-identity"
+          },
+          "overrides": {
+            "contextWindow": {
+              "value": 262144,
+              "reason": "documented-subscription-tier-cap",
+              "evidence": "https://www.kimi.com/code/docs/en/kimi-code/models",
+              "verification": "officially-verified-access-contract"
+            },
+            "maxOutputTokens": {
+              "value": null,
+              "reason": "subscription-output-limit-not-documented",
+              "evidence": "https://www.kimi.com/code/docs/en/kimi-code/models"
+            }
+          },
+          "request": {
+            "constraints": {
+              "thinkingOnly": true,
+              "samplingParametersDeprecated": true
+            },
+            "thinking": {
+              "default": "enabled",
+              "disableSupported": false,
+              "preserveReasoningContent": true
+            },
+            "reasoning": {
+              "supportedEfforts": [
+                "low",
+                "high",
+                "max"
+              ],
+              "defaultEffort": "high"
+            }
+          },
+          "billing": [],
+          "lifecycle": {
+            "status": "active"
+          },
+          "metadata": {
+            "attributes": {
+              "displayName": "Kimi K3.1 Pro",
+              "description": "Kimi Code K3.1 Pro，Plus/Moderato 及以上；预置按 262144 窗口，Pro/Allegretto 及以上可手动使用 1M；默认 high，输出上限未核实",
+              "source": "preset"
+            },
+            "recordedExtra": {},
+            "projection": {
+              "modelKeys": [
+                "modelName",
+                "displayName",
+                "serviceType",
+                "description",
+                "contextWindow",
+                "capabilities",
+                "extra",
+                "source"
+              ],
+              "extraKeys": [
+                "thinking",
+                "reasoning",
+                "thinkingOnly",
+                "samplingParametersDeprecated"
+              ]
+            },
+            "sourceRecord": "compute/coding-plans/moonshot-coding.json#k3.1-pro"
+          }
+        },
         {
           "apiModelId": "kimi-for-coding",
           "modelRef": null,

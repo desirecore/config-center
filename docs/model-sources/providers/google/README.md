@@ -11,6 +11,8 @@
 
 ## 模型
 
+- [`gemini-4-argon`](models/gemini-4-argon.md)
+
 - [`gemini-2.5-flash`](models/gemini-2.5-flash.md)
 - [`gemini-2.5-pro`](models/gemini-2.5-pro.md)
 - [`gemini-3-flash-preview`](models/gemini-3-flash-preview.md)

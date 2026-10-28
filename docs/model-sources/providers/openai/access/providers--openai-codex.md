@@ -20,6 +20,8 @@
 
 ## 关联模型
 
+- [`gpt-6.1-terra`](../models/gpt-6.1-terra.md)
+
 - [`gpt-6.1-sol`](../models/gpt-6.1-sol.md)
 - [`gpt-6-sol`](../models/gpt-6-sol.md)
 - [`gpt-6-luna`](../models/gpt-6-luna.md)

@@ -16,11 +16,16 @@
 以上是配置快照，不能据此宣布该端点或账号已实际验收。核查地域、套餐支持、凭据来源及协议时，对照官网证据目录并记录结论。
 
 <!-- source-config: compute/coding-plans/minimax-coding.json -->
-<!-- source-config-fingerprint: c46280c1b60448947a4e0b1bea1607dbe26b245edae0d6697663f818d67e5f93 -->
+<!-- source-config-fingerprint: 7f3b4b0f83a16c98770dfe55a95ffc1549be3ee97c8427dd115f6eedfd9cbd62 -->
+
+## 2026-10-28 型号更新
+
+M Plan 官网列出 M3.1 Flash 正式版并确认 Preview 下线。当前预置改用正式 ID；tombstones 增加 MiniMax-M3.1-Flash-Preview，端点、协议与其他存量模型保持原值，其他条目的既有核验边界不变。
 
 ## 关联模型
 
-- [`MiniMax-M3.1-Flash-Preview`](../models/minimax-m3.1-flash-preview.md)
+- [`MiniMax-M3.1-Flash`](../models/minimax-m3.1-flash.md)
+
 - [`MiniMax-M3`](../models/minimax-m3.md)
 - [`MiniMax-M2.7`](../models/minimax-m2.7.md)
 - [`MiniMax-M2.7-highspeed`](../models/minimax-m2.7-highspeed.md)

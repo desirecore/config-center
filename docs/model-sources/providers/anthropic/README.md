@@ -12,6 +12,8 @@
 
 ## 模型
 
+- [`claude-haiku-5-5`](models/claude-haiku-5-5.md)
+
 - [`claude-fable-5-1`](models/claude-fable-5-1.md)
 - [`claude-opus`](models/claude-opus.md)
 - [`claude-opus-4-7`](models/claude-opus-4-7.md)

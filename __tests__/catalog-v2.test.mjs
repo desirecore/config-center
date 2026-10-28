@@ -126,7 +126,7 @@ test('implemented Responses format handles explicit override and mandatory Respo
  const direct={...model,request:{apiFormatOverride:'openai-responses'}};assert.equal(resolveEffectiveModel(spec,direct,options).eligibleForCall,true);
  const only={...model,request:{responsesOnly:true}};const result=resolveEffectiveModel(spec,only,options);assert.equal(result.apiFormat,'openai-responses');assert.equal(result.request.apiFormatOverride,'openai-responses');assert.equal(result.eligibleForCall,true);
  assert.ok(resolveEffectiveModel(spec,{...model,request:{apiFormatOverride:'unimplemented-native-api'}},options).blockedReasons.includes('unknown-adapter'));
- const listed=catalog.accesses.flatMap(a=>a.models).filter(m=>m.request.responsesOnly);assert.equal(listed.length,3);for(const m of listed)assert.equal(m.metadata.recordedExtra.responsesOnly,undefined);
+ const listed=catalog.accesses.flatMap(a=>a.models).filter(m=>m.request.responsesOnly);assert.equal(listed.length,4);for(const m of listed)assert.equal(m.metadata.recordedExtra.responsesOnly,undefined);
 });
 
 test('root V1 is generated from canonical, rejects manual drift and never rewrites indexes or unrelated files',()=>{

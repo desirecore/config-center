@@ -7,6 +7,18 @@
   "models": [
     {
       "accessId": "provider-anthropic-claude-plan-001",
+      "apiModelId": "claude-haiku-5-5",
+      "digest": "628a9c27d78e66e70e000eadc532181858cb445eea401aaed423e6e4a22264cc",
+      "selectable": true,
+      "effectiveApiFormat": "anthropic-messages",
+      "effectiveApiModelId": "claude-haiku-5-5",
+      "eligibleForCall": true,
+      "eligibleForAutoRouting": false,
+      "manualOnly": false,
+      "blockedReasons": []
+    },
+    {
+      "accessId": "provider-anthropic-claude-plan-001",
       "apiModelId": "claude-opus-5-5",
       "digest": "6d37ade97de3e20595163456362ddf78b2e6224e5893664a9d0078ccd35ed25b",
       "selectable": true,
@@ -62,6 +74,18 @@
       "effectiveApiModelId": "claude-sonnet-5",
       "eligibleForCall": true,
       "eligibleForAutoRouting": true,
+      "manualOnly": false,
+      "blockedReasons": []
+    },
+    {
+      "accessId": "provider-anthropic-001",
+      "apiModelId": "claude-haiku-5-5",
+      "digest": "b3109b7c32534c07f714808e8225c179b581270b265af07dadf603dcb7fe1d38",
+      "selectable": true,
+      "effectiveApiFormat": "anthropic-messages",
+      "effectiveApiModelId": "claude-haiku-5-5",
+      "eligibleForCall": true,
+      "eligibleForAutoRouting": false,
       "manualOnly": false,
       "blockedReasons": []
     },
@@ -795,6 +819,18 @@
     },
     {
       "accessId": "provider-google-001",
+      "apiModelId": "gemini-4-argon",
+      "digest": "87111241690a4ccde1fe47159ec8ca9f8329138232470a23090fff2dea8aa0de",
+      "selectable": true,
+      "effectiveApiFormat": "google-generative-ai",
+      "effectiveApiModelId": "gemini-4-argon",
+      "eligibleForCall": true,
+      "eligibleForAutoRouting": false,
+      "manualOnly": false,
+      "blockedReasons": []
+    },
+    {
+      "accessId": "provider-google-001",
       "apiModelId": "gemini-embedding-2",
       "digest": "842a841b23259e134386ad1a6922c0cf30add3a107272c740ad266a8e0ea220e",
       "selectable": true,
@@ -1008,6 +1044,18 @@
       "blockedReasons": [
         "unsupported-adapter"
       ]
+    },
+    {
+      "accessId": "provider-minimax-001",
+      "apiModelId": "MiniMax-M3.1-Flash",
+      "digest": "cedd39d55f96e0d3608d094425e5093f1bc53d0946b1d7336fabe027d25e4afc",
+      "selectable": true,
+      "effectiveApiFormat": "anthropic-messages",
+      "effectiveApiModelId": "MiniMax-M3.1-Flash",
+      "eligibleForCall": true,
+      "eligibleForAutoRouting": false,
+      "manualOnly": false,
+      "blockedReasons": []
     },
     {
       "accessId": "provider-minimax-001",
@@ -1287,6 +1335,18 @@
     },
     {
       "accessId": "provider-mistral-001",
+      "apiModelId": "mistral-large-4",
+      "digest": "906000c0a39056e38ce6d24f8f81555906b5d3fcb9a2f25ff77b38fdd9c4348f",
+      "selectable": true,
+      "effectiveApiFormat": "openai-completions",
+      "effectiveApiModelId": "mistral-large-4",
+      "eligibleForCall": true,
+      "eligibleForAutoRouting": false,
+      "manualOnly": false,
+      "blockedReasons": []
+    },
+    {
+      "accessId": "provider-mistral-001",
       "apiModelId": "mistral-medium-3-5",
       "digest": "ce110511bdcb018f9f7160104c45579d6b2680eea544d73c8eb0dd8198247a1e",
       "selectable": true,
@@ -1340,6 +1400,30 @@
       "selectable": true,
       "effectiveApiFormat": "openai-completions",
       "effectiveApiModelId": "codestral-latest",
+      "eligibleForCall": true,
+      "eligibleForAutoRouting": false,
+      "manualOnly": false,
+      "blockedReasons": []
+    },
+    {
+      "accessId": "provider-moonshot-001",
+      "apiModelId": "kimi-k3.1-pro-highspeed",
+      "digest": "4bf0055d6c31761b1ea8ab7d6099f989a13adb132ca723172a9aae867df07303",
+      "selectable": true,
+      "effectiveApiFormat": "openai-completions",
+      "effectiveApiModelId": "kimi-k3.1-pro-highspeed",
+      "eligibleForCall": true,
+      "eligibleForAutoRouting": false,
+      "manualOnly": false,
+      "blockedReasons": []
+    },
+    {
+      "accessId": "provider-moonshot-001",
+      "apiModelId": "kimi-k3.1-pro",
+      "digest": "47fc595aac4c910da3424e1571b8e824024f7895c10c76145201178c96e94eae",
+      "selectable": true,
+      "effectiveApiFormat": "openai-completions",
+      "effectiveApiModelId": "kimi-k3.1-pro",
       "eligibleForCall": true,
       "eligibleForAutoRouting": false,
       "manualOnly": false,
@@ -1491,6 +1575,18 @@
     },
     {
       "accessId": "provider-openai-codex-plan-001",
+      "apiModelId": "gpt-6.1-terra",
+      "digest": "0e9f76a7e58fa2f14b265b83dc3d2a8c310b49be51b9a4529f8e53eb7cc0fa71",
+      "selectable": true,
+      "effectiveApiFormat": "openai-codex-responses",
+      "effectiveApiModelId": "gpt-6.1-terra",
+      "eligibleForCall": true,
+      "eligibleForAutoRouting": false,
+      "manualOnly": false,
+      "blockedReasons": []
+    },
+    {
+      "accessId": "provider-openai-codex-plan-001",
       "apiModelId": "gpt-6.1-sol",
       "digest": "96cc8c1d37fca0402f0cd93bcdcef3f2f2b2f6af51bfa7a2b4cb3de143793199",
       "selectable": true,
@@ -1630,6 +1726,18 @@
       "effectiveApiModelId": "gpt-5.3-codex-spark",
       "eligibleForCall": true,
       "eligibleForAutoRouting": true,
+      "manualOnly": false,
+      "blockedReasons": []
+    },
+    {
+      "accessId": "provider-openai-001",
+      "apiModelId": "gpt-6.1-terra",
+      "digest": "9ce9c752c7ef48477eb583c71ade7145d9eb057f3744ab4b4b634ff9a9d9845a",
+      "selectable": true,
+      "effectiveApiFormat": "openai-responses",
+      "effectiveApiModelId": "gpt-6.1-terra",
+      "eligibleForCall": true,
+      "eligibleForAutoRouting": false,
       "manualOnly": false,
       "blockedReasons": []
     },
@@ -2084,6 +2192,78 @@
       "selectable": true,
       "effectiveApiFormat": "openai-completions",
       "effectiveApiModelId": "o4-mini",
+      "eligibleForCall": true,
+      "eligibleForAutoRouting": false,
+      "manualOnly": false,
+      "blockedReasons": []
+    },
+    {
+      "accessId": "provider-openrouter-001",
+      "apiModelId": "mistralai/mistral-large-4-0",
+      "digest": "401911eb9f4fae8ccb1e7df32e524e49e8e964f7597066eefca6b50fdb53c4d0",
+      "selectable": true,
+      "effectiveApiFormat": "openai-completions",
+      "effectiveApiModelId": "mistralai/mistral-large-4-0",
+      "eligibleForCall": true,
+      "eligibleForAutoRouting": false,
+      "manualOnly": false,
+      "blockedReasons": []
+    },
+    {
+      "accessId": "provider-openrouter-001",
+      "apiModelId": "google/gemini-4-argon",
+      "digest": "5edb24287964066cac151a1df68e832e560665b4bf0855c9717c262afaf4f29c",
+      "selectable": true,
+      "effectiveApiFormat": "openai-completions",
+      "effectiveApiModelId": "google/gemini-4-argon",
+      "eligibleForCall": true,
+      "eligibleForAutoRouting": false,
+      "manualOnly": false,
+      "blockedReasons": []
+    },
+    {
+      "accessId": "provider-openrouter-001",
+      "apiModelId": "moonshotai/kimi-k3.1-pro",
+      "digest": "35db568215d638fc590de06d80951efdb8bcac4fe70f52022e077520740df8f5",
+      "selectable": true,
+      "effectiveApiFormat": "openai-completions",
+      "effectiveApiModelId": "moonshotai/kimi-k3.1-pro",
+      "eligibleForCall": true,
+      "eligibleForAutoRouting": false,
+      "manualOnly": false,
+      "blockedReasons": []
+    },
+    {
+      "accessId": "provider-openrouter-001",
+      "apiModelId": "minimax/minimax-m3.1-flash",
+      "digest": "c8a8e934a7b7300045f962d4566c3a241db75cfe4cfc9a6d480880415567af85",
+      "selectable": true,
+      "effectiveApiFormat": "openai-completions",
+      "effectiveApiModelId": "minimax/minimax-m3.1-flash",
+      "eligibleForCall": true,
+      "eligibleForAutoRouting": false,
+      "manualOnly": false,
+      "blockedReasons": []
+    },
+    {
+      "accessId": "provider-openrouter-001",
+      "apiModelId": "anthropic/claude-haiku-5.5",
+      "digest": "abb2cbfa1eab73cce662fdcd8da40f27942dedf7f179b24a9d67179bc9fbca5c",
+      "selectable": true,
+      "effectiveApiFormat": "openai-completions",
+      "effectiveApiModelId": "anthropic/claude-haiku-5.5",
+      "eligibleForCall": true,
+      "eligibleForAutoRouting": false,
+      "manualOnly": false,
+      "blockedReasons": []
+    },
+    {
+      "accessId": "provider-openrouter-001",
+      "apiModelId": "openai/gpt-6.1-terra",
+      "digest": "f1eb16f10c8674b99bab9eeac68b0b323b6747095770552ebc5efa3e080ef1e8",
+      "selectable": true,
+      "effectiveApiFormat": "openai-completions",
+      "effectiveApiModelId": "openai/gpt-6.1-terra",
       "eligibleForCall": true,
       "eligibleForAutoRouting": false,
       "manualOnly": false,
@@ -3603,11 +3783,11 @@
     },
     {
       "accessId": "provider-minimax-coding-001",
-      "apiModelId": "MiniMax-M3.1-Flash-Preview",
-      "digest": "5fdd278efa9df26674081a8a2142fdc0ca0b550855874d481fc7d88a38cc9928",
+      "apiModelId": "MiniMax-M3.1-Flash",
+      "digest": "bb1ce6765179496b5d120ccc8358b988bca2b95a3a03ef3628144f20fbd5d8bd",
       "selectable": true,
       "effectiveApiFormat": "anthropic-messages",
-      "effectiveApiModelId": "MiniMax-M3.1-Flash-Preview",
+      "effectiveApiModelId": "MiniMax-M3.1-Flash",
       "eligibleForCall": true,
       "eligibleForAutoRouting": false,
       "manualOnly": false,
@@ -3732,6 +3912,30 @@
       "selectable": true,
       "effectiveApiFormat": "anthropic-messages",
       "effectiveApiModelId": "music-2.6",
+      "eligibleForCall": true,
+      "eligibleForAutoRouting": false,
+      "manualOnly": false,
+      "blockedReasons": []
+    },
+    {
+      "accessId": "provider-moonshot-coding-001",
+      "apiModelId": "k3.1-pro-highspeed",
+      "digest": "3dd831ef4d1ff3847cbce985fec75395c8fb6ebe4d34a48f944824446cd265d6",
+      "selectable": true,
+      "effectiveApiFormat": "openai-completions",
+      "effectiveApiModelId": "k3.1-pro-highspeed",
+      "eligibleForCall": true,
+      "eligibleForAutoRouting": false,
+      "manualOnly": false,
+      "blockedReasons": []
+    },
+    {
+      "accessId": "provider-moonshot-coding-001",
+      "apiModelId": "k3.1-pro",
+      "digest": "a7413c44f3f48be88d4d9e9bb70cb3b3f4fafa83cafd74510c5d3621b9dceef0",
+      "selectable": true,
+      "effectiveApiFormat": "openai-completions",
+      "effectiveApiModelId": "k3.1-pro",
       "eligibleForCall": true,
       "eligibleForAutoRouting": false,
       "manualOnly": false,

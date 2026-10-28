@@ -105,7 +105,7 @@ describe('真实数据全量校验', () => {
         if (spec.routing) routed.push(spec)
       }
     }
-    assert.equal(routed.length, 60)
+    assert.equal(routed.length, 67)
     assert.equal(routed.every((spec) => spec.routing.reasoning.supportedModes.includes(spec.routing.reasoning.defaultMode)), true)
     assert.equal(routed.every((spec) => Array.isArray(spec.spec.capabilities)), true)
   })
@@ -798,7 +798,7 @@ describe('真实数据全量校验', () => {
     // docs.z.ai/devpack/latest-model）写明 /api/anthropic 以 thinking.type 与 output_config.effort 控制强度，
     // thinking.type=enabled 一律按默认 max 处理，budget_tokens 不是控制项；不声明 adaptive，客户端发出的
     // 档位在上游全部变成 max，且 max 档无法发出（desirecore 档位协商回退到 max 后在本机拒绝）。
-    const adaptiveGeneration = /^claude-(?:fable|mythos)(?:$|-)|^claude-(?:opus|sonnet)-(?:[5-9]|[1-9]\d)(?:$|-)|^claude-opus-4-[78](?:$|-)|^minimax-m3-1-flash-preview$|^glm-5-3(?:-flashx?)?$/
+    const adaptiveGeneration = /^claude-(?:fable|mythos)(?:$|-)|^claude-(?:opus|sonnet)-(?:[5-9]|[1-9]\d)(?:$|-)|^claude-haiku-5-5(?:$|-)|^claude-opus-4-[78](?:$|-)|^minimax-m3-1-flash(?:-preview)?$|^glm-5-3(?:-flashx?)?$/
     const thinkingOnlyGeneration = /^claude-(?:fable|mythos)(?:$|-)|^claude-opus-5-5(?:$|-)/
     // 与客户端匹配器同口径：小写、去 vendor 前缀、统一分隔符
     const normalizeId = (id) => id.toLowerCase().trim().split('/').at(-1).replace(/[._:\s]+/g, '-')
@@ -808,7 +808,7 @@ describe('真实数据全量校验', () => {
 
     it('规格按代际声明 adaptiveThinking，并标记始终开启思考的模型', () => {
       const adaptiveSpecIds = allSpecs.map((item) => item.id).filter((id) => adaptiveGeneration.test(normalizeId(id)))
-      for (const id of ['claude-fable-5-1', 'claude-opus-5-5', 'claude-opus-5', 'claude-opus-4-8', 'claude-opus-4-7', 'claude-sonnet-5']) {
+      for (const id of ['claude-fable-5-1', 'claude-opus-5-5', 'claude-opus-5', 'claude-opus-4-8', 'claude-opus-4-7', 'claude-sonnet-5', 'claude-haiku-5-5', 'MiniMax-M3.1-Flash']) {
         assert.ok(adaptiveSpecIds.includes(id), `model-specs 缺少 ${id}`)
       }
       for (const modelSpec of allSpecs) {
@@ -945,9 +945,11 @@ describe('真实数据全量校验', () => {
     assert.equal(kimi.outputPrice, 100)
     assert.equal(kimi.extra.cacheHitPrice, 2)
     const previewId = 'MiniMax-M3.1-Flash-Preview'
-    const preview = findModel('coding-plans', 'minimax-coding', previewId)
-    assert.equal(preview.extra.thinkingOnly, true)
-    assert.equal(preview.extra.reasoning.defaultEffort, 'max')
+    const formal = findModel('coding-plans', 'minimax-coding', 'MiniMax-M3.1-Flash')
+    assert.equal(formal.extra.thinkingOnly, true)
+    assert.equal(formal.extra.reasoning.defaultEffort, 'max')
+    assert.equal(read('coding-plans', 'minimax-coding').models.some((item) => item.modelName === previewId), false)
+    assert.ok(read('coding-plans', 'minimax-coding').tombstones.includes(previewId))
     assert.equal(read('providers', 'minimax').models.some((item) => item.modelName === previewId), false)
     const embed = findModel('providers', 'cohere', 'embed-v5.0-pro')
     assert.equal(embed.extra.dimensions, undefined, '当前兼容 API 不支持 dimensions 参数')

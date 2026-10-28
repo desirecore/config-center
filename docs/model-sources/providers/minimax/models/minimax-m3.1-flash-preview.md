@@ -7,59 +7,15 @@
 
 ## 适用接入面
 
-- [compute/coding-plans/minimax-coding.json](../access/coding-plans--minimax-coding.md)
 - [compute/model-specs/minimax.json](../access/model-specs--minimax.md)
+
+## 2026-10-28 生命周期说明
+
+M Plan 官网明确 Preview 已下线，旧请求名转发正式 M3.1 Flash。本次移除套餐中的旧预置并添加 tombstone；共享规格及以下 2026-10-03 原始证据保留，V2 生命周期改为 historical，不视为当前可调用型号。正式版见 [MiniMax-M3.1-Flash](minimax-m3.1-flash.md)。
 
 ## 字段级来源记录
 
 各接入面分开记录；价格为 inputPrice/outputPrice 快照，具体单位和限制看配置及引用官网。partial 只确认已列字段，不代表全部参数、平台可用性或账号调用已验收。
-
-### compute/coding-plans/minimax-coding.json
-
-[查看配置](../../../../../compute/coding-plans/minimax-coding.json) · [接入面说明](../access/coding-plans--minimax-coding.md)
-
-当前配置详情（不是全部官网确认值；routing 是本仓策略）：
-
-<!-- source-details: {"config":"compute/coding-plans/minimax-coding.json","id":"MiniMax-M3.1-Flash-Preview"} -->
-```json
-{
-  "contextWindow": 1000000,
-  "serviceType": [
-    "chat",
-    "reasoning",
-    "vision"
-  ],
-  "capabilities": [
-    "chat",
-    "reasoning",
-    "code",
-    "vision",
-    "video_understanding",
-    "tool_use",
-    "agent",
-    "long_context"
-  ],
-  "extra.reasoning": {
-    "supportedEfforts": [
-      "low",
-      "medium",
-      "high",
-      "xhigh",
-      "max"
-    ],
-    "defaultEffort": "max"
-  },
-  "extra.thinkingOnly": true,
-  "extra.adaptiveThinking": true
-}
-```
-<!-- source-details:end -->
-
-<!-- source-config: compute/coding-plans/minimax-coding.json -->
-
-| 模型 ID | 上下文 / 输出 | 计价 | 已核字段→来源 | 来源入口 | 状态 | 数据指纹 |
-| --- | --- | --- | --- | --- | --- | --- |
-| `MiniMax-M3.1-Flash-Preview` | 1000000 / 未声明 | 套餐：未声明 / 未声明 | `contextWindow`→[minimax-anthropic](../SOURCES.md#minimax-anthropic), `extra.adaptiveThinking`→[minimax-anthropic](../SOURCES.md#minimax-anthropic), `extra.reasoning.defaultEffort`→[minimax-anthropic](../SOURCES.md#minimax-anthropic), `extra.reasoning.supportedEfforts`→[minimax-anthropic](../SOURCES.md#minimax-anthropic), `extra.thinkingOnly`→[minimax-anthropic](../SOURCES.md#minimax-anthropic), `modelName`→[minimax-models](../SOURCES.md#minimax-models) | [minimax-anthropic](../SOURCES.md#minimax-anthropic), [minimax-models](../SOURCES.md#minimax-models) | partial | `7e0cc90e1db63586b645a419cf0857279670f8786ade3ed2c97267dbedeadff5` |
 
 ### compute/model-specs/minimax.json
 

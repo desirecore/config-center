@@ -20,6 +20,8 @@
 
 ## 关联模型
 
+- [`MiniMax-M3.1-Flash`](../models/minimax-m3.1-flash.md)
+
 - [`MiniMax-M3`](../models/minimax-m3.md)
 - [`MiniMax-M2.7`](../models/minimax-m2.7.md)
 - [`MiniMax-M2.7-highspeed`](../models/minimax-m2.7-highspeed.md)

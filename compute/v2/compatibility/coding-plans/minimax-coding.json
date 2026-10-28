@@ -28,30 +28,31 @@
       "consoleUrl": "https://platform.minimaxi.com/"
     }
   },
+  "tombstones": [
+    "MiniMax-M3.1-Flash-Preview"
+  ],
   "models": [
     {
-      "modelName": "MiniMax-M3.1-Flash-Preview",
-      "displayName": "MiniMax M3.1 Flash Preview",
-      "capabilities": [
-        "chat",
-        "reasoning",
-        "code",
-        "vision",
-        "video_understanding",
-        "tool_use",
-        "agent",
-        "long_context"
-      ],
+      "modelName": "MiniMax-M3.1-Flash",
+      "displayName": "MiniMax M3.1 Flash",
       "serviceType": [
         "chat",
         "reasoning",
         "vision"
       ],
-      "description": "MiniMax M3.1 Flash Preview，目前仅通过 M Plan / MiniMax Code 提供",
+      "description": "MiniMax M3.1 Flash 正式版，M Plan 各档均可用；按订阅额度计费，替代已下线 Preview 预置",
       "contextWindow": 1000000,
+      "maxOutputTokens": 524288,
+      "capabilities": [
+        "chat",
+        "reasoning",
+        "code",
+        "vision",
+        "tool_use",
+        "long_context",
+        "video_understanding"
+      ],
       "extra": {
-        "adaptiveThinking": true,
-        "thinkingOnly": true,
         "reasoning": {
           "supportedEfforts": [
             "low",
@@ -61,7 +62,10 @@
             "max"
           ],
           "defaultEffort": "max"
-        }
+        },
+        "adaptiveThinking": true,
+        "thinkingOnly": true,
+        "samplingParametersDeprecated": true
       },
       "source": "preset"
     },

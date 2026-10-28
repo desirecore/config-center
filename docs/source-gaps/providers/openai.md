@@ -88,7 +88,7 @@
 | [`whisper-1`](../../model-sources/providers/openai/models/whisper-1.md) | [`compute/model-specs/openai.json`](../../../compute/model-specs/openai.json) | `id` | [openai-models](../../model-sources/providers/openai/SOURCES.md#openai-models)：fetched |
 | [`whisper-large-v3`](../../model-sources/providers/openai/models/whisper-large-v3.md) | [`compute/providers/local-whisper.json`](../../../compute/providers/local-whisper.json) | `modelName` | [openai-models](../../model-sources/providers/openai/SOURCES.md#openai-models)：fetched |
 
-## 仅确认 ID，参数来源未登记（10 条）
+## 仅确认 ID，参数来源未登记（11 条）
 
 | 模型 | 接入面 | 未登记证明的关键字段 | 官网入口/读取结果 |
 | --- | --- | --- | --- |
@@ -100,10 +100,11 @@
 | [`gpt-6-luna`](../../model-sources/providers/openai/models/gpt-6-luna.md) | [`compute/providers/openai-codex.json`](../../../compute/providers/openai-codex.json) | `contextWindow`、`extra.reasoning.defaultEffort`、`extra.reasoning.supportedEfforts`、`maxOutputTokens` | [openai-models](../../model-sources/providers/openai/SOURCES.md#openai-models)：fetched |
 | [`gpt-6-luna`](../../model-sources/providers/openai/models/gpt-6-luna.md) | [`compute/providers/openai.json`](../../../compute/providers/openai.json) | `contextWindow`、`extra.cachedInputPrice`、`extra.reasoning.defaultEffort`、`extra.reasoning.supportedEfforts`、`extra.serverSideWebSearch.searchRequestPriceUsd`、`inputPrice`、`maxOutputTokens`、`outputPrice` | [openai-models](../../model-sources/providers/openai/SOURCES.md#openai-models)：fetched |
 | [`gpt-6-luna`](../../model-sources/providers/openai/models/gpt-6-luna.md) | [`compute/model-specs/openai.json`](../../../compute/model-specs/openai.json) | `spec.contextWindow`、`spec.maxOutputTokens`、`spec.supportsReasoning` | [openai-models](../../model-sources/providers/openai/SOURCES.md#openai-models)：fetched |
+| [`gpt-6.1-terra`](../../model-sources/providers/openai/models/gpt-6.1-terra.md) | [`compute/providers/openai-codex.json`](../../../compute/providers/openai-codex.json) | `contextWindow`、`extra.reasoning.defaultEffort`、`extra.reasoning.supportedEfforts`、`maxOutputTokens` | [openai-terra61-codex](../../model-sources/providers/openai/SOURCES.md#openai-terra61-codex)：fetched |
 | [`gpt-realtime-2.1`](../../model-sources/providers/openai/models/gpt-realtime-2.1.md) | [`compute/providers/openai.json`](../../../compute/providers/openai.json) | `contextWindow`、`extra.audioCachedInputPrice`、`extra.audioInputPrice`、`extra.audioOutputPrice`、`extra.imageCachedInputPrice`、`extra.imageInputPrice`、`extra.textCachedInputPrice`、`inputPrice`、`maxOutputTokens`、`outputPrice` | [openai-models](../../model-sources/providers/openai/SOURCES.md#openai-models)：fetched |
 | [`gpt-realtime-translate`](../../model-sources/providers/openai/models/gpt-realtime-translate.md) | [`compute/providers/openai.json`](../../../compute/providers/openai.json) | `contextWindow`、`extra.audioOutputPricePerMinute`、`maxOutputTokens` | [openai-models](../../model-sources/providers/openai/SOURCES.md#openai-models)：fetched |
 
-## 已有部分参数证明，仍需区分未证明字段（17 条）
+## 已有部分参数证明，仍需区分未证明字段（19 条）
 
 | 模型 | 接入面 | 未登记证明的关键字段 | 官网入口/读取结果 |
 | --- | --- | --- | --- |
@@ -121,6 +122,8 @@
 | [`gpt-6.1-sol`](../../model-sources/providers/openai/models/gpt-6.1-sol.md) | [`compute/providers/openai-codex.json`](../../../compute/providers/openai-codex.json) | `extra.reasoning.defaultEffort`、`extra.reasoning.supportedEfforts` | [openai-models](../../model-sources/providers/openai/SOURCES.md#openai-models)：fetched；[openai-sol61](../../model-sources/providers/openai/SOURCES.md#openai-sol61)：fetched |
 | [`gpt-6.1-sol`](../../model-sources/providers/openai/models/gpt-6.1-sol.md) | [`compute/providers/openai.json`](../../../compute/providers/openai.json) | `extra.serverSideWebSearch.searchRequestPriceUsd` | [openai-models](../../model-sources/providers/openai/SOURCES.md#openai-models)：fetched；[openai-sol61](../../model-sources/providers/openai/SOURCES.md#openai-sol61)：fetched |
 | [`gpt-6.1-sol`](../../model-sources/providers/openai/models/gpt-6.1-sol.md) | [`compute/model-specs/openai.json`](../../../compute/model-specs/openai.json) | `spec.supportsReasoning` | [openai-models](../../model-sources/providers/openai/SOURCES.md#openai-models)：fetched；[openai-sol61](../../model-sources/providers/openai/SOURCES.md#openai-sol61)：fetched |
+| [`gpt-6.1-terra`](../../model-sources/providers/openai/models/gpt-6.1-terra.md) | [`compute/model-specs/openai.json`](../../../compute/model-specs/openai.json) | 已登记关键字段都有证明；其他合同限制仍按原记录复核 | [openai-terra61](../../model-sources/providers/openai/SOURCES.md#openai-terra61)：fetched |
+| [`gpt-6.1-terra`](../../model-sources/providers/openai/models/gpt-6.1-terra.md) | [`compute/providers/openai.json`](../../../compute/providers/openai.json) | 已登记关键字段都有证明；其他合同限制仍按原记录复核 | [openai-terra61](../../model-sources/providers/openai/SOURCES.md#openai-terra61)：fetched |
 | [`gpt-realtime-2.1-mini`](../../model-sources/providers/openai/models/gpt-realtime-2.1-mini.md) | [`compute/model-specs/openai.json`](../../../compute/model-specs/openai.json) | 已登记关键字段都有证明；其他合同限制仍按原记录复核 | [realtime21mini-spec](../../model-sources/providers/openai/SOURCES.md#realtime21mini-spec)：fetched |
 | [`gpt-realtime-2.1`](../../model-sources/providers/openai/models/gpt-realtime-2.1.md) | [`compute/model-specs/openai.json`](../../../compute/model-specs/openai.json) | 已登记关键字段都有证明；其他合同限制仍按原记录复核 | [realtime21-spec](../../model-sources/providers/openai/SOURCES.md#realtime21-spec)：fetched |
 | [`gpt-realtime-translate`](../../model-sources/providers/openai/models/gpt-realtime-translate.md) | [`compute/model-specs/openai.json`](../../../compute/model-specs/openai.json) | 已登记关键字段都有证明；其他合同限制仍按原记录复核 | [realtimetranslate-spec](../../model-sources/providers/openai/SOURCES.md#realtimetranslate-spec)：fetched |

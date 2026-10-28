@@ -2,7 +2,59 @@
   "description": "MiniMax 系列模型规格。参数来源：config-center compute/providers/minimax.json。id 保留上游 model_name 原始写法（含大小写与点号），匹配时由匹配器归一化处理。",
   "specs": [
     {
-      "id": "MiniMax-H3-Max",
+      "displayName": "MiniMax M3.1 Flash",
+      "family": "minimax-m3.1-flash",
+      "match": {
+        "exact": [
+          "MiniMax-M3.1-Flash",
+          "minimax/minimax-m3.1-flash"
+        ]
+      },
+      "id": "MiniMax-M3.1-Flash",
+      "spec": {
+        "contextWindow": 1000000,
+        "maxOutputTokens": 524288,
+        "capabilities": [
+          "chat",
+          "reasoning",
+          "code",
+          "vision",
+          "tool_use",
+          "long_context",
+          "video_understanding"
+        ],
+        "serviceType": [
+          "chat",
+          "reasoning",
+          "vision"
+        ],
+        "supportsReasoning": true,
+        "description": "MiniMax M3.1 Flash 正式版，100 万上下文；强制思考，low/medium/high/xhigh/max，默认 max",
+        "extra": {
+          "adaptiveThinking": true,
+          "thinkingOnly": true,
+          "samplingParametersDeprecated": true
+        }
+      },
+      "routing": {
+        "tier": "balanced",
+        "routingPriority": 50,
+        "eligibleForAgent": false,
+        "defaultReference": false,
+        "reasoning": {
+          "supportedModes": [
+            "auto",
+            "low",
+            "medium",
+            "high",
+            "xhigh",
+            "max"
+          ],
+          "defaultMode": "max"
+        }
+      }
+    },
+    {
       "displayName": "MiniMax H3 Max",
       "family": "MiniMax-H3-Max",
       "match": {
@@ -10,6 +62,7 @@
           "MiniMax-H3-Max"
         ]
       },
+      "id": "MiniMax-H3-Max",
       "spec": {
         "capabilities": [
           "video_generation",
@@ -25,7 +78,6 @@
       }
     },
     {
-      "id": "MiniMax-H3",
       "displayName": "MiniMax H3",
       "family": "MiniMax-H3",
       "match": {
@@ -33,6 +85,7 @@
           "MiniMax-H3"
         ]
       },
+      "id": "MiniMax-H3",
       "spec": {
         "capabilities": [
           "video_generation",
@@ -48,7 +101,6 @@
       }
     },
     {
-      "id": "MiniMax-M3.1-Flash-Preview",
       "displayName": "MiniMax M3.1 Flash Preview",
       "family": "MiniMax-M3.1-Flash-Preview",
       "match": {
@@ -56,6 +108,7 @@
           "MiniMax-M3.1-Flash-Preview"
         ]
       },
+      "id": "MiniMax-M3.1-Flash-Preview",
       "spec": {
         "capabilities": [
           "chat",
@@ -82,7 +135,6 @@
       }
     },
     {
-      "id": "MiniMax-M3",
       "displayName": "MiniMax M3",
       "family": "minimax-m3",
       "match": {
@@ -93,6 +145,7 @@
           "MiniMax-M3*"
         ]
       },
+      "id": "MiniMax-M3",
       "spec": {
         "contextWindow": 1000000,
         "maxOutputTokens": 524288,
@@ -132,9 +185,9 @@
       }
     },
     {
-      "id": "MiniMax-M2.7",
       "displayName": "MiniMax M2.7",
       "family": "minimax-m2.7",
+      "id": "MiniMax-M2.7",
       "spec": {
         "contextWindow": 204800,
         "maxOutputTokens": 204800,
@@ -153,9 +206,9 @@
       }
     },
     {
-      "id": "MiniMax-M2.5",
       "displayName": "MiniMax M2.5",
       "family": "minimax-m2.5",
+      "id": "MiniMax-M2.5",
       "spec": {
         "contextWindow": 204800,
         "maxOutputTokens": 204800,
@@ -175,9 +228,9 @@
       }
     },
     {
-      "id": "MiniMax-M2",
       "displayName": "MiniMax M2",
       "family": "minimax-m2",
+      "id": "MiniMax-M2",
       "spec": {
         "contextWindow": 204800,
         "maxOutputTokens": 204800,
@@ -193,7 +246,6 @@
       }
     },
     {
-      "id": "MiniMax-M2.7-highspeed",
       "displayName": "MiniMax M2.7 高速版",
       "family": "minimax-m2.7",
       "match": {
@@ -201,6 +253,7 @@
           "MiniMax-M2.7-highspeed"
         ]
       },
+      "id": "MiniMax-M2.7-highspeed",
       "spec": {
         "contextWindow": 204800,
         "maxOutputTokens": 204800,
@@ -219,7 +272,6 @@
       }
     },
     {
-      "id": "MiniMax-M2.5-highspeed",
       "displayName": "MiniMax M2.5 高速版",
       "family": "minimax-m2.5",
       "match": {
@@ -227,6 +279,7 @@
           "MiniMax-M2.5-highspeed"
         ]
       },
+      "id": "MiniMax-M2.5-highspeed",
       "spec": {
         "contextWindow": 204800,
         "maxOutputTokens": 204800,
@@ -245,7 +298,6 @@
       }
     },
     {
-      "id": "MiniMax-M2.1",
       "displayName": "MiniMax M2.1",
       "family": "minimax-m2.1",
       "match": {
@@ -253,6 +305,7 @@
           "MiniMax-M2.1"
         ]
       },
+      "id": "MiniMax-M2.1",
       "spec": {
         "contextWindow": 204800,
         "maxOutputTokens": 204800,
@@ -270,7 +323,6 @@
       }
     },
     {
-      "id": "MiniMax-M2.1-highspeed",
       "displayName": "MiniMax M2.1 高速版",
       "family": "minimax-m2.1",
       "match": {
@@ -278,6 +330,7 @@
           "MiniMax-M2.1-highspeed"
         ]
       },
+      "id": "MiniMax-M2.1-highspeed",
       "spec": {
         "contextWindow": 204800,
         "maxOutputTokens": 204800,
@@ -296,7 +349,6 @@
       }
     },
     {
-      "id": "M2-her",
       "displayName": "MiniMax M2 Her",
       "family": "minimax-m2",
       "match": {
@@ -304,6 +356,7 @@
           "M2-her"
         ]
       },
+      "id": "M2-her",
       "spec": {
         "capabilities": [
           "chat",
@@ -317,7 +370,6 @@
       }
     },
     {
-      "id": "MiniMax-Text-01",
       "displayName": "MiniMax Text 01",
       "family": "minimax-text",
       "match": {
@@ -325,6 +377,7 @@
           "MiniMax-Text-01"
         ]
       },
+      "id": "MiniMax-Text-01",
       "spec": {
         "contextWindow": 1000000,
         "maxOutputTokens": 131072,
@@ -342,7 +395,6 @@
       }
     },
     {
-      "id": "image-01",
       "displayName": "MiniMax Image 01",
       "family": "minimax-image",
       "match": {
@@ -350,6 +402,7 @@
           "image-01"
         ]
       },
+      "id": "image-01",
       "spec": {
         "capabilities": [
           "image_generation",
@@ -375,7 +428,6 @@
       }
     },
     {
-      "id": "image-01-live",
       "displayName": "MiniMax Image 01 Live",
       "family": "minimax-image",
       "match": {
@@ -383,6 +435,7 @@
           "image-01-live"
         ]
       },
+      "id": "image-01-live",
       "spec": {
         "capabilities": [
           "image_generation",
@@ -397,7 +450,6 @@
       }
     },
     {
-      "id": "speech-2.8-hd",
       "displayName": "MiniMax Speech 2.8 HD",
       "family": "minimax-speech",
       "match": {
@@ -405,6 +457,7 @@
           "speech-2.8-hd"
         ]
       },
+      "id": "speech-2.8-hd",
       "spec": {
         "capabilities": [
           "tts",
@@ -420,7 +473,6 @@
       }
     },
     {
-      "id": "speech-2.8-turbo",
       "displayName": "MiniMax Speech 2.8 Turbo",
       "family": "minimax-speech",
       "match": {
@@ -428,6 +480,7 @@
           "speech-2.8-turbo"
         ]
       },
+      "id": "speech-2.8-turbo",
       "spec": {
         "capabilities": [
           "tts",
@@ -443,7 +496,6 @@
       }
     },
     {
-      "id": "speech-2.6-hd",
       "displayName": "MiniMax Speech 2.6 HD",
       "family": "minimax-speech",
       "match": {
@@ -451,6 +503,7 @@
           "speech-2.6-hd"
         ]
       },
+      "id": "speech-2.6-hd",
       "spec": {
         "capabilities": [
           "tts",
@@ -466,7 +519,6 @@
       }
     },
     {
-      "id": "speech-2.6-turbo",
       "displayName": "MiniMax Speech 2.6 Turbo",
       "family": "minimax-speech",
       "match": {
@@ -474,6 +526,7 @@
           "speech-2.6-turbo"
         ]
       },
+      "id": "speech-2.6-turbo",
       "spec": {
         "capabilities": [
           "tts",
@@ -489,7 +542,6 @@
       }
     },
     {
-      "id": "speech-02-hd",
       "displayName": "MiniMax Speech 02 HD",
       "family": "minimax-speech",
       "match": {
@@ -497,6 +549,7 @@
           "speech-02-hd"
         ]
       },
+      "id": "speech-02-hd",
       "spec": {
         "capabilities": [
           "tts",
@@ -511,7 +564,6 @@
       }
     },
     {
-      "id": "speech-02-turbo",
       "displayName": "MiniMax Speech 02 Turbo",
       "family": "minimax-speech",
       "match": {
@@ -519,6 +571,7 @@
           "speech-02-turbo"
         ]
       },
+      "id": "speech-02-turbo",
       "spec": {
         "capabilities": [
           "tts",
@@ -533,7 +586,6 @@
       }
     },
     {
-      "id": "MiniMax-Hailuo-2.3",
       "displayName": "海螺视频 2.3",
       "family": "minimax-hailuo",
       "match": {
@@ -541,6 +593,7 @@
           "MiniMax-Hailuo-2.3"
         ]
       },
+      "id": "MiniMax-Hailuo-2.3",
       "spec": {
         "capabilities": [
           "video_generation",
@@ -569,7 +622,6 @@
       }
     },
     {
-      "id": "MiniMax-Hailuo-2.3-Fast",
       "displayName": "海螺视频 2.3 快速版",
       "family": "minimax-hailuo-2.3-fast",
       "match": {
@@ -578,6 +630,7 @@
           "MiniMax-Hailuo-2.3-fast"
         ]
       },
+      "id": "MiniMax-Hailuo-2.3-Fast",
       "spec": {
         "capabilities": [
           "video_generation",
@@ -605,7 +658,6 @@
       }
     },
     {
-      "id": "T2V-01-Director",
       "displayName": "海螺视频 Director",
       "family": "minimax-hailuo",
       "match": {
@@ -613,6 +665,7 @@
           "T2V-01-Director"
         ]
       },
+      "id": "T2V-01-Director",
       "spec": {
         "capabilities": [
           "video_generation",
@@ -627,7 +680,6 @@
       }
     },
     {
-      "id": "MiniMax-Hailuo-02",
       "displayName": "海螺视频 02",
       "family": "minimax-hailuo",
       "match": {
@@ -635,6 +687,7 @@
           "MiniMax-Hailuo-02"
         ]
       },
+      "id": "MiniMax-Hailuo-02",
       "spec": {
         "capabilities": [
           "video_generation",
@@ -649,7 +702,6 @@
       }
     },
     {
-      "id": "S2V-01",
       "displayName": "海螺视频 主体参考",
       "family": "minimax-hailuo",
       "match": {
@@ -657,6 +709,7 @@
           "S2V-01"
         ]
       },
+      "id": "S2V-01",
       "spec": {
         "capabilities": [
           "video_generation",
@@ -670,7 +723,6 @@
       }
     },
     {
-      "id": "music-2.6",
       "displayName": "MiniMax Music 2.6",
       "family": "minimax-music",
       "match": {
@@ -678,6 +730,7 @@
           "music-2.6"
         ]
       },
+      "id": "music-2.6",
       "spec": {
         "capabilities": [
           "music_generation",
@@ -692,7 +745,6 @@
       }
     },
     {
-      "id": "music-2.5+",
       "displayName": "MiniMax Music 2.5+",
       "family": "minimax-music",
       "match": {
@@ -700,6 +752,7 @@
           "music-2.5+"
         ]
       },
+      "id": "music-2.5+",
       "spec": {
         "capabilities": [
           "music_generation",
@@ -714,7 +767,6 @@
       }
     },
     {
-      "id": "music-2.5",
       "displayName": "MiniMax Music 2.5",
       "family": "minimax-music",
       "match": {
@@ -722,6 +774,7 @@
           "music-2.5"
         ]
       },
+      "id": "music-2.5",
       "spec": {
         "capabilities": [
           "music_generation",
@@ -736,7 +789,6 @@
       }
     },
     {
-      "id": "music-cover",
       "displayName": "MiniMax Music Cover",
       "family": "minimax-music",
       "match": {
@@ -744,6 +796,7 @@
           "music-cover"
         ]
       },
+      "id": "music-cover",
       "spec": {
         "capabilities": [
           "music_generation",

@@ -25,11 +25,13 @@
 
 无该类记录。
 
-## 已有部分参数证明，仍需区分未证明字段（5 条）
+## 已有部分参数证明，仍需区分未证明字段（7 条）
 
 | 模型 | 接入面 | 未登记证明的关键字段 | 官网入口/读取结果 |
 | --- | --- | --- | --- |
 | [`codestral-latest`](../../model-sources/providers/mistral/models/codestral-latest.md) | [`compute/providers/mistral.json`](../../../compute/providers/mistral.json) | `contextWindow`、`defaultTemperature`、`defaultTopP`、`maxOutputTokens`、`modelName` | [mistral-models](../../model-sources/providers/mistral/SOURCES.md#mistral-models)：fetched；[codestral2508](../../model-sources/providers/mistral/SOURCES.md#codestral2508)：fetched |
+| [`mistral-large-4`](../../model-sources/providers/mistral/models/mistral-large-4.md) | [`compute/model-specs/mistral.json`](../../../compute/model-specs/mistral.json) | 已登记关键字段都有证明；其他合同限制仍按原记录复核 | [mistral-large4](../../model-sources/providers/mistral/SOURCES.md#mistral-large4)：fetched；[mistral-large4-reasoning](../../model-sources/providers/mistral/SOURCES.md#mistral-large4-reasoning)：fetched |
+| [`mistral-large-4`](../../model-sources/providers/mistral/models/mistral-large-4.md) | [`compute/providers/mistral.json`](../../../compute/providers/mistral.json) | `extra.reasoning.supportedEfforts` | [mistral-large4](../../model-sources/providers/mistral/SOURCES.md#mistral-large4)：fetched；[mistral-large4-reasoning](../../model-sources/providers/mistral/SOURCES.md#mistral-large4-reasoning)：fetched |
 | [`mistral-large-latest`](../../model-sources/providers/mistral/models/mistral-large-latest.md) | [`compute/providers/mistral.json`](../../../compute/providers/mistral.json) | `contextWindow`、`defaultTemperature`、`defaultTopP`、`modelName` | [mistral-large](../../model-sources/providers/mistral/SOURCES.md#mistral-large)：fetched |
 | [`mistral-medium-3-5`](../../model-sources/providers/mistral/models/mistral-medium-3-5.md) | [`compute/providers/mistral.json`](../../../compute/providers/mistral.json) | `contextWindow`、`defaultTemperature` | [mistral-medium](../../model-sources/providers/mistral/SOURCES.md#mistral-medium)：fetched |
 | [`mistral-medium-latest`](../../model-sources/providers/mistral/models/mistral-medium-latest.md) | [`compute/providers/mistral.json`](../../../compute/providers/mistral.json) | `contextWindow`、`defaultTemperature`、`defaultTopP`、`modelName` | [mistral-medium](../../model-sources/providers/mistral/SOURCES.md#mistral-medium)：fetched |

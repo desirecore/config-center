@@ -21,6 +21,156 @@
   ],
   "models": [
     {
+      "modelName": "mistralai/mistral-large-4-0",
+      "displayName": "Mistral Large 4",
+      "serviceType": [
+        "chat"
+      ],
+      "description": "Mistral Large 4，OpenRouter 独立托管入口；参数与美元计价以平台目录为准",
+      "contextWindow": 1048576,
+      "maxOutputTokens": 262144,
+      "capabilities": [
+        "chat",
+        "reasoning",
+        "code",
+        "vision",
+        "tool_use",
+        "long_context"
+      ],
+      "inputPrice": 1.36,
+      "outputPrice": 4.18,
+      "extra": {
+        "cachedInputPrice": 0.14,
+        "pricingNotes": "OpenRouter 官方 Models API 2026-10-28 快照；USD/token 乘 1000000；窗口与输出是该平台独立托管合同，不反写原厂或订阅接入。"
+      }
+    },
+    {
+      "modelName": "google/gemini-4-argon",
+      "displayName": "Gemini 4 Argon",
+      "serviceType": [
+        "chat"
+      ],
+      "description": "Gemini 4 Argon，OpenRouter 独立托管入口；参数与美元计价以平台目录为准",
+      "contextWindow": 1048576,
+      "maxOutputTokens": 943718,
+      "capabilities": [
+        "chat",
+        "reasoning",
+        "code",
+        "vision",
+        "tool_use",
+        "long_context",
+        "video_understanding",
+        "audio_understanding"
+      ],
+      "inputPrice": 2,
+      "outputPrice": 10,
+      "extra": {
+        "cachedInputPrice": 0.1,
+        "pricingNotes": "OpenRouter 官方 Models API 2026-10-28 快照；USD/token 乘 1000000；窗口与输出是该平台独立托管合同，不反写原厂或订阅接入。"
+      }
+    },
+    {
+      "modelName": "moonshotai/kimi-k3.1-pro",
+      "displayName": "Kimi K3.1 Pro",
+      "serviceType": [
+        "reasoning"
+      ],
+      "description": "Kimi K3.1 Pro，OpenRouter 独立托管入口；参数与美元计价以平台目录为准",
+      "contextWindow": 1048576,
+      "maxOutputTokens": 943718,
+      "capabilities": [
+        "chat",
+        "reasoning",
+        "code",
+        "vision",
+        "tool_use",
+        "long_context",
+        "video_understanding"
+      ],
+      "inputPrice": 2,
+      "outputPrice": 10,
+      "extra": {
+        "cachedInputPrice": 0.2,
+        "pricingNotes": "OpenRouter 官方 Models API 2026-10-28 快照；USD/token 乘 1000000；窗口与输出是该平台独立托管合同，不反写原厂或订阅接入。"
+      }
+    },
+    {
+      "modelName": "minimax/minimax-m3.1-flash",
+      "displayName": "MiniMax M3.1 Flash",
+      "serviceType": [
+        "chat",
+        "reasoning",
+        "vision"
+      ],
+      "description": "MiniMax M3.1 Flash，OpenRouter 独立托管入口；参数与美元计价以平台目录为准",
+      "contextWindow": 1048576,
+      "maxOutputTokens": 524288,
+      "capabilities": [
+        "chat",
+        "reasoning",
+        "code",
+        "vision",
+        "tool_use",
+        "long_context",
+        "video_understanding"
+      ],
+      "inputPrice": 0.15,
+      "outputPrice": 0.6,
+      "extra": {
+        "cachedInputPrice": 0.015,
+        "pricingNotes": "OpenRouter 官方 Models API 2026-10-28 快照；USD/token 乘 1000000；窗口与输出是该平台独立托管合同，不反写原厂或订阅接入。"
+      }
+    },
+    {
+      "modelName": "anthropic/claude-haiku-5.5",
+      "displayName": "Claude Haiku 5.5",
+      "serviceType": [
+        "chat"
+      ],
+      "description": "Claude Haiku 5.5，OpenRouter 独立托管入口；参数与美元计价以平台目录为准",
+      "contextWindow": 1000000,
+      "maxOutputTokens": 128000,
+      "capabilities": [
+        "chat",
+        "reasoning",
+        "code",
+        "vision",
+        "tool_use",
+        "long_context"
+      ],
+      "inputPrice": 0.1,
+      "outputPrice": 0.5,
+      "extra": {
+        "cachedInputPrice": 0.01,
+        "pricingNotes": "OpenRouter 官方 Models API 2026-10-28 快照；USD/token 乘 1000000；窗口与输出是该平台独立托管合同，不反写原厂或订阅接入。长上下文价阶：[{\"min_prompt_tokens\":100000,\"prompt\":\"0.0000005\",\"completion\":\"0.0000025\",\"input_cache_read\":\"0.00000005\",\"input_cache_write\":\"0.000000625\",\"input_cache_write_1h\":\"0.000001\"}]"
+      }
+    },
+    {
+      "modelName": "openai/gpt-6.1-terra",
+      "displayName": "GPT-6.1 Terra",
+      "serviceType": [
+        "chat"
+      ],
+      "description": "GPT-6.1 Terra，OpenRouter 独立托管入口；参数与美元计价以平台目录为准",
+      "contextWindow": 1050000,
+      "maxOutputTokens": 128000,
+      "capabilities": [
+        "chat",
+        "reasoning",
+        "code",
+        "vision",
+        "tool_use",
+        "long_context"
+      ],
+      "inputPrice": 1,
+      "outputPrice": 5,
+      "extra": {
+        "cachedInputPrice": 0.05,
+        "pricingNotes": "OpenRouter 官方 Models API 2026-10-28 快照；USD/token 乘 1000000；窗口与输出是该平台独立托管合同，不反写原厂或订阅接入。长上下文价阶：[{\"min_prompt_tokens\":272000,\"prompt\":\"0.000002\",\"completion\":\"0.0000075\",\"input_cache_read\":\"0.0000001\",\"input_cache_write\":\"0.0000025\"}]"
+      }
+    },
+    {
       "modelName": "cohere/command-a-plus",
       "displayName": "Cohere: Command A+",
       "serviceType": [
