@@ -13,7 +13,72 @@
     "chat",
     "computer_use"
   ],
+  "tombstones": [
+    "claude-opus-4-8",
+    "claude-opus-4-7",
+    "claude-sonnet-4-6",
+    "claude-fable-5",
+    "claude-haiku-4-5",
+    "claude-haiku-4-5-20251001"
+  ],
   "models": [
+    {
+      "modelName": "claude-haiku-5-5",
+      "displayName": "Claude Haiku 5.5",
+      "serviceType": [
+        "chat"
+      ],
+      "description": "Claude Haiku 5.5，低延迟模型；自适应思考，默认 medium；输入超过 100000 tokens 使用独立价阶",
+      "contextWindow": 1000000,
+      "maxOutputTokens": 128000,
+      "capabilities": [
+        "chat",
+        "reasoning",
+        "code",
+        "vision",
+        "tool_use",
+        "long_context"
+      ],
+      "inputPrice": 0.1,
+      "outputPrice": 0.5,
+      "extra": {
+        "adaptiveThinking": true,
+        "reasoning": {
+          "supportedEfforts": [
+            "low",
+            "medium",
+            "high",
+            "xhigh",
+            "max"
+          ],
+          "defaultEffort": "medium"
+        },
+        "samplingParametersDeprecated": true,
+        "cacheReadPrice": 0.01,
+        "pricingTiers": [
+          {
+            "maxInputTokens": 100000,
+            "inputPrice": 0.1,
+            "outputPrice": 0.5,
+            "cacheReadPrice": 0.01
+          },
+          {
+            "maxInputTokens": 1000000,
+            "inputPrice": 0.5,
+            "outputPrice": 2.5,
+            "cacheReadPrice": 0.05
+          }
+        ],
+        "pricingNotes": "USD/百万 tokens；输入超过 100000 tokens 时整次请求按输入 0.50、输出 2.50、缓存读 0.05 计价。5 分钟缓存写入 0.125 / 0.625，1 小时 0.20 / 1.00（分别对应两档输入长度）。Batch 半价；同步输出 128000，300K 输出仅适用于带 beta header 的 Batch API。",
+        "thinkingRoundTrip": {
+          "enabled": true,
+          "protocol": "anthropic-messages",
+          "allowEmptySignature": false,
+          "scope": "active-tool-turn"
+        },
+        "thinkingToolTurnValidation": "accepts-thinkless"
+      }
+    },
     {
       "modelName": "claude-opus-5-5",
       "displayName": "Claude Opus 5.5",
@@ -46,8 +111,8 @@
           "enabled": true,
           "dialect": "anthropic-messages",
           "fallbackPriority": 2,
-          "searchRequestPriceUsd": 0.01,
-          "toolType": "web_search_20260318"
+          "toolType": "web_search_20260318",
+          "searchRequestPriceUsd": 0.01
         },
         "cachePricing": {
           "write5m": 5,
@@ -104,8 +169,8 @@
           "enabled": true,
           "dialect": "anthropic-messages",
           "fallbackPriority": 1,
-          "searchRequestPriceUsd": 0.01,
-          "toolType": "web_search_20260318"
+          "toolType": "web_search_20260318",
+          "searchRequestPriceUsd": 0.01
         },
         "cachePricing": {
           "write5m": 12.5,
@@ -161,8 +226,8 @@
           "enabled": true,
           "dialect": "anthropic-messages",
           "fallbackPriority": 2,
-          "searchRequestPriceUsd": 0.01,
-          "toolType": "web_search_20260318"
+          "toolType": "web_search_20260318",
+          "searchRequestPriceUsd": 0.01
         },
         "cachePricing": {
           "write5m": 6.25,
@@ -219,8 +284,8 @@
           "enabled": true,
           "dialect": "anthropic-messages",
           "fallbackPriority": 3,
-          "searchRequestPriceUsd": 0.01,
-          "toolType": "web_search_20260318"
+          "toolType": "web_search_20260318",
+          "searchRequestPriceUsd": 0.01
         },
         "cachePricing": {
           "write5m": 2.5,
@@ -277,8 +342,8 @@
           "enabled": true,
           "dialect": "anthropic-messages",
           "fallbackPriority": 3,
-          "searchRequestPriceUsd": 0.01,
-          "toolType": "web_search_20260318"
+          "toolType": "web_search_20260318",
+          "searchRequestPriceUsd": 0.01
         },
         "cachePricing": {
           "write5m": 2.5,
@@ -299,13 +364,5 @@
         "samplingParametersDeprecated": true
       }
     }
-  ],
-  "tombstones": [
-    "claude-opus-4-8",
-    "claude-opus-4-7",
-    "claude-sonnet-4-6",
-    "claude-fable-5",
-    "claude-haiku-4-5",
-    "claude-haiku-4-5-20251001"
   ]
 }

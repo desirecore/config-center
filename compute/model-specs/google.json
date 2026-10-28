@@ -2,7 +2,54 @@
   "description": "Google Gemini 系列模型规格。参数来源：config-center compute/providers/google.json。",
   "specs": [
     {
-      "id": "gemini-embedding-2",
+      "displayName": "Gemini 4 Argon",
+      "family": "gemini-4-argon",
+      "match": {
+        "exact": [
+          "gemini-4-argon",
+          "google/gemini-4-argon"
+        ]
+      },
+      "id": "gemini-4-argon",
+      "spec": {
+        "contextWindow": 1048576,
+        "maxOutputTokens": 65536,
+        "capabilities": [
+          "chat",
+          "reasoning",
+          "code",
+          "vision",
+          "tool_use",
+          "long_context",
+          "video_understanding",
+          "audio_understanding"
+        ],
+        "serviceType": [
+          "chat"
+        ],
+        "supportsReasoning": true,
+        "description": "Gemini 4 Argon，共享 1048576 token 窗口；单次流式输出 65536，非流式 REST 32768；百万输出需要额外 long decode 流程",
+        "extra": {
+          "samplingParametersDeprecated": true
+        }
+      },
+      "routing": {
+        "tier": "flagship",
+        "routingPriority": 50,
+        "eligibleForAgent": false,
+        "defaultReference": false,
+        "reasoning": {
+          "supportedModes": [
+            "auto",
+            "low",
+            "medium",
+            "high"
+          ],
+          "defaultMode": "medium"
+        }
+      }
+    },
+    {
       "displayName": "Gemini Embedding 2",
       "family": "gemini-embedding-2",
       "match": {
@@ -10,6 +57,7 @@
           "gemini-embedding-2"
         ]
       },
+      "id": "gemini-embedding-2",
       "spec": {
         "contextWindow": 8192,
         "capabilities": [
@@ -34,7 +82,6 @@
       }
     },
     {
-      "id": "gemini-3.5-transcribe-live",
       "displayName": "gemini-3.5-transcribe-live",
       "family": "gemini-3.5-transcribe-live",
       "match": {
@@ -42,6 +89,7 @@
           "gemini-3.5-transcribe-live"
         ]
       },
+      "id": "gemini-3.5-transcribe-live",
       "spec": {
         "capabilities": [
           "asr",
@@ -54,7 +102,6 @@
       }
     },
     {
-      "id": "gemini-3.5-transcribe",
       "displayName": "gemini-3.5-transcribe",
       "family": "gemini-3.5-transcribe",
       "match": {
@@ -62,6 +109,7 @@
           "gemini-3.5-transcribe"
         ]
       },
+      "id": "gemini-3.5-transcribe",
       "spec": {
         "capabilities": [
           "asr"
@@ -73,7 +121,6 @@
       }
     },
     {
-      "id": "gemini-3.8-live-extended-thinking",
       "displayName": "gemini-3.8-live-extended-thinking",
       "family": "gemini-3.8-live-extended-thinking",
       "match": {
@@ -81,6 +128,7 @@
           "gemini-3.8-live-extended-thinking"
         ]
       },
+      "id": "gemini-3.8-live-extended-thinking",
       "spec": {
         "capabilities": [
           "realtime",
@@ -94,7 +142,6 @@
       }
     },
     {
-      "id": "gemini-3.8-live",
       "displayName": "gemini-3.8-live",
       "family": "gemini-3.8-live",
       "match": {
@@ -102,6 +149,7 @@
           "gemini-3.8-live"
         ]
       },
+      "id": "gemini-3.8-live",
       "spec": {
         "capabilities": [
           "realtime",
@@ -114,7 +162,6 @@
       }
     },
     {
-      "id": "gemini-3.8-flash-lite-tts",
       "displayName": "gemini-3.8-flash-lite-tts",
       "family": "gemini-3.8-flash-lite-tts",
       "match": {
@@ -122,6 +169,7 @@
           "gemini-3.8-flash-lite-tts"
         ]
       },
+      "id": "gemini-3.8-flash-lite-tts",
       "spec": {
         "capabilities": [
           "tts",
@@ -134,7 +182,6 @@
       }
     },
     {
-      "id": "gemini-3.8-flash-tts",
       "displayName": "gemini-3.8-flash-tts",
       "family": "gemini-3.8-flash-tts",
       "match": {
@@ -142,6 +189,7 @@
           "gemini-3.8-flash-tts"
         ]
       },
+      "id": "gemini-3.8-flash-tts",
       "spec": {
         "capabilities": [
           "tts"
@@ -155,7 +203,6 @@
       }
     },
     {
-      "id": "gemini-3.8-flash",
       "displayName": "Gemini 3.8 Flash",
       "family": "gemini-3.8-flash",
       "match": {
@@ -163,6 +210,7 @@
           "gemini-3.8-flash"
         ]
       },
+      "id": "gemini-3.8-flash",
       "spec": {
         "contextWindow": 1048576,
         "maxOutputTokens": 65536,
@@ -201,7 +249,6 @@
       }
     },
     {
-      "id": "gemini-3.7-flash",
       "displayName": "Gemini 3.7 Flash",
       "family": "gemini-3.7-flash",
       "match": {
@@ -209,6 +256,7 @@
           "gemini-3.7-flash"
         ]
       },
+      "id": "gemini-3.7-flash",
       "spec": {
         "contextWindow": 1048576,
         "maxOutputTokens": 65536,
@@ -247,7 +295,6 @@
       }
     },
     {
-      "id": "gemini-3.5-flash-lite",
       "displayName": "Gemini 3.5 Flash-Lite",
       "family": "gemini-3.5-flash-lite",
       "match": {
@@ -255,6 +302,7 @@
           "gemini-3.5-flash-lite"
         ]
       },
+      "id": "gemini-3.5-flash-lite",
       "spec": {
         "contextWindow": 1048576,
         "maxOutputTokens": 65536,
@@ -293,7 +341,6 @@
       }
     },
     {
-      "id": "gemini-3.1-flash-lite-image",
       "displayName": "Gemini 3.1 Flash Lite Image (Nano Banana 2 Lite)",
       "family": "gemini-3.1-flash-lite-image",
       "match": {
@@ -301,6 +348,7 @@
           "gemini-3.1-flash-lite-image"
         ]
       },
+      "id": "gemini-3.1-flash-lite-image",
       "spec": {
         "contextWindow": 65536,
         "maxOutputTokens": 4096,
@@ -320,7 +368,6 @@
       }
     },
     {
-      "id": "gemini-3.5-flash",
       "displayName": "Gemini 3.5 Flash",
       "family": "gemini-3.5",
       "match": {
@@ -331,6 +378,7 @@
           "gemini-3.5-flash*"
         ]
       },
+      "id": "gemini-3.5-flash",
       "spec": {
         "contextWindow": 1048576,
         "maxOutputTokens": 65536,
@@ -354,7 +402,6 @@
       }
     },
     {
-      "id": "gemini-3.1-flash-image",
       "displayName": "Gemini 3.1 Flash Image (Nano Banana 2)",
       "family": "gemini-3.1",
       "match": {
@@ -365,6 +412,7 @@
           "gemini-3.1-flash-image*"
         ]
       },
+      "id": "gemini-3.1-flash-image",
       "spec": {
         "contextWindow": 131072,
         "maxOutputTokens": 32768,
@@ -380,9 +428,9 @@
       }
     },
     {
-      "id": "gemini-3.1-pro-preview",
       "displayName": "Gemini 3.1 Pro",
       "family": "gemini-3.1",
+      "id": "gemini-3.1-pro-preview",
       "spec": {
         "contextWindow": 1048576,
         "maxOutputTokens": 65536,
@@ -402,9 +450,9 @@
       }
     },
     {
-      "id": "gemini-3-flash-preview",
       "displayName": "Gemini 3 Flash",
       "family": "gemini-3",
+      "id": "gemini-3-flash-preview",
       "spec": {
         "contextWindow": 1048576,
         "maxOutputTokens": 65536,
@@ -425,7 +473,6 @@
       }
     },
     {
-      "id": "gemini-2.5-pro",
       "displayName": "Gemini 2.5 Pro",
       "family": "gemini-2.5",
       "match": {
@@ -433,6 +480,7 @@
           "gemini-2.5-pro*"
         ]
       },
+      "id": "gemini-2.5-pro",
       "spec": {
         "contextWindow": 1048576,
         "maxOutputTokens": 65536,
@@ -452,7 +500,6 @@
       }
     },
     {
-      "id": "gemini-2.5-flash",
       "displayName": "Gemini 2.5 Flash",
       "family": "gemini-2.5",
       "match": {
@@ -460,6 +507,7 @@
           "gemini-2.5-flash*"
         ]
       },
+      "id": "gemini-2.5-flash",
       "spec": {
         "contextWindow": 1048576,
         "maxOutputTokens": 65536,
@@ -480,7 +528,6 @@
       }
     },
     {
-      "id": "gemini-3.1-flash-lite-preview",
       "displayName": "Gemini 3.1 Flash-Lite Preview",
       "family": "gemini-3.1",
       "match": {
@@ -491,6 +538,7 @@
           "gemini-3.1-flash-lite*"
         ]
       },
+      "id": "gemini-3.1-flash-lite-preview",
       "spec": {
         "contextWindow": 1048576,
         "maxOutputTokens": 65536,
@@ -511,7 +559,6 @@
       }
     },
     {
-      "id": "text-embedding-005",
       "displayName": "Text Embedding 005",
       "family": "text-embedding",
       "match": {
@@ -519,6 +566,7 @@
           "text-embedding-005"
         ]
       },
+      "id": "text-embedding-005",
       "spec": {
         "contextWindow": 2048,
         "capabilities": [
