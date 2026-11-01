@@ -11,7 +11,7 @@
   "currentCounts": {
     "records": 336,
     "none": 14,
-    "family": 5,
+    "family": 4,
     "numericalDifferences": 41
   },
   "bindings": [
@@ -99,9 +99,9 @@
       "file": "compute/providers/local-whisper.json",
       "id": "whisper-large-v3",
       "originalMatch": "family",
-      "currentMatch": "family",
-      "currentSpec": "whisper-1",
-      "decision": "access-local-no-inheritance"
+      "currentMatch": "exact",
+      "currentSpec": "whisper-large-v3",
+      "decision": "exact-open-weight-spec"
     },
     {
       "file": "compute/providers/ollama.json",
@@ -317,20 +317,6 @@
       "match": "none",
       "spec": null,
       "specFile": null,
-      "diff": [],
-      "classification": "unverified-access-local",
-      "effectiveBinding": null,
-      "inheritFamily": false,
-      "automaticRouting": false,
-      "decision": "retain-access-values",
-      "reason": "当前未定位足够的原厂精确型号证据；保留既有接入局部字段，不从family继承参数、能力或路由。"
-    },
-    {
-      "file": "compute/providers/local-whisper.json",
-      "id": "whisper-large-v3",
-      "match": "family",
-      "spec": "whisper-1",
-      "specFile": "compute/model-specs/openai.json",
       "diff": [],
       "classification": "unverified-access-local",
       "effectiveBinding": null,
@@ -2192,6 +2178,15 @@
       "decision": "retain-spec-without-new-access",
       "reason": "原入口已下架；历史身份映射证据不足，保留兼容记录而不重新上架或扩大路由。",
       "newAutomaticRouting": false
+    },
+    {
+      "file": "compute/model-specs/qwen.json",
+      "id": "paraformer-v2",
+      "hasRouting": false,
+      "classification": "dynamic-directory-candidate",
+      "decision": "retain-spec-without-new-access",
+      "reason": "官网仍在售的录音文件异步转写模型，只接受公网 URL，客户端未适配；2026-11-01 移出 dashscope 预置并写入 tombstones，保留规格用于精确匹配。",
+      "newAutomaticRouting": false
     }
   ],
   "verifiedLimits": [
@@ -2319,17 +2314,6 @@
       "kind": "access-local",
       "bindingKind": "access-local",
       "reason": "精确身份未证实；保留接入本地字段，禁止normalized/stripped/family制造原厂绑定。",
-      "automaticRouting": false,
-      "inheritFamily": false,
-      "effectiveBinding": null
-    },
-    {
-      "file": "compute/providers/local-whisper.json",
-      "providerId": "provider-local-whisper",
-      "apiModelId": "whisper-large-v3",
-      "kind": "access-local",
-      "bindingKind": "access-local",
-      "reason": "本地开源安装与云whisper-1不是同一合同；保留本地安装识别，不继承云端接口/额度。",
       "automaticRouting": false,
       "inheritFamily": false,
       "effectiveBinding": null

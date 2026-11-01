@@ -4,6 +4,16 @@
 
 本轮只修改 config-center。以下事项不因单模型官网字段已核或本仓校验通过而视为客户端已实现。
 
+## 语音识别（2026-11-01 批次 135）
+
+| 事项 | 本仓状态 | 实施步骤与验收条件 |
+| --- | --- | --- |
+| `credentialMode` 进 V2 连接 | 只写 V1 Provider 投影（`metadata.v1Connection`） | 客户端 `catalog-v2.schema.json` 的 connection 接受后铺开，再移入 `connection`，否则整份数据被拒收 |
+| 本地 Whisper 无需凭据 | 数据已声明 `credentialMode: none` | 客户端语音解析要按凭据模式放行；未放行的版本报 `missing_credentials`，不再是 `missing_model_profile` |
+| `gpt-transcribe` 语言提示 | 规格声明 `languageHints: false` | 协议 v1 只会发 `language`，官网要求改用 `languages`；客户端要按声明省略语言提示，是否被上游拒绝待账号实测 |
+| `fun-asr-realtime` 自动语言 | 客户端在 auto 时发 `["zh","en"]` | 官网说明只取第一个值、不设置时自动识别；适配器改为 auto 不发送后，英文音频才真正自动识别 |
+| 百炼业务空间域名与新加坡地域 | 适配器固定 `dashscope.aliyuncs.com` | 官网建议迁移专属域名；适配器要跟随配置的地域与域名 |
+
 ## 原生协议接入
 
 | 原厂/型号 | 本仓状态 | 实施步骤与验收条件 |

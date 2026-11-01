@@ -2,7 +2,7 @@
 
 [总索引](../../README.md) · [官网证据与边界](SOURCES.md) · [数据闭环核查](AUDIT.md)
 
-本目录包含 50 个单模型文件、4 个单接入面文件。核验日期与状态来自迁移前记录。
+本目录包含 51 个单模型文件、4 个单接入面文件。核验日期与状态来自迁移前记录。
 
 ## 接入面
 
@@ -63,5 +63,6 @@
 - [`text-embedding-3-small`](models/text-embedding-3-small.md)
 - [`tts-1`](models/tts-1.md)
 - [`tts-1-hd`](models/tts-1-hd.md)
+- [`gpt-transcribe`](models/gpt-transcribe.md)
 - [`whisper-1`](models/whisper-1.md)
 - [`whisper-large-v3`](models/whisper-large-v3.md)

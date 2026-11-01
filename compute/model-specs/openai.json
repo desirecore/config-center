@@ -874,6 +874,46 @@
       }
     },
     {
+      "displayName": "GPT Transcribe",
+      "family": "gpt-transcribe",
+      "match": {
+        "exact": [
+          "gpt-transcribe"
+        ]
+      },
+      "id": "gpt-transcribe",
+      "spec": {
+        "capabilities": [
+          "asr",
+          "multilingual"
+        ],
+        "serviceType": [
+          "asr"
+        ],
+        "description": "OpenAI 推荐的录音转写模型，支持多语言音频，自动识别语言",
+        "extra": {
+          "modelOrigin": {
+            "vendor": "openai",
+            "canonicalModelId": "gpt-transcribe",
+            "family": "gpt-transcribe"
+          },
+          "speech": {
+            "protocol": "openai-audio-transcriptions",
+            "protocolVersion": "1",
+            "modes": [
+              "batch"
+            ],
+            "inputFormats": [
+              "webm",
+              "wav",
+              "mp3"
+            ],
+            "languageHints": false
+          }
+        }
+      }
+    },
+    {
       "displayName": "Whisper",
       "family": "whisper",
       "match": {
@@ -891,6 +931,46 @@
           "asr"
         ],
         "description": "OpenAI 通用语音识别"
+      }
+    },
+    {
+      "displayName": "Whisper Large V3",
+      "family": "whisper-large-v3",
+      "match": {
+        "exact": [
+          "whisper-large-v3"
+        ]
+      },
+      "id": "whisper-large-v3",
+      "spec": {
+        "capabilities": [
+          "asr",
+          "multilingual"
+        ],
+        "serviceType": [
+          "asr"
+        ],
+        "description": "OpenAI 开放权重的 Whisper large-v3，需自行部署兼容 OpenAI 转写接口的服务",
+        "extra": {
+          "modelOrigin": {
+            "vendor": "openai",
+            "canonicalModelId": "whisper-large-v3",
+            "family": "whisper"
+          },
+          "speech": {
+            "protocol": "openai-audio-transcriptions",
+            "protocolVersion": "1",
+            "modes": [
+              "batch"
+            ],
+            "inputFormats": [
+              "webm",
+              "wav",
+              "mp3"
+            ],
+            "languageHints": true
+          }
+        }
       }
     },
     {

@@ -114,6 +114,34 @@ Terra 原厂 API 明确窗口 1050000、最大输入 922000、最大输出 12800
 - 读取日期：2026-10-28；状态：`fetched`；最终地址：https://learn.chatgpt.com/docs/models.md。
 - 适用范围：Work/Codex 官方型号目录；仅证明订阅产品列出 Terra，不证明订阅账号、独立窗口或每个推理档位。
 
+## 2026-11-01 语音转写核对
+
+核对转写模型的弃用公告、新模型 ID、端点、格式、语言参数与计价，未进行收费 API 调用。同日重读官方仓库 [whisper](#whisper) 的 README：列出 `large-v3`，没有 `whisper-large-v3` 这个 ID，也不提供 HTTP 服务。
+
+### openai-gpt-transcribe
+
+- 入口：[openai-gpt-transcribe](https://developers.openai.com/api/docs/models/gpt-transcribe.md)。
+- 读取日期：2026-11-01；状态：`fetched`；最终地址：https://developers.openai.com/api/docs/models/gpt-transcribe.md。
+- 适用范围：OpenAI API 原厂 gpt-transcribe 型号页；精确 ID、模态、端点支持与按音频分钟计价。
+
+### openai-file-transcription
+
+- 入口：[openai-file-transcription](https://developers.openai.com/api/docs/guides/speech-to-text.md)。
+- 读取日期：2026-11-01；状态：`fetched`；最终地址：https://developers.openai.com/api/docs/guides/speech-to-text.md。
+- 适用范围：OpenAI 文件转写指南；推荐模型、输入格式、25 MB 上限、languages 取代 language、流式输出。
+
+### openai-audio-transcriptions-api
+
+- 入口：[openai-audio-transcriptions-api](https://developers.openai.com/api/reference/resources/audio/subresources/transcriptions/methods/create.md)。
+- 读取日期：2026-11-01；状态：`fetched`；最终地址：https://developers.openai.com/api/reference/resources/audio/subresources/transcriptions/methods/create.md。
+- 适用范围：OpenAI Audio Transcriptions 请求与响应字段；language、languages、text。
+
+### openai-transcription-deprecations
+
+- 入口：[openai-transcription-deprecations](https://developers.openai.com/api/docs/deprecations.md)。
+- 读取日期：2026-11-01；状态：`fetched`；最终地址：https://developers.openai.com/api/docs/deprecations.md。
+- 适用范围：OpenAI 弃用公告的 2026-08-26 转写模型段；whisper-1 等 2027-02-26 停服及推荐替代。
+
 <!-- source-metadata:start -->
 ```json
 {
@@ -310,6 +338,46 @@ Terra 原厂 API 明确窗口 1050000、最大输入 922000、最大输出 12800
       "checkedAt": "2026-10-28",
       "contentSha256": "87a2915f285b10cafd7e5bc8875edd640d273fe63a4ec0cd13a62866e75828fb",
       "resolvedUrl": "https://learn.chatgpt.com/docs/models.md"
+    },
+    {
+      "id": "openai-gpt-transcribe",
+      "url": "https://developers.openai.com/api/docs/models/gpt-transcribe.md",
+      "kind": "official-doc",
+      "scope": "OpenAI API 原厂 gpt-transcribe 型号页；精确 ID、模态、端点支持与按音频分钟计价",
+      "retrieval": "fetched",
+      "checkedAt": "2026-11-01",
+      "contentSha256": "b17461ab4c993823ab8eb6f12e44a7bec3f54ce34ddceb84ad52fb0048de01bb",
+      "resolvedUrl": "https://developers.openai.com/api/docs/models/gpt-transcribe.md"
+    },
+    {
+      "id": "openai-file-transcription",
+      "url": "https://developers.openai.com/api/docs/guides/speech-to-text.md",
+      "kind": "official-doc",
+      "scope": "OpenAI 文件转写指南；推荐模型、输入格式、25 MB 上限、languages 取代 language、流式输出",
+      "retrieval": "fetched",
+      "checkedAt": "2026-11-01",
+      "contentSha256": "bffa0b8c1fca2ac545a311cb32f7ae082898853a1347700f149462119017e4bb",
+      "resolvedUrl": "https://developers.openai.com/api/docs/guides/speech-to-text.md"
+    },
+    {
+      "id": "openai-audio-transcriptions-api",
+      "url": "https://developers.openai.com/api/reference/resources/audio/subresources/transcriptions/methods/create.md",
+      "kind": "official-doc",
+      "scope": "OpenAI Audio Transcriptions 请求与响应字段；language、languages、text",
+      "retrieval": "fetched",
+      "checkedAt": "2026-11-01",
+      "contentSha256": "a33a451c88abac5d50e63f24ba12011def2b4d834b6334d63b4350773c759f30",
+      "resolvedUrl": "https://developers.openai.com/api/reference/resources/audio/subresources/transcriptions/methods/create.md"
+    },
+    {
+      "id": "openai-transcription-deprecations",
+      "url": "https://developers.openai.com/api/docs/deprecations.md",
+      "kind": "official-doc",
+      "scope": "OpenAI 弃用公告的 2026-08-26 转写模型段；whisper-1 等 2027-02-26 停服及推荐替代",
+      "retrieval": "fetched",
+      "checkedAt": "2026-11-01",
+      "contentSha256": "3fddf4c625d689e43e559c236bcdd675de8a3b3d035070ba205827d8ad0a2fc2",
+      "resolvedUrl": "https://developers.openai.com/api/docs/deprecations.md"
     }
   ]
 }

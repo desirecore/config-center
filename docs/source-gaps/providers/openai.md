@@ -12,7 +12,7 @@
 
 无该类记录。
 
-## 入口有读取记录，但本条模型无字段证明（71 条）
+## 入口有读取记录，但本条模型无字段证明（70 条）
 
 | 模型 | 接入面 | 未登记证明的关键字段 | 官网入口/读取结果 |
 | --- | --- | --- | --- |
@@ -84,11 +84,10 @@
 | [`tts-1-hd`](../../model-sources/providers/openai/models/tts-1-hd.md) | [`compute/model-specs/openai.json`](../../../compute/model-specs/openai.json) | `id` | [openai-models](../../model-sources/providers/openai/SOURCES.md#openai-models)：fetched |
 | [`tts-1`](../../model-sources/providers/openai/models/tts-1.md) | [`compute/providers/openai.json`](../../../compute/providers/openai.json) | `inputPrice`、`modelName` | [openai-models](../../model-sources/providers/openai/SOURCES.md#openai-models)：fetched |
 | [`tts-1`](../../model-sources/providers/openai/models/tts-1.md) | [`compute/model-specs/openai.json`](../../../compute/model-specs/openai.json) | `id` | [openai-models](../../model-sources/providers/openai/SOURCES.md#openai-models)：fetched |
-| [`whisper-1`](../../model-sources/providers/openai/models/whisper-1.md) | [`compute/providers/openai.json`](../../../compute/providers/openai.json) | `inputPrice`、`modelName` | [openai-models](../../model-sources/providers/openai/SOURCES.md#openai-models)：fetched |
-| [`whisper-1`](../../model-sources/providers/openai/models/whisper-1.md) | [`compute/model-specs/openai.json`](../../../compute/model-specs/openai.json) | `id` | [openai-models](../../model-sources/providers/openai/SOURCES.md#openai-models)：fetched |
 | [`whisper-large-v3`](../../model-sources/providers/openai/models/whisper-large-v3.md) | [`compute/providers/local-whisper.json`](../../../compute/providers/local-whisper.json) | `modelName` | [openai-models](../../model-sources/providers/openai/SOURCES.md#openai-models)：fetched |
+| [`whisper-large-v3`](../../model-sources/providers/openai/models/whisper-large-v3.md) | [`compute/model-specs/openai.json`](../../../compute/model-specs/openai.json) | `id` | [whisper](../../model-sources/providers/openai/SOURCES.md#whisper)：fetched |
 
-## 仅确认 ID，参数来源未登记（11 条）
+## 仅确认 ID，参数来源未登记（13 条）
 
 | 模型 | 接入面 | 未登记证明的关键字段 | 官网入口/读取结果 |
 | --- | --- | --- | --- |
@@ -103,8 +102,10 @@
 | [`gpt-6.1-terra`](../../model-sources/providers/openai/models/gpt-6.1-terra.md) | [`compute/providers/openai-codex.json`](../../../compute/providers/openai-codex.json) | `contextWindow`、`extra.reasoning.defaultEffort`、`extra.reasoning.supportedEfforts`、`maxOutputTokens` | [openai-terra61-codex](../../model-sources/providers/openai/SOURCES.md#openai-terra61-codex)：fetched |
 | [`gpt-realtime-2.1`](../../model-sources/providers/openai/models/gpt-realtime-2.1.md) | [`compute/providers/openai.json`](../../../compute/providers/openai.json) | `contextWindow`、`extra.audioCachedInputPrice`、`extra.audioInputPrice`、`extra.audioOutputPrice`、`extra.imageCachedInputPrice`、`extra.imageInputPrice`、`extra.textCachedInputPrice`、`inputPrice`、`maxOutputTokens`、`outputPrice` | [openai-models](../../model-sources/providers/openai/SOURCES.md#openai-models)：fetched |
 | [`gpt-realtime-translate`](../../model-sources/providers/openai/models/gpt-realtime-translate.md) | [`compute/providers/openai.json`](../../../compute/providers/openai.json) | `contextWindow`、`extra.audioOutputPricePerMinute`、`maxOutputTokens` | [openai-models](../../model-sources/providers/openai/SOURCES.md#openai-models)：fetched |
+| [`whisper-1`](../../model-sources/providers/openai/models/whisper-1.md) | [`compute/providers/openai.json`](../../../compute/providers/openai.json) | `inputPrice` | [openai-models](../../model-sources/providers/openai/SOURCES.md#openai-models)：fetched；[openai-transcription-deprecations](../../model-sources/providers/openai/SOURCES.md#openai-transcription-deprecations)：fetched |
+| [`whisper-1`](../../model-sources/providers/openai/models/whisper-1.md) | [`compute/model-specs/openai.json`](../../../compute/model-specs/openai.json) | 已登记关键字段都有证明；其他合同限制仍按原记录复核 | [openai-models](../../model-sources/providers/openai/SOURCES.md#openai-models)：fetched；[openai-transcription-deprecations](../../model-sources/providers/openai/SOURCES.md#openai-transcription-deprecations)：fetched |
 
-## 已有部分参数证明，仍需区分未证明字段（19 条）
+## 已有部分参数证明，仍需区分未证明字段（21 条）
 
 | 模型 | 接入面 | 未登记证明的关键字段 | 官网入口/读取结果 |
 | --- | --- | --- | --- |
@@ -127,6 +128,8 @@
 | [`gpt-realtime-2.1-mini`](../../model-sources/providers/openai/models/gpt-realtime-2.1-mini.md) | [`compute/model-specs/openai.json`](../../../compute/model-specs/openai.json) | 已登记关键字段都有证明；其他合同限制仍按原记录复核 | [realtime21mini-spec](../../model-sources/providers/openai/SOURCES.md#realtime21mini-spec)：fetched |
 | [`gpt-realtime-2.1`](../../model-sources/providers/openai/models/gpt-realtime-2.1.md) | [`compute/model-specs/openai.json`](../../../compute/model-specs/openai.json) | 已登记关键字段都有证明；其他合同限制仍按原记录复核 | [realtime21-spec](../../model-sources/providers/openai/SOURCES.md#realtime21-spec)：fetched |
 | [`gpt-realtime-translate`](../../model-sources/providers/openai/models/gpt-realtime-translate.md) | [`compute/model-specs/openai.json`](../../../compute/model-specs/openai.json) | 已登记关键字段都有证明；其他合同限制仍按原记录复核 | [realtimetranslate-spec](../../model-sources/providers/openai/SOURCES.md#realtimetranslate-spec)：fetched |
+| [`gpt-transcribe`](../../model-sources/providers/openai/models/gpt-transcribe.md) | [`compute/providers/openai.json`](../../../compute/providers/openai.json) | 已登记关键字段都有证明；其他合同限制仍按原记录复核 | [openai-gpt-transcribe](../../model-sources/providers/openai/SOURCES.md#openai-gpt-transcribe)：fetched；[openai-file-transcription](../../model-sources/providers/openai/SOURCES.md#openai-file-transcription)：fetched |
+| [`gpt-transcribe`](../../model-sources/providers/openai/models/gpt-transcribe.md) | [`compute/model-specs/openai.json`](../../../compute/model-specs/openai.json) | 已登记关键字段都有证明；其他合同限制仍按原记录复核 | [openai-gpt-transcribe](../../model-sources/providers/openai/SOURCES.md#openai-gpt-transcribe)：fetched；[openai-file-transcription](../../model-sources/providers/openai/SOURCES.md#openai-file-transcription)：fetched；[openai-audio-transcriptions-api](../../model-sources/providers/openai/SOURCES.md#openai-audio-transcriptions-api)：fetched |
 
 ## 历史身份/参数不证明当前可用性（0 条）
 

@@ -3,7 +3,11 @@
 [供应商索引](../README.md) · [官网证据目录](../SOURCES.md)
 
 - 精确模型 ID：`whisper-1`。
-- 核验日期：2026-10-03；本次只迁移记录，没有重新核验或提高状态。
+- 核验日期：2026-11-01；只核对弃用公告与精确 ID，其余字段仍是 2026-10-03 迁移记录。
+
+## 生命周期
+
+OpenAI 于 2026-08-26 公告弃用，2027-02-26 停服，推荐替代 `gpt-transcribe`（录音）或 `gpt-live-transcribe`（实时）。预置暂留到停服，已选用的配置不受影响，描述提示新配置改选 `gpt-transcribe`；停服日写在共享规格的执行性 `lifecycle.retiredAt`。
 
 ## 适用接入面
 
@@ -39,7 +43,7 @@
 
 | 模型 ID | 上下文 / 输出 | 计价 | 已核字段→来源 | 来源入口 | 状态 | 数据指纹 |
 | --- | --- | --- | --- | --- | --- | --- |
-| `whisper-1` | 未声明 / 未声明 | USD：0.006 / 未声明 | 待核实 | [openai-models](../SOURCES.md#openai-models) | pending | `50b3aee5e7487a50beb562a148359b6524ac60bf3415aea7de532885c1b138f1` |
+| `whisper-1` | 未声明 / 未声明 | USD：0.006 / 未声明 | `modelName`→[openai-transcription-deprecations](../SOURCES.md#openai-transcription-deprecations) | [openai-models](../SOURCES.md#openai-models)、[openai-transcription-deprecations](../SOURCES.md#openai-transcription-deprecations) | partial | `088897fdf9a87ec58b7481546a9486ade032423cace8812d16a4791bab63ac97` |
 
 ### compute/model-specs/openai.json
 
@@ -65,7 +69,7 @@
 
 | 模型 ID | 上下文 / 输出 | 计价 | 已核字段→来源 | 来源入口 | 状态 | 数据指纹 |
 | --- | --- | --- | --- | --- | --- | --- |
-| `whisper-1` | 未声明 / 未声明 | 非计价主数据 | 待核实 | [openai-models](../SOURCES.md#openai-models) | pending | `1dee3ac7f8e5ba204e6d9f570802686666143bd596c6b8a0ddccec1b53f80b85` |
+| `whisper-1` | 未声明 / 未声明 | 非计价主数据 | `id`→[openai-transcription-deprecations](../SOURCES.md#openai-transcription-deprecations) | [openai-models](../SOURCES.md#openai-models)、[openai-transcription-deprecations](../SOURCES.md#openai-transcription-deprecations) | partial | `1dee3ac7f8e5ba204e6d9f570802686666143bd596c6b8a0ddccec1b53f80b85` |
 
 ## 下次更新核查
 
@@ -80,7 +84,7 @@
 {
   "formatVersion": 1,
   "supplier": "openai",
-  "checkedAt": "2026-10-03",
+  "checkedAt": "2026-11-01",
   "sourceCatalog": "../SOURCES.md"
 }
 ```

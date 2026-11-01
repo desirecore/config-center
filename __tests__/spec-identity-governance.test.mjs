@@ -19,7 +19,7 @@ test('identity-only coding variants cannot inherit family context, output or rou
 })
 test('all recorded baseline differences and exceptions have explicit decisions',()=>{
  const d=read('docs/plans/catalog-contract-migration/SPEC-DECISIONS.json')
- assert.equal(d.bindings.length,24);assert.equal(d.differences.length,45);assert.equal(d.specOnly.length,58)
+ assert.equal(d.bindings.length,24);assert.equal(d.differences.length,45);assert.equal(d.specOnly.length,59)
  for(const row of [...d.differences,...d.specOnly]){assert.ok(row.classification);assert.ok(row.decision);assert.ok(row.reason)}
  for(const row of d.accessExceptions){assert.equal(row.inheritFamily,false);assert.equal(row.automaticRouting,false);assert.equal(row.effectiveBinding,null)}
  assert.ok(d.differences.some(r=>r.id==='gpt-5.4-nano'&&!r.currentDifferences.length))

@@ -31,7 +31,8 @@
     "qwen-plus",
     "qwen-turbo",
     "qwen3-max",
-    "qwen3-max-trans"
+    "qwen3-max-trans",
+    "paraformer-v2"
   ],
   "models": [
     {
@@ -459,25 +460,29 @@
       }
     },
     {
-      "modelName": "paraformer-v2",
-      "displayName": "Paraformer V2",
+      "modelName": "fun-asr-realtime",
+      "displayName": "Fun-ASR Realtime",
       "serviceType": [
         "asr"
       ],
-      "description": "通义语音识别",
+      "description": "通义 Fun-ASR 实时语音识别，支持听写与音频文件转写",
       "capabilities": [
         "asr",
-        "chinese_optimized"
+        "chinese_optimized",
+        "multilingual"
       ],
       "extra": {
-        "maxAudioLength": 3600,
         "supportedInputFormats": [
+          "pcm",
           "wav",
           "mp3",
-          "pcm",
-          "ogg"
+          "opus",
+          "speex",
+          "aac",
+          "amr"
         ],
-        "streamingSupported": true
+        "streamingSupported": true,
+        "pricingNotes": "华北2（北京）按输入音频秒数计费 0.00033 元/秒，输出不计费。"
       }
     },
     {

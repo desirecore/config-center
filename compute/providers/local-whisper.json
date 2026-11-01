@@ -12,6 +12,7 @@
   "services": [
     "asr"
   ],
+  "credentialMode": "none",
   "models": [
     {
       "modelName": "whisper-large-v3",

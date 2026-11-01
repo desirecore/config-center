@@ -51,7 +51,7 @@ export function projectV1(catalog){
         else throw new Error(`Missing projection ${model.apiModelId}.${key}`);
       }
       return out;
-    });outputs[access.metadata.sourceFile]={...clone(access.connection),models};
+    });outputs[access.metadata.sourceFile]={...clone(access.connection),...clone(access.metadata.v1Connection??{}),models};
   }
   return outputs;
 }
@@ -76,7 +76,11 @@ export function compileCatalog(catalog){
   // Projection-only metadata never enters the runtime contract; useful descriptive values remain non-consumed.
   delete output.metadata.specFiles;
   for(const spec of output.specs){delete spec.metadata.projection;delete spec.metadata.legacyIdentity;}
-  for(const access of output.accesses)for(const model of access.models)delete model.metadata.projection;
+  for(const access of output.accesses){
+    // V1-only connection fields: released clients reject unknown V2 connection keys, so they must not reach compute/v2.
+    delete access.metadata.v1Connection;
+    for(const model of access.models)delete model.metadata.projection;
+  }
   output.digest=digest(output);
   const projection=projectV1(catalog);
   const diagnostics={specs:catalog.specs.length,accesses:catalog.accesses.length,models:catalog.accesses.reduce((n,a)=>n+a.models.length,0),bindings:{},overrides:[],publication:catalog.publication};
