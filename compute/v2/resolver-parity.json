@@ -1140,86 +1140,74 @@
     {
       "accessId": "provider-minimax-001",
       "apiModelId": "speech-2.8-hd",
-      "digest": "5a2211bfeae722eb09bdbbd8d469e783afd181fd7081a41ae43a08efd219a364",
-      "selectable": false,
+      "digest": "d8e328ad6778fee709f720a34f7f930e11c4d0876644876b02ace996dd09c1ae",
+      "selectable": true,
       "effectiveApiFormat": "anthropic-messages",
       "effectiveApiModelId": "speech-2.8-hd",
-      "eligibleForCall": false,
+      "eligibleForCall": true,
       "eligibleForAutoRouting": false,
       "manualOnly": false,
-      "blockedReasons": [
-        "unsupported-adapter"
-      ]
+      "blockedReasons": []
     },
     {
       "accessId": "provider-minimax-001",
       "apiModelId": "speech-2.8-turbo",
-      "digest": "fa5c5a17685f7feffab859991f517774db23c3aa7a5220b82c6dffac25fd2311",
-      "selectable": false,
+      "digest": "6d18c489e198b1b28be986ab8ee0566b47afbf3aa9f534288408e11302190cc4",
+      "selectable": true,
       "effectiveApiFormat": "anthropic-messages",
       "effectiveApiModelId": "speech-2.8-turbo",
-      "eligibleForCall": false,
+      "eligibleForCall": true,
       "eligibleForAutoRouting": false,
       "manualOnly": false,
-      "blockedReasons": [
-        "unsupported-adapter"
-      ]
+      "blockedReasons": []
     },
     {
       "accessId": "provider-minimax-001",
       "apiModelId": "speech-2.6-hd",
-      "digest": "dce821f33ad7ec94b4985c7f91a89d914fb98dbbb0047d69cedbb94b4e7dcbcb",
-      "selectable": false,
+      "digest": "71efc34c3f10d4c15df9fa68c4e209965aa553f8a2b9b9087eaaca9ad9d6b7b4",
+      "selectable": true,
       "effectiveApiFormat": "anthropic-messages",
       "effectiveApiModelId": "speech-2.6-hd",
-      "eligibleForCall": false,
+      "eligibleForCall": true,
       "eligibleForAutoRouting": false,
       "manualOnly": false,
-      "blockedReasons": [
-        "unsupported-adapter"
-      ]
+      "blockedReasons": []
     },
     {
       "accessId": "provider-minimax-001",
       "apiModelId": "speech-2.6-turbo",
-      "digest": "d85695f4951cc8361552d3223f9b8a895b09de868f0ea59f5c93a5a0a740e02a",
-      "selectable": false,
+      "digest": "ac0cc6230d39e83ece9c620e513ad67eae84683793e1eecd7cc6a3ee0192792e",
+      "selectable": true,
       "effectiveApiFormat": "anthropic-messages",
       "effectiveApiModelId": "speech-2.6-turbo",
-      "eligibleForCall": false,
+      "eligibleForCall": true,
       "eligibleForAutoRouting": false,
       "manualOnly": false,
-      "blockedReasons": [
-        "unsupported-adapter"
-      ]
+      "blockedReasons": []
     },
     {
       "accessId": "provider-minimax-001",
       "apiModelId": "speech-02-hd",
-      "digest": "c19ce2b75dd011af973b82b5a9b249704e0b021acb214374eafbdb539bf76026",
-      "selectable": false,
+      "digest": "42d69775bdb337dc3782137902cd6f38d40be3eb99dd9a7de16d5f24e5308200",
+      "selectable": true,
       "effectiveApiFormat": "anthropic-messages",
       "effectiveApiModelId": "speech-02-hd",
-      "eligibleForCall": false,
+      "eligibleForCall": true,
       "eligibleForAutoRouting": false,
       "manualOnly": false,
-      "blockedReasons": [
-        "unsupported-adapter"
-      ]
+      "blockedReasons": []
     },
     {
       "accessId": "provider-minimax-001",
       "apiModelId": "speech-02-turbo",
-      "digest": "bd05317e9bda2690da944faa6d8b5d5488818f2e86864e1c61707a6a73782e86",
-      "selectable": false,
+      "digest": "b8f1b79fc34a757de726d80af65016260a0d35230ff1dc5de2ef0b1577b85e3d",
+      "selectable": true,
       "effectiveApiFormat": "anthropic-messages",
       "effectiveApiModelId": "speech-02-turbo",
-      "eligibleForCall": false,
+      "eligibleForCall": true,
       "eligibleForAutoRouting": false,
       "manualOnly": false,
-      "blockedReasons": [
-        "unsupported-adapter"
-      ]
+      "blockedReasons": []
     },
     {
       "accessId": "provider-minimax-001",
@@ -3840,30 +3828,26 @@
     {
       "accessId": "provider-minimax-coding-001",
       "apiModelId": "speech-2.8-hd",
-      "digest": "384a630317b33035ee4fda65ae35330a0a87cde0f275aa523166974a22b6c624",
-      "selectable": false,
+      "digest": "e86f691bd3796ab3dbc81339c923afb40350b882aacbfb17ba76676d2dc28706",
+      "selectable": true,
       "effectiveApiFormat": "anthropic-messages",
       "effectiveApiModelId": "speech-2.8-hd",
-      "eligibleForCall": false,
+      "eligibleForCall": true,
       "eligibleForAutoRouting": false,
       "manualOnly": false,
-      "blockedReasons": [
-        "unsupported-adapter"
-      ]
+      "blockedReasons": []
     },
     {
       "accessId": "provider-minimax-coding-001",
       "apiModelId": "speech-2.8-turbo",
-      "digest": "a749ec4a0be315f89c20dd832a792e37cd6d268f3f0cb9d12bda15b3e5d06f49",
-      "selectable": false,
+      "digest": "aff4c5d2b72bd16ce7cc70e7d186ed8cf82f027232c15be7a5a287166164b2dd",
+      "selectable": true,
       "effectiveApiFormat": "anthropic-messages",
       "effectiveApiModelId": "speech-2.8-turbo",
-      "eligibleForCall": false,
+      "eligibleForCall": true,
       "eligibleForAutoRouting": false,
       "manualOnly": false,
-      "blockedReasons": [
-        "unsupported-adapter"
-      ]
+      "blockedReasons": []
     },
     {
       "accessId": "provider-minimax-coding-001",

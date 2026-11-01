@@ -22,6 +22,10 @@
 
 M Plan 官网列出 M3.1 Flash 正式版并确认 Preview 下线。当前预置改用正式 ID；tombstones 增加 MiniMax-M3.1-Flash-Preview，端点、协议与其他存量模型保持原值，其他条目的既有核验边界不变。
 
+## 2026-11-02 语音合成
+
+`speech-2.8-hd`、`speech-2.8-turbo` 解除未适配标记，走媒体地址上的 `t2a_v2`。[minimax-mplan-faq](../SOURCES.md#minimax-mplan-faq) 说订阅 Key 与按量 Key 不能混用，有按量价格的 API 端点扣减套餐额度，没有单独写明该接口；订阅 Key 能否调用待账号实测。
+
 ## 关联模型
 
 - [`MiniMax-M3.1-Flash`](../models/minimax-m3.1-flash.md)

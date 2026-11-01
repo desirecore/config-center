@@ -4,6 +4,7 @@
 
 openai-responses/openai-completions只声明通用对话协议。Realtime WebSocket/实时翻译、原生图像/视频任务、批量ASR/TTS各有不同endpoint、请求/响应和流式状态机；同域/Bearer认证或同名apiFormat不证明模型协议适配。
 
+- 2026-11-02 解除 8 条 MiniMax TTS（直连 6 条、套餐 2 条）：客户端新增 `minimax-t2a-http` 适配器，规格声明语音协议；当前共 26 条，其中 ASR/TTS 2 条。未做账号调用。
 - 2026-11-01 解除两条ASR：`whisper-large-v3` 补精确规格与语音协议；dashscope 的 `paraformer-v2` 只有公网URL异步转写，移出接入面，由 `fun-asr-realtime` 替换。下文的 12 条与数量是 2026-10-03 核查时的记录，当前清单以 JSON 为准（共 34 条，其中 ASR/TTS 10 条）。
 - 3条Realtime、21条媒体和12条ASR/TTS接入确认当前没有对应注册适配器，保留候选信息，标记protocol unsupported；不猜最低版本。
 - 图像/视频工具在findProvider后按实际provider slug查getAdapter，undefined立即返回失败，没有通用Provider.apiFormat兜底。
@@ -26,12 +27,6 @@ openai-responses/openai-completions只声明通用对话协议。Realtime WebSoc
 | `compute/providers/kling.json` | `kling-v2-5-turbo-pro` | no-registered-video_gen-provider-adapter |
 | `compute/providers/kling.json` | `kling-v2` | no-registered-video_gen-provider-adapter |
 | `compute/providers/kling.json` | `kling-v2-master` | no-registered-video_gen-provider-adapter |
-| `compute/providers/minimax.json` | `speech-2.8-hd` | missing-speech-profile-and-compatibility |
-| `compute/providers/minimax.json` | `speech-2.8-turbo` | missing-speech-profile-and-compatibility |
-| `compute/providers/minimax.json` | `speech-2.6-hd` | missing-speech-profile-and-compatibility |
-| `compute/providers/minimax.json` | `speech-2.6-turbo` | missing-speech-profile-and-compatibility |
-| `compute/providers/minimax.json` | `speech-02-hd` | missing-speech-profile-and-compatibility |
-| `compute/providers/minimax.json` | `speech-02-turbo` | missing-speech-profile-and-compatibility |
 | `compute/providers/openai.json` | `gpt-image-2.5-sunburst` | no-registered-image_gen-provider-adapter |
 | `compute/providers/openai.json` | `gpt-image-2.5-flare` | no-registered-image_gen-provider-adapter |
 | `compute/providers/openai.json` | `gpt-image-2` | no-registered-image_gen-provider-adapter |
@@ -44,8 +39,6 @@ openai-responses/openai-completions只声明通用对话协议。Realtime WebSoc
 | `compute/coding-plans/dashscope-token-plan.json` | `wan2.7-image-pro` | no-registered-image_gen-provider-adapter |
 | `compute/coding-plans/dashscope-token-plan.json` | `wan2.7-image` | no-registered-image_gen-provider-adapter |
 | `compute/coding-plans/dashscope-token-plan.json` | `qwen-image-3.0-pro` | no-registered-image_gen-provider-adapter |
-| `compute/coding-plans/minimax-coding.json` | `speech-2.8-hd` | missing-speech-profile-and-compatibility |
-| `compute/coding-plans/minimax-coding.json` | `speech-2.8-turbo` | missing-speech-profile-and-compatibility |
 
 ## 真实派发证据
 

@@ -215,6 +215,25 @@ test('Whisper-1 stays selectable in V1 until its announced shutdown', () => {
   assert.equal(lifecycle.status, 'deprecated')
   assert.equal(lifecycle.retiredAt, '2027-02-26')
 })
+test('MiniMax speech models declare the T2A protocol with PCM at the immersive sample rate', () => {
+  const specs = read('compute/model-specs/minimax.json').specs
+  const models = ['speech-2.8-hd', 'speech-2.8-turbo', 'speech-2.6-hd', 'speech-2.6-turbo', 'speech-02-hd', 'speech-02-turbo']
+  for (const model of models) {
+    const { modelOrigin, speech } = specs.find(item => item.id === model).spec.extra
+    assert.deepEqual(modelOrigin, { vendor: 'minimax', canonicalModelId: model, family: 'minimax-speech' })
+    assert.equal(speech.protocol, 'minimax-t2a-http')
+    assert.ok(speech.modes.includes('batch'))
+    assert.ok(speech.outputFormats.includes('pcm16le'))
+    assert.ok(speech.sampleRates.includes(24000))
+    assert.ok(speech.voices.some(voice => voice.id === speech.defaultVoice))
+  }
+  const catalog = read('catalog/v2/catalog.json')
+  for (const id of ['provider-minimax-001', 'provider-minimax-coding-001']) {
+    const rows = catalog.accesses.find(item => item.id === id).models.filter(item => models.includes(item.apiModelId))
+    assert.equal(rows.length, id === 'provider-minimax-001' ? 6 : 2)
+    for (const row of rows) assert.equal(row.protocol, undefined, `${id}:${row.apiModelId}`)
+  }
+})
 test('credentialMode reaches V1 only: released clients reject unknown V2 connection keys', () => {
   assert.equal(read('compute/providers/local-whisper.json').credentialMode, 'none')
   for (const path of ['catalog/v2/catalog.json', 'compute/v2/catalog.json']) {

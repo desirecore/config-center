@@ -95,15 +95,15 @@ test('explicit access-local/dynamic contracts stay callable on known adapters bu
   assert.ok(resolveEffectiveModel(spec,m,{...options,connection:{apiFormat:'not-implemented'}}).blockedReasons.includes('unknown-adapter'));
  }
 });
-test('all 34 confirmed unimplemented native models remain visible and cannot call or auto route',()=>{
+test('all 26 confirmed unimplemented native models remain visible and cannot call or auto route',()=>{
  const decisions=JSON.parse(fs.readFileSync(path.join(root,'docs/plans/catalog-contract-migration/ADAPTER-DECISIONS.json'),'utf8')).decisions;
- assert.equal(decisions.length,34);let count=0;
+ assert.equal(decisions.length,26);let count=0;
  for(const decision of decisions){
   const access=catalog.accesses.find(a=>a.metadata.sourceFile===decision.file),m=access.models.find(m=>m.apiModelId===decision.apiModelId),s=catalog.specs.find(s=>s.modelRef===m.modelRef);
   assert.equal(m.protocol.state,'unsupported',`${decision.file}:${m.apiModelId}`);assert.ok(m.protocol.reason);assert.equal(m.protocol.requiredClientVersion,undefined);
   const result=resolveEffectiveModel(s,m,{...options,connection:access.connection});assert.equal(result.eligibleForCall,false);assert.equal(result.eligibleForAutoRouting,false);assert.ok(result.blockedReasons.includes('unsupported-adapter'));count++;
  }
- assert.equal(count,34);
+ assert.equal(count,26);
 });
 test('actual outgoing aliases survive canonical transport IDs and V1 projection',()=>{
  const expected={ 'glm-5.2':'glm-5.2[1m]','doubao-seed-2.1-pro':'doubao-seed-2-1-pro-260628','doubao-seed-2.1-turbo':'doubao-seed-2-1-turbo-260628'};
