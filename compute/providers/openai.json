@@ -999,12 +999,37 @@
       }
     },
     {
+      "modelName": "gpt-transcribe",
+      "displayName": "GPT Transcribe",
+      "serviceType": [
+        "asr"
+      ],
+      "description": "OpenAI 推荐的录音转写模型，按音频分钟计费，接替将于 2027-02-26 停服的 Whisper",
+      "capabilities": [
+        "asr",
+        "multilingual"
+      ],
+      "extra": {
+        "supportedInputFormats": [
+          "mp3",
+          "mp4",
+          "mpeg",
+          "mpga",
+          "m4a",
+          "wav",
+          "webm"
+        ],
+        "streamingSupported": true,
+        "pricingNotes": "OpenAI lists this model at $0.0045 per minute of transcription audio."
+      }
+    },
+    {
       "modelName": "whisper-1",
       "displayName": "Whisper",
       "serviceType": [
         "asr"
       ],
-      "description": "通用语音识别",
+      "description": "通用语音识别。OpenAI 已标记弃用，将于 2027-02-26 停服，新配置请选 GPT Transcribe",
       "capabilities": [
         "asr",
         "multilingual"
