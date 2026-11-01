@@ -78,6 +78,40 @@ Qwen3.7 Max 官网给出 1000000 上下文、131072 最大输出和北京 12/36 
 
 状态 `partial` 仅表示列出的字段已核实；不能推断整条配置、价格、账号权限或真实模型调用都已验收。`pending` 没有已核字段；`historical` 只作历史兼容参考。路由 tier/priority、产品标签和默认选择属于本仓策略，不伪装成官网数据。
 
+## 2026-11-01 语音识别核对
+
+百炼文档 curl 可直接取到正文。只核对语音识别的模型 ID、接口形态、格式与计价，未进行账号调用。
+
+### bailian-asr-realtime
+
+- 入口：[bailian-asr-realtime](https://help.aliyun.com/zh/model-studio/real-time-speech-recognition)。
+- 读取日期：2026-11-01；状态：`fetched`；最终地址：https://help.aliyun.com/zh/model-studio/real-time-speech-recognition-user-guide。
+- 适用范围：百炼实时语音识别用户指南；模型与地域列表、Fun-ASR-Realtime 音频格式。
+
+### bailian-fun-asr-websocket
+
+- 入口：[bailian-fun-asr-websocket](https://help.aliyun.com/zh/model-studio/fun-asr-realtime-websocket-api)。
+- 读取日期：2026-11-01；状态：`fetched`；最终地址：https://help.aliyun.com/zh/model-studio/fun-asr-realtime-websocket-api。
+- 适用范围：Fun-ASR-Realtime WebSocket 接入指南；接口地址、鉴权头与交互流程。
+
+### bailian-fun-asr-sdk
+
+- 入口：[bailian-fun-asr-sdk](https://help.aliyun.com/zh/model-studio/fun-asr-realtime-python-sdk)。
+- 读取日期：2026-11-01；状态：`fetched`；最终地址：https://help.aliyun.com/zh/model-studio/fun-asr-realtime-python-sdk。
+- 适用范围：Fun-ASR-Realtime 请求参数；采样率、音频格式与 language_hints（只取第一个值、不设置时自动识别）。
+
+### bailian-asr-pricing
+
+- 入口：[bailian-asr-pricing](https://help.aliyun.com/zh/model-studio/model-pricing)。
+- 读取日期：2026-11-01；状态：`fetched`；最终地址：https://help.aliyun.com/zh/model-studio/model-pricing。
+- 适用范围：百炼模型价格页的语音识别段；Fun-ASR 与 Paraformer 按输入音频秒数计费，本轮只取北京 CNY。
+
+### bailian-paraformer-file
+
+- 入口：[bailian-paraformer-file](https://help.aliyun.com/zh/model-studio/paraformer-recorded-speech-recognition-restful-api)。
+- 读取日期：2026-11-01；状态：`fetched`；最终地址：https://help.aliyun.com/zh/model-studio/paraformer-recorded-speech-recognition-restful-api。
+- 适用范围：Paraformer 录音文件识别 RESTful API；异步任务、只接受公网可访问的音频 URL。
+
 <!-- source-metadata:start -->
 ```json
 {
@@ -224,6 +258,56 @@ Qwen3.7 Max 官网给出 1000000 上下文、131072 最大输出和北京 12/36 
       "checkedAt": "2026-10-05",
       "contentSha256": "21bb14508f06ea365a249f572b652e6424dcc2055d3e49c55b4af2448d3fcec8",
       "resolvedUrl": "https://help.aliyun.com/zh/model-studio/coding-plan"
+    },
+    {
+      "id": "bailian-asr-realtime",
+      "url": "https://help.aliyun.com/zh/model-studio/real-time-speech-recognition",
+      "kind": "official-doc",
+      "scope": "百炼实时语音识别用户指南；模型与地域列表、Fun-ASR-Realtime 音频格式",
+      "retrieval": "fetched",
+      "checkedAt": "2026-11-01",
+      "contentSha256": "3d606d4f0361071bf757461d4f635a810fb93b7aeec35765b1b6a485b1987796",
+      "resolvedUrl": "https://help.aliyun.com/zh/model-studio/real-time-speech-recognition-user-guide"
+    },
+    {
+      "id": "bailian-fun-asr-websocket",
+      "url": "https://help.aliyun.com/zh/model-studio/fun-asr-realtime-websocket-api",
+      "kind": "official-doc",
+      "scope": "Fun-ASR-Realtime WebSocket 接入指南；接口地址、鉴权头与交互流程",
+      "retrieval": "fetched",
+      "checkedAt": "2026-11-01",
+      "contentSha256": "412d5aa5858aee8b83b8da08a0c852e22abc153e74cfc4d720a29c88e1a49fb2",
+      "resolvedUrl": "https://help.aliyun.com/zh/model-studio/fun-asr-realtime-websocket-api"
+    },
+    {
+      "id": "bailian-fun-asr-sdk",
+      "url": "https://help.aliyun.com/zh/model-studio/fun-asr-realtime-python-sdk",
+      "kind": "official-doc",
+      "scope": "Fun-ASR-Realtime 请求参数；采样率、音频格式与 language_hints（只取第一个值、不设置时自动识别）",
+      "retrieval": "fetched",
+      "checkedAt": "2026-11-01",
+      "contentSha256": "d51db448e490360fae4a1c1adb3c19957716e483d49ab0dfcfcc8ca3013adcbe",
+      "resolvedUrl": "https://help.aliyun.com/zh/model-studio/fun-asr-realtime-python-sdk"
+    },
+    {
+      "id": "bailian-asr-pricing",
+      "url": "https://help.aliyun.com/zh/model-studio/model-pricing",
+      "kind": "official-doc",
+      "scope": "百炼模型价格页的语音识别段；Fun-ASR 与 Paraformer 按输入音频秒数计费，本轮只取北京 CNY",
+      "retrieval": "fetched",
+      "checkedAt": "2026-11-01",
+      "contentSha256": "e0e5cdd162a303791035b629854b9962d24e70cbd1bd5f86c555953041ecc66e",
+      "resolvedUrl": "https://help.aliyun.com/zh/model-studio/model-pricing"
+    },
+    {
+      "id": "bailian-paraformer-file",
+      "url": "https://help.aliyun.com/zh/model-studio/paraformer-recorded-speech-recognition-restful-api",
+      "kind": "official-doc",
+      "scope": "Paraformer 录音文件识别 RESTful API；异步任务、只接受公网可访问的音频 URL",
+      "retrieval": "fetched",
+      "checkedAt": "2026-11-01",
+      "contentSha256": "2a6007559deff1db97314b2914df8a3703413583f24222bf8c47f622385dea9c",
+      "resolvedUrl": "https://help.aliyun.com/zh/model-studio/paraformer-recorded-speech-recognition-restful-api"
     }
   ]
 }

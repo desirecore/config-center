@@ -551,17 +551,15 @@
     },
     {
       "accessId": "provider-dashscope-001",
-      "apiModelId": "paraformer-v2",
-      "digest": "5fe3551cac44a875f05c5dd439c165c1e370357a283121b397f732a75b9a5788",
-      "selectable": false,
+      "apiModelId": "fun-asr-realtime",
+      "digest": "09980b568700d9412379dbf869b4c13543537b737a5c2d4e7a603d94473f3c72",
+      "selectable": true,
       "effectiveApiFormat": "openai-completions",
-      "effectiveApiModelId": "paraformer-v2",
-      "eligibleForCall": false,
+      "effectiveApiModelId": "fun-asr-realtime",
+      "eligibleForCall": true,
       "eligibleForAutoRouting": false,
       "manualOnly": false,
-      "blockedReasons": [
-        "unsupported-adapter"
-      ]
+      "blockedReasons": []
     },
     {
       "accessId": "provider-dashscope-001",
@@ -1034,16 +1032,14 @@
     {
       "accessId": "provider-local-whisper",
       "apiModelId": "whisper-large-v3",
-      "digest": "dc06630edb515b69d9ed65f4b33c3c202b2f28788465167515af424afb0011f4",
-      "selectable": false,
+      "digest": "45e1772f6b1a118cd07ced3d40dbf5e55b2f0ba8dbf2033df8f6ef0e9e55e0a5",
+      "selectable": true,
       "effectiveApiFormat": "openai-completions",
       "effectiveApiModelId": "whisper-large-v3",
-      "eligibleForCall": false,
+      "eligibleForCall": true,
       "eligibleForAutoRouting": false,
-      "manualOnly": true,
-      "blockedReasons": [
-        "unsupported-adapter"
-      ]
+      "manualOnly": false,
+      "blockedReasons": []
     },
     {
       "accessId": "provider-minimax-001",
@@ -2139,9 +2135,21 @@
     },
     {
       "accessId": "provider-openai-001",
-      "apiModelId": "whisper-1",
-      "digest": "a8efca4c19c2a15cccf3323964338fef92863312ef70bfa0b9338a804f84b1ed",
+      "apiModelId": "gpt-transcribe",
+      "digest": "4be6831e5f1cc6f803926a66a6a217bd5f5bdbe5097ffa2eecfd692f0a62400d",
       "selectable": true,
+      "effectiveApiFormat": "openai-completions",
+      "effectiveApiModelId": "gpt-transcribe",
+      "eligibleForCall": true,
+      "eligibleForAutoRouting": false,
+      "manualOnly": false,
+      "blockedReasons": []
+    },
+    {
+      "accessId": "provider-openai-001",
+      "apiModelId": "whisper-1",
+      "digest": "8101bee4fcffb5ecd86b89e2741bebff373052480f188efd50b6966efdf091e6",
+      "selectable": false,
       "effectiveApiFormat": "openai-completions",
       "effectiveApiModelId": "whisper-1",
       "eligibleForCall": true,

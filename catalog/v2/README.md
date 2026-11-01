@@ -10,6 +10,10 @@
 
 2026-10-28 数据批次 134：新增 7 个精确原厂型号、18 条接入记录，并将 MiniMax 套餐已下线的 Preview 预置替换为正式版，当前共 293 条规格、353 条接入。原厂、订阅与 OpenRouter 的窗口、输出、推理和计价分别维护；新型号不加入默认自动路由。下文的 340 条是初次迁移核对范围，当前编译器实际对照全部 353 条。
 
+2026-11-01 数据批次 135：语音识别预置可用化，新增 3 个精确规格（`fun-asr-realtime`、`gpt-transcribe`、`whisper-large-v3`）与 1 条净增接入（`gpt-transcribe`；`fun-asr-realtime` 替换 dashscope 的 `paraformer-v2`，后者写入 tombstones、规格保留），当前共 296 条规格、354 条接入。
+
+`access.metadata.v1Connection` 放只进 V1 Provider 投影的连接字段：已发布客户端的 V2 连接 Schema 为 `additionalProperties: false`，未知键会让整份配置中心数据被拒收（`算力目录Schema不兼容当前客户端`）。目前只有本地 Whisper 的 `credentialMode`。编译产物删除这个键，等客户端 V2 Schema 接受并铺开后再移入 `connection`。
+
 metadata不消费。V1布局及历史未消费extra保存在canonical metadata，完整回投影；运行时产物删除布局信息。迁移不刷新官方核验日期、不提升proof等级。价格币种和原数值保持，复杂价阶/注释保留sourceKey和源单位；没有转换为零或统一按token收费。
 
 客户端用户配置迁移不由这个仓库对用户磁盘执行，由客户端迁移器保留秘密、用户覆写与一次回滚基线；本工具只迁移受管作者数据。

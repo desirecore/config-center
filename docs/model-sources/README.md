@@ -20,11 +20,15 @@ providers/<supplier>/
 
 新增 7 个精确原厂型号及对应 API、订阅、OpenRouter 条目，数据批次 134。原厂、套餐和托管限额分别记录；新型号保持手动选择。MiniMax Preview 的历史证据保留，旧套餐预置改用正式版。上面的结构迁移统计是历史快照，不因本批新增刷新旧条目的日期或核验状态。
 
+## 2026-11-01 语音识别批次
+
+数据批次 135。百炼预置改用 `fun-asr-realtime`，`paraformer-v2` 移出接入面、规格保留；本地 Whisper 补独立规格与无需凭据声明；OpenAI 新增 `gpt-transcribe`，`whisper-1` 记录 2027-02-26 停服并暂留。协议声明是本仓适配选择，未做账号调用验收。
+
 ## 供应商
 
 | 供应商 | 模型文件 | 接入面文件 |
 | --- | ---: | ---: |
-| [阿里云百炼 / Qwen / Wan / HappyHorse](providers/alibaba/README.md) | 65 | 6 |
+| [阿里云百炼 / Qwen / Wan / HappyHorse](providers/alibaba/README.md) | 66 | 6 |
 | [Anthropic](providers/anthropic/README.md) | 11 | 3 |
 | [百川](providers/baichuan/README.md) | 4 | 2 |
 | [百度千帆](providers/baidu/README.md) | 14 | 3 |
@@ -40,7 +44,7 @@ providers/<supplier>/
 | [月之暗面 Kimi](providers/moonshot/README.md) | 14 | 3 |
 | [摩尔线程](providers/moorethread/README.md) | 1 | 1 |
 | [Ollama](providers/ollama/README.md) | 1 | 1 |
-| [OpenAI](providers/openai/README.md) | 50 | 4 |
+| [OpenAI](providers/openai/README.md) | 51 | 4 |
 | [OpenRouter](providers/openrouter/README.md) | 15 | 1 |
 | [Perplexity](providers/perplexity/README.md) | 3 | 2 |
 | [硅基流动](providers/siliconflow/README.md) | 3 | 1 |

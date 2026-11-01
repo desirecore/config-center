@@ -2,7 +2,7 @@
 
 [总索引](../../README.md) · [官网证据与边界](SOURCES.md) · [数据闭环核查](AUDIT.md)
 
-本目录包含 65 个单模型文件、6 个单接入面文件。核验日期与状态来自迁移前记录。
+本目录包含 66 个单模型文件、6 个单接入面文件。核验日期与状态来自迁移前记录。
 
 ## 接入面
 
@@ -33,6 +33,7 @@
 - [`happyhorse-1.1-r2v`](models/happyhorse-1.1-r2v.md)
 - [`happyhorse-1.1-t2v`](models/happyhorse-1.1-t2v.md)
 - [`kimi-k2.5`](models/kimi-k2.5.md)
+- [`fun-asr-realtime`](models/fun-asr-realtime.md)
 - [`paraformer-v2`](models/paraformer-v2.md)
 - [`qwen-image-2.0`](models/qwen-image-2.0.md)
 - [`qwen-image-2.0-pro`](models/qwen-image-2.0-pro.md)

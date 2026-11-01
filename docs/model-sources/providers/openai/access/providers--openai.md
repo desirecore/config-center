@@ -54,6 +54,7 @@
 - [`text-embedding-3-large`](../models/text-embedding-3-large.md)
 - [`tts-1`](../models/tts-1.md)
 - [`tts-1-hd`](../models/tts-1-hd.md)
+- [`gpt-transcribe`](../models/gpt-transcribe.md)
 - [`whisper-1`](../models/whisper-1.md)
 - [`o3`](../models/o3.md)
 - [`o3-pro`](../models/o3-pro.md)

@@ -16,7 +16,7 @@
 以上是配置快照，不能据此宣布该端点或账号已实际验收。核查地域、套餐支持、凭据来源及协议时，对照官网证据目录并记录结论。
 
 <!-- source-config: compute/providers/dashscope.json -->
-<!-- source-config-fingerprint: 797eda38b6c888337dd6531be55395e2f0ef4f9abcf442b2d0fd53c74fd3f5b8 -->
+<!-- source-config-fingerprint: 755801bb657691a1a393aebdc8a5278a16da1e063af2dbfa28a4f1168cb81116 -->
 
 ## 关联模型
 
@@ -38,7 +38,7 @@
 - [`text-embedding-v4`](../models/text-embedding-v4.md)
 - [`qwen3-rerank`](../models/qwen3-rerank.md)
 - [`cosyvoice-v2`](../models/cosyvoice-v2.md)
-- [`paraformer-v2`](../models/paraformer-v2.md)
+- [`fun-asr-realtime`](../models/fun-asr-realtime.md)
 - [`wan2.7-image-pro`](../models/wan2.7-image-pro.md)
 - [`wan2.7-image`](../models/wan2.7-image.md)
 - [`wan2.6-t2i`](../models/wan2.6-t2i.md)

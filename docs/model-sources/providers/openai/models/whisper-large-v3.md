@@ -3,11 +3,18 @@
 [供应商索引](../README.md) · [官网证据目录](../SOURCES.md)
 
 - 精确模型 ID：`whisper-large-v3`。
-- 核验日期：2026-10-03；本次只迁移记录，没有重新核验或提高状态。
+- 核验日期：2026-11-01；只新增共享规格段，字段状态未提高。
+
+## 接入合同与核验边界
+
+官方仓库 [whisper](../SOURCES.md#whisper) 的 README 列出 `large-v3`，没有 `whisper-large-v3` 这个模型 ID，也不提供 HTTP 服务。这个 ID 是本地部署服务常用的命名，因此两行都保持 pending。
+
+`extra.speech` 是本仓适配选择：要求本地服务暴露与 OpenAI 兼容的 `/v1/audio/transcriptions`。规格只描述这个开放权重型号，不继承云端 `whisper-1` 的接口、额度和停服日。Provider 声明 `credentialMode: none`，本地服务无需密钥。
 
 ## 适用接入面
 
 - [compute/providers/local-whisper.json](../access/providers--local-whisper.md)
+- [compute/model-specs/openai.json](../access/model-specs--openai.md)
 
 ## 字段级来源记录
 
@@ -39,6 +46,55 @@
 | --- | --- | --- | --- | --- | --- | --- |
 | `whisper-large-v3` | 未声明 / 未声明 | USD：未声明 / 未声明 | 待核实 | [openai-models](../SOURCES.md#openai-models) | pending | `f70d5b2a9f32872c27eb812a004a8d7f273b3bfaa466a907fd71ba824b2a4722` |
 
+### compute/model-specs/openai.json
+
+[查看配置](../../../../../compute/model-specs/openai.json) · [接入面说明](../access/model-specs--openai.md)
+
+当前配置详情（不是全部官网确认值；routing 是本仓策略）：
+
+<!-- source-details: {"config":"compute/model-specs/openai.json","id":"whisper-large-v3"} -->
+```json
+{
+  "spec": {
+    "capabilities": [
+      "asr",
+      "multilingual"
+    ],
+    "serviceType": [
+      "asr"
+    ],
+    "description": "OpenAI 开放权重的 Whisper large-v3，需自行部署兼容 OpenAI 转写接口的服务",
+    "extra": {
+      "modelOrigin": {
+        "vendor": "openai",
+        "canonicalModelId": "whisper-large-v3",
+        "family": "whisper"
+      },
+      "speech": {
+        "protocol": "openai-audio-transcriptions",
+        "protocolVersion": "1",
+        "modes": [
+          "batch"
+        ],
+        "inputFormats": [
+          "webm",
+          "wav",
+          "mp3"
+        ],
+        "languageHints": true
+      }
+    }
+  }
+}
+```
+<!-- source-details:end -->
+
+<!-- source-config: compute/model-specs/openai.json -->
+
+| 模型 ID | 上下文 / 输出 | 计价 | 已核字段→来源 | 来源入口 | 状态 | 数据指纹 |
+| --- | --- | --- | --- | --- | --- | --- |
+| `whisper-large-v3` | 未声明 / 未声明 | 非计价主数据 | 待核实 | [whisper](../SOURCES.md#whisper) | pending | `2f1ad1b4c9ece4b077b92ba396cfa6b63eff648b82c2d69d4b68826e8840df42` |
+
 ## 下次更新核查
 
 - 对照官网核查精确 ID／别名、是否仍列出、上下文／输入／输出限制及单位。
@@ -52,7 +108,7 @@
 {
   "formatVersion": 1,
   "supplier": "openai",
-  "checkedAt": "2026-10-03",
+  "checkedAt": "2026-11-01",
   "sourceCatalog": "../SOURCES.md"
 }
 ```

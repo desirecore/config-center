@@ -81,6 +81,11 @@
       "type": "string",
       "description": "品牌分组标识，UI 按此字段排序"
     },
+    "credentialMode": {
+      "type": "string",
+      "enum": ["required", "none", "managed"],
+      "description": "凭据模式：required 表示必须配置 API Key；none 表示本地/无鉴权服务无需密钥；managed 表示凭据由登录态或外部运行时托管。未声明时由客户端按旧配置兼容规则判定。"
+    },
     "credentialSource": {
       "type": "string",
       "enum": ["codex-cli", "claude-oauth", "github-copilot"],

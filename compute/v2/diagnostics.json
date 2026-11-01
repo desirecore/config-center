@@ -1,10 +1,10 @@
 {
-  "specs": 293,
+  "specs": 296,
   "accesses": 40,
-  "models": 353,
+  "models": 354,
   "bindings": {
-    "exact": 317,
-    "access-local": 28,
+    "exact": 319,
+    "access-local": 27,
     "dynamic": 8
   },
   "overrides": [
@@ -965,29 +965,6 @@
       "value": 0.95,
       "reason": "preserved-access-contract",
       "evidence": "compute/providers/google.json#gemini-2.5-flash",
-      "verification": "inherited-not-reverified"
-    },
-    {
-      "accessId": "provider-local-whisper",
-      "apiModelId": "whisper-large-v3",
-      "field": "serviceType",
-      "value": [
-        "asr"
-      ],
-      "reason": "preserved-access-contract",
-      "evidence": "compute/providers/local-whisper.json#whisper-large-v3",
-      "verification": "inherited-not-reverified"
-    },
-    {
-      "accessId": "provider-local-whisper",
-      "apiModelId": "whisper-large-v3",
-      "field": "capabilities",
-      "value": [
-        "asr",
-        "multilingual"
-      ],
-      "reason": "preserved-access-contract",
-      "evidence": "compute/providers/local-whisper.json#whisper-large-v3",
       "verification": "inherited-not-reverified"
     },
     {

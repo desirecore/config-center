@@ -12,11 +12,12 @@
 - 端点：`http://localhost:8080`。
 - 计价币种：`USD`。
 - 访问模式：`普通 API`。
+- 凭据模式：`none`，本地服务无需密钥。这个字段只写入 V1 Provider 投影（目录作者数据的 `metadata.v1Connection`）：已发布客户端的 V2 连接 Schema 不接受它，放进 `compute/v2` 会让整份配置中心数据被拒收。
 
 以上是配置快照，不能据此宣布该端点或账号已实际验收。核查地域、套餐支持、凭据来源及协议时，对照官网证据目录并记录结论。
 
 <!-- source-config: compute/providers/local-whisper.json -->
-<!-- source-config-fingerprint: 7b2535ee0b2a16f379a493b743f487ff20277259fa1bec37d58a40a9ab92535f -->
+<!-- source-config-fingerprint: a606867c2871ad8ed7343d5b1629140fa319f391f5f6236d20c64234634a50a5 -->
 
 ## 关联模型
 

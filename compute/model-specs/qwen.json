@@ -745,6 +745,52 @@
       }
     },
     {
+      "id": "fun-asr-realtime",
+      "displayName": "Fun-ASR Realtime",
+      "family": "fun-asr-realtime",
+      "match": {
+        "exact": [
+          "fun-asr-realtime"
+        ]
+      },
+      "spec": {
+        "capabilities": [
+          "asr",
+          "chinese_optimized",
+          "multilingual"
+        ],
+        "serviceType": [
+          "asr"
+        ],
+        "description": "通义 Fun-ASR 实时语音识别，WebSocket 流式转写",
+        "extra": {
+          "modelOrigin": {
+            "vendor": "alibaba",
+            "canonicalModelId": "fun-asr-realtime",
+            "family": "fun-asr-realtime"
+          },
+          "speech": {
+            "protocol": "dashscope-websocket-asr",
+            "protocolVersion": "1",
+            "modes": [
+              "batch",
+              "streaming"
+            ],
+            "inputFormats": [
+              "webm",
+              "wav",
+              "pcm",
+              "mp3"
+            ],
+            "sampleRates": [
+              16000
+            ],
+            "languageHints": true
+          }
+        }
+      }
+    },
+    {
       "id": "paraformer-v2",
       "displayName": "Paraformer V2",
       "family": "paraformer",
@@ -761,7 +807,7 @@
         "serviceType": [
           "asr"
         ],
-        "description": "通义语音识别"
+        "description": "通义录音文件异步转写，只接受公网可访问的音频 URL；客户端未适配"
       }
     },
     {

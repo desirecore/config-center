@@ -52,7 +52,7 @@ const stable = (value) => {
   return value
 }
 export const modelFingerprint = (row) => createHash('sha256').update(JSON.stringify(stable(row))).digest('hex')
-export const configFingerprint = (data) => modelFingerprint(Object.fromEntries(['id', 'provider', 'brandGroup', 'label', 'baseUrl', 'mediaBaseUrl', 'apiFormat', 'priceCurrency', 'services', 'accessMode', 'credentialSource', 'requiredClientVersion', 'tombstones', 'description', 'codingPlan'].filter((key) => key in data).map((key) => [key, data[key]])))
+export const configFingerprint = (data) => modelFingerprint(Object.fromEntries(['id', 'provider', 'brandGroup', 'label', 'baseUrl', 'mediaBaseUrl', 'apiFormat', 'priceCurrency', 'services', 'accessMode', 'credentialMode', 'credentialSource', 'requiredClientVersion', 'tombstones', 'description', 'codingPlan'].filter((key) => key in data).map((key) => [key, data[key]])))
 const get = (row, path) => path.split('.').reduce((value, key) => value?.[key], row)
 const dateValid = (value) => /^\d{4}-\d{2}-\d{2}$/.test(value ?? '') && !Number.isNaN(Date.parse(value)) && new Date(value).toISOString().slice(0, 10) === value
 const configSupplier = (config) => {

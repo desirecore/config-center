@@ -43,6 +43,7 @@
 - [`text-embedding-v4`](../models/text-embedding-v4.md)
 - [`qwen3-rerank`](../models/qwen3-rerank.md)
 - [`cosyvoice-v2`](../models/cosyvoice-v2.md)
+- [`fun-asr-realtime`](../models/fun-asr-realtime.md)
 - [`paraformer-v2`](../models/paraformer-v2.md)
 - [`wan2.7-image-pro`](../models/wan2.7-image-pro.md)
 - [`wan2.7-image`](../models/wan2.7-image.md)

@@ -176,3 +176,55 @@ test('Mistral original unknown budgets stay unknown rather than inheriting the g
   assert.equal(hosted.facts.contextWindow, 1048576)
   assert.equal(hosted.facts.maxOutputTokens, 262144)
 })
+test('ASR presets declare the protocol their client adapter implements', () => {
+  const specs = {
+    'fun-asr-realtime': read('compute/model-specs/qwen.json').specs.find(item => item.id === 'fun-asr-realtime'),
+    'gpt-transcribe': read('compute/model-specs/openai.json').specs.find(item => item.id === 'gpt-transcribe'),
+    'whisper-large-v3': read('compute/model-specs/openai.json').specs.find(item => item.id === 'whisper-large-v3'),
+  }
+  const protocols = { 'fun-asr-realtime': 'dashscope-websocket-asr', 'gpt-transcribe': 'openai-audio-transcriptions', 'whisper-large-v3': 'openai-audio-transcriptions' }
+  for (const [id, spec] of Object.entries(specs)) {
+    assert.deepEqual(spec.match.exact, [id], '只精确匹配，不能经 family 把协议扩散到其他型号')
+    assert.deepEqual(spec.spec.serviceType, ['asr'])
+    assert.equal(spec.spec.extra.modelOrigin.canonicalModelId, id)
+    assert.equal(spec.spec.extra.speech.protocol, protocols[id])
+    assert.equal(spec.spec.extra.speech.protocolVersion, '1')
+    assert.equal(spec.routing, undefined, '语音模型不进入 Agent 自动路由')
+  }
+  // 客户端解析实时听写要求 PCM16/16k 流式；整段识别要求 wav。
+  assert.deepEqual(specs['fun-asr-realtime'].spec.extra.speech.modes, ['batch', 'streaming'])
+  assert.deepEqual(specs['fun-asr-realtime'].spec.extra.speech.sampleRates, [16000])
+  for (const spec of Object.values(specs)) assert.ok(spec.spec.extra.speech.inputFormats.includes('wav'))
+  // gpt-transcribe 用 languages 取代 language，协议 v1 发不了，声明不接受语言提示。
+  assert.equal(specs['gpt-transcribe'].spec.extra.speech.languageHints, false)
+  assert.equal(specs['whisper-large-v3'].spec.extra.speech.languageHints, true)
+})
+test('Paraformer leaves the DashScope preset while its spec stays, because it only accepts public URLs', () => {
+  const provider = read('compute/providers/dashscope.json')
+  assert.equal(provider.models.some(item => item.modelName === 'paraformer-v2'), false)
+  assert.ok(provider.tombstones.includes('paraformer-v2'))
+  assert.ok(provider.models.some(item => item.modelName === 'fun-asr-realtime'))
+  assert.ok(read('compute/model-specs/qwen.json').specs.some(item => item.id === 'paraformer-v2'))
+})
+test('Whisper-1 stays selectable in V1 until its announced shutdown', () => {
+  const provider = read('compute/providers/openai.json')
+  assert.ok(provider.models.some(item => item.modelName === 'whisper-1'))
+  assert.ok(provider.models.some(item => item.modelName === 'gpt-transcribe'))
+  const catalog = read('catalog/v2/catalog.json')
+  const lifecycle = catalog.specs.find(item => item.modelRef === 'openai:whisper-1').lifecycle
+  assert.equal(lifecycle.status, 'deprecated')
+  assert.equal(lifecycle.retiredAt, '2027-02-26')
+})
+test('credentialMode reaches V1 only: released clients reject unknown V2 connection keys', () => {
+  assert.equal(read('compute/providers/local-whisper.json').credentialMode, 'none')
+  for (const path of ['catalog/v2/catalog.json', 'compute/v2/catalog.json']) {
+    const access = read(path).accesses.find(item => item.id === 'provider-local-whisper')
+    assert.equal(access.connection.credentialMode, undefined, path)
+  }
+  const compiled = read('compute/v2/catalog.json')
+  assert.equal(compiled.accesses.some(item => item.metadata.v1Connection !== undefined), false)
+  const schema = read('schemas/catalog-v2.schema.json')
+  const connection = schema.properties.accesses.items.properties.connection
+  assert.equal(connection.additionalProperties, false)
+  assert.equal(connection.properties.credentialMode, undefined, '放宽前先确认客户端 Schema 已接受并铺开')
+})

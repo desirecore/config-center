@@ -32,7 +32,7 @@
 | [`wan2.7-image`](../../model-sources/providers/alibaba/models/wan2.7-image.md) | [`compute/coding-plans/dashscope-token-plan.json`](../../../compute/coding-plans/dashscope-token-plan.json) | `modelName` | [qwen-models](../../model-sources/providers/alibaba/SOURCES.md#qwen-models)：fetched |
 | [`wan2.7-image`](../../model-sources/providers/alibaba/models/wan2.7-image.md) | [`compute/model-specs/qwen.json`](../../../compute/model-specs/qwen.json) | `id` | [qwen-models](../../model-sources/providers/alibaba/SOURCES.md#qwen-models)：fetched |
 
-## 仅确认 ID，参数来源未登记（98 条）
+## 仅确认 ID，参数来源未登记（96 条）
 
 | 模型 | 接入面 | 未登记证明的关键字段 | 官网入口/读取结果 |
 | --- | --- | --- | --- |
@@ -60,8 +60,6 @@
 | [`kimi-k2.5`](../../model-sources/providers/alibaba/models/kimi-k2.5.md) | [`compute/coding-plans/dashscope-token-plan.json`](../../../compute/coding-plans/dashscope-token-plan.json) | `contextWindow`、`maxOutputTokens` | [qwen-pricing](../../model-sources/providers/alibaba/SOURCES.md#qwen-pricing)：fetched |
 | [`MiniMax-M2.5`](../../model-sources/providers/alibaba/models/minimax-m2.5.md) | [`compute/coding-plans/dashscope-coding.json`](../../../compute/coding-plans/dashscope-coding.json) | `contextWindow`、`maxOutputTokens` | [qwen-pricing](../../model-sources/providers/alibaba/SOURCES.md#qwen-pricing)：fetched |
 | [`MiniMax-M2.5`](../../model-sources/providers/alibaba/models/minimax-m2.5.md) | [`compute/coding-plans/dashscope-token-plan.json`](../../../compute/coding-plans/dashscope-token-plan.json) | `contextWindow`、`maxOutputTokens` | [qwen-pricing](../../model-sources/providers/alibaba/SOURCES.md#qwen-pricing)：fetched |
-| [`paraformer-v2`](../../model-sources/providers/alibaba/models/paraformer-v2.md) | [`compute/providers/dashscope.json`](../../../compute/providers/dashscope.json) | 已登记关键字段都有证明；其他合同限制仍按原记录复核 | [qwen-pricing](../../model-sources/providers/alibaba/SOURCES.md#qwen-pricing)：fetched |
-| [`paraformer-v2`](../../model-sources/providers/alibaba/models/paraformer-v2.md) | [`compute/model-specs/qwen.json`](../../../compute/model-specs/qwen.json) | 已登记关键字段都有证明；其他合同限制仍按原记录复核 | [qwen-pricing](../../model-sources/providers/alibaba/SOURCES.md#qwen-pricing)：fetched |
 | [`qwen-image-2.0-pro`](../../model-sources/providers/alibaba/models/qwen-image-2.0-pro.md) | [`compute/providers/dashscope.json`](../../../compute/providers/dashscope.json) | 已登记关键字段都有证明；其他合同限制仍按原记录复核 | [qwen-pricing](../../model-sources/providers/alibaba/SOURCES.md#qwen-pricing)：fetched |
 | [`qwen-image-2.0-pro`](../../model-sources/providers/alibaba/models/qwen-image-2.0-pro.md) | [`compute/model-specs/qwen.json`](../../../compute/model-specs/qwen.json) | 已登记关键字段都有证明；其他合同限制仍按原记录复核 | [qwen-pricing](../../model-sources/providers/alibaba/SOURCES.md#qwen-pricing)：fetched |
 | [`qwen-image-2.0`](../../model-sources/providers/alibaba/models/qwen-image-2.0.md) | [`compute/providers/dashscope.json`](../../../compute/providers/dashscope.json) | 已登记关键字段都有证明；其他合同限制仍按原记录复核 | [qwen-pricing](../../model-sources/providers/alibaba/SOURCES.md#qwen-pricing)：fetched |
@@ -135,10 +133,13 @@
 | [`wan3.0-video`](../../model-sources/providers/alibaba/models/wan3.0-video.md) | [`compute/providers/dashscope.json`](../../../compute/providers/dashscope.json) | 已登记关键字段都有证明；其他合同限制仍按原记录复核 | [qwen-models](../../model-sources/providers/alibaba/SOURCES.md#qwen-models)：fetched |
 | [`wan3.0-video`](../../model-sources/providers/alibaba/models/wan3.0-video.md) | [`compute/model-specs/wan.json`](../../../compute/model-specs/wan.json) | 已登记关键字段都有证明；其他合同限制仍按原记录复核 | [qwen-models](../../model-sources/providers/alibaba/SOURCES.md#qwen-models)：fetched |
 
-## 已有部分参数证明，仍需区分未证明字段（7 条）
+## 已有部分参数证明，仍需区分未证明字段（10 条）
 
 | 模型 | 接入面 | 未登记证明的关键字段 | 官网入口/读取结果 |
 | --- | --- | --- | --- |
+| [`fun-asr-realtime`](../../model-sources/providers/alibaba/models/fun-asr-realtime.md) | [`compute/providers/dashscope.json`](../../../compute/providers/dashscope.json) | 已登记关键字段都有证明；其他合同限制仍按原记录复核 | [bailian-asr-realtime](../../model-sources/providers/alibaba/SOURCES.md#bailian-asr-realtime)：fetched；[bailian-asr-pricing](../../model-sources/providers/alibaba/SOURCES.md#bailian-asr-pricing)：fetched |
+| [`fun-asr-realtime`](../../model-sources/providers/alibaba/models/fun-asr-realtime.md) | [`compute/model-specs/qwen.json`](../../../compute/model-specs/qwen.json) | 已登记关键字段都有证明；其他合同限制仍按原记录复核 | [bailian-asr-realtime](../../model-sources/providers/alibaba/SOURCES.md#bailian-asr-realtime)：fetched；[bailian-fun-asr-websocket](../../model-sources/providers/alibaba/SOURCES.md#bailian-fun-asr-websocket)：fetched；[bailian-fun-asr-sdk](../../model-sources/providers/alibaba/SOURCES.md#bailian-fun-asr-sdk)：fetched |
+| [`paraformer-v2`](../../model-sources/providers/alibaba/models/paraformer-v2.md) | [`compute/model-specs/qwen.json`](../../../compute/model-specs/qwen.json) | 已登记关键字段都有证明；其他合同限制仍按原记录复核 | [qwen-pricing](../../model-sources/providers/alibaba/SOURCES.md#qwen-pricing)：fetched；[bailian-paraformer-file](../../model-sources/providers/alibaba/SOURCES.md#bailian-paraformer-file)：fetched |
 | [`qwen3.7-max`](../../model-sources/providers/alibaba/models/qwen3.7-max.md) | [`compute/providers/dashscope.json`](../../../compute/providers/dashscope.json) | `defaultTemperature`、`defaultTopP` | [qwen-pricing](../../model-sources/providers/alibaba/SOURCES.md#qwen-pricing)：fetched；[qwen37-max](../../model-sources/providers/alibaba/SOURCES.md#qwen37-max)：fetched |
 | [`qwen3.7-max`](../../model-sources/providers/alibaba/models/qwen3.7-max.md) | [`compute/coding-plans/dashscope-token-plan.json`](../../../compute/coding-plans/dashscope-token-plan.json) | 已登记关键字段都有证明；其他合同限制仍按原记录复核 | [qwen-pricing](../../model-sources/providers/alibaba/SOURCES.md#qwen-pricing)：fetched；[qwen37-max](../../model-sources/providers/alibaba/SOURCES.md#qwen37-max)：fetched |
 | [`qwen3.7-max`](../../model-sources/providers/alibaba/models/qwen3.7-max.md) | [`compute/model-specs/qwen.json`](../../../compute/model-specs/qwen.json) | `spec.defaultTemperature`、`spec.supportsReasoning` | [qwen-pricing](../../model-sources/providers/alibaba/SOURCES.md#qwen-pricing)：fetched；[qwen37-max](../../model-sources/providers/alibaba/SOURCES.md#qwen37-max)：fetched |
