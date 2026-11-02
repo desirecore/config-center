@@ -73,6 +73,32 @@ M3.1 Flash Preview 仅在 M Plan/Code 开放，需 adaptive thinking，none/disa
 - 读取日期：2026-10-28；状态：`fetched`；最终地址：https://platform.minimax.cn/docs/m-plan/intro.md。
 - 适用范围：M Plan 各档支持正式 M3.1 Flash；Preview 已下线且旧名转发正式版。
 
+## 2026-11-02 语音合成核对
+
+只读官网正文，未做账号调用。六个 speech 型号走同一接口 `POST /v1/t2a_v2`，Bearer 鉴权；`audio_setting.format` 可选 mp3、pcm、flac、wav、pcmu_raw、pcmu_wav、opus，`sample_rate` 可选 8000、16000、22050、24000、32000、44100；非流式 `output_format` 默认 hex，`data.status=2` 表示合成结束。官网给出的国内地址已是 `api.minimax.cn`，本仓预置的 `api.minimaxi.com` 用无效 Key 探测时同样返回 `base_resp`（HTTP 200、1004），本次不改预置地址。鉴权失败也是 HTTP 200，错误只在 `base_resp`。
+
+官网没有写明 pcm 的位深与字节序，客户端按 16 位小端单声道解码，第三方实现（pipecat）也这样解码，账号实测前不算官网证明。系统音色列表没有按型号区分，本仓只预置 16 个中英文音色，其余音色未列入。
+
+M Plan 的订阅 Key 与按量 Key 相互独立、不能混用；官网说已有按量价格的 API 端点按该价格扣减套餐额度，没有单独写明 `t2a_v2`，订阅 Key 能否调用该接口待账号实测。
+
+### minimax-t2a-http
+
+- 入口：[minimax-t2a-http](https://platform.minimax.cn/docs/api-reference/speech-t2a-http.md)。
+- 读取日期：2026-11-02；状态：`fetched`；最终地址：https://platform.minimax.cn/docs/api-reference/speech-t2a-http.md。
+- 适用范围：国内同步语音合成 HTTP 接口；型号枚举、音频格式、采样率、语速范围、响应结构与错误码。
+
+### minimax-system-voices
+
+- 入口：[minimax-system-voices](https://platform.minimax.cn/docs/faq/system-voice-id.md)。
+- 读取日期：2026-11-02；状态：`fetched`；最终地址：https://platform.minimax.cn/docs/faq/system-voice-id.md。
+- 适用范围：国内系统音色列表；音色 ID 与中文名称，未按型号区分。
+
+### minimax-mplan-faq
+
+- 入口：[minimax-mplan-faq](https://platform.minimax.cn/docs/m-plan/faq.md)。
+- 读取日期：2026-11-02；状态：`fetched`；最终地址：https://platform.minimax.cn/docs/m-plan/faq.md。
+- 适用范围：M Plan 订阅 Key 与按量 Key 相互独立；有按量价格的 API 端点扣减套餐额度。
+
 <!-- source-metadata:start -->
 ```json
 {
@@ -189,6 +215,36 @@ M3.1 Flash Preview 仅在 M Plan/Code 开放，需 adaptive thinking，none/disa
       "checkedAt": "2026-10-28",
       "contentSha256": "4cfd6c85bbbf4fa5cc5832733e7a84bd4d9beacf3cd8d28651200b3d69422d95",
       "resolvedUrl": "https://platform.minimax.cn/docs/m-plan/intro.md"
+    },
+    {
+      "id": "minimax-t2a-http",
+      "url": "https://platform.minimax.cn/docs/api-reference/speech-t2a-http.md",
+      "kind": "official-doc",
+      "scope": "国内同步语音合成 HTTP；型号枚举、音频格式、采样率、响应结构与错误码",
+      "retrieval": "fetched",
+      "checkedAt": "2026-11-02",
+      "contentSha256": "08594700cfd8a9c405cb3f0545ee2a6d4f76b89eb0a82dbe0ce80d7d514bf0b3",
+      "resolvedUrl": "https://platform.minimax.cn/docs/api-reference/speech-t2a-http.md"
+    },
+    {
+      "id": "minimax-system-voices",
+      "url": "https://platform.minimax.cn/docs/faq/system-voice-id.md",
+      "kind": "official-doc",
+      "scope": "国内系统音色列表；音色 ID 与中文名称，未按型号区分",
+      "retrieval": "fetched",
+      "checkedAt": "2026-11-02",
+      "contentSha256": "e522acb13f9c1b6d76daeb424f60eb8d150d184a8fcc1e44dbb9270878162d6e",
+      "resolvedUrl": "https://platform.minimax.cn/docs/faq/system-voice-id.md"
+    },
+    {
+      "id": "minimax-mplan-faq",
+      "url": "https://platform.minimax.cn/docs/m-plan/faq.md",
+      "kind": "official-doc",
+      "scope": "M Plan 订阅 Key 与按量 Key 相互独立；有按量价格的 API 端点扣减套餐额度",
+      "retrieval": "fetched",
+      "checkedAt": "2026-11-02",
+      "contentSha256": "6a290632357f826ba2d7a4d996c8ffb062263d9acc9071c98c08d4de286f35be",
+      "resolvedUrl": "https://platform.minimax.cn/docs/m-plan/faq.md"
     }
   ]
 }

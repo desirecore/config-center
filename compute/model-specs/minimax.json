@@ -469,7 +469,103 @@
         "serviceType": [
           "tts"
         ],
-        "description": "MiniMax 最新高清语音合成，40+ 语言、100+ 预置音色"
+        "description": "MiniMax 最新高清语音合成，40+ 语言、100+ 预置音色",
+        "extra": {
+          "modelOrigin": {
+            "vendor": "minimax",
+            "canonicalModelId": "speech-2.8-hd",
+            "family": "minimax-speech"
+          },
+          "speech": {
+            "protocol": "minimax-t2a-http",
+            "protocolVersion": "1",
+            "modes": [
+              "batch",
+              "streaming"
+            ],
+            "outputFormats": [
+              "pcm16le",
+              "mp3",
+              "wav",
+              "flac"
+            ],
+            "sampleRates": [
+              8000,
+              16000,
+              22050,
+              24000,
+              32000,
+              44100
+            ],
+            "defaultVoice": "female-shaonv",
+            "voices": [
+              {
+                "id": "female-shaonv",
+                "label": "少女音色"
+              },
+              {
+                "id": "female-yujie",
+                "label": "御姐音色"
+              },
+              {
+                "id": "female-chengshu",
+                "label": "成熟女性音色"
+              },
+              {
+                "id": "female-tianmei",
+                "label": "甜美女性音色"
+              },
+              {
+                "id": "male-qn-qingse",
+                "label": "青涩青年音色"
+              },
+              {
+                "id": "male-qn-jingying",
+                "label": "精英青年音色"
+              },
+              {
+                "id": "male-qn-badao",
+                "label": "霸道青年音色"
+              },
+              {
+                "id": "male-qn-daxuesheng",
+                "label": "青年大学生音色"
+              },
+              {
+                "id": "Chinese (Mandarin)_News_Anchor",
+                "label": "新闻女声"
+              },
+              {
+                "id": "Chinese (Mandarin)_Male_Announcer",
+                "label": "播报男声"
+              },
+              {
+                "id": "Chinese (Mandarin)_Sweet_Lady",
+                "label": "甜美女声"
+              },
+              {
+                "id": "Chinese (Mandarin)_Gentleman",
+                "label": "温润男声"
+              },
+              {
+                "id": "Chinese (Mandarin)_Warm_Girl",
+                "label": "温暖少女"
+              },
+              {
+                "id": "Chinese (Mandarin)_Radio_Host",
+                "label": "电台男主播"
+              },
+              {
+                "id": "English_Graceful_Lady",
+                "label": "Graceful Lady"
+              },
+              {
+                "id": "English_Trustworthy_Man",
+                "label": "Trustworthy Man"
+              }
+            ]
+          }
+        }
       }
     },
     {
@@ -492,7 +588,103 @@
         "serviceType": [
           "tts"
         ],
-        "description": "MiniMax 快速语音合成模型，速度优先，适合实时场景"
+        "description": "MiniMax 快速语音合成模型，速度优先，适合实时场景",
+        "extra": {
+          "modelOrigin": {
+            "vendor": "minimax",
+            "canonicalModelId": "speech-2.8-turbo",
+            "family": "minimax-speech"
+          },
+          "speech": {
+            "protocol": "minimax-t2a-http",
+            "protocolVersion": "1",
+            "modes": [
+              "batch",
+              "streaming"
+            ],
+            "outputFormats": [
+              "pcm16le",
+              "mp3",
+              "wav",
+              "flac"
+            ],
+            "sampleRates": [
+              8000,
+              16000,
+              22050,
+              24000,
+              32000,
+              44100
+            ],
+            "defaultVoice": "female-shaonv",
+            "voices": [
+              {
+                "id": "female-shaonv",
+                "label": "少女音色"
+              },
+              {
+                "id": "female-yujie",
+                "label": "御姐音色"
+              },
+              {
+                "id": "female-chengshu",
+                "label": "成熟女性音色"
+              },
+              {
+                "id": "female-tianmei",
+                "label": "甜美女性音色"
+              },
+              {
+                "id": "male-qn-qingse",
+                "label": "青涩青年音色"
+              },
+              {
+                "id": "male-qn-jingying",
+                "label": "精英青年音色"
+              },
+              {
+                "id": "male-qn-badao",
+                "label": "霸道青年音色"
+              },
+              {
+                "id": "male-qn-daxuesheng",
+                "label": "青年大学生音色"
+              },
+              {
+                "id": "Chinese (Mandarin)_News_Anchor",
+                "label": "新闻女声"
+              },
+              {
+                "id": "Chinese (Mandarin)_Male_Announcer",
+                "label": "播报男声"
+              },
+              {
+                "id": "Chinese (Mandarin)_Sweet_Lady",
+                "label": "甜美女声"
+              },
+              {
+                "id": "Chinese (Mandarin)_Gentleman",
+                "label": "温润男声"
+              },
+              {
+                "id": "Chinese (Mandarin)_Warm_Girl",
+                "label": "温暖少女"
+              },
+              {
+                "id": "Chinese (Mandarin)_Radio_Host",
+                "label": "电台男主播"
+              },
+              {
+                "id": "English_Graceful_Lady",
+                "label": "Graceful Lady"
+              },
+              {
+                "id": "English_Trustworthy_Man",
+                "label": "Trustworthy Man"
+              }
+            ]
+          }
+        }
       }
     },
     {
@@ -515,7 +707,103 @@
         "serviceType": [
           "tts"
         ],
-        "description": "MiniMax 高清语音合成（2.6 版），音质优秀，生成速度快"
+        "description": "MiniMax 高清语音合成（2.6 版），音质优秀，生成速度快",
+        "extra": {
+          "modelOrigin": {
+            "vendor": "minimax",
+            "canonicalModelId": "speech-2.6-hd",
+            "family": "minimax-speech"
+          },
+          "speech": {
+            "protocol": "minimax-t2a-http",
+            "protocolVersion": "1",
+            "modes": [
+              "batch",
+              "streaming"
+            ],
+            "outputFormats": [
+              "pcm16le",
+              "mp3",
+              "wav",
+              "flac"
+            ],
+            "sampleRates": [
+              8000,
+              16000,
+              22050,
+              24000,
+              32000,
+              44100
+            ],
+            "defaultVoice": "female-shaonv",
+            "voices": [
+              {
+                "id": "female-shaonv",
+                "label": "少女音色"
+              },
+              {
+                "id": "female-yujie",
+                "label": "御姐音色"
+              },
+              {
+                "id": "female-chengshu",
+                "label": "成熟女性音色"
+              },
+              {
+                "id": "female-tianmei",
+                "label": "甜美女性音色"
+              },
+              {
+                "id": "male-qn-qingse",
+                "label": "青涩青年音色"
+              },
+              {
+                "id": "male-qn-jingying",
+                "label": "精英青年音色"
+              },
+              {
+                "id": "male-qn-badao",
+                "label": "霸道青年音色"
+              },
+              {
+                "id": "male-qn-daxuesheng",
+                "label": "青年大学生音色"
+              },
+              {
+                "id": "Chinese (Mandarin)_News_Anchor",
+                "label": "新闻女声"
+              },
+              {
+                "id": "Chinese (Mandarin)_Male_Announcer",
+                "label": "播报男声"
+              },
+              {
+                "id": "Chinese (Mandarin)_Sweet_Lady",
+                "label": "甜美女声"
+              },
+              {
+                "id": "Chinese (Mandarin)_Gentleman",
+                "label": "温润男声"
+              },
+              {
+                "id": "Chinese (Mandarin)_Warm_Girl",
+                "label": "温暖少女"
+              },
+              {
+                "id": "Chinese (Mandarin)_Radio_Host",
+                "label": "电台男主播"
+              },
+              {
+                "id": "English_Graceful_Lady",
+                "label": "Graceful Lady"
+              },
+              {
+                "id": "English_Trustworthy_Man",
+                "label": "Trustworthy Man"
+              }
+            ]
+          }
+        }
       }
     },
     {
@@ -538,7 +826,103 @@
         "serviceType": [
           "tts"
         ],
-        "description": "MiniMax 快速语音合成（2.6 版），低延迟响应"
+        "description": "MiniMax 快速语音合成（2.6 版），低延迟响应",
+        "extra": {
+          "modelOrigin": {
+            "vendor": "minimax",
+            "canonicalModelId": "speech-2.6-turbo",
+            "family": "minimax-speech"
+          },
+          "speech": {
+            "protocol": "minimax-t2a-http",
+            "protocolVersion": "1",
+            "modes": [
+              "batch",
+              "streaming"
+            ],
+            "outputFormats": [
+              "pcm16le",
+              "mp3",
+              "wav",
+              "flac"
+            ],
+            "sampleRates": [
+              8000,
+              16000,
+              22050,
+              24000,
+              32000,
+              44100
+            ],
+            "defaultVoice": "female-shaonv",
+            "voices": [
+              {
+                "id": "female-shaonv",
+                "label": "少女音色"
+              },
+              {
+                "id": "female-yujie",
+                "label": "御姐音色"
+              },
+              {
+                "id": "female-chengshu",
+                "label": "成熟女性音色"
+              },
+              {
+                "id": "female-tianmei",
+                "label": "甜美女性音色"
+              },
+              {
+                "id": "male-qn-qingse",
+                "label": "青涩青年音色"
+              },
+              {
+                "id": "male-qn-jingying",
+                "label": "精英青年音色"
+              },
+              {
+                "id": "male-qn-badao",
+                "label": "霸道青年音色"
+              },
+              {
+                "id": "male-qn-daxuesheng",
+                "label": "青年大学生音色"
+              },
+              {
+                "id": "Chinese (Mandarin)_News_Anchor",
+                "label": "新闻女声"
+              },
+              {
+                "id": "Chinese (Mandarin)_Male_Announcer",
+                "label": "播报男声"
+              },
+              {
+                "id": "Chinese (Mandarin)_Sweet_Lady",
+                "label": "甜美女声"
+              },
+              {
+                "id": "Chinese (Mandarin)_Gentleman",
+                "label": "温润男声"
+              },
+              {
+                "id": "Chinese (Mandarin)_Warm_Girl",
+                "label": "温暖少女"
+              },
+              {
+                "id": "Chinese (Mandarin)_Radio_Host",
+                "label": "电台男主播"
+              },
+              {
+                "id": "English_Graceful_Lady",
+                "label": "Graceful Lady"
+              },
+              {
+                "id": "English_Trustworthy_Man",
+                "label": "Trustworthy Man"
+              }
+            ]
+          }
+        }
       }
     },
     {
@@ -560,7 +944,103 @@
         "serviceType": [
           "tts"
         ],
-        "description": "MiniMax 高清语音合成（历史版本），韵律稳定性优秀"
+        "description": "MiniMax 高清语音合成（历史版本），韵律稳定性优秀",
+        "extra": {
+          "modelOrigin": {
+            "vendor": "minimax",
+            "canonicalModelId": "speech-02-hd",
+            "family": "minimax-speech"
+          },
+          "speech": {
+            "protocol": "minimax-t2a-http",
+            "protocolVersion": "1",
+            "modes": [
+              "batch",
+              "streaming"
+            ],
+            "outputFormats": [
+              "pcm16le",
+              "mp3",
+              "wav",
+              "flac"
+            ],
+            "sampleRates": [
+              8000,
+              16000,
+              22050,
+              24000,
+              32000,
+              44100
+            ],
+            "defaultVoice": "female-shaonv",
+            "voices": [
+              {
+                "id": "female-shaonv",
+                "label": "少女音色"
+              },
+              {
+                "id": "female-yujie",
+                "label": "御姐音色"
+              },
+              {
+                "id": "female-chengshu",
+                "label": "成熟女性音色"
+              },
+              {
+                "id": "female-tianmei",
+                "label": "甜美女性音色"
+              },
+              {
+                "id": "male-qn-qingse",
+                "label": "青涩青年音色"
+              },
+              {
+                "id": "male-qn-jingying",
+                "label": "精英青年音色"
+              },
+              {
+                "id": "male-qn-badao",
+                "label": "霸道青年音色"
+              },
+              {
+                "id": "male-qn-daxuesheng",
+                "label": "青年大学生音色"
+              },
+              {
+                "id": "Chinese (Mandarin)_News_Anchor",
+                "label": "新闻女声"
+              },
+              {
+                "id": "Chinese (Mandarin)_Male_Announcer",
+                "label": "播报男声"
+              },
+              {
+                "id": "Chinese (Mandarin)_Sweet_Lady",
+                "label": "甜美女声"
+              },
+              {
+                "id": "Chinese (Mandarin)_Gentleman",
+                "label": "温润男声"
+              },
+              {
+                "id": "Chinese (Mandarin)_Warm_Girl",
+                "label": "温暖少女"
+              },
+              {
+                "id": "Chinese (Mandarin)_Radio_Host",
+                "label": "电台男主播"
+              },
+              {
+                "id": "English_Graceful_Lady",
+                "label": "Graceful Lady"
+              },
+              {
+                "id": "English_Trustworthy_Man",
+                "label": "Trustworthy Man"
+              }
+            ]
+          }
+        }
       }
     },
     {
@@ -582,7 +1062,103 @@
         "serviceType": [
           "tts"
         ],
-        "description": "MiniMax 快速语音合成（历史版本），增强小语种支持"
+        "description": "MiniMax 快速语音合成（历史版本），增强小语种支持",
+        "extra": {
+          "modelOrigin": {
+            "vendor": "minimax",
+            "canonicalModelId": "speech-02-turbo",
+            "family": "minimax-speech"
+          },
+          "speech": {
+            "protocol": "minimax-t2a-http",
+            "protocolVersion": "1",
+            "modes": [
+              "batch",
+              "streaming"
+            ],
+            "outputFormats": [
+              "pcm16le",
+              "mp3",
+              "wav",
+              "flac"
+            ],
+            "sampleRates": [
+              8000,
+              16000,
+              22050,
+              24000,
+              32000,
+              44100
+            ],
+            "defaultVoice": "female-shaonv",
+            "voices": [
+              {
+                "id": "female-shaonv",
+                "label": "少女音色"
+              },
+              {
+                "id": "female-yujie",
+                "label": "御姐音色"
+              },
+              {
+                "id": "female-chengshu",
+                "label": "成熟女性音色"
+              },
+              {
+                "id": "female-tianmei",
+                "label": "甜美女性音色"
+              },
+              {
+                "id": "male-qn-qingse",
+                "label": "青涩青年音色"
+              },
+              {
+                "id": "male-qn-jingying",
+                "label": "精英青年音色"
+              },
+              {
+                "id": "male-qn-badao",
+                "label": "霸道青年音色"
+              },
+              {
+                "id": "male-qn-daxuesheng",
+                "label": "青年大学生音色"
+              },
+              {
+                "id": "Chinese (Mandarin)_News_Anchor",
+                "label": "新闻女声"
+              },
+              {
+                "id": "Chinese (Mandarin)_Male_Announcer",
+                "label": "播报男声"
+              },
+              {
+                "id": "Chinese (Mandarin)_Sweet_Lady",
+                "label": "甜美女声"
+              },
+              {
+                "id": "Chinese (Mandarin)_Gentleman",
+                "label": "温润男声"
+              },
+              {
+                "id": "Chinese (Mandarin)_Warm_Girl",
+                "label": "温暖少女"
+              },
+              {
+                "id": "Chinese (Mandarin)_Radio_Host",
+                "label": "电台男主播"
+              },
+              {
+                "id": "English_Graceful_Lady",
+                "label": "Graceful Lady"
+              },
+              {
+                "id": "English_Trustworthy_Man",
+                "label": "Trustworthy Man"
+              }
+            ]
+          }
+        }
       }
     },
     {

@@ -12,6 +12,8 @@
 
 2026-11-01 数据批次 135：语音识别预置可用化，新增 3 个精确规格（`fun-asr-realtime`、`gpt-transcribe`、`whisper-large-v3`）与 1 条净增接入（`gpt-transcribe`；`fun-asr-realtime` 替换 dashscope 的 `paraformer-v2`，后者写入 tombstones、规格保留），当前共 296 条规格、354 条接入。
 
+2026-11-02 数据批次 136：MiniMax 六个 speech 规格声明 `minimax-t2a-http` 协议与预置音色，解除 8 条接入的未适配标记；规格与接入数量不变。
+
 `access.metadata.v1Connection` 放只进 V1 Provider 投影的连接字段：已发布客户端的 V2 连接 Schema 为 `additionalProperties: false`，未知键会让整份配置中心数据被拒收（`算力目录Schema不兼容当前客户端`）。目前只有本地 Whisper 的 `credentialMode`。编译产物删除这个键，等客户端 V2 Schema 接受并铺开后再移入 `connection`。
 
 metadata不消费。V1布局及历史未消费extra保存在canonical metadata，完整回投影；运行时产物删除布局信息。迁移不刷新官方核验日期、不提升proof等级。价格币种和原数值保持，复杂价阶/注释保留sourceKey和源单位；没有转换为零或统一按token收费。

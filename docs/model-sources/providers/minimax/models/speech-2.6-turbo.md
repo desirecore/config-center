@@ -4,6 +4,7 @@
 
 - 精确模型 ID：`speech-2.6-turbo`。
 - 核验日期：2026-10-03；本次只迁移记录，没有重新核验或提高状态。
+- 2026-11-02 补核语音合成接口、输出格式、采样率与预置音色，只读官网正文，未做账号调用；`speech` 中的协议名与版本号是本仓约定，`defaultVoice` 与音色子集是本仓选择。
 
 ## 适用接入面
 
@@ -61,7 +62,101 @@
     "emotion_control",
     "fast",
     "chinese_optimized"
-  ]
+  ],
+  "spec.extra.modelOrigin": {
+    "vendor": "minimax",
+    "canonicalModelId": "speech-2.6-turbo",
+    "family": "minimax-speech"
+  },
+  "spec.extra.speech": {
+    "protocol": "minimax-t2a-http",
+    "protocolVersion": "1",
+    "modes": [
+      "batch",
+      "streaming"
+    ],
+    "outputFormats": [
+      "pcm16le",
+      "mp3",
+      "wav",
+      "flac"
+    ],
+    "sampleRates": [
+      8000,
+      16000,
+      22050,
+      24000,
+      32000,
+      44100
+    ],
+    "defaultVoice": "female-shaonv",
+    "voices": [
+      {
+        "id": "female-shaonv",
+        "label": "少女音色"
+      },
+      {
+        "id": "female-yujie",
+        "label": "御姐音色"
+      },
+      {
+        "id": "female-chengshu",
+        "label": "成熟女性音色"
+      },
+      {
+        "id": "female-tianmei",
+        "label": "甜美女性音色"
+      },
+      {
+        "id": "male-qn-qingse",
+        "label": "青涩青年音色"
+      },
+      {
+        "id": "male-qn-jingying",
+        "label": "精英青年音色"
+      },
+      {
+        "id": "male-qn-badao",
+        "label": "霸道青年音色"
+      },
+      {
+        "id": "male-qn-daxuesheng",
+        "label": "青年大学生音色"
+      },
+      {
+        "id": "Chinese (Mandarin)_News_Anchor",
+        "label": "新闻女声"
+      },
+      {
+        "id": "Chinese (Mandarin)_Male_Announcer",
+        "label": "播报男声"
+      },
+      {
+        "id": "Chinese (Mandarin)_Sweet_Lady",
+        "label": "甜美女声"
+      },
+      {
+        "id": "Chinese (Mandarin)_Gentleman",
+        "label": "温润男声"
+      },
+      {
+        "id": "Chinese (Mandarin)_Warm_Girl",
+        "label": "温暖少女"
+      },
+      {
+        "id": "Chinese (Mandarin)_Radio_Host",
+        "label": "电台男主播"
+      },
+      {
+        "id": "English_Graceful_Lady",
+        "label": "Graceful Lady"
+      },
+      {
+        "id": "English_Trustworthy_Man",
+        "label": "Trustworthy Man"
+      }
+    ]
+  }
 }
 ```
 <!-- source-details:end -->
@@ -70,7 +165,7 @@
 
 | 模型 ID | 上下文 / 输出 | 计价 | 已核字段→来源 | 来源入口 | 状态 | 数据指纹 |
 | --- | --- | --- | --- | --- | --- | --- |
-| `speech-2.6-turbo` | 未声明 / 未声明 | 非计价主数据 | `id`→[minimax-models](../SOURCES.md#minimax-models) | [minimax-models](../SOURCES.md#minimax-models) | partial | `d518704e697e66c8aee3e227f6e6783ee600f6f7e9b62436e615a8b3931868c4` |
+| `speech-2.6-turbo` | 未声明 / 未声明 | 非计价主数据 | `id`→[minimax-models](../SOURCES.md#minimax-models)、`spec.extra.speech.outputFormats`→[minimax-t2a-http](../SOURCES.md#minimax-t2a-http)、`spec.extra.speech.sampleRates`→[minimax-t2a-http](../SOURCES.md#minimax-t2a-http)、`spec.extra.speech.voices`→[minimax-system-voices](../SOURCES.md#minimax-system-voices) | [minimax-models](../SOURCES.md#minimax-models)、[minimax-t2a-http](../SOURCES.md#minimax-t2a-http)、[minimax-system-voices](../SOURCES.md#minimax-system-voices) | partial | `15acf5661af64ad05a8eb80c467118e718e09f96ac40786cb9978a211b3eb6f5` |
 
 ## 下次更新核查
 
