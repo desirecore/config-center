@@ -3192,7 +3192,103 @@
         "serviceType": [
           "tts"
         ],
-        "description": "MiniMax 最新高清语音合成，40+ 语言、100+ 预置音色"
+        "description": "MiniMax 最新高清语音合成，40+ 语言、100+ 预置音色",
+        "constraints": {
+          "modelOrigin": {
+            "vendor": "minimax",
+            "canonicalModelId": "speech-2.8-hd",
+            "family": "minimax-speech"
+          },
+          "speech": {
+            "protocol": "minimax-t2a-http",
+            "protocolVersion": "1",
+            "modes": [
+              "batch",
+              "streaming"
+            ],
+            "outputFormats": [
+              "pcm16le",
+              "mp3",
+              "wav",
+              "flac"
+            ],
+            "sampleRates": [
+              8000,
+              16000,
+              22050,
+              24000,
+              32000,
+              44100
+            ],
+            "defaultVoice": "female-shaonv",
+            "voices": [
+              {
+                "id": "female-shaonv",
+                "label": "少女音色"
+              },
+              {
+                "id": "female-yujie",
+                "label": "御姐音色"
+              },
+              {
+                "id": "female-chengshu",
+                "label": "成熟女性音色"
+              },
+              {
+                "id": "female-tianmei",
+                "label": "甜美女性音色"
+              },
+              {
+                "id": "male-qn-qingse",
+                "label": "青涩青年音色"
+              },
+              {
+                "id": "male-qn-jingying",
+                "label": "精英青年音色"
+              },
+              {
+                "id": "male-qn-badao",
+                "label": "霸道青年音色"
+              },
+              {
+                "id": "male-qn-daxuesheng",
+                "label": "青年大学生音色"
+              },
+              {
+                "id": "Chinese (Mandarin)_News_Anchor",
+                "label": "新闻女声"
+              },
+              {
+                "id": "Chinese (Mandarin)_Male_Announcer",
+                "label": "播报男声"
+              },
+              {
+                "id": "Chinese (Mandarin)_Sweet_Lady",
+                "label": "甜美女声"
+              },
+              {
+                "id": "Chinese (Mandarin)_Gentleman",
+                "label": "温润男声"
+              },
+              {
+                "id": "Chinese (Mandarin)_Warm_Girl",
+                "label": "温暖少女"
+              },
+              {
+                "id": "Chinese (Mandarin)_Radio_Host",
+                "label": "电台男主播"
+              },
+              {
+                "id": "English_Graceful_Lady",
+                "label": "Graceful Lady"
+              },
+              {
+                "id": "English_Trustworthy_Man",
+                "label": "Trustworthy Man"
+              }
+            ]
+          }
+        }
       },
       "routing": {},
       "lifecycle": {
@@ -3220,7 +3316,103 @@
         "serviceType": [
           "tts"
         ],
-        "description": "MiniMax 快速语音合成模型，速度优先，适合实时场景"
+        "description": "MiniMax 快速语音合成模型，速度优先，适合实时场景",
+        "constraints": {
+          "modelOrigin": {
+            "vendor": "minimax",
+            "canonicalModelId": "speech-2.8-turbo",
+            "family": "minimax-speech"
+          },
+          "speech": {
+            "protocol": "minimax-t2a-http",
+            "protocolVersion": "1",
+            "modes": [
+              "batch",
+              "streaming"
+            ],
+            "outputFormats": [
+              "pcm16le",
+              "mp3",
+              "wav",
+              "flac"
+            ],
+            "sampleRates": [
+              8000,
+              16000,
+              22050,
+              24000,
+              32000,
+              44100
+            ],
+            "defaultVoice": "female-shaonv",
+            "voices": [
+              {
+                "id": "female-shaonv",
+                "label": "少女音色"
+              },
+              {
+                "id": "female-yujie",
+                "label": "御姐音色"
+              },
+              {
+                "id": "female-chengshu",
+                "label": "成熟女性音色"
+              },
+              {
+                "id": "female-tianmei",
+                "label": "甜美女性音色"
+              },
+              {
+                "id": "male-qn-qingse",
+                "label": "青涩青年音色"
+              },
+              {
+                "id": "male-qn-jingying",
+                "label": "精英青年音色"
+              },
+              {
+                "id": "male-qn-badao",
+                "label": "霸道青年音色"
+              },
+              {
+                "id": "male-qn-daxuesheng",
+                "label": "青年大学生音色"
+              },
+              {
+                "id": "Chinese (Mandarin)_News_Anchor",
+                "label": "新闻女声"
+              },
+              {
+                "id": "Chinese (Mandarin)_Male_Announcer",
+                "label": "播报男声"
+              },
+              {
+                "id": "Chinese (Mandarin)_Sweet_Lady",
+                "label": "甜美女声"
+              },
+              {
+                "id": "Chinese (Mandarin)_Gentleman",
+                "label": "温润男声"
+              },
+              {
+                "id": "Chinese (Mandarin)_Warm_Girl",
+                "label": "温暖少女"
+              },
+              {
+                "id": "Chinese (Mandarin)_Radio_Host",
+                "label": "电台男主播"
+              },
+              {
+                "id": "English_Graceful_Lady",
+                "label": "Graceful Lady"
+              },
+              {
+                "id": "English_Trustworthy_Man",
+                "label": "Trustworthy Man"
+              }
+            ]
+          }
+        }
       },
       "routing": {},
       "lifecycle": {
@@ -3248,7 +3440,103 @@
         "serviceType": [
           "tts"
         ],
-        "description": "MiniMax 高清语音合成（2.6 版），音质优秀，生成速度快"
+        "description": "MiniMax 高清语音合成（2.6 版），音质优秀，生成速度快",
+        "constraints": {
+          "modelOrigin": {
+            "vendor": "minimax",
+            "canonicalModelId": "speech-2.6-hd",
+            "family": "minimax-speech"
+          },
+          "speech": {
+            "protocol": "minimax-t2a-http",
+            "protocolVersion": "1",
+            "modes": [
+              "batch",
+              "streaming"
+            ],
+            "outputFormats": [
+              "pcm16le",
+              "mp3",
+              "wav",
+              "flac"
+            ],
+            "sampleRates": [
+              8000,
+              16000,
+              22050,
+              24000,
+              32000,
+              44100
+            ],
+            "defaultVoice": "female-shaonv",
+            "voices": [
+              {
+                "id": "female-shaonv",
+                "label": "少女音色"
+              },
+              {
+                "id": "female-yujie",
+                "label": "御姐音色"
+              },
+              {
+                "id": "female-chengshu",
+                "label": "成熟女性音色"
+              },
+              {
+                "id": "female-tianmei",
+                "label": "甜美女性音色"
+              },
+              {
+                "id": "male-qn-qingse",
+                "label": "青涩青年音色"
+              },
+              {
+                "id": "male-qn-jingying",
+                "label": "精英青年音色"
+              },
+              {
+                "id": "male-qn-badao",
+                "label": "霸道青年音色"
+              },
+              {
+                "id": "male-qn-daxuesheng",
+                "label": "青年大学生音色"
+              },
+              {
+                "id": "Chinese (Mandarin)_News_Anchor",
+                "label": "新闻女声"
+              },
+              {
+                "id": "Chinese (Mandarin)_Male_Announcer",
+                "label": "播报男声"
+              },
+              {
+                "id": "Chinese (Mandarin)_Sweet_Lady",
+                "label": "甜美女声"
+              },
+              {
+                "id": "Chinese (Mandarin)_Gentleman",
+                "label": "温润男声"
+              },
+              {
+                "id": "Chinese (Mandarin)_Warm_Girl",
+                "label": "温暖少女"
+              },
+              {
+                "id": "Chinese (Mandarin)_Radio_Host",
+                "label": "电台男主播"
+              },
+              {
+                "id": "English_Graceful_Lady",
+                "label": "Graceful Lady"
+              },
+              {
+                "id": "English_Trustworthy_Man",
+                "label": "Trustworthy Man"
+              }
+            ]
+          }
+        }
       },
       "routing": {},
       "lifecycle": {
@@ -3276,7 +3564,103 @@
         "serviceType": [
           "tts"
         ],
-        "description": "MiniMax 快速语音合成（2.6 版），低延迟响应"
+        "description": "MiniMax 快速语音合成（2.6 版），低延迟响应",
+        "constraints": {
+          "modelOrigin": {
+            "vendor": "minimax",
+            "canonicalModelId": "speech-2.6-turbo",
+            "family": "minimax-speech"
+          },
+          "speech": {
+            "protocol": "minimax-t2a-http",
+            "protocolVersion": "1",
+            "modes": [
+              "batch",
+              "streaming"
+            ],
+            "outputFormats": [
+              "pcm16le",
+              "mp3",
+              "wav",
+              "flac"
+            ],
+            "sampleRates": [
+              8000,
+              16000,
+              22050,
+              24000,
+              32000,
+              44100
+            ],
+            "defaultVoice": "female-shaonv",
+            "voices": [
+              {
+                "id": "female-shaonv",
+                "label": "少女音色"
+              },
+              {
+                "id": "female-yujie",
+                "label": "御姐音色"
+              },
+              {
+                "id": "female-chengshu",
+                "label": "成熟女性音色"
+              },
+              {
+                "id": "female-tianmei",
+                "label": "甜美女性音色"
+              },
+              {
+                "id": "male-qn-qingse",
+                "label": "青涩青年音色"
+              },
+              {
+                "id": "male-qn-jingying",
+                "label": "精英青年音色"
+              },
+              {
+                "id": "male-qn-badao",
+                "label": "霸道青年音色"
+              },
+              {
+                "id": "male-qn-daxuesheng",
+                "label": "青年大学生音色"
+              },
+              {
+                "id": "Chinese (Mandarin)_News_Anchor",
+                "label": "新闻女声"
+              },
+              {
+                "id": "Chinese (Mandarin)_Male_Announcer",
+                "label": "播报男声"
+              },
+              {
+                "id": "Chinese (Mandarin)_Sweet_Lady",
+                "label": "甜美女声"
+              },
+              {
+                "id": "Chinese (Mandarin)_Gentleman",
+                "label": "温润男声"
+              },
+              {
+                "id": "Chinese (Mandarin)_Warm_Girl",
+                "label": "温暖少女"
+              },
+              {
+                "id": "Chinese (Mandarin)_Radio_Host",
+                "label": "电台男主播"
+              },
+              {
+                "id": "English_Graceful_Lady",
+                "label": "Graceful Lady"
+              },
+              {
+                "id": "English_Trustworthy_Man",
+                "label": "Trustworthy Man"
+              }
+            ]
+          }
+        }
       },
       "routing": {},
       "lifecycle": {
@@ -3303,7 +3687,103 @@
         "serviceType": [
           "tts"
         ],
-        "description": "MiniMax 高清语音合成（历史版本），韵律稳定性优秀"
+        "description": "MiniMax 高清语音合成（历史版本），韵律稳定性优秀",
+        "constraints": {
+          "modelOrigin": {
+            "vendor": "minimax",
+            "canonicalModelId": "speech-02-hd",
+            "family": "minimax-speech"
+          },
+          "speech": {
+            "protocol": "minimax-t2a-http",
+            "protocolVersion": "1",
+            "modes": [
+              "batch",
+              "streaming"
+            ],
+            "outputFormats": [
+              "pcm16le",
+              "mp3",
+              "wav",
+              "flac"
+            ],
+            "sampleRates": [
+              8000,
+              16000,
+              22050,
+              24000,
+              32000,
+              44100
+            ],
+            "defaultVoice": "female-shaonv",
+            "voices": [
+              {
+                "id": "female-shaonv",
+                "label": "少女音色"
+              },
+              {
+                "id": "female-yujie",
+                "label": "御姐音色"
+              },
+              {
+                "id": "female-chengshu",
+                "label": "成熟女性音色"
+              },
+              {
+                "id": "female-tianmei",
+                "label": "甜美女性音色"
+              },
+              {
+                "id": "male-qn-qingse",
+                "label": "青涩青年音色"
+              },
+              {
+                "id": "male-qn-jingying",
+                "label": "精英青年音色"
+              },
+              {
+                "id": "male-qn-badao",
+                "label": "霸道青年音色"
+              },
+              {
+                "id": "male-qn-daxuesheng",
+                "label": "青年大学生音色"
+              },
+              {
+                "id": "Chinese (Mandarin)_News_Anchor",
+                "label": "新闻女声"
+              },
+              {
+                "id": "Chinese (Mandarin)_Male_Announcer",
+                "label": "播报男声"
+              },
+              {
+                "id": "Chinese (Mandarin)_Sweet_Lady",
+                "label": "甜美女声"
+              },
+              {
+                "id": "Chinese (Mandarin)_Gentleman",
+                "label": "温润男声"
+              },
+              {
+                "id": "Chinese (Mandarin)_Warm_Girl",
+                "label": "温暖少女"
+              },
+              {
+                "id": "Chinese (Mandarin)_Radio_Host",
+                "label": "电台男主播"
+              },
+              {
+                "id": "English_Graceful_Lady",
+                "label": "Graceful Lady"
+              },
+              {
+                "id": "English_Trustworthy_Man",
+                "label": "Trustworthy Man"
+              }
+            ]
+          }
+        }
       },
       "routing": {},
       "lifecycle": {
@@ -3330,7 +3810,103 @@
         "serviceType": [
           "tts"
         ],
-        "description": "MiniMax 快速语音合成（历史版本），增强小语种支持"
+        "description": "MiniMax 快速语音合成（历史版本），增强小语种支持",
+        "constraints": {
+          "modelOrigin": {
+            "vendor": "minimax",
+            "canonicalModelId": "speech-02-turbo",
+            "family": "minimax-speech"
+          },
+          "speech": {
+            "protocol": "minimax-t2a-http",
+            "protocolVersion": "1",
+            "modes": [
+              "batch",
+              "streaming"
+            ],
+            "outputFormats": [
+              "pcm16le",
+              "mp3",
+              "wav",
+              "flac"
+            ],
+            "sampleRates": [
+              8000,
+              16000,
+              22050,
+              24000,
+              32000,
+              44100
+            ],
+            "defaultVoice": "female-shaonv",
+            "voices": [
+              {
+                "id": "female-shaonv",
+                "label": "少女音色"
+              },
+              {
+                "id": "female-yujie",
+                "label": "御姐音色"
+              },
+              {
+                "id": "female-chengshu",
+                "label": "成熟女性音色"
+              },
+              {
+                "id": "female-tianmei",
+                "label": "甜美女性音色"
+              },
+              {
+                "id": "male-qn-qingse",
+                "label": "青涩青年音色"
+              },
+              {
+                "id": "male-qn-jingying",
+                "label": "精英青年音色"
+              },
+              {
+                "id": "male-qn-badao",
+                "label": "霸道青年音色"
+              },
+              {
+                "id": "male-qn-daxuesheng",
+                "label": "青年大学生音色"
+              },
+              {
+                "id": "Chinese (Mandarin)_News_Anchor",
+                "label": "新闻女声"
+              },
+              {
+                "id": "Chinese (Mandarin)_Male_Announcer",
+                "label": "播报男声"
+              },
+              {
+                "id": "Chinese (Mandarin)_Sweet_Lady",
+                "label": "甜美女声"
+              },
+              {
+                "id": "Chinese (Mandarin)_Gentleman",
+                "label": "温润男声"
+              },
+              {
+                "id": "Chinese (Mandarin)_Warm_Girl",
+                "label": "温暖少女"
+              },
+              {
+                "id": "Chinese (Mandarin)_Radio_Host",
+                "label": "电台男主播"
+              },
+              {
+                "id": "English_Graceful_Lady",
+                "label": "Graceful Lady"
+              },
+              {
+                "id": "English_Trustworthy_Man",
+                "label": "Trustworthy Man"
+              }
+            ]
+          }
+        }
       },
       "routing": {},
       "lifecycle": {
@@ -16305,31 +16881,7 @@
                 "ogg"
               ]
             },
-            "sourceRecord": "compute/providers/minimax.json#speech-2.8-hd",
-            "adapterReadiness": {
-              "checkedAt": "2026-10-03",
-              "evidence": [
-                {
-                  "path": "packages/agent-service/src/speech/tts-adapter.ts",
-                  "assertion": "recognize/synthesize通过resolveSpeechCompute解析model profile与adapter，非直接按Provider.apiFormat发送。"
-                },
-                {
-                  "path": "packages/agent-service/src/speech/speech-resolver.ts",
-                  "assertion": "resolveProfile仅显式modelOrigin/speech或兼容表；无profile且无兼容命中立即fail missing_model_profile。"
-                },
-                {
-                  "path": "packages/speech-core/src/model-compatibility.ts",
-                  "assertion": "逐精确ID匹配：tts-1/hd、whisper-1、mimo-v2.5tts/asr、cosyvoice-v2/v3前缀、fun-asr-realtime前缀；本行均未命中，无provider/local-whisper fallback。"
-                }
-              ],
-              "floorDecision": "没有实现/正式发布证据，不填猜测版本。候选展示保留，出站及自动路由禁止，适配验收后再解除。"
-            }
-          },
-          "protocol": {
-            "state": "unsupported",
-            "reason": "missing-speech-profile-and-compatibility",
-            "apiFormat": "anthropic-messages",
-            "adapterId": "required-adapter:tts:minimax"
+            "sourceRecord": "compute/providers/minimax.json#speech-2.8-hd"
           }
         },
         {
@@ -16369,31 +16921,7 @@
                 "ogg"
               ]
             },
-            "sourceRecord": "compute/providers/minimax.json#speech-2.8-turbo",
-            "adapterReadiness": {
-              "checkedAt": "2026-10-03",
-              "evidence": [
-                {
-                  "path": "packages/agent-service/src/speech/tts-adapter.ts",
-                  "assertion": "recognize/synthesize通过resolveSpeechCompute解析model profile与adapter，非直接按Provider.apiFormat发送。"
-                },
-                {
-                  "path": "packages/agent-service/src/speech/speech-resolver.ts",
-                  "assertion": "resolveProfile仅显式modelOrigin/speech或兼容表；无profile且无兼容命中立即fail missing_model_profile。"
-                },
-                {
-                  "path": "packages/speech-core/src/model-compatibility.ts",
-                  "assertion": "逐精确ID匹配：tts-1/hd、whisper-1、mimo-v2.5tts/asr、cosyvoice-v2/v3前缀、fun-asr-realtime前缀；本行均未命中，无provider/local-whisper fallback。"
-                }
-              ],
-              "floorDecision": "没有实现/正式发布证据，不填猜测版本。候选展示保留，出站及自动路由禁止，适配验收后再解除。"
-            }
-          },
-          "protocol": {
-            "state": "unsupported",
-            "reason": "missing-speech-profile-and-compatibility",
-            "apiFormat": "anthropic-messages",
-            "adapterId": "required-adapter:tts:minimax"
+            "sourceRecord": "compute/providers/minimax.json#speech-2.8-turbo"
           }
         },
         {
@@ -16433,31 +16961,7 @@
                 "ogg"
               ]
             },
-            "sourceRecord": "compute/providers/minimax.json#speech-2.6-hd",
-            "adapterReadiness": {
-              "checkedAt": "2026-10-03",
-              "evidence": [
-                {
-                  "path": "packages/agent-service/src/speech/tts-adapter.ts",
-                  "assertion": "recognize/synthesize通过resolveSpeechCompute解析model profile与adapter，非直接按Provider.apiFormat发送。"
-                },
-                {
-                  "path": "packages/agent-service/src/speech/speech-resolver.ts",
-                  "assertion": "resolveProfile仅显式modelOrigin/speech或兼容表；无profile且无兼容命中立即fail missing_model_profile。"
-                },
-                {
-                  "path": "packages/speech-core/src/model-compatibility.ts",
-                  "assertion": "逐精确ID匹配：tts-1/hd、whisper-1、mimo-v2.5tts/asr、cosyvoice-v2/v3前缀、fun-asr-realtime前缀；本行均未命中，无provider/local-whisper fallback。"
-                }
-              ],
-              "floorDecision": "没有实现/正式发布证据，不填猜测版本。候选展示保留，出站及自动路由禁止，适配验收后再解除。"
-            }
-          },
-          "protocol": {
-            "state": "unsupported",
-            "reason": "missing-speech-profile-and-compatibility",
-            "apiFormat": "anthropic-messages",
-            "adapterId": "required-adapter:tts:minimax"
+            "sourceRecord": "compute/providers/minimax.json#speech-2.6-hd"
           }
         },
         {
@@ -16497,31 +17001,7 @@
                 "ogg"
               ]
             },
-            "sourceRecord": "compute/providers/minimax.json#speech-2.6-turbo",
-            "adapterReadiness": {
-              "checkedAt": "2026-10-03",
-              "evidence": [
-                {
-                  "path": "packages/agent-service/src/speech/tts-adapter.ts",
-                  "assertion": "recognize/synthesize通过resolveSpeechCompute解析model profile与adapter，非直接按Provider.apiFormat发送。"
-                },
-                {
-                  "path": "packages/agent-service/src/speech/speech-resolver.ts",
-                  "assertion": "resolveProfile仅显式modelOrigin/speech或兼容表；无profile且无兼容命中立即fail missing_model_profile。"
-                },
-                {
-                  "path": "packages/speech-core/src/model-compatibility.ts",
-                  "assertion": "逐精确ID匹配：tts-1/hd、whisper-1、mimo-v2.5tts/asr、cosyvoice-v2/v3前缀、fun-asr-realtime前缀；本行均未命中，无provider/local-whisper fallback。"
-                }
-              ],
-              "floorDecision": "没有实现/正式发布证据，不填猜测版本。候选展示保留，出站及自动路由禁止，适配验收后再解除。"
-            }
-          },
-          "protocol": {
-            "state": "unsupported",
-            "reason": "missing-speech-profile-and-compatibility",
-            "apiFormat": "anthropic-messages",
-            "adapterId": "required-adapter:tts:minimax"
+            "sourceRecord": "compute/providers/minimax.json#speech-2.6-turbo"
           }
         },
         {
@@ -16562,31 +17042,7 @@
                 "ogg"
               ]
             },
-            "sourceRecord": "compute/providers/minimax.json#speech-02-hd",
-            "adapterReadiness": {
-              "checkedAt": "2026-10-03",
-              "evidence": [
-                {
-                  "path": "packages/agent-service/src/speech/tts-adapter.ts",
-                  "assertion": "recognize/synthesize通过resolveSpeechCompute解析model profile与adapter，非直接按Provider.apiFormat发送。"
-                },
-                {
-                  "path": "packages/agent-service/src/speech/speech-resolver.ts",
-                  "assertion": "resolveProfile仅显式modelOrigin/speech或兼容表；无profile且无兼容命中立即fail missing_model_profile。"
-                },
-                {
-                  "path": "packages/speech-core/src/model-compatibility.ts",
-                  "assertion": "逐精确ID匹配：tts-1/hd、whisper-1、mimo-v2.5tts/asr、cosyvoice-v2/v3前缀、fun-asr-realtime前缀；本行均未命中，无provider/local-whisper fallback。"
-                }
-              ],
-              "floorDecision": "没有实现/正式发布证据，不填猜测版本。候选展示保留，出站及自动路由禁止，适配验收后再解除。"
-            }
-          },
-          "protocol": {
-            "state": "unsupported",
-            "reason": "missing-speech-profile-and-compatibility",
-            "apiFormat": "anthropic-messages",
-            "adapterId": "required-adapter:tts:minimax"
+            "sourceRecord": "compute/providers/minimax.json#speech-02-hd"
           }
         },
         {
@@ -16627,31 +17083,7 @@
                 "ogg"
               ]
             },
-            "sourceRecord": "compute/providers/minimax.json#speech-02-turbo",
-            "adapterReadiness": {
-              "checkedAt": "2026-10-03",
-              "evidence": [
-                {
-                  "path": "packages/agent-service/src/speech/tts-adapter.ts",
-                  "assertion": "recognize/synthesize通过resolveSpeechCompute解析model profile与adapter，非直接按Provider.apiFormat发送。"
-                },
-                {
-                  "path": "packages/agent-service/src/speech/speech-resolver.ts",
-                  "assertion": "resolveProfile仅显式modelOrigin/speech或兼容表；无profile且无兼容命中立即fail missing_model_profile。"
-                },
-                {
-                  "path": "packages/speech-core/src/model-compatibility.ts",
-                  "assertion": "逐精确ID匹配：tts-1/hd、whisper-1、mimo-v2.5tts/asr、cosyvoice-v2/v3前缀、fun-asr-realtime前缀；本行均未命中，无provider/local-whisper fallback。"
-                }
-              ],
-              "floorDecision": "没有实现/正式发布证据，不填猜测版本。候选展示保留，出站及自动路由禁止，适配验收后再解除。"
-            }
-          },
-          "protocol": {
-            "state": "unsupported",
-            "reason": "missing-speech-profile-and-compatibility",
-            "apiFormat": "anthropic-messages",
-            "adapterId": "required-adapter:tts:minimax"
+            "sourceRecord": "compute/providers/minimax.json#speech-02-turbo"
           }
         },
         {
@@ -29707,31 +30139,7 @@
               "source": "preset"
             },
             "recordedExtra": {},
-            "sourceRecord": "compute/coding-plans/minimax-coding.json#speech-2.8-hd",
-            "adapterReadiness": {
-              "checkedAt": "2026-10-03",
-              "evidence": [
-                {
-                  "path": "packages/agent-service/src/speech/tts-adapter.ts",
-                  "assertion": "recognize/synthesize通过resolveSpeechCompute解析model profile与adapter，非直接按Provider.apiFormat发送。"
-                },
-                {
-                  "path": "packages/agent-service/src/speech/speech-resolver.ts",
-                  "assertion": "resolveProfile仅显式modelOrigin/speech或兼容表；无profile且无兼容命中立即fail missing_model_profile。"
-                },
-                {
-                  "path": "packages/speech-core/src/model-compatibility.ts",
-                  "assertion": "逐精确ID匹配：tts-1/hd、whisper-1、mimo-v2.5tts/asr、cosyvoice-v2/v3前缀、fun-asr-realtime前缀；本行均未命中，无provider/local-whisper fallback。"
-                }
-              ],
-              "floorDecision": "没有实现/正式发布证据，不填猜测版本。候选展示保留，出站及自动路由禁止，适配验收后再解除。"
-            }
-          },
-          "protocol": {
-            "state": "unsupported",
-            "reason": "missing-speech-profile-and-compatibility",
-            "apiFormat": "anthropic-messages",
-            "adapterId": "required-adapter:tts:minimax"
+            "sourceRecord": "compute/coding-plans/minimax-coding.json#speech-2.8-hd"
           }
         },
         {
@@ -29766,31 +30174,7 @@
               "source": "preset"
             },
             "recordedExtra": {},
-            "sourceRecord": "compute/coding-plans/minimax-coding.json#speech-2.8-turbo",
-            "adapterReadiness": {
-              "checkedAt": "2026-10-03",
-              "evidence": [
-                {
-                  "path": "packages/agent-service/src/speech/tts-adapter.ts",
-                  "assertion": "recognize/synthesize通过resolveSpeechCompute解析model profile与adapter，非直接按Provider.apiFormat发送。"
-                },
-                {
-                  "path": "packages/agent-service/src/speech/speech-resolver.ts",
-                  "assertion": "resolveProfile仅显式modelOrigin/speech或兼容表；无profile且无兼容命中立即fail missing_model_profile。"
-                },
-                {
-                  "path": "packages/speech-core/src/model-compatibility.ts",
-                  "assertion": "逐精确ID匹配：tts-1/hd、whisper-1、mimo-v2.5tts/asr、cosyvoice-v2/v3前缀、fun-asr-realtime前缀；本行均未命中，无provider/local-whisper fallback。"
-                }
-              ],
-              "floorDecision": "没有实现/正式发布证据，不填猜测版本。候选展示保留，出站及自动路由禁止，适配验收后再解除。"
-            }
-          },
-          "protocol": {
-            "state": "unsupported",
-            "reason": "missing-speech-profile-and-compatibility",
-            "apiFormat": "anthropic-messages",
-            "adapterId": "required-adapter:tts:minimax"
+            "sourceRecord": "compute/coding-plans/minimax-coding.json#speech-2.8-turbo"
           }
         },
         {
@@ -31631,5 +32015,5 @@
     "authority": "catalog/v2/catalog.json",
     "verification": "migration-preserves-existing-evidence"
   },
-  "digest": "d007fc910cff2b732270071f0f803a1625c3800e5e98abe360e0334dc5a2d719"
+  "digest": "a190fb1641c258fc37077511e7152f7250908206adcd7d18d042369fc13312fc"
 }
