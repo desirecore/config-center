@@ -27,6 +27,6 @@
       ]
     }
   },
-  "response": { "textPath": "content.0.text" },
+  "response": { "textPath": "content", "textFormat": "text-blocks" },
   "timeoutMs": 30000
 }
