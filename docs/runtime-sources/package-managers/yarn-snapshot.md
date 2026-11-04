@@ -1,6 +1,6 @@
 # yarn 离线目录快照
 
-- 实际读取：2026-10-03T10:24:20.059Z
+- 实际读取：2026-11-04T04:06:42.852Z
 - 官方来源：[官方目录](https://api.github.com/repos/yarnpkg/berry/releases?per_page=100)
 - 数据位置：`runtimes/versions-fallback.json#pkgManagers.yarn`
 - 目录条数：30
