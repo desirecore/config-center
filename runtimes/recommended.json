@@ -40,5 +40,5 @@
       "linux-arm64": "439e9c438acdf6a6ffe47418da709153d66c4bed812e30a473faacb107dd2791"
     }
   },
-  "minClientVersion": "10.0.200"
+  "minClientVersion": "10.0.201"
 }
