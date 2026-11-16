@@ -2,7 +2,6 @@
   "description": "阿里通义千问 Qwen 系列模型规格。参数来源：config-center compute/providers/dashscope.json。",
   "specs": [
     {
-      "id": "qwen3.7-max",
       "displayName": "Qwen3.7 Max",
       "family": "qwen3.7-max",
       "match": {
@@ -11,6 +10,7 @@
           "qwen3.7-max-2026-05-20"
         ]
       },
+      "id": "qwen3.7-max",
       "spec": {
         "contextWindow": 1000000,
         "maxOutputTokens": 131072,
@@ -31,7 +31,6 @@
       }
     },
     {
-      "id": "qwen3.8-max-prime",
       "displayName": "Qwen3.8 Max Prime",
       "family": "qwen3.8-max-prime",
       "match": {
@@ -40,6 +39,7 @@
           "qwen/qwen3.8-max-prime"
         ]
       },
+      "id": "qwen3.8-max-prime",
       "spec": {
         "contextWindow": 1000000,
         "capabilities": [
@@ -58,7 +58,6 @@
       }
     },
     {
-      "id": "qwen-image-3.0",
       "displayName": "qwen-image-3.0",
       "family": "qwen-image-3.0",
       "match": {
@@ -66,6 +65,7 @@
           "qwen-image-3.0"
         ]
       },
+      "id": "qwen-image-3.0",
       "spec": {
         "capabilities": [
           "image_generation",
@@ -79,7 +79,6 @@
       }
     },
     {
-      "id": "qwen-image-3.0-pro",
       "displayName": "qwen-image-3.0-pro",
       "family": "qwen-image-3.0-pro",
       "match": {
@@ -87,6 +86,7 @@
           "qwen-image-3.0-pro"
         ]
       },
+      "id": "qwen-image-3.0-pro",
       "spec": {
         "capabilities": [
           "image_generation",
@@ -100,7 +100,6 @@
       }
     },
     {
-      "id": "qwen3.7-text-rerank",
       "displayName": "Qwen3.7 Text Rerank",
       "family": "qwen3.7-text-rerank",
       "match": {
@@ -108,6 +107,7 @@
           "qwen3.7-text-rerank"
         ]
       },
+      "id": "qwen3.7-text-rerank",
       "spec": {
         "capabilities": [
           "rerank",
@@ -120,7 +120,6 @@
       }
     },
     {
-      "id": "qwen3.7-text-embedding-flash",
       "displayName": "qwen3.7-text-embedding-flash",
       "family": "qwen3.7-text-embedding-flash",
       "match": {
@@ -128,6 +127,7 @@
           "qwen3.7-text-embedding-flash"
         ]
       },
+      "id": "qwen3.7-text-embedding-flash",
       "spec": {
         "capabilities": [
           "text_embedding",
@@ -140,7 +140,6 @@
       }
     },
     {
-      "id": "qwen3.7-text-embedding",
       "displayName": "qwen3.7-text-embedding",
       "family": "qwen3.7-text-embedding",
       "match": {
@@ -148,6 +147,7 @@
           "qwen3.7-text-embedding"
         ]
       },
+      "id": "qwen3.7-text-embedding",
       "spec": {
         "capabilities": [
           "text_embedding",
@@ -160,7 +160,6 @@
       }
     },
     {
-      "id": "qwen3.8-omni-flash",
       "displayName": "Qwen3.8 Omni Flash",
       "family": "qwen3.8-omni-flash",
       "match": {
@@ -169,6 +168,7 @@
           "qwen/qwen3.8-omni-flash"
         ]
       },
+      "id": "qwen3.8-omni-flash",
       "spec": {
         "capabilities": [
           "chat",
@@ -190,7 +190,6 @@
       }
     },
     {
-      "id": "qwen3.8-max",
       "displayName": "Qwen3.8 Max",
       "family": "qwen3.8-max",
       "match": {
@@ -198,6 +197,7 @@
           "qwen3.8-max"
         ]
       },
+      "id": "qwen3.8-max",
       "spec": {
         "contextWindow": 1000000,
         "maxOutputTokens": 131072,
@@ -240,7 +240,6 @@
       }
     },
     {
-      "id": "qwen3.8-flash",
       "displayName": "Qwen3.8 Flash",
       "family": "qwen3.8-flash",
       "match": {
@@ -248,6 +247,7 @@
           "qwen3.8-flash"
         ]
       },
+      "id": "qwen3.8-flash",
       "spec": {
         "contextWindow": 1000000,
         "maxOutputTokens": 131072,
@@ -300,7 +300,6 @@
       }
     },
     {
-      "id": "qwen3.8-max-preview",
       "displayName": "Qwen3.8 Max Preview",
       "family": "qwen3.8-max-preview",
       "match": {
@@ -311,6 +310,7 @@
           "qwen3.8-max-preview*"
         ]
       },
+      "id": "qwen3.8-max-preview",
       "spec": {
         "contextWindow": 1000000,
         "maxOutputTokens": 65536,
@@ -352,7 +352,6 @@
       }
     },
     {
-      "id": "qwen3.7-plus",
       "displayName": "Qwen3.7 Plus",
       "family": "qwen3.7",
       "match": {
@@ -363,6 +362,7 @@
           "qwen3.7-plus*"
         ]
       },
+      "id": "qwen3.7-plus",
       "spec": {
         "contextWindow": 1000000,
         "maxOutputTokens": 65536,
@@ -402,7 +402,6 @@
       }
     },
     {
-      "id": "qwen-max",
       "displayName": "Qwen Max",
       "family": "qwen-max",
       "match": {
@@ -410,6 +409,7 @@
           "qwen-max*"
         ]
       },
+      "id": "qwen-max",
       "spec": {
         "contextWindow": 32768,
         "maxOutputTokens": 8192,
@@ -428,7 +428,6 @@
       }
     },
     {
-      "id": "qwen-plus",
       "displayName": "Qwen Plus",
       "family": "qwen-plus",
       "match": {
@@ -436,6 +435,7 @@
           "qwen-plus*"
         ]
       },
+      "id": "qwen-plus",
       "spec": {
         "contextWindow": 1000000,
         "maxOutputTokens": 32768,
@@ -453,7 +453,6 @@
       }
     },
     {
-      "id": "qwen-turbo",
       "displayName": "Qwen Turbo",
       "family": "qwen-turbo",
       "match": {
@@ -461,6 +460,7 @@
           "qwen-turbo*"
         ]
       },
+      "id": "qwen-turbo",
       "spec": {
         "contextWindow": 1000000,
         "maxOutputTokens": 16384,
@@ -477,9 +477,9 @@
       }
     },
     {
-      "id": "qwen3-max",
       "displayName": "Qwen3 Max",
       "family": "qwen3-max",
+      "id": "qwen3-max",
       "spec": {
         "contextWindow": 262144,
         "maxOutputTokens": 65536,
@@ -501,9 +501,9 @@
       }
     },
     {
-      "id": "qwen3.5-plus",
       "displayName": "Qwen3.5 Plus",
       "family": "qwen3.5",
+      "id": "qwen3.5-plus",
       "spec": {
         "contextWindow": 1000000,
         "maxOutputTokens": 65536,
@@ -525,9 +525,9 @@
       }
     },
     {
-      "id": "qwen3.6-plus",
       "displayName": "Qwen3.6 Plus",
       "family": "qwen3.6",
+      "id": "qwen3.6-plus",
       "spec": {
         "contextWindow": 1000000,
         "maxOutputTokens": 65536,
@@ -550,7 +550,6 @@
       }
     },
     {
-      "id": "qwen3.6-flash",
       "displayName": "Qwen3.6 Flash",
       "family": "qwen3.6",
       "match": {
@@ -558,6 +557,7 @@
           "qwen3.6-flash"
         ]
       },
+      "id": "qwen3.6-flash",
       "spec": {
         "contextWindow": 1000000,
         "maxOutputTokens": 65536,
@@ -581,7 +581,6 @@
       }
     },
     {
-      "id": "qwen-long",
       "displayName": "Qwen Long",
       "family": "qwen-long",
       "match": {
@@ -589,6 +588,7 @@
           "qwen-long"
         ]
       },
+      "id": "qwen-long",
       "spec": {
         "contextWindow": 10000000,
         "maxOutputTokens": 32768,
@@ -605,7 +605,6 @@
       }
     },
     {
-      "id": "qwen3-vl-plus",
       "displayName": "Qwen3-VL-Plus",
       "family": "qwen3-vl",
       "match": {
@@ -613,6 +612,7 @@
           "qwen3-vl-plus"
         ]
       },
+      "id": "qwen3-vl-plus",
       "spec": {
         "contextWindow": 262144,
         "maxOutputTokens": 32768,
@@ -632,7 +632,6 @@
       }
     },
     {
-      "id": "qwen3-vl-flash",
       "displayName": "Qwen3-VL-Flash",
       "family": "qwen3-vl",
       "match": {
@@ -640,6 +639,7 @@
           "qwen3-vl-flash"
         ]
       },
+      "id": "qwen3-vl-flash",
       "spec": {
         "contextWindow": 262144,
         "maxOutputTokens": 32768,
@@ -658,7 +658,6 @@
       }
     },
     {
-      "id": "text-embedding-v3",
       "displayName": "text-embedding-v3",
       "family": "text-embedding-v3",
       "match": {
@@ -666,6 +665,7 @@
           "text-embedding-v3"
         ]
       },
+      "id": "text-embedding-v3",
       "spec": {
         "contextWindow": 8192,
         "capabilities": [
@@ -680,7 +680,6 @@
       }
     },
     {
-      "id": "text-embedding-v4",
       "displayName": "text-embedding-v4",
       "family": "text-embedding-v4",
       "match": {
@@ -688,6 +687,7 @@
           "text-embedding-v4"
         ]
       },
+      "id": "text-embedding-v4",
       "spec": {
         "contextWindow": 8192,
         "capabilities": [
@@ -702,7 +702,6 @@
       }
     },
     {
-      "id": "qwen3-rerank",
       "displayName": "Qwen3-Rerank",
       "family": "qwen3-rerank",
       "match": {
@@ -710,6 +709,7 @@
           "qwen3-rerank"
         ]
       },
+      "id": "qwen3-rerank",
       "spec": {
         "contextWindow": 120000,
         "capabilities": [
@@ -724,7 +724,6 @@
       }
     },
     {
-      "id": "cosyvoice-v2",
       "displayName": "CosyVoice V2",
       "family": "cosyvoice",
       "match": {
@@ -732,6 +731,7 @@
           "cosyvoice-v2"
         ]
       },
+      "id": "cosyvoice-v2",
       "spec": {
         "capabilities": [
           "tts",
@@ -745,7 +745,6 @@
       }
     },
     {
-      "id": "fun-asr-realtime",
       "displayName": "Fun-ASR Realtime",
       "family": "fun-asr-realtime",
       "match": {
@@ -753,6 +752,7 @@
           "fun-asr-realtime"
         ]
       },
+      "id": "fun-asr-realtime",
       "spec": {
         "capabilities": [
           "asr",
@@ -791,7 +791,6 @@
       }
     },
     {
-      "id": "paraformer-v2",
       "displayName": "Paraformer V2",
       "family": "paraformer",
       "match": {
@@ -799,6 +798,7 @@
           "paraformer-v2"
         ]
       },
+      "id": "paraformer-v2",
       "spec": {
         "capabilities": [
           "asr",
@@ -811,7 +811,6 @@
       }
     },
     {
-      "id": "wan2.7-image-pro",
       "displayName": "通义万相 2.7 Pro",
       "family": "wan2",
       "match": {
@@ -819,6 +818,7 @@
           "wan2.7-image-pro"
         ]
       },
+      "id": "wan2.7-image-pro",
       "spec": {
         "capabilities": [
           "image_generation",
@@ -844,7 +844,6 @@
       }
     },
     {
-      "id": "wan2.7-image",
       "displayName": "通义万相 2.7",
       "family": "wan2",
       "match": {
@@ -852,6 +851,7 @@
           "wan2.7-image"
         ]
       },
+      "id": "wan2.7-image",
       "spec": {
         "capabilities": [
           "image_generation",
@@ -876,7 +876,6 @@
       }
     },
     {
-      "id": "wan2.6-t2i",
       "displayName": "通义万相 2.6 文生图",
       "family": "wan2",
       "match": {
@@ -884,6 +883,7 @@
           "wan2.6-t2i"
         ]
       },
+      "id": "wan2.6-t2i",
       "spec": {
         "capabilities": [
           "image_generation",
@@ -896,7 +896,6 @@
       }
     },
     {
-      "id": "wan2.2-t2i-plus",
       "displayName": "通义万相 2.2 Plus",
       "family": "wan2",
       "match": {
@@ -904,6 +903,7 @@
           "wan2.2-t2i-plus"
         ]
       },
+      "id": "wan2.2-t2i-plus",
       "spec": {
         "capabilities": [
           "image_generation",
@@ -916,7 +916,6 @@
       }
     },
     {
-      "id": "wan2.2-t2i-flash",
       "displayName": "通义万相 2.2 Flash",
       "family": "wan2",
       "match": {
@@ -924,6 +923,7 @@
           "wan2.2-t2i-flash"
         ]
       },
+      "id": "wan2.2-t2i-flash",
       "spec": {
         "capabilities": [
           "image_generation",
@@ -937,7 +937,6 @@
       }
     },
     {
-      "id": "wan2.6-t2v",
       "displayName": "通义万相 2.6 文生视频",
       "family": "wan2",
       "match": {
@@ -945,6 +944,7 @@
           "wan2.6-t2v"
         ]
       },
+      "id": "wan2.6-t2v",
       "spec": {
         "capabilities": [
           "video_generation",
@@ -957,7 +957,6 @@
       }
     },
     {
-      "id": "cosyvoice-clone",
       "displayName": "CosyVoice 声音复刻",
       "family": "cosyvoice",
       "match": {
@@ -965,6 +964,7 @@
           "cosyvoice-clone"
         ]
       },
+      "id": "cosyvoice-clone",
       "spec": {
         "capabilities": [
           "voice_clone",
@@ -978,7 +978,6 @@
       }
     },
     {
-      "id": "qwen-omni-turbo",
       "displayName": "Qwen-Omni-Turbo",
       "family": "qwen-omni",
       "match": {
@@ -986,6 +985,7 @@
           "qwen-omni-turbo"
         ]
       },
+      "id": "qwen-omni-turbo",
       "spec": {
         "contextWindow": 32768,
         "maxOutputTokens": 2048,
@@ -1005,7 +1005,6 @@
       }
     },
     {
-      "id": "qwen3-max-trans",
       "displayName": "Qwen3-Max（翻译）",
       "family": "qwen3-trans",
       "match": {
@@ -1013,6 +1012,7 @@
           "qwen3-max-trans"
         ]
       },
+      "id": "qwen3-max-trans",
       "spec": {
         "contextWindow": 131072,
         "maxOutputTokens": 8192,
@@ -1029,7 +1029,6 @@
       }
     },
     {
-      "id": "qwen3-coder",
       "displayName": "Qwen3 Coder",
       "family": "qwen3-coder",
       "match": {
@@ -1039,6 +1038,7 @@
           "qwen3-coder:free"
         ]
       },
+      "id": "qwen3-coder",
       "spec": {
         "contextWindow": 262144,
         "maxOutputTokens": 65536,
@@ -1057,7 +1057,6 @@
       }
     },
     {
-      "id": "qwen3.5-35b-a3b",
       "displayName": "Qwen3.5 35B-A3B",
       "family": "qwen3.5",
       "match": {
@@ -1065,6 +1064,7 @@
           "qwen3.5-35b-a3b"
         ]
       },
+      "id": "qwen3.5-35b-a3b",
       "spec": {
         "contextWindow": 131072,
         "maxOutputTokens": 65536,
@@ -1083,7 +1083,6 @@
       }
     },
     {
-      "id": "qwen3.5-27b",
       "displayName": "Qwen3.5 27B",
       "family": "qwen3.5",
       "match": {
@@ -1091,6 +1090,7 @@
           "qwen3.5-27b"
         ]
       },
+      "id": "qwen3.5-27b",
       "spec": {
         "contextWindow": 131072,
         "maxOutputTokens": 65536,
@@ -1109,7 +1109,6 @@
       }
     },
     {
-      "id": "qwen3-coder-480b",
       "displayName": "Qwen3 Coder 480B (硅基)",
       "family": "qwen3-coder",
       "match": {
@@ -1118,6 +1117,7 @@
           "Qwen/Qwen3-Coder-480B-A35B-Instruct"
         ]
       },
+      "id": "qwen3-coder-480b",
       "spec": {
         "contextWindow": 262144,
         "maxOutputTokens": 262144,
@@ -1136,7 +1136,6 @@
       }
     },
     {
-      "id": "qwen3-235b",
       "displayName": "Qwen3 235B (硅基)",
       "family": "qwen3-235b",
       "match": {
@@ -1145,6 +1144,7 @@
           "Qwen/Qwen3-235B-A22B-Instruct-2507"
         ]
       },
+      "id": "qwen3-235b",
       "spec": {
         "contextWindow": 262144,
         "maxOutputTokens": 262144,
@@ -1164,7 +1164,6 @@
       }
     },
     {
-      "id": "qwen-image-2.0-pro",
       "displayName": "千问图像 2.0 Pro",
       "family": "qwen-image-2",
       "match": {
@@ -1172,6 +1171,7 @@
           "qwen-image-2.0-pro"
         ]
       },
+      "id": "qwen-image-2.0-pro",
       "spec": {
         "capabilities": [
           "image_generation",
@@ -1185,7 +1185,6 @@
       }
     },
     {
-      "id": "qwen-image-2.0",
       "displayName": "千问图像 2.0",
       "family": "qwen-image-2",
       "match": {
@@ -1193,6 +1192,7 @@
           "qwen-image-2.0"
         ]
       },
+      "id": "qwen-image-2.0",
       "spec": {
         "capabilities": [
           "image_generation",
@@ -1205,7 +1205,6 @@
       }
     },
     {
-      "id": "qwen3-coder-plus",
       "displayName": "qwen3-coder-plus",
       "family": "qwen3-coder-plus",
       "match": {
@@ -1213,12 +1212,12 @@
           "qwen3-coder-plus"
         ]
       },
+      "id": "qwen3-coder-plus",
       "spec": {
         "description": "精确绑定已有接入型号，参数未核实；identity-only规格不继承旧family能力、窗口、协议或自动路由资格。"
       }
     },
     {
-      "id": "qwen3-coder-next",
       "displayName": "qwen3-coder-next",
       "family": "qwen3-coder-next",
       "match": {
@@ -1226,8 +1225,95 @@
           "qwen3-coder-next"
         ]
       },
+      "id": "qwen3-coder-next",
       "spec": {
         "description": "精确绑定已有接入型号，参数未核实；identity-only规格不继承旧family能力、窗口、协议或自动路由资格。"
+      }
+    },
+    {
+      "displayName": "Qwen4 Max",
+      "family": "qwen4-max",
+      "match": {
+        "exact": [
+          "qwen4-max",
+          "qwen/qwen4-max"
+        ]
+      },
+      "id": "qwen4-max",
+      "spec": {
+        "contextWindow": 1000000,
+        "maxOutputTokens": 262144,
+        "capabilities": [
+          "chat",
+          "reasoning",
+          "code",
+          "vision",
+          "video_understanding",
+          "tool_use",
+          "long_context"
+        ],
+        "serviceType": [
+          "chat"
+        ],
+        "supportsReasoning": true,
+        "description": "Qwen4 Max，支持图像与视频理解的通义千问旗舰推理模型"
+      },
+      "routing": {
+        "tier": "flagship",
+        "routingPriority": 50,
+        "eligibleForAgent": false,
+        "defaultReference": false,
+        "reasoning": {
+          "supportedModes": [
+            "auto",
+            "off",
+            "low",
+            "high",
+            "xhigh"
+          ],
+          "defaultMode": "high"
+        }
+      }
+    },
+    {
+      "displayName": "Qwen4 Max Preview",
+      "family": "qwen4-max-preview",
+      "match": {
+        "exact": [
+          "qwen4-max-preview",
+          "qwen4.0-max-preview"
+        ]
+      },
+      "id": "qwen4-max-preview",
+      "spec": {
+        "contextWindow": 1000000,
+        "maxOutputTokens": 393216,
+        "capabilities": [
+          "chat",
+          "reasoning",
+          "code",
+          "vision",
+          "video_understanding",
+          "tool_use",
+          "long_context"
+        ],
+        "serviceType": [
+          "chat"
+        ],
+        "supportsReasoning": true,
+        "description": "Qwen4 Max Preview，通义千问旗舰推理模型的独立限时预览版"
+      },
+      "routing": {
+        "tier": "flagship",
+        "routingPriority": 50,
+        "eligibleForAgent": false,
+        "defaultReference": false,
+        "reasoning": {
+          "supportedModes": [
+            "auto"
+          ],
+          "defaultMode": "auto"
+        }
       }
     }
   ]
