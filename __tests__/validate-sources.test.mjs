@@ -67,6 +67,12 @@ test('订阅专属模型文档只接受对应供应商的精确官网域名', ()
   assert.ok(sourceUrlError('anthropic', 'https://www.kimi.com/code/docs/en/'))
 })
 
+test('Google 新文档入口仅接受精确 AI Studio 官方域名', () => {
+  assert.equal(sourceUrlError('google', 'https://aistudio.google.com/docs/models/gemini-4-hydrogen.md'), null)
+  assert.ok(sourceUrlError('google', 'https://aistudio.google.com.example.org/docs/models'))
+  assert.ok(sourceUrlError('openai', 'https://aistudio.google.com/docs/models'))
+})
+
 test('端点变化也必须复核来源，即使模型参数完全未变', () => fixture(({ root, provider, dataPath }) => {
   assert.equal(validateSources(root).errors.length, 0)
   provider.baseUrl = 'https://api.openai.com/v1'

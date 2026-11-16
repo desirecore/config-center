@@ -544,6 +544,35 @@
         "tool_use"
       ],
       "source": "preset"
+    },
+    {
+      "modelName": "qwen4-max",
+      "displayName": "Qwen4 Max (Token Plan)",
+      "serviceType": [
+        "chat"
+      ],
+      "description": "Qwen4 Max，支持图像与视频理解的通义千问旗舰推理模型",
+      "contextWindow": 1000000,
+      "maxOutputTokens": 131072,
+      "capabilities": [
+        "chat",
+        "reasoning",
+        "code",
+        "vision",
+        "video_understanding",
+        "tool_use",
+        "long_context"
+      ],
+      "extra": {
+        "reasoning": {
+          "supportedEfforts": [
+            "none",
+            "high"
+          ],
+          "defaultEffort": "high"
+        }
+      },
+      "source": "preset"
     }
   ]
 }

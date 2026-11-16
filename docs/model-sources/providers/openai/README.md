@@ -2,7 +2,7 @@
 
 [总索引](../../README.md) · [官网证据与边界](SOURCES.md) · [数据闭环核查](AUDIT.md)
 
-本目录包含 51 个单模型文件、4 个单接入面文件。核验日期与状态来自迁移前记录。
+本目录包含 54 个单模型文件、4 个单接入面文件。各记录的核验日期与状态分别保留，新增条目见 2026-11-16 批次。
 
 ## 接入面
 
@@ -12,6 +12,10 @@
 - [compute/model-specs/openai.json](access/model-specs--openai.md)
 
 ## 模型
+
+- [`gpt-image-2.6-sunburst`](models/gpt-image-2.6-sunburst.md)
+
+- [`gpt-image-2.6-flare`](models/gpt-image-2.6-flare.md)
 
 - [`gpt-6.1-terra`](models/gpt-6.1-terra.md)
 

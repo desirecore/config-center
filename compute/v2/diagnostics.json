@@ -1,10 +1,10 @@
 {
-  "specs": 296,
+  "specs": 309,
   "accesses": 40,
-  "models": 354,
+  "models": 365,
   "bindings": {
-    "exact": 319,
-    "access-local": 27,
+    "exact": 328,
+    "access-local": 29,
     "dynamic": 8
   },
   "overrides": [
@@ -636,6 +636,15 @@
       "verification": "inherited-not-reverified"
     },
     {
+      "accessId": "provider-dashscope-001",
+      "apiModelId": "qwen4-max",
+      "field": "maxOutputTokens",
+      "value": 131072,
+      "reason": "conservative-across-thinking-modes",
+      "evidence": "https://help.aliyun.com/zh/model-studio/qwen4-max",
+      "verification": "officially-verified-access-contract"
+    },
+    {
       "accessId": "provider-deepseek-001",
       "apiModelId": "deepseek-flash",
       "field": "capabilities",
@@ -966,6 +975,15 @@
       "reason": "preserved-access-contract",
       "evidence": "compute/providers/google.json#gemini-2.5-flash",
       "verification": "inherited-not-reverified"
+    },
+    {
+      "accessId": "provider-google-001",
+      "apiModelId": "gemini-4-carbon",
+      "field": "maxOutputTokens",
+      "value": 32768,
+      "reason": "safe-common-limit-for-generateContent-without-continuation",
+      "evidence": "https://aistudio.google.com/docs/long-decode.md?generate-content=true",
+      "verification": "officially-verified-access-contract"
     },
     {
       "accessId": "provider-minimax-001",
@@ -2748,6 +2766,236 @@
       "verification": "inherited-not-reverified"
     },
     {
+      "accessId": "provider-openrouter-001",
+      "apiModelId": "baidu/ernie-light-dt-1.0-intl",
+      "field": "contextWindow",
+      "value": 1024000,
+      "reason": "independent-openrouter-hosted-contract",
+      "evidence": "https://openrouter.ai/api/v1/models",
+      "verification": "officially-verified-access-contract"
+    },
+    {
+      "accessId": "provider-openrouter-001",
+      "apiModelId": "baidu/ernie-light-dt-1.0-intl",
+      "field": "maxOutputTokens",
+      "value": 131072,
+      "reason": "independent-openrouter-hosted-contract",
+      "evidence": "https://openrouter.ai/api/v1/models",
+      "verification": "officially-verified-access-contract"
+    },
+    {
+      "accessId": "provider-openrouter-001",
+      "apiModelId": "baidu/ernie-light-dt-1.0-intl",
+      "field": "capabilities",
+      "value": [
+        "chat",
+        "reasoning",
+        "tool_use",
+        "long_context"
+      ],
+      "reason": "independent-openrouter-hosted-contract",
+      "evidence": "https://openrouter.ai/api/v1/models",
+      "verification": "officially-verified-access-contract"
+    },
+    {
+      "accessId": "provider-openrouter-001",
+      "apiModelId": "baidu/ernie-light-dt-1.0-intl",
+      "field": "serviceType",
+      "value": [
+        "chat"
+      ],
+      "reason": "independent-openrouter-hosted-contract",
+      "evidence": "https://openrouter.ai/api/v1/models",
+      "verification": "officially-verified-access-contract"
+    },
+    {
+      "accessId": "provider-openrouter-001",
+      "apiModelId": "baidu/ernie-5.5-flash-preview:free",
+      "field": "contextWindow",
+      "value": 1024000,
+      "reason": "independent-openrouter-hosted-contract",
+      "evidence": "https://openrouter.ai/api/v1/models",
+      "verification": "officially-verified-access-contract"
+    },
+    {
+      "accessId": "provider-openrouter-001",
+      "apiModelId": "baidu/ernie-5.5-flash-preview:free",
+      "field": "maxOutputTokens",
+      "value": 921600,
+      "reason": "independent-openrouter-hosted-contract",
+      "evidence": "https://openrouter.ai/api/v1/models",
+      "verification": "officially-verified-access-contract"
+    },
+    {
+      "accessId": "provider-openrouter-001",
+      "apiModelId": "baidu/ernie-5.5-flash-preview:free",
+      "field": "capabilities",
+      "value": [
+        "chat",
+        "reasoning",
+        "tool_use",
+        "long_context"
+      ],
+      "reason": "independent-openrouter-hosted-contract",
+      "evidence": "https://openrouter.ai/api/v1/models",
+      "verification": "officially-verified-access-contract"
+    },
+    {
+      "accessId": "provider-openrouter-001",
+      "apiModelId": "baidu/ernie-5.5-flash-preview:free",
+      "field": "serviceType",
+      "value": [
+        "chat"
+      ],
+      "reason": "independent-openrouter-hosted-contract",
+      "evidence": "https://openrouter.ai/api/v1/models",
+      "verification": "officially-verified-access-contract"
+    },
+    {
+      "accessId": "provider-openrouter-001",
+      "apiModelId": "z-ai/glm-5.3-flashx-legal",
+      "field": "contextWindow",
+      "value": 1048576,
+      "reason": "independent-openrouter-hosted-contract",
+      "evidence": "https://openrouter.ai/api/v1/models",
+      "verification": "officially-verified-access-contract"
+    },
+    {
+      "accessId": "provider-openrouter-001",
+      "apiModelId": "z-ai/glm-5.3-flashx-legal",
+      "field": "maxOutputTokens",
+      "value": 131072,
+      "reason": "independent-openrouter-hosted-contract",
+      "evidence": "https://openrouter.ai/api/v1/models",
+      "verification": "officially-verified-access-contract"
+    },
+    {
+      "accessId": "provider-openrouter-001",
+      "apiModelId": "z-ai/glm-5.3-flashx-legal",
+      "field": "capabilities",
+      "value": [
+        "chat",
+        "reasoning",
+        "tool_use",
+        "long_context",
+        "vision",
+        "video_understanding"
+      ],
+      "reason": "independent-openrouter-hosted-contract",
+      "evidence": "https://openrouter.ai/api/v1/models",
+      "verification": "officially-verified-access-contract"
+    },
+    {
+      "accessId": "provider-openrouter-001",
+      "apiModelId": "tencent/hy4",
+      "field": "contextWindow",
+      "value": 1048576,
+      "reason": "independent-openrouter-hosted-contract",
+      "evidence": "https://openrouter.ai/api/v1/models",
+      "verification": "officially-verified-access-contract"
+    },
+    {
+      "accessId": "provider-openrouter-001",
+      "apiModelId": "tencent/hy4",
+      "field": "maxOutputTokens",
+      "value": 65536,
+      "reason": "independent-openrouter-hosted-contract",
+      "evidence": "https://openrouter.ai/api/v1/models",
+      "verification": "officially-verified-access-contract"
+    },
+    {
+      "accessId": "provider-openrouter-001",
+      "apiModelId": "tencent/hy4",
+      "field": "capabilities",
+      "value": [
+        "chat",
+        "reasoning",
+        "tool_use",
+        "long_context",
+        "vision"
+      ],
+      "reason": "independent-openrouter-hosted-contract",
+      "evidence": "https://openrouter.ai/api/v1/models",
+      "verification": "officially-verified-access-contract"
+    },
+    {
+      "accessId": "provider-openrouter-001",
+      "apiModelId": "google/gemini-4-hydrogen",
+      "field": "maxOutputTokens",
+      "value": 943718,
+      "reason": "independent-openrouter-hosted-contract",
+      "evidence": "https://openrouter.ai/api/v1/models",
+      "verification": "officially-verified-access-contract"
+    },
+    {
+      "accessId": "provider-openrouter-001",
+      "apiModelId": "google/gemini-4-hydrogen",
+      "field": "capabilities",
+      "value": [
+        "chat",
+        "reasoning",
+        "tool_use",
+        "long_context",
+        "vision",
+        "video_understanding",
+        "audio_understanding"
+      ],
+      "reason": "independent-openrouter-hosted-contract",
+      "evidence": "https://openrouter.ai/api/v1/models",
+      "verification": "officially-verified-access-contract"
+    },
+    {
+      "accessId": "provider-openrouter-001",
+      "apiModelId": "google/gemini-4-carbon",
+      "field": "maxOutputTokens",
+      "value": 943718,
+      "reason": "independent-openrouter-hosted-contract",
+      "evidence": "https://openrouter.ai/api/v1/models",
+      "verification": "officially-verified-access-contract"
+    },
+    {
+      "accessId": "provider-openrouter-001",
+      "apiModelId": "google/gemini-4-carbon",
+      "field": "capabilities",
+      "value": [
+        "chat",
+        "reasoning",
+        "tool_use",
+        "long_context",
+        "vision",
+        "video_understanding",
+        "audio_understanding"
+      ],
+      "reason": "independent-openrouter-hosted-contract",
+      "evidence": "https://openrouter.ai/api/v1/models",
+      "verification": "officially-verified-access-contract"
+    },
+    {
+      "accessId": "provider-openrouter-001",
+      "apiModelId": "qwen/qwen4-max",
+      "field": "maxOutputTokens",
+      "value": 131072,
+      "reason": "independent-openrouter-hosted-contract",
+      "evidence": "https://openrouter.ai/api/v1/models",
+      "verification": "officially-verified-access-contract"
+    },
+    {
+      "accessId": "provider-openrouter-001",
+      "apiModelId": "qwen/qwen4-max",
+      "field": "capabilities",
+      "value": [
+        "chat",
+        "reasoning",
+        "tool_use",
+        "long_context",
+        "vision",
+        "video_understanding"
+      ],
+      "reason": "independent-openrouter-hosted-contract",
+      "evidence": "https://openrouter.ai/api/v1/models",
+      "verification": "officially-verified-access-contract"
+    },
+    {
       "accessId": "provider-siliconflow-001",
       "apiModelId": "Qwen/Qwen3-Coder-480B-A35B-Instruct",
       "field": "defaultTopP",
@@ -4510,6 +4758,15 @@
       "reason": "preserved-access-contract",
       "evidence": "compute/coding-plans/dashscope-token-plan.json#glm-4.7",
       "verification": "inherited-not-reverified"
+    },
+    {
+      "accessId": "provider-dashscope-token-plan-001",
+      "apiModelId": "qwen4-max",
+      "field": "maxOutputTokens",
+      "value": 131072,
+      "reason": "conservative-across-thinking-modes",
+      "evidence": "https://help.aliyun.com/zh/model-studio/qwen4-max",
+      "verification": "officially-verified-access-contract"
     },
     {
       "accessId": "provider-infini-coding-001",

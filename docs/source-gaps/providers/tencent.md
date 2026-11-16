@@ -46,11 +46,13 @@
 | --- | --- | --- | --- |
 | [`hy3`](../../model-sources/providers/tencent/models/hy3.md) | [`compute/model-specs/tencent.json`](../../../compute/model-specs/tencent.json) | `spec.contextWindow`、`spec.defaultTemperature`、`spec.maxOutputTokens`、`spec.supportsReasoning` | [tencent](../../model-sources/providers/tencent/SOURCES.md#tencent)：fetched |
 
-## 已有部分参数证明，仍需区分未证明字段（1 条）
+## 已有部分参数证明，仍需区分未证明字段（3 条）
 
 | 模型 | 接入面 | 未登记证明的关键字段 | 官网入口/读取结果 |
 | --- | --- | --- | --- |
+| [`hy4-flash`](../../model-sources/providers/tencent/models/hy4-flash.md) | [`compute/model-specs/tencent.json`](../../../compute/model-specs/tencent.json) | 已登记关键字段都有证明；其他合同限制仍按原记录复核 | [tokenhub-models-20261116](../../model-sources/providers/tencent/SOURCES.md#tokenhub-models-20261116)：fetched |
 | [`hy4-preview`](../../model-sources/providers/tencent/models/hy4-preview.md) | [`compute/model-specs/tencent.json`](../../../compute/model-specs/tencent.json) | `id`、`spec.contextWindow` | [tencent](../../model-sources/providers/tencent/SOURCES.md#tencent)：fetched |
+| [`hy4`](../../model-sources/providers/tencent/models/hy4.md) | [`compute/model-specs/tencent.json`](../../../compute/model-specs/tencent.json) | 已登记关键字段都有证明；其他合同限制仍按原记录复核 | [tokenhub-models-20261116](../../model-sources/providers/tencent/SOURCES.md#tokenhub-models-20261116)：fetched |
 
 ## 历史身份/参数不证明当前可用性（0 条）
 

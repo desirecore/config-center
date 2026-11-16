@@ -2,13 +2,27 @@
 
 [总索引](../../README.md) · [官网证据与边界](SOURCES.md) · [数据闭环核查](AUDIT.md)
 
-本目录包含 15 个单模型文件、1 个单接入面文件。核验日期与状态来自迁移前记录。
+本目录包含 28 个单模型文件、1 个单接入面文件。各记录的核验日期与状态分别保留，新增条目见 2026-11-16 批次。
 
 ## 接入面
 
 - [compute/providers/openrouter.json](access/providers--openrouter.md)
 
 ## 模型
+
+- [`baidu/ernie-light-dt-1.0-intl`](models/baidu--ernie-light-dt-1.0-intl.md)
+
+- [`baidu/ernie-5.5-flash-preview:free`](models/baidu--ernie-5.5-flash-preview--free.md)
+
+- [`z-ai/glm-5.3-flashx-legal`](models/z-ai--glm-5.3-flashx-legal.md)
+
+- [`tencent/hy4`](models/tencent--hy4.md)
+
+- [`google/gemini-4-hydrogen`](models/google--gemini-4-hydrogen.md)
+
+- [`google/gemini-4-carbon`](models/google--gemini-4-carbon.md)
+
+- [`qwen/qwen4-max`](models/qwen--qwen4-max.md)
 
 - [`openai/gpt-6.1-terra`](models/openai--gpt-6.1-terra.md)
 

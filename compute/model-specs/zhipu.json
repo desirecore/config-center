@@ -2,7 +2,6 @@
   "description": "智谱 GLM 系列模型规格。参数来源：config-center compute/providers/zhipu.json。glm-5 与 glm-5.1/glm-5-turbo/glm-5v-turbo 前缀相近，故各自仅用 exact 主键匹配，不用宽 pattern 以防误吞。",
   "specs": [
     {
-      "id": "glm-5.3-flashx",
       "displayName": "GLM-5.3-FlashX",
       "family": "glm-5.3-flashx",
       "match": {
@@ -11,6 +10,7 @@
           "z-ai/glm-5.3-flashx"
         ]
       },
+      "id": "glm-5.3-flashx",
       "spec": {
         "contextWindow": 1000000,
         "maxOutputTokens": 128000,
@@ -54,7 +54,6 @@
       }
     },
     {
-      "id": "glm-5.3",
       "displayName": "GLM-5.3",
       "family": "glm-5.3",
       "match": {
@@ -63,6 +62,7 @@
           "z-ai/glm-5.3"
         ]
       },
+      "id": "glm-5.3",
       "spec": {
         "contextWindow": 1048576,
         "maxOutputTokens": 131072,
@@ -108,7 +108,6 @@
       }
     },
     {
-      "id": "glm-5.3-flash",
       "displayName": "GLM-5.3-Flash",
       "family": "glm-5.3-flash",
       "match": {
@@ -117,6 +116,7 @@
           "z-ai/glm-5.3-flash"
         ]
       },
+      "id": "glm-5.3-flash",
       "spec": {
         "contextWindow": 1048576,
         "maxOutputTokens": 131072,
@@ -165,7 +165,6 @@
       }
     },
     {
-      "id": "glm-5.2",
       "displayName": "GLM-5.2",
       "family": "glm-5.2",
       "match": {
@@ -176,6 +175,7 @@
           "glm-5.2*"
         ]
       },
+      "id": "glm-5.2",
       "spec": {
         "contextWindow": 1048576,
         "maxOutputTokens": 32768,
@@ -213,9 +213,9 @@
       }
     },
     {
-      "id": "glm-5.1",
       "displayName": "GLM-5.1",
       "family": "glm-5.1",
+      "id": "glm-5.1",
       "spec": {
         "contextWindow": 200000,
         "maxOutputTokens": 128000,
@@ -256,9 +256,9 @@
       }
     },
     {
-      "id": "glm-5",
       "displayName": "GLM-5",
       "family": "glm-5",
+      "id": "glm-5",
       "spec": {
         "contextWindow": 200000,
         "maxOutputTokens": 128000,
@@ -281,9 +281,9 @@
       }
     },
     {
-      "id": "glm-5-turbo",
       "displayName": "GLM-5 Turbo",
       "family": "glm-5-turbo",
+      "id": "glm-5-turbo",
       "spec": {
         "contextWindow": 200000,
         "maxOutputTokens": 128000,
@@ -304,9 +304,9 @@
       }
     },
     {
-      "id": "glm-4.7",
       "displayName": "GLM-4.7",
       "family": "glm-4.7",
+      "id": "glm-4.7",
       "spec": {
         "contextWindow": 200000,
         "maxOutputTokens": 128000,
@@ -327,9 +327,9 @@
       }
     },
     {
-      "id": "glm-4.6",
       "displayName": "GLM-4.6",
       "family": "glm-4.6",
+      "id": "glm-4.6",
       "spec": {
         "contextWindow": 200000,
         "maxOutputTokens": 128000,
@@ -349,7 +349,6 @@
       }
     },
     {
-      "id": "glm-4.7-thinking",
       "displayName": "GLM-4.7 Thinking",
       "family": "glm-4.7",
       "match": {
@@ -357,6 +356,7 @@
           "glm-4.7-thinking"
         ]
       },
+      "id": "glm-4.7-thinking",
       "spec": {
         "contextWindow": 200000,
         "maxOutputTokens": 128000,
@@ -376,7 +376,6 @@
       }
     },
     {
-      "id": "glm-5v-turbo",
       "displayName": "GLM-5V-Turbo",
       "family": "glm-5v",
       "match": {
@@ -384,6 +383,7 @@
           "glm-5v-turbo"
         ]
       },
+      "id": "glm-5v-turbo",
       "spec": {
         "contextWindow": 200000,
         "maxOutputTokens": 128000,
@@ -409,7 +409,6 @@
       }
     },
     {
-      "id": "glm-4.6v",
       "displayName": "GLM-4.6V",
       "family": "glm-4.6",
       "match": {
@@ -417,6 +416,7 @@
           "glm-4.6v"
         ]
       },
+      "id": "glm-4.6v",
       "spec": {
         "contextWindow": 128000,
         "maxOutputTokens": 32768,
@@ -436,7 +436,6 @@
       }
     },
     {
-      "id": "embedding-3",
       "displayName": "智谱 embedding-3",
       "family": "zhipu-embedding",
       "match": {
@@ -444,6 +443,7 @@
           "embedding-3"
         ]
       },
+      "id": "embedding-3",
       "spec": {
         "contextWindow": 8192,
         "capabilities": [
@@ -456,6 +456,50 @@
           "embedding"
         ],
         "description": "智谱嵌入模型v3，支持自定义维度；单条输入最多 3072 tokens"
+      }
+    },
+    {
+      "displayName": "GLM-5.3-FlashX-Legal",
+      "family": "glm-5.3-flashx-legal",
+      "match": {
+        "exact": [
+          "glm-5.3-flashx-legal",
+          "z-ai/glm-5.3-flashx-legal"
+        ]
+      },
+      "id": "glm-5.3-flashx-legal",
+      "spec": {
+        "contextWindow": 1000000,
+        "maxOutputTokens": 128000,
+        "capabilities": [
+          "chat",
+          "reasoning",
+          "tool_use",
+          "long_context"
+        ],
+        "serviceType": [
+          "chat"
+        ],
+        "supportsReasoning": true,
+        "description": "GLM-5.3-FlashX-Legal，面向法律专业工作流，始终开启思考",
+        "extra": {
+          "thinkingOnly": true
+        }
+      },
+      "routing": {
+        "tier": "balanced",
+        "routingPriority": 50,
+        "eligibleForAgent": false,
+        "defaultReference": false,
+        "reasoning": {
+          "supportedModes": [
+            "auto",
+            "low",
+            "high",
+            "max"
+          ],
+          "defaultMode": "max"
+        }
       }
     }
   ]

@@ -8,21 +8,21 @@
 - 未取得可读官网证据：**86 条**。
 - 入口有读取记录，但本条模型无字段证明：**184 条**。
 - 仅确认 ID，参数来源未登记：**206 条**。
-- 已有部分参数证明，仍需区分未证明字段：**173 条**。
+- 已有部分参数证明，仍需区分未证明字段：**197 条**。
 - 历史身份/参数不证明当前可用性：**1 条**。
 
-总计 650 条：前四类需要补证；partial 类逐条列出已有数据中尚未登记证明的关键字段，不能全部当作数据已核；historical 另列。
+总计 674 条：前四类需要补证；partial 类逐条列出已有数据中尚未登记证明的关键字段，不能全部当作数据已核；historical 另列。
 
 | 供应商清单 | 未登记入口 | 入口不可读 | 无字段证明 | 仅 ID | 参数部分已核 | 历史 |
 | --- | --- | --- | --- | --- | --- | --- |
-| [alibaba](providers/alibaba.md) | 0 | 0 | 15 | 96 | 10 | 0 |
-| [anthropic](providers/anthropic.md) | 0 | 0 | 6 | 3 | 15 | 0 |
+| [alibaba](providers/alibaba.md) | 0 | 0 | 15 | 96 | 14 | 0 |
+| [anthropic](providers/anthropic.md) | 0 | 0 | 6 | 3 | 16 | 0 |
 | [baichuan](providers/baichuan.md) | 0 | 8 | 0 | 0 | 0 | 0 |
 | [baidu](providers/baidu.md) | 0 | 0 | 5 | 13 | 2 | 0 |
 | [cohere](providers/cohere.md) | 0 | 0 | 0 | 9 | 8 | 0 |
 | [deepseek](providers/deepseek.md) | 0 | 0 | 3 | 5 | 4 | 0 |
 | [github-copilot](providers/github-copilot.md) | 0 | 0 | 0 | 0 | 0 | 0 |
-| [google](providers/google.md) | 0 | 0 | 2 | 8 | 22 | 0 |
+| [google](providers/google.md) | 0 | 0 | 2 | 8 | 29 | 0 |
 | [infini](providers/infini.md) | 0 | 1 | 0 | 0 | 0 | 0 |
 | [kling](providers/kling.md) | 0 | 11 | 0 | 0 | 0 | 0 |
 | [kwai](providers/kwai.md) | 0 | 0 | 1 | 0 | 0 | 0 |
@@ -31,20 +31,20 @@
 | [moonshot](providers/moonshot.md) | 0 | 0 | 14 | 0 | 13 | 0 |
 | [moorethread](providers/moorethread.md) | 0 | 1 | 0 | 0 | 0 | 0 |
 | [ollama](providers/ollama.md) | 0 | 0 | 1 | 0 | 0 | 0 |
-| [openai](providers/openai.md) | 0 | 0 | 70 | 13 | 21 | 0 |
-| [openrouter](providers/openrouter.md) | 0 | 0 | 0 | 0 | 21 | 0 |
+| [openai](providers/openai.md) | 0 | 0 | 70 | 13 | 23 | 0 |
+| [openrouter](providers/openrouter.md) | 0 | 0 | 0 | 0 | 28 | 0 |
 | [perplexity](providers/perplexity.md) | 0 | 0 | 4 | 2 | 0 | 0 |
 | [siliconflow](providers/siliconflow.md) | 0 | 0 | 3 | 0 | 0 | 0 |
 | [stability](providers/stability.md) | 0 | 0 | 3 | 0 | 0 | 0 |
 | [stealth](providers/stealth.md) | 0 | 0 | 0 | 0 | 0 | 1 |
-| [tencent](providers/tencent.md) | 0 | 0 | 23 | 1 | 1 | 0 |
+| [tencent](providers/tencent.md) | 0 | 0 | 23 | 1 | 3 | 0 |
 | [volcengine](providers/volcengine.md) | 0 | 65 | 1 | 0 | 0 | 0 |
 | [xai](providers/xai.md) | 0 | 0 | 5 | 3 | 1 | 0 |
 | [xiaomi](providers/xiaomi.md) | 0 | 0 | 8 | 7 | 10 | 0 |
 | [xunfei](providers/xunfei.md) | 0 | 0 | 2 | 0 | 2 | 0 |
-| [zhipu](providers/zhipu.md) | 0 | 0 | 3 | 18 | 10 | 0 |
+| [zhipu](providers/zhipu.md) | 0 | 0 | 3 | 18 | 11 | 0 |
 
-最新实际重检候选与统一复核说明见 [2026-10-04 来源重检](../source-rechecks/2026-10-04/README.md)。本目录计数仍依据原已登记字段证明，候选未自动提高原核验状态。
+最新实际重检候选与统一复核说明见 [2026-11-16 来源重检](../source-rechecks/2026-11-16/README.md)。本目录计数仍依据原已登记字段证明，候选未自动提高原核验状态。
 
 另外单列：[型号/身份专属证据缺口](identities.md)、[非模型 API 证据不足](api-contracts.md)、[本仓策略历史依据缺失](policy-origins.md)。供应商记录详见上述细分文件，不在总目录堆全部模型。
 

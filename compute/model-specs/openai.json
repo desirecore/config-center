@@ -1445,6 +1445,50 @@
         "maxOutputTokens": 128000,
         "description": "官方独立Pro规格；Responses协议限制由实际接入面执行，不沿用基础型号或其他代际family。"
       }
+    },
+    {
+      "displayName": "GPT Image 2.6 Sunburst",
+      "family": "gpt-image-2.6-sunburst",
+      "match": {
+        "exact": [
+          "gpt-image-2.6-sunburst",
+          "openai/gpt-image-2.6-sunburst"
+        ]
+      },
+      "id": "gpt-image-2.6-sunburst",
+      "spec": {
+        "capabilities": [
+          "image_generation",
+          "image_editing",
+          "vision"
+        ],
+        "serviceType": [
+          "image_gen"
+        ],
+        "description": "GPT Image 2.6 Sunburst，支持文字与图像输入的图像生成和编辑模型"
+      }
+    },
+    {
+      "displayName": "GPT Image 2.6 Flare",
+      "family": "gpt-image-2.6-flare",
+      "match": {
+        "exact": [
+          "gpt-image-2.6-flare",
+          "openai/gpt-image-2.6-flare"
+        ]
+      },
+      "id": "gpt-image-2.6-flare",
+      "spec": {
+        "capabilities": [
+          "image_generation",
+          "image_editing",
+          "vision"
+        ],
+        "serviceType": [
+          "image_gen"
+        ],
+        "description": "GPT Image 2.6 Flare，支持文字与图像输入的图像生成和编辑模型"
+      }
     }
   ]
 }

@@ -2,7 +2,6 @@
   "description": "腾讯混元系列模型规格。参数来源：config-center compute/providers/tencent.json。hunyuan-2.0-thinking 和 hunyuan-t1 为推理模型。",
   "specs": [
     {
-      "id": "hy4-preview",
       "displayName": "Tencent Hy4 Preview",
       "family": "hy4-preview",
       "match": {
@@ -11,6 +10,7 @@
           "tencent/hy4-preview"
         ]
       },
+      "id": "hy4-preview",
       "spec": {
         "capabilities": [
           "chat",
@@ -29,7 +29,6 @@
       }
     },
     {
-      "id": "hy3",
       "displayName": "混元 Hy3",
       "family": "hy3",
       "match": {
@@ -37,6 +36,7 @@
           "hy3"
         ]
       },
+      "id": "hy3",
       "spec": {
         "contextWindow": 262144,
         "maxOutputTokens": 128000,
@@ -58,7 +58,6 @@
       }
     },
     {
-      "id": "hy3-preview",
       "displayName": "混元 Hy3 Preview",
       "family": "hy3",
       "match": {
@@ -69,6 +68,7 @@
           "hy3-preview*"
         ]
       },
+      "id": "hy3-preview",
       "spec": {
         "contextWindow": 262144,
         "capabilities": [
@@ -87,7 +87,6 @@
       }
     },
     {
-      "id": "hunyuan-2.0-thinking-20251109",
       "displayName": "混元 2.0 Think",
       "family": "hunyuan-2",
       "match": {
@@ -98,6 +97,7 @@
           "hunyuan-2.0-thinking*"
         ]
       },
+      "id": "hunyuan-2.0-thinking-20251109",
       "spec": {
         "contextWindow": 196608,
         "maxOutputTokens": 65536,
@@ -116,7 +116,6 @@
       }
     },
     {
-      "id": "hunyuan-2.0-instruct-20251111",
       "displayName": "混元 2.0 Instruct",
       "family": "hunyuan-2",
       "match": {
@@ -127,6 +126,7 @@
           "hunyuan-2.0-instruct*"
         ]
       },
+      "id": "hunyuan-2.0-instruct-20251111",
       "spec": {
         "contextWindow": 147456,
         "maxOutputTokens": 16384,
@@ -144,7 +144,6 @@
       }
     },
     {
-      "id": "hunyuan-turbos-latest",
       "displayName": "混元 Turbo S",
       "family": "hunyuan-turbo",
       "match": {
@@ -155,6 +154,7 @@
           "hunyuan-turbos*"
         ]
       },
+      "id": "hunyuan-turbos-latest",
       "spec": {
         "contextWindow": 32768,
         "maxOutputTokens": 16384,
@@ -174,7 +174,6 @@
       }
     },
     {
-      "id": "hunyuan-t1-latest",
       "displayName": "混元 T1",
       "family": "hunyuan-t1",
       "match": {
@@ -185,6 +184,7 @@
           "hunyuan-t1*"
         ]
       },
+      "id": "hunyuan-t1-latest",
       "spec": {
         "contextWindow": 262144,
         "maxOutputTokens": 32768,
@@ -205,7 +205,6 @@
       }
     },
     {
-      "id": "hunyuan-t1-vision",
       "displayName": "混元 T1 Vision",
       "family": "hunyuan-t1",
       "match": {
@@ -213,6 +212,7 @@
           "hunyuan-t1-vision"
         ]
       },
+      "id": "hunyuan-t1-vision",
       "spec": {
         "contextWindow": 131072,
         "maxOutputTokens": 32768,
@@ -234,7 +234,6 @@
       }
     },
     {
-      "id": "hunyuan-turbos-vision",
       "displayName": "混元 Turbo S Vision",
       "family": "hunyuan-turbo",
       "match": {
@@ -242,6 +241,7 @@
           "hunyuan-turbos-vision"
         ]
       },
+      "id": "hunyuan-turbos-vision",
       "spec": {
         "contextWindow": 32768,
         "maxOutputTokens": 16384,
@@ -259,6 +259,60 @@
         ],
         "defaultTemperature": 1,
         "description": "腾讯混元 Turbo S 视觉模型，支持图片理解，高速推理"
+      }
+    },
+    {
+      "displayName": "Tencent Hy4 Flash",
+      "family": "hy4-flash",
+      "match": {
+        "exact": [
+          "hy4-flash",
+          "tencent/hy4-flash"
+        ]
+      },
+      "id": "hy4-flash",
+      "spec": {
+        "contextWindow": 1000000,
+        "maxOutputTokens": 64000,
+        "capabilities": [
+          "chat",
+          "reasoning",
+          "vision",
+          "tool_use",
+          "long_context"
+        ],
+        "serviceType": [
+          "chat"
+        ],
+        "supportsReasoning": true,
+        "description": "腾讯混元 HY4 Flash，面向高效多模态理解与长上下文任务"
+      }
+    },
+    {
+      "displayName": "Tencent Hy4",
+      "family": "hy4",
+      "match": {
+        "exact": [
+          "hy4",
+          "tencent/hy4"
+        ]
+      },
+      "id": "hy4",
+      "spec": {
+        "contextWindow": 1000000,
+        "maxOutputTokens": 64000,
+        "capabilities": [
+          "chat",
+          "reasoning",
+          "vision",
+          "tool_use",
+          "long_context"
+        ],
+        "serviceType": [
+          "chat"
+        ],
+        "supportsReasoning": true,
+        "description": "腾讯混元 HY4，支持图像理解、工具调用与长上下文推理"
       }
     }
   ]

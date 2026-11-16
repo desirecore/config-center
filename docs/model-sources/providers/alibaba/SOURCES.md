@@ -112,6 +112,30 @@ Qwen3.7 Max 官网给出 1000000 上下文、131072 最大输出和北京 12/36 
 - 读取日期：2026-11-01；状态：`fetched`；最终地址：https://help.aliyun.com/zh/model-studio/paraformer-recorded-speech-recognition-restful-api。
 - 适用范围：Paraformer 录音文件识别 RESTful API；异步任务、只接受公网可访问的音频 URL。
 
+## 2026-11-16 Qwen4 新型号核对
+
+正式 `qwen4-max` 已列入按量 API 与 Token Plan；北京 API 标准价为 CNY 10/30 每百万 tokens。官网给出总窗口 1000000，非思考最大输入 991808、最大输出 131072；思考最大输入 983616、最大输出 262144。规格输入取跨模式较小值 983616，接入输出保守取 131072；这些是本仓保守设置，不把非思考上限称为思考上限。默认启用思考，档位 low/high/xhigh、默认 high；两模式采样默认值不同，本批不固定采样值。`preserve_thinking` 默认开启，回放及真实调用仍须客户端协议与账号验证。
+
+预览版 `qwen4-max-preview` 仅供 Token Plan，别名 `qwen4.0-max-preview`；预览期从 2026-11-11 10:00 至 2026-11-25 24:00（UTC+8），结束后下线。它有独立的 1M/393216 输出合同，low/medium/xhigh、默认 xhigh，不能当作正式版别名或按量模型。此次保留公告，不新增这条短期静态接入，也不把正式版参数覆盖到预览版。未做收费调用；本批不重新核验其他存量条目。
+
+### qwen4-max-20261116
+
+- 入口：[qwen4-max-20261116](https://help.aliyun.com/zh/model-studio/qwen4-max)。
+- 读取日期：2026-11-16；状态：`fetched`；最终地址：https://help.aliyun.com/zh/model-studio/qwen4-max。
+- 适用范围：百炼正式 Qwen4-Max；北京 API 精确限制、模态、协议、默认推理和 CNY 标准价。
+
+### qwen4-preview-20261116
+
+- 入口：[qwen4-preview-20261116](https://help.aliyun.com/zh/model-studio/qwen4-max-preview)。
+- 读取日期：2026-11-16；状态：`fetched`；最终地址：https://help.aliyun.com/zh/model-studio/qwen4-max-preview。
+- 适用范围：百炼 Token Plan 专属短期预览；身份、预览期限、独立窗口与输出/推理合同。
+
+### qwen-token-plan-20261116
+
+- 入口：[qwen-token-plan-20261116](https://help.aliyun.com/zh/model-studio/token-plan-personal-overview)。
+- 读取日期：2026-11-16；状态：`fetched`；最终地址：https://help.aliyun.com/zh/model-studio/token-plan-personal-overview。
+- 适用范围：百炼个人 Token Plan 当前支持 qwen4-max 与 qwen4-max-preview；不证明按量价格等同套餐额度。
+
 <!-- source-metadata:start -->
 ```json
 {
@@ -308,6 +332,36 @@ Qwen3.7 Max 官网给出 1000000 上下文、131072 最大输出和北京 12/36 
       "checkedAt": "2026-11-01",
       "contentSha256": "2a6007559deff1db97314b2914df8a3703413583f24222bf8c47f622385dea9c",
       "resolvedUrl": "https://help.aliyun.com/zh/model-studio/paraformer-recorded-speech-recognition-restful-api"
+    },
+    {
+      "id": "qwen4-max-20261116",
+      "url": "https://help.aliyun.com/zh/model-studio/qwen4-max",
+      "kind": "official-doc",
+      "scope": "百炼正式 Qwen4-Max；北京 API 精确限制、模态、协议、默认推理和 CNY 标准价",
+      "retrieval": "fetched",
+      "checkedAt": "2026-11-16",
+      "contentSha256": "48b17188828ae9fec28dc9056ae813b0b7c3528fde9ce1c4471e0198e128409b",
+      "resolvedUrl": "https://help.aliyun.com/zh/model-studio/qwen4-max"
+    },
+    {
+      "id": "qwen4-preview-20261116",
+      "url": "https://help.aliyun.com/zh/model-studio/qwen4-max-preview",
+      "kind": "official-doc",
+      "scope": "百炼 Token Plan 专属短期预览；身份、预览期限、独立窗口与输出/推理合同",
+      "retrieval": "fetched",
+      "checkedAt": "2026-11-16",
+      "contentSha256": "eedbdd09990fed05007098052ab6c84f0ed00160ac91aac50a845096856806ce",
+      "resolvedUrl": "https://help.aliyun.com/zh/model-studio/qwen4-max-preview"
+    },
+    {
+      "id": "qwen-token-plan-20261116",
+      "url": "https://help.aliyun.com/zh/model-studio/token-plan-personal-overview",
+      "kind": "official-doc",
+      "scope": "百炼个人 Token Plan 当前支持 qwen4-max 与 qwen4-max-preview；不证明按量价格等同套餐额度",
+      "retrieval": "fetched",
+      "checkedAt": "2026-11-16",
+      "contentSha256": "6522eeab6739c962622d25d0c6104dc725e3a1c6d4891fbb4f75e46a940ebd34",
+      "resolvedUrl": "https://help.aliyun.com/zh/model-studio/token-plan-personal-overview"
     }
   ]
 }

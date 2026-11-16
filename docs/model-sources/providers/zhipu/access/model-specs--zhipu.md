@@ -17,6 +17,8 @@
 
 ## 关联模型
 
+- [`glm-5.3-flashx-legal`](../models/glm-5.3-flashx-legal.md)
+
 - [`glm-5.3-flashx`](../models/glm-5.3-flashx.md)
 - [`glm-5.3`](../models/glm-5.3.md)
 - [`glm-5.3-flash`](../models/glm-5.3-flash.md)

@@ -22,7 +22,7 @@ export const OFFICIAL_HOSTS = {
   xunfei: ['www.xfyun.cn', 'xinghuo.xfyun.cn'],
   siliconflow: ['www.siliconflow.cn', 'docs.siliconflow.cn', 'www.siliconflow.com', 'docs.siliconflow.com'],
   ollama: ['ollama.com', 'docs.ollama.com'],
-  google: ['ai.google.dev', 'cloud.google.com'],
+  google: ['ai.google.dev', 'aistudio.google.com', 'cloud.google.com'],
   mistral: ['docs.mistral.ai', 'mistral.ai'],
   xai: ['docs.x.ai', 'x.ai'],
   cohere: ['docs.cohere.com', 'cohere.com'],

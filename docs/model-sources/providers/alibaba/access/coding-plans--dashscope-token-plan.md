@@ -20,6 +20,8 @@
 
 ## 关联模型
 
+- [`qwen4-max`](../models/qwen4-max.md)
+
 - [`deepseek-v4.1-flash`](../models/deepseek-v4.1-flash.md)
 - [`wan2.7-image-pro`](../models/wan2.7-image-pro.md)
 - [`wan2.7-image`](../models/wan2.7-image.md)

@@ -17,6 +17,10 @@
 
 ## 关联模型
 
+- [`qwen4-max-preview`](../models/qwen4-max-preview.md)
+
+- [`qwen4-max`](../models/qwen4-max.md)
+
 - [`qwen3.7-max`](../models/qwen3.7-max.md)
 - [`qwen3.8-max-prime`](../models/qwen3.8-max-prime.md)
 - [`qwen-image-3.0`](../models/qwen-image-3.0.md)

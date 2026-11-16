@@ -16785,6 +16785,810 @@
           }
         }
       }
+    },
+    {
+      "modelRef": "tencent:hy4-flash",
+      "identity": {
+        "vendor": "tencent",
+        "canonicalModelId": "hy4-flash"
+      },
+      "facts": {
+        "contextWindow": 1000000,
+        "maxOutputTokens": 64000,
+        "capabilities": [
+          "chat",
+          "reasoning",
+          "vision",
+          "tool_use",
+          "long_context"
+        ],
+        "serviceType": [
+          "chat"
+        ],
+        "supportsReasoning": true,
+        "description": "腾讯混元 HY4 Flash，面向高效多模态理解与长上下文任务",
+        "maxInputTokens": 960000
+      },
+      "routing": {},
+      "lifecycle": {
+        "status": "active"
+      },
+      "metadata": {
+        "recordedExtra": {},
+        "projection": {
+          "specKeys": [
+            "contextWindow",
+            "maxOutputTokens",
+            "capabilities",
+            "serviceType",
+            "supportsReasoning",
+            "description"
+          ],
+          "extraKeys": []
+        },
+        "sourceFile": "compute/model-specs/tencent.json",
+        "legacyIdentity": {
+          "displayName": "Tencent Hy4 Flash",
+          "family": "hy4-flash",
+          "match": {
+            "exact": [
+              "hy4-flash",
+              "tencent/hy4-flash"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "modelRef": "tencent:hy4",
+      "identity": {
+        "vendor": "tencent",
+        "canonicalModelId": "hy4"
+      },
+      "facts": {
+        "contextWindow": 1000000,
+        "maxOutputTokens": 64000,
+        "capabilities": [
+          "chat",
+          "reasoning",
+          "vision",
+          "tool_use",
+          "long_context"
+        ],
+        "serviceType": [
+          "chat"
+        ],
+        "supportsReasoning": true,
+        "description": "腾讯混元 HY4，支持图像理解、工具调用与长上下文推理",
+        "maxInputTokens": 960000
+      },
+      "routing": {},
+      "lifecycle": {
+        "status": "active"
+      },
+      "metadata": {
+        "recordedExtra": {},
+        "projection": {
+          "specKeys": [
+            "contextWindow",
+            "maxOutputTokens",
+            "capabilities",
+            "serviceType",
+            "supportsReasoning",
+            "description"
+          ],
+          "extraKeys": []
+        },
+        "sourceFile": "compute/model-specs/tencent.json",
+        "legacyIdentity": {
+          "displayName": "Tencent Hy4",
+          "family": "hy4",
+          "match": {
+            "exact": [
+              "hy4",
+              "tencent/hy4"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "modelRef": "zhipu:glm-5.3-flashx-legal",
+      "identity": {
+        "vendor": "zhipu",
+        "canonicalModelId": "glm-5.3-flashx-legal"
+      },
+      "facts": {
+        "contextWindow": 1000000,
+        "maxOutputTokens": 128000,
+        "capabilities": [
+          "chat",
+          "reasoning",
+          "tool_use",
+          "long_context"
+        ],
+        "serviceType": [
+          "chat"
+        ],
+        "supportsReasoning": true,
+        "description": "GLM-5.3-FlashX-Legal，面向法律专业工作流，始终开启思考",
+        "constraints": {
+          "thinkingOnly": true
+        }
+      },
+      "routing": {
+        "tier": "balanced",
+        "routingPriority": 50,
+        "eligibleForAgent": false,
+        "defaultReference": false,
+        "reasoning": {
+          "supportedModes": [
+            "auto",
+            "low",
+            "high",
+            "max"
+          ],
+          "defaultMode": "max"
+        }
+      },
+      "lifecycle": {
+        "status": "active"
+      },
+      "metadata": {
+        "recordedExtra": {},
+        "projection": {
+          "specKeys": [
+            "contextWindow",
+            "maxOutputTokens",
+            "capabilities",
+            "serviceType",
+            "supportsReasoning",
+            "description",
+            "extra"
+          ],
+          "extraKeys": [
+            "thinkingOnly"
+          ]
+        },
+        "sourceFile": "compute/model-specs/zhipu.json",
+        "legacyIdentity": {
+          "displayName": "GLM-5.3-FlashX-Legal",
+          "family": "glm-5.3-flashx-legal",
+          "match": {
+            "exact": [
+              "glm-5.3-flashx-legal",
+              "z-ai/glm-5.3-flashx-legal"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "modelRef": "qwen:qwen4-max",
+      "identity": {
+        "vendor": "qwen",
+        "canonicalModelId": "qwen4-max"
+      },
+      "facts": {
+        "contextWindow": 1000000,
+        "maxOutputTokens": 262144,
+        "capabilities": [
+          "chat",
+          "reasoning",
+          "code",
+          "vision",
+          "video_understanding",
+          "tool_use",
+          "long_context"
+        ],
+        "serviceType": [
+          "chat"
+        ],
+        "supportsReasoning": true,
+        "description": "Qwen4 Max，支持图像与视频理解的通义千问旗舰推理模型",
+        "maxInputTokens": 983616
+      },
+      "routing": {
+        "tier": "flagship",
+        "routingPriority": 50,
+        "eligibleForAgent": false,
+        "defaultReference": false,
+        "reasoning": {
+          "supportedModes": [
+            "auto",
+            "off",
+            "low",
+            "high",
+            "xhigh"
+          ],
+          "defaultMode": "high"
+        }
+      },
+      "lifecycle": {
+        "status": "active"
+      },
+      "metadata": {
+        "recordedExtra": {},
+        "projection": {
+          "specKeys": [
+            "contextWindow",
+            "maxOutputTokens",
+            "capabilities",
+            "serviceType",
+            "supportsReasoning",
+            "description"
+          ],
+          "extraKeys": []
+        },
+        "sourceFile": "compute/model-specs/qwen.json",
+        "legacyIdentity": {
+          "displayName": "Qwen4 Max",
+          "family": "qwen4-max",
+          "match": {
+            "exact": [
+              "qwen4-max",
+              "qwen/qwen4-max"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "modelRef": "google:gemini-nano-banana-2.1",
+      "identity": {
+        "vendor": "google",
+        "canonicalModelId": "gemini-nano-banana-2.1"
+      },
+      "facts": {
+        "maxOutputTokens": 32768,
+        "capabilities": [
+          "image_generation",
+          "image_editing",
+          "text_rendering"
+        ],
+        "serviceType": [
+          "image_gen"
+        ],
+        "description": "Gemini Nano Banana 2.1，支持文字、图像、视频和 PDF 输入的图像生成与编辑模型",
+        "maxInputTokens": 131072,
+        "supportsReasoning": true
+      },
+      "routing": {},
+      "lifecycle": {
+        "status": "active"
+      },
+      "metadata": {
+        "recordedExtra": {},
+        "projection": {
+          "specKeys": [
+            "maxOutputTokens",
+            "capabilities",
+            "serviceType",
+            "description",
+            "supportsReasoning",
+            "supportsReasoning"
+          ],
+          "extraKeys": []
+        },
+        "sourceFile": "compute/model-specs/google.json",
+        "legacyIdentity": {
+          "displayName": "Gemini Nano Banana 2.1",
+          "family": "gemini-nano-banana-2.1",
+          "match": {
+            "exact": [
+              "gemini-nano-banana-2.1",
+              "google/gemini-nano-banana-2.1"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "modelRef": "google:gemini-omni-1.2-flash",
+      "identity": {
+        "vendor": "google",
+        "canonicalModelId": "gemini-omni-1.2-flash"
+      },
+      "facts": {
+        "maxInputTokens": 131072,
+        "maxOutputTokens": 65536,
+        "capabilities": [
+          "video_generation",
+          "video_editing",
+          "audio_generation"
+        ],
+        "serviceType": [
+          "video_gen"
+        ],
+        "description": "Gemini Omni 1.2 Flash，支持原生音频的视频生成与编辑模型"
+      },
+      "routing": {},
+      "lifecycle": {
+        "status": "active"
+      },
+      "metadata": {
+        "recordedExtra": {},
+        "projection": {
+          "specKeys": [
+            "maxOutputTokens",
+            "capabilities",
+            "serviceType",
+            "description"
+          ],
+          "extraKeys": []
+        },
+        "sourceFile": "compute/model-specs/google.json",
+        "legacyIdentity": {
+          "displayName": "Gemini Omni 1.2 Flash",
+          "family": "gemini-omni-1.2-flash",
+          "match": {
+            "exact": [
+              "gemini-omni-1.2-flash",
+              "google/gemini-omni-1.2-flash"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "modelRef": "google:gemini-omni-1.1-flash",
+      "identity": {
+        "vendor": "google",
+        "canonicalModelId": "gemini-omni-1.1-flash"
+      },
+      "facts": {
+        "maxInputTokens": 131072,
+        "maxOutputTokens": 65536,
+        "capabilities": [
+          "video_generation",
+          "video_editing"
+        ],
+        "serviceType": [
+          "video_gen"
+        ],
+        "description": "Gemini Omni 1.1 Flash，多模态视频生成与编辑模型"
+      },
+      "routing": {},
+      "lifecycle": {
+        "status": "active"
+      },
+      "metadata": {
+        "recordedExtra": {},
+        "projection": {
+          "specKeys": [
+            "maxOutputTokens",
+            "capabilities",
+            "serviceType",
+            "description"
+          ],
+          "extraKeys": []
+        },
+        "sourceFile": "compute/model-specs/google.json",
+        "legacyIdentity": {
+          "displayName": "Gemini Omni 1.1 Flash",
+          "family": "gemini-omni-1.1-flash",
+          "match": {
+            "exact": [
+              "gemini-omni-1.1-flash",
+              "google/gemini-omni-1.1-flash"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "modelRef": "openai:gpt-image-2.6-sunburst",
+      "identity": {
+        "vendor": "openai",
+        "canonicalModelId": "gpt-image-2.6-sunburst"
+      },
+      "facts": {
+        "capabilities": [
+          "image_generation",
+          "image_editing",
+          "vision"
+        ],
+        "serviceType": [
+          "image_gen"
+        ],
+        "description": "GPT Image 2.6 Sunburst，支持文字与图像输入的图像生成和编辑模型"
+      },
+      "routing": {},
+      "lifecycle": {
+        "status": "active"
+      },
+      "metadata": {
+        "recordedExtra": {},
+        "projection": {
+          "specKeys": [
+            "capabilities",
+            "serviceType",
+            "description"
+          ],
+          "extraKeys": []
+        },
+        "sourceFile": "compute/model-specs/openai.json",
+        "legacyIdentity": {
+          "displayName": "GPT Image 2.6 Sunburst",
+          "family": "gpt-image-2.6-sunburst",
+          "match": {
+            "exact": [
+              "gpt-image-2.6-sunburst",
+              "openai/gpt-image-2.6-sunburst"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "modelRef": "openai:gpt-image-2.6-flare",
+      "identity": {
+        "vendor": "openai",
+        "canonicalModelId": "gpt-image-2.6-flare"
+      },
+      "facts": {
+        "capabilities": [
+          "image_generation",
+          "image_editing",
+          "vision"
+        ],
+        "serviceType": [
+          "image_gen"
+        ],
+        "description": "GPT Image 2.6 Flare，支持文字与图像输入的图像生成和编辑模型"
+      },
+      "routing": {},
+      "lifecycle": {
+        "status": "active"
+      },
+      "metadata": {
+        "recordedExtra": {},
+        "projection": {
+          "specKeys": [
+            "capabilities",
+            "serviceType",
+            "description"
+          ],
+          "extraKeys": []
+        },
+        "sourceFile": "compute/model-specs/openai.json",
+        "legacyIdentity": {
+          "displayName": "GPT Image 2.6 Flare",
+          "family": "gpt-image-2.6-flare",
+          "match": {
+            "exact": [
+              "gpt-image-2.6-flare",
+              "openai/gpt-image-2.6-flare"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "modelRef": "google:gemini-4-hydrogen",
+      "identity": {
+        "vendor": "google",
+        "canonicalModelId": "gemini-4-hydrogen"
+      },
+      "facts": {
+        "contextWindow": 1048576,
+        "maxOutputTokens": 65536,
+        "capabilities": [
+          "chat",
+          "reasoning",
+          "code",
+          "vision",
+          "tool_use",
+          "long_context",
+          "video_understanding",
+          "audio_understanding"
+        ],
+        "serviceType": [
+          "chat"
+        ],
+        "supportsReasoning": true,
+        "description": "Gemini 4 Hydrogen，面向高吞吐编程与多模态智能体任务",
+        "constraints": {
+          "samplingParametersDeprecated": true
+        }
+      },
+      "routing": {
+        "tier": "flagship",
+        "routingPriority": 50,
+        "eligibleForAgent": false,
+        "defaultReference": false,
+        "reasoning": {
+          "supportedModes": [
+            "auto",
+            "low",
+            "medium",
+            "high",
+            "xhigh"
+          ],
+          "defaultMode": "high"
+        }
+      },
+      "lifecycle": {
+        "status": "active"
+      },
+      "metadata": {
+        "recordedExtra": {},
+        "projection": {
+          "specKeys": [
+            "contextWindow",
+            "maxOutputTokens",
+            "capabilities",
+            "serviceType",
+            "supportsReasoning",
+            "description",
+            "extra"
+          ],
+          "extraKeys": [
+            "samplingParametersDeprecated"
+          ]
+        },
+        "sourceFile": "compute/model-specs/google.json",
+        "legacyIdentity": {
+          "displayName": "Gemini 4 Hydrogen",
+          "family": "gemini-4-hydrogen",
+          "match": {
+            "exact": [
+              "gemini-4-hydrogen",
+              "google/gemini-4-hydrogen"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "modelRef": "google:gemini-4-carbon",
+      "identity": {
+        "vendor": "google",
+        "canonicalModelId": "gemini-4-carbon"
+      },
+      "facts": {
+        "contextWindow": 1048576,
+        "maxOutputTokens": 65536,
+        "capabilities": [
+          "chat",
+          "reasoning",
+          "code",
+          "vision",
+          "tool_use",
+          "long_context",
+          "video_understanding",
+          "audio_understanding"
+        ],
+        "serviceType": [
+          "chat"
+        ],
+        "supportsReasoning": true,
+        "description": "Gemini 4 Carbon，面向编程、复杂推理与多模态长上下文任务",
+        "constraints": {
+          "samplingParametersDeprecated": true
+        }
+      },
+      "routing": {
+        "tier": "flagship",
+        "routingPriority": 50,
+        "eligibleForAgent": false,
+        "defaultReference": false,
+        "reasoning": {
+          "supportedModes": [
+            "auto",
+            "low",
+            "medium",
+            "high"
+          ],
+          "defaultMode": "medium"
+        }
+      },
+      "lifecycle": {
+        "status": "active"
+      },
+      "metadata": {
+        "recordedExtra": {},
+        "projection": {
+          "specKeys": [
+            "contextWindow",
+            "maxOutputTokens",
+            "capabilities",
+            "serviceType",
+            "supportsReasoning",
+            "description",
+            "extra"
+          ],
+          "extraKeys": [
+            "samplingParametersDeprecated"
+          ]
+        },
+        "sourceFile": "compute/model-specs/google.json",
+        "legacyIdentity": {
+          "displayName": "Gemini 4 Carbon",
+          "family": "gemini-4-carbon",
+          "match": {
+            "exact": [
+              "gemini-4-carbon",
+              "google/gemini-4-carbon"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "modelRef": "anthropic:claude-fable-5-2",
+      "identity": {
+        "vendor": "anthropic",
+        "canonicalModelId": "claude-fable-5-2"
+      },
+      "facts": {
+        "contextWindow": 1000000,
+        "maxOutputTokens": 128000,
+        "capabilities": [
+          "chat",
+          "reasoning",
+          "deep_thinking",
+          "code",
+          "vision",
+          "tool_use",
+          "long_context"
+        ],
+        "serviceType": [
+          "chat"
+        ],
+        "supportsReasoning": true,
+        "description": "Claude Fable 5.2，支持视觉输入、复杂推理与长程智能体任务，始终开启自适应思考",
+        "constraints": {
+          "thinkingOnly": true,
+          "samplingParametersDeprecated": true,
+          "forcedToolChoiceUnsupported": true
+        }
+      },
+      "routing": {
+        "tier": "flagship",
+        "routingPriority": 20,
+        "eligibleForAgent": false,
+        "defaultReference": false,
+        "reasoning": {
+          "supportedModes": [
+            "auto",
+            "low",
+            "medium",
+            "high",
+            "xhigh",
+            "max"
+          ],
+          "defaultMode": "high"
+        }
+      },
+      "lifecycle": {
+        "status": "active"
+      },
+      "metadata": {
+        "recordedExtra": {},
+        "projection": {
+          "specKeys": [
+            "contextWindow",
+            "maxOutputTokens",
+            "capabilities",
+            "serviceType",
+            "supportsReasoning",
+            "description",
+            "extra"
+          ],
+          "extraKeys": [
+            "adaptiveThinking",
+            "thinkingOnly",
+            "samplingParametersDeprecated",
+            "forcedToolChoiceUnsupported"
+          ]
+        },
+        "sourceFile": "compute/model-specs/anthropic.json",
+        "legacyIdentity": {
+          "displayName": "Claude Fable 5.2",
+          "family": "claude-fable-5-2",
+          "match": {
+            "exact": [
+              "claude-fable-5-2",
+              "anthropic/claude-fable-5.2"
+            ]
+          }
+        }
+      },
+      "protocolProfiles": [
+        {
+          "apiFormats": [
+            "anthropic-messages"
+          ],
+          "request": {
+            "adaptiveThinking": true
+          }
+        }
+      ]
+    },
+    {
+      "modelRef": "qwen:qwen4-max-preview",
+      "identity": {
+        "vendor": "qwen",
+        "canonicalModelId": "qwen4-max-preview"
+      },
+      "facts": {
+        "contextWindow": 1000000,
+        "maxOutputTokens": 393216,
+        "capabilities": [
+          "chat",
+          "reasoning",
+          "code",
+          "vision",
+          "video_understanding",
+          "tool_use",
+          "long_context"
+        ],
+        "serviceType": [
+          "chat"
+        ],
+        "supportsReasoning": true,
+        "description": "Qwen4 Max Preview，通义千问旗舰推理模型的独立限时预览版"
+      },
+      "routing": {
+        "tier": "flagship",
+        "routingPriority": 50,
+        "eligibleForAgent": false,
+        "defaultReference": false,
+        "reasoning": {
+          "supportedModes": [
+            "auto"
+          ],
+          "defaultMode": "auto"
+        }
+      },
+      "lifecycle": {
+        "status": "active"
+      },
+      "metadata": {
+        "recordedExtra": {},
+        "projection": {
+          "specKeys": [
+            "contextWindow",
+            "maxOutputTokens",
+            "capabilities",
+            "serviceType",
+            "supportsReasoning",
+            "description"
+          ],
+          "extraKeys": []
+        },
+        "sourceFile": "compute/model-specs/qwen.json",
+        "legacyIdentity": {
+          "displayName": "Qwen4 Max Preview",
+          "family": "qwen4-max-preview",
+          "match": {
+            "exact": [
+              "qwen4-max-preview",
+              "qwen4.0-max-preview"
+            ]
+          }
+        },
+        "previewPeriod": {
+          "startsAt": "2026-11-11T02:00:00Z",
+          "endsAt": "2026-11-25T16:00:00Z",
+          "timezone": "Asia/Shanghai",
+          "officialEndLabel": "2026 年 11 月 25 日 24:00（UTC+8）",
+          "source": "https://help.aliyun.com/zh/model-studio/qwen4-max-preview",
+          "enforcement": "metadata-only-no-runtime-time-gate"
+        },
+        "knownContract": {
+          "accessScope": "Token Plan only; no pay-as-you-go API",
+          "reasoningEfforts": [
+            "low",
+            "medium",
+            "xhigh"
+          ],
+          "defaultReasoningEffort": "xhigh",
+          "source": "https://help.aliyun.com/zh/model-studio/qwen4-max-preview"
+        },
+        "identityBoundary": "精确预览规格防止客户端 stripped 匹配误吞正式版；无静态接入，不扩大正式版路由"
+      }
     }
   ],
   "accesses": [
@@ -21658,6 +22462,87 @@
             },
             "sourceRecord": "compute/providers/dashscope.json#happyhorse-1.0-r2v"
           }
+        },
+        {
+          "apiModelId": "qwen4-max",
+          "modelRef": "qwen:qwen4-max",
+          "binding": {
+            "kind": "exact",
+            "reason": "official-exact-model-identity"
+          },
+          "overrides": {
+            "maxOutputTokens": {
+              "value": 131072,
+              "reason": "conservative-across-thinking-modes",
+              "evidence": "https://help.aliyun.com/zh/model-studio/qwen4-max",
+              "verification": "officially-verified-access-contract"
+            }
+          },
+          "request": {
+            "reasoning": {
+              "supportedEfforts": [
+                "none",
+                "high"
+              ],
+              "defaultEffort": "high"
+            }
+          },
+          "billing": [
+            {
+              "sourceKey": "inputPrice",
+              "amount": 10,
+              "currency": "CNY",
+              "unit": "million-tokens",
+              "direction": "input",
+              "verification": "officially-verified-access-contract"
+            },
+            {
+              "sourceKey": "outputPrice",
+              "amount": 30,
+              "currency": "CNY",
+              "unit": "million-tokens",
+              "direction": "output",
+              "verification": "officially-verified-access-contract"
+            },
+            {
+              "sourceKey": "extra.pricingNotes",
+              "amount": "北京CNY每百万Token标准价；思考输出允许262144，当前接入保守131072；非思考默认采样与思考不同，未固定默认采样。",
+              "currency": "CNY",
+              "unit": "annotation",
+              "verification": "officially-verified-access-contract"
+            }
+          ],
+          "lifecycle": {
+            "status": "active"
+          },
+          "metadata": {
+            "attributes": {
+              "displayName": "Qwen4 Max",
+              "description": "Qwen4 Max，支持图像与视频理解的通义千问旗舰推理模型",
+              "source": "preset"
+            },
+            "recordedExtra": {},
+            "projection": {
+              "modelKeys": [
+                "modelName",
+                "displayName",
+                "serviceType",
+                "description",
+                "contextWindow",
+                "maxOutputTokens",
+                "capabilities",
+                "extra",
+                "source",
+                "inputPrice",
+                "outputPrice"
+              ],
+              "extraKeys": [
+                "reasoning",
+                "pricingNotes"
+              ]
+            },
+            "sourceRecord": "compute/providers/dashscope.json#qwen4-max"
+          }
         }
       ],
       "metadata": {
@@ -23228,6 +24113,183 @@
               "extraKeys": []
             },
             "sourceRecord": "compute/providers/google.json#text-embedding-005"
+          }
+        },
+        {
+          "apiModelId": "gemini-4-hydrogen",
+          "modelRef": "google:gemini-4-hydrogen",
+          "binding": {
+            "kind": "exact",
+            "reason": "official-exact-model-identity"
+          },
+          "overrides": {},
+          "request": {
+            "constraints": {
+              "samplingParametersDeprecated": true
+            },
+            "reasoning": {
+              "supportedEfforts": [
+                "low",
+                "medium",
+                "high"
+              ],
+              "defaultEffort": "high"
+            }
+          },
+          "billing": [
+            {
+              "sourceKey": "inputPrice",
+              "amount": 1.5,
+              "currency": "USD",
+              "unit": "million-tokens",
+              "direction": "input",
+              "verification": "officially-verified-access-contract"
+            },
+            {
+              "sourceKey": "outputPrice",
+              "amount": 7.5,
+              "currency": "USD",
+              "unit": "million-tokens",
+              "direction": "output",
+              "verification": "officially-verified-access-contract"
+            },
+            {
+              "sourceKey": "extra.cachedInputPrice",
+              "amount": 0.075,
+              "currency": "USD",
+              "unit": "million-tokens",
+              "verification": "officially-verified-access-contract"
+            },
+            {
+              "sourceKey": "extra.pricingNotes",
+              "amount": "Google Standard paid tier USD/百万 tokens：输入 1.50、输出（含思考）7.50、隐式缓存读 0.075；另有免费层，不支持显式缓存。流式与非流式 REST 单次均为 65536；未适配 long decode，不把百万输出当当前接入上限。 当前 Google 适配器不接受 xhigh，接入只提供 low/medium/high；原厂完整档位保留在共享规格。",
+              "currency": "USD",
+              "unit": "annotation",
+              "verification": "officially-verified-access-contract"
+            }
+          ],
+          "lifecycle": {
+            "status": "active"
+          },
+          "metadata": {
+            "attributes": {
+              "displayName": "Gemini 4 Hydrogen",
+              "description": "Gemini 4 Hydrogen，面向高吞吐编程与多模态智能体任务"
+            },
+            "recordedExtra": {},
+            "projection": {
+              "modelKeys": [
+                "modelName",
+                "displayName",
+                "serviceType",
+                "description",
+                "contextWindow",
+                "maxOutputTokens",
+                "capabilities",
+                "inputPrice",
+                "outputPrice",
+                "extra"
+              ],
+              "extraKeys": [
+                "reasoning",
+                "samplingParametersDeprecated",
+                "cachedInputPrice",
+                "pricingNotes"
+              ]
+            },
+            "sourceRecord": "compute/providers/google.json#gemini-4-hydrogen"
+          }
+        },
+        {
+          "apiModelId": "gemini-4-carbon",
+          "modelRef": "google:gemini-4-carbon",
+          "binding": {
+            "kind": "exact",
+            "reason": "official-exact-model-identity"
+          },
+          "overrides": {
+            "maxOutputTokens": {
+              "value": 32768,
+              "reason": "safe-common-limit-for-generateContent-without-continuation",
+              "evidence": "https://aistudio.google.com/docs/long-decode.md?generate-content=true",
+              "verification": "officially-verified-access-contract"
+            }
+          },
+          "request": {
+            "constraints": {
+              "samplingParametersDeprecated": true
+            },
+            "reasoning": {
+              "supportedEfforts": [
+                "low",
+                "medium",
+                "high"
+              ],
+              "defaultEffort": "medium"
+            }
+          },
+          "billing": [
+            {
+              "sourceKey": "inputPrice",
+              "amount": 2,
+              "currency": "USD",
+              "unit": "million-tokens",
+              "direction": "input",
+              "verification": "officially-verified-access-contract"
+            },
+            {
+              "sourceKey": "outputPrice",
+              "amount": 10,
+              "currency": "USD",
+              "unit": "million-tokens",
+              "direction": "output",
+              "verification": "officially-verified-access-contract"
+            },
+            {
+              "sourceKey": "extra.cachedInputPrice",
+              "amount": 0.1,
+              "currency": "USD",
+              "unit": "million-tokens",
+              "verification": "officially-verified-access-contract"
+            },
+            {
+              "sourceKey": "extra.pricingNotes",
+              "amount": "Google Standard USD/百万 tokens：截至 2026-11-30 输入 2、输出 10、隐式缓存读 0.10；2026-12-01 起分别为 4、20、0.20。无免费层，不支持显式缓存。当前原生接入采用非流式 REST 32768；流式单次 65536，未适配 long decode。",
+              "currency": "USD",
+              "unit": "annotation",
+              "verification": "officially-verified-access-contract"
+            }
+          ],
+          "lifecycle": {
+            "status": "active"
+          },
+          "metadata": {
+            "attributes": {
+              "displayName": "Gemini 4 Carbon",
+              "description": "Gemini 4 Carbon，面向编程、复杂推理与多模态长上下文任务"
+            },
+            "recordedExtra": {},
+            "projection": {
+              "modelKeys": [
+                "modelName",
+                "displayName",
+                "serviceType",
+                "description",
+                "contextWindow",
+                "maxOutputTokens",
+                "capabilities",
+                "inputPrice",
+                "outputPrice",
+                "extra"
+              ],
+              "extraKeys": [
+                "reasoning",
+                "samplingParametersDeprecated",
+                "cachedInputPrice",
+                "pricingNotes"
+              ]
+            },
+            "sourceRecord": "compute/providers/google.json#gemini-4-carbon"
           }
         }
       ],
@@ -32898,6 +33960,759 @@
             "sourceRecord": "compute/providers/openrouter.json#openrouter/auto",
             "automaticRouting": false
           }
+        },
+        {
+          "apiModelId": "baidu/ernie-light-dt-1.0-intl",
+          "modelRef": null,
+          "binding": {
+            "kind": "access-local",
+            "reason": "official-openrouter-only-identity-no-native-contract-inheritance"
+          },
+          "overrides": {
+            "contextWindow": {
+              "value": 1024000,
+              "reason": "independent-openrouter-hosted-contract",
+              "evidence": "https://openrouter.ai/api/v1/models",
+              "verification": "officially-verified-access-contract"
+            },
+            "maxOutputTokens": {
+              "value": 131072,
+              "reason": "independent-openrouter-hosted-contract",
+              "evidence": "https://openrouter.ai/api/v1/models",
+              "verification": "officially-verified-access-contract"
+            },
+            "capabilities": {
+              "value": [
+                "chat",
+                "reasoning",
+                "tool_use",
+                "long_context"
+              ],
+              "reason": "independent-openrouter-hosted-contract",
+              "evidence": "https://openrouter.ai/api/v1/models",
+              "verification": "officially-verified-access-contract"
+            },
+            "serviceType": {
+              "value": [
+                "chat"
+              ],
+              "reason": "independent-openrouter-hosted-contract",
+              "evidence": "https://openrouter.ai/api/v1/models",
+              "verification": "officially-verified-access-contract"
+            }
+          },
+          "request": {
+            "reasoning": {
+              "supportedEfforts": [
+                "max",
+                "high",
+                "low",
+                "none"
+              ],
+              "defaultEffort": "max"
+            }
+          },
+          "billing": [
+            {
+              "sourceKey": "inputPrice",
+              "amount": 1.13,
+              "currency": "USD",
+              "unit": "million-tokens",
+              "direction": "input",
+              "verification": "officially-verified-access-contract"
+            },
+            {
+              "sourceKey": "outputPrice",
+              "amount": 3.94,
+              "currency": "USD",
+              "unit": "million-tokens",
+              "direction": "output",
+              "verification": "officially-verified-access-contract"
+            },
+            {
+              "sourceKey": "extra.cachedInputPrice",
+              "amount": 0.113,
+              "currency": "USD",
+              "unit": "million-tokens",
+              "verification": "officially-verified-access-contract"
+            },
+            {
+              "sourceKey": "extra.pricingNotes",
+              "amount": "OpenRouter 官方 Models API 2026-11-16 快照；USD/token × 1000000；窗口、输出、effort 与计价属于独立托管合同，不反写原厂或订阅。 此为平台专属精确 ID；未绑定原厂规格、不参与自动路由，不推断百度国内端点可用。",
+              "currency": "USD",
+              "unit": "annotation",
+              "verification": "officially-verified-access-contract"
+            }
+          ],
+          "lifecycle": {
+            "status": "active"
+          },
+          "metadata": {
+            "attributes": {
+              "displayName": "ERNIE-Light-DT-1.0",
+              "description": "ERNIE-Light-DT-1.0，OpenRouter 独立托管入口；参数与美元计价以平台目录为准"
+            },
+            "recordedExtra": {},
+            "projection": {
+              "modelKeys": [
+                "modelName",
+                "displayName",
+                "serviceType",
+                "description",
+                "contextWindow",
+                "maxOutputTokens",
+                "capabilities",
+                "inputPrice",
+                "outputPrice",
+                "extra"
+              ],
+              "extraKeys": [
+                "reasoning",
+                "cachedInputPrice",
+                "pricingNotes"
+              ]
+            },
+            "sourceRecord": "compute/providers/openrouter.json#baidu/ernie-light-dt-1.0-intl"
+          }
+        },
+        {
+          "apiModelId": "baidu/ernie-5.5-flash-preview:free",
+          "modelRef": null,
+          "binding": {
+            "kind": "access-local",
+            "reason": "official-openrouter-only-identity-no-native-contract-inheritance"
+          },
+          "overrides": {
+            "contextWindow": {
+              "value": 1024000,
+              "reason": "independent-openrouter-hosted-contract",
+              "evidence": "https://openrouter.ai/api/v1/models",
+              "verification": "officially-verified-access-contract"
+            },
+            "maxOutputTokens": {
+              "value": 921600,
+              "reason": "independent-openrouter-hosted-contract",
+              "evidence": "https://openrouter.ai/api/v1/models",
+              "verification": "officially-verified-access-contract"
+            },
+            "capabilities": {
+              "value": [
+                "chat",
+                "reasoning",
+                "tool_use",
+                "long_context"
+              ],
+              "reason": "independent-openrouter-hosted-contract",
+              "evidence": "https://openrouter.ai/api/v1/models",
+              "verification": "officially-verified-access-contract"
+            },
+            "serviceType": {
+              "value": [
+                "chat"
+              ],
+              "reason": "independent-openrouter-hosted-contract",
+              "evidence": "https://openrouter.ai/api/v1/models",
+              "verification": "officially-verified-access-contract"
+            }
+          },
+          "request": {
+            "reasoning": {
+              "supportedEfforts": [
+                "high"
+              ],
+              "defaultEffort": "high"
+            },
+            "constraints": {
+              "thinkingOnly": true
+            }
+          },
+          "billing": [
+            {
+              "sourceKey": "inputPrice",
+              "amount": 0.0,
+              "currency": "USD",
+              "unit": "million-tokens",
+              "direction": "input",
+              "verification": "officially-verified-access-contract"
+            },
+            {
+              "sourceKey": "outputPrice",
+              "amount": 0.0,
+              "currency": "USD",
+              "unit": "million-tokens",
+              "direction": "output",
+              "verification": "officially-verified-access-contract"
+            },
+            {
+              "sourceKey": "extra.pricingNotes",
+              "amount": "OpenRouter 官方 Models API 2026-11-16 快照；USD/token × 1000000；窗口、输出、effort 与计价属于独立托管合同，不反写原厂或订阅。 此为平台专属精确 ID；未绑定原厂规格、不参与自动路由，不推断百度国内端点可用。 当前平台明确 prompt/completion 均为 0；不据此承诺持续免费或账号额度。",
+              "currency": "USD",
+              "unit": "annotation",
+              "verification": "officially-verified-access-contract"
+            }
+          ],
+          "lifecycle": {
+            "status": "active"
+          },
+          "metadata": {
+            "attributes": {
+              "displayName": "ERNIE-5.5-Flash-Preview (free)",
+              "description": "ERNIE-5.5-Flash-Preview (free)，OpenRouter 独立托管入口；参数与美元计价以平台目录为准"
+            },
+            "recordedExtra": {},
+            "projection": {
+              "modelKeys": [
+                "modelName",
+                "displayName",
+                "serviceType",
+                "description",
+                "contextWindow",
+                "maxOutputTokens",
+                "capabilities",
+                "inputPrice",
+                "outputPrice",
+                "extra"
+              ],
+              "extraKeys": [
+                "reasoning",
+                "thinkingOnly",
+                "pricingNotes"
+              ]
+            },
+            "sourceRecord": "compute/providers/openrouter.json#baidu/ernie-5.5-flash-preview:free"
+          }
+        },
+        {
+          "apiModelId": "z-ai/glm-5.3-flashx-legal",
+          "modelRef": "zhipu:glm-5.3-flashx-legal",
+          "binding": {
+            "kind": "exact",
+            "reason": "official-exact-model-identity"
+          },
+          "overrides": {
+            "contextWindow": {
+              "value": 1048576,
+              "reason": "independent-openrouter-hosted-contract",
+              "evidence": "https://openrouter.ai/api/v1/models",
+              "verification": "officially-verified-access-contract"
+            },
+            "maxOutputTokens": {
+              "value": 131072,
+              "reason": "independent-openrouter-hosted-contract",
+              "evidence": "https://openrouter.ai/api/v1/models",
+              "verification": "officially-verified-access-contract"
+            },
+            "capabilities": {
+              "value": [
+                "chat",
+                "reasoning",
+                "tool_use",
+                "long_context",
+                "vision",
+                "video_understanding"
+              ],
+              "reason": "independent-openrouter-hosted-contract",
+              "evidence": "https://openrouter.ai/api/v1/models",
+              "verification": "officially-verified-access-contract"
+            }
+          },
+          "request": {
+            "reasoning": {
+              "supportedEfforts": [
+                "max",
+                "high",
+                "low"
+              ],
+              "defaultEffort": "max"
+            },
+            "constraints": {
+              "thinkingOnly": true
+            }
+          },
+          "billing": [
+            {
+              "sourceKey": "inputPrice",
+              "amount": 0.37,
+              "currency": "USD",
+              "unit": "million-tokens",
+              "direction": "input",
+              "verification": "officially-verified-access-contract"
+            },
+            {
+              "sourceKey": "outputPrice",
+              "amount": 1.25,
+              "currency": "USD",
+              "unit": "million-tokens",
+              "direction": "output",
+              "verification": "officially-verified-access-contract"
+            },
+            {
+              "sourceKey": "extra.cachedInputPrice",
+              "amount": 0.075,
+              "currency": "USD",
+              "unit": "million-tokens",
+              "verification": "officially-verified-access-contract"
+            },
+            {
+              "sourceKey": "extra.pricingNotes",
+              "amount": "OpenRouter 官方 Models API 2026-11-16 快照；USD/token × 1000000；窗口、输出、effort 与计价属于独立托管合同，不反写原厂或订阅。",
+              "currency": "USD",
+              "unit": "annotation",
+              "verification": "officially-verified-access-contract"
+            }
+          ],
+          "lifecycle": {
+            "status": "active"
+          },
+          "metadata": {
+            "attributes": {
+              "displayName": "GLM 5.3 FlashX Legal",
+              "description": "GLM 5.3 FlashX Legal，OpenRouter 独立托管入口；参数与美元计价以平台目录为准"
+            },
+            "recordedExtra": {},
+            "projection": {
+              "modelKeys": [
+                "modelName",
+                "displayName",
+                "serviceType",
+                "description",
+                "contextWindow",
+                "maxOutputTokens",
+                "capabilities",
+                "inputPrice",
+                "outputPrice",
+                "extra"
+              ],
+              "extraKeys": [
+                "reasoning",
+                "thinkingOnly",
+                "cachedInputPrice",
+                "pricingNotes"
+              ]
+            },
+            "sourceRecord": "compute/providers/openrouter.json#z-ai/glm-5.3-flashx-legal"
+          }
+        },
+        {
+          "apiModelId": "tencent/hy4",
+          "modelRef": "tencent:hy4",
+          "binding": {
+            "kind": "exact",
+            "reason": "official-exact-model-identity"
+          },
+          "overrides": {
+            "contextWindow": {
+              "value": 1048576,
+              "reason": "independent-openrouter-hosted-contract",
+              "evidence": "https://openrouter.ai/api/v1/models",
+              "verification": "officially-verified-access-contract"
+            },
+            "maxOutputTokens": {
+              "value": 65536,
+              "reason": "independent-openrouter-hosted-contract",
+              "evidence": "https://openrouter.ai/api/v1/models",
+              "verification": "officially-verified-access-contract"
+            },
+            "capabilities": {
+              "value": [
+                "chat",
+                "reasoning",
+                "tool_use",
+                "long_context",
+                "vision"
+              ],
+              "reason": "independent-openrouter-hosted-contract",
+              "evidence": "https://openrouter.ai/api/v1/models",
+              "verification": "officially-verified-access-contract"
+            }
+          },
+          "request": {
+            "reasoning": {
+              "supportedEfforts": [
+                "high",
+                "low",
+                "none"
+              ],
+              "defaultEffort": "high"
+            }
+          },
+          "billing": [
+            {
+              "sourceKey": "inputPrice",
+              "amount": 0.417,
+              "currency": "USD",
+              "unit": "million-tokens",
+              "direction": "input",
+              "verification": "officially-verified-access-contract"
+            },
+            {
+              "sourceKey": "outputPrice",
+              "amount": 1.2505,
+              "currency": "USD",
+              "unit": "million-tokens",
+              "direction": "output",
+              "verification": "officially-verified-access-contract"
+            },
+            {
+              "sourceKey": "extra.cachedInputPrice",
+              "amount": 0.021,
+              "currency": "USD",
+              "unit": "million-tokens",
+              "verification": "officially-verified-access-contract"
+            },
+            {
+              "sourceKey": "extra.pricingNotes",
+              "amount": "OpenRouter 官方 Models API 2026-11-16 快照；USD/token × 1000000；窗口、输出、effort 与计价属于独立托管合同，不反写原厂或订阅。",
+              "currency": "USD",
+              "unit": "annotation",
+              "verification": "officially-verified-access-contract"
+            }
+          ],
+          "lifecycle": {
+            "status": "active"
+          },
+          "metadata": {
+            "attributes": {
+              "displayName": "Hy4",
+              "description": "Hy4，OpenRouter 独立托管入口；参数与美元计价以平台目录为准"
+            },
+            "recordedExtra": {},
+            "projection": {
+              "modelKeys": [
+                "modelName",
+                "displayName",
+                "serviceType",
+                "description",
+                "contextWindow",
+                "maxOutputTokens",
+                "capabilities",
+                "inputPrice",
+                "outputPrice",
+                "extra"
+              ],
+              "extraKeys": [
+                "reasoning",
+                "cachedInputPrice",
+                "pricingNotes"
+              ]
+            },
+            "sourceRecord": "compute/providers/openrouter.json#tencent/hy4"
+          }
+        },
+        {
+          "apiModelId": "google/gemini-4-hydrogen",
+          "modelRef": "google:gemini-4-hydrogen",
+          "binding": {
+            "kind": "exact",
+            "reason": "official-exact-model-identity"
+          },
+          "overrides": {
+            "maxOutputTokens": {
+              "value": 943718,
+              "reason": "independent-openrouter-hosted-contract",
+              "evidence": "https://openrouter.ai/api/v1/models",
+              "verification": "officially-verified-access-contract"
+            },
+            "capabilities": {
+              "value": [
+                "chat",
+                "reasoning",
+                "tool_use",
+                "long_context",
+                "vision",
+                "video_understanding",
+                "audio_understanding"
+              ],
+              "reason": "independent-openrouter-hosted-contract",
+              "evidence": "https://openrouter.ai/api/v1/models",
+              "verification": "officially-verified-access-contract"
+            }
+          },
+          "request": {
+            "reasoning": {
+              "supportedEfforts": [
+                "xhigh",
+                "high",
+                "medium",
+                "low"
+              ],
+              "defaultEffort": "medium"
+            },
+            "constraints": {
+              "thinkingOnly": true
+            }
+          },
+          "billing": [
+            {
+              "sourceKey": "inputPrice",
+              "amount": 1.5,
+              "currency": "USD",
+              "unit": "million-tokens",
+              "direction": "input",
+              "verification": "officially-verified-access-contract"
+            },
+            {
+              "sourceKey": "outputPrice",
+              "amount": 7.5,
+              "currency": "USD",
+              "unit": "million-tokens",
+              "direction": "output",
+              "verification": "officially-verified-access-contract"
+            },
+            {
+              "sourceKey": "extra.cachedInputPrice",
+              "amount": 0.075,
+              "currency": "USD",
+              "unit": "million-tokens",
+              "verification": "officially-verified-access-contract"
+            },
+            {
+              "sourceKey": "extra.pricingNotes",
+              "amount": "OpenRouter 官方 Models API 2026-11-16 快照；USD/token × 1000000；窗口、输出、effort 与计价属于独立托管合同，不反写原厂或订阅。 平台默认 medium，原厂默认 high 分别保留。",
+              "currency": "USD",
+              "unit": "annotation",
+              "verification": "officially-verified-access-contract"
+            }
+          ],
+          "lifecycle": {
+            "status": "active"
+          },
+          "metadata": {
+            "attributes": {
+              "displayName": "Gemini 4 Hydrogen",
+              "description": "Gemini 4 Hydrogen，OpenRouter 独立托管入口；参数与美元计价以平台目录为准"
+            },
+            "recordedExtra": {},
+            "projection": {
+              "modelKeys": [
+                "modelName",
+                "displayName",
+                "serviceType",
+                "description",
+                "contextWindow",
+                "maxOutputTokens",
+                "capabilities",
+                "inputPrice",
+                "outputPrice",
+                "extra"
+              ],
+              "extraKeys": [
+                "reasoning",
+                "thinkingOnly",
+                "cachedInputPrice",
+                "pricingNotes"
+              ]
+            },
+            "sourceRecord": "compute/providers/openrouter.json#google/gemini-4-hydrogen"
+          }
+        },
+        {
+          "apiModelId": "google/gemini-4-carbon",
+          "modelRef": "google:gemini-4-carbon",
+          "binding": {
+            "kind": "exact",
+            "reason": "official-exact-model-identity"
+          },
+          "overrides": {
+            "maxOutputTokens": {
+              "value": 943718,
+              "reason": "independent-openrouter-hosted-contract",
+              "evidence": "https://openrouter.ai/api/v1/models",
+              "verification": "officially-verified-access-contract"
+            },
+            "capabilities": {
+              "value": [
+                "chat",
+                "reasoning",
+                "tool_use",
+                "long_context",
+                "vision",
+                "video_understanding",
+                "audio_understanding"
+              ],
+              "reason": "independent-openrouter-hosted-contract",
+              "evidence": "https://openrouter.ai/api/v1/models",
+              "verification": "officially-verified-access-contract"
+            }
+          },
+          "request": {
+            "reasoning": {
+              "supportedEfforts": [
+                "high",
+                "medium",
+                "low"
+              ],
+              "defaultEffort": "medium"
+            },
+            "constraints": {
+              "thinkingOnly": true
+            }
+          },
+          "billing": [
+            {
+              "sourceKey": "inputPrice",
+              "amount": 2.0,
+              "currency": "USD",
+              "unit": "million-tokens",
+              "direction": "input",
+              "verification": "officially-verified-access-contract"
+            },
+            {
+              "sourceKey": "outputPrice",
+              "amount": 10.0,
+              "currency": "USD",
+              "unit": "million-tokens",
+              "direction": "output",
+              "verification": "officially-verified-access-contract"
+            },
+            {
+              "sourceKey": "extra.cachedInputPrice",
+              "amount": 0.1,
+              "currency": "USD",
+              "unit": "million-tokens",
+              "verification": "officially-verified-access-contract"
+            },
+            {
+              "sourceKey": "extra.pricingNotes",
+              "amount": "OpenRouter 官方 Models API 2026-11-16 快照；USD/token × 1000000；窗口、输出、effort 与计价属于独立托管合同，不反写原厂或订阅。",
+              "currency": "USD",
+              "unit": "annotation",
+              "verification": "officially-verified-access-contract"
+            }
+          ],
+          "lifecycle": {
+            "status": "active"
+          },
+          "metadata": {
+            "attributes": {
+              "displayName": "Gemini 4 Carbon",
+              "description": "Gemini 4 Carbon，OpenRouter 独立托管入口；参数与美元计价以平台目录为准"
+            },
+            "recordedExtra": {},
+            "projection": {
+              "modelKeys": [
+                "modelName",
+                "displayName",
+                "serviceType",
+                "description",
+                "contextWindow",
+                "maxOutputTokens",
+                "capabilities",
+                "inputPrice",
+                "outputPrice",
+                "extra"
+              ],
+              "extraKeys": [
+                "reasoning",
+                "thinkingOnly",
+                "cachedInputPrice",
+                "pricingNotes"
+              ]
+            },
+            "sourceRecord": "compute/providers/openrouter.json#google/gemini-4-carbon"
+          }
+        },
+        {
+          "apiModelId": "qwen/qwen4-max",
+          "modelRef": "qwen:qwen4-max",
+          "binding": {
+            "kind": "exact",
+            "reason": "official-exact-model-identity"
+          },
+          "overrides": {
+            "maxOutputTokens": {
+              "value": 131072,
+              "reason": "independent-openrouter-hosted-contract",
+              "evidence": "https://openrouter.ai/api/v1/models",
+              "verification": "officially-verified-access-contract"
+            },
+            "capabilities": {
+              "value": [
+                "chat",
+                "reasoning",
+                "tool_use",
+                "long_context",
+                "vision",
+                "video_understanding"
+              ],
+              "reason": "independent-openrouter-hosted-contract",
+              "evidence": "https://openrouter.ai/api/v1/models",
+              "verification": "officially-verified-access-contract"
+            }
+          },
+          "request": {
+            "reasoning": {
+              "supportedEfforts": [
+                "xhigh",
+                "high",
+                "low",
+                "none"
+              ],
+              "defaultEffort": "high"
+            }
+          },
+          "billing": [
+            {
+              "sourceKey": "inputPrice",
+              "amount": 1.5,
+              "currency": "USD",
+              "unit": "million-tokens",
+              "direction": "input",
+              "verification": "officially-verified-access-contract"
+            },
+            {
+              "sourceKey": "outputPrice",
+              "amount": 4.5,
+              "currency": "USD",
+              "unit": "million-tokens",
+              "direction": "output",
+              "verification": "officially-verified-access-contract"
+            },
+            {
+              "sourceKey": "extra.cachedInputPrice",
+              "amount": 0.075,
+              "currency": "USD",
+              "unit": "million-tokens",
+              "verification": "officially-verified-access-contract"
+            },
+            {
+              "sourceKey": "extra.pricingNotes",
+              "amount": "OpenRouter 官方 Models API 2026-11-16 快照；USD/token × 1000000；窗口、输出、effort 与计价属于独立托管合同，不反写原厂或订阅。",
+              "currency": "USD",
+              "unit": "annotation",
+              "verification": "officially-verified-access-contract"
+            }
+          ],
+          "lifecycle": {
+            "status": "active"
+          },
+          "metadata": {
+            "attributes": {
+              "displayName": "Qwen4 Max",
+              "description": "Qwen4 Max，OpenRouter 独立托管入口；参数与美元计价以平台目录为准"
+            },
+            "recordedExtra": {},
+            "projection": {
+              "modelKeys": [
+                "modelName",
+                "displayName",
+                "serviceType",
+                "description",
+                "contextWindow",
+                "maxOutputTokens",
+                "capabilities",
+                "inputPrice",
+                "outputPrice",
+                "extra"
+              ],
+              "extraKeys": [
+                "reasoning",
+                "cachedInputPrice",
+                "pricingNotes"
+              ]
+            },
+            "sourceRecord": "compute/providers/openrouter.json#qwen/qwen4-max"
+          }
         }
       ],
       "metadata": {
@@ -40889,6 +42704,60 @@
               "extraKeys": []
             },
             "sourceRecord": "compute/coding-plans/dashscope-token-plan.json#glm-4.7"
+          }
+        },
+        {
+          "apiModelId": "qwen4-max",
+          "modelRef": "qwen:qwen4-max",
+          "binding": {
+            "kind": "exact",
+            "reason": "official-exact-model-identity"
+          },
+          "overrides": {
+            "maxOutputTokens": {
+              "value": 131072,
+              "reason": "conservative-across-thinking-modes",
+              "evidence": "https://help.aliyun.com/zh/model-studio/qwen4-max",
+              "verification": "officially-verified-access-contract"
+            }
+          },
+          "request": {
+            "reasoning": {
+              "supportedEfforts": [
+                "none",
+                "high"
+              ],
+              "defaultEffort": "high"
+            }
+          },
+          "billing": [],
+          "lifecycle": {
+            "status": "active"
+          },
+          "metadata": {
+            "attributes": {
+              "displayName": "Qwen4 Max (Token Plan)",
+              "description": "Qwen4 Max，支持图像与视频理解的通义千问旗舰推理模型",
+              "source": "preset"
+            },
+            "recordedExtra": {},
+            "projection": {
+              "modelKeys": [
+                "modelName",
+                "displayName",
+                "serviceType",
+                "description",
+                "contextWindow",
+                "maxOutputTokens",
+                "capabilities",
+                "extra",
+                "source"
+              ],
+              "extraKeys": [
+                "reasoning"
+              ]
+            },
+            "sourceRecord": "compute/coding-plans/dashscope-token-plan.json#qwen4-max"
           }
         }
       ],

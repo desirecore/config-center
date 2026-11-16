@@ -457,6 +457,50 @@
         ],
         "description": "智谱嵌入模型v3，支持自定义维度；单条输入最多 3072 tokens"
       }
+    },
+    {
+      "displayName": "GLM-5.3-FlashX-Legal",
+      "family": "glm-5.3-flashx-legal",
+      "match": {
+        "exact": [
+          "glm-5.3-flashx-legal",
+          "z-ai/glm-5.3-flashx-legal"
+        ]
+      },
+      "id": "glm-5.3-flashx-legal",
+      "spec": {
+        "contextWindow": 1000000,
+        "maxOutputTokens": 128000,
+        "capabilities": [
+          "chat",
+          "reasoning",
+          "tool_use",
+          "long_context"
+        ],
+        "serviceType": [
+          "chat"
+        ],
+        "supportsReasoning": true,
+        "description": "GLM-5.3-FlashX-Legal，面向法律专业工作流，始终开启思考",
+        "extra": {
+          "thinkingOnly": true
+        }
+      },
+      "routing": {
+        "tier": "balanced",
+        "routingPriority": 50,
+        "eligibleForAgent": false,
+        "defaultReference": false,
+        "reasoning": {
+          "supportedModes": [
+            "auto",
+            "low",
+            "high",
+            "max"
+          ],
+          "defaultMode": "max"
+        }
+      }
     }
   ]
 }

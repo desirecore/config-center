@@ -2,7 +2,7 @@
 
 [总索引](../../README.md) · [官网证据与边界](SOURCES.md) · [数据闭环核查](AUDIT.md)
 
-本目录包含 20 个单模型文件、2 个单接入面文件。核验日期与状态来自迁移前记录。
+本目录包含 26 个单模型文件、2 个单接入面文件。各记录的核验日期与状态分别保留，新增条目见 2026-11-16 批次。
 
 ## 接入面
 
@@ -10,6 +10,16 @@
 - [compute/model-specs/google.json](access/model-specs--google.md)
 
 ## 模型
+
+- [`gemini-nano-banana-2.1`](models/gemini-nano-banana-2.1.md)
+
+- [`gemini-omni-1.2-flash`](models/gemini-omni-1.2-flash.md)
+
+- [`gemini-omni-1.1-flash`](models/gemini-omni-1.1-flash.md)
+
+- [`gemini-4-hydrogen`](models/gemini-4-hydrogen.md)
+
+- [`gemini-4-carbon`](models/gemini-4-carbon.md)
 
 - [`gemini-4-argon`](models/gemini-4-argon.md)
 

@@ -20,6 +20,20 @@
 
 ## 关联模型
 
+- [`baidu/ernie-light-dt-1.0-intl`](../models/baidu--ernie-light-dt-1.0-intl.md)
+
+- [`baidu/ernie-5.5-flash-preview:free`](../models/baidu--ernie-5.5-flash-preview--free.md)
+
+- [`z-ai/glm-5.3-flashx-legal`](../models/z-ai--glm-5.3-flashx-legal.md)
+
+- [`tencent/hy4`](../models/tencent--hy4.md)
+
+- [`google/gemini-4-hydrogen`](../models/google--gemini-4-hydrogen.md)
+
+- [`google/gemini-4-carbon`](../models/google--gemini-4-carbon.md)
+
+- [`qwen/qwen4-max`](../models/qwen--qwen4-max.md)
+
 - [`openai/gpt-6.1-terra`](../models/openai--gpt-6.1-terra.md)
 
 - [`anthropic/claude-haiku-5.5`](../models/anthropic--claude-haiku-5.5.md)

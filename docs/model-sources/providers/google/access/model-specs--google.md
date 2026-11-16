@@ -17,6 +17,16 @@
 
 ## 关联模型
 
+- [`gemini-nano-banana-2.1`](../models/gemini-nano-banana-2.1.md)
+
+- [`gemini-omni-1.2-flash`](../models/gemini-omni-1.2-flash.md)
+
+- [`gemini-omni-1.1-flash`](../models/gemini-omni-1.1-flash.md)
+
+- [`gemini-4-hydrogen`](../models/gemini-4-hydrogen.md)
+
+- [`gemini-4-carbon`](../models/gemini-4-carbon.md)
+
 - [`gemini-4-argon`](../models/gemini-4-argon.md)
 
 - [`gemini-embedding-2`](../models/gemini-embedding-2.md)

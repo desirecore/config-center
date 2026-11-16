@@ -13,7 +13,11 @@
 - 独立maxInputTokens：本次模型页只证明总窗口，272000不能凭预算相减假定为原厂输入硬上限；V2支持该字段，具体新值未知保留null。
 - 本次官方读取日期2026-10-03；Nano公告deprecated、停止2027-04-01，当前不得以deprecated当已停服。
 
+2026-11-16 批次 140 增加 13 个精确规格与 11 条接入，现为 309 条规格、365 条接入。新增规格不使用宽泛 patterns、不扩大默认自动路由。百度 `baidu/ernie-5.5-flash-preview:free`、`baidu/ernie-light-dt-1.0-intl` 仅有平台精确合同，显式 access-local 且 modelRef=null，不能用同名国内家族补身份。Qwen 正式/Preview 不互作别名，原厂思考最大输出 262144 与两条原生接入的保守 131072 分开。Google 的原生同步输出、托管长输出与 Hydrogen 默认 effort 分开；Hydrogen 原生适配器不支持 xhigh，仅共享规格及独立托管合同保留该档。Fable 5.2 前缀校验、HY4 新端点与五个媒体型号仍没有对应接入验收，因此只登记规格，不虚构客户端版本门槛。
+
 ## 原24条匹配异常
+
+本批另补独立 `qwen4-max-preview` 规格与官方别名 `qwen4.0-max-preview`：旧 V1 匹配器会剥离 `-preview`，若无精确规格会误继承正式版参数。预览输出 393216 与正式版 262144 分开，未新增接入；2026-11-25T16:00:00Z 的真实期限只存 metadata，不把现有 UTC 日期门控伪称为精确瞬间控制。Qwen4 正式原生接入仅开放 none/high；low/xhigh 不因官方支持便宣称旧客户端已透传原生 effort。
 
 | 接入 | ID | 原匹配 → 当前 | 决定 |
 | --- | --- | --- | --- |

@@ -34,6 +34,16 @@
 - 读取日期：2026-10-28；状态：`fetched`；最终地址：https://openrouter.ai/api/v1/models。
 - 适用范围：仅核对本批六个新型号的 OpenRouter ID、输入模态、工具、窗口/输出和 USD/token 价格；不刷新存量条目或推断厂家退役。
 
+## 2026-11-16 新型号增量核对
+
+新增 Qwen4 Max、Gemini 4 Carbon/Hydrogen、HY4、GLM Legal 及百度两条平台专属入口。百度两条使用 access-local 精确接入合同，不绑定尚未确认的国内原厂 API ID、不继承家族规格。Fable 5.2 的历史消息 prefix 校验仍待客户端适配验证，本批不新增其接入；Gemini Omni 视频协议与 batch 变体也不放入当前聊天 Provider。其他新供应商条目不在本轮已配置供应商的增量范围。未执行账号调用。
+
+### openrouter-20261116
+
+- 入口：[openrouter-20261116](https://openrouter.ai/api/v1/models)。
+- 读取日期：2026-11-16；状态：`fetched`；最终地址：https://openrouter.ai/api/v1/models。
+- 适用范围：本批七条新接入的独立平台 ID、输入模态、工具、推理档位、窗口与输出以及 USD/token 价格；不证明原厂端点或订阅可用性。
+
 <!-- source-metadata:start -->
 ```json
 {
@@ -69,6 +79,16 @@
       "retrieval": "fetched",
       "checkedAt": "2026-10-28",
       "contentSha256": "aa52ebd64de8f9a479134c57cf643e7285d86326196de02a93495c2c4059c02c",
+      "resolvedUrl": "https://openrouter.ai/api/v1/models"
+    },
+    {
+      "id": "openrouter-20261116",
+      "url": "https://openrouter.ai/api/v1/models",
+      "kind": "official-api",
+      "scope": "本批七条新接入的独立平台 ID、输入模态、工具、推理档位、窗口与输出以及 USD/token 价格；不证明原厂端点或订阅可用性",
+      "retrieval": "fetched",
+      "checkedAt": "2026-11-16",
+      "contentSha256": "60cf92112c1cae56e073a4f95de19a2cda1d799844f31e15266da8bd5f6d6b5a",
       "resolvedUrl": "https://openrouter.ai/api/v1/models"
     }
   ]

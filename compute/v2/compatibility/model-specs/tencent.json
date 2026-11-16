@@ -260,6 +260,60 @@
         "defaultTemperature": 1,
         "description": "腾讯混元 Turbo S 视觉模型，支持图片理解，高速推理"
       }
+    },
+    {
+      "displayName": "Tencent Hy4 Flash",
+      "family": "hy4-flash",
+      "match": {
+        "exact": [
+          "hy4-flash",
+          "tencent/hy4-flash"
+        ]
+      },
+      "id": "hy4-flash",
+      "spec": {
+        "contextWindow": 1000000,
+        "maxOutputTokens": 64000,
+        "capabilities": [
+          "chat",
+          "reasoning",
+          "vision",
+          "tool_use",
+          "long_context"
+        ],
+        "serviceType": [
+          "chat"
+        ],
+        "supportsReasoning": true,
+        "description": "腾讯混元 HY4 Flash，面向高效多模态理解与长上下文任务"
+      }
+    },
+    {
+      "displayName": "Tencent Hy4",
+      "family": "hy4",
+      "match": {
+        "exact": [
+          "hy4",
+          "tencent/hy4"
+        ]
+      },
+      "id": "hy4",
+      "spec": {
+        "contextWindow": 1000000,
+        "maxOutputTokens": 64000,
+        "capabilities": [
+          "chat",
+          "reasoning",
+          "vision",
+          "tool_use",
+          "long_context"
+        ],
+        "serviceType": [
+          "chat"
+        ],
+        "supportsReasoning": true,
+        "description": "腾讯混元 HY4，支持图像理解、工具调用与长上下文推理"
+      }
     }
   ]
 }
