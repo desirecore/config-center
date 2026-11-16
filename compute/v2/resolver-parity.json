@@ -768,6 +768,18 @@
       "blockedReasons": []
     },
     {
+      "accessId": "provider-dashscope-001",
+      "apiModelId": "qwen4-max",
+      "digest": "65d46c39bf2224d200252f25644099056dc7fd4ebc91ce05063d1bcf1cede08f",
+      "selectable": true,
+      "effectiveApiFormat": "openai-completions",
+      "effectiveApiModelId": "qwen4-max",
+      "eligibleForCall": true,
+      "eligibleForAutoRouting": false,
+      "manualOnly": false,
+      "blockedReasons": []
+    },
+    {
       "accessId": "provider-deepseek-001",
       "apiModelId": "deepseek-flash",
       "digest": "d12e5a29fe8e71a5e326d0ca545c2bac78423d2c885114530cb6995a25f43904",
@@ -954,6 +966,30 @@
       "selectable": true,
       "effectiveApiFormat": "google-generative-ai",
       "effectiveApiModelId": "text-embedding-005",
+      "eligibleForCall": true,
+      "eligibleForAutoRouting": false,
+      "manualOnly": false,
+      "blockedReasons": []
+    },
+    {
+      "accessId": "provider-google-001",
+      "apiModelId": "gemini-4-hydrogen",
+      "digest": "930d09f1dffb3833c483f31f6491ecf4a88984567080e0b257c59cb2b4ebe028",
+      "selectable": true,
+      "effectiveApiFormat": "google-generative-ai",
+      "effectiveApiModelId": "gemini-4-hydrogen",
+      "eligibleForCall": true,
+      "eligibleForAutoRouting": false,
+      "manualOnly": false,
+      "blockedReasons": []
+    },
+    {
+      "accessId": "provider-google-001",
+      "apiModelId": "gemini-4-carbon",
+      "digest": "222e307d019735a40b4d80e3a6ad9298cf7a104091113efc35e45398bb4058f4",
+      "selectable": true,
+      "effectiveApiFormat": "google-generative-ai",
+      "effectiveApiModelId": "gemini-4-carbon",
       "eligibleForCall": true,
       "eligibleForAutoRouting": false,
       "manualOnly": false,
@@ -2446,6 +2482,90 @@
       "blockedReasons": []
     },
     {
+      "accessId": "provider-openrouter-001",
+      "apiModelId": "baidu/ernie-light-dt-1.0-intl",
+      "digest": "7d668e28532920e9539020d45c906172c2b7a9928dffc38d6d7fa8a4df0d01c0",
+      "selectable": true,
+      "effectiveApiFormat": "openai-completions",
+      "effectiveApiModelId": "baidu/ernie-light-dt-1.0-intl",
+      "eligibleForCall": true,
+      "eligibleForAutoRouting": false,
+      "manualOnly": true,
+      "blockedReasons": []
+    },
+    {
+      "accessId": "provider-openrouter-001",
+      "apiModelId": "baidu/ernie-5.5-flash-preview:free",
+      "digest": "c0ad74a07d3eb69cdabca2a23cb91ef343cd354c80150559e61d77d5f0a73bd4",
+      "selectable": true,
+      "effectiveApiFormat": "openai-completions",
+      "effectiveApiModelId": "baidu/ernie-5.5-flash-preview:free",
+      "eligibleForCall": true,
+      "eligibleForAutoRouting": false,
+      "manualOnly": true,
+      "blockedReasons": []
+    },
+    {
+      "accessId": "provider-openrouter-001",
+      "apiModelId": "z-ai/glm-5.3-flashx-legal",
+      "digest": "b2df911ac5bc2e86e0603d5943df30b8ca30c2afa1dd9caea6dc86a494d5cca5",
+      "selectable": true,
+      "effectiveApiFormat": "openai-completions",
+      "effectiveApiModelId": "z-ai/glm-5.3-flashx-legal",
+      "eligibleForCall": true,
+      "eligibleForAutoRouting": false,
+      "manualOnly": false,
+      "blockedReasons": []
+    },
+    {
+      "accessId": "provider-openrouter-001",
+      "apiModelId": "tencent/hy4",
+      "digest": "7552ae683bc848f17d698e476f5a68175d2473b6d93709e743007fe32cb14766",
+      "selectable": true,
+      "effectiveApiFormat": "openai-completions",
+      "effectiveApiModelId": "tencent/hy4",
+      "eligibleForCall": true,
+      "eligibleForAutoRouting": false,
+      "manualOnly": false,
+      "blockedReasons": []
+    },
+    {
+      "accessId": "provider-openrouter-001",
+      "apiModelId": "google/gemini-4-hydrogen",
+      "digest": "b3b55b67ac75aa0332ddb0eff5b7224ff42a8b9223cf8fe63aa85718c730aa8e",
+      "selectable": true,
+      "effectiveApiFormat": "openai-completions",
+      "effectiveApiModelId": "google/gemini-4-hydrogen",
+      "eligibleForCall": true,
+      "eligibleForAutoRouting": false,
+      "manualOnly": false,
+      "blockedReasons": []
+    },
+    {
+      "accessId": "provider-openrouter-001",
+      "apiModelId": "google/gemini-4-carbon",
+      "digest": "152dd6a85fdc678b92b7c4a4e64388316a4667ac7ccb75d1411a22fe16520d7c",
+      "selectable": true,
+      "effectiveApiFormat": "openai-completions",
+      "effectiveApiModelId": "google/gemini-4-carbon",
+      "eligibleForCall": true,
+      "eligibleForAutoRouting": false,
+      "manualOnly": false,
+      "blockedReasons": []
+    },
+    {
+      "accessId": "provider-openrouter-001",
+      "apiModelId": "qwen/qwen4-max",
+      "digest": "5ad0133ae59348f27ebc651ef193cfb03320d5df1c41e47980196e03c72efed9",
+      "selectable": true,
+      "effectiveApiFormat": "openai-completions",
+      "effectiveApiModelId": "qwen/qwen4-max",
+      "eligibleForCall": true,
+      "eligibleForAutoRouting": false,
+      "manualOnly": false,
+      "blockedReasons": []
+    },
+    {
       "accessId": "provider-perplexity-001",
       "apiModelId": "sonar-pro",
       "digest": "74aa16fb5dec73b31993cec4635d3e19d3916c3703689233db5309fa5b1b378c",
@@ -3751,6 +3871,18 @@
       "eligibleForCall": true,
       "eligibleForAutoRouting": false,
       "manualOnly": true,
+      "blockedReasons": []
+    },
+    {
+      "accessId": "provider-dashscope-token-plan-001",
+      "apiModelId": "qwen4-max",
+      "digest": "69c4c607cacc27effbcbe06b3b6c72d040e9608c999e703201c0d5124d71a922",
+      "selectable": true,
+      "effectiveApiFormat": "openai-completions",
+      "effectiveApiModelId": "qwen4-max",
+      "eligibleForCall": true,
+      "eligibleForAutoRouting": false,
+      "manualOnly": false,
       "blockedReasons": []
     },
     {

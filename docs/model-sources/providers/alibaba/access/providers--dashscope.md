@@ -20,6 +20,8 @@
 
 ## 关联模型
 
+- [`qwen4-max`](../models/qwen4-max.md)
+
 - [`qwen-image-3.0`](../models/qwen-image-3.0.md)
 - [`qwen-image-3.0-pro`](../models/qwen-image-3.0-pro.md)
 - [`qwen3.7-text-rerank`](../models/qwen3.7-text-rerank.md)

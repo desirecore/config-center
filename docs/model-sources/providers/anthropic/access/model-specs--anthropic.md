@@ -17,6 +17,8 @@
 
 ## 关联模型
 
+- [`claude-fable-5-2`](../models/claude-fable-5-2.md)
+
 - [`claude-haiku-5-5`](../models/claude-haiku-5-5.md)
 
 - [`claude-opus-5-5`](../models/claude-opus-5-5.md)

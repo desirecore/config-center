@@ -2,7 +2,7 @@
 
 [总索引](../../README.md) · [官网证据与边界](SOURCES.md) · [数据闭环核查](AUDIT.md)
 
-本目录包含 66 个单模型文件、6 个单接入面文件。核验日期与状态来自迁移前记录。
+迁移时包含 66 个单模型文件、6 个单接入面文件，核验日期与状态原样保留。2026-11-16 增补 Qwen4-Max 与独立预览规格后共 68 个单模型文件；新增字段的核验范围见独立记录。
 
 ## 接入面
 
@@ -14,6 +14,10 @@
 - [compute/model-specs/wan.json](access/model-specs--wan.md)
 
 ## 模型
+
+- [`qwen4-max-preview`](models/qwen4-max-preview.md)
+
+- [`qwen4-max`](models/qwen4-max.md)
 
 - [`MiniMax-M2.5`](models/minimax-m2.5.md)
 - [`cosyvoice-clone`](models/cosyvoice-clone.md)

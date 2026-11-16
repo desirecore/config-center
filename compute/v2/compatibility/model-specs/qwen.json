@@ -1229,6 +1229,92 @@
       "spec": {
         "description": "精确绑定已有接入型号，参数未核实；identity-only规格不继承旧family能力、窗口、协议或自动路由资格。"
       }
+    },
+    {
+      "displayName": "Qwen4 Max",
+      "family": "qwen4-max",
+      "match": {
+        "exact": [
+          "qwen4-max",
+          "qwen/qwen4-max"
+        ]
+      },
+      "id": "qwen4-max",
+      "spec": {
+        "contextWindow": 1000000,
+        "maxOutputTokens": 262144,
+        "capabilities": [
+          "chat",
+          "reasoning",
+          "code",
+          "vision",
+          "video_understanding",
+          "tool_use",
+          "long_context"
+        ],
+        "serviceType": [
+          "chat"
+        ],
+        "supportsReasoning": true,
+        "description": "Qwen4 Max，支持图像与视频理解的通义千问旗舰推理模型"
+      },
+      "routing": {
+        "tier": "flagship",
+        "routingPriority": 50,
+        "eligibleForAgent": false,
+        "defaultReference": false,
+        "reasoning": {
+          "supportedModes": [
+            "auto",
+            "off",
+            "low",
+            "high",
+            "xhigh"
+          ],
+          "defaultMode": "high"
+        }
+      }
+    },
+    {
+      "displayName": "Qwen4 Max Preview",
+      "family": "qwen4-max-preview",
+      "match": {
+        "exact": [
+          "qwen4-max-preview",
+          "qwen4.0-max-preview"
+        ]
+      },
+      "id": "qwen4-max-preview",
+      "spec": {
+        "contextWindow": 1000000,
+        "maxOutputTokens": 393216,
+        "capabilities": [
+          "chat",
+          "reasoning",
+          "code",
+          "vision",
+          "video_understanding",
+          "tool_use",
+          "long_context"
+        ],
+        "serviceType": [
+          "chat"
+        ],
+        "supportsReasoning": true,
+        "description": "Qwen4 Max Preview，通义千问旗舰推理模型的独立限时预览版"
+      },
+      "routing": {
+        "tier": "flagship",
+        "routingPriority": 50,
+        "eligibleForAgent": false,
+        "defaultReference": false,
+        "reasoning": {
+          "supportedModes": [
+            "auto"
+          ],
+          "defaultMode": "auto"
+        }
+      }
     }
   ]
 }

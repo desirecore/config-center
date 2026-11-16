@@ -33,6 +33,30 @@
 
 状态 `partial` 仅表示列出的字段已核实；不能推断整条配置、价格、账号权限或真实模型调用都已验收。`pending` 没有已核字段；`historical` 只作历史兼容参考。路由 tier/priority、产品标签和默认选择属于本仓策略，不伪装成官网数据。
 
+## 2026-11-16 新品与来源缺口
+
+官方新品页和计费页确认 ERNIE-5.5-Flash-Preview、ERNIE-Light-DT-1.0 已上架。前者是文本模型，官网写 1M 总窗口、默认输出 64K；默认值不能当作最大输出。后者写最大输出 128K、思考可开关，但本次未取得总窗口和精确国内 API `model` 参数的专属证明。通用 Chat API 文档可读，未在其正文找到这两个新型号的精确调用代码。
+
+国内 Flash Preview 有峰谷与限时五折（至 2026-11-30 23:59:59），Light DT 1.0 按量 CNY 8/28/cache 0.8 每百万 tokens。这些国内报价不能直接套给 OpenRouter 的国际型号 `ernie-light-dt-1.0-intl`，也不能据展示名猜国内请求 ID。此次保存可读官网证据并保留身份/输出字段缺口，不新增国内 API 接入；OpenRouter 的精确身份和独立限额另记在平台来源。视频新品 ERNIE-Wizshot-ME 的异步原生协议未适配，本批不新增调用配置。
+
+### baidu-newmodels-20261116
+
+- 入口：[baidu-newmodels-20261116](https://cloud.baidu.com/product/qianfan_home/model_3.html)。
+- 读取日期：2026-11-16；状态：`fetched`；最终地址：https://cloud.baidu.com/product/qianfan_home/model_3.html。
+- 适用范围：百度国内新品公告；文本/视频型号展示名、部分规格与国内价格，非精确 API 模型参数证明。
+
+### baidu-newpricing-20261116
+
+- 入口：[baidu-newpricing-20261116](https://cloud.baidu.com/doc/qianfan/s/wmh4sv6ya)。
+- 读取日期：2026-11-16；状态：`fetched`；最终地址：https://cloud.baidu.com/doc/qianfan/s/wmh4sv6ya。
+- 适用范围：百度国内新文本模型价格；峰谷、限时优惠与元/千 tokens 原始单位。
+
+### baidu-chat-api-20261116
+
+- 入口：[baidu-chat-api-20261116](https://cloud.baidu.com/doc/qianfan-api/s/3m7of64lb)。
+- 读取日期：2026-11-16；状态：`fetched`；最终地址：https://cloud.baidu.com/doc/qianfan-api/s/3m7of64lb。
+- 适用范围：百度通用 Chat Completions API；本次正文不含新型号精确请求代码。
+
 <!-- source-metadata:start -->
 ```json
 {
@@ -79,6 +103,36 @@
       "checkedAt": "2026-10-05",
       "contentSha256": "a366e76ee3aeeecc787ba6d314076c20c1b960e03f47d82aef3cdb8b685ad595",
       "resolvedUrl": "https://cloud.baidu.com/doc/qianfan/s/imlg0beiu"
+    },
+    {
+      "id": "baidu-newmodels-20261116",
+      "url": "https://cloud.baidu.com/product/qianfan_home/model_3.html",
+      "kind": "official-doc",
+      "scope": "百度国内新品公告；文本/视频型号展示名、部分规格与国内价格，非精确 API 模型参数证明",
+      "retrieval": "fetched",
+      "checkedAt": "2026-11-16",
+      "contentSha256": "695e8cff9b3d1d6fbd0b4f69ea4718ea163487d7aeabebd5d8c0268c0b77d07c",
+      "resolvedUrl": "https://cloud.baidu.com/product/qianfan_home/model_3.html"
+    },
+    {
+      "id": "baidu-newpricing-20261116",
+      "url": "https://cloud.baidu.com/doc/qianfan/s/wmh4sv6ya",
+      "kind": "official-doc",
+      "scope": "百度国内新文本模型价格；峰谷、限时优惠与元/千 tokens 原始单位",
+      "retrieval": "fetched",
+      "checkedAt": "2026-11-16",
+      "contentSha256": "9f8e12e3e1b719bf99db7b4df321c4d9da09e33070ad16af022565055788c5b9",
+      "resolvedUrl": "https://cloud.baidu.com/doc/qianfan/s/wmh4sv6ya"
+    },
+    {
+      "id": "baidu-chat-api-20261116",
+      "url": "https://cloud.baidu.com/doc/qianfan-api/s/3m7of64lb",
+      "kind": "official-doc",
+      "scope": "百度通用 Chat Completions API；本次正文不含新型号精确请求代码",
+      "retrieval": "fetched",
+      "checkedAt": "2026-11-16",
+      "contentSha256": "1404d478a721699fb3cfd5db220024813ba1b4cd60e19a8dd96e94031690907f",
+      "resolvedUrl": "https://cloud.baidu.com/doc/qianfan-api/s/3m7of64lb"
     }
   ]
 }

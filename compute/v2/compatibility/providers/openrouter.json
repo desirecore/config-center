@@ -463,6 +463,231 @@
       "extra": {
         "pricingNotes": "OpenRouter Models API 的 prompt/completion=-1 为动态路由占位值，实际价格取决于选中的模型，不代表免费。"
       }
+    },
+    {
+      "modelName": "baidu/ernie-light-dt-1.0-intl",
+      "displayName": "ERNIE-Light-DT-1.0",
+      "serviceType": [
+        "chat"
+      ],
+      "description": "ERNIE-Light-DT-1.0，OpenRouter 独立托管入口；参数与美元计价以平台目录为准",
+      "contextWindow": 1024000,
+      "maxOutputTokens": 131072,
+      "capabilities": [
+        "chat",
+        "reasoning",
+        "tool_use",
+        "long_context"
+      ],
+      "inputPrice": 1.13,
+      "outputPrice": 3.94,
+      "extra": {
+        "reasoning": {
+          "supportedEfforts": [
+            "max",
+            "high",
+            "low",
+            "none"
+          ],
+          "defaultEffort": "max"
+        },
+        "cachedInputPrice": 0.113,
+        "pricingNotes": "OpenRouter 官方 Models API 2026-11-16 快照；USD/token × 1000000；窗口、输出、effort 与计价属于独立托管合同，不反写原厂或订阅。 此为平台专属精确 ID；未绑定原厂规格、不参与自动路由，不推断百度国内端点可用。"
+      }
+    },
+    {
+      "modelName": "baidu/ernie-5.5-flash-preview:free",
+      "displayName": "ERNIE-5.5-Flash-Preview (free)",
+      "serviceType": [
+        "chat"
+      ],
+      "description": "ERNIE-5.5-Flash-Preview (free)，OpenRouter 独立托管入口；参数与美元计价以平台目录为准",
+      "contextWindow": 1024000,
+      "maxOutputTokens": 921600,
+      "capabilities": [
+        "chat",
+        "reasoning",
+        "tool_use",
+        "long_context"
+      ],
+      "inputPrice": 0,
+      "outputPrice": 0,
+      "extra": {
+        "reasoning": {
+          "supportedEfforts": [
+            "high"
+          ],
+          "defaultEffort": "high"
+        },
+        "thinkingOnly": true,
+        "pricingNotes": "OpenRouter 官方 Models API 2026-11-16 快照；USD/token × 1000000；窗口、输出、effort 与计价属于独立托管合同，不反写原厂或订阅。 此为平台专属精确 ID；未绑定原厂规格、不参与自动路由，不推断百度国内端点可用。 当前平台明确 prompt/completion 均为 0；不据此承诺持续免费或账号额度。"
+      }
+    },
+    {
+      "modelName": "z-ai/glm-5.3-flashx-legal",
+      "displayName": "GLM 5.3 FlashX Legal",
+      "serviceType": [
+        "chat"
+      ],
+      "description": "GLM 5.3 FlashX Legal，OpenRouter 独立托管入口；参数与美元计价以平台目录为准",
+      "contextWindow": 1048576,
+      "maxOutputTokens": 131072,
+      "capabilities": [
+        "chat",
+        "reasoning",
+        "tool_use",
+        "long_context",
+        "vision",
+        "video_understanding"
+      ],
+      "inputPrice": 0.37,
+      "outputPrice": 1.25,
+      "extra": {
+        "reasoning": {
+          "supportedEfforts": [
+            "max",
+            "high",
+            "low"
+          ],
+          "defaultEffort": "max"
+        },
+        "thinkingOnly": true,
+        "cachedInputPrice": 0.075,
+        "pricingNotes": "OpenRouter 官方 Models API 2026-11-16 快照；USD/token × 1000000；窗口、输出、effort 与计价属于独立托管合同，不反写原厂或订阅。"
+      }
+    },
+    {
+      "modelName": "tencent/hy4",
+      "displayName": "Hy4",
+      "serviceType": [
+        "chat"
+      ],
+      "description": "Hy4，OpenRouter 独立托管入口；参数与美元计价以平台目录为准",
+      "contextWindow": 1048576,
+      "maxOutputTokens": 65536,
+      "capabilities": [
+        "chat",
+        "reasoning",
+        "tool_use",
+        "long_context",
+        "vision"
+      ],
+      "inputPrice": 0.417,
+      "outputPrice": 1.2505,
+      "extra": {
+        "reasoning": {
+          "supportedEfforts": [
+            "high",
+            "low",
+            "none"
+          ],
+          "defaultEffort": "high"
+        },
+        "cachedInputPrice": 0.021,
+        "pricingNotes": "OpenRouter 官方 Models API 2026-11-16 快照；USD/token × 1000000；窗口、输出、effort 与计价属于独立托管合同，不反写原厂或订阅。"
+      }
+    },
+    {
+      "modelName": "google/gemini-4-hydrogen",
+      "displayName": "Gemini 4 Hydrogen",
+      "serviceType": [
+        "chat"
+      ],
+      "description": "Gemini 4 Hydrogen，OpenRouter 独立托管入口；参数与美元计价以平台目录为准",
+      "contextWindow": 1048576,
+      "maxOutputTokens": 943718,
+      "capabilities": [
+        "chat",
+        "reasoning",
+        "tool_use",
+        "long_context",
+        "vision",
+        "video_understanding",
+        "audio_understanding"
+      ],
+      "inputPrice": 1.5,
+      "outputPrice": 7.5,
+      "extra": {
+        "reasoning": {
+          "supportedEfforts": [
+            "xhigh",
+            "high",
+            "medium",
+            "low"
+          ],
+          "defaultEffort": "medium"
+        },
+        "thinkingOnly": true,
+        "cachedInputPrice": 0.075,
+        "pricingNotes": "OpenRouter 官方 Models API 2026-11-16 快照；USD/token × 1000000；窗口、输出、effort 与计价属于独立托管合同，不反写原厂或订阅。 平台默认 medium，原厂默认 high 分别保留。"
+      }
+    },
+    {
+      "modelName": "google/gemini-4-carbon",
+      "displayName": "Gemini 4 Carbon",
+      "serviceType": [
+        "chat"
+      ],
+      "description": "Gemini 4 Carbon，OpenRouter 独立托管入口；参数与美元计价以平台目录为准",
+      "contextWindow": 1048576,
+      "maxOutputTokens": 943718,
+      "capabilities": [
+        "chat",
+        "reasoning",
+        "tool_use",
+        "long_context",
+        "vision",
+        "video_understanding",
+        "audio_understanding"
+      ],
+      "inputPrice": 2,
+      "outputPrice": 10,
+      "extra": {
+        "reasoning": {
+          "supportedEfforts": [
+            "high",
+            "medium",
+            "low"
+          ],
+          "defaultEffort": "medium"
+        },
+        "thinkingOnly": true,
+        "cachedInputPrice": 0.1,
+        "pricingNotes": "OpenRouter 官方 Models API 2026-11-16 快照；USD/token × 1000000；窗口、输出、effort 与计价属于独立托管合同，不反写原厂或订阅。"
+      }
+    },
+    {
+      "modelName": "qwen/qwen4-max",
+      "displayName": "Qwen4 Max",
+      "serviceType": [
+        "chat"
+      ],
+      "description": "Qwen4 Max，OpenRouter 独立托管入口；参数与美元计价以平台目录为准",
+      "contextWindow": 1000000,
+      "maxOutputTokens": 131072,
+      "capabilities": [
+        "chat",
+        "reasoning",
+        "tool_use",
+        "long_context",
+        "vision",
+        "video_understanding"
+      ],
+      "inputPrice": 1.5,
+      "outputPrice": 4.5,
+      "extra": {
+        "reasoning": {
+          "supportedEfforts": [
+            "xhigh",
+            "high",
+            "low",
+            "none"
+          ],
+          "defaultEffort": "high"
+        },
+        "cachedInputPrice": 0.075,
+        "pricingNotes": "OpenRouter 官方 Models API 2026-11-16 快照；USD/token × 1000000；窗口、输出、effort 与计价属于独立托管合同，不反写原厂或订阅。"
+      }
     }
   ]
 }

@@ -2,7 +2,7 @@
 
 [总索引](../../README.md) · [官网证据与边界](SOURCES.md) · [数据闭环核查](AUDIT.md)
 
-本目录包含 19 个单模型文件、3 个单接入面文件。核验日期与状态来自迁移前记录。
+迁移时包含 19 个单模型文件、3 个单接入面文件，核验日期与状态原样保留。2026-11-16 增补 Hy4、Hy4 Flash 后共 21 个单模型文件；新增字段的核验范围见独立记录。
 
 ## 接入面
 
@@ -11,6 +11,10 @@
 - [compute/model-specs/tencent.json](access/model-specs--tencent.md)
 
 ## 模型
+
+- [`hy4-flash`](models/hy4-flash.md)
+
+- [`hy4`](models/hy4.md)
 
 - [`glm-5`](models/glm-5.md)
 - [`glm-5.1`](models/glm-5.1.md)

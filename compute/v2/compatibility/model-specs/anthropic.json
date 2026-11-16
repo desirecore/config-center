@@ -463,6 +463,58 @@
         ],
         "supportsReasoning": true
       }
+    },
+    {
+      "displayName": "Claude Fable 5.2",
+      "family": "claude-fable-5-2",
+      "match": {
+        "exact": [
+          "claude-fable-5-2",
+          "anthropic/claude-fable-5.2"
+        ]
+      },
+      "id": "claude-fable-5-2",
+      "spec": {
+        "contextWindow": 1000000,
+        "maxOutputTokens": 128000,
+        "capabilities": [
+          "chat",
+          "reasoning",
+          "deep_thinking",
+          "code",
+          "vision",
+          "tool_use",
+          "long_context"
+        ],
+        "serviceType": [
+          "chat"
+        ],
+        "supportsReasoning": true,
+        "description": "Claude Fable 5.2，支持视觉输入、复杂推理与长程智能体任务，始终开启自适应思考",
+        "extra": {
+          "adaptiveThinking": true,
+          "thinkingOnly": true,
+          "samplingParametersDeprecated": true,
+          "forcedToolChoiceUnsupported": true
+        }
+      },
+      "routing": {
+        "tier": "flagship",
+        "routingPriority": 20,
+        "eligibleForAgent": false,
+        "defaultReference": false,
+        "reasoning": {
+          "supportedModes": [
+            "auto",
+            "low",
+            "medium",
+            "high",
+            "xhigh",
+            "max"
+          ],
+          "defaultMode": "high"
+        }
+      }
     }
   ]
 }

@@ -142,6 +142,28 @@ Terra 原厂 API 明确窗口 1050000、最大输入 922000、最大输出 12800
 - 读取日期：2026-11-01；状态：`fetched`；最终地址：https://developers.openai.com/api/docs/deprecations.md。
 - 适用范围：OpenAI 弃用公告的 2026-08-26 转写模型段；whisper-1 等 2027-02-26 停服及推荐替代。
 
+## 2026-11-16 新型号核对
+
+新增 Image 2.6 Flare/Sunburst 官方 Images API 规格。两者仅支持 images/generations 与 images/edits，不支持 Responses/Chat Completions；本批只记录共享规格，未向无媒体适配的文本 Provider 新增可调用条目。USD/M：文字输入5/缓存1.25，图像输入8/缓存2、输出30。contextWindow/maxOutputTokens 官网未声明，保持 unknown；价格不进入共享规格。
+
+### openai-image26-flare
+
+- 入口：[openai-image26-flare](https://developers.openai.com/api/docs/models/gpt-image-2.6-flare.md)。
+- 读取日期：2026-11-16；状态：`fetched`；最终地址：https://developers.openai.com/api/docs/models/gpt-image-2.6-flare.md。
+- 适用范围：OpenAI Images API Flare 2.6；精确ID、文字/图像输入、图像输出、端点及USD token价格。
+
+### openai-image26-sunburst
+
+- 入口：[openai-image26-sunburst](https://developers.openai.com/api/docs/models/gpt-image-2.6-sunburst.md)。
+- 读取日期：2026-11-16；状态：`fetched`；最终地址：https://developers.openai.com/api/docs/models/gpt-image-2.6-sunburst.md。
+- 适用范围：OpenAI Images API Sunburst 2.6；精确ID、文字/图像输入、图像输出、端点及USD token价格。
+
+### openai-image26-guide
+
+- 入口：[openai-image26-guide](https://developers.openai.com/api/docs/guides/image-generation.md)。
+- 读取日期：2026-11-16；状态：`fetched`；最终地址：https://developers.openai.com/api/docs/guides/image-generation.md。
+- 适用范围：OpenAI Images API 2.6；complexity、图像生成/编辑等请求合同，当前客户端适配另核。
+
 <!-- source-metadata:start -->
 ```json
 {
@@ -378,6 +400,36 @@ Terra 原厂 API 明确窗口 1050000、最大输入 922000、最大输出 12800
       "checkedAt": "2026-11-01",
       "contentSha256": "3fddf4c625d689e43e559c236bcdd675de8a3b3d035070ba205827d8ad0a2fc2",
       "resolvedUrl": "https://developers.openai.com/api/docs/deprecations.md"
+    },
+    {
+      "id": "openai-image26-flare",
+      "url": "https://developers.openai.com/api/docs/models/gpt-image-2.6-flare.md",
+      "kind": "official-doc",
+      "scope": "OpenAI Images API Flare 2.6；精确ID、文字/图像输入、图像输出、端点及USD token价格",
+      "retrieval": "fetched",
+      "checkedAt": "2026-11-16",
+      "contentSha256": "f3fe213ed849fda17ef940665c5acd3ac5f105e08982a2547a6f7abf1c4a5f28",
+      "resolvedUrl": "https://developers.openai.com/api/docs/models/gpt-image-2.6-flare.md"
+    },
+    {
+      "id": "openai-image26-sunburst",
+      "url": "https://developers.openai.com/api/docs/models/gpt-image-2.6-sunburst.md",
+      "kind": "official-doc",
+      "scope": "OpenAI Images API Sunburst 2.6；精确ID、文字/图像输入、图像输出、端点及USD token价格",
+      "retrieval": "fetched",
+      "checkedAt": "2026-11-16",
+      "contentSha256": "d2cd79c636d6dba6ed0dbf1cc5bc9b6dada80a5c7cf25ebbfdc1af3606f8c27f",
+      "resolvedUrl": "https://developers.openai.com/api/docs/models/gpt-image-2.6-sunburst.md"
+    },
+    {
+      "id": "openai-image26-guide",
+      "url": "https://developers.openai.com/api/docs/guides/image-generation.md",
+      "kind": "official-doc",
+      "scope": "OpenAI Images API 2.6；complexity、图像生成/编辑等请求合同，当前客户端适配另核",
+      "retrieval": "fetched",
+      "checkedAt": "2026-11-16",
+      "contentSha256": "5194462789c0348f288a68e50aa3ba6d69058bddcea5cf0be6379484acbb2e36",
+      "resolvedUrl": "https://developers.openai.com/api/docs/guides/image-generation.md"
     }
   ]
 }

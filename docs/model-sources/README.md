@@ -24,18 +24,22 @@ providers/<supplier>/
 
 数据批次 135。百炼预置改用 `fun-asr-realtime`，`paraformer-v2` 移出接入面、规格保留；本地 Whisper 补独立规格与无需凭据声明；OpenAI 新增 `gpt-transcribe`，`whisper-1` 记录 2027-02-26 停服并暂留。协议声明是本仓适配选择，未做账号调用验收。
 
+## 2026-11-16 新型号批次
+
+数据批次 140 新增 13 个精确规格、11 条接入；当前共 309 条规格、365 条接入。新增型号保持手动选择，原厂、套餐与 OpenRouter 合同分别记录；Fable 5.2 与未适配媒体协议仅补规格。HY4 不误放旧混元端点，百度两条托管 ID 不继承国内原厂规格。核查范围、未加入的型号与协议边界见 [本轮记录](../source-rechecks/2026-11-16/README.md)。旧核验日期及历史迁移计数保留。
+
 ## 供应商
 
 | 供应商 | 模型文件 | 接入面文件 |
 | --- | ---: | ---: |
-| [阿里云百炼 / Qwen / Wan / HappyHorse](providers/alibaba/README.md) | 66 | 6 |
-| [Anthropic](providers/anthropic/README.md) | 11 | 3 |
+| [阿里云百炼 / Qwen / Wan / HappyHorse](providers/alibaba/README.md) | 68 | 6 |
+| [Anthropic](providers/anthropic/README.md) | 13 | 3 |
 | [百川](providers/baichuan/README.md) | 4 | 2 |
 | [百度千帆](providers/baidu/README.md) | 14 | 3 |
 | [Cohere](providers/cohere/README.md) | 10 | 2 |
 | [DeepSeek](providers/deepseek/README.md) | 8 | 2 |
 | [GitHub Copilot](providers/github-copilot/README.md) | 0 | 1 |
-| [Google Gemini](providers/google/README.md) | 20 | 2 |
+| [Google Gemini](providers/google/README.md) | 26 | 2 |
 | [无问芯穹](providers/infini/README.md) | 1 | 1 |
 | [可灵](providers/kling/README.md) | 6 | 2 |
 | [快手 StreamLake Coding](providers/kwai/README.md) | 1 | 1 |
@@ -44,18 +48,18 @@ providers/<supplier>/
 | [月之暗面 Kimi](providers/moonshot/README.md) | 14 | 3 |
 | [摩尔线程](providers/moorethread/README.md) | 1 | 1 |
 | [Ollama](providers/ollama/README.md) | 1 | 1 |
-| [OpenAI](providers/openai/README.md) | 51 | 4 |
-| [OpenRouter](providers/openrouter/README.md) | 15 | 1 |
+| [OpenAI](providers/openai/README.md) | 54 | 4 |
+| [OpenRouter](providers/openrouter/README.md) | 28 | 1 |
 | [Perplexity](providers/perplexity/README.md) | 3 | 2 |
 | [硅基流动](providers/siliconflow/README.md) | 3 | 1 |
 | [Stability AI](providers/stability/README.md) | 2 | 2 |
 | [匿名模型历史兼容](providers/stealth/README.md) | 1 | 1 |
-| [腾讯混元](providers/tencent/README.md) | 19 | 3 |
+| [腾讯混元](providers/tencent/README.md) | 21 | 3 |
 | [火山引擎](providers/volcengine/README.md) | 37 | 3 |
 | [xAI](providers/xai/README.md) | 7 | 2 |
 | [小米 MiMo](providers/xiaomi/README.md) | 15 | 2 |
 | [讯飞星火](providers/xunfei/README.md) | 2 | 2 |
-| [智谱](providers/zhipu/README.md) | 14 | 4 |
+| [智谱](providers/zhipu/README.md) | 15 | 4 |
 
 ## 阅读示例
 

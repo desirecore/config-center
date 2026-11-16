@@ -17,6 +17,10 @@
 
 ## 关联模型
 
+- [`hy4-flash`](../models/hy4-flash.md)
+
+- [`hy4`](../models/hy4.md)
+
 - [`hy4-preview`](../models/hy4-preview.md)
 - [`hy3`](../models/hy3.md)
 - [`hy3-preview`](../models/hy3-preview.md)

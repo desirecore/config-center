@@ -578,6 +578,172 @@
         ],
         "description": "Google 文本嵌入模型，768 维度"
       }
+    },
+    {
+      "displayName": "Gemini Nano Banana 2.1",
+      "family": "gemini-nano-banana-2.1",
+      "match": {
+        "exact": [
+          "gemini-nano-banana-2.1",
+          "google/gemini-nano-banana-2.1"
+        ]
+      },
+      "id": "gemini-nano-banana-2.1",
+      "spec": {
+        "maxOutputTokens": 32768,
+        "capabilities": [
+          "image_generation",
+          "image_editing",
+          "text_rendering"
+        ],
+        "serviceType": [
+          "image_gen"
+        ],
+        "description": "Gemini Nano Banana 2.1，支持文字、图像、视频和 PDF 输入的图像生成与编辑模型",
+        "supportsReasoning": true
+      }
+    },
+    {
+      "displayName": "Gemini Omni 1.2 Flash",
+      "family": "gemini-omni-1.2-flash",
+      "match": {
+        "exact": [
+          "gemini-omni-1.2-flash",
+          "google/gemini-omni-1.2-flash"
+        ]
+      },
+      "id": "gemini-omni-1.2-flash",
+      "spec": {
+        "maxOutputTokens": 65536,
+        "capabilities": [
+          "video_generation",
+          "video_editing",
+          "audio_generation"
+        ],
+        "serviceType": [
+          "video_gen"
+        ],
+        "description": "Gemini Omni 1.2 Flash，支持原生音频的视频生成与编辑模型"
+      }
+    },
+    {
+      "displayName": "Gemini Omni 1.1 Flash",
+      "family": "gemini-omni-1.1-flash",
+      "match": {
+        "exact": [
+          "gemini-omni-1.1-flash",
+          "google/gemini-omni-1.1-flash"
+        ]
+      },
+      "id": "gemini-omni-1.1-flash",
+      "spec": {
+        "maxOutputTokens": 65536,
+        "capabilities": [
+          "video_generation",
+          "video_editing"
+        ],
+        "serviceType": [
+          "video_gen"
+        ],
+        "description": "Gemini Omni 1.1 Flash，多模态视频生成与编辑模型"
+      }
+    },
+    {
+      "displayName": "Gemini 4 Hydrogen",
+      "family": "gemini-4-hydrogen",
+      "match": {
+        "exact": [
+          "gemini-4-hydrogen",
+          "google/gemini-4-hydrogen"
+        ]
+      },
+      "id": "gemini-4-hydrogen",
+      "spec": {
+        "contextWindow": 1048576,
+        "maxOutputTokens": 65536,
+        "capabilities": [
+          "chat",
+          "reasoning",
+          "code",
+          "vision",
+          "tool_use",
+          "long_context",
+          "video_understanding",
+          "audio_understanding"
+        ],
+        "serviceType": [
+          "chat"
+        ],
+        "supportsReasoning": true,
+        "description": "Gemini 4 Hydrogen，面向高吞吐编程与多模态智能体任务",
+        "extra": {
+          "samplingParametersDeprecated": true
+        }
+      },
+      "routing": {
+        "tier": "flagship",
+        "routingPriority": 50,
+        "eligibleForAgent": false,
+        "defaultReference": false,
+        "reasoning": {
+          "supportedModes": [
+            "auto",
+            "low",
+            "medium",
+            "high",
+            "xhigh"
+          ],
+          "defaultMode": "high"
+        }
+      }
+    },
+    {
+      "displayName": "Gemini 4 Carbon",
+      "family": "gemini-4-carbon",
+      "match": {
+        "exact": [
+          "gemini-4-carbon",
+          "google/gemini-4-carbon"
+        ]
+      },
+      "id": "gemini-4-carbon",
+      "spec": {
+        "contextWindow": 1048576,
+        "maxOutputTokens": 65536,
+        "capabilities": [
+          "chat",
+          "reasoning",
+          "code",
+          "vision",
+          "tool_use",
+          "long_context",
+          "video_understanding",
+          "audio_understanding"
+        ],
+        "serviceType": [
+          "chat"
+        ],
+        "supportsReasoning": true,
+        "description": "Gemini 4 Carbon，面向编程、复杂推理与多模态长上下文任务",
+        "extra": {
+          "samplingParametersDeprecated": true
+        }
+      },
+      "routing": {
+        "tier": "flagship",
+        "routingPriority": 50,
+        "eligibleForAgent": false,
+        "defaultReference": false,
+        "reasoning": {
+          "supportedModes": [
+            "auto",
+            "low",
+            "medium",
+            "high"
+          ],
+          "defaultMode": "medium"
+        }
+      }
     }
   ]
 }

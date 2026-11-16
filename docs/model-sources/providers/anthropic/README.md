@@ -2,7 +2,7 @@
 
 [总索引](../../README.md) · [官网证据与边界](SOURCES.md) · [数据闭环核查](AUDIT.md)
 
-本目录包含 11 个单模型文件、3 个单接入面文件。核验日期与状态来自迁移前记录。
+本目录包含 13 个单模型文件、3 个单接入面文件。各记录的核验日期与状态分别保留，新增条目见 2026-11-16 批次。
 
 ## 接入面
 
@@ -11,6 +11,8 @@
 - [compute/model-specs/anthropic.json](access/model-specs--anthropic.md)
 
 ## 模型
+
+- [`claude-fable-5-2`](models/claude-fable-5-2.md)
 
 - [`claude-haiku-5-5`](models/claude-haiku-5-5.md)
 

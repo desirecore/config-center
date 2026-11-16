@@ -20,6 +20,10 @@
 
 ## 关联模型
 
+- [`gemini-4-hydrogen`](../models/gemini-4-hydrogen.md)
+
+- [`gemini-4-carbon`](../models/gemini-4-carbon.md)
+
 - [`gemini-4-argon`](../models/gemini-4-argon.md)
 
 - [`gemini-embedding-2`](../models/gemini-embedding-2.md)

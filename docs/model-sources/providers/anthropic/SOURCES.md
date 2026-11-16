@@ -83,6 +83,34 @@ Haiku 5.5 的 1M/128K 沿用本仓 Anthropic 十进制换算为 1000000/128000�
 - 入口：[claude-haiku55-migration](https://platform.claude.com/docs/en/models/haiku-5-5/migration-guide.md)；2026-10-28 实际读取 Markdown 正文，最终地址同入口。
 - 回传完整签名思考块；强制 tool_choice（any/命名工具）可用，其响应不含 thinking。因此声明原生回放，并允许无思考工具回合；不从 Sonnet/Opus 复制 forcedToolChoiceUnsupported。
 
+## 2026-11-16 新型号核对
+
+Fable 5.2 的 1M/128K 仍是官网简写，沿本仓十进制记录为 1000000/128000。五档 effort、默认 high，始终 adaptive，禁止 disabled、manual budget 及强制 tool_choice。USD/M 原厂 8/40、5分钟缓存写10、1小时写16、读0.20。历史 prefix 检查错误已升级为 400：改写 system、tools 或较早消息后继续回传思考块需要专项适配验证；目录身份、协议名称或 Schema 通过不能替代这项验收。30天保留期和账号权限另核，不从 API 存在推断订阅可用。
+
+### claude-fable52
+
+- 入口：[claude-fable52](https://platform.claude.com/docs/en/models/fable-5-2/overview.md)。
+- 读取日期：2026-11-16；状态：`fetched`；最终地址：https://platform.claude.com/docs/en/models/fable-5-2/overview.md。
+- 适用范围：Claude API Fable 5.2；精确ID、1M/128K简写、模态、Active、USD原厂价格和缓存。
+
+### claude-fable52-changes
+
+- 入口：[claude-fable52-changes](https://platform.claude.com/docs/en/models/fable-5-2/whats-new-fable-5-2.md)。
+- 读取日期：2026-11-16；状态：`fetched`；最终地址：https://platform.claude.com/docs/en/models/fable-5-2/whats-new-fable-5-2.md。
+- 适用范围：Claude API Fable 5.2；强制adaptive、tool_choice限制、prefix校验变更及平台边界。
+
+### claude-fable52-migration
+
+- 入口：[claude-fable52-migration](https://platform.claude.com/docs/en/models/fable-5-2/migration-guide.md)。
+- 读取日期：2026-11-16；状态：`fetched`；最终地址：https://platform.claude.com/docs/en/models/fable-5-2/migration-guide.md。
+- 适用范围：Claude API Fable 5.2；采样限制、思考回放、账户绑定、保留期及迁移边界。
+
+### claude-fable52-effort
+
+- 入口：[claude-fable52-effort](https://platform.claude.com/docs/en/build-with-claude/effort.md)。
+- 读取日期：2026-11-16；状态：`fetched`；最终地址：https://platform.claude.com/docs/en/build-with-claude/effort.md。
+- 适用范围：Claude API Fable 5.2；low/medium/high/xhigh/max五档及默认high；不证明订阅权限。
+
 <!-- source-metadata:start -->
 ```json
 {
@@ -219,6 +247,46 @@ Haiku 5.5 的 1M/128K 沿用本仓 Anthropic 十进制换算为 1000000/128000�
       "checkedAt": "2026-10-28",
       "contentSha256": "4dccb1c238e33adf5e0c0045eb1998a0192d1de390e6ad9712d2aea3227828b3",
       "resolvedUrl": "https://platform.claude.com/docs/en/models/haiku-5-5/migration-guide.md"
+    },
+    {
+      "id": "claude-fable52",
+      "url": "https://platform.claude.com/docs/en/models/fable-5-2/overview.md",
+      "kind": "official-doc",
+      "scope": "Claude API Fable 5.2；精确ID、1M/128K简写、模态、Active、USD原厂价格和缓存",
+      "retrieval": "fetched",
+      "checkedAt": "2026-11-16",
+      "contentSha256": "da0d5c0705d0cc7ea46f828fb6ba236fd92d0f9ee26c4d223743df6f6d65ac65",
+      "resolvedUrl": "https://platform.claude.com/docs/en/models/fable-5-2/overview.md"
+    },
+    {
+      "id": "claude-fable52-changes",
+      "url": "https://platform.claude.com/docs/en/models/fable-5-2/whats-new-fable-5-2.md",
+      "kind": "official-doc",
+      "scope": "Claude API Fable 5.2；强制adaptive、tool_choice限制、prefix校验变更及平台边界",
+      "retrieval": "fetched",
+      "checkedAt": "2026-11-16",
+      "contentSha256": "cebf978deb078d4ecd447c0e1fe690d6d78794b12b3a184f147e416bb3fa1ed5",
+      "resolvedUrl": "https://platform.claude.com/docs/en/models/fable-5-2/whats-new-fable-5-2.md"
+    },
+    {
+      "id": "claude-fable52-migration",
+      "url": "https://platform.claude.com/docs/en/models/fable-5-2/migration-guide.md",
+      "kind": "official-doc",
+      "scope": "Claude API Fable 5.2；采样限制、思考回放、账户绑定、保留期及迁移边界",
+      "retrieval": "fetched",
+      "checkedAt": "2026-11-16",
+      "contentSha256": "d5e20ba369480fdf64908540b08ca9b1c1402984104c5eb6d6f8fbe19321334f",
+      "resolvedUrl": "https://platform.claude.com/docs/en/models/fable-5-2/migration-guide.md"
+    },
+    {
+      "id": "claude-fable52-effort",
+      "url": "https://platform.claude.com/docs/en/build-with-claude/effort.md",
+      "kind": "official-doc",
+      "scope": "Claude API Fable 5.2；low/medium/high/xhigh/max五档及默认high；不证明订阅权限",
+      "retrieval": "fetched",
+      "checkedAt": "2026-11-16",
+      "contentSha256": "ed97da9bd61afde31998c4f3e5885c620c6992b8e39fd10d01f1d81baf7efd9b",
+      "resolvedUrl": "https://platform.claude.com/docs/en/build-with-claude/effort.md"
     }
   ]
 }

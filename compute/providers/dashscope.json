@@ -943,6 +943,38 @@
           "1080P"
         ]
       }
+    },
+    {
+      "modelName": "qwen4-max",
+      "displayName": "Qwen4 Max",
+      "serviceType": [
+        "chat"
+      ],
+      "description": "Qwen4 Max，支持图像与视频理解的通义千问旗舰推理模型",
+      "contextWindow": 1000000,
+      "maxOutputTokens": 131072,
+      "capabilities": [
+        "chat",
+        "reasoning",
+        "code",
+        "vision",
+        "video_understanding",
+        "tool_use",
+        "long_context"
+      ],
+      "extra": {
+        "reasoning": {
+          "supportedEfforts": [
+            "none",
+            "high"
+          ],
+          "defaultEffort": "high"
+        },
+        "pricingNotes": "北京CNY每百万Token标准价；思考输出允许262144，当前接入保守131072；非思考默认采样与思考不同，未固定默认采样。"
+      },
+      "source": "preset",
+      "inputPrice": 10,
+      "outputPrice": 30
     }
   ]
 }

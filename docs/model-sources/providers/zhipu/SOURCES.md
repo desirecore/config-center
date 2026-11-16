@@ -63,6 +63,24 @@
 
 状态 `partial` 仅表示列出的字段已核实；不能推断整条配置、价格、账号权限或真实模型调用都已验收。`pending` 没有已核字段；`historical` 只作历史兼容参考。路由 tier/priority、产品标签和默认选择属于本仓策略，不伪装成官网数据。
 
+## 2026-11-16 GLM Legal 核对
+
+官网 Flash/FlashX 型号页新增精确 Model Code `glm-5.3-flashx-legal`，总览给出独立法律模型条目。窗口 1M、输出 128K 依既有十进制保守约定记为 1000000/128000；不是官网明文逐 token 整数。法律模型暂保守声明文本、推理与工具能力，没有把同页通用多模态介绍当作其专用视觉合同。
+
+国内按量标准价 CNY 2/7、缓存命中 0.57 元/百万 tokens；缓存存储限时免费不作为永久零价。文本参数遵循同页 GLM-5.3 合同：思考始终开启，low/high/max、默认 max。官网 Legal 页只明确链接 Chat Completion API，Claude 兼容页没有列 Legal 专属参数；不将既有 FlashX 的端点推定扩大为新型号的 `adaptiveThinking` 证明。本批仅补精确规格与独立核验的 OpenRouter 接入，没有加入本仓 Anthropic 协议的智谱直连 Provider。官网套餐仅明列 Flash，未据此将 Legal 加入 Coding Plan；没有做按量 Key 账号实测。
+
+### glm-legal-20261116
+
+- 入口：[glm-legal-20261116](https://docs.bigmodel.cn/cn/guide/models/vlm/glm-5.3-flash.md)。
+- 读取日期：2026-11-16；状态：`fetched`；最终地址：https://docs.bigmodel.cn/cn/guide/models/vlm/glm-5.3-flash.md。
+- 适用范围：智谱原厂 GLM-5.3-FlashX-Legal 精确代码与同页文本参数合同；套餐名单单独判断。
+
+### glm-legal-pricing-20261116
+
+- 入口：[glm-legal-pricing-20261116](https://docs.bigmodel.cn/cn/guide/start/pricing.md)。
+- 读取日期：2026-11-16；状态：`fetched`；最终地址：https://docs.bigmodel.cn/cn/guide/start/pricing.md。
+- 适用范围：智谱国内 Legal 按量标准价 CNY/百万 tokens；缓存存储限时免费。
+
 <!-- source-metadata:start -->
 ```json
 {
@@ -169,6 +187,26 @@
       "checkedAt": "2026-10-05",
       "contentSha256": "0b00f14c6071ef69fe48956d1199f534652309d63e859fae04c602dd734c6466",
       "resolvedUrl": "https://docs.bigmodel.cn/cn/guide/start/model-overview.md"
+    },
+    {
+      "id": "glm-legal-20261116",
+      "url": "https://docs.bigmodel.cn/cn/guide/models/vlm/glm-5.3-flash.md",
+      "kind": "official-doc",
+      "scope": "智谱原厂 GLM-5.3-FlashX-Legal 精确代码与同页文本参数合同；套餐名单单独判断",
+      "retrieval": "fetched",
+      "checkedAt": "2026-11-16",
+      "contentSha256": "95df0dbf84d3ba3f95f51e210d20d67a44a7c71d0c468b62f8878f53264c9b3d",
+      "resolvedUrl": "https://docs.bigmodel.cn/cn/guide/models/vlm/glm-5.3-flash.md"
+    },
+    {
+      "id": "glm-legal-pricing-20261116",
+      "url": "https://docs.bigmodel.cn/cn/guide/start/pricing.md",
+      "kind": "official-doc",
+      "scope": "智谱国内 Legal 按量标准价 CNY/百万 tokens；缓存存储限时免费",
+      "retrieval": "fetched",
+      "checkedAt": "2026-11-16",
+      "contentSha256": "615f8993915c2aea98f5ed05b401a7701dc0381db7325553fadd680e71bec70b",
+      "resolvedUrl": "https://docs.bigmodel.cn/cn/guide/start/pricing.md"
     }
   ]
 }
