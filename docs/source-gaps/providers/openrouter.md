@@ -20,7 +20,7 @@
 
 无该类记录。
 
-## 已有部分参数证明，仍需区分未证明字段（28 条）
+## 已有部分参数证明，仍需区分未证明字段（32 条）
 
 | 模型 | 接入面 | 未登记证明的关键字段 | 官网入口/读取结果 |
 | --- | --- | --- | --- |
@@ -43,6 +43,10 @@
 | [`moonshotai/kimi-k3`](../../model-sources/providers/openrouter/models/moonshotai--kimi-k3.md) | [`compute/providers/openrouter.json`](../../../compute/providers/openrouter.json) | 已登记关键字段都有证明；其他合同限制仍按原记录复核 | [openrouter-api](../../model-sources/providers/openrouter/SOURCES.md#openrouter-api)：fetched |
 | [`openai/gpt-6.1-sol`](../../model-sources/providers/openrouter/models/openai--gpt-6.1-sol.md) | [`compute/providers/openrouter.json`](../../../compute/providers/openrouter.json) | 已登记关键字段都有证明；其他合同限制仍按原记录复核 | [openrouter-api](../../model-sources/providers/openrouter/SOURCES.md#openrouter-api)：fetched |
 | [`openai/gpt-6.1-terra`](../../model-sources/providers/openrouter/models/openai--gpt-6.1-terra.md) | [`compute/providers/openrouter.json`](../../../compute/providers/openrouter.json) | 已登记关键字段都有证明；其他合同限制仍按原记录复核 | [openrouter-20261028](../../model-sources/providers/openrouter/SOURCES.md#openrouter-20261028)：fetched |
+| [`openai/gpt-6.2-astra-pro`](../../model-sources/providers/openrouter/models/openai--gpt-6.2-astra-pro.md) | [`compute/providers/openrouter.json`](../../../compute/providers/openrouter.json) | `extra.samplingParametersDeprecated` | [openrouter-20261118](../../model-sources/providers/openrouter/SOURCES.md#openrouter-20261118)：fetched；[openrouter-pro-mode-20261118](../../model-sources/providers/openrouter/SOURCES.md#openrouter-pro-mode-20261118)：fetched |
+| [`openai/gpt-6.2-astra`](../../model-sources/providers/openrouter/models/openai--gpt-6.2-astra.md) | [`compute/providers/openrouter.json`](../../../compute/providers/openrouter.json) | `extra.samplingParametersDeprecated` | [openrouter-20261118](../../model-sources/providers/openrouter/SOURCES.md#openrouter-20261118)：fetched |
+| [`openai/gpt-6.2-sol-pro`](../../model-sources/providers/openrouter/models/openai--gpt-6.2-sol-pro.md) | [`compute/providers/openrouter.json`](../../../compute/providers/openrouter.json) | `extra.samplingParametersDeprecated` | [openrouter-20261118](../../model-sources/providers/openrouter/SOURCES.md#openrouter-20261118)：fetched；[openrouter-pro-mode-20261118](../../model-sources/providers/openrouter/SOURCES.md#openrouter-pro-mode-20261118)：fetched |
+| [`openai/gpt-6.2-sol`](../../model-sources/providers/openrouter/models/openai--gpt-6.2-sol.md) | [`compute/providers/openrouter.json`](../../../compute/providers/openrouter.json) | `extra.samplingParametersDeprecated` | [openrouter-20261118](../../model-sources/providers/openrouter/SOURCES.md#openrouter-20261118)：fetched |
 | [`openrouter/auto`](../../model-sources/providers/openrouter/models/openrouter--auto.md) | [`compute/providers/openrouter.json`](../../../compute/providers/openrouter.json) | `defaultTemperature`、`defaultTopP`、`maxOutputTokens` | [openrouter-api](../../model-sources/providers/openrouter/SOURCES.md#openrouter-api)：fetched；[openrouter-models-tools](../../model-sources/providers/openrouter/SOURCES.md#openrouter-models-tools)：fetched |
 | [`qwen/qwen3.8-max-prime`](../../model-sources/providers/openrouter/models/qwen--qwen3.8-max-prime.md) | [`compute/providers/openrouter.json`](../../../compute/providers/openrouter.json) | 已登记关键字段都有证明；其他合同限制仍按原记录复核 | [openrouter-api](../../model-sources/providers/openrouter/SOURCES.md#openrouter-api)：fetched |
 | [`qwen/qwen3.8-omni-flash`](../../model-sources/providers/openrouter/models/qwen--qwen3.8-omni-flash.md) | [`compute/providers/openrouter.json`](../../../compute/providers/openrouter.json) | 已登记关键字段都有证明；其他合同限制仍按原记录复核 | [openrouter-api](../../model-sources/providers/openrouter/SOURCES.md#openrouter-api)：fetched |

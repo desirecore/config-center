@@ -164,6 +164,91 @@ Terra 原厂 API 明确窗口 1050000、最大输入 922000、最大输出 12800
 - 读取日期：2026-11-16；状态：`fetched`；最终地址：https://developers.openai.com/api/docs/guides/image-generation.md。
 - 适用范围：OpenAI Images API 2.6；complexity、图像生成/编辑等请求合同，当前客户端适配另核。
 
+## 2026-11-18 GPT-6.2 增量核对
+
+本轮读取两款精确 API 型号页、API 总目录、迁移/推理/计价/缓存/前缀指南，以及 Work/Codex 的型号和发布记录。正式发布记录为 2026-11-17，实际读取日期为 2026-11-18；不将读取日期当作发布日期。公开型号页各只列 `gpt-6.2-sol`、`gpt-6.2-astra`，没有据此虚构日期快照或 6.2 Pro 原厂 ID。
+
+原厂两款均为 1050000 总窗口、922000 独立最大输入、128000 最大输出；文字/图像输入、文字输出。基础 Chat Completions 仍支持，工具调用必须使用 Responses。新原厂接入同时声明 `responsesOnly` 和实际被 V1 消费的 `apiFormatOverride=openai-responses`，不改 Provider 全局协议或旧模型。API 明确拒绝 none，迁移指南建议原 none/minimal 用户改用 low。共享规格据两原厂型号页及 6.2 迁移指南保守投影 thinkingOnly 与 samplingParametersDeprecated，保护只经过 Spec enrich 的动态精确模型；这是原厂接口硬约束，不从 OpenRouter 反推，也不冒称完整的推理档位矩阵。仅列出现有消费者可传且官方通用配置语法覆盖的 low/medium/high/xhigh/max 子集，不宣称逐模型全部档位或账号已验收；指南中的 medium 是集成建议，不冒充硬默认值，因此不写 defaultEffort。shared routing 的 auto 是本仓策略。
+
+原厂 Responses 请求应移除 temperature/top_p/top_logprobs 及 include 中的 message.output_text.logprobs；Pro 模式、Multi-agent beta、Ultrafast 与显式缓存均不因官网支持便声明本仓已适配。6.2 支持符合资格的 ZDR，迁移指南明确此时 Responses 将 store 视作 false，不能把“store 键含 false 一律拒绝”当作事实。默认缓存请求与设置 `PI_CACHE_RETENTION=long` 的旧 24h retention 路径分别审计；官网要求迁移到 prompt_cache_options.ttl=30m，当前没有据此声称旧 long 或 12h 缓存已适配。缓存写入不是在正常输入价之上叠加收费。前缀、模型降级、用户或组织变更可能令 reasoning items 被服务端丢弃，影响质量、用量与缓存；不是 Fable 5.2 的 prefix 400 合同。
+
+Work/Codex 独立记录：Sol 默认上下文 500000，Astra 默认 272000；官网说可配置最多 1 million，不把原厂 1050000 改称订阅默认值。未取得订阅独立最大输入/输出的型号专属证明，独立最大输入 canonical 为 null；独立订阅输出上限继续在 metadata.knownContract 中记为 unknown。raw/canonical 的 maxOutputTokens=128000 仅是本仓预算规划天花板，采用同型号已核 API 上限并保持既有 V1 共享规格补缺行为；不是订阅官方上限，也不承诺 Codex wire 强制发送此上限，不把该字段列为订阅官网已核。Work 消费端 Light/Enterprise Medium、CLI 或客户端默认各自有条件，不填单一 defaultEffort。五档只作兼容子集，none/minimal/ultra 不加入；Ultra 的多智能体编排、Ultrafast 的服务速度与原厂 reasoning.mode=pro 分别记录。未执行收费 API、真实订阅账号或已安装客户端验收。
+
+
+数值换算：原厂长输入价格阈值272K按十进制1000换算为272000；Work可配置的1 million按十进制1000000记录。二者不当作官网给出不同接入面相同的硬输入/输出限制，OR的min_prompt_tokens原字段另行保存。
+
+### openai-sol62-20261118
+
+- 入口：[openai-sol62-20261118](https://developers.openai.com/api/docs/models/gpt-6.2-sol.md)。
+- 读取日期：2026-11-18；状态：`fetched`；最终地址：https://developers.openai.com/api/docs/models/gpt-6.2-sol.md。
+- 适用范围：OpenAI API GPT-6.2 Sol；精确ID、模态、上下文1050000、独立输入922000/输出128000、端点与USD Standard价。
+
+### openai-astra62-20261118
+
+- 入口：[openai-astra62-20261118](https://developers.openai.com/api/docs/models/gpt-6.2-astra.md)。
+- 读取日期：2026-11-18；状态：`fetched`；最终地址：https://developers.openai.com/api/docs/models/gpt-6.2-astra.md。
+- 适用范围：OpenAI API GPT-6.2 Astra；精确ID、模态、上下文1050000、独立输入922000/输出128000、端点与USD Standard价。
+
+### openai-models-20261118
+
+- 入口：[openai-models-20261118](https://developers.openai.com/api/docs/models.md)。
+- 读取日期：2026-11-18；状态：`fetched`；最终地址：https://developers.openai.com/api/docs/models.md。
+- 适用范围：OpenAI原厂公共API目录；确认两条6.2精确ID，不作为ChatGPT订阅预算证明。
+
+### openai-latest62-20261118
+
+- 入口：[openai-latest62-20261118](https://developers.openai.com/api/docs/guides/latest-model.md)。
+- 读取日期：2026-11-18；状态：`fetched`；最终地址：https://developers.openai.com/api/docs/guides/latest-model.md。
+- 适用范围：6.2原厂迁移指南；工具调用要求Responses、采样/logprobs限制、缓存迁移和ZDR的store:false边界。
+
+### openai-reasoning62-20261118
+
+- 入口：[openai-reasoning62-20261118](https://developers.openai.com/api/docs/guides/reasoning.md)。
+- 读取日期：2026-11-18；状态：`fetched`；最终地址：https://developers.openai.com/api/docs/guides/reasoning.md。
+- 适用范围：OpenAI API推理参数语法与6.2 none拒绝；通用effort列表不是逐模型全档账号验收；pro是reasoning.mode。
+
+### openai-pricing62-20261118
+
+- 入口：[openai-pricing62-20261118](https://developers.openai.com/api/docs/pricing.md)。
+- 读取日期：2026-11-18；状态：`fetched`；最终地址：https://developers.openai.com/api/docs/pricing.md。
+- 适用范围：OpenAI API Standard/Batch/Fast/Ultrafast按服务层及长短上下文独立计价，USD每百万tokens。
+
+### openai-cache62-20261118
+
+- 入口：[openai-cache62-20261118](https://developers.openai.com/api/docs/guides/prompt-caching.md)。
+- 读取日期：2026-11-18；状态：`fetched`；最终地址：https://developers.openai.com/api/docs/guides/prompt-caching.md。
+- 适用范围：OpenAI API缓存合同；30m/12h、cache-write非叠加收费与prompt_cache_key账户分组；旧retention迁移另核。
+
+### openai-prefix62-20261118
+
+- 入口：[openai-prefix62-20261118](https://developers.openai.com/api/docs/guides/keep-prefix-unchanged.md)。
+- 读取日期：2026-11-18；状态：`fetched`；最终地址：https://developers.openai.com/api/docs/guides/keep-prefix-unchanged.md。
+- 适用范围：OpenAI API多轮前缀变更；6.2会丢弃不匹配的reasoning items，不冒称Fable式400拒绝。
+
+### openai-work-models-20261118
+
+- 入口：[openai-work-models-20261118](https://developers.openai.com/codex/models.md)。
+- 读取日期：2026-11-18；状态：`fetched`；最终地址：https://learn.chatgpt.com/docs/models.md。
+- 适用范围：Work/Codex官网型号目录；6.2 Sol默认上下文500000、Astra272000；不证明API128000输出是订阅上限。
+
+### work-whatsnew62-20261118
+
+- 入口：[work-whatsnew62-20261118](https://learn.chatgpt.com/docs/whats-new/gpt-62-astra-sol.md)。
+- 读取日期：2026-11-18；状态：`fetched`；最终地址：https://learn.chatgpt.com/docs/whats-new/gpt-62-astra-sol.md。
+- 适用范围：OpenAI Work官方2026-11-17发布记录；6.2两款在Work/Codex/API推出、套餐与工作区门控。
+
+### work-prompt62-20261118
+
+- 入口：[work-prompt62-20261118](https://learn.chatgpt.com/guides/prompting-gpt-6-2-astra.md)。
+- 读取日期：2026-11-18；状态：`fetched`；最终地址：https://learn.chatgpt.com/guides/prompting-gpt-6-2-astra.md。
+- 适用范围：Work/Codex 6.2官方提示指南；Ultra使用subagents编排，不等同单模型effort或原厂独立Pro模型ID。
+
+### work-speed62-20261118
+
+- 入口：[work-speed62-20261118](https://learn.chatgpt.com/docs/agent-configuration/speed.md)。
+- 读取日期：2026-11-18；状态：`fetched`；最终地址：https://learn.chatgpt.com/docs/agent-configuration/speed.md。
+- 适用范围：Work/Codex 6.2 Fast/Ultrafast可用性与额外额度，Ultra编排与Ultrafast服务速度是不同功能。
+
 <!-- source-metadata:start -->
 ```json
 {
@@ -430,6 +515,126 @@ Terra 原厂 API 明确窗口 1050000、最大输入 922000、最大输出 12800
       "checkedAt": "2026-11-16",
       "contentSha256": "5194462789c0348f288a68e50aa3ba6d69058bddcea5cf0be6379484acbb2e36",
       "resolvedUrl": "https://developers.openai.com/api/docs/guides/image-generation.md"
+    },
+    {
+      "id": "openai-sol62-20261118",
+      "url": "https://developers.openai.com/api/docs/models/gpt-6.2-sol.md",
+      "kind": "official-doc",
+      "scope": "OpenAI API GPT-6.2 Sol；精确ID、模态、上下文1050000、独立输入922000/输出128000、端点与USD Standard价",
+      "retrieval": "fetched",
+      "checkedAt": "2026-11-18",
+      "contentSha256": "3c1aa626387fc854be2560f16620f0c913f4a2aa97e8208d4239efd3279fe913",
+      "resolvedUrl": "https://developers.openai.com/api/docs/models/gpt-6.2-sol.md"
+    },
+    {
+      "id": "openai-astra62-20261118",
+      "url": "https://developers.openai.com/api/docs/models/gpt-6.2-astra.md",
+      "kind": "official-doc",
+      "scope": "OpenAI API GPT-6.2 Astra；精确ID、模态、上下文1050000、独立输入922000/输出128000、端点与USD Standard价",
+      "retrieval": "fetched",
+      "checkedAt": "2026-11-18",
+      "contentSha256": "89611cfc6a48262e6e73d2bca8e9aed9c6694b9ae2955a12d16f0d949081d639",
+      "resolvedUrl": "https://developers.openai.com/api/docs/models/gpt-6.2-astra.md"
+    },
+    {
+      "id": "openai-models-20261118",
+      "url": "https://developers.openai.com/api/docs/models.md",
+      "kind": "official-doc",
+      "scope": "OpenAI原厂公共API目录；确认两条6.2精确ID，不作为ChatGPT订阅预算证明",
+      "retrieval": "fetched",
+      "checkedAt": "2026-11-18",
+      "contentSha256": "c9d3616bd43cdc89b7f0794cc26a1c8e02645190e0077a4f99173b904da5b399",
+      "resolvedUrl": "https://developers.openai.com/api/docs/models.md"
+    },
+    {
+      "id": "openai-latest62-20261118",
+      "url": "https://developers.openai.com/api/docs/guides/latest-model.md",
+      "kind": "official-doc",
+      "scope": "6.2原厂迁移指南；工具调用要求Responses、采样/logprobs限制、缓存迁移和ZDR的store:false边界",
+      "retrieval": "fetched",
+      "checkedAt": "2026-11-18",
+      "contentSha256": "2b61930a36a6d9631e6c304c9f9eea5ebc2121e68e5b7fe389ca417bdf67e5b5",
+      "resolvedUrl": "https://developers.openai.com/api/docs/guides/latest-model.md"
+    },
+    {
+      "id": "openai-reasoning62-20261118",
+      "url": "https://developers.openai.com/api/docs/guides/reasoning.md",
+      "kind": "official-doc",
+      "scope": "OpenAI API推理参数语法与6.2 none拒绝；通用effort列表不是逐模型全档账号验收；pro是reasoning.mode",
+      "retrieval": "fetched",
+      "checkedAt": "2026-11-18",
+      "contentSha256": "41279ffe43e21d54f1a3a76117f20e95bb7737644a26623ab424d176689e0d54",
+      "resolvedUrl": "https://developers.openai.com/api/docs/guides/reasoning.md"
+    },
+    {
+      "id": "openai-pricing62-20261118",
+      "url": "https://developers.openai.com/api/docs/pricing.md",
+      "kind": "official-doc",
+      "scope": "OpenAI API Standard/Batch/Fast/Ultrafast按服务层及长短上下文独立计价，USD每百万tokens",
+      "retrieval": "fetched",
+      "checkedAt": "2026-11-18",
+      "contentSha256": "427698a0c4f1cf4abb2569cb0f9a4ca7fcacfa2f45d61a75f221f0b590ac5114",
+      "resolvedUrl": "https://developers.openai.com/api/docs/pricing.md"
+    },
+    {
+      "id": "openai-cache62-20261118",
+      "url": "https://developers.openai.com/api/docs/guides/prompt-caching.md",
+      "kind": "official-doc",
+      "scope": "OpenAI API缓存合同；30m/12h、cache-write非叠加收费与prompt_cache_key账户分组；旧retention迁移另核",
+      "retrieval": "fetched",
+      "checkedAt": "2026-11-18",
+      "contentSha256": "248c29075e1790bf644f6c40ffe1df6ad71f30dc036c0632e06e467e7556cf30",
+      "resolvedUrl": "https://developers.openai.com/api/docs/guides/prompt-caching.md"
+    },
+    {
+      "id": "openai-prefix62-20261118",
+      "url": "https://developers.openai.com/api/docs/guides/keep-prefix-unchanged.md",
+      "kind": "official-doc",
+      "scope": "OpenAI API多轮前缀变更；6.2会丢弃不匹配的reasoning items，不冒称Fable式400拒绝",
+      "retrieval": "fetched",
+      "checkedAt": "2026-11-18",
+      "contentSha256": "7f7ec10168698229e05d4206562410aff0773fd84a2b7a8769b24796fd399c12",
+      "resolvedUrl": "https://developers.openai.com/api/docs/guides/keep-prefix-unchanged.md"
+    },
+    {
+      "id": "openai-work-models-20261118",
+      "url": "https://developers.openai.com/codex/models.md",
+      "kind": "official-doc",
+      "scope": "Work/Codex官网型号目录；6.2 Sol默认上下文500000、Astra272000；不证明API128000输出是订阅上限",
+      "retrieval": "fetched",
+      "checkedAt": "2026-11-18",
+      "contentSha256": "56dc4b791e918727a0ad69386c2781e7f530ccf083766f8e14ac368abf7fec23",
+      "resolvedUrl": "https://learn.chatgpt.com/docs/models.md"
+    },
+    {
+      "id": "work-whatsnew62-20261118",
+      "url": "https://learn.chatgpt.com/docs/whats-new/gpt-62-astra-sol.md",
+      "kind": "official-doc",
+      "scope": "OpenAI Work官方2026-11-17发布记录；6.2两款在Work/Codex/API推出、套餐与工作区门控",
+      "retrieval": "fetched",
+      "checkedAt": "2026-11-18",
+      "contentSha256": "334568dfedf5ebea74a844fcc7af862cbb4af15995d2681555e8448b3dec8e32",
+      "resolvedUrl": "https://learn.chatgpt.com/docs/whats-new/gpt-62-astra-sol.md"
+    },
+    {
+      "id": "work-prompt62-20261118",
+      "url": "https://learn.chatgpt.com/guides/prompting-gpt-6-2-astra.md",
+      "kind": "official-doc",
+      "scope": "Work/Codex 6.2官方提示指南；Ultra使用subagents编排，不等同单模型effort或原厂独立Pro模型ID",
+      "retrieval": "fetched",
+      "checkedAt": "2026-11-18",
+      "contentSha256": "aa56ad6955220a6e7aeccd980a18ccb94fd144e3f7e8bcdb91f33be9dc6041bf",
+      "resolvedUrl": "https://learn.chatgpt.com/guides/prompting-gpt-6-2-astra.md"
+    },
+    {
+      "id": "work-speed62-20261118",
+      "url": "https://learn.chatgpt.com/docs/agent-configuration/speed.md",
+      "kind": "official-doc",
+      "scope": "Work/Codex 6.2 Fast/Ultrafast可用性与额外额度，Ultra编排与Ultrafast服务速度是不同功能",
+      "retrieval": "fetched",
+      "checkedAt": "2026-11-18",
+      "contentSha256": "ea46b8409f45d012b23bf385f7f515e4c99785ccb852ce4b000dd26eb3d623ce",
+      "resolvedUrl": "https://learn.chatgpt.com/docs/agent-configuration/speed.md"
     }
   ]
 }

@@ -2,13 +2,21 @@
 
 [总索引](../../README.md) · [官网证据与边界](SOURCES.md) · [数据闭环核查](AUDIT.md)
 
-本目录包含 28 个单模型文件、1 个单接入面文件。各记录的核验日期与状态分别保留，新增条目见 2026-11-16 批次。
+本目录包含 32 个单模型文件、1 个单接入面文件。各记录的核验日期与状态分别保留，新增条目见 2026-11-16 与 2026-11-18 批次。
 
 ## 接入面
 
 - [compute/providers/openrouter.json](access/providers--openrouter.md)
 
 ## 模型
+
+- [`openai/gpt-6.2-astra-pro`](models/openai--gpt-6.2-astra-pro.md)
+
+- [`openai/gpt-6.2-sol-pro`](models/openai--gpt-6.2-sol-pro.md)
+
+- [`openai/gpt-6.2-astra`](models/openai--gpt-6.2-astra.md)
+
+- [`openai/gpt-6.2-sol`](models/openai--gpt-6.2-sol.md)
 
 - [`baidu/ernie-light-dt-1.0-intl`](models/baidu--ernie-light-dt-1.0-intl.md)
 

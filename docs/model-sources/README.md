@@ -28,7 +28,11 @@ providers/<supplier>/
 
 数据批次 140 新增 13 个精确规格、11 条接入；当前共 309 条规格、365 条接入。新增型号保持手动选择，原厂、套餐与 OpenRouter 合同分别记录；Fable 5.2 与未适配媒体协议仅补规格。HY4 不误放旧混元端点，百度两条托管 ID 不继承国内原厂规格。核查范围、未加入的型号与协议边界见 [本轮记录](../source-rechecks/2026-11-16/README.md)。旧核验日期及历史迁移计数保留。
 
-## 供应商
+## 2026-11-18 OpenAI 6.2 批次
+
+数据批次 141 新增 GPT-6.2 Sol、Astra 两条规格及 API、订阅、OpenRouter 八条接入。原厂与订阅窗口分别记录，Pro 仅为平台模式，新增条目保持手动选择；完整边界见[本轮核查](../source-rechecks/2026-11-18/README.md)。此前日期和历史计数保留。
+
+## 供应商导航
 
 | 供应商 | 模型文件 | 接入面文件 |
 | --- | ---: | ---: |
@@ -48,8 +52,8 @@ providers/<supplier>/
 | [月之暗面 Kimi](providers/moonshot/README.md) | 14 | 3 |
 | [摩尔线程](providers/moorethread/README.md) | 1 | 1 |
 | [Ollama](providers/ollama/README.md) | 1 | 1 |
-| [OpenAI](providers/openai/README.md) | 54 | 4 |
-| [OpenRouter](providers/openrouter/README.md) | 28 | 1 |
+| [OpenAI](providers/openai/README.md) | 56 | 4 |
+| [OpenRouter](providers/openrouter/README.md) | 32 | 1 |
 | [Perplexity](providers/perplexity/README.md) | 3 | 2 |
 | [硅基流动](providers/siliconflow/README.md) | 3 | 1 |
 | [Stability AI](providers/stability/README.md) | 2 | 2 |

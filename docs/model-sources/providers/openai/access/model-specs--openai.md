@@ -17,6 +17,10 @@
 
 ## 关联模型
 
+- [`gpt-6.2-astra`](../models/gpt-6.2-astra.md)
+
+- [`gpt-6.2-sol`](../models/gpt-6.2-sol.md)
+
 - [`gpt-image-2.6-sunburst`](../models/gpt-image-2.6-sunburst.md)
 
 - [`gpt-image-2.6-flare`](../models/gpt-image-2.6-flare.md)
