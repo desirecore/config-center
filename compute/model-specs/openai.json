@@ -1489,6 +1489,104 @@
         ],
         "description": "GPT Image 2.6 Flare，支持文字与图像输入的图像生成和编辑模型"
       }
+    },
+    {
+      "displayName": "GPT-6.2 Sol",
+      "family": "gpt-6.2-sol",
+      "match": {
+        "exact": [
+          "gpt-6.2-sol",
+          "openai/gpt-6.2-sol"
+        ]
+      },
+      "id": "gpt-6.2-sol",
+      "spec": {
+        "contextWindow": 1050000,
+        "maxOutputTokens": 128000,
+        "capabilities": [
+          "chat",
+          "reasoning",
+          "code",
+          "vision",
+          "tool_use",
+          "long_context"
+        ],
+        "serviceType": [
+          "chat"
+        ],
+        "supportsReasoning": true,
+        "description": "GPT-6.2 Sol，面向日常编程、写作与智能体任务的多模态推理模型",
+        "extra": {
+          "thinkingOnly": true,
+          "samplingParametersDeprecated": true
+        }
+      },
+      "routing": {
+        "tier": "balanced",
+        "routingPriority": 50,
+        "eligibleForAgent": false,
+        "defaultReference": false,
+        "reasoning": {
+          "supportedModes": [
+            "auto",
+            "low",
+            "medium",
+            "high",
+            "xhigh",
+            "max"
+          ],
+          "defaultMode": "auto"
+        }
+      }
+    },
+    {
+      "displayName": "GPT-6.2 Astra",
+      "family": "gpt-6.2-astra",
+      "match": {
+        "exact": [
+          "gpt-6.2-astra",
+          "openai/gpt-6.2-astra"
+        ]
+      },
+      "id": "gpt-6.2-astra",
+      "spec": {
+        "contextWindow": 1050000,
+        "maxOutputTokens": 128000,
+        "capabilities": [
+          "chat",
+          "reasoning",
+          "code",
+          "vision",
+          "tool_use",
+          "long_context"
+        ],
+        "serviceType": [
+          "chat"
+        ],
+        "supportsReasoning": true,
+        "description": "GPT-6.2 Astra，面向复杂工程、研究与长程任务的多模态推理模型",
+        "extra": {
+          "thinkingOnly": true,
+          "samplingParametersDeprecated": true
+        }
+      },
+      "routing": {
+        "tier": "flagship",
+        "routingPriority": 50,
+        "eligibleForAgent": false,
+        "defaultReference": false,
+        "reasoning": {
+          "supportedModes": [
+            "auto",
+            "low",
+            "medium",
+            "high",
+            "xhigh",
+            "max"
+          ],
+          "defaultMode": "auto"
+        }
+      }
     }
   ]
 }

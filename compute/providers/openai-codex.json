@@ -391,6 +391,66 @@
         "fast"
       ],
       "source": "preset"
+    },
+    {
+      "modelName": "gpt-6.2-sol",
+      "displayName": "GPT-6.2 Sol",
+      "serviceType": [
+        "chat"
+      ],
+      "description": "GPT-6.2 Sol，面向日常编程、写作与智能体任务的多模态推理模型；订阅接入的独立输出上限待核",
+      "contextWindow": 500000,
+      "maxOutputTokens": 128000,
+      "capabilities": [
+        "chat",
+        "reasoning",
+        "code",
+        "vision",
+        "tool_use",
+        "long_context"
+      ],
+      "extra": {
+        "reasoning": {
+          "supportedEfforts": [
+            "low",
+            "medium",
+            "high",
+            "xhigh",
+            "max"
+          ]
+        }
+      },
+      "source": "preset"
+    },
+    {
+      "modelName": "gpt-6.2-astra",
+      "displayName": "GPT-6.2 Astra",
+      "serviceType": [
+        "chat"
+      ],
+      "description": "GPT-6.2 Astra，面向复杂工程、研究与长程任务的多模态推理模型；订阅接入的独立输出上限待核",
+      "contextWindow": 272000,
+      "maxOutputTokens": 128000,
+      "capabilities": [
+        "chat",
+        "reasoning",
+        "code",
+        "vision",
+        "tool_use",
+        "long_context"
+      ],
+      "extra": {
+        "reasoning": {
+          "supportedEfforts": [
+            "low",
+            "medium",
+            "high",
+            "xhigh",
+            "max"
+          ]
+        }
+      },
+      "source": "preset"
     }
   ]
 }
