@@ -17589,6 +17589,186 @@
         },
         "identityBoundary": "精确预览规格防止客户端 stripped 匹配误吞正式版；无静态接入，不扩大正式版路由"
       }
+    },
+    {
+      "modelRef": "openai:gpt-6.2-sol",
+      "identity": {
+        "vendor": "openai",
+        "canonicalModelId": "gpt-6.2-sol"
+      },
+      "facts": {
+        "contextWindow": 1050000,
+        "maxInputTokens": 922000,
+        "maxOutputTokens": 128000,
+        "capabilities": [
+          "chat",
+          "reasoning",
+          "code",
+          "vision",
+          "tool_use",
+          "long_context"
+        ],
+        "serviceType": [
+          "chat"
+        ],
+        "supportsReasoning": true,
+        "description": "GPT-6.2 Sol，面向日常编程、写作与智能体任务的多模态推理模型",
+        "constraints": {
+          "thinkingOnly": true,
+          "samplingParametersDeprecated": true
+        }
+      },
+      "routing": {
+        "tier": "balanced",
+        "routingPriority": 50,
+        "eligibleForAgent": false,
+        "defaultReference": false,
+        "reasoning": {
+          "supportedModes": [
+            "auto",
+            "low",
+            "medium",
+            "high",
+            "xhigh",
+            "max"
+          ],
+          "defaultMode": "auto"
+        }
+      },
+      "lifecycle": {
+        "status": "active"
+      },
+      "metadata": {
+        "recordedExtra": {},
+        "projection": {
+          "specKeys": [
+            "contextWindow",
+            "maxOutputTokens",
+            "capabilities",
+            "serviceType",
+            "supportsReasoning",
+            "description",
+            "extra"
+          ],
+          "extraKeys": [
+            "thinkingOnly",
+            "samplingParametersDeprecated"
+          ]
+        },
+        "sourceFile": "compute/model-specs/openai.json",
+        "legacyIdentity": {
+          "displayName": "GPT-6.2 Sol",
+          "family": "gpt-6.2-sol",
+          "match": {
+            "exact": [
+              "gpt-6.2-sol",
+              "openai/gpt-6.2-sol"
+            ]
+          }
+        },
+        "knownContract": {
+          "releasedAt": "2026-11-17",
+          "apiEffortDefault": null,
+          "clientCompatibleEfforts": [
+            "low",
+            "medium",
+            "high",
+            "xhigh",
+            "max"
+          ],
+          "fullEffortSupportNotAccountVerified": true
+        }
+      }
+    },
+    {
+      "modelRef": "openai:gpt-6.2-astra",
+      "identity": {
+        "vendor": "openai",
+        "canonicalModelId": "gpt-6.2-astra"
+      },
+      "facts": {
+        "contextWindow": 1050000,
+        "maxInputTokens": 922000,
+        "maxOutputTokens": 128000,
+        "capabilities": [
+          "chat",
+          "reasoning",
+          "code",
+          "vision",
+          "tool_use",
+          "long_context"
+        ],
+        "serviceType": [
+          "chat"
+        ],
+        "supportsReasoning": true,
+        "description": "GPT-6.2 Astra，面向复杂工程、研究与长程任务的多模态推理模型",
+        "constraints": {
+          "thinkingOnly": true,
+          "samplingParametersDeprecated": true
+        }
+      },
+      "routing": {
+        "tier": "flagship",
+        "routingPriority": 50,
+        "eligibleForAgent": false,
+        "defaultReference": false,
+        "reasoning": {
+          "supportedModes": [
+            "auto",
+            "low",
+            "medium",
+            "high",
+            "xhigh",
+            "max"
+          ],
+          "defaultMode": "auto"
+        }
+      },
+      "lifecycle": {
+        "status": "active"
+      },
+      "metadata": {
+        "recordedExtra": {},
+        "projection": {
+          "specKeys": [
+            "contextWindow",
+            "maxOutputTokens",
+            "capabilities",
+            "serviceType",
+            "supportsReasoning",
+            "description",
+            "extra"
+          ],
+          "extraKeys": [
+            "thinkingOnly",
+            "samplingParametersDeprecated"
+          ]
+        },
+        "sourceFile": "compute/model-specs/openai.json",
+        "legacyIdentity": {
+          "displayName": "GPT-6.2 Astra",
+          "family": "gpt-6.2-astra",
+          "match": {
+            "exact": [
+              "gpt-6.2-astra",
+              "openai/gpt-6.2-astra"
+            ]
+          }
+        },
+        "knownContract": {
+          "releasedAt": "2026-11-17",
+          "apiEffortDefault": null,
+          "clientCompatibleEfforts": [
+            "low",
+            "medium",
+            "high",
+            "xhigh",
+            "max"
+          ],
+          "fullEffortSupportNotAccountVerified": true
+        }
+      }
     }
   ],
   "accesses": [
@@ -28871,6 +29051,168 @@
             },
             "sourceRecord": "compute/providers/openai-codex.json#gpt-5.3-codex-spark"
           }
+        },
+        {
+          "apiModelId": "gpt-6.2-sol",
+          "modelRef": "openai:gpt-6.2-sol",
+          "binding": {
+            "kind": "exact",
+            "reason": "official-exact-model-identity"
+          },
+          "overrides": {
+            "contextWindow": {
+              "value": 500000,
+              "reason": "official-codex-default-context-not-api-window",
+              "evidence": "https://learn.chatgpt.com/docs/models.md",
+              "verification": "officially-verified-access-contract"
+            },
+            "maxInputTokens": {
+              "value": null,
+              "reason": "codex-independent-input-limit-not-published",
+              "evidence": "https://learn.chatgpt.com/docs/models.md",
+              "verification": "unknown-access-contract"
+            },
+            "maxOutputTokens": {
+              "value": 128000,
+              "reason": "local-output-planning-ceiling-matches-existing-v1-shared-spec-fallback-not-subscription-vendor-limit",
+              "evidence": "https://developers.openai.com/api/docs/models/gpt-6.2-sol.md",
+              "verification": "local-policy-not-subscription-limit-proof"
+            }
+          },
+          "request": {
+            "reasoning": {
+              "supportedEfforts": [
+                "low",
+                "medium",
+                "high",
+                "xhigh",
+                "max"
+              ]
+            }
+          },
+          "billing": [],
+          "lifecycle": {
+            "status": "active"
+          },
+          "metadata": {
+            "attributes": {
+              "displayName": "GPT-6.2 Sol",
+              "description": "GPT-6.2 Sol，面向日常编程、写作与智能体任务的多模态推理模型；订阅接入的独立输出上限待核",
+              "source": "preset"
+            },
+            "recordedExtra": {},
+            "projection": {
+              "modelKeys": [
+                "modelName",
+                "displayName",
+                "serviceType",
+                "description",
+                "contextWindow",
+                "maxOutputTokens",
+                "capabilities",
+                "extra",
+                "source"
+              ],
+              "extraKeys": [
+                "reasoning"
+              ]
+            },
+            "sourceRecord": "compute/providers/openai-codex.json#gpt-6.2-sol",
+            "knownContract": {
+              "subscriptionMaxInputTokens": null,
+              "subscriptionMaxOutputTokens": null,
+              "subscriptionDefaultEffort": null,
+              "subscriptionConfigurableContextWindow": 1000000,
+              "source": "https://learn.chatgpt.com/docs/models.md"
+            },
+            "localPolicy": {
+              "outputPlanningCeiling": 128000,
+              "basis": "shared-original-api-ceiling-and-existing-v1-current-model-contract-fallback",
+              "vendorSubscriptionLimitVerified": false,
+              "wireLimitNotAccountVerified": true
+            }
+          }
+        },
+        {
+          "apiModelId": "gpt-6.2-astra",
+          "modelRef": "openai:gpt-6.2-astra",
+          "binding": {
+            "kind": "exact",
+            "reason": "official-exact-model-identity"
+          },
+          "overrides": {
+            "contextWindow": {
+              "value": 272000,
+              "reason": "official-codex-default-context-not-api-window",
+              "evidence": "https://learn.chatgpt.com/docs/models.md",
+              "verification": "officially-verified-access-contract"
+            },
+            "maxInputTokens": {
+              "value": null,
+              "reason": "codex-independent-input-limit-not-published",
+              "evidence": "https://learn.chatgpt.com/docs/models.md",
+              "verification": "unknown-access-contract"
+            },
+            "maxOutputTokens": {
+              "value": 128000,
+              "reason": "local-output-planning-ceiling-matches-existing-v1-shared-spec-fallback-not-subscription-vendor-limit",
+              "evidence": "https://developers.openai.com/api/docs/models/gpt-6.2-astra.md",
+              "verification": "local-policy-not-subscription-limit-proof"
+            }
+          },
+          "request": {
+            "reasoning": {
+              "supportedEfforts": [
+                "low",
+                "medium",
+                "high",
+                "xhigh",
+                "max"
+              ]
+            }
+          },
+          "billing": [],
+          "lifecycle": {
+            "status": "active"
+          },
+          "metadata": {
+            "attributes": {
+              "displayName": "GPT-6.2 Astra",
+              "description": "GPT-6.2 Astra，面向复杂工程、研究与长程任务的多模态推理模型；订阅接入的独立输出上限待核",
+              "source": "preset"
+            },
+            "recordedExtra": {},
+            "projection": {
+              "modelKeys": [
+                "modelName",
+                "displayName",
+                "serviceType",
+                "description",
+                "contextWindow",
+                "maxOutputTokens",
+                "capabilities",
+                "extra",
+                "source"
+              ],
+              "extraKeys": [
+                "reasoning"
+              ]
+            },
+            "sourceRecord": "compute/providers/openai-codex.json#gpt-6.2-astra",
+            "knownContract": {
+              "subscriptionMaxInputTokens": null,
+              "subscriptionMaxOutputTokens": null,
+              "subscriptionDefaultEffort": null,
+              "subscriptionConfigurableContextWindow": 1000000,
+              "source": "https://learn.chatgpt.com/docs/models.md"
+            },
+            "localPolicy": {
+              "outputPlanningCeiling": 128000,
+              "basis": "shared-original-api-ceiling-and-existing-v1-current-model-contract-fallback",
+              "vendorSubscriptionLimitVerified": false,
+              "wireLimitNotAccountVerified": true
+            }
+          }
         }
       ],
       "metadata": {
@@ -32234,6 +32576,190 @@
             },
             "sourceRecord": "compute/providers/openai.json#o4-mini"
           }
+        },
+        {
+          "apiModelId": "gpt-6.2-sol",
+          "modelRef": "openai:gpt-6.2-sol",
+          "binding": {
+            "kind": "exact",
+            "reason": "official-exact-model-identity"
+          },
+          "overrides": {},
+          "request": {
+            "responsesOnly": true,
+            "apiFormatOverride": "openai-responses",
+            "reasoning": {
+              "supportedEfforts": [
+                "low",
+                "medium",
+                "high",
+                "xhigh",
+                "max"
+              ]
+            },
+            "constraints": {
+              "thinkingOnly": true,
+              "samplingParametersDeprecated": true
+            }
+          },
+          "billing": [
+            {
+              "sourceKey": "inputPrice",
+              "amount": 2,
+              "currency": "USD",
+              "unit": "million-tokens",
+              "direction": "input",
+              "verification": "officially-verified-access-contract"
+            },
+            {
+              "sourceKey": "outputPrice",
+              "amount": 10,
+              "currency": "USD",
+              "unit": "million-tokens",
+              "direction": "output",
+              "verification": "officially-verified-access-contract"
+            },
+            {
+              "sourceKey": "extra.cachedInputPrice",
+              "amount": 0.1,
+              "currency": "USD",
+              "unit": "million-tokens",
+              "verification": "officially-verified-access-contract"
+            },
+            {
+              "sourceKey": "extra.pricingNotes",
+              "amount": "USD/百万 tokens，Standard短上下文：输入2、输出10、缓存读0.1、30分钟缓存写2.5、12小时缓存写5。原页272K按十进制1000换算为272000；输入>272000时整次请求输入/缓存费率×2、输出×1.5；Fast同窗口×2，Batch×0.5。Ultrafast截至2027-02-28为Standard×3，2027-03-01起×6（Pacific time）。缓存写非叠加收费。默认缓存沿用上游隐式设置；不宣称旧24h retention、12h/显式缓存、Pro mode或Ultrafast已适配。",
+              "currency": "USD",
+              "unit": "annotation",
+              "verification": "officially-verified-access-contract"
+            }
+          ],
+          "lifecycle": {
+            "status": "active"
+          },
+          "metadata": {
+            "attributes": {
+              "displayName": "GPT-6.2 Sol",
+              "description": "GPT-6.2 Sol，面向日常编程、写作与智能体任务的多模态推理模型"
+            },
+            "recordedExtra": {},
+            "projection": {
+              "modelKeys": [
+                "modelName",
+                "displayName",
+                "serviceType",
+                "description",
+                "contextWindow",
+                "maxOutputTokens",
+                "capabilities",
+                "inputPrice",
+                "outputPrice",
+                "extra"
+              ],
+              "extraKeys": [
+                "responsesOnly",
+                "apiFormatOverride",
+                "reasoning",
+                "thinkingOnly",
+                "samplingParametersDeprecated",
+                "cachedInputPrice",
+                "pricingNotes"
+              ]
+            },
+            "sourceRecord": "compute/providers/openai.json#gpt-6.2-sol"
+          }
+        },
+        {
+          "apiModelId": "gpt-6.2-astra",
+          "modelRef": "openai:gpt-6.2-astra",
+          "binding": {
+            "kind": "exact",
+            "reason": "official-exact-model-identity"
+          },
+          "overrides": {},
+          "request": {
+            "responsesOnly": true,
+            "apiFormatOverride": "openai-responses",
+            "reasoning": {
+              "supportedEfforts": [
+                "low",
+                "medium",
+                "high",
+                "xhigh",
+                "max"
+              ]
+            },
+            "constraints": {
+              "thinkingOnly": true,
+              "samplingParametersDeprecated": true
+            }
+          },
+          "billing": [
+            {
+              "sourceKey": "inputPrice",
+              "amount": 8,
+              "currency": "USD",
+              "unit": "million-tokens",
+              "direction": "input",
+              "verification": "officially-verified-access-contract"
+            },
+            {
+              "sourceKey": "outputPrice",
+              "amount": 40,
+              "currency": "USD",
+              "unit": "million-tokens",
+              "direction": "output",
+              "verification": "officially-verified-access-contract"
+            },
+            {
+              "sourceKey": "extra.cachedInputPrice",
+              "amount": 0.4,
+              "currency": "USD",
+              "unit": "million-tokens",
+              "verification": "officially-verified-access-contract"
+            },
+            {
+              "sourceKey": "extra.pricingNotes",
+              "amount": "USD/百万 tokens，Standard短上下文：输入8、输出40、缓存读0.4、30分钟缓存写10、12小时缓存写20。原页272K按十进制1000换算为272000；输入>272000时整次请求输入/缓存费率×2、输出×1.5；Fast同窗口×2，Batch×0.5。Ultrafast截至2027-02-28为Standard×3，2027-03-01起×6（Pacific time）。缓存写非叠加收费。默认缓存沿用上游隐式设置；不宣称旧24h retention、12h/显式缓存、Pro mode或Ultrafast已适配。",
+              "currency": "USD",
+              "unit": "annotation",
+              "verification": "officially-verified-access-contract"
+            }
+          ],
+          "lifecycle": {
+            "status": "active"
+          },
+          "metadata": {
+            "attributes": {
+              "displayName": "GPT-6.2 Astra",
+              "description": "GPT-6.2 Astra，面向复杂工程、研究与长程任务的多模态推理模型"
+            },
+            "recordedExtra": {},
+            "projection": {
+              "modelKeys": [
+                "modelName",
+                "displayName",
+                "serviceType",
+                "description",
+                "contextWindow",
+                "maxOutputTokens",
+                "capabilities",
+                "inputPrice",
+                "outputPrice",
+                "extra"
+              ],
+              "extraKeys": [
+                "responsesOnly",
+                "apiFormatOverride",
+                "reasoning",
+                "thinkingOnly",
+                "samplingParametersDeprecated",
+                "cachedInputPrice",
+                "pricingNotes"
+              ]
+            },
+            "sourceRecord": "compute/providers/openai.json#gpt-6.2-astra"
+          }
         }
       ],
       "metadata": {
@@ -34712,6 +35238,606 @@
               ]
             },
             "sourceRecord": "compute/providers/openrouter.json#qwen/qwen4-max"
+          }
+        },
+        {
+          "apiModelId": "openai/gpt-6.2-sol",
+          "modelRef": "openai:gpt-6.2-sol",
+          "binding": {
+            "kind": "exact",
+            "reason": "official-exact-model-identity"
+          },
+          "overrides": {
+            "contextWindow": {
+              "value": 1050000,
+              "reason": "independent-openrouter-hosted-contract",
+              "evidence": "https://openrouter.ai/api/v1/models",
+              "verification": "officially-verified-access-contract"
+            },
+            "maxInputTokens": {
+              "value": 922000,
+              "reason": "independent-openrouter-hosted-contract",
+              "evidence": "https://openrouter.ai/api/v1/models/openai/gpt-6.2-sol/endpoints",
+              "verification": "officially-verified-access-contract"
+            },
+            "maxOutputTokens": {
+              "value": 128000,
+              "reason": "independent-openrouter-hosted-contract",
+              "evidence": "https://openrouter.ai/api/v1/models",
+              "verification": "officially-verified-access-contract"
+            },
+            "capabilities": {
+              "value": [
+                "chat",
+                "reasoning",
+                "vision",
+                "tool_use",
+                "long_context"
+              ],
+              "reason": "independent-openrouter-hosted-contract",
+              "evidence": "https://openrouter.ai/api/v1/models",
+              "verification": "officially-verified-access-contract"
+            },
+            "serviceType": {
+              "value": [
+                "chat"
+              ],
+              "reason": "independent-openrouter-hosted-contract",
+              "evidence": "https://openrouter.ai/api/v1/models",
+              "verification": "officially-verified-access-contract"
+            }
+          },
+          "request": {
+            "reasoning": {
+              "supportedEfforts": [
+                "low",
+                "medium",
+                "high",
+                "xhigh",
+                "max"
+              ],
+              "defaultEffort": "medium"
+            },
+            "constraints": {
+              "thinkingOnly": true,
+              "samplingParametersDeprecated": true
+            }
+          },
+          "billing": [
+            {
+              "sourceKey": "inputPrice",
+              "amount": 2.0,
+              "currency": "USD",
+              "unit": "million-tokens",
+              "verification": "officially-verified-access-contract",
+              "direction": "input"
+            },
+            {
+              "sourceKey": "outputPrice",
+              "amount": 10.0,
+              "currency": "USD",
+              "unit": "million-tokens",
+              "verification": "officially-verified-access-contract",
+              "direction": "output"
+            },
+            {
+              "sourceKey": "extra.cachedInputPrice",
+              "amount": 0.1,
+              "currency": "USD",
+              "unit": "million-tokens",
+              "verification": "officially-verified-access-contract"
+            },
+            {
+              "sourceKey": "extra.cacheWritePrice",
+              "amount": 2.5,
+              "currency": "USD",
+              "unit": "million-tokens",
+              "verification": "officially-verified-access-contract"
+            },
+            {
+              "sourceKey": "extra.pricingNotes",
+              "amount": "OpenRouter官方Models/Endpoints API 2026-11-18快照；Standard USD/token×1000000。长输入价阶按源字段min_prompt_tokens=272000记录于来源与非运行元数据，USD/M输入/输出/缓存读/写为4.0/15.0/0.2/5.0；阈值开闭以平台计费为准。OpenAI Fast/Ultrafast是独立Provider端点，token价分别为Standard的2倍/3倍；当前模型未固定该层级，不把它们混入Standard费率。其他工具计量项不并入token费率；不声称客户端已按长阶或缓存写入自动估算账单。",
+              "currency": "USD",
+              "unit": "annotation",
+              "verification": "officially-verified-access-contract"
+            }
+          ],
+          "lifecycle": {
+            "status": "active"
+          },
+          "metadata": {
+            "attributes": {
+              "displayName": "GPT-6.2 Sol",
+              "description": "GPT-6.2 Sol，OpenRouter 多模态推理入口"
+            },
+            "recordedExtra": {},
+            "projection": {
+              "modelKeys": [
+                "modelName",
+                "displayName",
+                "serviceType",
+                "description",
+                "contextWindow",
+                "maxOutputTokens",
+                "capabilities",
+                "inputPrice",
+                "outputPrice",
+                "extra"
+              ],
+              "extraKeys": [
+                "reasoning",
+                "thinkingOnly",
+                "cachedInputPrice",
+                "cacheWritePrice",
+                "pricingNotes",
+                "samplingParametersDeprecated"
+              ]
+            },
+            "sourceRecord": "compute/providers/openrouter.json#openai/gpt-6.2-sol",
+            "knownContract": {
+              "standardLongInputPricingRaw": [
+                {
+                  "min_prompt_tokens": 272000,
+                  "inputPrice": 4.0,
+                  "outputPrice": 15.0,
+                  "cacheReadPrice": 0.2,
+                  "cacheWritePrice": 5.0
+                }
+              ],
+              "pricingSource": "https://openrouter.ai/api/v1/models/openai/gpt-6.2-sol/endpoints",
+              "tierThresholdSemantics": "source-min_prompt_tokens-preserved-no-unverified-boundary-conversion",
+              "automaticTieredBillingVerified": false
+            }
+          }
+        },
+        {
+          "apiModelId": "openai/gpt-6.2-astra",
+          "modelRef": "openai:gpt-6.2-astra",
+          "binding": {
+            "kind": "exact",
+            "reason": "official-exact-model-identity"
+          },
+          "overrides": {
+            "contextWindow": {
+              "value": 1050000,
+              "reason": "independent-openrouter-hosted-contract",
+              "evidence": "https://openrouter.ai/api/v1/models",
+              "verification": "officially-verified-access-contract"
+            },
+            "maxInputTokens": {
+              "value": 922000,
+              "reason": "independent-openrouter-hosted-contract",
+              "evidence": "https://openrouter.ai/api/v1/models/openai/gpt-6.2-astra/endpoints",
+              "verification": "officially-verified-access-contract"
+            },
+            "maxOutputTokens": {
+              "value": 128000,
+              "reason": "independent-openrouter-hosted-contract",
+              "evidence": "https://openrouter.ai/api/v1/models",
+              "verification": "officially-verified-access-contract"
+            },
+            "capabilities": {
+              "value": [
+                "chat",
+                "reasoning",
+                "vision",
+                "tool_use",
+                "long_context"
+              ],
+              "reason": "independent-openrouter-hosted-contract",
+              "evidence": "https://openrouter.ai/api/v1/models",
+              "verification": "officially-verified-access-contract"
+            },
+            "serviceType": {
+              "value": [
+                "chat"
+              ],
+              "reason": "independent-openrouter-hosted-contract",
+              "evidence": "https://openrouter.ai/api/v1/models",
+              "verification": "officially-verified-access-contract"
+            }
+          },
+          "request": {
+            "reasoning": {
+              "supportedEfforts": [
+                "low",
+                "medium",
+                "high",
+                "xhigh",
+                "max"
+              ],
+              "defaultEffort": "medium"
+            },
+            "constraints": {
+              "thinkingOnly": true,
+              "samplingParametersDeprecated": true
+            }
+          },
+          "billing": [
+            {
+              "sourceKey": "inputPrice",
+              "amount": 8.0,
+              "currency": "USD",
+              "unit": "million-tokens",
+              "verification": "officially-verified-access-contract",
+              "direction": "input"
+            },
+            {
+              "sourceKey": "outputPrice",
+              "amount": 40.0,
+              "currency": "USD",
+              "unit": "million-tokens",
+              "verification": "officially-verified-access-contract",
+              "direction": "output"
+            },
+            {
+              "sourceKey": "extra.cachedInputPrice",
+              "amount": 0.4,
+              "currency": "USD",
+              "unit": "million-tokens",
+              "verification": "officially-verified-access-contract"
+            },
+            {
+              "sourceKey": "extra.cacheWritePrice",
+              "amount": 10.0,
+              "currency": "USD",
+              "unit": "million-tokens",
+              "verification": "officially-verified-access-contract"
+            },
+            {
+              "sourceKey": "extra.pricingNotes",
+              "amount": "OpenRouter官方Models/Endpoints API 2026-11-18快照；Standard USD/token×1000000。长输入价阶按源字段min_prompt_tokens=272000记录于来源与非运行元数据，USD/M输入/输出/缓存读/写为16.0/60.0/0.8/20.0；阈值开闭以平台计费为准。OpenAI Fast/Ultrafast是独立Provider端点，token价分别为Standard的2倍/3倍；当前模型未固定该层级，不把它们混入Standard费率。其他工具计量项不并入token费率；不声称客户端已按长阶或缓存写入自动估算账单。",
+              "currency": "USD",
+              "unit": "annotation",
+              "verification": "officially-verified-access-contract"
+            }
+          ],
+          "lifecycle": {
+            "status": "active"
+          },
+          "metadata": {
+            "attributes": {
+              "displayName": "GPT-6.2 Astra",
+              "description": "GPT-6.2 Astra，OpenRouter 多模态推理入口"
+            },
+            "recordedExtra": {},
+            "projection": {
+              "modelKeys": [
+                "modelName",
+                "displayName",
+                "serviceType",
+                "description",
+                "contextWindow",
+                "maxOutputTokens",
+                "capabilities",
+                "inputPrice",
+                "outputPrice",
+                "extra"
+              ],
+              "extraKeys": [
+                "reasoning",
+                "thinkingOnly",
+                "cachedInputPrice",
+                "cacheWritePrice",
+                "pricingNotes",
+                "samplingParametersDeprecated"
+              ]
+            },
+            "sourceRecord": "compute/providers/openrouter.json#openai/gpt-6.2-astra",
+            "knownContract": {
+              "standardLongInputPricingRaw": [
+                {
+                  "min_prompt_tokens": 272000,
+                  "inputPrice": 16.0,
+                  "outputPrice": 60.0,
+                  "cacheReadPrice": 0.8,
+                  "cacheWritePrice": 20.0
+                }
+              ],
+              "pricingSource": "https://openrouter.ai/api/v1/models/openai/gpt-6.2-astra/endpoints",
+              "tierThresholdSemantics": "source-min_prompt_tokens-preserved-no-unverified-boundary-conversion",
+              "automaticTieredBillingVerified": false
+            }
+          }
+        },
+        {
+          "apiModelId": "openai/gpt-6.2-sol-pro",
+          "modelRef": null,
+          "binding": {
+            "kind": "access-local",
+            "reason": "official-openrouter-pro-listing-no-native-model-identity-inheritance"
+          },
+          "overrides": {
+            "contextWindow": {
+              "value": 1050000,
+              "reason": "independent-openrouter-hosted-contract",
+              "evidence": "https://openrouter.ai/api/v1/models",
+              "verification": "officially-verified-access-contract"
+            },
+            "maxInputTokens": {
+              "value": 922000,
+              "reason": "independent-openrouter-hosted-contract",
+              "evidence": "https://openrouter.ai/api/v1/models/openai/gpt-6.2-sol-pro/endpoints",
+              "verification": "officially-verified-access-contract"
+            },
+            "maxOutputTokens": {
+              "value": 128000,
+              "reason": "independent-openrouter-hosted-contract",
+              "evidence": "https://openrouter.ai/api/v1/models",
+              "verification": "officially-verified-access-contract"
+            },
+            "capabilities": {
+              "value": [
+                "chat",
+                "reasoning",
+                "vision",
+                "tool_use",
+                "long_context"
+              ],
+              "reason": "independent-openrouter-hosted-contract",
+              "evidence": "https://openrouter.ai/api/v1/models",
+              "verification": "officially-verified-access-contract"
+            },
+            "serviceType": {
+              "value": [
+                "chat"
+              ],
+              "reason": "independent-openrouter-hosted-contract",
+              "evidence": "https://openrouter.ai/api/v1/models",
+              "verification": "officially-verified-access-contract"
+            }
+          },
+          "request": {
+            "reasoning": {
+              "supportedEfforts": [
+                "low",
+                "medium",
+                "high",
+                "xhigh",
+                "max"
+              ],
+              "defaultEffort": "medium"
+            },
+            "constraints": {
+              "thinkingOnly": true,
+              "samplingParametersDeprecated": true
+            }
+          },
+          "billing": [
+            {
+              "sourceKey": "inputPrice",
+              "amount": 2.0,
+              "currency": "USD",
+              "unit": "million-tokens",
+              "verification": "officially-verified-access-contract",
+              "direction": "input"
+            },
+            {
+              "sourceKey": "outputPrice",
+              "amount": 10.0,
+              "currency": "USD",
+              "unit": "million-tokens",
+              "verification": "officially-verified-access-contract",
+              "direction": "output"
+            },
+            {
+              "sourceKey": "extra.cachedInputPrice",
+              "amount": 0.1,
+              "currency": "USD",
+              "unit": "million-tokens",
+              "verification": "officially-verified-access-contract"
+            },
+            {
+              "sourceKey": "extra.cacheWritePrice",
+              "amount": 2.5,
+              "currency": "USD",
+              "unit": "million-tokens",
+              "verification": "officially-verified-access-contract"
+            },
+            {
+              "sourceKey": "extra.pricingNotes",
+              "amount": "OpenRouter官方Models/Endpoints API 2026-11-18快照；Standard USD/token×1000000。长输入价阶按源字段min_prompt_tokens=272000记录于来源与非运行元数据，USD/M输入/输出/缓存读/写为4.0/15.0/0.2/5.0；阈值开闭以平台计费为准。OpenAI Fast/Ultrafast是独立Provider端点，token价分别为Standard的2倍/3倍；当前模型未固定该层级，不把它们混入Standard费率。其他工具计量项不并入token费率；不声称客户端已按长阶或缓存写入自动估算账单。 Pro为OpenRouter独立listing，官方文档明确可直接用该model slug选择Pro，无需客户端发送reasoning.mode；同token价但通常使用更多推理tokens，不代表新原厂模型ID。",
+              "currency": "USD",
+              "unit": "annotation",
+              "verification": "officially-verified-access-contract"
+            }
+          ],
+          "lifecycle": {
+            "status": "active"
+          },
+          "metadata": {
+            "attributes": {
+              "displayName": "GPT-6.2 Sol Pro",
+              "description": "GPT-6.2 Sol Pro，OpenRouter Pro 推理入口"
+            },
+            "recordedExtra": {},
+            "projection": {
+              "modelKeys": [
+                "modelName",
+                "displayName",
+                "serviceType",
+                "description",
+                "contextWindow",
+                "maxOutputTokens",
+                "capabilities",
+                "inputPrice",
+                "outputPrice",
+                "extra"
+              ],
+              "extraKeys": [
+                "reasoning",
+                "thinkingOnly",
+                "cachedInputPrice",
+                "cacheWritePrice",
+                "pricingNotes",
+                "samplingParametersDeprecated"
+              ]
+            },
+            "sourceRecord": "compute/providers/openrouter.json#openai/gpt-6.2-sol-pro",
+            "knownContract": {
+              "standardLongInputPricingRaw": [
+                {
+                  "min_prompt_tokens": 272000,
+                  "inputPrice": 4.0,
+                  "outputPrice": 15.0,
+                  "cacheReadPrice": 0.2,
+                  "cacheWritePrice": 5.0
+                }
+              ],
+              "pricingSource": "https://openrouter.ai/api/v1/models/openai/gpt-6.2-sol-pro/endpoints",
+              "tierThresholdSemantics": "source-min_prompt_tokens-preserved-no-unverified-boundary-conversion",
+              "automaticTieredBillingVerified": false
+            }
+          }
+        },
+        {
+          "apiModelId": "openai/gpt-6.2-astra-pro",
+          "modelRef": null,
+          "binding": {
+            "kind": "access-local",
+            "reason": "official-openrouter-pro-listing-no-native-model-identity-inheritance"
+          },
+          "overrides": {
+            "contextWindow": {
+              "value": 1050000,
+              "reason": "independent-openrouter-hosted-contract",
+              "evidence": "https://openrouter.ai/api/v1/models",
+              "verification": "officially-verified-access-contract"
+            },
+            "maxInputTokens": {
+              "value": 922000,
+              "reason": "independent-openrouter-hosted-contract",
+              "evidence": "https://openrouter.ai/api/v1/models/openai/gpt-6.2-astra-pro/endpoints",
+              "verification": "officially-verified-access-contract"
+            },
+            "maxOutputTokens": {
+              "value": 128000,
+              "reason": "independent-openrouter-hosted-contract",
+              "evidence": "https://openrouter.ai/api/v1/models",
+              "verification": "officially-verified-access-contract"
+            },
+            "capabilities": {
+              "value": [
+                "chat",
+                "reasoning",
+                "vision",
+                "tool_use",
+                "long_context"
+              ],
+              "reason": "independent-openrouter-hosted-contract",
+              "evidence": "https://openrouter.ai/api/v1/models",
+              "verification": "officially-verified-access-contract"
+            },
+            "serviceType": {
+              "value": [
+                "chat"
+              ],
+              "reason": "independent-openrouter-hosted-contract",
+              "evidence": "https://openrouter.ai/api/v1/models",
+              "verification": "officially-verified-access-contract"
+            }
+          },
+          "request": {
+            "reasoning": {
+              "supportedEfforts": [
+                "low",
+                "medium",
+                "high",
+                "xhigh",
+                "max"
+              ],
+              "defaultEffort": "medium"
+            },
+            "constraints": {
+              "thinkingOnly": true,
+              "samplingParametersDeprecated": true
+            }
+          },
+          "billing": [
+            {
+              "sourceKey": "inputPrice",
+              "amount": 8.0,
+              "currency": "USD",
+              "unit": "million-tokens",
+              "verification": "officially-verified-access-contract",
+              "direction": "input"
+            },
+            {
+              "sourceKey": "outputPrice",
+              "amount": 40.0,
+              "currency": "USD",
+              "unit": "million-tokens",
+              "verification": "officially-verified-access-contract",
+              "direction": "output"
+            },
+            {
+              "sourceKey": "extra.cachedInputPrice",
+              "amount": 0.4,
+              "currency": "USD",
+              "unit": "million-tokens",
+              "verification": "officially-verified-access-contract"
+            },
+            {
+              "sourceKey": "extra.cacheWritePrice",
+              "amount": 10.0,
+              "currency": "USD",
+              "unit": "million-tokens",
+              "verification": "officially-verified-access-contract"
+            },
+            {
+              "sourceKey": "extra.pricingNotes",
+              "amount": "OpenRouter官方Models/Endpoints API 2026-11-18快照；Standard USD/token×1000000。长输入价阶按源字段min_prompt_tokens=272000记录于来源与非运行元数据，USD/M输入/输出/缓存读/写为16.0/60.0/0.8/20.0；阈值开闭以平台计费为准。OpenAI Fast/Ultrafast是独立Provider端点，token价分别为Standard的2倍/3倍；当前模型未固定该层级，不把它们混入Standard费率。其他工具计量项不并入token费率；不声称客户端已按长阶或缓存写入自动估算账单。 Pro为OpenRouter独立listing，官方文档明确可直接用该model slug选择Pro，无需客户端发送reasoning.mode；同token价但通常使用更多推理tokens，不代表新原厂模型ID。",
+              "currency": "USD",
+              "unit": "annotation",
+              "verification": "officially-verified-access-contract"
+            }
+          ],
+          "lifecycle": {
+            "status": "active"
+          },
+          "metadata": {
+            "attributes": {
+              "displayName": "GPT-6.2 Astra Pro",
+              "description": "GPT-6.2 Astra Pro，OpenRouter Pro 推理入口"
+            },
+            "recordedExtra": {},
+            "projection": {
+              "modelKeys": [
+                "modelName",
+                "displayName",
+                "serviceType",
+                "description",
+                "contextWindow",
+                "maxOutputTokens",
+                "capabilities",
+                "inputPrice",
+                "outputPrice",
+                "extra"
+              ],
+              "extraKeys": [
+                "reasoning",
+                "thinkingOnly",
+                "cachedInputPrice",
+                "cacheWritePrice",
+                "pricingNotes",
+                "samplingParametersDeprecated"
+              ]
+            },
+            "sourceRecord": "compute/providers/openrouter.json#openai/gpt-6.2-astra-pro",
+            "knownContract": {
+              "standardLongInputPricingRaw": [
+                {
+                  "min_prompt_tokens": 272000,
+                  "inputPrice": 16.0,
+                  "outputPrice": 60.0,
+                  "cacheReadPrice": 0.8,
+                  "cacheWritePrice": 20.0
+                }
+              ],
+              "pricingSource": "https://openrouter.ai/api/v1/models/openai/gpt-6.2-astra-pro/endpoints",
+              "tierThresholdSemantics": "source-min_prompt_tokens-preserved-no-unverified-boundary-conversion",
+              "automaticTieredBillingVerified": false
+            }
           }
         }
       ],

@@ -17,6 +17,8 @@
 
 ## 原24条匹配异常
 
+2026-11-18 批次 141：6.2 Sol/Astra 只声明原厂 base 精确 ID 与对应 OpenRouter base ID，不添加日期快照或 `-pro` 原厂别名。OR 两个 Pro listing 显式 access-local/modelRef=null，独立继承平台合同；默认解析、窗口与计价不从原厂模型名推断。新原厂 API 使用 V1 实际消费的 `extra.apiFormatOverride=openai-responses`，不能只靠 V2 才转译的 responsesOnly。订阅 ctx500000/272000 保留实际静态预算链，原厂 1050000 不冒作其默认；128000 输出是本仓规划天花板以兼容现有 V1 回填，不是订阅官方上限，后者仍在 metadata 记未知。所有新条目追加，既有首个服务匹配、ModelSpec 路由与服务映射不变。
+
 本批另补独立 `qwen4-max-preview` 规格与官方别名 `qwen4.0-max-preview`：旧 V1 匹配器会剥离 `-preview`，若无精确规格会误继承正式版参数。预览输出 393216 与正式版 262144 分开，未新增接入；2026-11-25T16:00:00Z 的真实期限只存 metadata，不把现有 UTC 日期门控伪称为精确瞬间控制。Qwen4 正式原生接入仅开放 none/high；low/xhigh 不因官方支持便宣称旧客户端已透传原生 effort。
 
 | 接入 | ID | 原匹配 → 当前 | 决定 |

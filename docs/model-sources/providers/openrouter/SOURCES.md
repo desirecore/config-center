@@ -44,6 +44,50 @@
 - 读取日期：2026-11-16；状态：`fetched`；最终地址：https://openrouter.ai/api/v1/models。
 - 适用范围：本批七条新接入的独立平台 ID、输入模态、工具、推理档位、窗口与输出以及 USD/token 价格；不证明原厂端点或订阅可用性。
 
+## 2026-11-18 新型号增量核对
+
+本批分别记录 GPT-6.2 Sol、Astra 与两个 OpenRouter Pro listings。四条普通聊天接入均为 1050000 总窗口、128000 最大输出；OpenAI endpoint 明确最大输入 922000，不能仅从窗口减法推导，也不能把总窗口称为最大输入。输入模态为文件、图片和文本，输出文本；工具调用与结构化输出有独立平台声明。推理始终开启，low/medium/high/xhigh/max，默认 medium；不添加 none 或默认 temperature/top_p。supported_parameters 未列 temperature/top_p，default_parameters 为空；本仓据此保守禁发采样参数，不把 extra.samplingParametersDeprecated 标记称为网关明文宣布废弃的证明。未执行账号调用。
+
+Standard 单价按 USD/token 乘 1000000：Sol 及其 Pro 输入/输出/缓存读/写为 2/10/0.1/2.5，Astra 及其 Pro 为 8/40/0.4/10。Models API 的长输入覆盖字段为 min_prompt_tokens=272000，Sol 对应 4/15/0.2/5，Astra 16/60/0.8/20。原始覆盖合同保存在 canonical metadata 与来源；V1 仅以已有定价说明完整记录，不声称客户端会按此自动估算。Fast/Ultrafast 是不同 Provider endpoint，token 单价分别是 Standard 的 2/3 倍，不属于新模型 ID，也不混入普通 Standard 计价。其他工具计量项与 token 单位分开；本批未从单价字段猜测其收费单位。
+
+官方 Reasoning Mode 文档明确两种等价请求：普通模型加 mode=pro，或直接调用 *-pro listing；后者不需要本客户端新增 reasoning.mode 请求键。mode 独立于请求级 effort，Pro 通常消耗更多推理 tokens；不能与原生的会话内 configuration_update 同用。两个 Pro 条目使用 access-local、modelRef=null，不制造原厂 Pro API 模型身份，也不继承原厂家族或扩大自动路由。四个 :batch 变体只有批处理端点，本批不放入普通聊天。
+
+### openrouter-20261118
+
+- 入口：[openrouter-20261118](https://openrouter.ai/api/v1/models)。
+- 读取日期：2026-11-18；状态：`fetched`；最终地址：https://openrouter.ai/api/v1/models。
+- 适用范围：OpenRouter GPT-6.2 Sol/Astra 及平台 Pro listings 的独立ID、模态、tools、推理与Standard USD/token计价；不证明原厂Pro API模型或Codex订阅。
+
+### openrouter-pro-mode-20261118
+
+- 入口：[openrouter-pro-mode-20261118](https://openrouter.ai/docs/guides/best-practices/reasoning-tokens)。
+- 读取日期：2026-11-18；状态：`fetched`；最终地址：https://openrouter.ai/docs/guides/best-practices/reasoning-tokens。
+- 适用范围：OpenRouter Reasoning Mode 明确standard+mode=pro与直接*-pro listing等价；request-level effort独立；不证明原厂存在-pro模型ID。
+
+### openrouter-gpt-6.2-sol-endpoints-20261118
+
+- 入口：[openrouter-gpt-6.2-sol-endpoints-20261118](https://openrouter.ai/api/v1/models/openai/gpt-6.2-sol/endpoints)。
+- 读取日期：2026-11-18；状态：`fetched`；最终地址：https://openrouter.ai/api/v1/models/openai/gpt-6.2-sol/endpoints。
+- 适用范围：OpenRouter gpt-6.2-sol 各独立Provider endpoint最大输入922000及Standard/Fast/Ultrafast价格；地域价差不混入普通Standard价格。
+
+### openrouter-gpt-6.2-astra-endpoints-20261118
+
+- 入口：[openrouter-gpt-6.2-astra-endpoints-20261118](https://openrouter.ai/api/v1/models/openai/gpt-6.2-astra/endpoints)。
+- 读取日期：2026-11-18；状态：`fetched`；最终地址：https://openrouter.ai/api/v1/models/openai/gpt-6.2-astra/endpoints。
+- 适用范围：OpenRouter gpt-6.2-astra 各独立Provider endpoint最大输入922000及Standard/Fast/Ultrafast价格；地域价差不混入普通Standard价格。
+
+### openrouter-gpt-6.2-sol-pro-endpoints-20261118
+
+- 入口：[openrouter-gpt-6.2-sol-pro-endpoints-20261118](https://openrouter.ai/api/v1/models/openai/gpt-6.2-sol-pro/endpoints)。
+- 读取日期：2026-11-18；状态：`fetched`；最终地址：https://openrouter.ai/api/v1/models/openai/gpt-6.2-sol-pro/endpoints。
+- 适用范围：OpenRouter gpt-6.2-sol-pro 各独立Provider endpoint最大输入922000及Standard/Fast/Ultrafast价格；地域价差不混入普通Standard价格。
+
+### openrouter-gpt-6.2-astra-pro-endpoints-20261118
+
+- 入口：[openrouter-gpt-6.2-astra-pro-endpoints-20261118](https://openrouter.ai/api/v1/models/openai/gpt-6.2-astra-pro/endpoints)。
+- 读取日期：2026-11-18；状态：`fetched`；最终地址：https://openrouter.ai/api/v1/models/openai/gpt-6.2-astra-pro/endpoints。
+- 适用范围：OpenRouter gpt-6.2-astra-pro 各独立Provider endpoint最大输入922000及Standard/Fast/Ultrafast价格；地域价差不混入普通Standard价格。
+
 <!-- source-metadata:start -->
 ```json
 {
@@ -90,6 +134,66 @@
       "checkedAt": "2026-11-16",
       "contentSha256": "60cf92112c1cae56e073a4f95de19a2cda1d799844f31e15266da8bd5f6d6b5a",
       "resolvedUrl": "https://openrouter.ai/api/v1/models"
+    },
+    {
+      "id": "openrouter-20261118",
+      "url": "https://openrouter.ai/api/v1/models",
+      "resolvedUrl": "https://openrouter.ai/api/v1/models",
+      "checkedAt": "2026-11-18",
+      "retrieval": "fetched",
+      "kind": "official-api",
+      "contentSha256": "55355d4c247b25ad1a5b86402358162881cabecec211299e1fd543cec795cabd",
+      "scope": "OpenRouter GPT-6.2 Sol/Astra 及平台 Pro listings 的独立ID、模态、tools、推理与Standard USD/token计价；不证明原厂Pro API模型或Codex订阅"
+    },
+    {
+      "id": "openrouter-pro-mode-20261118",
+      "url": "https://openrouter.ai/docs/guides/best-practices/reasoning-tokens",
+      "resolvedUrl": "https://openrouter.ai/docs/guides/best-practices/reasoning-tokens",
+      "checkedAt": "2026-11-18",
+      "retrieval": "fetched",
+      "kind": "official-doc",
+      "contentSha256": "6ef6084007874c69d43b734f6c648be8060aae0d2343b2bf0b80d580a17b76c8",
+      "scope": "OpenRouter Reasoning Mode 明确standard+mode=pro与直接*-pro listing等价；request-level effort独立；不证明原厂存在-pro模型ID"
+    },
+    {
+      "id": "openrouter-gpt-6.2-sol-endpoints-20261118",
+      "url": "https://openrouter.ai/api/v1/models/openai/gpt-6.2-sol/endpoints",
+      "resolvedUrl": "https://openrouter.ai/api/v1/models/openai/gpt-6.2-sol/endpoints",
+      "checkedAt": "2026-11-18",
+      "retrieval": "fetched",
+      "kind": "official-api",
+      "contentSha256": "774ad9c1e6b5739a9f394ace00be9e2d553c921b45406ca9a2a0730033483abc",
+      "scope": "OpenRouter gpt-6.2-sol 各独立Provider endpoint最大输入922000及Standard/Fast/Ultrafast价格；地域价差不混入普通Standard价格"
+    },
+    {
+      "id": "openrouter-gpt-6.2-astra-endpoints-20261118",
+      "url": "https://openrouter.ai/api/v1/models/openai/gpt-6.2-astra/endpoints",
+      "resolvedUrl": "https://openrouter.ai/api/v1/models/openai/gpt-6.2-astra/endpoints",
+      "checkedAt": "2026-11-18",
+      "retrieval": "fetched",
+      "kind": "official-api",
+      "contentSha256": "9b6a4ed04503ce81876bc780eea019f37e6cc5fbdc77a401c19346abe9be9b61",
+      "scope": "OpenRouter gpt-6.2-astra 各独立Provider endpoint最大输入922000及Standard/Fast/Ultrafast价格；地域价差不混入普通Standard价格"
+    },
+    {
+      "id": "openrouter-gpt-6.2-sol-pro-endpoints-20261118",
+      "url": "https://openrouter.ai/api/v1/models/openai/gpt-6.2-sol-pro/endpoints",
+      "resolvedUrl": "https://openrouter.ai/api/v1/models/openai/gpt-6.2-sol-pro/endpoints",
+      "checkedAt": "2026-11-18",
+      "retrieval": "fetched",
+      "kind": "official-api",
+      "contentSha256": "96859bb90c3831955ce30698e9f8cb1717f18ccbcd03aa5cb6e8cf4601517c85",
+      "scope": "OpenRouter gpt-6.2-sol-pro 各独立Provider endpoint最大输入922000及Standard/Fast/Ultrafast价格；地域价差不混入普通Standard价格"
+    },
+    {
+      "id": "openrouter-gpt-6.2-astra-pro-endpoints-20261118",
+      "url": "https://openrouter.ai/api/v1/models/openai/gpt-6.2-astra-pro/endpoints",
+      "resolvedUrl": "https://openrouter.ai/api/v1/models/openai/gpt-6.2-astra-pro/endpoints",
+      "checkedAt": "2026-11-18",
+      "retrieval": "fetched",
+      "kind": "official-api",
+      "contentSha256": "4339977c5d6a5b561d876e07dc181d67b428881f63c30e3f0d4fc50a58e65e46",
+      "scope": "OpenRouter gpt-6.2-astra-pro 各独立Provider endpoint最大输入922000及Standard/Fast/Ultrafast价格；地域价差不混入普通Standard价格"
     }
   ]
 }

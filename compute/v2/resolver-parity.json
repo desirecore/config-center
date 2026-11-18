@@ -1750,6 +1750,30 @@
       "blockedReasons": []
     },
     {
+      "accessId": "provider-openai-codex-plan-001",
+      "apiModelId": "gpt-6.2-sol",
+      "digest": "17aed33fba784a8f748c2aca5508f2928f3c8acba0439818bf04dbc8c9244422",
+      "selectable": true,
+      "effectiveApiFormat": "openai-codex-responses",
+      "effectiveApiModelId": "gpt-6.2-sol",
+      "eligibleForCall": true,
+      "eligibleForAutoRouting": false,
+      "manualOnly": false,
+      "blockedReasons": []
+    },
+    {
+      "accessId": "provider-openai-codex-plan-001",
+      "apiModelId": "gpt-6.2-astra",
+      "digest": "70d1b6bd29e14a533c38225041afba029061a33ad6a4f80c24ae3d85da6de0f4",
+      "selectable": true,
+      "effectiveApiFormat": "openai-codex-responses",
+      "effectiveApiModelId": "gpt-6.2-astra",
+      "eligibleForCall": true,
+      "eligibleForAutoRouting": false,
+      "manualOnly": false,
+      "blockedReasons": []
+    },
+    {
       "accessId": "provider-openai-001",
       "apiModelId": "gpt-6.1-terra",
       "digest": "9ce9c752c7ef48477eb583c71ade7145d9eb057f3744ab4b4b634ff9a9d9845a",
@@ -2230,6 +2254,30 @@
       "blockedReasons": []
     },
     {
+      "accessId": "provider-openai-001",
+      "apiModelId": "gpt-6.2-sol",
+      "digest": "4ead48589776dd41398ed6261a1856cb1deed08a72cb086f6549f6c725b1cf2e",
+      "selectable": true,
+      "effectiveApiFormat": "openai-responses",
+      "effectiveApiModelId": "gpt-6.2-sol",
+      "eligibleForCall": true,
+      "eligibleForAutoRouting": false,
+      "manualOnly": false,
+      "blockedReasons": []
+    },
+    {
+      "accessId": "provider-openai-001",
+      "apiModelId": "gpt-6.2-astra",
+      "digest": "cb2850ef3351c4c3b3d5afec369311521fd4a6627ae48e39d9aefd1a0e2d719e",
+      "selectable": true,
+      "effectiveApiFormat": "openai-responses",
+      "effectiveApiModelId": "gpt-6.2-astra",
+      "eligibleForCall": true,
+      "eligibleForAutoRouting": false,
+      "manualOnly": false,
+      "blockedReasons": []
+    },
+    {
       "accessId": "provider-openrouter-001",
       "apiModelId": "mistralai/mistral-large-4-0",
       "digest": "401911eb9f4fae8ccb1e7df32e524e49e8e964f7597066eefca6b50fdb53c4d0",
@@ -2563,6 +2611,54 @@
       "eligibleForCall": true,
       "eligibleForAutoRouting": false,
       "manualOnly": false,
+      "blockedReasons": []
+    },
+    {
+      "accessId": "provider-openrouter-001",
+      "apiModelId": "openai/gpt-6.2-sol",
+      "digest": "c39c431dbd5a3533df879ab717d9ada6820de7ed11eda311a2daa6949d79c8ba",
+      "selectable": true,
+      "effectiveApiFormat": "openai-completions",
+      "effectiveApiModelId": "openai/gpt-6.2-sol",
+      "eligibleForCall": true,
+      "eligibleForAutoRouting": false,
+      "manualOnly": false,
+      "blockedReasons": []
+    },
+    {
+      "accessId": "provider-openrouter-001",
+      "apiModelId": "openai/gpt-6.2-astra",
+      "digest": "4b7869a781f89123a16730e629d72a113051f0bd2d4e7b46ce19f5f56b40afc2",
+      "selectable": true,
+      "effectiveApiFormat": "openai-completions",
+      "effectiveApiModelId": "openai/gpt-6.2-astra",
+      "eligibleForCall": true,
+      "eligibleForAutoRouting": false,
+      "manualOnly": false,
+      "blockedReasons": []
+    },
+    {
+      "accessId": "provider-openrouter-001",
+      "apiModelId": "openai/gpt-6.2-sol-pro",
+      "digest": "f1592b8bd8d89a8c281003a06dab2ee121327f32cd72344d5b2e2d5fb3970305",
+      "selectable": true,
+      "effectiveApiFormat": "openai-completions",
+      "effectiveApiModelId": "openai/gpt-6.2-sol-pro",
+      "eligibleForCall": true,
+      "eligibleForAutoRouting": false,
+      "manualOnly": true,
+      "blockedReasons": []
+    },
+    {
+      "accessId": "provider-openrouter-001",
+      "apiModelId": "openai/gpt-6.2-astra-pro",
+      "digest": "5a1eb66a48c3651001f993300e8afcf2c990ce413f0ac11cc2cfa7e519809caa",
+      "selectable": true,
+      "effectiveApiFormat": "openai-completions",
+      "effectiveApiModelId": "openai/gpt-6.2-astra-pro",
+      "eligibleForCall": true,
+      "eligibleForAutoRouting": false,
+      "manualOnly": true,
       "blockedReasons": []
     },
     {

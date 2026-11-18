@@ -688,6 +688,150 @@
         "cachedInputPrice": 0.075,
         "pricingNotes": "OpenRouter 官方 Models API 2026-11-16 快照；USD/token × 1000000；窗口、输出、effort 与计价属于独立托管合同，不反写原厂或订阅。"
       }
+    },
+    {
+      "modelName": "openai/gpt-6.2-sol",
+      "displayName": "GPT-6.2 Sol",
+      "serviceType": [
+        "chat"
+      ],
+      "description": "GPT-6.2 Sol，OpenRouter 多模态推理入口",
+      "contextWindow": 1050000,
+      "maxOutputTokens": 128000,
+      "capabilities": [
+        "chat",
+        "reasoning",
+        "vision",
+        "tool_use",
+        "long_context"
+      ],
+      "inputPrice": 2,
+      "outputPrice": 10,
+      "extra": {
+        "reasoning": {
+          "supportedEfforts": [
+            "low",
+            "medium",
+            "high",
+            "xhigh",
+            "max"
+          ],
+          "defaultEffort": "medium"
+        },
+        "thinkingOnly": true,
+        "cachedInputPrice": 0.1,
+        "cacheWritePrice": 2.5,
+        "pricingNotes": "OpenRouter官方Models/Endpoints API 2026-11-18快照；Standard USD/token×1000000。长输入价阶按源字段min_prompt_tokens=272000记录于来源与非运行元数据，USD/M输入/输出/缓存读/写为4.0/15.0/0.2/5.0；阈值开闭以平台计费为准。OpenAI Fast/Ultrafast是独立Provider端点，token价分别为Standard的2倍/3倍；当前模型未固定该层级，不把它们混入Standard费率。其他工具计量项不并入token费率；不声称客户端已按长阶或缓存写入自动估算账单。",
+        "samplingParametersDeprecated": true
+      }
+    },
+    {
+      "modelName": "openai/gpt-6.2-astra",
+      "displayName": "GPT-6.2 Astra",
+      "serviceType": [
+        "chat"
+      ],
+      "description": "GPT-6.2 Astra，OpenRouter 多模态推理入口",
+      "contextWindow": 1050000,
+      "maxOutputTokens": 128000,
+      "capabilities": [
+        "chat",
+        "reasoning",
+        "vision",
+        "tool_use",
+        "long_context"
+      ],
+      "inputPrice": 8,
+      "outputPrice": 40,
+      "extra": {
+        "reasoning": {
+          "supportedEfforts": [
+            "low",
+            "medium",
+            "high",
+            "xhigh",
+            "max"
+          ],
+          "defaultEffort": "medium"
+        },
+        "thinkingOnly": true,
+        "cachedInputPrice": 0.4,
+        "cacheWritePrice": 10,
+        "pricingNotes": "OpenRouter官方Models/Endpoints API 2026-11-18快照；Standard USD/token×1000000。长输入价阶按源字段min_prompt_tokens=272000记录于来源与非运行元数据，USD/M输入/输出/缓存读/写为16.0/60.0/0.8/20.0；阈值开闭以平台计费为准。OpenAI Fast/Ultrafast是独立Provider端点，token价分别为Standard的2倍/3倍；当前模型未固定该层级，不把它们混入Standard费率。其他工具计量项不并入token费率；不声称客户端已按长阶或缓存写入自动估算账单。",
+        "samplingParametersDeprecated": true
+      }
+    },
+    {
+      "modelName": "openai/gpt-6.2-sol-pro",
+      "displayName": "GPT-6.2 Sol Pro",
+      "serviceType": [
+        "chat"
+      ],
+      "description": "GPT-6.2 Sol Pro，OpenRouter Pro 推理入口",
+      "contextWindow": 1050000,
+      "maxOutputTokens": 128000,
+      "capabilities": [
+        "chat",
+        "reasoning",
+        "vision",
+        "tool_use",
+        "long_context"
+      ],
+      "inputPrice": 2,
+      "outputPrice": 10,
+      "extra": {
+        "reasoning": {
+          "supportedEfforts": [
+            "low",
+            "medium",
+            "high",
+            "xhigh",
+            "max"
+          ],
+          "defaultEffort": "medium"
+        },
+        "thinkingOnly": true,
+        "cachedInputPrice": 0.1,
+        "cacheWritePrice": 2.5,
+        "pricingNotes": "OpenRouter官方Models/Endpoints API 2026-11-18快照；Standard USD/token×1000000。长输入价阶按源字段min_prompt_tokens=272000记录于来源与非运行元数据，USD/M输入/输出/缓存读/写为4.0/15.0/0.2/5.0；阈值开闭以平台计费为准。OpenAI Fast/Ultrafast是独立Provider端点，token价分别为Standard的2倍/3倍；当前模型未固定该层级，不把它们混入Standard费率。其他工具计量项不并入token费率；不声称客户端已按长阶或缓存写入自动估算账单。 Pro为OpenRouter独立listing，官方文档明确可直接用该model slug选择Pro，无需客户端发送reasoning.mode；同token价但通常使用更多推理tokens，不代表新原厂模型ID。",
+        "samplingParametersDeprecated": true
+      }
+    },
+    {
+      "modelName": "openai/gpt-6.2-astra-pro",
+      "displayName": "GPT-6.2 Astra Pro",
+      "serviceType": [
+        "chat"
+      ],
+      "description": "GPT-6.2 Astra Pro，OpenRouter Pro 推理入口",
+      "contextWindow": 1050000,
+      "maxOutputTokens": 128000,
+      "capabilities": [
+        "chat",
+        "reasoning",
+        "vision",
+        "tool_use",
+        "long_context"
+      ],
+      "inputPrice": 8,
+      "outputPrice": 40,
+      "extra": {
+        "reasoning": {
+          "supportedEfforts": [
+            "low",
+            "medium",
+            "high",
+            "xhigh",
+            "max"
+          ],
+          "defaultEffort": "medium"
+        },
+        "thinkingOnly": true,
+        "cachedInputPrice": 0.4,
+        "cacheWritePrice": 10,
+        "pricingNotes": "OpenRouter官方Models/Endpoints API 2026-11-18快照；Standard USD/token×1000000。长输入价阶按源字段min_prompt_tokens=272000记录于来源与非运行元数据，USD/M输入/输出/缓存读/写为16.0/60.0/0.8/20.0；阈值开闭以平台计费为准。OpenAI Fast/Ultrafast是独立Provider端点，token价分别为Standard的2倍/3倍；当前模型未固定该层级，不把它们混入Standard费率。其他工具计量项不并入token费率；不声称客户端已按长阶或缓存写入自动估算账单。 Pro为OpenRouter独立listing，官方文档明确可直接用该model slug选择Pro，无需客户端发送reasoning.mode；同token价但通常使用更多推理tokens，不代表新原厂模型ID。",
+        "samplingParametersDeprecated": true
+      }
     }
   ]
 }

@@ -20,6 +20,14 @@
 
 ## 关联模型
 
+- [`openai/gpt-6.2-astra-pro`](../models/openai--gpt-6.2-astra-pro.md)
+
+- [`openai/gpt-6.2-sol-pro`](../models/openai--gpt-6.2-sol-pro.md)
+
+- [`openai/gpt-6.2-astra`](../models/openai--gpt-6.2-astra.md)
+
+- [`openai/gpt-6.2-sol`](../models/openai--gpt-6.2-sol.md)
+
 - [`baidu/ernie-light-dt-1.0-intl`](../models/baidu--ernie-light-dt-1.0-intl.md)
 
 - [`baidu/ernie-5.5-flash-preview:free`](../models/baidu--ernie-5.5-flash-preview--free.md)

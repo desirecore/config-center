@@ -1136,6 +1136,80 @@
           "searchRequestPriceUsd": 0.01
         }
       }
+    },
+    {
+      "modelName": "gpt-6.2-sol",
+      "displayName": "GPT-6.2 Sol",
+      "serviceType": [
+        "chat"
+      ],
+      "description": "GPT-6.2 Sol，面向日常编程、写作与智能体任务的多模态推理模型",
+      "contextWindow": 1050000,
+      "maxOutputTokens": 128000,
+      "capabilities": [
+        "chat",
+        "reasoning",
+        "code",
+        "vision",
+        "tool_use",
+        "long_context"
+      ],
+      "inputPrice": 2,
+      "outputPrice": 10,
+      "extra": {
+        "responsesOnly": true,
+        "apiFormatOverride": "openai-responses",
+        "reasoning": {
+          "supportedEfforts": [
+            "low",
+            "medium",
+            "high",
+            "xhigh",
+            "max"
+          ]
+        },
+        "thinkingOnly": true,
+        "samplingParametersDeprecated": true,
+        "cachedInputPrice": 0.1,
+        "pricingNotes": "USD/百万 tokens，Standard短上下文：输入2、输出10、缓存读0.1、30分钟缓存写2.5、12小时缓存写5。原页272K按十进制1000换算为272000；输入>272000时整次请求输入/缓存费率×2、输出×1.5；Fast同窗口×2，Batch×0.5。Ultrafast截至2027-02-28为Standard×3，2027-03-01起×6（Pacific time）。缓存写非叠加收费。默认缓存沿用上游隐式设置；不宣称旧24h retention、12h/显式缓存、Pro mode或Ultrafast已适配。"
+      }
+    },
+    {
+      "modelName": "gpt-6.2-astra",
+      "displayName": "GPT-6.2 Astra",
+      "serviceType": [
+        "chat"
+      ],
+      "description": "GPT-6.2 Astra，面向复杂工程、研究与长程任务的多模态推理模型",
+      "contextWindow": 1050000,
+      "maxOutputTokens": 128000,
+      "capabilities": [
+        "chat",
+        "reasoning",
+        "code",
+        "vision",
+        "tool_use",
+        "long_context"
+      ],
+      "inputPrice": 8,
+      "outputPrice": 40,
+      "extra": {
+        "responsesOnly": true,
+        "apiFormatOverride": "openai-responses",
+        "reasoning": {
+          "supportedEfforts": [
+            "low",
+            "medium",
+            "high",
+            "xhigh",
+            "max"
+          ]
+        },
+        "thinkingOnly": true,
+        "samplingParametersDeprecated": true,
+        "cachedInputPrice": 0.4,
+        "pricingNotes": "USD/百万 tokens，Standard短上下文：输入8、输出40、缓存读0.4、30分钟缓存写10、12小时缓存写20。原页272K按十进制1000换算为272000；输入>272000时整次请求输入/缓存费率×2、输出×1.5；Fast同窗口×2，Batch×0.5。Ultrafast截至2027-02-28为Standard×3，2027-03-01起×6（Pacific time）。缓存写非叠加收费。默认缓存沿用上游隐式设置；不宣称旧24h retention、12h/显式缓存、Pro mode或Ultrafast已适配。"
+      }
     }
   ]
 }

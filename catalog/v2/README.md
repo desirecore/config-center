@@ -30,6 +30,8 @@ metadata不消费。V1布局及历史未消费extra保存在canonical metadata�
 
 ## 日常修改顺序
 
+2026-11-18 数据批次 141：新增 GPT-6.2 Sol/Astra 两条精确规格及八条接入，当前共 311 条规格、373 条接入。原厂 API 显式投影 Responses 协议；订阅默认窗口为 Sol 500000 / Astra 272000，独立输入/输出限制与硬默认未被官方单列的部分保留未知，128000 输出仅作本仓规划策略。OpenRouter Pro 使用平台直接 listing 合约、access-local 且不造原厂 Pro 身份。所有新条目追加、不改变默认首匹配，V2 继续 candidate；不扩展 Ultra/Ultrafast 枚举或冒称可选长缓存已适配。
+
 2026-11-16 数据批次 140：增加 13 个精确规格与 11 条接入，当前共 309 条规格、365 条接入。Qwen4 Max 的 API/Token Plan、Gemini 4 Carbon/Hydrogen 原生接入，以及七条 OpenRouter 接入分别维护限制与计价。百度两条托管入口保留为 access-local，不推定国内 API ID。Fable 5.2、HY4 Flash 及五个媒体型号仅补规格；不将尚未验收的历史消息合同、端点或媒体协议视为已适配。新型号不加入默认自动路由，V2 继续保持 candidate。
 
 只编辑 `catalog/v2` 中相应事实、接入覆盖或计价，运行 `npm run catalog:compile` 同步根V1与V2产物；随后更新对应官方来源记录、规格索引缓存标记及发布manifest，运行全套校验。禁止改根Provider/Spec后通过重新import制造双写或提升证明等级。`catalog:check` 会拒绝根V1漂移；用户本地compute与秘密不在生成范围。

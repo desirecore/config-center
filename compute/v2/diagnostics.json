@@ -1,10 +1,10 @@
 {
-  "specs": 309,
+  "specs": 311,
   "accesses": 40,
-  "models": 365,
+  "models": 373,
   "bindings": {
-    "exact": 328,
-    "access-local": 29,
+    "exact": 334,
+    "access-local": 31,
     "dynamic": 8
   },
   "overrides": [
@@ -1778,6 +1778,60 @@
       "verification": "inherited-not-reverified"
     },
     {
+      "accessId": "provider-openai-codex-plan-001",
+      "apiModelId": "gpt-6.2-sol",
+      "field": "contextWindow",
+      "value": 500000,
+      "reason": "official-codex-default-context-not-api-window",
+      "evidence": "https://learn.chatgpt.com/docs/models.md",
+      "verification": "officially-verified-access-contract"
+    },
+    {
+      "accessId": "provider-openai-codex-plan-001",
+      "apiModelId": "gpt-6.2-sol",
+      "field": "maxInputTokens",
+      "value": null,
+      "reason": "codex-independent-input-limit-not-published",
+      "evidence": "https://learn.chatgpt.com/docs/models.md",
+      "verification": "unknown-access-contract"
+    },
+    {
+      "accessId": "provider-openai-codex-plan-001",
+      "apiModelId": "gpt-6.2-sol",
+      "field": "maxOutputTokens",
+      "value": 128000,
+      "reason": "local-output-planning-ceiling-matches-existing-v1-shared-spec-fallback-not-subscription-vendor-limit",
+      "evidence": "https://developers.openai.com/api/docs/models/gpt-6.2-sol.md",
+      "verification": "local-policy-not-subscription-limit-proof"
+    },
+    {
+      "accessId": "provider-openai-codex-plan-001",
+      "apiModelId": "gpt-6.2-astra",
+      "field": "contextWindow",
+      "value": 272000,
+      "reason": "official-codex-default-context-not-api-window",
+      "evidence": "https://learn.chatgpt.com/docs/models.md",
+      "verification": "officially-verified-access-contract"
+    },
+    {
+      "accessId": "provider-openai-codex-plan-001",
+      "apiModelId": "gpt-6.2-astra",
+      "field": "maxInputTokens",
+      "value": null,
+      "reason": "codex-independent-input-limit-not-published",
+      "evidence": "https://learn.chatgpt.com/docs/models.md",
+      "verification": "unknown-access-contract"
+    },
+    {
+      "accessId": "provider-openai-codex-plan-001",
+      "apiModelId": "gpt-6.2-astra",
+      "field": "maxOutputTokens",
+      "value": 128000,
+      "reason": "local-output-planning-ceiling-matches-existing-v1-shared-spec-fallback-not-subscription-vendor-limit",
+      "evidence": "https://developers.openai.com/api/docs/models/gpt-6.2-astra.md",
+      "verification": "local-policy-not-subscription-limit-proof"
+    },
+    {
       "accessId": "provider-openai-001",
       "apiModelId": "gpt-6.1-sol",
       "field": "serviceType",
@@ -2990,6 +3044,218 @@
         "long_context",
         "vision",
         "video_understanding"
+      ],
+      "reason": "independent-openrouter-hosted-contract",
+      "evidence": "https://openrouter.ai/api/v1/models",
+      "verification": "officially-verified-access-contract"
+    },
+    {
+      "accessId": "provider-openrouter-001",
+      "apiModelId": "openai/gpt-6.2-sol",
+      "field": "contextWindow",
+      "value": 1050000,
+      "reason": "independent-openrouter-hosted-contract",
+      "evidence": "https://openrouter.ai/api/v1/models",
+      "verification": "officially-verified-access-contract"
+    },
+    {
+      "accessId": "provider-openrouter-001",
+      "apiModelId": "openai/gpt-6.2-sol",
+      "field": "maxInputTokens",
+      "value": 922000,
+      "reason": "independent-openrouter-hosted-contract",
+      "evidence": "https://openrouter.ai/api/v1/models/openai/gpt-6.2-sol/endpoints",
+      "verification": "officially-verified-access-contract"
+    },
+    {
+      "accessId": "provider-openrouter-001",
+      "apiModelId": "openai/gpt-6.2-sol",
+      "field": "maxOutputTokens",
+      "value": 128000,
+      "reason": "independent-openrouter-hosted-contract",
+      "evidence": "https://openrouter.ai/api/v1/models",
+      "verification": "officially-verified-access-contract"
+    },
+    {
+      "accessId": "provider-openrouter-001",
+      "apiModelId": "openai/gpt-6.2-sol",
+      "field": "capabilities",
+      "value": [
+        "chat",
+        "reasoning",
+        "vision",
+        "tool_use",
+        "long_context"
+      ],
+      "reason": "independent-openrouter-hosted-contract",
+      "evidence": "https://openrouter.ai/api/v1/models",
+      "verification": "officially-verified-access-contract"
+    },
+    {
+      "accessId": "provider-openrouter-001",
+      "apiModelId": "openai/gpt-6.2-sol",
+      "field": "serviceType",
+      "value": [
+        "chat"
+      ],
+      "reason": "independent-openrouter-hosted-contract",
+      "evidence": "https://openrouter.ai/api/v1/models",
+      "verification": "officially-verified-access-contract"
+    },
+    {
+      "accessId": "provider-openrouter-001",
+      "apiModelId": "openai/gpt-6.2-astra",
+      "field": "contextWindow",
+      "value": 1050000,
+      "reason": "independent-openrouter-hosted-contract",
+      "evidence": "https://openrouter.ai/api/v1/models",
+      "verification": "officially-verified-access-contract"
+    },
+    {
+      "accessId": "provider-openrouter-001",
+      "apiModelId": "openai/gpt-6.2-astra",
+      "field": "maxInputTokens",
+      "value": 922000,
+      "reason": "independent-openrouter-hosted-contract",
+      "evidence": "https://openrouter.ai/api/v1/models/openai/gpt-6.2-astra/endpoints",
+      "verification": "officially-verified-access-contract"
+    },
+    {
+      "accessId": "provider-openrouter-001",
+      "apiModelId": "openai/gpt-6.2-astra",
+      "field": "maxOutputTokens",
+      "value": 128000,
+      "reason": "independent-openrouter-hosted-contract",
+      "evidence": "https://openrouter.ai/api/v1/models",
+      "verification": "officially-verified-access-contract"
+    },
+    {
+      "accessId": "provider-openrouter-001",
+      "apiModelId": "openai/gpt-6.2-astra",
+      "field": "capabilities",
+      "value": [
+        "chat",
+        "reasoning",
+        "vision",
+        "tool_use",
+        "long_context"
+      ],
+      "reason": "independent-openrouter-hosted-contract",
+      "evidence": "https://openrouter.ai/api/v1/models",
+      "verification": "officially-verified-access-contract"
+    },
+    {
+      "accessId": "provider-openrouter-001",
+      "apiModelId": "openai/gpt-6.2-astra",
+      "field": "serviceType",
+      "value": [
+        "chat"
+      ],
+      "reason": "independent-openrouter-hosted-contract",
+      "evidence": "https://openrouter.ai/api/v1/models",
+      "verification": "officially-verified-access-contract"
+    },
+    {
+      "accessId": "provider-openrouter-001",
+      "apiModelId": "openai/gpt-6.2-sol-pro",
+      "field": "contextWindow",
+      "value": 1050000,
+      "reason": "independent-openrouter-hosted-contract",
+      "evidence": "https://openrouter.ai/api/v1/models",
+      "verification": "officially-verified-access-contract"
+    },
+    {
+      "accessId": "provider-openrouter-001",
+      "apiModelId": "openai/gpt-6.2-sol-pro",
+      "field": "maxInputTokens",
+      "value": 922000,
+      "reason": "independent-openrouter-hosted-contract",
+      "evidence": "https://openrouter.ai/api/v1/models/openai/gpt-6.2-sol-pro/endpoints",
+      "verification": "officially-verified-access-contract"
+    },
+    {
+      "accessId": "provider-openrouter-001",
+      "apiModelId": "openai/gpt-6.2-sol-pro",
+      "field": "maxOutputTokens",
+      "value": 128000,
+      "reason": "independent-openrouter-hosted-contract",
+      "evidence": "https://openrouter.ai/api/v1/models",
+      "verification": "officially-verified-access-contract"
+    },
+    {
+      "accessId": "provider-openrouter-001",
+      "apiModelId": "openai/gpt-6.2-sol-pro",
+      "field": "capabilities",
+      "value": [
+        "chat",
+        "reasoning",
+        "vision",
+        "tool_use",
+        "long_context"
+      ],
+      "reason": "independent-openrouter-hosted-contract",
+      "evidence": "https://openrouter.ai/api/v1/models",
+      "verification": "officially-verified-access-contract"
+    },
+    {
+      "accessId": "provider-openrouter-001",
+      "apiModelId": "openai/gpt-6.2-sol-pro",
+      "field": "serviceType",
+      "value": [
+        "chat"
+      ],
+      "reason": "independent-openrouter-hosted-contract",
+      "evidence": "https://openrouter.ai/api/v1/models",
+      "verification": "officially-verified-access-contract"
+    },
+    {
+      "accessId": "provider-openrouter-001",
+      "apiModelId": "openai/gpt-6.2-astra-pro",
+      "field": "contextWindow",
+      "value": 1050000,
+      "reason": "independent-openrouter-hosted-contract",
+      "evidence": "https://openrouter.ai/api/v1/models",
+      "verification": "officially-verified-access-contract"
+    },
+    {
+      "accessId": "provider-openrouter-001",
+      "apiModelId": "openai/gpt-6.2-astra-pro",
+      "field": "maxInputTokens",
+      "value": 922000,
+      "reason": "independent-openrouter-hosted-contract",
+      "evidence": "https://openrouter.ai/api/v1/models/openai/gpt-6.2-astra-pro/endpoints",
+      "verification": "officially-verified-access-contract"
+    },
+    {
+      "accessId": "provider-openrouter-001",
+      "apiModelId": "openai/gpt-6.2-astra-pro",
+      "field": "maxOutputTokens",
+      "value": 128000,
+      "reason": "independent-openrouter-hosted-contract",
+      "evidence": "https://openrouter.ai/api/v1/models",
+      "verification": "officially-verified-access-contract"
+    },
+    {
+      "accessId": "provider-openrouter-001",
+      "apiModelId": "openai/gpt-6.2-astra-pro",
+      "field": "capabilities",
+      "value": [
+        "chat",
+        "reasoning",
+        "vision",
+        "tool_use",
+        "long_context"
+      ],
+      "reason": "independent-openrouter-hosted-contract",
+      "evidence": "https://openrouter.ai/api/v1/models",
+      "verification": "officially-verified-access-contract"
+    },
+    {
+      "accessId": "provider-openrouter-001",
+      "apiModelId": "openai/gpt-6.2-astra-pro",
+      "field": "serviceType",
+      "value": [
+        "chat"
       ],
       "reason": "independent-openrouter-hosted-contract",
       "evidence": "https://openrouter.ai/api/v1/models",
